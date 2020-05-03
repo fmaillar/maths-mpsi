@@ -4,7 +4,7 @@
 \minilof
 \minilot
 
-\lettrine{L}{es nombres complexes} sont présentés dans ce chapitre. L'ensemble des nombres complexes forme une extension de l'ensemble des nombres réels. Les complexes permettent notamment de définir des solutions à toutes les équations polynomiales à coefficients réels. 
+Les nombres complexes sont présentés dans ce chapitre. L'ensemble des nombres complexes forme une extension de l'ensemble des nombres réels. Les complexes permettent notamment de définir des solutions à toutes les équations polynomiales à coefficients réels. 
 
 La première section se focalise sur leur définition et leurs propriétés. On s'intéresse ensuite à la trigonométrie en utilisant les complexes. Les équations du second degré sont ensuite résolues grâce aux complexes. L'exponentielle complexe est ensuite présentée puis l'application des complexes en géométrie plane est exposée.
 
@@ -12,8 +12,8 @@ La première section se focalise sur leur définition et leurs propriétés. On 
 \label{sec:corpsdescomplexes}
 La construction de ce corps est hors-programme. On le définit tel quel.
 \begin{defdef}
-  L'ensemble des complexes est défini par 
-  \begin{equation} 
+  L'ensemble des complexes est défini par
+  \begin{equation}
     \C = \enstq{x+ \ii y}{(x,y)\in \R},
   \end{equation}
   tel que $\ii^2=-1$.
@@ -25,13 +25,13 @@ La construction de ce corps est hors-programme. On le définit tel quel.
 \end{itemize}
 %
 \begin{prop} Tous les réels sont complexes, c'est-à-dire~:
-  \begin{equation} 
+  \begin{equation}
     \R \subset \C.
   \end{equation}
   Les lois de $\R$ coïncident avec les lois sur $\C$.
 \end{prop}
 %
-\begin{prop} 
+\begin{prop}
   $(\C,+)$ est un groupe commutatif. C'est-à-dire que~:
   \begin{itemize}
   \item la loi $+$ est associative,
@@ -47,7 +47,7 @@ La construction de ce corps est hors-programme. On le définit tel quel.
   \end{itemize}
 \end{prop}
 %
-\begin{prop} 
+\begin{prop}
   $(\C,+,\times)$ est un anneau commutatif. C'est-à-dire que $(\C,+)$ est un groupe commutatif et que
   \begin{itemize}
   \item $\times$ est associative;
@@ -59,15 +59,15 @@ La construction de ce corps est hors-programme. On le définit tel quel.
 \end{itemize}
 \end{prop}
 %
-\begin{prop} 
-  Pour tout complexe $z \in \C$, il existe un unique couple de réels $(x,y) \in \R^2$ tel que $z=x+\ii y$. C'est-à-dire que l'application  
+\begin{prop}
+  Pour tout complexe $z \in \C$, il existe un unique couple de réels $(x,y) \in \R^2$ tel que $z=x+\ii y$. C'est-à-dire que l'application
   \begin{equation}
     \fonction{\varphi}{\R^2}{\C}{(x,y)}{x+\ii y}
   \end{equation}
   est bijective.
 \end{prop}
 \begin{proof}[Unicité]
-  S'il existe deux couples de réels $(x,y),(x',y')$ tels que 
+  S'il existe deux couples de réels $(x,y),(x',y')$ tels que
   \begin{equation}
     x'+\ii y'=x +\ii y,
   \end{equation}
@@ -89,9 +89,9 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
 \begin{prop}
   Soient des complexes $z$ et $z'$ puis un réel $\lambda$, alors
   \begin{gather}
-    \Re(z+z')=\Re(z)+\Re(z'), \\ 
+    \Re(z+z')=\Re(z)+\Re(z'), \\
     \Im(z+z')=\Im(z)+\Im(z'),\\
-    \Re(\lambda z)=\lambda \Re(z),\\ 
+    \Re(\lambda z)=\lambda \Re(z),\\
     \Im(\lambda z)=\lambda \Im(z).
   \end{gather}
 \end{prop}
@@ -103,20 +103,20 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
 \begin{defdef}
   Soit $z=x+\ii y \in \C$ avec $(x,y)\in \R$, on définit son conjugué de $z$ noté $\bar{z}$ par $\bar{z}=x- \ii y$.
 \end{defdef}
-\begin{prop} 
+\begin{prop}
   Soient des complexes $z$ et $z'$, alors
-  \begin{gather} 
-    \bar{z+z'}=\bar{z} + \bar{z'}; \\ 
-    \bar{z \cdot z'}=\bar{z} \cdot \bar{z'}; \\ 
+  \begin{gather}
+    \bar{z+z'}=\bar{z} + \bar{z'}; \\
+    \bar{z \cdot z'}=\bar{z} \cdot \bar{z'}; \\
     \bar{\bar{z}}=z.
   \end{gather}
 \end{prop}
 \begin{prop}
-  pour tout complexe $z$ on a 
+  pour tout complexe $z$ on a
   \begin{gather}
-    \Re(z)=\frac{z+\bar{z}}{2};\\ 
+    \Re(z)=\frac{z+\bar{z}}{2};\\
     \Im(z)=\frac{z-\bar{z}}{2 \ii};\\
-    z \in \R \iff z=\bar{z};\\  
+    z \in \R \iff z=\bar{z};\\
     z \in \ii\R \iff z=-\bar{z}.
   \end{gather}
 \end{prop}
@@ -127,11 +127,11 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
   Soit un complexe $z$, alors $z \bar{z} \in \R$ et $z \bar{z}=0 \iff z = 0$.
 \end{prop}
 \begin{proof}
-  Soit un complexe $z$, notons $x$ sa partie réelle et $y$ sa partie imaginaire, alors 
+  Soit un complexe $z$, notons $x$ sa partie réelle et $y$ sa partie imaginaire, alors
   \begin{equation}
     z \bar{z}=x^2+y^2 \geq 0,
   \end{equation}
-  et 
+  et
   \begin{equation}
     z \bar{z}=0 \iff x^2+y^2=0 \iff x=y=0 \iff z=0.
   \end{equation}
@@ -144,8 +144,8 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
 \begin{prop}
   Soient $z$ et $z'$ deux complexes, alors
   \begin{gather}
-    \abs{z}=\abs{\bar{z}}; \\ 
-    \abs{z \cdot z'}=\abs{z} \cdot \abs{z'}; \\ 
+    \abs{z}=\abs{\bar{z}}; \\
+    \abs{z \cdot z'}=\abs{z} \cdot \abs{z'}; \\
     \abs{z+z'}\leq\abs{z}+\abs{z'}.
   \end{gather}
   Avec égalité s'il existe un réel $\lambda$ tel que $z'=\lambda z$.
@@ -154,9 +154,9 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
   \begin{equation}
     (\abs{z}+\abs{z'})^2-\abs{z+z'}^2
     =(\sqrt{z \bar{z}} +\sqrt{z' \bar{z'}})^2 - (z+z')(\bar{z+z'})
-    =2 \sqrt{z \bar{z} z' \bar{z'}} - z \bar{z'} - z'\bar{z} 
+    =2 \sqrt{z \bar{z} z' \bar{z'}} - z \bar{z'} - z'\bar{z}
   \end{equation}
-  On pose $u=z \bar{z'}$ et on a 
+  On pose $u=z \bar{z'}$ et on a
   \begin{equation}
     (\abs{z}+\abs{z'})^2-\abs{z+z'}^2=2 \abs{u}-2 \Re(u) \geq 0.
   \end{equation}
@@ -164,8 +164,8 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
 
   \emph{Cas d'égalité}~: Notons ici que $\frac{z'}{z}=x + \ii y$ avec $x$ et $y$ deux réels. On va montrer que l'égalité est vraie si et seulement si $y=0$ et $x \geq 0$.
   \begin{align}
-    \abs{z+z'}=\abs{z}+\abs{z'} &\iff \abs{1+\frac{z'}{z}}^2=\left(1+\abs{\frac{z'}{z}}\right)^2 \\ 
-    &\iff x = \sqrt{x^2+y^2}\\ 
+    \abs{z+z'}=\abs{z}+\abs{z'} &\iff \abs{1+\frac{z'}{z}}^2=\left(1+\abs{\frac{z'}{z}}\right)^2 \\
+    &\iff x = \sqrt{x^2+y^2}\\
     &\iff y=0 \text{~et~} x \geq 0.
   \end{align}
 \end{proof}
@@ -187,11 +187,11 @@ En pratique, on multiplie par le complexe conjugué : $\frac{1}{x+\ii y}=\frac{x
 \end{prop}
 %
 \begin{prop}
-  Soient un complexe $z$ non nul et un complexe $z'$ quelconque, alors on a 
+  Soient un complexe $z$ non nul et un complexe $z'$ quelconque, alors on a
   \begin{gather}
-    \bar{\frac{1}{z}}=\frac{1}{\bar{z}}; \\ 
-    \abs{\frac{1}{z}}=\frac{1}{\abs{z}}; \\ 
-    \bar{\frac{z'}{z}} = \frac{\bar{z'}}{\bar{z}};\\ 
+    \bar{\frac{1}{z}}=\frac{1}{\bar{z}}; \\
+    \abs{\frac{1}{z}}=\frac{1}{\abs{z}}; \\
+    \bar{\frac{z'}{z}} = \frac{\bar{z'}}{\bar{z}};\\
     \abs{\frac{z'}{z}}=\frac{\abs{z'}}{\abs{z}}.
   \end{gather}
 \end{prop}
@@ -219,7 +219,7 @@ Soit $\P$ le plan euclidien muni d'un repère orthonormé $(O,\vect{u}, \vect{v}
 \item l'inégalité triangulaire dit que la distance de $M(z)$ à $M(z')$ est inférieure ou égale à la somme de la distance entre O et $M(z)$ et de la distance entre O et $M(z')$;
 \item $D_o(a,r)$ est l'ensemble des points $M(z)$ dont la distance au point $A(a)$ est strictement inférieure à $r$.
 \end{itemize}
-Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ tel que $\vect{a}=\vect{OM}$. 
+Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ tel que $\vect{a}=\vect{OM}$.
 % La figure~\ref{planP} représente ces points.
 % \begin{figure}
 %   \centering
@@ -262,14 +262,14 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 \end{defdef}
 %
 \begin{prop}
-  Soit un complexe $z$, alors 
+  Soit un complexe $z$, alors
   \begin{equation}
     z \in \U \iff z \cdot \bar{z}=1 \iff \bar{z}=\frac{1}{z}.
   \end{equation}
 \end{prop}
 %
 \begin{prop}
-  $(\U, \times)$ est un groupe commutatif (ou abélien), c'est-à-dire que~: 
+  $(\U, \times)$ est un groupe commutatif (ou abélien), c'est-à-dire que~:
   \begin{enumerate}
   \item $\forall (z,z') \in \U^2 \quad zz' \in \U$;
   \item la loi $\times$ est associative et commutative;
@@ -287,7 +287,7 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 \end{proof}
 %
 \begin{prop}\label{prop:expsurj}
-  Soit un complexe $z$ de $\U$, alors il existe un réel $\theta$ ---~unique modulo $2\pi$~--- tel que $z=\cos\theta +\ii\sin\theta$. 
+  Soit un complexe $z$ de $\U$, alors il existe un réel $\theta$ ---~unique modulo $2\pi$~--- tel que $z=\cos\theta +\ii\sin\theta$.
 \end{prop}
 \begin{proof}[Existence]
   Soit un complexe $z$ de $\U$, notons $x$ et $y$ respectivement sa partie réelle et sa partie imaginaire. Alors $x^2+y^2=\abs{z}^2=1$, donc d'après le théorème~\ref{chap1-theo:thetasin} il existe un unique $\theta_0 \in \intervalleof{-\pi}{\pi}$ tel que $x=\cos\theta_0$ et $y=\sin\theta_0$.
@@ -297,7 +297,7 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 \end{proof}
 %
 \begin{defdef}[Exponentielle complexe]
-  Pour tout réel $\theta$, on note 
+  Pour tout réel $\theta$, on note
   \begin{equation}\
     \expc{}{\theta}=\cos\theta +\ii\sin\theta.
   \end{equation}
@@ -306,14 +306,14 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 \begin{prop}
   L'application $\fonction{\psi}{\R}{\U}{\theta}{\expc{}{\theta}}$ est un morphisme du groupe $(\R,+)$ sur le groupe $(\U,\times)$.
 \end{prop}
-\begin{proof} 
+\begin{proof}
   pour tout réel $\theta$, on a bien
   \begin{equation}
     \abs{\expc{}{\theta}}=\sqrt{\cos^2 \theta + \sin^2 \theta}=1,
   \end{equation}
-  donc $\psi(\theta) \in \U$. Ensuite, 
+  donc $\psi(\theta) \in \U$. Ensuite,
   \begin{align}
-    \psi(\theta +\theta') = &\cos(\theta +\theta') + \ii \sin(\theta + \theta')\\ 
+    \psi(\theta +\theta') = &\cos(\theta +\theta') + \ii \sin(\theta + \theta')\\
     =&\cos \theta \cos \theta' - \sin \theta \sin \theta' +\ii(\cos \theta \sin \theta' + \sin \theta \cos \theta')\\
     =&(\cos \theta + \ii \sin \theta)(\cos \theta' + \ii \sin \theta')\\
     =&\psi(\theta) \psi(\theta')
@@ -329,7 +329,7 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 \end{prop}
 
 Soient un entier naturel $n$ non nul et $\theta \in \R \setminus 2\pi\Z$. La somme vaut~:
-\begin{align} 
+\begin{align}
   \sum_{k=0}^n \cos(k\theta) =& \frac{1}{2} \sum_{k=0}^n (\expc{}{k \theta} + \expc{}{-k \theta})\\
   =&\frac{1}{2} \left[\frac{1-\expc{}{(n+1)\theta}}{1-\expc{}{\theta}}\right] + \frac{1}{2} \left[\frac{1-\expc{}{(-(n+1) \theta)}}{1-\expc{}{-\theta}}\right]\\
   =&\frac{1}{2} \left[\frac{\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\frac{\theta}{2}}} \left(\frac{\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}-\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\left(-\frac{\theta}{2}\right)} - \expc{}{\frac{\theta}{2}}} \right)\right] \notag \\
@@ -359,7 +359,7 @@ Car
 %
 \begin{prop}
   L'application $\psi$ est dérivable sur $\R$ et
-  \begin{equation} 
+  \begin{equation}
     \forall \theta \in \R \quad \psi'(\theta)=\ii \expc{}{\theta}.
   \end{equation}
 \end{prop}
@@ -389,8 +389,8 @@ Car
 \label{subsubsec:arcmoitie}
 Pour tout réel $\theta$ non congru à $\pi$ modulo--$2\pi$ on pose $t=\tan \left( \frac{\theta}{2} \right)$ alors
 \begin{gather}
-  \cos \theta = \dfrac{1-t^2}{1+t^2};\\ 
-  \sin \theta = \dfrac{2t}{1+t^2}; \\ 
+  \cos \theta = \dfrac{1-t^2}{1+t^2};\\
+  \sin \theta = \dfrac{2t}{1+t^2}; \\
   \tan \theta = \frac{2t}{1-t^2};\\
   \e^{\ii \theta}=\frac{(1+\ii \theta)^2}{1+t^2}.
 \end{gather}
@@ -400,12 +400,12 @@ La bijection $\fonction{\varphi}{\R}{\U\setminus \{-1\}}{t}{\frac{(1+\ii \theta)
 \label{subsubsec:linearisation}
 Pour tout réel $\theta$ on a~:
 \begin{gather}
-  \cos^2 \theta = \frac{1+\cos 2\theta}{2}; \\ 
+  \cos^2 \theta = \frac{1+\cos 2\theta}{2}; \\
   \sin^2 \theta = \frac{1-\cos 2\theta}{2}.
 \end{gather}
-Si l'exposant $p \geq 3$, on utilise les formules d'Euler 
+Si l'exposant $p \geq 3$, on utilise les formules d'Euler
 \begin{gather}
-  \cos^p \theta = \left(\frac{\expc{}{\theta}+\expc{}{\theta}}{2} \right)^p, \\ 
+  \cos^p \theta = \left(\frac{\expc{}{\theta}+\expc{}{\theta}}{2} \right)^p, \\
   \sin^p \theta = \left(\frac{\expc{}{\theta}-\expc{}{\theta}}{2 \ii} \right)^p,
 \end{gather}
 puis on développe avec la formule du binôme de Newton et on regroupe judicieusement les termes obtenus.
@@ -413,10 +413,10 @@ puis on développe avec la formule du binôme de Newton et on regroupe judicieus
 \subsubsection{Transformations de sommes en produits}
 \label{subsubsec:sommeprod}
 La transformation de produit en somme s'effectue en suivant le raisonnement suivant~:
-\begin{align} 
-  \expc{}{a}+\expc{}{b} &= \expc{}{\frac{a+b}{2}} \left(\expc{}{\frac{a-b}{2}} + \expc{}{\frac{b-a}{2}}\right) \\ 
+\begin{align}
+  \expc{}{a}+\expc{}{b} &= \expc{}{\frac{a+b}{2}} \left(\expc{}{\frac{a-b}{2}} + \expc{}{\frac{b-a}{2}}\right) \\
   & =  \expc{}{\frac{a+b}{2}} 2\cos \left(\frac{a-b}{2} \right).\\
-  \expc{}{a}-\expc{}{b} &= \expc{}{\frac{a+b}{2}} \left( \expc{}{\frac{a-b}{2}} - \expc{}{\frac{b-a}{2}} \right) \\ 
+  \expc{}{a}-\expc{}{b} &= \expc{}{\frac{a+b}{2}} \left( \expc{}{\frac{a-b}{2}} - \expc{}{\frac{b-a}{2}} \right) \\
   & =  \expc{}{\frac{a+b}{2}} 2 \ii \sin \left( \frac{a-b}{2} \right).
 \end{align}
 On identifie la partie réelle et la partie imaginaire pour écrire que
@@ -430,18 +430,18 @@ On peut retrouver les formules de transformation de sommes en produits, puis de 
 %
 \subsection{Argument d'un complexe}
 \label{subsec:argumentcomplexe}
-Soit $z$ un complexe non nul. Le complexe $\frac{z}{\abs{z}}$ est de module 1, donc il existe un réel $\theta$ tel que $\frac{z}{\abs{z}}=\expc{}{\theta}$ 
+Soit $z$ un complexe non nul. Le complexe $\frac{z}{\abs{z}}$ est de module 1, donc il existe un réel $\theta$ tel que $\frac{z}{\abs{z}}=\expc{}{\theta}$
 \begin{defdef}
   Si $z$ est un complexe non nul, on appelle argument de $z$ tout réel $\theta$ tel que $z=\expc{\abs{z}}{\theta}$.  Le réel $\theta$ est défini modulo-$2\pi$, on note $\congru{\arg(z)}{\theta}{2\pi}$. L'unique réel $\theta \in \intervalleof{-\pi}{\pi}$, qui est un argument de $z$, est l'argument principal de $z$, noté $\Arg(z)$.
 \end{defdef}
-L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme trigonométrique du complexe non nul $z$. 
+L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme trigonométrique du complexe non nul $z$.
 
 \emph{Remarque}~: Si on ne sait pas que le complexe est non nul, on ne parle ni d'argument ni de forme trigonométrique.
 \begin{prop}
   Soit un complexe $z$ non nul, alors
   \begin{equation}
-    \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \R+^2 \quad z=\expc{\rho}{\theta}=\expc{\rho'}{\theta'} \iff 
-    \begin{cases} 
+    \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \R+^2 \quad z=\expc{\rho}{\theta}=\expc{\rho'}{\theta'} \iff
+    \begin{cases}
       \rho = \rho' = \abs{z} \\
       \congru{\theta}{\theta'}{2\pi}
     \end{cases}.
@@ -451,7 +451,7 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
   La preuve de cette proposition découle directement de la définition.
 \end{proof}
 %
-\begin{prop} 
+\begin{prop}
   Soient deux complexes non nuls $z$ et $z'$ et un entier relatif $n$, alors
   \begin{gather}
     \congru{\arg(z)}{0}{\pi} \iff z \in \R^*;\\
@@ -482,7 +482,7 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
   Soit un entier naturel non nul $n$, on appelle racine $n$\iemes{} de l'unité tout complexe $z$ tel que $z^n=1$. L'ensemble de ces complexes est noté $\U_n$
 \end{defdef}
 \begin{prop}
-  Soit un entier naturel $n$ non nul, alors 
+  Soit un entier naturel $n$ non nul, alors
   \begin{equation}
     \U_n=\enstq{\expc{}{\frac{2 \pi k}{n}}}{k\in\intervalleentier{0}{n-1}}.
   \end{equation}
@@ -491,15 +491,15 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 \begin{proof}
   Soit un complexe $z$ de $\U_n$ noté $\expc{\rho}{\theta}$, alors comme $z^n=1$ on a $\rho=1$ et $\congru{n\theta}{0}{2\pi}$ c'est à dire que $z \in \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$.
   \begin{itemize}
-  \item Soient deux entiers relatifs $k$ et $l$ de $\intervalleentier{0}{n-1}$ alors $\abs{\frac{2\pi}{n}k - \frac{2\pi}{n}l} \leq 2\pi$ donc $\expc{}{\frac{2\pi k}{n}} \neq \expc{}{\frac{2\pi l}{n}}$. Il y a donc $n$ racines distinctes. 
-  \item Soit un entier relatif $k$, il existe un entier $l \in \intervalleentier{0}{n-1}$ tel que $\congru{k}{l}{n}$~:    
-      Puisque si on définit $k$ tel que $p=\Ent\left( \frac{k}{n} \right)$ alors 
+  \item Soient deux entiers relatifs $k$ et $l$ de $\intervalleentier{0}{n-1}$ alors $\abs{\frac{2\pi}{n}k - \frac{2\pi}{n}l} \leq 2\pi$ donc $\expc{}{\frac{2\pi k}{n}} \neq \expc{}{\frac{2\pi l}{n}}$. Il y a donc $n$ racines distinctes.
+  \item Soit un entier relatif $k$, il existe un entier $l \in \intervalleentier{0}{n-1}$ tel que $\congru{k}{l}{n}$~:
+      Puisque si on définit $k$ tel que $p=\Ent\left( \frac{k}{n} \right)$ alors
       \begin{align}
-        np \leq & k < np +n \\ 
+        np \leq & k < np +n \\
         0 \leq & k-np \leq n-1 <n.
-      \end{align}     
+      \end{align}
     \end{itemize}
-    Alors on a démontré que $\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$, on déduit l'autre inclusion en vérifiant que tous les éléments de $\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$ élevés à la puissance $n$ font 1. 
+    Alors on a démontré que $\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$, on déduit l'autre inclusion en vérifiant que tous les éléments de $\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$ élevés à la puissance $n$ font 1.
 \end{proof}
 
 \emph{Interprétation géométrique}~: Les points d'affixes $z \in \U_n$ forment les sommets d'un polygone régulier à $n$ cotés centré en O dont l'un des sommet est $1$. La représentation géométrique de l'ensemble $\U_5$ est donnée par le figure~\ref{fig:racinesnieme}.
@@ -511,13 +511,13 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 \end{figure}
 
 \begin{theo}
-  Soit $n$ un entier naturel non nul alors 
-  \begin{equation} 
+  Soit $n$ un entier naturel non nul alors
+  \begin{equation}
     \forall z \in \U_n \setminus \{1\} \quad \sum_{k=0}^{n-1} z^k = 0.
   \end{equation}
 \end{theo}
-\begin{proof} 
-  C'est la somme des termes d'une suite géométrique de raison $z \neq 1$ donc 
+\begin{proof}
+  C'est la somme des termes d'une suite géométrique de raison $z \neq 1$ donc
   \begin{equation}
     \sum_{k=0}^{n-1} z^k = \frac{1-z^{n-1+1}}{1-z} = 0.
   \end{equation}
@@ -526,7 +526,7 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 Application à la résolution de $z^n=a$ pour $a \in \C$~: On étudie ce problème en étude de cas~:
 \begin{itemize}
 \item si $a=0$, la seule solution est zéro;
-\item si $a \neq 0$, on cherche des solutions dans $\C^*$ et on peut écrire les formes trigonométriques~: $z=\expc{\rho}{\theta} \quad a = \expc{A}{\alpha}$, alors 
+\item si $a \neq 0$, on cherche des solutions dans $\C^*$ et on peut écrire les formes trigonométriques~: $z=\expc{\rho}{\theta} \quad a = \expc{A}{\alpha}$, alors
   \begin{equation}
     \rho = \sqrt[n]{A} \quad \congru{\theta}{\frac{\alpha}{n}}{\frac{2\pi}{n}};
   \end{equation}
@@ -534,7 +534,7 @@ Application à la résolution de $z^n=a$ pour $a \in \C$~: On étudie ce problè
 \end{itemize}
 %
 \begin{prop}
-  Pour un complexe $a$ non nul, l'ensemble des solutions de l'équation $z^n=a$ est 
+  Pour un complexe $a$ non nul, l'ensemble des solutions de l'équation $z^n=a$ est
   \begin{equation}
     S_{z^n=a}=\enstq{\expc{\sqrt[n]{A}}{\frac{(\alpha + 2\pi k)}{n}}}{k \intervalleentier{0}{n-1}}.
   \end{equation}
@@ -544,8 +544,8 @@ Application à la résolution de $z^n=a$ pour $a \in \C$~: On étudie ce problè
   \end{equation}
 \end{prop}
 \emph{Cas particulier}
-Si $n=2$, on trouve deux racines complexes conjuguées. Par exemple les racines de $Z=3+4\ii$ sont telles que 
-\begin{align} 
+Si $n=2$, on trouve deux racines complexes conjuguées. Par exemple les racines de $Z=3+4\ii$ sont telles que
+\begin{align}
   z^2=3+4\ii & \iff  \begin{cases} x^2-y^2=3 \\ 2xy=4 \end{cases} \\
   & \iff \begin{cases} x^2=4 \\ y^2=1 \\ xy=2 \end{cases} \\
   & \iff z \in \{2+\ii, -2-\ii\}.
@@ -567,7 +567,7 @@ Mise sous forme canonique du trinôme~: le trinôme peut se factoriser en cherch
   az^2+bz+c &= a \left(z^2+ 2 \frac{b}{2a}z + \frac{b^2}{4a^2} - \frac{b^2}{4a^2} +\frac{c}{a} \right)\\
   &=a \left( \left(z+\frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} \right).
 \end{align}
-Comme $a$ est non nul, les solution de l'Eq.~\eqref{eq:eq1} sont des solutions de l'équation 
+Comme $a$ est non nul, les solution de l'Eq.~\eqref{eq:eq1} sont des solutions de l'équation
 \begin{equation}
   \left(z+\frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} =0.
 \end{equation}
@@ -581,10 +581,10 @@ Comme $a$ est non nul, les solution de l'Eq.~\eqref{eq:eq1} sont des solutions d
   \begin{equation}
     \mathcal{S}=\biggl\lbrace-\frac{b}{2a} \biggl\rbrace;
   \end{equation}
-\item soit le discriminant est non nul et dans ce cas on pose que le complexe $\delta$ est une de ses racines carrées et l'ensemble des solutions est 
+\item soit le discriminant est non nul et dans ce cas on pose que le complexe $\delta$ est une de ses racines carrées et l'ensemble des solutions est
 \begin{equation}
   \mathcal{S}=\biggl\lbrace \frac{-b+\delta}{2a} , \frac{-b-\delta}{2a} \biggl\rbrace.
-\end{equation} 
+\end{equation}
 \end{enumerate}
 
 \emph{Cas particulier} : si $a$, $b$ et $c$ sont réels alors le discriminant $\Delta$ de l'Eq.~\eqref{eq:eq1} est réel et admet deux racines (si $\Delta \neq 0$) et donc~:
@@ -609,23 +609,23 @@ Si le nombre $2$ apparaît naturellement en facteur dans $b$, on pose $b'=\frac{
 %
 \subsection{Relation entre les coefficients et les racines}
 \label{subsec:relationcoefsracines}
-% 
+%
 \begin{prop}
   Soient $s$ et $p$ deux complexes. Alors deux complexes quelconques $x$ et $y$ sont solutions de $\begin{cases} x +y = s \\ xy=p \end{cases}$ si et seulement si $x$ et $y$ sont solutions de l'équation $z^2 -sz+p=0$.
 \end{prop}
 \begin{proof}
-  Soient $s$ et $p$ deux complexes. On considère l'équation 
+  Soient $s$ et $p$ deux complexes. On considère l'équation
   \begin{equation}
     z^2-sz+p=0.
   \end{equation}
-  Soient $\alpha$ et $\beta$ les solutions de cette équation, alors 
+  Soient $\alpha$ et $\beta$ les solutions de cette équation, alors
   $\begin{cases} \
-    \alpha +\beta = s \\ 
-    \alpha \beta=p 
+    \alpha +\beta = s \\
+    \alpha \beta=p
   \end{cases}$.
   Plus généralement si $\alpha$ et $\beta$ sont les deux racines de l'Eq.~\eqref{eq:eq1} alors $\begin{cases} \alpha + \beta = -\frac{b}{a} \\ \alpha \beta = \frac{c}{a} \end{cases}$.
 \end{proof}
-% 
+%
 \section{Exponentielle complexe}
 \label{sec:expcomplexe}
 \begin{defdef}
@@ -702,8 +702,8 @@ Soient $\omega \in \C$, $k\in \R^*$ et $\theta \in \R^*$. La rotation $\mathcal{
   On appelle similitude directe de centre $\Omega(\omega)$, d'angle $\theta$ et de rapport $k \in \R^*$, la transformation $\Psi$ du plan dans le plan représentée par l'application de $\C$ dans $\C$~: $\fonction{\psi}{\C}{\C}{z}{\expc{k}{\theta}(z-\omega)+\omega}$.
 \end{defdef}
 
-% 
-Soient $a$ et $b$ deux complexes tels que $a\neq 0$. On considère l'application bijective $\fonction{\varphi}{\C}{\C}{z}{az+b}$ qui représente $\fonction{\Phi}{\P}{\P}{M(z)}{M(az+b)}$. 
+%
+Soient $a$ et $b$ deux complexes tels que $a\neq 0$. On considère l'application bijective $\fonction{\varphi}{\C}{\C}{z}{az+b}$ qui représente $\fonction{\Phi}{\P}{\P}{M(z)}{M(az+b)}$.
 \begin{itemize}
 \item Si $a=1$; alors  $\Phi$ est la translation de vecteur $\vect{u}(b)$.
 \item Si $a \neq 1$, alors on montre que $\Phi$ admet un unique point fixe $\Omega(\omega) \quad \omega = \frac{b}{1-a}$ et $\varphi(z)=a(z-\omega)+\omega$.
@@ -730,8 +730,8 @@ Soient deux réels $k$ et $\lambda$.
 \item Quel est l'ensemble des points $E_\lambda = \enstq{M(z) \in \P}{\congru{\arg \left(\frac{z-a}{z-b} \right)}{\lambda}{2\pi}}$~?
 \end{enumerate}
 
-Si le réel $k<0$ alors $E_k=\emptyset$, s'il est nul alors $E_0=\{A(a)\}$, s'il vaut 1 alors $E_1$ est la médiatrice de $[AB]$. 
+Si le réel $k<0$ alors $E_k=\emptyset$, s'il est nul alors $E_0=\{A(a)\}$, s'il vaut 1 alors $E_1$ est la médiatrice de $[AB]$.
 
 Si le réel $k$ est strictement positif non égal à 1 alors $\frac{MA}{MB}=k$ et donc $(\vect{MA}+k\vect{MB}) \cdot (\vect{MA}-k\vect{MB})=0$. Soit $I$ le barycentre de $(A,1)(B,k)$ et $J$ le barycentre de $(A,1)(B,-k)$ alors $(1+k)(1-k) \vect{MI} \cdot \vect{MJ} =0$ comme $k \neq \pm 1$ on a que M est sur le cercle de diamètre $[IJ]$.
 
-Si $z \in \{a,b\}$ alors $E_\lambda=\emptyset$ et sinon $E_\lambda$ est la droite qui forme l'angle $\lambda$ avec la droite $(A(a)B(b))$. 
+Si $z \in \{a,b\}$ alors $E_\lambda=\emptyset$ et sinon $E_\lambda$ est la droite qui forme l'angle $\lambda$ avec la droite $(A(a)B(b))$.
