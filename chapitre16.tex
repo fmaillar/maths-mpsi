@@ -50,7 +50,7 @@ Soit $E$ un $\K$-espace vectoriel, soit $\L$ un sous-corps de $\K$. Alors $E$ es
 
 \subsubsection{Espace vectoriel produit}
 
-Soient deux $\K$-espace vectoriels $(E_1,+_1,\perp_1)$ et $(E_2,+_2,\perp_2)$. On munit le produit cartésien $E_1 \times E_2$ 
+Soient deux $\K$-espace vectoriels $(E_1,+_1,\perp_1)$ et $(E_2,+_2,\perp_2)$. On munit le produit cartésien $E_1 \times E_2$
 \begin{itemize}
 \item d'une loi de composition interne noté $+$ définie par
 \begin{equation}
@@ -87,7 +87,7 @@ Soit $(E,+,\perp)$ un espace vectoriel sur $\K$.
     $(-\lambda)x=-(\lambda x)$ & $\lambda(-x)=-(\lambda x)$\\
     $(\lambda-\lambda')x=\lambda x- \lambda' x$ & $\lambda(x-x')=\lambda x- \lambda x'$\\
     $\left(\sum_{i=1}^n \lambda_i \right)x=\sum_{i=1}^n \lambda_i x$ & $\lambda\left(\sum_{i=1}^n x_i\right)=\sum_{i=1}^n \lambda x_i$\\
-    $(k\lambda)x=k(\lambda x)$ & $\lambda (kx)=k(\lambda x)$ \\ 
+    $(k\lambda)x=k(\lambda x)$ & $\lambda (kx)=k(\lambda x)$ \\
   \hline\end{tabular}
 \end{table}
 \end{prop}
@@ -97,7 +97,7 @@ Soit $(E,+,\perp)$ un espace vectoriel sur $\K$.
     \forall (\lambda,\lambda') \in \K^2 \quad f_x(\lambda+\lambda')=f_x(\lambda)+f_x(\lambda').
   \end{equation}
   Alors les propriétés de la colonne A découlent des propriétés des morphismes de groupes.
-  
+
   De la même manière on définit pour tout scalaire $\lambda$ de $\K$ l'application $\fonction{h_\lambda}{E}{E}{x}{\lambda x}$. C'est un endomorphisme du groupe $(E,+)$. C'est-à-dire que
   \begin{equation}
     \forall (x,x') \in E^2 \quad h_\lambda(x+x')=h_\lambda(x)+h_\lambda(x').
@@ -285,7 +285,7 @@ Si $E_1$ est un sous-espace vectoriel de $E$, on peut considérer la restriction
 
 Soient un $\K$-espace vectoriel $(E,+_E,\perp_E)$ et $E_1$ un sous-espace vectoriel de $E$. On définit $\fonction{j}{E_1}{E}{x}{x}$ appelé injection canonique de $E_1$ dans $E$ et $j \in \Lin{E_1}{E}$. Soient $E$ et $F$ deux $\K$-espaces vectoriels. On dispose de l'espace vectoriel produit $E \times F$ muni des lois produits. On définit $\fonction{\Pi}{E\times F}{E}{(x,y)}{x}$, et alors $\Pi \in \Lin{E}{F}$ et $\Pi$ est surjective $\forall x \in E \quad x=\Pi(x,0)$.
 
-\paragraph{Homothétie} 
+\paragraph{Homothétie}
 Soit $E$ un $\K$-espace vectoriel. Pour tout scalaire $\lambda$, on définit l'application $\fonction{h_\lambda}{E}{E}{x}{\lambda x}$. Ces fonctions vérifient les propositions suivantes
 \begin{prop}
   Pour tout scalaire $\lambda$, $h_\lambda \in \Endo{E}$.
@@ -327,7 +327,7 @@ Soit $E$ un $\K$-espace vectoriel. Pour tout scalaire $\lambda$, on définit l'a
 \end{proof}
 
 \paragraph{Dérivation}
-Soit un intervalle réel $I$. On appelle application de dérivation l'application telle que $\fonction{\Dr}{\Dr(I,\R)}{\R^I}{f}{f'}$. Cette application est linéaire, 
+Soit un intervalle réel $I$. On appelle application de dérivation l'application telle que $\fonction{\Dr}{\Dr(I,\R)}{\R^I}{f}{f'}$. Cette application est linéaire,
 \begin{equation}
   \forall (f,g) \in \deriv{I}{\R}^2 \ \forall \alpha \in \R \quad \Dr(\alpha f+g)= \alpha \Dr(f)+\Dr(g).
 \end{equation}
@@ -423,7 +423,7 @@ On sait que $\K$ est un espace vectoriel sur lui-même.
 
 Soient, par exemple, deux reéls $a$ et $b$ tels que $a<b$ alors l'application
 \begin{equation}
- \fonction{I}{\mathit{C}(\intervalleff{a}{b},\R)}{\R}{f}{\int_{a}^b f(t)\D t} 
+ \fonction{I}{\mathit{C}(\intervalleff{a}{b},\R)}{\R}{f}{\int_{a}^b f(t)\D t}
 \end{equation}
 est une forme linéaire. Puisque pour toutes fonctions $f$ et $g$ continues de $\intervalleff{a}{b}$ vers $\R$ et tout sclaire $\alpha$ on a
 \begin{align}
@@ -481,7 +481,7 @@ Si $E$ est un espace vectoriel, on note $E^*=\Lin{E}{\K}$ l'ensemble des formes 
 \end{proof}
 
 \begin{cor}
-  La loi de composition $\circ$ est distributive à droite par rapport à la loi $+$ dans $\Endo{E}$. 
+  La loi de composition $\circ$ est distributive à droite par rapport à la loi $+$ dans $\Endo{E}$.
   \begin{equation}
     \forall (u,v,v') \in \Endo{E}^3 \quad (v+v') \circ u = v \circ u + v' \circ u.
   \end{equation}
@@ -506,7 +506,7 @@ Si $E$ est un espace vectoriel, on note $E^*=\Lin{E}{\K}$ l'ensemble des formes 
   Attention, l'égalité~\eqref{eg:eg2} est valable parce que $v$ est linéaire. Comme ceci est vrai pour tout $x \in E$, on a alors $\Psi_v(\lambda u+u')=\lambda \Psi_v(u)+\Psi_v(u')$, et donc $\Psi_v$ est linéaire.
 \end{proof}
 \begin{cor}
-  La loi de composition $\circ$ est distributive à gauche par rapport à la loi $+$ dans $\Endo{E}$. 
+  La loi de composition $\circ$ est distributive à gauche par rapport à la loi $+$ dans $\Endo{E}$.
   \begin{equation}
     \forall (u,v,v') \in \Endo{E}^3 \quad v \circ (u+u') = v \circ u + v \circ u'.
   \end{equation}
@@ -634,11 +634,11 @@ Donc $\bigcap_{E' \in \Xi} E' \subset E_0'$.
 \begin{prop}[Caractérisation pratique]
   Soient un $\K$-espace vectoriel $E$ et $X$ une partie de $E$. Pour tout $E_1 \in \Part(E)$,
   \begin{equation}
-    E_1 = \VectEngendre(X) \iff 
-    \begin{cases} 
-      E_1 \text{~est un sous-espace vectoriel de } E \\ 
-      X \subset E_1 \\ 
-      \forall E_2 \text{~sous-espace vectoriel de E } X \subset E_2 \implies E_1 \subset E_2 
+    E_1 = \VectEngendre(X) \iff
+    \begin{cases}
+      E_1 \text{~est un sous-espace vectoriel de } E \\
+      X \subset E_1 \\
+      \forall E_2 \text{~sous-espace vectoriel de E } X \subset E_2 \implies E_1 \subset E_2
     \end{cases}.
   \end{equation}
 \end{prop}
@@ -778,7 +778,7 @@ Par exemple, $\C=\R \oplus \ii\R$. Puisque tout complexe $z$ admet une partie r�
 
   $3 \implies 4$ : Soit $x \in E_1 \cap E_2$ alors $-x \in E_1 \cap E_2$ puisque c'est un sous-espace vectoriel. Alors $0=x-x$ donc d'après $3$, $x=-x=0$ donc $E_1 \cap E_2 \subset \{0\}$ et l'autre inclusion est vraie puisque c'est un sous-espace vectoriel.
 
-  $4 \implies 1$ Supposons que $E_1 \cap E_2 = \{0\}$. Par définition de l'espace somme on sait que pour tout $x \in E_1+E_2$ il existe $(x_1,x_2) \in E_1 \times E_2$ tel que $x=x_1+x_2$. Montrons que ce couple est unique~: supposons qu'il existe un deuxième couple $(x'_1,x'_2) \in E_1 \times E_2$ tel que $x=x'_1+x'_2$. Alors $x_1+x_2=x'_1+x'_2$. Alors $x_1-x'_1=x_2-x'_2$ or $x_1 -x'_1 \in E_1$ et $x_2-x'_2 \in E_2$  et comme ils sont égaux ils sont dans l'intersection $E_1 \cap E_2$. Or comme elle est nulle, par hypothèse, donc $x_1=x'_1$ et $x'_2=x_2$. 
+  $4 \implies 1$ Supposons que $E_1 \cap E_2 = \{0\}$. Par définition de l'espace somme on sait que pour tout $x \in E_1+E_2$ il existe $(x_1,x_2) \in E_1 \times E_2$ tel que $x=x_1+x_2$. Montrons que ce couple est unique~: supposons qu'il existe un deuxième couple $(x'_1,x'_2) \in E_1 \times E_2$ tel que $x=x'_1+x'_2$. Alors $x_1+x_2=x'_1+x'_2$. Alors $x_1-x'_1=x_2-x'_2$ or $x_1 -x'_1 \in E_1$ et $x_2-x'_2 \in E_2$  et comme ils sont égaux ils sont dans l'intersection $E_1 \cap E_2$. Or comme elle est nulle, par hypothèse, donc $x_1=x'_1$ et $x'_2=x_2$.
 \end{proof}
 
 \subsection{Sous-espaces vectoriels supplémentaires}
@@ -795,7 +795,7 @@ Par exemple, $\C=\R \oplus \ii\R$. Puisque tout complexe $z$ admet une partie r�
   \end{equation}
 \end{theo}
 \begin{proof}
-  S'ils sont supplémentaires alors on a $E_1 \cap E_2 = \{0\}$ (qui donne l'unicité du couple)  et $E=E_1+E_2$ (qui donne l'existence du couple). Si maintenant on suppose que 
+  S'ils sont supplémentaires alors on a $E_1 \cap E_2 = \{0\}$ (qui donne l'unicité du couple)  et $E=E_1+E_2$ (qui donne l'existence du couple). Si maintenant on suppose que
 \begin{equation}
   \forall x \in E \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2.
 \end{equation}
@@ -868,7 +868,7 @@ Dans toute cette section, $E$ désignera un $\K$-espace vectoriel muni de son ad
 \label{sec:projections}
 
 \begin{defdef}
-  Soient $E_1, E_2$ deux sous-espaces vectoriels supplémentaires de $E$. Pour tout vecteur $x \in E$ il existe un unique couple $(x_1,x_2) \in E_1 \times E_2$ tel que $x=x_1+x_2$ (d'après le théorème~\ref{theo:caracSommeDirecte}). Alors on peut définir les applications $\fonction{p_1}{E}{E_1}{x}{x_1}$ et $\fonction{p_2}{E}{E_2}{x}{x_2}$. L'application $p_1$ est appelée la projection sur $E_1$ parallèlement à $E_2$. De manière analogue, l'application $p_2$ est appelée la projection sur $E_2$ parallèlement à $E_1$. 
+  Soient $E_1, E_2$ deux sous-espaces vectoriels supplémentaires de $E$. Pour tout vecteur $x \in E$ il existe un unique couple $(x_1,x_2) \in E_1 \times E_2$ tel que $x=x_1+x_2$ (d'après le théorème~\ref{theo:caracSommeDirecte}). Alors on peut définir les applications $\fonction{p_1}{E}{E_1}{x}{x_1}$ et $\fonction{p_2}{E}{E_2}{x}{x_2}$. L'application $p_1$ est appelée la projection sur $E_1$ parallèlement à $E_2$. De manière analogue, l'application $p_2$ est appelée la projection sur $E_2$ parallèlement à $E_1$.
 \end{defdef}
 
 \begin{theo}\label{theo:propprojection}
@@ -885,7 +885,7 @@ Dans toute cette section, $E$ désignera un $\K$-espace vectoriel muni de son ad
 
 \begin{proof}
   \begin{enumerate}
-  \item 
+  \item
     Soient $x$ et $y$ deux vecteurs de $E$ et un scalaire $\lambda$. Puisque $E_1$ et $E_2$ sont deux sous-espaces vectoriels supplémentaires de $E$, il existe deux uniques couples $(x_1,x_2) \in E_1 \times E_2$ et $(y_1,y_2) \in E_1 \times E_2$ tels que $x=x_1+x_2$ et $y=y_1+y_2$. Alors
     \begin{equation}
       \lambda x +y= \lambda (x_1+x_2) + (y_1+y_2) = (\lambda x_1+y_1) + (\lambda x_2 +y_2),
@@ -929,7 +929,7 @@ Soit $p_1$ la projection sur $E_1$ parallèlement à $E'_2$ et $p'_2$ la project
 \end{proof}
 
 \begin{prop}[Caractérisation des projecteurs]
-  Soit une application $p \in E^E$, alors 
+  Soit une application $p \in E^E$, alors
   \begin{equation}
     p \text{~est un projecteur} \iff p \in \Endo{E} \text{~et~} \forall x \in \Image(p) \quad p(x)=x.
   \end{equation}
@@ -973,7 +973,7 @@ Les projections et les projecteurs de $E$ vérifient~:
 \begin{prop}[Projecteur associé]
   Soit un projecteur $p \in \Endo{E}$, alors $q=\Id-p$ est aussi un projecteur appelé projecteur associée de $p$ et
   \begin{gather}
-    \Image(q) = \Ker(p);\\ 
+    \Image(q) = \Ker(p);\\
     \Ker(q)=\Image(p);\\
     p \circ q = q \circ p =0.
   \end{gather}
@@ -1128,7 +1128,7 @@ Alors comme $\Ker(q)=\Image(p)=E_1$ on a $\Inv(s)=E_1$.
 Alors comme $\Ker(p)=E_2$ on a $\Opp(s)=E_2$.
 %
 \begin{prop}
-  Soit une symétrie vectorielle $s$ de $E$, alors 
+  Soit une symétrie vectorielle $s$ de $E$, alors
 \begin{equation}
   E=\Inv(s) \oplus \Opp(s).
 \end{equation}
@@ -1197,18 +1197,18 @@ Alors comme $\Ker(p)=E_2$ on a $\Opp(s)=E_2$.
       &=a_{\alpha\beta}
     \end{align}
     puisque $p_1$ et $p_2$ sont des projecteurs.
-   
+
     Si $\alpha$ est non nul, alors il est inversible d'invers $\alpha^{-1}$ et on a
     \begin{equation}
       a_\alpha \circ a_{\alpha^{-1}} = a_{\alpha \alpha^{-1}} = \alpha_1 = p_1+p_2=\Id
     \end{equation}
     donc $a_\alpha \in \GL{E}$ et $(a_\alpha)^{-1}=a_{\alpha^{-1}}$.
-  
+
     On a $a_\alpha - \Id=p_1+\alpha p_2 -(p_1+p_2) = (\alpha-1)p_2$ et $a_\alpha -\alpha \Id = p_1+\alpha p_2 -\alpha(p_1+p_2) = (1-\alpha)p_1$. Alors
     \begin{equation}
       (a_\alpha-\Id) \circ (a_\alpha -\alpha \Id) = -(\alpha-1)^2 p_2 \circ p_1=0.
     \end{equation}
-  
+
     On a $a_\alpha-\Id = (\alpha-1)p_2$ et comme $\alpha \neq 1$ on a $\Ker(a_\alpha-\Id)=\Ker(p_2)=E_1$. De la même manière $a_{\alpha}-\alpha \Id = (1-\alpha)p_1$ et comme $\alpha \neq 1$ on a $\Ker(a_\alpha-\alpha\Id)=\Ker(p_1)=E_2$. Comme $E=E_1 \oplus E_2$ alors $E=\Ker(a_\alpha - \Id) \oplus \Ker(a_\alpha - \alpha \Id)$.
 \end{proof}
 
@@ -1246,7 +1246,7 @@ Soient, comme d'habitude, $E_1$ et $E_2$ deux sous-espace vectoriels supplément
   &\iff p_1(x)+\alpha p_2(x) = p_1(x)+p_2(x) \\
   &\iff (\alpha-1) p_2(x)=0.
 \end{align}
-Si $\alpha=1$ alors $a_1=\Id$ et $\Inv(a_1)=E$. Sinon, alors $\Inv(a_\alpha)=\Ker(p_2)=\Image(p_1)=E_1$, et 
+Si $\alpha=1$ alors $a_1=\Id$ et $\Inv(a_1)=E$. Sinon, alors $\Inv(a_\alpha)=\Ker(p_2)=\Image(p_1)=E_1$, et
 \begin{align}
   \forall x \in E \quad x \in \Opp(a_\alpha) &\iff a_\alpha(x)=-x \\
   &\iff p_1(x)+\alpha p_2(x) = -p_1(x)-p_2(x) \\
@@ -1301,7 +1301,7 @@ Finalement
       puisque $(E,+)$ est un groupe et donc tous les éléments sont simplifiables pour $+$.
     \item l'application $x \longmapsto A+x$ est surjective
       \begin{equation}
-        \forall B \in E \ \exists x \in E \quad A+x=B, 
+        \forall B \in E \ \exists x \in E \quad A+x=B,
       \end{equation}
       en prenant $x=B-A \in E$ puisque $E$ est un espace vectoriel.
     \item associativité de l'addition dans $E$.
@@ -1341,7 +1341,7 @@ On dispose de l'application $\fonction{+}{E\times E}{E}{(A,x)}{A+x}$.
 \subsubsection{Translations}
 
 \begin{defdef}
-  Soit $x_0 \in E$. On appelle translation de vecteur $x_0$ l'application $\fonction{t_{x_0}}{E}{E}{A}{A+x_0}$. On note $\Tau(E)$ l'ensemble des translations de l'espace affine $E$, $\Tau(E)=\{t_{x_0}, x_0 \in E\}$.
+  Soit $x_0 \in E$. On appelle translation de vecteur $x_0$ l'application $\fonction{t_{x_0}}{E}{E}{A}{A+x_0}$. On note $\tau(E)$ l'ensemble des translations de l'espace affine $E$, $\tau(E)=\{t_{x_0}, x_0 \in E\}$.
 \end{defdef}
 
 \begin{prop}\label{prop:associativitevec}
@@ -1453,7 +1453,7 @@ Alors $\Ker(T)=\{0\}$, alors $T$ est injectif. Ainsi $T$ induit un isomorphisme 
   \item Soit $E_1$ un sous-espace vectoriel de $E$, alors $E_1=\{0\}+E_1$, c'est donc un sous-espace affine;
   \item soit $W_1=A_1+E_1$ un sous-espace affine~: $\implies$ Si $W_1$ est un sous-espace vectoriel, alors il contient $0$;
 
-    $\impliedby$ Si $0 \in W_1$, il existe $x \in E_1$ tel que $A_1+x=0$ et donc $A_1 = -x \in E_1$ car c'est un sous-espace vectoriel. 
+    $\impliedby$ Si $0 \in W_1$, il existe $x \in E_1$ tel que $A_1+x=0$ et donc $A_1 = -x \in E_1$ car c'est un sous-espace vectoriel.
 
     Montrons que $W_1=E1$. Si $A \in W_1$, il existe alors $x \in E_1$ tel que $A=A_1+x \in E_1$ donc $W_1 \subset E_1$. Si $A \in E_1$, alors $A=A_1 +\vect{A_1A}$ et comme $A_1$ et $A$ sont dans $E$, le vecteur $\vect{A_1A} \in E$ donc $A \in W_1$. Ainsi $E_1 \subset W_1$. Par double inclusion $W_1=E1$
   \end{itemize}
@@ -1626,7 +1626,7 @@ Les égalités $2$ et $3$ ne dépendent pas du point $A$, donc $1 \iff 2 \iff 3 
 \end{proof}
 
 \emph{Conséquence Importante}~; Si $(A_i,\lambda_i)_{i=1, \ldots, n}$ est une famille de points pondérés de masse totale non nulle, on peut se ramener à $G = \Bary(A_i,\lambda_i)_{i=1, \ldots, n}=\Bary(A_i,\alpha_i)_{i=1, \ldots, n}$ avec $\sum_{i=1}^n \alpha_i = 1$ en prenant pour tout $i \in \llbracket 1,n \rrbracket$ $\alpha_i=\frac{\lambda_i}{\sum_{i=1}^n \lambda_i}$.
-  
+
 \begin{prop}[Associtivité]
   Soit une famille de points pondérés de $E$ $(A_i,\lambda_i)_{i=1, \ldots, n}$ de masse totale non nulle. Soit $(I_j)_{j=1, \ldots, p}$ une partition de $\llbracket 1,n \rrbracket$, ce qui signifie que
   \begin{align}
@@ -1721,19 +1721,19 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
 \end{prop}
 \begin{proof}
   $\impliedby$, Supposons que  $\courbe{}$ est stable par barycentration à coefficients positifs non nuls. Alors si $A$ et $B$ sont dans $\courbe{}$, tous leurs barycentres à coefficients positifs non nuls le sont aussi et donc $\courbe{}$ est une partie convexe.
-  
+
   $\implies$, On va montrer par récurrence sur $\N\setminus\{0,1\}$ l'assertion $\P(n)$ ``pour toute famille $(A_i,\lambda_i)_{i =1, \ldots, n}$ de points pondérés de $\courbe{}$ telle que tous les $\lambda_i \geq 0$ et $\sum_{i=1}^n \lambda_i\neq 0$ alors $\Bary(A_i,\lambda_i)_{i=1, \ldots, n} \in \courbe{}$''.
-  
+
   \emph{Initialisation}~: $\P(2)$ est vraie par définition d'une partie convexe.
-  
+
   \emph{Hérédité}~: Soit $n \geq 2$ et supposons $\P(n)$. Soit une famille, $(A_{i}, \lambda_i)_{i=1, \ldots, n+}$ telle que pour tout $i$ $A_{i} \in \courbe{}$, $\lambda_{i} \geq 0$ et $\sum_{i=1}^{n+1}\lambda_i \neq 0$. Deux cas se présentent~:
   \begin{enumerate}
-  \item si $\sum_{i=1}^{n}\lambda_i =0$ alors pour tout $i \in \llbracket 1,n \rrbracket \lambda_i =0$ et donc 
+  \item si $\sum_{i=1}^{n}\lambda_i =0$ alors pour tout $i \in \llbracket 1,n \rrbracket \lambda_i =0$ et donc
     \begin{equation}
       G=\Bary(A_i,\lambda_i)_{i=1, \ldots, n+1}=A_{n+1} \in \courbe{}
     \end{equation}
   \item Sinon, on peut appliquer l'hypothèse de récurrence à la famille $(A_i,\lambda_i)_{i=1, \ldots, n}$ alors $G_n=\Bary(A_i,\lambda_i)_{i=1,\ldots, n} \in \courbe{}$.
-    Alors par associativite 
+    Alors par associativite
     \begin{equation}
       G=\Bary\left(\left(G_n,\sum_{i=1}^n \lambda_i\right), (A_{n+1}, \lambda_{n+1})\right),
     \end{equation}

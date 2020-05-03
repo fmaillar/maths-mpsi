@@ -1,0 +1,378 @@
+%pour résoudre le problème "No room for a new dimen" et on le place en premier
+\usepackage{etex}
+%
+%packages fondamentaux
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+%
+%pour les symboles mathématiques
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+%
+%Pour faire des maths en francais
+%\usepackage{frmath}
+%
+%Pour utiliser les tableaux
+\usepackage{array}
+%
+%fonte vectorielle
+\usepackage{lmodern}
+%
+%
+%Pour écrire de la physique avec les unités
+%\usepackage{siunitx}
+%
+%Pour inclure des images avec \includegraphics[scale=]{}
+\usepackage{graphics}
+%
+%Pour inclure des fichiers .ps ou .eps
+\usepackage{pstricks-add}
+%
+%Pour dessiner avec Tikz
+\usepackage{tikz, pgf}
+\usetikzlibrary{arrows,calc,backgrounds}
+%
+% pour le symbole \danger
+\usepackage{fourier-orns}
+%
+%pour utiliser les couleurs
+\usepackage{color}
+%
+%pour utiliser "draft" (brouillon)
+%\usepackage{draftcopy}
+%
+%pour renvoyer les notes à la fin
+\usepackage{endnotes}
+%
+%pour les encadrements et les boites
+\usepackage{fancybox}
+%
+%pour les boucles de programmation en \LaTeX
+\usepackage{ifthen}
+%
+%Pour le placement de flottants avec FloatBarrier
+\usepackage{placeins}
+%
+%Pour changer les titres de section
+%\makeatletter
+%	\renewcommand\section{\@startsection
+%	{section}{2}{0mm}
+%	{-\baselineskip}{0.5\baselineskip}
+%	{\FloatBarrier\normalfont\Large\bfseries}}
+%\makeatother
+%
+%
+%Calculs arithmétique
+%\usepackage{calc}
+%
+%Lettrines
+\usepackage{lettrine}
+%pour le symbole double crochet \rrbracket \llbracket
+\usepackage{stmaryrd}
+%pour les minitoc{}
+\usepackage{minitoc}
+\mtcselectlanguage{french}
+%
+%pour les tableaux de variations
+\usepackage{variations}
+%
+%% entêtes et pieds de pages
+%Entêtes et pieds de pages
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%
+\fancyhead{}
+\fancyfoot{}
+%
+\renewcommand{\subsectionmark}[1]{%
+  \ifsubsectioninheader
+    \def\subsectiontitle{: #1}%
+  \else
+    \def\subsectiontitle{}%
+  \fi}
+\newif\ifsubsectioninheader
+\def\subsectiontitle{}
+\fancyhead[RO]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}
+%\fancyhead[RE]{MPSI F. M\bsc{aillard}}
+\fancyhead[LE]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}
+%\fancyhead[LO]{MPSI F. M\bsc{aillard}}
+\fancyfoot[LE]{\thepage}
+\fancyfoot[RO]{\thepage}
+%
+%\setlength{\headheight}{15.36pt}
+\setlength{\headheight}{13.6pt}
+%
+%pour inclure des pdf
+\usepackage[final]{pdfpages}
+%
+%Pour l'interligne
+%\linespread{1.1}
+%
+%texte en latin
+%\usepackage{lipsum}
+%
+%pour creer un sommaire
+\usepackage{shorttoc}
+%
+%pour écrire des arc géométriques
+\usepackage{yhmath}
+%
+%pour l'index
+%\usepackage{makeidx}
+%\makeindex
+%
+%paquet pour les liens hypertextes
+\usepackage[colorlinks=true,%
+linkcolor=black,%
+urlcolor=black,%
+citecolor=black,%
+pdftitle={Mathématiques},%
+pdfauthor={FlorianMaillard},%
+breaklinks = true%
+]{hyperref}
+%pour les tableaux
+\usepackage{tabularx}
+%onchange le nom de la table
+\renewcommand{\tablename}{\bsc{Tableau}}
+%%%%%%%%%%%%%%%%%%%%%%% THM et STYLES %%%%%%%%%%%%%%%%%%%%%%
+%
+\theoremstyle{plain} \newtheorem{theo}{Théorème}[chapter]
+%\newtheorem*{theo_etoile}{Théorème}
+\newtheorem{lemme}{Lemme}[chapter]
+\theoremstyle{definition} \newtheorem{defdef}{Définition}[chapter]
+%\newtheorem*{defdef_etoile}{Définition}
+\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{rappel}{Rappel}[chapter]
+\newtheorem{proprietes}{Propriétés}[chapter]
+\theoremstyle{plain} \newtheorem{cor}{Corollaire}[prop]
+\newtheorem{corth}{Corollaire}[theo]
+%
+%%%%%%%%%%%%%%%%%%%%%%%% COMMANDES PERSOS %%%%%%%%%%%%%%%
+%
+\newcommand{\fonction}[5]{#1\colon \left\{\begin{array}{ccc}
+#2 & \longrightarrow &#3\\
+#4 & \longmapsto & #5
+\end{array}
+\right.
+}
+%nouveau raccourcis
+\newcommand{\ensemblenombre}[1]{\mathbb{#1}}
+\newcommand{\intervalle}[4]{\mathopen{#1}#2\mathclose{}\mathpunct{};#3\mathclose{#4}}
+\newcommand{\pv}{\ensuremath{\, ; }}
+\newcommand{\intervalleff}[2]{\ensuremath{\left[ #1 \pv #2 \right]}}%{\intervalle{[}{#1}{#2}{]}}
+\newcommand{\intervalleof}[2]{\ensuremath{\left] #1 \pv #2 \right]}}%{\intervalle{]}{#1}{#2}{]}}
+\newcommand{\intervallefo}[2]{\ensuremath{\left[ #1 \pv #2 \right[}}%{\intervalle{[}{#1}{#2}{[}}
+\newcommand{\intervalleoo}[2]{\ensuremath{\left] #1 \pv #2 \right[}}%{\intervalle{]}{#1}{#2}{[}}
+\newcommand{\intervalleentier}[2]{\intervalle\llbracket{#1}{#2}\rrbracket}
+\newcommand{\Rplus}{\intervallefo{0}{+\infty}}
+\newcommand{\Rmoins}{\intervalleof{-\infty}{0}}
+\newcommand{\Rplusetoile}{\intervalleoo{0}{+\infty}}
+\newcommand{\Rmoinsetoile}{\intervalleoo{-\infty}{0}}
+\newcommand{\N}{\ensemblenombre{N}}
+\newcommand{\R}{\ensemblenombre{R}}
+\newcommand{\Rbar}{\bar{\R}}
+\newcommand{\K}{\ensemblenombre{K}}
+\renewcommand{\L}{\ensemblenombre{L}}
+\newcommand{\Z}{\ensemblenombre{Z}}
+\newcommand{\ZZ}{\mathcal{Z}}
+\newcommand{\C}{\ensemblenombre{C}}
+\newcommand{\Q}{\ensemblenombre{Q}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\S}{\mathcal{S}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\Rep}{\mathcal{R}}
+\newcommand{\Dr}{\mathcal{D}}
+\newcommand{\Def}[1]{\Dr_{#1}}
+\newcommand{\U}{\ensemblenombre{U}}
+\newcommand{\Part}{\mathfrak{P}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Gb}{\mathcal{G}}
+\newcommand{\con}[1]{\mathcal{C}_{#1}}
+\newcommand{\courbe}{\mathcal{C}}
+%\newcommand{\cr}{\mathcal{C}}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\vi}{\vect{i}}
+\newcommand{\vj}{\vect{j}}
+\newcommand{\vk}{\vect{k}}
+\newcommand{\vu}{\vect{u}}
+\newcommand{\vv}{\vect{v}}
+\newcommand{\vw}{\vect{w}}
+\newcommand{\vx}{\vect{x}}
+\newcommand{\vy}{\vect{y}}
+\newcommand{\vz}{\vect{z}}
+\newcommand{\vn}{\vect{n}}
+\newcommand{\va}{\vect{a}}
+\newcommand{\vb}{\vect{b}}
+\newcommand{\vc}{\vect{c}}
+\newcommand{\rond}{(O,\vi,\vj)}
+\newcommand{\bond}{(\vi,\vj)}
+\newcommand{\rondtrois}{(O,\vi,\vj,\vk)}
+\newcommand{\bondtrois}{(\vi,\vj,\vk)}
+\newcommand{\rondtroisu}{(\Omega,\vu,\vv,\vw)}
+\newcommand{\Ell}{\mathcal{E}}
+%\renewcommand{\Re}{\mathfrak{R}}
+%\renewcommand{\Im}{\mathfrak{I}}
+\newcommand{\Lin}[2]{\mathcal{L}\left(#1,#2\right)}
+\newcommand{\pLin}[3]{\mathcal{L}_{#1}\left(#2,#3\right)}
+\newcommand{\Endo}[1]{\mathcal{L}\left(#1\right)}
+\newcommand{\pEndo}[2]{\mathcal{L}_{#1}\left(#2\right)}
+\newcommand{\Isom}[2]{\mathbf{Isom}\left(#1,#2\right)}
+\newcommand{\Is}[1]{\mathbf{Is}\left(#1\right)}
+\newcommand{\Isplus}[1]{\mathbf{Is}^{+}\left(#1\right)}
+\newcommand{\Ismoins}[1]{\mathbf{Is}^{-}\left(#1\right)}
+\newcommand{\Auto}[1]{\mathbf{Aut}\left(#1\right)}
+\newcommand{\Orth}[1]{\mathcal{O}\!\left(#1\right)}
+\newcommand{\SOrth}[1]{\mathcal{SO}\!\left(#1\right)}
+\newcommand{\Orthmin}[1]{\mathcal{O}^{-}\!\left(#1\right)}
+\newcommand{\GL}[1]{\mathcal{GL}\left(#1\right)}
+\newcommand{\Ga}[1]{\mathbf{Ga}\left(#1\right)}
+\newcommand{\GLn}[2]{\mathcal{GL}_{#1}\left(#2\right)}
+\newcommand{\uinv}[1]{\mathfrak{U}\left(#1\right)}
+\newcommand{\RelBin}{\mathfrak{R}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\CM}{\mathcal{CM}}
+\newcommand{\Born}{\mathcal{B}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\Mnp}[3]{\mathcal{M}_{#1,#2}\left(#3\right)}
+\newcommand{\Mn}[2]{\mathcal{M}_{#1}\left(#2\right)}
+\newcommand{\SN}[2]{\mathcal{S}_{#1}\left(#2\right)}
+\newcommand{\AN}[2]{\mathcal{A}_{#1}\left(#2\right)}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\Lb}{\mathcal{L}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\diff}{\mathop{}\mathopen{}\D}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norme}[1]{\left\lVert#1\right\rVert}
+\newcommand{\enstq}[2]{\left\{#1\mathrel{}\middle|\mathrel{}#2\right\}}
+\newcommand{\petito}[1]{o\mathopen{}\left(#1\right)}
+\newcommand{\grandO}[1]{O\mathopen{}\left(#1\right)}
+\newcommand{\petitof}[2]{o\mathopen{}_{#1}\left(#2\right)}
+\newcommand{\grandOf}[2]{O\mathopen{}_{#1}\left(#2\right)}
+\newcommand{\contpoint}[3]{\mathcal{C}_{#1}(#2,#3)}
+\newcommand{\cont}[2]{\mathcal{C}(#1,#2)}
+\newcommand{\Lip}[2]{\mathcal{L}ip(#1,#2)}
+\newcommand{\derivpt}[3]{\mathcal{D}_{#1}(#2,#3)}
+\newcommand{\deriv}[2]{\mathcal{D}(#1,#2)}
+\newcommand{\classe}[1]{\mathcal{C}^{#1}}
+\newcommand{\derivnfois}[3]{\mathcal{D}^{#1}(#2,#3)}
+\newcommand{\prodscal}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\Sim}[1]{\mathbf{Sim}\left(#1\right)}
+\newcommand{\Simplus}[1]{\mathbf{Sim}^{+}\left(#1\right)}
+\newcommand{\Simmoins}[1]{\mathbf{Sim}^{-1}\left(#1\right)}
+\newcommand{\Bbar}[3]{\bar{B}_{#3}\left(#1, #2\right)}
+\newcommand{\Vvois}{\mathcal{V}}
+\newcommand{\Oouvert}{\mathfrak{O}}
+\newcommand{\Ddomaine}{\mathfrak{D}}
+
+%nouveaux opérateurs
+\DeclareMathOperator{\sgn}{signe}% fonction signe
+\DeclareMathOperator{\e}{e}% exponentielle
+\DeclareMathOperator{\argch}{argcosh}% argument cosinus hyperbolique
+\DeclareMathOperator{\argsh}{argsinh}% argument sinus hyperbolique
+\DeclareMathOperator{\argth}{argtanh}% argument tangente hyperbolique
+\DeclareMathOperator{\cotan}{cotan}% cotangente
+\DeclareMathOperator{\sinc}{sinc}% sinus cardinal
+\DeclareMathOperator{\Arg}{Arg}% argument principal
+\DeclareMathOperator{\ii}{i}% unité imaginaire
+\DeclareMathOperator{\Ent}{E}% fonction partie entière
+\DeclareMathOperator{\Id}{Id}% fonction identité
+\DeclareMathOperator{\Det}{Det}% déterminant
+\DeclareMathOperator{\Inf}{inf}% le plus grand des minorants
+\DeclareMathOperator{\Card}{Card}% le cardinal d'un ensemble
+\DeclareMathOperator{\Ker}{Ker}% le noyau d'une application linéaire
+\DeclareMathOperator{\Image}{Im}% l'image d'une application linéaire
+\DeclareMathOperator{\Div}{Div}% l'ensemble des diviseurs d'un entier
+\DeclareMathOperator{\divgc}{div}% divergence d'un champs de vecteurs
+\DeclareMathOperator{\cotanh}{coth}% cotangente hyperbolique
+\DeclareMathOperator{\htan}{th}% tangente hyp
+\DeclareMathOperator{\hcotan}{coth}% cotangente hyp
+\DeclareMathOperator{\hsin}{sh}% sin hyp
+\DeclareMathOperator{\hcos}{ch}% cos hyp
+\DeclareMathOperator{\pgcd}{pgcd}% PGCD de deux relatifs
+\DeclareMathOperator{\ppcm}{ppcm}% PPCM de deux relatifs
+\DeclareMathOperator{\Bary}{Bar}% barycentre
+\DeclareMathOperator{\VectEngendre}{Vect}%sous espace endgendre
+\DeclareMathOperator{\Opp}{Opp}%sous espace vectoriel des opposés
+\DeclareMathOperator{\Inv}{Inv}%sous espace vectoriel des invariants
+\DeclareMathOperator{\Dim}{dim}%dimension dun espace vectoriel
+\DeclareMathOperator{\rg}{rang}%rang d'une famille de vecteurs
+%\DeclareMathOperator{\deg}{deg}%degré d'un polynôm
+\DeclareMathOperator{\val}{val}%valuation d'un polynôme
+\DeclareMathOperator{\Com}{Com}%comatrice
+\DeclareMathOperator{\grad}{\vect{\mathbf{grad}}}%gradient
+\DeclareMathOperator{\rot}{\vect{\mathbf{rot}}}%rotationnel
+%
+\newcommand{\cercle}[2]{\mathcal{C}(#1,#2)}% cercle
+\newcommand{\congru}[3]{#1 \equiv #2 \pmod {#3}} %congru
+\newcommand{\noncongru}[3]{#1 \not\equiv #2 \pmod {#3}} %non-congru
+\newcommand{\expc}[2]{#1 \e^{\ii #2}}% exp complexe
+\renewcommand{\bar}{\overline}
+\newcommand{\Uv}{\vect{u}}
+\newcommand{\V}{\vect{v}}
+\newcommand{\W}{\vect{w}}
+%% pour les dérivées
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\derived}[2]{\dfrac{\D #1}{\D #2}}
+\newcommand{\deriveds}[2]{\dfrac{\D^2 #1}{\D {#2}^2}}
+\newcommand{\derivep}[2]{\dfrac{\dr #1}{\dr #2}}
+\newcommand{\deriveps}[2]{\dfrac{\dr^2 #1}{\dr {#2}^2}}
+\newcommand{\derivepc}[3]{\dfrac{\dr^2 #1}{\dr {#2} \dr {#3}}}
+%%
+\newcommand{\dr}{\partial{}}
+%%
+\newcommand\Hrule{\noindent \rule[0mm]{\linewidth}{0.5pt}}
+%
+%% Diagramme de Venn
+\newcommand{\En}{(-4,-1) rectangle (4,4)}
+\newcommand{\An}{(0,0) ++(135:2) circle (2)}
+\newcommand{\Bn}{(0,0) ++(45:2) circle (2)}
+\newcommand{\AnB}{(0,0) arc (-45:45:2) arc (135:225:2)}
+\newcommand{\AuB}{(0,0) arc(-135:135:2) arc(45:315:2)}
+\newcommand{\AmB}{(0,0) arc (225:135:2) arc (45:315:2)}
+\newcommand{\BmA}{(0,0) arc(-135:135:2) arc(45:-45:2)}
+
+
+%%pour la profondeur des sections, sous sections, ...
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%pour modifier l'apprence de la sectino, subsection,...
+% \makeatletter
+% \renewcommand{\thesection}{\@Roman\c@section}
+% \makeatother
+% \makeatletter
+% \renewcommand{\thesubsubsection}{\alph{subsubsection}}
+% \makeatother
+
+%\addtolength{\oddsidemargin}{-1cm}
+%\addtolength{\evensidemargin}{-1cm}
+
+%pour enlever le num de chap dans le titre de la section
+%\renewcommand*\thesection{\arabic{section}}
+%pour augment le nombre maximal de colonne matrice
+\setcounter{MaxMatrixCols}{20}
+%pour changer le nom des tableaux
+%\renewcommand{\tablename}{Tableau}
+\addto\captionsfrench{\def\tablename{\bsc{Tableau}}}
+%
+%pour changer le carré en CQFD
+%\renewcommand{\qedsymbol}{C.Q.F.D.}
+
+%pour rajouter un argument [] pour la largeur des interlignes
+% \makeatletter
+% \renewcommand*\env@matrix[1][\arraystretch]{%
+%   \edef\arraystretch{#1}%
+%   \hskip -\arraycolsep
+%   \let\@ifnextchar\new@ifnextchar
+%   \array{*\c@MaxMatrixCols c}}
+% \makeatother
