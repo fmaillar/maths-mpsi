@@ -1,0 +1,1171 @@
+\chapter{Intégration sur un segment des fonctions à valeur réelles}
+\label{chap:integration}
+\minitoc
+\minilof
+\minilot
+%
+\section{Fonctions en escalier, continues par morceaux}
+
+Soient deux réels $a$ et $b$ tel que $a<b$ et deux naturels $n$ et $m$ tous les deux non nuls. On travaille dans cette section sur le segment $\intervalleff{a}{b}$.
+
+\subsection{Subdivision d'un segment}
+
+\begin{defdef}
+  On appelle subdivision du segment $\intervalleff{a}{b}$ toute famille finie $(a_i)_{i \in \intervalleentier{0}{n}}$ de $n+1$ points de $\intervalleff{a}{b}$ telle que~:
+  \begin{equation}
+    \begin{cases}
+      a_0=1 \\
+      a_n=b \\
+      \forall i \in \intervalleentier{0}{n} \quad a_i<a_{i+1}
+    \end{cases}.
+  \end{equation}
+  Le réels $a_i$ sont appelés les points de la subdivision. Les intervalles ouverts $\intervalleoo{a_i}{a_{i+1}}$ sont appelés les intervalles ouverts de la subdivision.
+\end{defdef}
+
+\begin{defdef}
+  Soit $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ une subdivision du segment $\intervalleff{a}{b}$. on définit un réel appelé le pas de la subdivision, noté $\delta(\sigma)$ par~:
+  \begin{equation}
+    \delta(\sigma)=\max_{0 \leq i \leq n-1}(a_{i+1}-a_i)
+  \end{equation}
+\end{defdef}
+
+\emph{Exemple fondamental}~: Soit une subdivison $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ de $\intervalleff{a}{b}$ à $n+1$ points telle que~:
+\begin{equation}
+  \forall k \in \intervalleentier{0}{n} \quad a_k=a+k \frac{b-a}{n}.
+\end{equation}
+$\sigma$ est une subdivion régulière de $\intervalleff{a}{b}$. Tous les intervalles de la subdivision ont la même longueur. Le pas de cette subdivision vaut $\delta(\sigma)=\frac{b-a}{n}$.
+
+\begin{defdef}
+  Soient $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ et $\sigma'=(b_i)_{i \in \intervalleentier{0}{m}}$ deux subdivisions de $\intervalleff{a}{b}$. On dit que $\sigma'$ est plus fine que $\sigma$ si et seulement si
+  \begin{equation}
+    \intervalleentier{a_0}{a_n} \subset \intervalleentier{b_0}{b_m}.
+  \end{equation}
+\end{defdef}
+
+On peut montrer que la relation ``être plus fine que'' est une relation d'ordre sur l'ensemble des subdivisions de $\intervalleff{a}{b}$. Ce n'est pas un ordre total.
+
+La subdivision $(a,b)$ est la moins fine de toutes les subdivisions. Mais il n'y a pas pas de subdivision plus fine que toutes les autres.
+
+Si $\sigma'$ est plus fine que $\sigma$, alors le pas $\delta(\sigma')$ est inférieur ou égal au pas $\delta(\sigma)$. La réciproque est fausse.
+
+Supposons qu'on ait $\sigma=(0,1/2,1)$ et $\sigma'=(0,1/3,2/3,1)$ alors $\delta(\sigma')<\delta(\sigma)$ mais comme $1/2 \notin \sigma'$ on ne peut pas dire que $\sigma'$ est plus fine que $\sigma$.
+
+\subsection{Fonctions en escalier}
+
+\subsubsection{Définitions}
+
+\begin{defdef}
+  Soit $f \in \R^{\intervalleff{a}{b}}$. On dit que $f$ est en escalier sur $\intervalleff{a}{b}$ s'il existe une subdivision $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ telle que $f$ soit constante sur tous les intervalles ouverts de la subdivision. On note $\E(\intervalleff{a}{b})$ l'ensemble des fonction en escalier sur $\intervalleff{a}{b}$.
+
+  Il est à noter que la fonction $f$ est définie en tout point $a_i$ de la subdivision, mais qu'elle n'est pas forcèment continue en ces points.
+\end{defdef}
+
+\begin{defdef}
+  Soit $f \in \E(\intervalleff{a}{b})$. Toute subdivision du segment $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$, telle que $f$ soit constante sur tous les intervalles ouverts de $\sigma$, est appelée une subdivision adaptée à la fonction $f$.
+\end{defdef}
+
+\emph{Remarque}~:
+\begin{enumerate}
+\item Si $f \in \E(\intervalleff{a}{b})$ et si $\sigma$ est une subdivision adaptée à $f$, alors toute subdivision $\sigma'$ de $\intervalleff{a}{b}$ plus fine que $\sigma$ est encore adaptée à $f$;
+\item les fonctions constantes sur $\intervalleff{a}{b}$ sont en escalier et toutes les subdivisions de $\intervalleff{a}{b}$ leurs sont adaptées.
+\end{enumerate}
+
+\subsubsection{Premières propriétés}
+
+On peut avoir besoin de construire une subdivision adaptée à la fois à deux fonctions $f$ et $g$.
+
+Soient $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ et $\sigma'=(b_i)_{i \in \intervalleentier{0}{m}}$ deux subdivisions de $\intervalleff{a}{b}$. On note $A(\sigma)$ (resp. $A(\sigma')$) l'ensemble des points de $\sigma$ (resp. $\sigma'$). Il existe une unique subdivision $s$ de $\intervalleff{a}{b}$ telle que $A(s)=A(\sigma) \cup A(\sigma')$. La subdivision $s$ est appelée la réunion de $\sigma$ et $\sigma'$. Elle st plus fine que $\sigma$ et $\sigma'$. Si $(f,g) \in \E(\intervalleff{a}{b})^2$ sont telles que~:
+\begin{itemize}
+\item $\sigma$ est adpatée à $f$;
+\item $\sigma'$ est adpatée à $g$;
+\end{itemize}
+alors $s$ est adaptée à $f$ et à $g$.
+
+\begin{prop}
+  L'ensemble $\E(\intervalleff{a}{b})$ est un sous espace vectoriel du $\R$-espace vectoriel $\R^{\intervalleff{a}{b}}$.
+\end{prop}
+\begin{proof}
+  Par définition, $\E(\intervalleff{a}{b}) \subset \R^{\intervalleff{a}{b}}$. Ensuite il est non vide puisqu'il contient les fonctions constantes. Soient $f$ et $g$ dans $\E(\intervalleff{a}{b})$ et un réel $\lambda$. Soient $\sigma$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$ et $\sigma'$ une subdivision de $\intervalleff{a}{b}$ adaptée à $g$. Notons $s$ la réunion de ces dex subdivisions. On pose $s=(a_i)_{i \in \intervalleentier{0}{n}}$, elle est adaptée à $f$ et à $g$ donc $f$ et $g$ sont constantes sur tous les intervalles $\intervalleoo{a_i}{a_{i+1}}$. Par conséquent, $\lambda f +g$ est constante sur tous les intervalles $\intervalleoo{a_i}{a_{i+1}}$. Donc $\lambda f +g$ est une fonction en escalier et $s$ est une subdivision adaptée à $\lambda f+g$.
+\end{proof}
+
+\begin{prop}
+  Si $f \in \E(\intervalleff{a}{b})$ alors $\abs{f} \in \E(\intervalleff{a}{b})$.
+\end{prop}
+\begin{proof}
+  Soit $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ une subdivision adpaptée à $f$. Alors pour tout $i \in \intervalleentier{0}{n}$ $f$ est constante sur $\intervalleoo{a_i}{a_{i+1}}$. Donc $\abs{f}$ est constante sur sur $\intervalleoo{a_i}{a_{i+1}}$. Alors $\abs{f}$ est une fonction en escalier.
+\end{proof}
+
+\subsection{Fonctions continues par morceaux}
+
+\subsubsection{Définitions}
+
+\begin{defdef}
+  Soit $f \in \R^{\intervalleff{a}{b}}$, on dit que $f$ est continue par morceaux sur $\intervalleff{a}{b}$ s'il existe une subdivision $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ telle que~:
+  \begin{itemize}
+  \item $\forall i \in \intervalleentier{0}{n-1}$ $f$ est continue sur l'intervalle ouvert $\intervalleoo{a_i}{a_{i+1}}$
+  \item $\forall i \in \intervalleentier{0}{n-1}$ la restriction de $f$ à l'intervalle ouvert $\intervalleoo{a_i}{a_{i+1}}$ admet une limite finie à gauche en $a_{i+1}$ et à droite en $a_i$.
+  \end{itemize}
+Une telle subdivision sera dite adaptée à $f$.
+\end{defdef}
+
+Il est à noter que $f$ est définie en tous les $a_i$ mais n'est pas a priori continue en les $a_i$. On note $\CM(\intervalleff{a}{b})$ l'ensemble des fonctions continues par morceaux sur $\intervalleff{a}{b}$. 
+
+Les fonctions continues sur $\intervalleff{a}{b}$ sont continues par morceaux sur $\intervalleff{a}{b}$ et toute subdivision du segment $\intervalleff{a}{b}$ leur est adaptée. Toute subdivision plus fine est encore adaptée.
+
+\subsubsection{Premières propriétés}
+
+\begin{prop}
+  Les fonctions en escalier sur $\intervalleff{a}{b}$ sont continues par morceaux sur $\intervalleff{a}{b}$. C'est-à-dire $\E(\intervalleff{a}{b}) \subset \CM(\intervalleff{a}{b})$.
+\end{prop}
+\begin{proof}
+  C'est clair. Soit $f$ une fonction en escalier. Alors il existe une subdivison $(a_i)_{i \in \intervalleentier{0}{n}}$ telle que $f$ soit constante donc continue sur tous les intervalles ouverts $\intervalleoo{a_i}{a_{i+1}}$.
+\end{proof}
+
+\begin{prop}
+  Les fonctions continues par morceaux sur $\intervalleff{a}{b}$ sont bornées sur $\intervalleff{a}{b}$. C'est-à-dire $\CM(\intervalleff{a}{b}) \subset \Born(\intervalleff{a}{b})$.
+\end{prop}
+\begin{proof}
+  Soit une fonction $f \in \CM(\intervalleff{a}{b})$ et $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Alors pour tout $i \in \intervalleentier{1}{n}$, $f_{|\intervalleoo{a_i}{a_{i+1}}}$ est continue et admet des limites finies à droite en $a_{i}$ et à gauche en $a_{i+1}$. On définit le prolongement par contniuité $g_i$ de $f_{|\intervalleoo{a_i}{a_{i+1}}}$ à l'intervalle fermé $\intervalleff{a_i}{a_{i+1}}$. Alors $g_i$ est continue sur le segment $\intervalleff{a_i}{a_{i+1}}$ donc bornée (d'après le théorème des bornes). Il existe alors $M_i \in \R_+$ tel que pour tout $x \in \intervalleff{a_i}{a_{i+1}} $ on ait $\abs{g_i(x)} \leq M_i$. D'où
+  \begin{equation}
+    \forall x \in \intervalleoo{a_i}{a_{i+1}} \quad \abs{f(x)}=\abs{g_i(x)} \leq M_i.
+  \end{equation}
+  Soit $M=\max\limits_{0 \leq i \leq n-1} M_i$ et $N=\max\limits_{0 \leq i \leq n-1} \abs{f(a_i)}$. Alors $\max(M,N)$ est un majorant de $\abs{f}$.
+
+  La fonction $f$ est alors bornée.
+\end{proof}
+
+\begin{prop}
+%  L'ensemble des fonctions continues par morceaux 
+$\CM(\intervalleff{a}{b})$ est un sous espace du $\R$-espace vectoriel $\R^{\intervalleff{a}{b}}$.
+\end{prop}
+\begin{proof}
+  Par définition, $\CM(\intervalleff{a}{b})\subset \R^{\intervalleff{a}{b}}$. Ensuite $\CM(\intervalleff{a}{b})$ est non vide puisqu'il contient $\courbe(\intervalleff{a}{b})$. Soient $f$ et $g$ deux fonctions continues par morceaux et un réel $\lambda$. Soient $\sigma$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$ et $\sigma'$ une subdivision de $\intervalleff{a}{b}$ adaptée à $g$. Soit $s$ la réunion de $\sigma$ et de $\sigma'$. Elle est plus fine que $\sigma$ et que $\sigma'$ donc elle est adaptée à $f$ et à $g$. On note $s=(a_i)_{0 \leq i \leq n}$. Pour tout $i \in \intervalleentier{0}{n-1}$ $f$ et $g$ sont continues sur $\intervalleoo{a_i}{a_{i+1}}$ donc $\lambda f+g$ l'est aussi. De plus pour tout $i \in \intervalleentier{0}{n-1}$ $f_{|\intervalleoo{a_i}{a_{i+1}}}$ et $g_{|\intervalleoo{a_i}{a_{i+1}}}$ admettent des limites finies à droite en $a_i$ et à gauche en $a_{i+1}$ alors $(\lambda f+ g)_{|\intervalleoo{a_i}{a_{i+1}}}$ admet des limites finies à droite en $a_i$ et à gauche en $a_{i+1}$.
+
+  La fonction $\lambda f +g$ est donc continue par morceaux et $s$ est une subdivision adpatée. Par caractérisation, $\CM(\intervalleff{a}{b})$ est un sous espace vectoriel de $\R^{\intervalleff{a}{b}}$.
+\end{proof}
+
+\begin{prop}
+  \begin{equation}
+    \forall f \in \R^{\intervalleff{a}{b}} \quad f \in \CM(\intervalleff{a}{b}) \implies \abs{f} \in \CM(\intervalleff{a}{b})
+  \end{equation}
+\end{prop}
+
+\subsection{Approximation d'une fonction continue par morceaux par une fonction en escalier}
+
+\begin{theo}
+  Soit $f \in \CM(\intervalleff{a}{b})$, alors
+  \begin{equation}
+    \forall \epsilon \geq 0 \ \exists (\varphi, \psi) \in \E(\intervalleff{a}{b})^2 \quad \begin{cases} \varphi \leq f \leq \psi \\ \psi-\varphi \leq \fonction{\tilde{\epsilon}}{\intervalleff{a}{b}}{\R}{x}{\epsilon} \end{cases}.
+  \end{equation}
+\end{theo}
+\begin{proof}[Démonstration~: Première étape]
+  On démontre le théorème dans le cas où $f$ est continue. D'après le théorème de Heine, $f$ est uniformément continue sur $\intervalleff{a}{b}$. C'est-à-dire
+  \begin{equation}
+    \forall \epsilon >0 \ \exists \eta>0 \ \forall (x,x') \in \intervalleff{a}{b}^2 \quad \abs{x-x'} \leq \eta \implies \abs{f(x)-f(x')} \leq \frac{\epsilon}{2}.
+  \end{equation}
+  Soit un naturel $n$ non nul tel que $\frac{b-a}{n} \leq \eta$ et pour tout $k \in \intervalleentier{0}{n}$ on pose $a_k=a_0+k \frac{b-a}{n}$. La subdivision $\sigma=(a_k)_{0 \leq k \leq n}$ est régulière de $\intervalleff{a}{b}$ à $n+1$ points. On définit $g$ en escalier sur $\intervalleff{a}{b}$ par~:
+  \begin{equation}
+    \forall k \in \intervalleentier{0}{n} \ \forall x \in \intervallefo{a_k}{a_{k+1}} \quad g(x)=f(a_k),
+  \end{equation}
+  et $g(b)=f(a_n)=f(b)$. La fonction $g$ est bien en escalier. De plus pour tout $x \in \intervallefo{a}{b}$ il existe un unique $k \in \intervalleentier{0}{n-1}$ tel que $x \in \intervallefo{a_k}{a_{k+1}}$.  Alors
+  \begin{equation}
+    \abs{g(x)-f(x)} = \abs{f(a_k)-f(x)},
+  \end{equation}
+  or $\abs{x-a_k} \leq \abs{a_{k+1}-a_k} \leq \frac{b-a}{n}\leq \eta$. D'où
+  \begin{equation}
+    \abs{g(x)-f(x)} = \abs{f(a_k)-f(x)} \leq \frac{\epsilon}{2},
+  \end{equation}
+  et $\abs{g(b)-f(b)}=0 \leq \frac{\epsilon}{2}$. Alors
+  \begin{equation}
+    \forall x \in \intervalleff{a}{b} \quad \abs{g(x)-f(x)} \leq \frac{\epsilon}{2}
+  \end{equation}
+  Soient les fonctions $\psi=g + \frac{\tilde{\epsilon}}{2}$ et $\varphi=g - \frac{\tilde{\epsilon}}{2}$. Comme $g$ est en escalier et les fonctions constantes aussi alors $\psi$ et $\varphi$ sont en escalier ($\E(\intervalleff{a}{b})$ est un espace vectoriel). On a bien
+  \begin{equation}
+    \begin{cases}
+      \varphi \leq f \leq \psi \\
+      \psi-\varphi=\tilde{\epsilon}
+    \end{cases}.
+  \end{equation}
+
+  On a démontré le théorème dans le cas où $f$ est continue.
+\end{proof}
+\begin{proof}[Démonstration~: Deuxième étape]
+  On revient au cas général. On suppose que $f$ est continue par morceaux sur $\intervalleff{a}{b}$. Soit $\sigma=(a_i)_{0 \leq i \leq m}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $i \in \intervalleentier{0}{m-1}$, alors~:
+  \begin{itemize}
+  \item $f_{|\intervalleoo{\alpha_i}{\alpha_{i+1}}}$ est continue
+  \item $f$ admet une limite finie à droite en chacun des $a_i$
+  \item $f$ admet une limite finie à gauche en chacun des $a_{i+1}$
+  \end{itemize}
+  On peut alors définir le prolongement par continuité de $f_{|\intervalleoo{a_i}{a_{i+1}}}$ à $\intervalleff{a_i}{a_{i+1}}$ noté $f_i$.
+
+  La fonction $f_i$ est continue sur $\intervalleff{a_i}{a_{i+1}}$ donc il existe une fonction en escalier $g_i$ sur $\intervalleff{a_i}{a_{i+1}}$ telle que~:
+  \begin{equation}
+    \forall x \in \intervalleff{a_i}{a_{i+1}} \quad \abs{f_i(x)-g_i(x)} < \frac{\epsilon}{2}
+  \end{equation}
+  On définit la fonction $g$ par~: $g(a_i)=f(a_i)$ et
+  \begin{equation}
+    \forall x \in \intervalleoo{a_i}{a_{i+1}} \quad g(x)=g_i(x).
+  \end{equation}
+  Alors $g$ est en escalier. De plus
+  \begin{equation}
+    \forall x \in \intervalleff{a}{b} \quad \abs{g(x)-f(x)} \leq \frac{\epsilon}{2}
+  \end{equation}
+  Soient les fonctions $\psi=g + \frac{\tilde{\epsilon}}{2}$ et $\varphi=g - \frac{\tilde{\epsilon}}{2}$. Comme $g$ est en escalier et les fonctions constantes aussi alors $\psi$ et $\varphi$ sont en escalier ($\E(\intervalleff{a}{b})$ est un espace vectoriel). On a bien
+  \begin{equation}
+    \begin{cases}
+      \varphi \leq f \leq \psi \\
+      \psi-\varphi=\tilde{\epsilon}
+    \end{cases}.
+  \end{equation}
+\end{proof}
+
+\section{Intégrale d'une fonction en escalier}
+
+\subsection{Définition de l'intégrale d'une fonction en escalier}
+
+\begin{theo}
+  Soit $f \in \E(\intervalleff{a}{b})$ et soit $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $(\lambda_i)_{0 \leq i \leq n}$ une famille de fonctions constantes de $f$ sur les intervalles ouverts $\intervalleoo{a_{i-1}}{a_i}$. Alors le réel
+  \begin{equation}
+    I(f,\sigma) = \sum_{i=1}^n (a_i-a_{i-1})\lambda_i
+  \end{equation}
+  est indépendant du choix de la subdivision $\sigma$ adaptée à $f$.
+\end{theo}
+
+\begin{defdef}
+  Soit $f \in \E(\intervalleff{a}{b})$. On définit un réel appelé intégrale de $f$ sur $\intervalleff{a}{b}$ et noté $\int_{\intervalleff{a}{b}}f$ ou $\int_a^b f$ ou encore $\int_a^b f(x) \diff x$ par
+  \begin{equation}
+    \int_a^b f = I(f,\sigma)
+  \end{equation}
+  pour toute subdivision $\sigma$ adaptée à $f$.
+\end{defdef}
+
+\begin{proof}
+  Soient $\sigma$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$ et $c \in \intervalleff{a}{b}$. Soit $\sigma' = \sigma \cup \{c\}$. Il existe $i_0 \in \intervalleentier{0}{n}$ tel que $c \in \intervalleff{a_{i_0}}{a_{i_0+1}}$.
+  \begin{itemize}
+  \item Si $c=a_{i_0}$ ou $c=a_{i_0+1}$ alors $\sigma=\sigma'$ et donc $I(f,\sigma')=I(f,\sigma)$;
+  \item sinon alors $c \in \intervalleoo{a_{i_0}}{a_{i_0+1}}$. la subdivision $\sigma'$ est plus fine que $\sigma$ et alors
+    \begin{align}
+      \sigma &= (a_0, \ldots, a_n) \\
+      \sigma' &= (a_0, \ldots, a_{i_0},c,a_{i_0+1}, \ldots, a_n),
+    \end{align}
+    donc
+    \begin{equation}
+      I(f,\sigma')= \sum_{i=1}^{i_0}(a_i-a_{i-1})\lambda_i + (c-a_{i_0})\lambda_{i_0+1} + (a_{i_0+1}-c)\lambda_{i_0+1} + \sum_{i=i_0+1}^{n}(a_i-a_{i-1})\lambda_i,
+    \end{equation}
+    et finalement en retranchant
+    \begin{align}
+       I(f,\sigma')-I(f,\sigma)&= (a_{i_0+1}-a_{i_0})\lambda_{i_0+1} - (c-a_{i_0})\lambda_{i_0+1} - (a_{i_0+1}-c)\lambda_{i_0+1} \\
+       &=0.
+    \end{align}
+  \end{itemize}
+  On en déduit alors par récurrence ``immédiate''  que si on rajoute un nombre fini de points à $\sigma$ pour former une subdivision $\sigma'$ alors $I(f,\sigma')=I(f,\sigma)$. Toute subdivision $\sigma'$ plus fine que $\sigma$ vérifie $I(f,\sigma')=I(f,\sigma)$.
+
+Soient $\sigma$ et $\sigma'$ deux subdivisions quelconque adaptées à $f$. Soit $s$ la réunion de $\sigma$ et de $\sigma'$. Alors $s$ est adaptée à $f$ et est plus fine que $\sigma$~: $I(f,s)=I(f,\sigma)$. La subdivision $s$ est adaptée à $f$ et est plus fine que $\sigma'$~: $I(f,s)=I(f,\sigma')$. Par conséquent $I(f,\sigma')=I(f,\sigma)$.
+\end{proof}
+
+\emph{Remarque}~: La valeur de $I(f,\sigma)$ ne dépend pas de la valeur de $f$ en les points de la subdivision. En particulier si $f \in \R^{\intervalleff{a}{b}}$ est nulle sauf en un nombre fini de points alors $f$ est en escalier sur $\intervalleff{a}{b}$ et $\int_a^b f=0$.
+
+\begin{prop}
+  Soit $f \in \E(\intervalleff{a}{b})$ et $g \in \R^{\intervalleff{a}{b}}$ telles que $f$ et $g$ ne différent qu'un un nombre fini de points. Alors $g$ est également en escalier sur $\intervalleff{a}{b}$ et
+  \begin{equation}
+    \int_a^b f = \int_a^b g.
+  \end{equation}
+\end{prop}
+En particulier, une fonction constante égale à $k \in \R$ sur $\intervalleff{a}{b}$ suauf en un nombre fini de points est en escalier sur $\intervalleff{a}{b}$ et
+\begin{equation}
+  \int_a^b f =k(b-a).
+\end{equation}
+
+\begin{proof}
+  Soit $\sigma$ une subdivision adaptée à $f$. On rajoute à $\sigma$ les points de $\intervalleff{a}{b}$ où $f$ et $g$ différents. On obtient alors une subdivision $\sigma'$ plus fine que $\sigma$ et donc adaptée à $f$.
+
+  On note $\sigma'=(a_i)_{i \in \intervalleentier{0}{n}}$ et sur chaque intervalle $\intervalleoo{a_i}{a_{i+1}}$ $g$ est égale à $f$, donc elle est constante. Ainsi $g$ est en escalier et $\sigma'$ est adaptée à $g$.
+  \begin{equation}
+    \int_a^bf = I(f,\sigma')=I(g,\sigma')=\int_a^bg
+  \end{equation}
+\end{proof}
+
+\subsection{Propriétés de l'intégrale d'une fonction en escalier}
+
+\subsubsection{Additivité par rapport aux intervalles}
+
+\begin{prop}
+  Soit $f \in \R^{\intervalleff{a}{b}}$ et $c \in \intervalleff{a}{b}$, alors
+  \begin{equation}
+    f \in \E(\intervalleff{a}{b}) \iff f_{|\intervalleff{a}{c}} \in \E(\intervalleff{a}{c}) \text{~et~} f_{|\intervalleff{c}{b}} \in \E(\intervalleff{c}{b}).
+  \end{equation}
+  Auquel cas
+  \begin{equation}
+    \int_a^b f = \int_a^c f +\int_c^b f.
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Supposons que $f \in \E(\intervalleff{a}{b})$. Soit $\sigma=(a_i)_{0\leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. soit $\sigma'$ la subdivision obtenue en ajoutant $c$ à $\sigma$. Soit $(\lambda_i)_{0 \leq i \leq n}\in\R^{n+1}$ la famille des valeurs constantes de $f$ sur $\sigma'$. On note $\sigma_1'$ (resp. $\sigma_2'$) les restrictions de $\sigma'$ à $\intervalleff{a}{c}$ (resp. $\intervalleff{c}{b}$). La fonction $f_{|\intervalleff{a}{c}}$ (resp. $f_{|intervalleff{c}{b}}$) est constante sur les intervalles ouverts de $\sigma_1'$ (resp. $\sigma_2'$). Alors ces deux fonctions sont en escaliers.
+  \begin{align}
+    \int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} &= I(f_{|\intervalleff{a}{c}},\sigma_1')+I(f_{|\intervalleff{c}{b}},\sigma_2') \\
+&=\sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + (c-a_{i_0-1})\lambda_{i_0} + (a_{i_0}-c)\lambda_{i_0} + \sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i \\
+&= \sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + \lambda_{i_0}(a_{i_0}-a_{i_0-1}) +\sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i\\
+&=\sum_{i=1}^{n} (a_i-a_{i-1})\lambda_i\\
+&=I(f,\sigma)=\int_a^bf
+  \end{align}
+
+  Supposons désormais que $f_{|\intervalleff{a}{c}} \in \E(\intervalleff{a}{c})$ et $ f_{|\intervalleff{c}{b}} \in \E(\intervalleff{c}{b})$. Soient $\sigma=(a_i)_{i \in \intervalleentier{0}{n}}$ et $\sigma'=(a_i)_{i \in \intervalleentier{m}{n}}$ deux subdivisions respectives de $\intervalleff{a}{c}$ et $\intervalleff{c}{b}$ respectivement adaptées à  $f_{|\intervalleff{a}{c}}$ et $ f_{|\intervalleff{c}{b}}$. Soit $s$ la réunion de $\sigma$ et $\sigma'$. La fonction $f$ est constante sur tous les intervalles ouverts de $s$ donc $f$ est en escalier sur $\intervalleff{a}{b}$. De la même manière on montre que 
+$\int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} = \int_a^b f$.
+\end{proof}
+
+\subsubsection{Linéarité par rapport aux fonctions}
+
+On a vu que $\E(\intervalleff{a}{b})$ est un $\R$-espace vectoriel.
+
+\begin{theo}
+  L'application $\fonction{\varphi}{\E(\intervalleff{a}{b})}{\R}{f}{\int_a^bf}$ est une forme linéaire. Autrement dit
+  \begin{equation}
+    \forall \lambda \in \R \ \forall (f,g) \in \E(\intervalleff{a}{b})^2 \quad \int_a^b (\lambda f +g) = \lambda \int_a^b f +\int_a^b g
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Soient $(f,g) \in \E(\intervalleff{a}{b})^2$ et un réel $\lambda$. Soient $\sigma$ et $\sigma'$ deux subdivisions respectives de $\intervalleff{a}{b}$ respectivement adaptées à $f$ et à $g$. On considère la réunion $s=(a_i)_{0 \leq i \leq n}$ de $\sigma$ et $\sigma'$. Alors $s$ est adaptée à $f$ et à $g$. Soient $(\alpha_i)_{0 \leq i \leq n}$ (resp. $(\beta_i)_{0 \leq i \leq n}$) la famille des valeurs de $f$ (resp. $g$) sur les intervalles ouverts $\intervalleoo{a_{i-1}}{a_i}$.
+
+  Alors $\lambda f+g$ est constante sur chaque intervalle ouvert $\intervalleoo{a_{i-1}}{a_i}$ égale à $\lambda \alpha_i +\beta_i$. Ainsi
+  \begin{align}
+    I(\lambda f+g,s) &= \sum_{i=1}^n (a_i-a_{i-1})(\lambda \alpha_i+\beta_i) \\
+    &=\lambda \sum_{i=1}^n (a_i-a_{i-1}) \alpha_i + \sum_{i=1}^n (a_i-a_{i-1})\beta_i \\
+    &=\lambda I(f,s)+ I(g,s)
+  \end{align}
+  d'où la linéarité de $\varphi$.
+\end{proof}
+
+\subsubsection{Croissance}
+
+\begin{prop}
+  Soient $f$ et $g$ en escalier sur $\intervalleff{a}{b}$ telles que $f \leq g$. Alors
+  \begin{equation}
+    \int_a^b f \leq \int_a^b g.
+  \end{equation}
+  En particulier si $f\geq \tilde{0}$ alors $\int_a^b f \geq 0$.
+\end{prop}
+Cependant on peut avoir $\int_a^b f \geq 0$ sans que $f \geq \tilde{0}$.
+\begin{proof}
+  Soit $f \in \E(\intervalleff{a}{b})$ telle que $f \geq \tilde{0}$. Soit aussi $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $(\lambda_i)_{0 \leq i \leq n}$ la la famille des valeurs de $f$ sur les intervalles ouverts $\intervalleoo{a_{i-1}}{a_i}$. Puisque $f \geq 0$ alors pour tout $i \in \intervalleentier{0}{n}$ on a $\lambda_i \geq 0$. Ainsi
+  \begin{equation}
+    \int_a^b f = I(f,\sigma)=\sum_{i=1}^n(a_i-a_{i-1})\lambda_i \geq 0
+  \end{equation}
+
+   Soit $(f,g) \in \E(\intervalleff{a}{b})^2$ telles que $f \leq g$. Comme $g-f$ est en escalaier et que $g-f \geq \tilde{0}$ d'après la première partie on a $\int_a^b g-f \geq 0$. Par linéarité de l'intégrale on a $\int_a^b f \leq \int_a^b g$.
+\end{proof}
+
+\subsubsection{Majoration}
+
+\begin{prop}
+  Soit $f$ en escalier sur $\intervalleff{a}{b}$, alors $\abs{f}$ est aussi en escalier sur $\intervalleff{a}{b}$ et
+  \begin{equation}
+    \abs{\int_a^b f} \leq \int_a^b \abs{f}
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Soit $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $(\lambda_i)_{0 \leq i \leq n}$ la la famille des valeurs de $f$ sur les intervalles ouverts $\intervalleoo{a_{i-1}}{a_i}$. Pour tout pour tout $i \in \intervalleentier{0}{n}$ $\abs{f}$ est constante égale à $\abs{\lambda_i}$ sur $\intervalleoo{a_{i-1}}{a_i}$. Donc $\sigma$ est adpatée à $\abs{f}$ et
+  \begin{equation}
+    \int_a^b \abs{f} = \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}.
+  \end{equation}
+  De plus
+  \begin{align}
+    \abs{\int_a^b f} &= \abs{\sum_{i=1}^n (a_i-a_{i-1})\lambda_i}\\
+      &\leq \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}
+  \end{align}
+  puisque $a_{i-1} < a_i$. Donc on a bien la majoration
+  \begin{equation}
+    \abs{\int_a^b f} \leq \int_a^b \abs{f}.
+  \end{equation}
+\end{proof}
+
+\begin{corth}
+  \begin{equation}
+    \forall f \in \E(\intervalleff{a}{b}) \quad \abs{\int_a^b f} \leq (b-a) \sup\limits_{\intervalleff{a}{b}} \abs{f}.
+  \end{equation}
+\end{corth}
+\begin{proof}
+  On a montré que les fonctions en escalier sur $\intervalleff{a}{b}$, sont bornée. Alors la borne supérieure de $\abs{f}$ (notée $M$) existe et grâce à la majoration
+  \begin{equation}
+    \abs{\int_a^b f} \leq \int_a^b \abs{f} \leq \int_a^b \tilde{M} = M(b-a).
+  \end{equation}
+\end{proof}
+
+\section{Intégrale d'une fonction continue par morceaux}
+
+\subsection{Définition de l'intégrale}
+
+Soit une fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$. On définitles ensembles $\E^{-}(f)=\{\varphi \in \E(\intervalleff{a}{b}), \varphi \leq f\}$ et $\E^{+}(f)=\{\psi \in \E(\intervalleff{a}{b}), \psi \geq f\}$. La fonction $f$ est bornée, donc il existe deux réels $m$ et $M$ tels que 
+\begin{equation}
+  \tilde{m} \leq f \leq \tilde{M},
+\end{equation}
+et comme ces fonctions sont en escalier, on a bien $\tilde{m} \in \E^{-}(f)$ et $\tilde{M} \in \E^{+}(f)$. Les ensembles $\E^{-}(f)$ et $\E^{+}(f)$ sont non vides. On définit 
+\begin{align}
+I^{-}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{-}(f)}, \\
+I^{+}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{+}(f)}.
+\end{align}
+ Ces deux ensembles sont non vides puisque $\E^{-}(f)$ et $\E^{+}(f)$ sont non vides. Comme la fonction $\tilde{M}$ majore l'ensemble $\E^{-}(f)$, $I^{-}(f)$ est majoré par $M(b-a)$. De la même manière comme la fonction $\tilde{m}$ minore l'ensemble $\E^{-}(f)$, $I^{+}(f)$ est minoré par $m(b-a)$. Finalement, $I^{-}(f)$ admet une borne supérieure notée $S$ et $I^{+}(f)$ admet une borne inférieure notée $I$. Pour toutes fonctions $\varphi \in \E^{-}(f)$ et $\psi \in \E^{+}(f)$ on a
+\begin{equation}
+  \varphi \leq f \leq \psi,
+\end{equation}
+donc
+\begin{equation}
+  \int_a^b \varphi \leq \int_a^b \psi.
+\end{equation}
+Alors $\int_a^b \psi$ est un majorant de $I^{-}(f)$ alors$\int_a^b \psi \geq S$. De plus $\int_a^b \psi$ est un minorant de $I^{-}(f)$ d'où
+\begin{equation}
+  S \leq I
+\end{equation}
+
+\begin{theo}
+  En reprenant les notations, pour toute fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$, on a $S=I$.
+\end{theo}
+\begin{proof}
+  Supposons (par l'absurde) le contraire, c'est à dire que $S < I$. Soit alors $\epsilon=\frac{I-S}{2(b-a)}>0$. Il existe un couple $(\varphi,\psi) \in \E(\intervalleff{a}{b})^2$ tel que
+  \begin{equation}
+    \begin{cases}
+      \varphi \leq f \leq \psi \\
+      \psi-\varphi \leq \tilde{\epsilon}.
+    \end{cases}
+  \end{equation}
+  Alors $\varphi \in \E^{-}(f)$ et $\psi \in \E^{+}(f)$. D'où
+  \begin{equation}
+    \int_a^b \varphi \leq S \quad \int_a^b \psi \geq I.
+  \end{equation}
+  D'une part on a
+  \begin{equation}
+    \int_a^b \psi -\varphi \leq \int_a^b \tilde{\epsilon}=\epsilon(a-b)=\frac{I-S}{2}
+  \end{equation}
+  et d'autre part
+  \begin{equation}
+    \int_a^b \psi-\varphi = \int_a^b \psi - \int_a^b \varphi \geq I-S
+  \end{equation}
+  Finalement on a $I-S \geq \frac{I-S}{2}$ et comme $I>S$ on a $1 \leq \frac{1}{2}$. Ce qui est absurde. Donc $I=S$.
+\end{proof}
+
+\begin{defdef}
+  Soit une fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$. Alors avec les notations précédentes, le réel $I=S$ est appelé intégrale de $f$ sur $\intervalleff{a}{b}$ et il est noté $\int_a^b f$, $\int_{\intervalleff{a}{b}} f$ ou encore $\int_a^b f(x)\,\diff x$.
+\end{defdef}
+
+\emph{Remarque}~: Cette définition est légitime car elle prolonge la définition de l'intégrale des fonctions en escalier.
+
+Si $f \in \E(\intervalleff{a}{b})$, alors $f \in \E^{-}(\intervalleff{a}{b})$ et $f \in \E^{+}(\intervalleff{a}{b})$ donc $\int_a^b f$ appartient (au sens des fonctions en escalier) à $I^{+}(f)$ et $I^{-}(f)$. De plus $\int_a^bf$ est le minimum de $I^{+}(f)$ et le maximum de $I^{-}(f)$. Donc $S=I=\int_a^b f$ au sens de la fonction en escalier.
+
+Ce qu'on a appelé $\int_a^b f$ au sens des fonctions continues par morceaux est donc la même intégrale.
+
+\emph{Interprétation graphique}~: Si $f$ est continue par morceaux sur $\intervalleff{a}{b}$, et si elle est positive, alors $\int_a^b f$ représente l'aire entre l'axe des abcisses et la courbe représentative de $f$.
+
+\subsection{Linéarité de l'intégrale}
+
+\begin{theo}
+  L'application $\fonction{\int_a^b}{\CM(\intervalleff{a}{b})}{\R}{f}{\int_a^b f}$ est une forme linéaire. C'est-à-dire que
+  \begin{equation}
+    \forall (f,g) \in \CM(\intervalleff{a}{b})^2 \ \forall \lambda \in \R^2 \quad \int_a^b (\lambda f+g) = \lambda \int_a^b f + \int_a^b g.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  La démonstration se déroule en trois étapes. Soient d'abord deux fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$ et un réel $\lambda$. On montre d'abord que $\int_a^b (-f) = -\int_a^b f$, ensuite que $\int_a^b (f+g) = \int_a^b f + \int_a^b g$ et enfin que $\int_a^b (\lambda f) = \lambda \int_a^b f$.
+
+Montrons le premier point. Par définition,
+\begin{align}
+  \int_a^b (-f) &= \sup\limits_{\varphi \leq -f \in \E(\intervalleff{a}{b})} \int_a^b \varphi ,\\
+  &= \sup\limits_{\psi \geq f \in \E(\intervalleff{a}{b})} \int_a^b -\psi ,\\
+  &= \sup\limits_{\psi \geq f \in \E(\intervalleff{a}{b})} \int_a^b -\psi 
+\end{align}
+car $\psi$ est une fonction en escalier et on a montré la linéarité. Ensuite
+\begin{equation}
+  \int_a^b (-f) = -\inf\limits_{\psi \geq f \in \E(\intervalleff{a}{b})} \int_a^b \psi ,\\
+\end{equation}
+d'après les propriétés de la borne inférieure et supérieures. Alors
+\begin{equation}
+   \int_a^b (-f) = -\int_a^b f,
+\end{equation}
+par définition.
+
+Soit ensuites $(\varphi_1, \varphi_2) \in \E^{-}(f) \times \E^{-}(g)$ alors $\varphi+\varphi_2$ est en escalier et $\varphi_1+\varphi_2 \leq f+g$, donc $\varphi_1+\varphi_2 \in \E^{-}(f+g)$. Ainsi
+\begin{equation}
+  \int_a^b (\varphi_1+\varphi_2) \leq \int_a^b (f+g),
+\end{equation}
+par linéarité de l'intégrale pour les fonction en escalier, $\int_a^b (\varphi_1+\varphi_2) = \int_a^b \varphi_1 + \int_a^b \varphi_2$. D'où
+\begin{equation}
+  \int_a^b \varphi_1 \leq \int_a^b (f+g) - \int_a^b \varphi_2,
+\end{equation}
+et cette égalité est vraie pour toute fonction $\varphi_1 \in \E^{-}(f)$ donc $\int_a^b (f+g) - \int_a^b \varphi_2$ est un majorant de $I^{-}(f)$. Alors
+\begin{equation}
+  \int_a^b (f+g) - \int_a^b \varphi_2 \geq \sup I^{-}(f) = \int_a^b f.
+\end{equation}
+De la même manière
+\begin{equation}
+  \int_a^b \varphi_2 \leq \int_a^b (f+g) - \int_a^b f,
+\end{equation}
+est vraie pour toute fonction $\varphi_2 \in \E^{-}(g)$, alors $\int_a^b (f+g) - \int_a^b f$ est un majorant de $I^{-}(g)$. D'où
+\begin{equation}
+  \int_a^b g = \sup I^{-}(g) \leq \int_a^b (f+g) - \int_a^b f.
+\end{equation}
+
+On vient de montrer que
+\begin{equation}
+  \int_a^b f + \int_a^b g \leq \int_a^b (f+g),
+\end{equation}
+on a aussi
+\begin{equation}
+  \int_a^b (-f) + \int_a^b (-g) \leq \int_a^b (-f-g).
+\end{equation}
+Soit alors
+\begin{equation}
+  -\int_a^b f - \int_a^b g \leq -\int_a^b (f+g),
+\end{equation}
+et en passant à l'opposé on change le sens de l'inégalité
+\begin{equation}
+  \int_a^b f + \int_a^b g \geq \int_a^b (f+g).
+\end{equation}
+Finalement, il y a égalité 
+\begin{equation}
+  \int_a^b f + \int_a^b g = \int_a^b (f+g).
+\end{equation}
+
+Si $\lambda>0$ on a
+\begin{align}
+  \int_a^b (\lambda f) &= \sup\limits_{\varphi \leq \lambda f \in \E(\intervalleff{a}{b})} \int_a^b \varphi \\
+  &= \sup\limits_{\psi \leq f \in \E(\intervalleff{a}{b})} \int_a^b \lambda \psi \\
+  &= \sup\limits_{\psi \leq f \in \E(\intervalleff{a}{b})} \lambda \int_a^b \psi \\
+  &= \lambda \sup\limits_{\psi \leq f \in \E(\intervalleff{a}{b})} \int_a^b \psi \\
+  &=\lambda \int_a^b f.
+\end{align}
+Si $\lambda=0$, alors l'égalité est vérifié. Si $\lambda<0$ alors
+\begin{align}
+  \int_a^b (\lambda f) = \int_a^b (-\lambda)(-f) = -\lambda \int_a^b(-f) = \lambda \int_a^b f.
+\end{align}
+\end{proof}
+
+\subsection{Positivité et croissance -- Majoration de la valeur absolue de l'intégrale}
+
+\subsubsection{Fonctions continues par morceaux}
+
+\begin{theo}
+  Pour toute fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    f \geq \tilde{0} \implies \int_a^b f \geq 0.
+  \end{equation}
+  \danger Ce sont des inégalités larges.
+\end{theo}
+\begin{proof}
+  La fonction nulle est en escalier. Si en plus $f \geq \tilde{0}$ alors $\tilde{0} \in \E^{-}(f)$ et alors par définition $\int_a^b f \geq \int_a^b \tilde{0}=0$.
+\end{proof}
+
+\begin{theo}
+   Pour toute fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    f \geq g \implies \int_a^b f \geq \int_a^b g.
+  \end{equation}
+  \danger Ce sont des inégalités larges.
+\end{theo}
+\begin{proof}
+  Il suffit d'appliquer le théorème précédent à $f-g$.
+\end{proof}
+
+\begin{theo}
+  Pour toute fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    \abs{\int_a^b f~} \leq \int_a^b \abs{f},
+  \end{equation}
+  et en particulier
+  \begin{equation}
+    \abs{\int_a^b f~} \leq (b-a) \sup\limits_{\intervalleff{a}{b}} \abs{f}.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Pour toute fonction $f$ continue par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    -\abs{f} \leq f \leq \abs{f},
+  \end{equation}
+  alors
+  \begin{equation}
+    \int_a^b -\abs{f} \leq \int_a^bf \leq \int_a^b\abs{f},
+  \end{equation}
+  par linéarité on obtient
+  \begin{equation}
+    -\int_a^b \abs{f} \leq \int_a^bf \leq \int_a^b\abs{f},
+  \end{equation}
+  D'où
+  \begin{equation}
+     \abs{\int_a^b f~} \leq \int_a^b \abs{f}.
+  \end{equation}
+
+  Les fonctions continues par morceaux sont bornées. Soit donc $g$ la fonction constante égale à $\sup\limits_{\intervalleff{a}{b}} \abs{f}$ sur $\intervalleff{a}{b}$, alors
+  \begin{equation}
+    \abs{f} \leq g
+  \end{equation}
+  et ainsi
+  \begin{equation}
+    \int_a^b \abs{f} \leq \int_a^b g = (b-a) \sup\limits_{\intervalleff{a}{b}} \abs{f}
+  \end{equation}
+\end{proof}
+
+\subsubsection{Cas des fonctions continues}
+
+\danger \emph{Ce qui suit ne s'applique pas aux fonctions continues par morceaux}.
+
+\begin{theo}
+  Pour toute fonction continue $f$ sur $\intervalleff{a}{b}$, si $f$ est non nulle et $f \geq 0$ alors $\int_a^b f >0$.
+\end{theo}
+\begin{proof}
+  Comme $f$ est positive et non nulle, il existe un $x_0 \in \intervalleff{a}{b}$ tel que $f(x_0)>0$. Comme $f$ est continue, il existe un couple $(\alpha,\beta) \in \intervalleff{a}{b}^2$ ($\alpha<\beta$) tel que
+  \begin{equation}
+    \forall x \in \intervalleff{a}{b} \quad \frac{f(x_0)}{2}.
+  \end{equation}
+  Soit $\varphi \in \R^{\intervalleff{a}{b}}$ définie par
+  \begin{equation}
+    \begin{cases}
+      \varphi(x)=\frac{f(x_0)}{2} & x \in \intervalleff{\alpha}{\beta} \\
+      \varphi(x)=0 & x \in \intervalleff{a}{b} \setminus \intervalleff{\alpha}{\beta}
+    \end{cases}.
+  \end{equation}
+  La fonction $\varphi$ est donc en escalier sur $\intervalleff{a}{b}$ et $\varphi \leq f$. Par conséquent
+  \begin{equation}
+    \int_a^b f \geq \int_a^b \varphi,
+  \end{equation}
+  et par définition
+  \begin{equation}
+    \int_a^b \varphi = (\beta-\alpha) \frac{f(x_0)}{2} >0.
+  \end{equation}
+  donc $\int_a^b f >0$.
+\end{proof}
+
+\begin{corth}
+  Soit une fonction $f$ continue sur $\intervalleff{a}{b}$. Si $f$ est positive et si son intégrale est nulle alors $f$ est nulle.
+\end{corth}
+
+\begin{theo}
+   Pour toutes fonctions $f$ et $g$ continues sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    f \geq g \text{~et~} f \neq g \implies \int_a^b f > \int_a^b g.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Il suffit d'appliquer le théorème précédent à $f-g$.
+\end{proof}
+
+\begin{corth}
+  Pour toutes fonctions $f$ et $g$ continues sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    f \geq g \text{~et~} \int_a^b f = \int_a^b g  \implies f = g.
+  \end{equation} 
+\end{corth}
+
+\begin{theo}
+  Pour toute fonctions $f$ continue sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+    \abs{\int_a^b f~} = \int_a^b \abs{f} \iff f \text{~est de signe constant sur~} \intervalleff{a}{b}.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  $\impliedby$ Si $f$ est de signe constant, alors si $f \geq \tilde{0}$ alors $\int_a^b f \geq 0$ et donc
+  \begin{equation}
+     \abs{\int_a^b f~} = \int_a^b f = \int_a^b \abs{f};
+  \end{equation}
+  sinon $f \leq \tilde{0}$ et alors $\int_a^b f \leq 0$ et donc
+  \begin{equation}
+    \abs{\int_a^b f~} = -\int_a^b f = \int_a^b (-f) = \int_a^b \abs{f}.
+  \end{equation}
+
+  $\implies$ Deux cas se présentent selon le signe de l'intégrale.
+  \begin{itemize}
+  \item Si $\int_a^b f \geq 0$ alors l'hypothèse s'écrit~:
+    \begin{equation}
+      \int_a^b f = \int_a^b \abs{f}
+    \end{equation}
+    avec $f \leq \abs{f}$. Donc $f=\abs{f}$ et alors $f \geq \tilde{0}$.
+  \item Si $\int_a^b f \leq 0$ alors $-\int_a^b f = \int_a^b \abs{f}$ et par linéarité
+    \begin{equation}
+      \int_a^b -f = \int_a^b \abs{f}
+    \end{equation}
+    avec $-f \leq \abs{f}$ donc $-f=\abs{f}$ et alors $f \leq \tilde{0}$.
+  \end{itemize}
+\end{proof}
+
+\subsection{Additivité par rapport au segment d'intégration}
+
+\subsubsection{Relation de Chasles}
+
+\begin{theo}
+  Soient trois réels $a$, $b$ et $c$ tels que $a \leq b<c$ et soit une fonction $f \in \R^{\intervalleff{a}{b}}$. La fonction $f$ est continue par morceaux si et seulement si sa restriction à $\intervalleff{a}{c}$ et sa restriction à $\intervalleff{c}{b}$ sont continues par morceaux. Auquel cas,
+  \begin{equation}
+    \int_a^b f = \int_a^c f +\int_c^b f.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  L'équivalence se prouve comme pour les fonctions en escaliers, c'est-à-dire en travaillant sur les subdivisions.
+
+  Soit une fonction $f \in \CM(\intervalleff{a}{b})$, alors $f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c})$ et $f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b})$. Soit $\epsilon>0$, alors
+  \begin{align}
+    \exists (\varphi_1, \psi_1) \in \E(\intervalleff{a}{c})^2 \ \begin{cases} \varphi_1 \leq f_{|\intervalleff{a}{c}} \\ \psi_1 - \varphi_1 \leq \tilde{\epsilon} \end{cases} \\
+\exists (\varphi_2, \psi_2) \in \E(\intervalleff{c}{b})^2 \ \begin{cases} \varphi_2 \leq f_{|\intervalleff{c}{b}} \\ \psi_2- \varphi_2 \leq \tilde{\epsilon} \end{cases}
+  \end{align}
+  Soient deux fonctions $\psi$ et $\varphi$ de $\intervalleff{a}{b}$ vers $\R$ définies par
+  \begin{align}
+    \forall x \in \intervallefo{a}{c} \quad \varphi(x)=\varphi_1(x) \text{~et~} \psi(x)=\psi_1(x) \\
+    \varphi(c)=\psi(c)=f(c) \\
+    \forall x \in \intervalleof{c}{b} \quad \varphi(x)=\varphi_2(x) \text{~et~} \psi(x)=\psi_2(x).
+  \end{align}
+  Les fonction $\psi$ et $\varphi$ sont en escalier sur $\intervalleff{a}{b}$ et vérifient $\varphi \leq f \leq \psi$. De plus $\psi-\varphi \leq \tilde{\epsilon}$.
+
+  On peut appliquer la relations de Chasles pour les fonctions en escalier~:
+  \begin{equation}
+    \int_a^b f \leq \int_a^b \psi = \int_a^c \psi + \int_c^b \psi= \int_a^c \psi_1 + \int_c^b \psi_2,
+  \end{equation}
+  par croissance de l'intégrale on a
+  \begin{align}
+    \int_a^b f & \leq \int_a^c (\psi_1 + \tilde{\epsilon})  + \int_c^b (\psi_2 + \tilde{\epsilon}) \\
+    \leq \int_a^c f + \int_c^b f + \epsilon(b-a)
+  \end{align}
+  et comme c'est vrai pour tout $\epsilon >0$, lorsqu'on fait tendre $\epsilon$ vers zéro, on obtient~:
+  \begin{equation}
+    \int_a^b f \leq \int_a^c f + \int_c^b f.
+  \end{equation}
+  Si on applique ce résultat à $-f$ on obtient l'inégalité inverse.
+\end{proof}
+
+\begin{prop}
+  Soient un intervalle réel $I$ et une fonction $f \in \CM(I)$. Pour tous réels $a$ et $b$ de $I$ on a
+  \begin{equation}
+    \int_a^b f = - \int_b^a f
+  \end{equation}
+\end{prop}
+
+\begin{theo}
+  Soient un intervalle réel $I$ et une fonction $f \in \CM(I)$. Pour tous réels $a$ et $b$ de $I$ on a~:
+  \begin{enumerate}
+  \item Si $f \geq 0$, si $a \leq b$ alors $\int_a^bf \geq 0$ et si $a \geq b$ $\int_a^b f \leq 0$;
+  \item $\abs{\int_a^b f} \leq \int_a^b \abs{f}$ si $a<b$ et $\abs{\int_a^b f} \geq \int_b^a \abs{f}$ si $a \geq b$;
+  \item $\abs{\int_a^b f~} \leq \abs{b-a} \sup\limits_{\intervalleff{a}{b}} \abs{f}$
+  \end{enumerate}
+\end{theo}
+
+\subsection{Invariance par translation}
+
+\begin{theo}
+  Soient deux réels $a$ et $b$ ($a<b$), $f \in \CM(\intervalleff{a}{b})$ et un autre réel $T \in \R$. On dispose alors de l'application translatée
+  \begin{equation}
+    \fonction{f_T}{\intervalleff{a+T}{b+T}}{\R}{x}{f(x-T)}
+  \end{equation}
+  alors $f_T \in \CM(\intervalleff{a+T}{b+T})$ et
+  \begin{equation}
+    \int_{a+T}^{b+T} f_T = \int_a^b f
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Si $f$ est en escalier sur $\intervalleff{a}{b}$, soit $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $(\lambda_i)_{0 \leq i \leq n}$ la famille des valeurs constantes de $f$ sur $\intervalleff{a}{b}$. Soit $\sigma_T = (a_i+T)_{0 \leq i \leq n}$ et c'est une subdivision de $\intervalleff{a+T}{b+T}$ adaptée à $f_T$. La fonction $f_T$ est en escalier et
+  \begin{equation}
+    \int_{a+T}^{b+T} f_T = \sum_{i=1}^n ((a_i+T)-(a_{i-1}+T))\lambda_i = \sum_{i=1}^n (a_i-a_{i-1})\lambda_i=\int_a^b f
+  \end{equation}
+
+
+  On suppose maintenant que $f$ est continue par morceaux sur $\intervalleff{a}{b}$. Soit $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ adaptée à $f$. Soit $\varphi \in \E^{-}(f)$, on dispose alors de la fonction $\varphi_T \in \E(\intervalleff{a+T}{b+T})$ telle que $\int_{a+T}^{b+T} \varphi_T = \int_a^b\varphi$. Alors
+  \begin{equation}
+    \varphi_T \leq f_T
+  \end{equation}
+  donc $\varphi_T \in \E^{-}(f)$ et alors
+  \begin{equation}
+   \int_a^b\varphi = \int_{a+T}^{b+T} \varphi_T \leq \int_{a+T}^{b+T} f_T.
+  \end{equation}
+  C'est vrai pour toute fonction $\varphi \in \E^{-}(f)$ donc $\int_{a+T}^{b+T} f_T$ est un majorant de $I^{-}(f)$ d'où
+  \begin{equation}
+    \int_{a+T}^{b+T} f_T \geq \sup I^{-}(f) = \int_a^b f.
+  \end{equation}
+  On applique ce résultat à $f_T$ et $-T$ pour obtenir l'autre inégalité, ou on refait le même raisonnement avec $\psi \in \E^{+}(f)$.
+\end{proof}
+
+\subsubsection{Applications aux fonctions périodiques}
+
+Soient $f \in \R^\R$ et $T>0$ tel que $f$ soit $T$-périodique. Supposons que $f$ est continue par morceaux sur tous les segments de $\R$. Alors
+\begin{align}
+  \forall a,b \in \R^2 \quad \int_{a+T}^{b+T} f = \int_a^b f \\
+  \forall a,b \in \R^2 \quad \int_a^{a+T} f =\int_b^{b+T} f
+\end{align}
+
+\begin{proof}
+  Pour la première égalité, on applique directement le résultat de la sous-sous-section précédente, $f_T=f$ puisque $f$ est $T$-périodique.
+
+  Pour la deuxième égalité, on applique la relation de Chasles et la première égalité.
+\end{proof}
+
+\subsection{Inégalité de la moyenne}
+
+\begin{theo}
+  Soient $(f,g) \in \CM(\intervalleff{a}{b})^2$ et $(m,M)\in \R^2$ tels que $\tilde{m} \leq f \leq \tilde{M}$. Si $g \geq \tilde{0}$ alors
+  \begin{equation}
+    m \int_a^b g \leq \int_a^b fg \leq M \int_a^b g
+  \end{equation}
+\end{theo}
+
+\emph{Remarque}~: Puisque $f$ est continue par morceaux, elle est bornée alors on pourra toujours trouver $m$ et $M$.
+
+\begin{proof}
+  Pour tout réel $x \in \intervalleff{a}{b}$, on a$ \begin{cases} m \leq f(x) \leq M \\ 0 \leq g(x) \end{cases}$. Donc
+  \begin{equation}
+    mg(x) \leq f(x)g(x) \leq Mg(x),
+  \end{equation}
+  par croissance de l'intégrale on a
+  \begin{equation}
+    \int_a^b mg \leq \int_a^b fg \leq \int_a^b Mg,
+  \end{equation}
+  et par linéarité
+  \begin{equation}
+    m \int_a^b g \leq \int_a^b fg \leq M \int_a^b g.
+  \end{equation}
+\end{proof}
+
+\begin{corth}
+  Soient une fonction $f$  continue par morceaux sur $\intervalleff{a}{b}$ et $(m,M)\in \R^2$ tels que $\tilde{m} \leq f \leq \tilde{M}$, alors
+  \begin{equation}
+    m \leq \frac{1}{b-a} \int_a^b f \leq M.
+  \end{equation}
+\end{corth}
+\begin{proof}
+  On applique le théorème avec $g=\tilde{1}$.
+\end{proof}
+
+\begin{defdef}
+  Pour toute fonction $f$ continue par morceaux, le réel $\mu = \frac{1}{b-a} \int_a^b f$ est appelée la valeur moyenne de $f$ sur le segment $\intervalleff{a}{b}$.
+\end{defdef}
+
+\emph{Remarque}~: Supposons que $f$ est continue sur $\intervalleff{a}{b}$. Le théorème des bornes permet de choisir $m = \min\limits_{\intervalleff{a}{b}} f$ et $M = \max\limits_{\intervalleff{a}{b}} f$. Alors la valeur moyenne $\mu \in \intervalleff{m}{M}$. La fonction $f$ est continue donc d'après le théorème des valeurs intermédiaires il existe un réel $c \in \intervalleff{a}{b}$ tel que $f(c)=\mu$.
+
+\begin{theo}
+  Pour toutes fonction $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$,
+  \begin{equation}
+    \abs{\int_a^b fg~} \leq \sup_{\intervalleff{a}{b}} \abs{f} \int_a^b \abs{g}
+  \end{equation}
+\end{theo}
+\begin{proof}
+  La fonction $f$ est continue par morceaux docn bornée, alors $M = \sup_{\intervalleff{a}{b}} \abs{f} \geq 0$ existe. Alors
+  \begin{equation}
+    \abs{\int_a^b fg~} \leq \int_a^b \abs{fg}
+  \end{equation}
+  et comme $\abs{fg} \leq M\abs{g}$ alors par croissance et par linéarité on a
+  \begin{equation}
+    \abs{\int_a^b fg~} \leq M \int_a^b \abs{g}.
+  \end{equation}
+\end{proof}
+
+\emph{Remarque}~: Avec $g=\tilde{1}$ on retrouve $\abs{\int_a^b fg~} \leq \abs{b-a} \sup_{\intervalleff{a}{b}} \abs{f}$.
+
+\subsection{Inégalité de Cauchy-Schwarz et inégalité de Minkowski}
+
+\subsubsection{Inégalité de Cauchy-Schwarz}
+
+\begin{theo}
+  Pour toutes fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+   \abs{\int_a^b fg} \leq \sqrt{\int_a^b f^2 \int_a^b g^2} 
+  \end{equation}
+\end{theo}
+
+\emph{Remarque}~: Si les fonctions sont continues, on note $\langle f,g \rangle = \int_a^b fg$ , c'est un produit scalaire et on note $\norme{f}_2 = \sqrt{\int_a^b f^2}$ c'est la norme euclidienne associée au produit scalaire. L'inégalité devient $\abs{\prodscal{f}{g}} \leq \norme{f}_2 \norme{g}_2$.
+
+\begin{proof}
+  Soit la fonction
+  \begin{equation}
+    \fonction{P}{\R}{\R}{\lambda}{\int_a^b (f+\lambda g)^2}
+  \end{equation}
+  Alors pour tout réel $\lambda$, $P(\lambda)>0$ et
+  \begin{equation}
+    P(\lambda)= \lambda^2 \int_a^b g^2 + 2\lambda \int_a^b fg + \int_a^b f^2.
+  \end{equation}
+  Deux cas se présentent~:
+  \begin{enumerate}
+  \item Si $\int_a^b g^2=0$ alors on a $2\lambda \int_a^b fg + \int_a^b f^2 \geq 0$ pour tout $\lambda$ alors $\int_a^b fg=0$ et l'inégalité est vraie $0 \leq 0$;
+  \item Sinon alors $P$ est polynomiale de degré $2$ et $P \geq \tilde{0}$. Alors le dsicriminant est négatif~:
+    \begin{equation}
+      4 \left(\int_a^b fg \right)^2 - 4 \int_a^bf^2 \int_a^b g^2 \leq 0
+    \end{equation}
+    et ainsi on a bien l'inégalité
+    \begin{equation}
+      \left(\int_a^b fg \right)^2 \leq \int_a^bf^2 \int_a^b g^2
+    \end{equation}
+    et comme $\int_a^bf^2 \int_a^b g^2  \geq 0$, par positivité de l'intégrale on a bien l'inégalité de Cauchy-Schwarz~:
+    \begin{equation}
+      \abs{\int_a^b fg~} \leq \sqrt{\int_a^b f^2 \int_a^b g^2}.
+    \end{equation}
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}
+   Pour toutes fonctions $f$ et $g$ continues sur $\intervalleff{a}{b}$, il y a égalité dans l'inégalité de Cauchy-Schwarz si et seulement si la famille $(f,g)$ est liée.
+\end{prop}
+\begin{proof}
+  Deux cas se présentent~:
+  \begin{enumerate}
+  \item Si $\int_a^b g^2=0$ alors $g^2=\tilde{0}$ donc $g=\tilde{0}$. Alors
+    \begin{equation}
+      \abs{\int_a^b fg} =0 = \sqrt{\int_a^b f^2 \int_a^b g^2} 
+    \end{equation}
+  \item Sinon, alors le discriminant du polynôme $P$ (cf demonstration précédente) est nul et il existe une racine double $\lambda_0$ tel que
+    \begin{equation}
+      \begin{cases}
+        \int_a^b (f+\lambda_0 g)^2=0\\
+        (f+\lambda_0 g)^2 \geq 0
+      \end{cases}
+    \end{equation}
+    comme $f+\lambda_0 g$ est continue, on a alors d'après l'intégrale nulle $f=-\lambda_0 g$.
+
+    Réciproquement s'il existe $\mu \in \R$ tel que $f=\mu g$ alors
+    \begin{equation}
+      \abs{\int_a^b fg~} = \abs{\int_a^b \mu g^2~} = \abs{\mu} \int_a^b g^2
+    \end{equation}
+    et alors
+    \begin{equation}
+      \sqrt{\int_a^b f^2 \int_a^b g^2}  = \sqrt{\mu^2 \left(\int_a^b g^2 \right)^2} = \abs{\mu} \int_a^b g^2.
+    \end{equation}
+  \end{enumerate}
+\end{proof}
+
+\subsubsection{Inégalité de Minkowski}
+
+\begin{theo}
+   Pour toutes fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{equation}
+   \sqrt{\int_a^b (f+g)^2} \leq \sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} 
+  \end{equation}
+  C'est l'inégalité triangulaire $||f+g||_2 \leq ||f||_2 + ||g||_2$.
+\end{theo}
+\begin{proof}
+  Pour toutes fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$, on a
+  \begin{align}
+    \int_a^b (f+g)^2 & = \int_a^b f^2 + \int_a^b g^2 +2 \int_a^b fg \\
+    &\leq \int_a^b f^2 + \int_a^b g^2 +2 \sqrt{\int_a^b f^2 \int_a^b g^2} \\
+    &\leq \left(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2}\right)^2.
+  \end{align}
+  La première inégalité est issue de l'inégalité de Cauchy-Schwarz. Cependant $\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} \geq 0$ et $\int_a^b (f+g)^2 \geq 0$ alors en passant à la racine on a bien l'inégalité de Minkowski~:
+  \begin{equation}
+    \sqrt{\int_a^b (f+g)^2} \leq \sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2}.
+  \end{equation}
+\end{proof}
+
+\begin{prop}
+  Pour toutes fonctions $f$ et $g$ continues par morceaux sur $\intervalleff{a}{b}$, il y a égalité dans l'inégalité de Minkowski si et seulement si $(f,g)$ est liée.
+\end{prop}
+\begin{proof}
+  Commece cas d'égalité dépend du cas d'égalité dans l'inégalité de Cauchy-Schwarz, c'est évident.
+\end{proof}
+
+\section{Sommes de Riemann}
+
+\subsection{Définition}
+
+\begin{defdef}
+  Soient deux réels $a, b$ ($a<b$), $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ ed $n+1$ points, une fonction $f \in \R^{\intervalleff{a}{b}}$ et $\alpha=(\alpha_i)_{0 \leq i \leq n-1}$ une famille de $n$ points de $\intervalleff{a}{b}$ telle que pour tout $i \in \intervalleentier{0}{n-1}$, $\alpha_i \in \intervalleff{a_i}{a_{i+1}}$. On définit
+  \begin{equation}
+    R(f,\sigma,\alpha)=\sum_{i=0}^{n-1}(a_{i+1}-a_i)f(\alpha_i)
+  \end{equation}
+  la somme de Riemann associée à $f$, à $\sigma$ et à la famille de points $\alpha$.
+\end{defdef}
+
+\emph{Cas particulier important}~: Si la subdivision $\sigma$ est régulière, c'est-à-dire que pour tout $i \in \intervalleentier{0}{n-1}$ $a_i=a+i \frac{b-a}{n}$ alors la somme de Riemann s'écrit
+\begin{equation}
+  R(f,\sigma,\alpha) = \frac{b-a}{n} \sum_{i=0}^{n-1}f(\alpha_i).
+\end{equation}
+
+\subsection{Théorème de convergence des sommes de Riemman pour les fonctions continues}
+
+\begin{theo}
+  Soient deux réels $a$ et $b$ tels que $a<b$ et une fonction $f$ continue sur $\intervalleff{a}{b}$. Pour tout $\epsilon >0$, il existe $\eta >0$ tel que si pour toute subdivision $\sigma=(a_i)_{0 \leq i \leq n-1}$ de $\intervalleff{a}{b}$ de pas $\delta(\sigma) \leq \eta$ alors pour toute famille de points $\alpha=(\alpha_i)_{0 \leq i \leq n-1}$ de $\intervalleff{a}{b}$ (telle que pour tout $i \in \intervalleentier{0}{n-1}$ on a $\alpha_i \in \intervalleff{a_i}{a_{i+1}}$) on a
+  \begin{equation}
+    \abs{R(f,\sigma,\alpha)- \int_a^b f~} \leq \epsilon
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Pour toute subdivision $\sigma=(a_i)_{0 \leq i \leq n-1}$ de $\intervalleff{a}{b}$ et pour toute famille de points $\alpha=(\alpha_i)_{0 \leq i \leq n-1}$ de $\intervalleff{a}{b}$ telle que pour tout $i \in \intervalleentier{0}{n-1}$ on a $\alpha_i \in \intervalleff{a_i}{a_{i+1}}$, on a
+  \begin{align}
+    R(f,\sigma,\alpha)- \int_a^b f &= \sum_{i=0}^{n-1}(a_{i+1}-a_i)f(\alpha_i) - \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} f \\
+    &=\sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} (f(\alpha_i)-f).
+  \end{align}
+  Comme $f$ est continue sur $\intervalleff{a}{b}$, grâce au théorème de Heine, elle est uniformément continue~:
+  \begin{equation}
+    \forall \epsilon >0 \ \exists \eta >0 \ \forall x,x' \in \intervalleff{a}{b} \quad \abs{x-x'} \leq \eta \implies \abs{f(x)-f(x')} \leq \frac{\epsilon}{b-a}
+  \end{equation}
+  Si $\sigma$ vérifie $\delta(\sigma) \leq \eta$ alors pour tout $i \in \intervalleentier{0}{n-1}$ et tout $x \in \intervalleff{a_i}{a_{i+1}}$ on a
+  \begin{equation}
+    \abs{x-\alpha_i} \leq \abs{a_{i+1}-a_i} \leq \delta(\sigma) \leq \eta
+  \end{equation}
+  d'où $\abs{f(x)-f(\alpha_i)} \leq \frac{\epsilon}{b-a}$. Par croissance de l'intégrale et pour tout $i \in \intervalleentier{0}{n-1}$ on a
+  \begin{equation}
+    \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f} \leq \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a}.
+  \end{equation}
+  Alors
+  \begin{align}
+    \abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leq \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f} \\
+    &\leq \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a} = \int_a^b \frac{\epsilon}{b-a}=\epsilon.
+  \end{align}
+\end{proof}
+
+\begin{cor}
+  Soient deux réels $a$ et $b$ tels que $a<b$ et une fonction $f$ continue sur $\intervalleff{a}{b}$. Pour tout $\epsilon >0$, il existe $n_0 \in \N$ tel que pour tout $n \geq n_0$ et pour toute famille  $\alpha=(\alpha_i)_{0 \leq i \leq n-1}$ une famille de $n$ points de $\intervalleff{a}{b}$ telle que pour tout $i \in \intervalleentier{0}{n-1}$, $\alpha_i \in \intervalleff{a+i \frac{b-a}{n}}{a+(i+1)\frac{b-a}{n}}$ alors
+  \begin{equation}
+    \abs{\frac{b-a}{n} \sum_{i=0}^{n-1}f(\alpha_i) - \int_a^b f} \leq \epsilon
+  \end{equation}
+  Cas particulier pour le choix de la famille $\alpha$~:
+  \begin{enumerate}
+  \item Si pour tout $i \in \intervalleentier{0}{n-1}$ $\alpha_i=a_i=a+i\frac{b-a}{n}$ alors
+    \begin{equation}
+      \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{i=0}^{n-1}f\left(a+i\frac{b-a}{n}\right) = \int_a^b f
+    \end{equation}
+    \item Si pour tout $i \in \intervalleentier{0}{n-1}$ $\alpha_i=a_{i+1}=a+(i+1)\frac{b-a}{n}$ alors
+    \begin{equation}
+      \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{j=1}^{n}f\left(a+j\frac{b-a}{n}\right) = \int_a^b f.
+    \end{equation}
+  \end{enumerate}
+\end{cor}
+
+\subsection{Cas des fonctions lipschitziennes}
+
+Dans le cas où $f$ est lipschitzienne, on peut majorer la différence entre les sommes de Riemann et $\int_a^b f$.
+
+Soient deux réels $a$ et $b$ tels que $a<b$ et $k>0$ tel que $f$ soit $k$-lipschitzienne sur $\intervalleff{a}{b}$. Soit $\sigma=(a_i)_{0 \leq i \leq n}$ une subdivision de $\intervalleff{a}{b}$ de pas $\delta(\sigma)$. Soit $(\alpha_i)_{0 \leq i \leq n-1}$ une famille de points de $\intervalleff{a}{b}$ telle que pour tout $i \in \intervalleentier{0}{n-1}$ on a $\alpha_i \in \intervalleff{a_i}{a_{i+1}}$. Alors
+\begin{align}
+\abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leq \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f(x)}\,\diff x \\
+&\leq k \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x
+\end{align}
+
+Soit $i \in \intervalleentier{0}{n-1}$, alors
+\begin{align}
+  \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x &= \int_{a_i}^{\alpha_i} \abs{\alpha_i-x}\,\diff x + \int_{\alpha_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x \\
+&= \left[ -\frac{(\alpha_i-x)^2}{2}\right]_{a_i}^{\alpha_i} + \left[\frac{(x-\alpha_i)^2}{2}\right]_{\alpha_i}^{a_{i+1}} \\
+&= \frac{(\alpha_i-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
+& \leq \frac{(a_{i+1}-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
+& \leq \delta(\sigma)^2
+\end{align}
+Alors
+\begin{equation}
+  \abs{R(f,\sigma,\alpha)- \int_a^b f~} \leq kn \delta(\sigma)^2.
+\end{equation}
+
+En particulier si $\sigma = \left(a+i \frac{b-a}{n}\right)_{0 \leq i \leq n}$ alors $\delta(\sigma)=\frac{b-a}{n}$ et donc
+
+\begin{equation}
+  \abs{R(f,\sigma,\alpha)- \int_a^b f~} \leq k \frac{(b-a)^2}{n}.
+\end{equation}
+
+\section{Brève extension aux fonctions à valeurs complexes}
+
+Soit $(a,b) \in \R^2$, $a<b$. On s'intéresse aux fonction de $\intervalleff{a}{b}$ vers $\C$.
+
+\subsection{Intégrale d'une fonction continue par morceaux}
+
+\begin{defdef}
+  Soit $f \in \C^{\intervalleff{a}{b}}$. On dit que $f$ est continue par morceaux sur $\intervalleff{a}{b}$ s'il existe une subdivision $\sigma=(a_i)_{0 \leq i \leq n}$ de $\intervalleff{a}{b}$ telle que~:
+  \begin{enumerate}
+  \item pour tout $i \in \intervalleentier{1}{n}$ $f$ est continue sur $\intervalleoo{a_{i-1}}{a_i}$
+  \item pour tout $i \in \intervalleentier{1}{n}$ $f_{|\intervalleoo{a_{i-1}}{a_i}}$ admet des limites finies à gauche en $a_i$ et à droite en $a_{i-1}$.
+  \end{enumerate}
+\end{defdef}
+
+D'après les résultats sur les limites et la continuité des fonctions à valeur complexes, on a~:
+\begin{prop}
+  Pour toute fonction $f \in \C^{\intervalleff{a}{b}}$, $f$ est continue par morceaux si et seulement si $\Re(f)$ et $\Im(f)$ sont continues par morceaux.
+\end{prop}
+
+On note $\CM(\intervalleff{a}{b},\C)$ l'ensemble des fonctions de $\C^{\intervalleff{a}{b}}$ qui sont continues par morceaux.
+
+\begin{defdef}
+  Pour toute fonction $f \in \CM(\intervalleff{a}{b},\C)$, on appelle intégrale de $f$ sur $\intervalleff{a}{b}$ et on note $\int_{\intervalleff{a}{b}}$, $\int_a^b f$ ou encore $\int_a^b f(x)\,\diff x$ le complexe
+  \begin{equation}
+    \int_a^b f = \int_a^b \Re(f) +\ii \int_a^b \Im(f)
+  \end{equation}
+\end{defdef}
+
+\begin{prop}
+  \begin{equation}
+    \forall f \in \CM(\intervalleff{a}{b},\C) \quad \int_a^b \bar{f} = \overline{\int_a^b f}
+  \end{equation}
+\end{prop}
+
+\subsection{Propriétés de l'intégrale}
+
+\subsubsection{Linéarité}
+
+L'application
+\begin{equation}
+  \fonction{\int_a^b}{\CM(\intervalleff{a}{b},\C)}{\C}{f}{\int_a^bf}
+\end{equation}
+est une forme linéaire sur le $\C$-espace vectoriel $\CM(\intervalleff{a}{b},\C)$.
+
+\begin{proof}
+  Soient $(f,g) \in \CM(\intervalleff{a}{b},\C)^2$ et un complexe $\lambda$. On note
+  \begin{align}
+    f_1 = \Re(f) \quad & f_2 = \Im(f) \\
+    g_1 = \Re(g) \quad & g_2 = \Im(g) \\
+    u = \Re(\lambda) \quad & v = \Im(\lambda) 
+  \end{align}
+  alors~:
+  \begin{align}
+    \int_a^b (f+g) &= \int_a^b (f_1+g_1) + \ii \int_a^b (f_2+g_2) \\
+    &=\int_a^b f_1 + \ii \int_a^b f_2 + \int_a^b g_1 + \ii \int_a^b g_2 \\
+    &=\int_a^b f+ \int_a^b g
+  \end{align}
+  et comme
+  \begin{equation}
+    \lambda f = (uf_1-vf_2)+ \ii(vf_1+uf_2)
+  \end{equation}
+  alors on a
+  \begin{align}
+    \int_a^b(\lambda f) &= \int_a^b (uf_1-vf_2)+ \ii \int_a^b (cf_1+uf_2) \\
+    &= (u+\ii v) \int_a^b f_1 + (\ii u-v) \int_a f_2\\
+    &=\lambda \int_a^b f_1 + \ii \lambda \int_a^b f_2 = \lambda \int_a^b f
+  \end{align}
+\end{proof}
+
+\subsubsection{Relation de Chasles}
+
+\begin{theo}
+  Soient trois réels $a\leq c \leq b$ et $f \in \C^{\intervalleff{a}{b}}$. Alors
+  \begin{equation}
+   f \in \CM(\intervalleff{a}{b},\C) \iff f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c},\C) \text{~et~} f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b},\C).
+  \end{equation}
+  Auquel cas
+  \begin{equation}
+    \int_a^b f = \int_a^c f + \int_c^b f.
+  \end{equation}
+\end{theo}
+
+\begin{proof}
+  L'équivalence est la conséquence immédiate de la propriété analogue avec les fonctions à valeur réelles. La relation de Chasles est aussi la conséquence immédiate de la relation de Chasles avec les fonctions à valeur réelles.
+\end{proof}
+
+\subsubsection{Inégalité de la moyenne}
+
+\begin{theo}
+  Pour toute fonction $f \in \CM(\intervalleff{a}{b},\C)$, $\abs{f} \in \CM(\intervalleff{a}{b},\R)$ et
+  \begin{equation}
+    \abs{\int_a^b f~} \leq \int_a^b \abs{f}
+  \end{equation}
+\end{theo}
+\begin{proof}
+  On distingue deux cas, selon que $\int_a^b f \in \R+$ ou non.
+  \begin{enumerate}
+  \item Supposons que $\int_a^b f \in \R+$. Alors $\abs{\int_a^b f~}=\int_a^b f$ et donc $\int_a^b \Im(f) =0$ et alors $\int_a^b f = \int_a^b \Re(f)$. On a
+    \begin{equation}
+      \Re(f) \leq \abs{f}
+    \end{equation}
+    et par croissance de l'intégrale
+    \begin{equation}
+      \abs{\int_a^b f~} = \int_a^b \Re(f) \leq \int_a^b \abs{f}
+    \end{equation}
+  \item Supposons maintenant que $\int_a^b f \notin \R+$ et en particulier $\int_a^b f \neq 0$. Alors il existe un réel $\rho >0$ et un réel $\theta$ tels que
+    \begin{equation}
+      \int_a^b f = \rho \e^{\ii \theta}
+    \end{equation}
+    et alors par linéarité
+    \begin{equation}
+      \rho = \int_a^b \e^{-\ii \theta}f
+    \end{equation}
+    Soit $g=\int_a^b \e^{-\ii \theta}f$ alors $\int_a^b g=\rho \in \R+$. Donc on peut lui ppliquer le premier point~:
+    \begin{align}
+      \abs{\int_a^b g} &\leq \int_a^b \abs{g} \\
+      \abs{\int_a^b \e^{-\ii \theta} f~} &\leq \int_a^b \abs{\e^{-\ii \theta} f} \\
+      \abs{\int_a^b f} &\leq \int_a^b \abs{f} \\
+    \end{align}
+  \end{enumerate}
+\end{proof}
+
+\danger \emph{La positivité et la croissance n'ont pas de sens pour $f \in \C^{\intervalleff{a}{b}}$}.

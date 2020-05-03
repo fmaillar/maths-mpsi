@@ -1,0 +1,111 @@
+\chapter{Construction du corps des complexes}
+
+On munit l'ensemble $\R^2$ de deux lois internes, une addition notée $+$ et une multiplication notée $\times$ définies pour tout $x,x',y,y' \in \R $par
+\begin{align}
+  (x,y)+(x',y') &= (x+x',y+y')\\
+  (x,y)\times(x',y') &= (xx'-yy',xy'+x'y)
+\end{align}
+
+\begin{prop}
+  $(\R^2,+)$ est un groupe abélien, c'est à dire
+  \begin{enumerate}
+  \item la loi $+$ est associative et commutative. Soient $x,x',x'',y,y',y'' \in \R$
+    \begin{align}
+      [(x,y)+(x',y')]+(x'',y'')&=(x,y)+[(x',y')+(x'',y'')] \\
+      (x,y)+(x',y')=(x',y')+(x,y);
+    \end{align}
+  \item $\R^2$ possède un élément neutre pour $+$ : $(0,0)$;
+    \begin{equation}
+      \forall x,y \in \R \quad (x,y)+(0,0)=(x,y)
+    \end{equation}
+  \item Tout élément de $\R^2$ est inversible par $+$;
+    \begin{equation}
+      \forall x,y \in \R \quad (-x,-y)+(x,y)=(0,0)
+    \end{equation}
+  \end{enumerate}
+\end{prop}
+\begin{prop}
+  $(\R^2,+,\times)$ est un anneau commutatif, c'est à dire
+  \begin{enumerate}
+  \item $(\R^2,+)$ est un groupe abélien;
+  \item la loi $\times$ est associative et commutative, c'est à dire que pour tout $x,x',x'',y,y',y'' \in \R$
+    \begin{align}
+      [(x,y)\times(x',y')]\times (x'',y'')&=(x,y)\times [(x',y')\times (x'',y'')] \\
+      (x,y)\times (x',y')&=(x',y')\times (x,y);
+    \end{align}
+  \item la loi $\times$ est distributive par rapport à la loi $+$. Soient $x,x',x'',y,y',y'' \in \R$ 
+    \begin{equation}
+      (x,y) \times [(x',y')+(x,y)]= (x,y) \times (x',y') +(x,y) \times (x'',y'');
+    \end{equation}
+  \item $\R^2$ possède un élément neutre pour la loi $\times$ : $(1,0)$. Soient $x,y \in \R$
+    \begin{equation}
+      (x,y)\times (1,0)=(x,y);
+    \end{equation}
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  \begin{enumerate}
+  \item Déjà vu;
+  \item La commutativité est triviale d'après la définition de $\times$. Montrons l'associativité. Soient $x,x',y',x'',y'' \in \R$ alors
+    \begin{align}
+      [(x,y) \times (x',y')] \times (x'',y'') &= (xx'-yy',xy'+x'y) \times (x'',y'')\\
+      &=(xx'x''-yy'x''-xy'y''-x'yy'', \notag \\
+      &xx'y''-yy'y''+xy'x''+x'yx'')
+    \end{align}
+    \begin{align}
+      (x,y)\times [(x',y') \times (x'',y'')] &= (x,y) \times (x'x''-y'y'',x'y''+x''y')\\
+      &=(xx'x''-xy'y''-yy'x''-x'yy'', \notag \\
+      & xx'y''+xy'x''+x'yx''-yy'y'')
+    \end{align}
+    d'où l'égalité.
+  \item Soient $x,x',y',x'',y'' \in \R$ alors
+    \begin{align}
+      (x,y) \times [(x',y')+(x'',y'')] &= (x,y) \times (x'+x'',y'+y'')\\
+      &=(xx'+xx''-yy'-yy'', \notag \\ &xy'+xy''+yx'+yx'')\\
+      &=(xx'-yy',xy'+yx') \notag \\
+      & + (xx'-yy'',xy''+yx'')\\
+      &=(x,y) \times (x',y') +(x,y)\times (x'',y'')
+    \end{align}
+  \end{enumerate}
+\end{proof}
+\begin{prop}
+  $(\R^2,+,\times)$ est un corps commutatif, c'est à dire
+  \begin{enumerate}
+  \item $(\R^2,+,\times)$ est un anneau commutatif;
+  \item Tous les éléments non nuls sont inversibles pour $\times$ et le neutre et $(1,0)$;
+  \item Le neutre pour $+$ est différent du neutre pour $\times$.
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  \begin{enumerate}
+  \item Déjà vu;
+  \item Soit $(x,y) \in \R^2 \ (x,y) \neq (0,0)$. Alors $x^2+y^2>0$ et
+    \begin{equation}
+      (x,y) \times \frac{1}{\sqrt{x^2+y^2}} (x,-y) = (1,0)
+    \end{equation}
+  \end{enumerate}
+\end{proof}
+Soit l'application $\fonction{\varphi}{\R}{\R^2}{x}{(x,0)}$. Elle est injective et c'est un morphisme d'anneaux :
+\begin{equation}
+  \forall (x,y) \in \R^2 \quad \varphi(x+y)=\varphi(x)+\varphi(y), \ \varphi(xy)\varphi(x)\varphi(y), \ \varphi(1)=(1,0)
+\end{equation}
+On peut donc identifier $\R$ et le sous-ensemble $\R \times \{0\}$ de $\R^2$ et pour tout $x \in \R$, $x$ avec $(x,0)$.
+\begin{defdef}
+  On note $\C$ l'ensemble $\R^2$ muni des deux lois $+$ et $\times$.
+\end{defdef}
+Ainsi, $\C$ est un corps commutatif. On appelle $\ii$ le complexe $(0,1)$ et donc $\ii^2 = (0,1) \times (0,1)=(-1,0)=-1$. On a alors pour tout couple $(x,y) \in \R^2$
+\begin{equation}
+  (x,y)=(x,0) + (0,y) = (x,0) \times (1,0) + (y,0) \times (0,1) = x \times 1 + y \times \ii = x+ \ii y
+\end{equation}
+On adopte la notation définitive du complexe $(x,y)=x+\ii y$. L'écriture $z=x+\ii y, (x,y) \in \R^2$ s'appelle la forme normale ou la forme algébrique du complexe $z$.
+\begin{prop}
+  Pour tout élément $z \in \C$, il existe un unique couple $(x,y) \in \R^2$ tel que $z=x+\ii y$.
+\end{prop}
+\begin{proof}
+  Pour tout $(x,y,x',y') \in \R^4$, on a
+  \begin{equation}
+    z=x+\ii y =x'+\ii y' \Longleftrightarrow z=(x,y)=(x',y') \Longleftrightarrow \begin{cases} x=x' \\ y=y'\end{cases}
+  \end{equation}
+
+\end{proof}
+

@@ -1,0 +1,19 @@
+\chapter{Développements limités} %usuels au voisinage de zéro}
+
+Ces développements limités sont à connaître par c\oe{}ur. Au voisinage de zéro, on a :
+\begin{align}
+  \e^x &= \sum_{k=0}^n \frac{x^k}{k!} + o(x^n) \\%= 1 + x  + \ldots + \frac{x^n}{n!} + o(x^n) \\
+  \hsin(x) &= \sum_{k=0}^n \frac{x^{2k+1}}{(2k+1)!} + o(x^{2n+2}) \\%\\= x + \frac{x^3}{6}+ \ldots + \frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2})\\
+  \hcos(x) &= \sum_{k=0}^n \frac{x^{2k}}{(2k)!} + o(x^{2n+1}) \\%= 1 + \frac{x^2}{2} +\ldots + \frac{x^{2n}}{(2n)!} + o(x^{2n+1})\\
+  \sin(x)  &= \sum_{k=0}^n (-1)^k\frac{x^{2k+1}}{(2k+1)!} + o(x^{2n+2}) \\%= x - \frac{x^3}{6} + \ldots + (-1)^n\frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2})\\
+  \cos(x)  &= \sum_{k=0}^n (-1)^k\frac{x^{2k}}{(2k)!} + o(x^{2n+1}) \\%= 1 - \frac{x^2}{2} + \ldots + (-1)^{n}\frac{x^{2n}}{(2n)!} + o(x^{2n+1})\\
+  \tan(x)  &= x + \frac{1}{3} x^3 + \frac{2}{15} x^5  + o(x^6)
+\end{align}
+\begin{align}
+  (1+x)^\alpha & = 1 + \sum_{k=1}^n \frac{x^k}{k!} \prod_{i=0}^{k-1} (\alpha -i) + o(x^n) \quad \forall \alpha \in \R^*_+ \\%= 1 +\alpha x + \frac{\alpha(\alpha-1)}{2}x^2 + \ldots + \frac{\alpha(\alpha-1) \ldots (\alpha-n+1)}{n!}x^n + o(x^n) \\
+  \frac{1}{1+x} &= \sum_{k=0}^n (-x)^k +o(x^n) \\%= 1-x+x^2 + \ldots +(-1)^nx^n +o(x^n)\\
+  \frac{1}{1-x} &= \sum_{k=0}^n  x^k +o(x^n) \\%= 1+x+x^2 + \ldots + x^n + o(x^n)\\
+  \ln(1+x)&= \sum_{k=0}^n -\frac{(-x)^k}{k} +o(x^n) \\%= x - \frac{x^2}{2} + \ldots + (-1)^{n-1} \frac{x^n}{n} + o(x^n) \\
+  \ln(1-x)&= \sum_{k=0}^n -\frac{x^k}{k} +o(x^n) %= -x - \frac{x^2}{2} - \ldots - \frac{x^n}{n} + o(x^n)
+\end{align}
+

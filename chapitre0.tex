@@ -1,0 +1,88 @@
+\addtocounter{chapter}{-1}
+\chapter{Éléments de logique et quantificateurs}
+\minitoc
+\minilof
+\minilot
+\lettrine{N}ous présentons dans ce très court chapitre les notions de base de logiques, les tables de vérités et l'utilisation des quantificateurs. On définit aussi ce qu'est une assertion et un théorème.
+%
+\section{Assertion et théorème}
+\label{chap0sec:assertionettheoremes}
+Nous allons préciser à un premier niveau quelques notions mathématiques qui sont relativement intuitives mais nécessitent quand même des définitions rigoureuses. L’idée étant de préciser schématiquement comment se présente une théorie mathématique ainsi que la notion essentielle de démonstration. La première notion est celle d’assertion.
+
+Une assertion est un énoncé mathématiques $P$ aussi rigoureux que possible qui ne prend qu'une valeur de vérité qui est soit vraie (V) soit fausse (F). On consigne ces valeurs dans une table de vérité. En mathématique, on appelle \emph{tautologie} une assertion qui est toujours vraie.
+
+Par exemple, l'assertion $1+1=2$ est une tautologie. Par contre l'assertion $1+1=3$ est une assertion dont la valeur de vérité est F. $3=2 \times$ n'est pas une assertion. $3=1+x$ est une assertion dont la valeur de vérité dépend de la valeur de $x$.
+
+Un théorème est une assertion vraie déduite grâce à d'autres assertions, en général les théorèmes sont des résultats importants à retenir. Un lemme est un résultat préliminaire qui permet de démontrer un théorème. Un corollaire est une conséquence directe d'un théorème.
+
+Pour écrire un énoncé mathématique on utilise le langage courant mais aussi quelques symboles et très souvent on manipule des lettres dans l'alphabet grec. On présente cet alphabet et ces symboles dans l'annexe~\ref{chap:qqsymboles}.
+
+\section{Négation et connecteurs logiques}
+\label{chap0sec:negationetconnecteurs}
+À partir d'une assertion $P$, on construit une assertion appelée (non $P$), qui peut être noté $\neg P$ dont la table de vérité est donnée par la table~\ref{tab:tabveriteP}.
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{|c|c|}\hline
+    $P$ & $\neg P$ \\ \hline
+    V & F \\ F & V \\ \hline
+  \end{tabular}
+  \caption{Table de vérité de P}
+  \label{tab:tabveriteP}
+\end{table}
+
+À partir de deux assertions $P$ et $Q$, on peut en fabriquer de nouvelles à l'aide des connecteurs logiques suivants~:
+\begin{itemize}
+\item la conjonction notée ``et'' ou $\wedge$;
+\item la disjonction notée ``ou'' ou $\vee$;
+\item l'implication notée $\implies$;
+\item l'équivalence notée $\iff$.
+\end{itemize}
+Les tables de vérités de ces connecteurs logiques sont données dans la table~\ref{tab:tabverconn}.
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}\hline
+    P & Q & $P \text{~et~} Q$ & $P \text{~ou~} Q$ & $P \implies Q$ & $P \iff Q$ \\ \hline
+    V & V & V & V & V & V \\
+    V & F & F & V & F & F \\
+    F & V & F & V & V & F \\
+    F & F & F & F & V & V \\ \hline
+  \end{tabular}
+  \caption{Table de vérité des connecteurs logiques}
+  \label{tab:tabverconn}
+\end{table}
+
+Dans l'assertion $P \implies Q$ l'assertion $P$ est l'hypothèse et l'assertion $Q$ est la conclusion. On a l'équivalence logique
+\begin{equation}
+  (P \implies Q) \iff (\neg P \text{~ou~} Q).
+\end{equation}
+L'assertion $Q \implies P$ est l'assertion réciproque de $P \implies Q$. Attention, il ne faut pas confondre les deux.
+%
+\section{Assertions logiquement équivalentes}
+\label{chap0sec:assertionslogiquementequiv}
+Deux assertions sont dites logiquement équivalentes lorsqu'elles ont la même table de vérité. On écrit par exemple les équivalences suivantes~:
+\begin{align}
+  \neg(\neg P) &\iff P; \\
+  \neg(P \text {~et~} Q) & \iff \neg P \text{~ou~} \neg Q; \\
+  \neg(P \text{~ou~} Q) & \iff \neg P \text {~et~} \neg Q; \\
+  \neg(P \implies Q) & \iff P \text {~et~} \neg Q.
+\end{align}
+Le raisonnement par contraposée repose sur l'équivalence logique
+\begin{equation}
+  (P \implies Q) \iff (\neg Q \implies \neg P).
+\end{equation}
+Le raisonnement par l'absurde est le suivant~: pour montrer que $P \implies Q$, on suppose que $P$ est vraie et que $Q$ est fausse puis on montre que cela aboutit à une contradiction. Cela repose sur l'équivalence logique
+\begin{equation}
+  (P \implies Q) \iff \neg(P \text {~et~} \neg Q).
+\end{equation}
+%
+\section{Quantificateurs et leurs négations}
+\label{chap0sec:quantificateursetnegation}
+L'expression mathématique ``$\forall x \in E$'' se lit ``quelque soit l'élément $x$ de E'' ou encore ``pour tout élément $x$ de E''. L'expression mathématique ``$\exists x \in E$'' se lit ``il existe un élément $x$ de E'', au moins un. ``$\forall x \in E \ P(x)$'' signifie que pour tout élément pris dans E, la propriété P est vraie. ``$\exists x \in E \ P(x)$'' signifie qu'il existe au moins un élément de E pour lequel P est vérifiée.
+
+Les négations des quantificateurs sont les suivantes~:
+\begin{align}
+  \neg(\forall x \in E \quad P(x)) &\iff \exists x \in E \quad \neg P(x); \\
+  \neg(\exists x \in E \quad P(x)) &\iff \forall x \in E \quad \neg P(x).
+\end{align}
+La variable $x$ est dite muette.
+

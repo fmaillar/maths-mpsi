@@ -1,0 +1,263 @@
+\chapter{Étude métrique des courbes planes}
+\label{chap:etudemetriquedescourbesplanes}
+\minitoc
+\minilof
+\minilot
+
+On travaille dans $\R^2$ muni de sa structure canonique d'espace vectoriel orienté et de sa base canonique. Soit $I$ un intervalle réel et $k \in \N^* \cup\{+\infty\}$.
+
+\section{Modes de définitions des courbes planes}
+
+\subsection{Représentation paramétrique et cartésiennes}
+
+Soit $\varphi \in \classe{k}(I, \R)$. La courbe définie par l'équation cartésienne $y=\varphi(x)$ peut être représentée paramétriquement par $\fonction{f}{I}{\R^2}{t}{(t, \varphi(t))}$. L'arc $(I, f)$ ainsi défini est de classe $\classe{k}$. De plus, c'est un arc régulier car pour tout $t \in I$, $f'(t)=(1, \varphi'(t))$ qui n'est jamais nul.
+
+De même, si $\psi \in \classe{k}(I, \R)$, la courbe $\Gamma$ d'équation cartésienne $x=\psi(y)$ peut être paramétrée par $\fonction{g}{I}{\R^2}{t}{(\psi(t), t)}$. La courbe est régulière parce que pour tout $t \in I$, $g'(t) \neq (0, 0)$. 
+
+Toute représentation cartésienne admet une représentation paramétrique. Pourtant une courbe définie par une représentation paramétrique peut ne pas forcément s'écrire à l'aide d'une équation cartésienne de la forme $y=\varphi(x)$ ou $x=\psi(y)$ ---~un contre-exemple pertinent est le cercle. Sous certaines conditions, on peut trouver au moins localement une équation cartésienne de ce type pour certaines courbes paramétrées ---~théorème des fonctions implicites.
+
+\subsection{Représentation cartésiennes et polaires}
+
+Soient $\rho$ et $\theta$ deux applications de $I$ vers $\R$ de classe $\classe{k}$. On peut définir un arc $(I, f)$ par $\fonction{f}{I}{\R^2}{t}{\rho(t)\vect{u_{\theta(t)}}}$.
+
+Réciproquement, soit $f$ de $I$ vers $\R^2$ une fonction de classe $\classe{k}$ qui  ne s'annule pas sur $I$. On pose $\fonction{\rho}{I}{\R}{t}{\sqrt{f_1^2(t)+f_2^2(t)}}$, où $f=(f_1, f_2)$, et on voit qu'elle est de classe $\classe{k}$ (car $f_1$ et $f_2$ le sont) et demeure strictement positive. 
+
+On pose $g=f/\rho$, alors $g$ est de classe $\classe{k}$ et $\norme{g}=1$. En appliquant le théorème du relévement~: il existe une fonction $\theta$ de $I$ vers $\R$ de classe $\classe{k}$ telle que $g=\e^{\ii \theta}$, donc $f=\rho \e^{\ii \theta}$.
+
+\subsection{Paramétrage admissible}
+
+\begin{defdef}
+  Soient $(I, f)$ et $(J, g)$ deux arcs paramétrés de classe $\classe{k}$. On dit que $(J, g)$ est un paramétrage admissible de classe $\classe{k}$ de l'arc $(I, f)$ s'il existe une bijection $\varphi$ de $I$ vers $J$ de classe $\classe{k}$ telle que $\varphi^{-1}$ est aussi de classe $\classe{k}$ vérifiant $f=g \circ \varphi$.
+
+L'application $\varphi$ est appelée changement de paramétrage admissible de classe $\classe{k}$.
+\end{defdef}
+
+\emph{Remarque~:} Une telle application $\varphi$ est un $\classe{k}$-difféomorphisme.
+
+\begin{prop}
+  Soit $\varphi$ de $I$ vers $J$ un changement de paramétrage admissible de classe $\classe{k}$, alors $\varphi$ est strictement monotone.
+\end{prop}
+\begin{proof}
+$\varphi$ et $\varphi^{-1}$ sont de classe $\classe{1}$ donc $\varphi$ est dérivable et $\varphi'$ ne s'annule pas ---~car $\varphi^{-1}$ est dérivable. De plus $\varphi'$ est continue, et comme elle ne s'annule pas alors elle est de signe constant strictement.
+\end{proof}
+
+\emph{Conséquence~:} Les arcs $(I, f)$ et $(J, g)$ ont le même support. Lorsque l'application changement de paramétrage $\varphi$ est strictement croissante, les courbes sont parcourues dans le même sens.
+
+\begin{defdef}
+  Orienter un arc paramétrer revient à choisir un des paramétrages et à ne travailler qu'avec des paramétrages de même sens, c'est-à-dire obtenus avec des changements de paramétrages admissibles strictement croissants.
+\end{defdef}
+
+\emph{Remarque~:} On peut montrer que les points singuliers, réguliers et biréguliers sont invariants par changement de paramétrage admissibles de classe $\classe{k}$.
+
+\section{Repére de Frenet}
+
+Soit $(I, f)$ un arc paramétré régulier de classe $\classe{k}$ et orienté.
+
+\subsection{Vecteur unitaire tangent}
+
+\begin{defdef}
+  Pour tout $t_0 \in I$, on pose $\vect{T}(t_0) = \frac{\vect{f'(t_0)}}{\norme{\vect{f'(t_0)}}}$. C'est le vecteur unitaire tangent à l'arc $(I, f)$ à la date $t_0$.
+\end{defdef}
+
+\emph{Remarque}~: $\vect{T}(t_0)$ est bien défini car $f$ est de classe $\classe{1}$ donc $\vect{f'(t_0)}$ existe. De plus l'arc est régulier donc $\vect{T}(t_0)\neq \vect{0}$.
+
+On peut aussi écrire $\vect{T}(t_0) = \lim\limits_{t \to t_0} \frac{\vect{f(t)}-\vect{f(t_0)}}{\norme{\vect{f(t)}-\vect{f(t_0)}}}$. Le vecteur $\vect{T}(t_0)$ est un vecteur unitaire qui dirige la tangente à la courbe en $M(t_0)$. Il est invariant par changement de paramétrage admissible de même orientation ($\varphi$ strictement croissante) et changé en son opposé par un changement de paramétrage admissible d'orientation contraire ($\varphi$ strictement décroissante). L'application $\fonction{\vect{T}}{I}{\R^2}{t_0}{\vect{T}(t_0)}$ est de classe $\classe{k}$, car $f$ est de classe $\classe{k}$ et $f'$ ne s'annule pas.
+
+\subsection{Vecteur normal unitaire}
+
+\begin{defdef}
+  Pour tout $t_0 \in I$, on appelle vecteur normal à l'arc $(I, f)$ à la date $t_0$ l'unique vecteur $\vect{N}{t_0}$ tel que $(\vect{T}(t_0), \vect{N}(t_0))$ soit une base orthonormale directe de $\R^2$. Autrement dit $\vect{N}(t_0)$ est l'image de $\vect{T}(t_0)$ par la rotation vectorielle d'angle $\frac{\pi}{2}$ et de centre $M(t_0)$.
+\end{defdef}
+
+\emph{Remarque}~: $\vect{N}(t_0)$ est invariant par changement de paramétrage admissible de même orientation ($\varphi$ strictement croissante) et changé en son opposé par un changement de paramétrage admissible d'orientation contraire ($\varphi$ strictement décroissante).
+
+\subsection{Repère de Frenet}
+
+\begin{defdef}
+  On appelle repère de Frenet à la date $t_0$ le repère orthonormal direct $(M(t_0), \vect{T}(t_0), \vect{N}(t_0))$. Par abus de notation on appelle parfois repére de Frenet la base orthonormale directe $(\vect{T}(t_0), \vect{N}(t_0))$.
+\end{defdef}
+
+\section{Abcisse curviligne}
+
+\subsection{Définition}
+
+\begin{defdef}
+  Soit $(I, f)$ un arc paramétré de classe $\classe{k}$ régulier. On appelle abcisse curviligne toute application $s \in \R^I$ telle quepour tout $t \in I$, on a $s'(t)=\norme{f'(t)}$.
+\end{defdef}
+
+Par hypothèse, l'application $f'$ est continue et ne s'annule pas. Alors la fonction $s'$ est continue strictement positive. Les abcisses curvilignes sont de la forme
+\begin{equation}
+  \fonction{s}{I}{\R}{t}{s_0 + \int_{t_0}^t \norme{f'(u)}\diff u \quad (s_0, t_0) \in \R \times I}.
+\end{equation}
+Si $s_0=0$, on dira que l'origine des dates est prise en $t_0$. Les abcisses curvilignes différent d'une constantes. On en déduit que pour toutes dates $t_1$ et $t_2$ on a
+\begin{equation}
+  s(t_2)-s(t_1) = \int_{t_1}^{t_2} \norme{f'(t)}\diff t.
+\end{equation}
+
+\subsection{Propriétés}
+
+\begin{theo}
+  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s \in \R^I$ une abcisse curviligne de $(I, f)$. Alors $s$ induit un changement de paramétrage admissible de classe $\classe{k}$ strictement croissant.
+\end{theo}
+\begin{proof}
+  Soit $J=s(I)$. Par définition, $s$ est dérivable et pour tout instant $t \in I$, on a $s'(t)=\norme{f'(t)}>0$. La fonction $s$ est continue, strictement croissante et $I$ sur $J$. Donc $s$ induit une bijection de $I$ sur $J$. La fonction $s$ est de classe $\classe{k}$ et comme $s'$ ne s'annule pas, $s^{-1}$ est aussi de classe $\classe{k}$. Finalement $s$ est un changement de paramétrage admissible strictement croissant.
+\end{proof}
+
+\begin{corth}
+  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s$ une abcisse curviligne de l'arc $(I,f)$. Alors $(s(I), f\circ s^{-1})$ définit un paramétrage admissible de classe $\classe{k}$ de $(I, f)$ de même orientation. 
+
+Ce paramétrage s'appelle paramétrage par l'abcisse curviligne.
+\end{corth}
+
+\subsection{Formulaire}
+
+On déduit des calculs d'abcisses curvilignes effectués précedemment les formules suivantes.
+\begin{itemize}
+\item Si l'arc est régulier et représenté paramétriquement par $(I, f)$ avec $f=(x,y)$ où $x$ et $y$ sont des fonctions au moins de classe $\classe{1}$, alors pour tout $a$ et $b$ dans $I$, on a $\ell(\intervalleff{a}{b},f)=\int_a^b\sqrt{x'(t)^2+y'(t)^2}\diff t$.
+\item En particulier si la courbe est définie par une équation cartésienne de la forme $y=\varphi(x)$ avec $\varphi$ une fonction de classe $\classe{1}$ (au moins), alors pour tout $a$ et $b$ dans $I$, on a $\ell(\intervalleff{a}{b},f)=\int_a^b\sqrt{1+\varphi'(t)^2}\diff t$.
+\item Si la courbe est représentée paramétriquement par $\vect{f}(t)=\rho(t)\vect{u_{\theta(t)}}$ avec $\rho$ et $\theta$ des fonctions de classe $\classe{1}$ (au moins), alors pour tout $a$ et $b$ dans $I$, on a $\ell(\intervalleff{a}{b},f)=\int_a^b\sqrt{\rho'(t)^2+\rho(t)^2\theta'(t)^2}\diff t$.
+\item En particulier si la courbe est définie par une équation polaire $r=\rho(\theta)$ avec $\rho$ une fonction de classe $\classe{1}$ (au moins), alors pour tout $\theta_1$ et $\theta_2$ dans $I$, on a $\ell(\intervalleff{\theta_1}{\theta_2})=\int_{\theta_1}^{\theta_2}\sqrt{\rho'(\theta)^2+\rho(\theta)^2}\diff \theta$.
+\end{itemize}
+
+\section{Courbure}
+
+On se place dans le plan $\R^2$ muni de la base orthonormée directe $(\vi, \vj)$. Soit $I$ un intervalle réel et $(I,f)$ un arc paramétré de classe $\classe{k}$ ($k>1$) supposé régulier et orienté. 
+
+On dispose d'une application abcisse curviligne $s$ qui induit un changement de paramétrage admissible de classe $\classe{k}$ de $I$ vers $J=s(I)$, dont on note $\varphi$ la bijection réciproque.
+
+L'arc $(J, g)$ avec $g=f \circ \varphi$ est un paramétrage admissible de $(I,f)$ qui à la même orientation et qui est normal.
+
+\subsection{Application angulaire $\alpha$}
+
+\begin{prop}
+  Il existe une application $\alpha \in \classe{k-1}(I, \R)$ telle que pour tout réel $t \in I$, on a
+  \begin{equation}
+    \vect{T}(t) = \vect{u_{\alpha(t)}} = \cos(\alpha(t)) \vi + \sin(\alpha(t)) \vj,
+  \end{equation}
+  où $\vect{T}(t)$ est le vecteur unitaire tangent à la courbe à l'instant $t$. L'application $\alpha$ est l'application angualaire.
+\end{prop}
+\begin{proof}
+  Pour tout $t \in I$, on a $\norme{\vect{T}(t)}=1$. L'application $\fonction{\vect{T}}{I}{\R^2}{t}{\vect{T}(t)}$ est de classe $\classe{k-1}$ et par application du théorème du relévement, il existe une application $\alpha \in \classe{k-1}(I, \R)$ telle que pour tout réel $t \in I$, on a
+  \begin{equation}
+    \vect{T}(t) = \vect{u_{\alpha(t)}} = \cos(\alpha(t)) \vi + \sin(\alpha(t)) \vj.
+  \end{equation}
+\end{proof}
+
+L'application $\alpha$ représente une mesure d'angle de la rotation qui transforme $\vi$ en $\vect{T}(t)$.
+
+\emph{Conséquence}~: Pour tout réel $t \in I$, notons $\vect{N}(t)$ le vecteur normal unitaire tel que $(\vect{T}(t), \vect{N}(t))$ soit une base orthonormée directe. Alors 
+\begin{equation}
+  \vect{T}(t) = \vect{v_{\alpha(t)}} = -\sin(\alpha(t)) \vi + \cos(\alpha(t)) \vj.
+\end{equation}
+
+\subsection{Formulaire}
+
+Si l'arc est défini paramétriquement par $(I,f)$ avec $f=(x,y)$, $x$ et $y$ des fonctions de classe $\classe{k}$ alors pour tout $t \in I$, on a
+\begin{align}
+  \vect{T}(t) &= \vect{f'(t)}{s'(t)} = \frac{x'(t)\vi+y'(t)\vj}{\sqrt{x'(t)^2+y'(t)^2}} \\
+  \vect{N}(t) &= \frac{-y'(t)\vi+x'(t)\vj}{\sqrt{x'(t)^2+y'(t)^2}}.
+\end{align}
+Ainsi
+\begin{equation}
+  \cos(\alpha(t)) = \frac{x'(t)}{s'(t)} \quad \sin(\alpha(t)) = \frac{y'(t)}{s'(t)}.
+\end{equation}
+
+Si l'arc, supposé réguleir, est défini par une équation polaire $r=\rho(\theta)$ avec $\rho$ une application de classe $\classe{1}$ alors pour tout $\theta \in I$
+\begin{align}
+  \vect{T}(t) &= \vect{f'(t)}{s'(t)} = \frac{\rho'(\theta)\vu_\theta+\rho(\theta)\vv_\theta}{\sqrt{\rho'(\theta)^2+\rho(\theta)^2}} \\
+  \vect{N}(t) &= \frac{-\rho(\theta)\vv_\theta+\rho'(\theta)\vu_\theta}{\sqrt{\rho'(\theta)^2+\rho(\theta)^2}}.
+\end{align}
+En pratique, pour déterminer $\alpha(\theta)$ on commence par trouver l'angle entre $\vu_\theta$ et $\vect{T}$.
+
+\subsection{Courbure}
+
+\subsubsection{Définition}
+
+On appelle courbure de l'arc $(I, f)$ l'application $\gamma : J=s(I) \longrightarrow \R$ définie par $\gamma=\derived{\alpha}{s}$. Plusprécisément, on dispose de~:
+\begin{itemize}
+\item $\alpha \in \classe{k-1}(I, \R)$ ;
+\item $\fonction{s}{I}{J}{t}{s}$;
+\item $\fonction{\varphi}{J}{I}{s}{t}$.
+\end{itemize}
+
+Soit $t \in I$, alors $t=\varphi(s)$ et $\vect{f}(t) = \vect{g}(s)$. Ainsi $\alpha(t) = \alpha \circ \varphi(s)$. L'application $\alpha \circ \varphi$ est au moins de classe $\classe{k-1}$.
+
+On définit $\gamma=(\alpha \circ \varphi)'$. Pour tout $s \in J$, on a
+\begin{align}
+  \gamma(s) &=(\alpha \circ \varphi)'(s) \\
+  &=\varphi'(s) \alpha'(\varphi(s))\\
+  &=\frac{1}{s'(\varphi(s))} \alpha'(\varphi(s))\\
+  &=\frac{\alpha'(t)}{s'(t)}.
+\end{align}
+
+Pour tout $s \in J$, on a $t=\varphi(s)$ alors
+\begin{align}
+  \vect{g}(s) &= \vect{f}(t) = \vect{f \circ \varphi}(s) \\
+  \vect{g'}(s) &= \varphi'(s) \vect{f' \circ \varphi}(s) \\
+  &=\frac{1}{s'(t)} f'(t) =\vect{T}(t).
+\end{align}
+De plus $\vect{T}(t) = \vu_{\alpha\circ \varphi(s)}$, donc $\vect{g''}(s)=\gamma(s) \vv_{\alpha\circ \varphi(s)}=\gamma(s) \vv_{\alpha(t)}$. Au final $\vect{g''}(s)=\gamma(s) \vect{N}(t)$.
+
+On remarque que $\gamma(s)=\Det(\vect{g'}(s), \vect{g''}(s))$.
+
+\subsubsection{Points biréguliers}
+
+\begin{prop}
+  Le point $M(t)$ de l'axe $(I, \vect{f})$ est birrégulier si et seulement si $\gamma(s)\neq 0$ (avec $t=\varphi(s)$).
+\end{prop}
+\begin{proof}
+  \begin{align}
+    M(t) \text{~est birrégulier} &\iff (\vect{f'}(t), \vect{f''}(t)) \text{~est libre}\\
+    &\iff (\vect{g'}(s), \vect{g''}(s)) \text{~est libre}\\
+    &\iff \gamma(s)=\Det(\vect{g'}(s), \vect{g''}(s)) \neq 0.
+  \end{align}
+\end{proof}
+
+\emph{Remarque}~: À quoi ressemble un arc dont la courbure est nulle ? C'est un arc inclus dans une droite.
+
+\begin{defdef}
+  Si l'arc $(I,f)$ est birrégulier, on défini pour tout $t \in I$ le rayon de courbure à la date $t$ par $R(t) = \frac{1}{\gamma(s)}$ avec $t=\varphi(s)$.
+\end{defdef}
+
+\emph{Remarque}~: La définition est légitime car en un point birrégulier la courbure est non nulle.
+
+\begin{defdef}
+  Si l'arc $(I,f)$ est birrégulier, on définit le centre de courbure à la date $t$ comme étant le point $I$ tel que
+  \begin{equation}
+    \vect{M(t)I} = R \vect{N}(t).
+  \end{equation}
+\end{defdef}
+L'ensemble des centres de courbures de l'arc $(I, f)$ s'appelle la développée de l'arc $(I, f)$.
+
+\subsubsection{Formules de Frenet}
+
+Soient $s \in J$ et $t \in I$ tels que $t=\varphi(s)$ et $f(t)=g(s)$. Alors
+\begin{align}
+  \derived{\vect{T}}{s} = \gamma(s) \vect{N} \\
+  \derived{\vect{N}}{s} = -\gamma(s)\vect{T}=-\frac{\vect{T}}{R}.
+\end{align}
+
+\subsection{Application écart angulaire}
+
+On dispose de $\alpha \in \classe{k-1}(I, \R)$. On a défini la courbure par
+\begin{equation}
+  \forall s \in J \quad \gamma(s) = (\alpha \circ \varphi)'(s) ) \varphi'(s)\alpha'(t).
+\end{equation}
+
+Si on suppose que l'arc est birrégulier, la courbure ne s'annule pas ; la dérivée de $\alpha$ ne s'annule pas. $\alpha'$ est donc de signe constant et continue. Ainsi $\alpha$ induit une bijection de $I$ vers $K=\alpha(I)$. De plus $\alpha^{-1}$ est dérivable et est de classe $\classe{k-1}$. 
+
+Au final $\alpha$ induit un changement de paramétrages admissible de classe $\classe{k-1}$. Les formules de Frenet deviennent~:
+\begin{equation}
+  \derived{\vect{T}}{\alpha}=\vect{N} \qquad \derived{\vect{N}}{\alpha}=-\vect{T}.
+\end{equation}
+
+\subsection{Accélération et vitesse dans le repère de Frenet}
+
+Si $\vect{OM}(t)$ représente la position d'un point mobile à l'instant $t$, alors (en notant$v=\derived{s}{t}$) la vitesse vaut
+\begin{equation}
+  \derived{\vect{OM}}{t} = v \vect{T},
+\end{equation}
+et l'accélération vaut
+\begin{equation}
+  \deriveds{\vect{OM}}{t} = \derived{v}{t} \vect{T} + \frac{v^2}{R} \vect{N}.
+\end{equation}

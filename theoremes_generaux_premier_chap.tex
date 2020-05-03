@@ -1,0 +1,49 @@
+\chapter{Trois théorèmes généraux d'analyse pour aborder l'étude des fonctions usuelles}
+\label{chap:theogen}
+Les résultats énoncés ici seront démontrés plus tard dans l'année, mais servent pour létude des fonctions usuelles. Soient I un intervalle réel contenant au moins deux points et une application $f \in \R^I$.
+%
+\section{Existence de primitives}
+%
+\begin{defdef}
+  On appelle primitive de l'application $f$ sur I une application $F \in \R^I$ dérivable sur I telle que
+  \begin{equation}
+    \forall x \in I \quad F'(x)=f(x).
+  \end{equation}
+\end{defdef}
+\begin{theo}
+  Toute application continue sur l'intervalle I admet des primitives sur I. Plus précisèment, quelque soit $a \in I$, si $f$ est continue sur I alors elle admet une unique primitive $F$ qui s'annule en $a$ et $F$ est définie par
+  \begin{equation}
+    \forall x \in I \quad F(x)=\int_{a}^x f(t) \D t.
+  \end{equation}
+\end{theo}
+Les autres primitives de $f$ sur I sont les applications $F+c$ avec $c$ une application constante de I vers $\R$.
+%
+\section{Monotonie et bijectivité}
+%
+\begin{defdef}
+  L'application $f$ est dite strictement monotone sur I si elle y est strictement croissante ou strictement décroissante
+\end{defdef}
+\begin{defdef}
+  Soit J une partie de $\R$. On dit que l'application $f$ induit une bijection de I sur J si tout élément de J admet un unique antécédent par $f$ dans I. On définit alors l'application réciproque $f^{-1} \in I^J$ qui a tout élément $y \in J$ associe l'unique élément $x \in I$ tel que $y=f(x)$.
+\end{defdef}
+\begin{theo}
+  Si $f$ est une application continue est strictement monotone de I vers $\R$, alors
+  \begin{itemize}
+  \item $f(I)=\enstq{f(x)}{x \in I}$ est un intervalle de $\R$;
+  \item $f$ induit une bijection de I vers $f(I)$;
+  \item l'application réciproque $f^{-1}$ est une application continue et strictement monotone de $f(I)$ vers $\R$ et de plus elle est de même monotonie que $f$.
+  \end{itemize}
+\end{theo}
+%
+\section{Dérivation de l'application réciproque}
+%
+\begin{theo}
+  Si l'application $f$ est continue et strictement monotone sur l'intervalle I et si de plus elle est dérivable en tout point de I, alors pour tout $y \in f(I)$
+  \begin{itemize}
+  \item si $f'(f^{-1}(y)) \neq 0$, alors $f^{-1}$ est dérivable en $y$ et
+    \begin{equation}
+      \left(f^{-1} \right)'(y)=\frac{1}{f'\left(f^{-1}(y)\right)};
+    \end{equation}
+  \item si $f'(f^{-1}(y)) = 0$, alors $f^{-1}$ n'est pas dérivable en $y$. Graphiquement, la courbe représentative admet une tangente verticale au point de coordonnées $(y,f^{-1}(y))$.
+  \end{itemize}
+\end{theo}

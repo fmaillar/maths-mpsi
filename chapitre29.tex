@@ -1,0 +1,758 @@
+\chapter{Fonctions de deux variables réelles}
+\label{chap:fonctions2variables}
+\minitoc
+\minilof
+\minilot
+
+\section{Espace $\R^2$ -- Normes}
+
+\subsection{Normes}
+
+\subsubsection{Définition}
+
+\begin{defdef}
+  Soit $E$ un espace vectoriel réel. On appelle norme sur $E$ toute application $N : E \to \R$ qui vérifie les quatre points suivants~:
+  \begin{enumerate}
+  \item Positivité~: pour tout $x \in E$, $N(x)\geq 0$;
+  \item Séparation~: pour tout $x \in E$, $N(x)=0$ si et seulement $x=0$;
+  \item Homogénéité~: pour tout $x \in E$ et tout $\lambda \in \R$, $N(\lambda x)=\abs{\lambda}N(x)$;
+  \item Inégalité triangulaire~: pour tout $(x, y) \in E^2$, $N(x+y) \leq N(x) + N(y)$.
+  \end{enumerate}
+\end{defdef}
+
+\emph{Exemples}~: La valeur absolue est une norme sur $\R$. L'application $N : f \longmapsto \sup\limits_{\intervalleff{a}{b}} \abs{f}$ est une norme sur le $\R$-espace vectoriel $\cont{\intervalle{a}{b}, \R}$.
+
+\begin{defdef}
+  Si $N$ est une norme sur l'espace vectoriel réel $E$, $(E, N)$ est appelé espace vectoriel normé.
+\end{defdef}
+
+\subsubsection{Norme usuelle sur $\R^2$}
+
+\begin{prop}
+  Si pour tout $x =(x_1, x_2) \in \R^2$ on pose $\norme{x}_2 = \sqrt{x_1^2+ x_2^2}$ et $\norme{x}_{\infty}(x)=\max(\abs{x_1}, \abs{x_2})$, alors $\norme{}_2$ et $\norme{}_\infty$ sont des normes sur $\R^2$.
+\end{prop}
+\begin{proof}
+  On sait déjà que $\norme{}_2$ est une norme, puisque c'est la norme euclidienne associée au produit scalaire sur $\R^2$. Pour $\norme{}_\infty$, la positivité, la séparation, l'homogénéité sont faciles à démontrer. Pour montrer l'inégalité triangulaire il suffit de remarquer~:
+  \begin{align}
+    \abs{x_1+x_2} \leq \abs{x_1}+\abs{x_2} \leq \norme{x}_\infty + \norme{y}_\infty, \\
+    \abs{y_1+y_2} \leq \abs{y_1}+\abs{y_2} \leq \norme{x}_\infty + \norme{y}_\infty,
+  \end{align}
+  alors $\norme{x+y}_\infty = \max(\abs{x_1+x_2}, \abs{y_1+y_2}) \leq \norme{x}_\infty + \norme{y}_\infty$.
+\end{proof}
+
+\subsubsection{Normes équivalentes}
+
+\begin{defdef}
+  Soient $N_1$ et $N_2$ deux normes sur le même $\R$-espace vectoriel $E$. On dit que $N_1$ et $N_2$ sont équivalentes s'il existe deux réels $\alpha$ et $\beta$ strictements positifs tels que pour tout $x \in E$ on a
+  \begin{equation}
+    \alpha N_1(x) \leq N_2(x) \neq \beta N_1(x).
+  \end{equation}  
+\end{defdef}
+La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de $E$ est une relation réflexive, symétrique et transitive~: c'est donc une véritable relation d'équivalence.
+%
+\begin{prop}
+  Les normes $\norme{}_2$ et $\norme{}_\infty$ sur le $\R$-espace vectoriel $\R^2$ sont équivalentes~:
+  \begin{equation}
+    \forall x \in \R^2 \quad \norme{x}_\infty \leq \norme{x}_2 \leq \sqrt{2}\norme{x}_\infty.
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Soit $x=(x_1, x_2) \in \R^2$, on a
+  \begin{equation}
+    0 \leq \norme{x}_2^2 = x_1^2+x_2^2 \leq 2\norme{x}_\infty.
+  \end{equation}
+  Alors
+  \begin{equation}
+    \norme{x}_2 \leq \sqrt{2} \norme{x}_\infty,
+  \end{equation}
+  et comme $\abs{x_1} \leq \sqrt{x_1^2 + x_2^2}$, $\abs{x_2} \leq \sqrt{x_1^2 + x_2^2}$ on a bien $\norme{x}_\infty \leq \norme{x}_2$.
+\end{proof}
+
+\emph{Remarque~:} On peut montrer que toutes les normes d'un espace vectoriel \emph{de dimension finie} sont équivalentes.
+
+\subsection{Parties bornées}
+
+\begin{defdef}
+  Soit $(E, N)$ un espace vectoriel normé. Soit $a \in E$ et $r \in \Rplusetoile$. On appelle
+  \begin{enumerate}
+  \item boule fermée de centre $a$ et de rayon $r$ l'ensemble
+    \begin{equation}
+      \Bbar{a}{r}{} = \enstq{x\in E}{N(x-a) \leq r};
+    \end{equation}
+  \item boule ouverte de centre $a$ et de rayon $r$ l'ensemble
+    \begin{equation}
+      B(a, r) = \enstq{x\in E}{N(x-a) < r};
+    \end{equation}
+  \item sphére de centre $a$ et de rayon $r$ l'ensemble
+    \begin{equation}
+      S(a, r) = \enstq{x\in E}{N(x-a) = r}.
+    \end{equation}    
+  \end{enumerate}
+\end{defdef}
+%
+\begin{theo}
+  Soient $N_1$ et $N_2$ deux normes équivalentes sur un même $\R$-espace vectoriel $E$. Il existe alors des réels strictement positif $\lambda$ et $\mu$ tels que pour tout $x \in E$ on ait
+  \begin{equation}
+    \lambda N_1(x) \leq \N_2(x) \leq \mu N_1(x).
+  \end{equation}
+  Alors
+  \begin{equation}
+    \forall (a, r) \in E \times \Rplusetoile \quad \Bbar{a}{\frac{r}{\mu}}{1} \leq \Bbar{a}{r}{2} \leq \Bbar{a}{\frac{r}{\lambda}}{1},
+  \end{equation}
+  où $\bar{B_1}$ ($\bar{B_2}$) désigne la boule fermé au sens de $N_1$ ($N_2$).
+\end{theo}
+\begin{proof}
+  Soit $x \in E$. Si $x \in \Bbar{a}{\frac{r}{\mu}}{1}$, alors $N_1(x-a) \leq \frac{r}{\mu}$, d'où
+  \begin{equation}
+    N_2(x-a) \leq \mu N_1(x-a) \leq \mu \frac{r}{\mu}=r.
+  \end{equation}
+  Donc $x \in \Bbar{a}{r}{2}$.
+
+  Si $x \in \Bbar{a}{r}{2}$ alors $N_2(x-a) \leq r$ et alors $N_1(x-a) \leq \frac{1}{\lambda} N_2(x-a) \leq \frac{r}{\lambda}$. Alors $x \in \Bbar{a}{\frac{r}{\lambda}}{1}$.
+\end{proof}
+
+Cela signifie que si $N_1$ et $N_2$ sont équivalentes, alors toute boule pour $N_2$ est incluse dans une boule pour $N_1$, et contient une boule pour $N_1$.
+
+\begin{defdef}
+  Soit $(E, N)$ un espace vectoriel normé. Soit $A \in \P(E)$, on dit que $A$ est une partie bornée de $E$ (pour la norme $N$) lorsqu'il existe $M \in \Rplus$ tel que pour tout $x \in A$ on a $N(x) \leq M$.
+\end{defdef}
+\begin{defdef}[Définition équivalente]
+  Soit $A \in \P(E)$, alors
+  \begin{equation}
+    A \text{~est une partie bornée de~} E \iff \exists a \in E \ \exists r \in \Rplusetoile \quad A \subset \Bbar{a}{r}{}.
+  \end{equation}
+\end{defdef}
+\begin{proof}
+  $\implies$ Pour tout $x \in A$, $N(x) \leq M$ donc $N(x-0) \leq M+1$. Ainsi $x \in \Bbar{0}{M+1}{}$.
+
+  $\impliedby$ Pour tout $x \in A$, $N(x-a) \leq r$, alors $N(x) \leq N(x-a)+N(a) \leq r+N(a)=M$.
+\end{proof}
+\begin{prop}
+  Si $N_1$ et $N_2$ sont deux normes équivalentes sur le $\R$-espace vectoriel normée $E$, alors les parties bornées de $(E, N_1)$ sont les parties bornées de $(E, N_2)$.
+\end{prop}
+\begin{proof}
+  Soit $A \in \P(E)$ une partie bornée au sens de $N_1$. Alors il existe une boule fermée pour $N_1$ qui contient $A$. Les normes $N_1$ et $N_2$ sont équivalentes, alors cette boule fermé pour $N_1$ est incluse dans une autre boule fermée pour $N_2$. Donc $A$ est contenue dans une boule fermée pour $N_2$. Ainsi $A$ est une partie bornée pour $N_2$. On peut interchanger les rôles de $N_1$ et $N_2$.
+\end{proof}
+
+\emph{Propriétés}~:
+\begin{itemize}
+\item L'intesection de deux parties bornées de $E$ est une partie partie bornée de $E$;
+\item l'union de deux parties bornées de $E$ est une partie partie bornée de $E$.
+\end{itemize}
+
+\subsection{Voisinages et parties ouvertes}
+
+Soit $(E, \norme{.})$ un espace vectoriel normé.
+
+\subsubsection{Voisinages}
+
+\begin{defdef}
+  Soit $a \in E$ et $\Vvois \in \P(E)$. On dit que $\Vvois$ est un voisinage de $a$ de $E$ s'il existe un $r \in \Rplusetoile$ tel que $B(a, r) \subset \Vvois$.
+\end{defdef}
+
+\emph{Propriétés}~:
+\begin{itemize}
+\item Toute partie de $E$ contenant un voisinage de $a \in E$ est encore un voisinage de $a$;
+\item l'ensemble des voisinages d'un point $a \in E$ est stable par intersection \emph{finie} et réunion quelconque.
+\end{itemize}
+
+Soit pour tout naturel $n$, $I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}$, alors $\bigcap_{n \in \N} I_n =\{0\}$. Pour tout naturel $n$, $I_n$ est un voisinage de zéro mais pas l'intersection.
+
+\emph{Remarque}~: On peut montrer que si $N_1$ et $N_2$ sont deux normes équivalentes de $E$, alors les voisinages de $a$ de $(E, N_1)$ et les voisinages de $a$ de $(E, N_2)$ sont les mêmes.
+
+\subsubsection{Parties ouvertes}
+
+\begin{defdef}
+ Soit $\Oouvert \in \P(E)$. On dit que $\theta$ est une partie ouverte de $E$ si et seulement s'il est voisinage de chacun de ses points. 
+
+  Autrement dit~: Soit $\Oouvert \in \P(E)$,
+  \begin{equation}
+    \Oouvert \text{~est ouvert} \iff \forall a \in \Oouvert \ \exists r \in \Rplusetoile \quad B(a, r) \subset \Oouvert.
+  \end{equation}
+  On note $\Oouvert(E)$ l'ensemble des ouverts de $E$.
+\end{defdef}
+\begin{prop}
+  \begin{enumerate}
+  \item $E \in \Oouvert(E)$;
+  \item $\emptyset \in \Oouvert(E)$;
+  \item $\Oouvert(E)$ est stable par intersection finie;
+  \item $\Oouvert(E)$ est stable par union quelconque.
+  \end{enumerate}
+\end{prop}
+%
+\begin{prop}[Admise]
+  Si $N_1$ et $N_2$ sont des normes équivalentes sur $E$, les ouverts de $(E, N_1)$ sont les mêmes que $(E, N_2)$.
+\end{prop}
+
+\emph{Exemples usuels~:}
+\begin{enumerate}
+\item Dans $\R$, les intervalles $\intervalleoo{a}{b}$ sont des ouverts;
+\item dans $\R^2$, les rectangles $\intervalleoo{a}{b}\times\intervalleoo{c}{d}$ sont des ouverts;
+\item toute boule ouverte d'un espace vectoriel normé est un ouvert.
+\end{enumerate}
+
+\subsection{Parties fermées -- Points adhérents}
+
+\begin{defdef}
+  On appelle fermé ou partie fermée de l'espace vectoriel normé $(E, N)$ toute partie $F$ de $E$ dont le complémentaire dans $E$ est un ouvert.
+
+  On note $\F(E)$ l'ensemble des fermés de $E$. On a donc
+  \begin{equation}
+    \forall F \in \P(E) \quad F \in \F(E) \iff E\setminus F \in \Oouvert(E).
+  \end{equation}
+\end{defdef}
+\begin{prop}
+  \begin{enumerate}
+  \item $\emptyset \in \F(E)$;
+  \item $E \in \F(E)$;
+  \item $\F(E)$ est stable par intersection quelconque et par union finie.
+  \end{enumerate}
+\end{prop}
+%
+\emph{Exemples}~: Les singletons et même toutes les parties finies de $E$ sont des fermés.
+%
+\begin{defdef}
+  Soit $A \in \P(E)$ et $x \in E$. On dit que le point $x$ est adhérent à la partie $A$ si et seulement si
+  \begin{equation}
+    \forall \epsilon>0 \ \exists a \in A \quad N(x-a) \leq \epsilon.
+  \end{equation}
+\end{defdef}
+\emph{Remarque~:} Soit $A \in \P(E)$, alors tous les points de $A$ sont adhérents à $A$.
+\begin{defdef}[Définition équivalente]
+  Soit $x \in E$. $x$ est adhérant à $A$ si et seulement si pour tout $\epsilon>0$, $A \cap B(x, \epsilon) \neq \emptyset$.
+\end{defdef}
+
+On note $\bar{A}$ l'ensemble des point adhérents à la partie $A$. On a toujours $A \subset \bar{A}$.
+
+\begin{prop}
+  Soit $F \in \P(E)$, $F$ est fermé si et seulement si $F=\bar{F}$.
+\end{prop}
+\begin{proof}
+  \begin{align}
+    F \notin \F(E) &\iff E\setminus F \notin \Oouvert(E) \\
+    &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \not\subset E\setminus F \\
+    &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \cap F \neq \emptyset \\
+    &\iff \exists a \in E\setminus F \ a \text{~est adhérent à~} F.
+  \end{align}
+  On a montré que $F$ est non fermé si et seulement s'il existe un point adhérent à $F$ qui n'est pas dans $F$, c'est-à-dire $\bar{F} \not\subset F$. Par contraposée,
+  \begin{align}
+    F \text{~est fermé} &\iff \bar{F} \subset F \\
+    &\iff \bar{F}=F.
+  \end{align}
+\end{proof}
+
+\section{Limites et continuité des fonctions de deux variables réelles}
+
+Soient $E=\R^2$ muni de la norme euclidienne $\norme{.}=\norme{.}_2$ et $A$ une partie non vide de $E$. On s'intéresse à l'ensemble des aplications de $A$ vers $\R$, $\R^A=\F(A, \R)$. On sait que $(\F(A, \R), +, \perp)$ est un $\R$-espace vectoriel et que $(\F(A, \R), +, \times)$ est un anneau commutatif non-intègre. On note $\uinv(A)=\enstq{f \in \F(A, \R)}{0 \in f(A)}$ l'ensemble des inversibles de $A$.
+
+\subsection{Applications partielles}
+
+Soit $a=(a_1, a_2) \in A$. Notons $A_{a, 1}=\enstq{x_1 \in \R}{(x_1, a_2) \in A}$ et $A_{a, 2}=\enstq{x_2 \in \R}{(a_1, x_2) \in A}$. Soit $f \in \R^A$, on définit~:
+\begin{gather}
+  \fonction{\varphi_{a, 1}}{A_{a, 1}}{\R}{x_1}{f(x_1, a_2)}, \\ \fonction{\varphi_{a, 2}}{A_{a, 2}}{\R}{x_2}{f(a_1, x_2)}.
+\end{gather}
+$\varphi_{a, 1}$ ($\varphi_{a, 2}$) est la première (deuxième) application partielle de $f$ au point $a$.
+
+\subsection{Limites et continuité en un point}
+
+Soient $A$ une partie no vide de $E$, $a$ un point de adhérent à $A$ et $f \in \R^A$.
+
+\subsubsection{Limites en un point}
+
+\begin{defdef}
+  Soit $\ell \in \R$. On dit que $f$ admet $\ell$ pour limite au point $a$ si et seulement si
+  \begin{equation}
+    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leq \eta \implies \abs{f(x)-\ell} \leq \epsilon.
+  \end{equation}
+  On note $\ell = \lim\limits_{x \to a} f(x)$ ou $\ell=\lim\limits_{a}f$.
+\end{defdef}
+\begin{defdef}[Définition équivalente avec les voisinages]
+  \begin{equation}
+    \ell=\lim\limits_{a}f \iff \forall V \in \Vvois(\ell) \ \exists U \in \Vvois(a) \ \forall x \in A \quad x \in U \implies f(x) \in V.
+  \end{equation}
+\end{defdef}
+
+On montre l'unicité de la limite exactement comme pour les fonction d'une seule variable réelle~: Par l'absurde supposons que $f$ admet en $a$ deux limites distinctes $\ell_1$ et $\ell_2$. Soit $\epsilon = \frac{\abs{\ell_1 - \ell_2}}{3}$. Alors il existe $\eta_1$ et $\eta_2$ strictement positif tels que pour tout $x \in A$~:
+\begin{align}
+  \norme{x-a} \leq \eta_1 &\implies \abs{f(x)-\ell_1}\leq \epsilon, \\
+  \norme{x-a} \leq \eta_2 &\implies \abs{f(x)-\ell_2}\leq \epsilon.
+\end{align}
+On définit $\eta_0=\min(\eta_1, \eta_2)$ et soit $x \in A \cap B(a,\eta_0)$, alors
+\begin{align}
+  \abs{\ell_1-\ell_2} &\leq \abs{\ell_1-f(x)} + \abs{f(x)-\ell_2} \\
+  &\leq 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
+\end{align}
+Ce qui est absurde. Donc $\ell_1=\ell_2$.
+
+\emph{Remarque}~: On peut montrer que si $N_1$ et $N_2$ sont deux normes équivalentes, alors $f$ admet une limite en $a$ dans $(E, N_1)$ si et seulement si elle admet une limite en $a$ dans $(E, N_2)$, et ces limits sont égales.
+
+\begin{prop}
+  On suppose que $f$ admet une limite $\ell$ en $a=(a_1, a_2)$. Soient $(x_n)_{n \in \N}\in A^\N$ et $(y_n)_{n \in \N}\in A^\N$ qui vérifient $\lim x_n=a_1$ et $\lim y_n=a_2$. Alors $\lim f(x_n, y_n)=\ell$.
+\end{prop}
+\begin{proof}
+  La démonstration est identique à celle d'une fonction de la variable réelle.
+\end{proof}
+
+Ce résultat sert à nier ``$f(x) \to \ell$'' en exhibant une droite $(x_n, y_n)_{n \in \N}$ telle que $f(x_n, y_n) \not\to \ell$. Cela servira à montrer qu'une fonction n'est pas continue en un point.
+
+\subsubsection{Continiuté en un point}
+
+\begin{defdef}
+  Soient $A \in \P(\R^2)$, $f \in \R^A$ et $a \in A$. La fonction $f$ est continue en $a$ si et seulement si $\lim\limits_a f=f(a)$ existe.
+\end{defdef}
+\emph{Exemples~:}
+\begin{enumerate}
+\item Soient $\fonction{p_1}{\R^2}{\R}{(x_1, x_2)}{x_1}$ et $\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}$ les projecteurs canoniques de $\R^2$. Ces applications sont continues en tout point. En effet,
+  \begin{equation}
+    \forall (x, y) \in \R^2 \times \R^2 \quad \abs{p_1(x)-p_1(y)} = \abs{x_1-y_1} \leq \norme{x-y}.
+  \end{equation}
+  Il suffit de prendre $\eta=\epsilon$ dans la définition.
+\item Les applications polynomiales de deux variables sont continues.
+\end{enumerate}
+\begin{prop}
+  Soient $A \in \P(\R^2)$, $a \in A$ et $f \in \R^A$. Si $f$ est continue au voisinage de $A$, alors elle est bornée au voisinage de $a$. Autrement dit
+  \begin{equation}
+    \exists M \in \Rplus \ \exists r \in \Rplus \ \forall a \in A \quad x \in B(a, r) \implies \abs{f(x)} \leq M.
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Écrivons la définition de la continuité en $a$ avec $\epsilon=1$~:
+  \begin{align}
+    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad \norme{x-a}\leq \eta \implies \abs{f(x)-f(a)}\leq 1 \\
+    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad x \in B(a, \eta) \implies \abs{f(x)} \leq 1+\abs{f(a)}.
+  \end{align}
+  En posant $M=f(a)+1$, alors $f$ est bornée par $M$.
+\end{proof}
+
+\subsubsection{Continuité de $f$ et continuité des applications partielles}
+
+\begin{prop}
+  Soient $A \subset \R^2$, $a \in A$ et $f \in \R^A$. Si $f$ est continue en $a=(a_1, a_2)$ et si les applications partielles $\varphi_{a, 1}$ et $\varphi_{a, 2}$ sont respectivement définies au voisinage de $a_1$ et $a_2$, alors elles sont respectivement continues en $a_1$ et $a_2$.
+\end{prop}
+\begin{proof}
+  On démontre le résultat pour $\varphi_{a, 1}$. Soit $A_{a, 1} = \enstq{x_1 \in \R}{(x_1, a_2) \in A}$. Soit
+  \begin{equation}
+    \fonction{\varphi_{a, 1}}{A_{a, 1}}{\R}{x_1}{f(x_1, a_2)}.
+  \end{equation}
+  La fonction $f$ est continue en $a$~:
+  \begin{equation}
+    \forall \epsilon >0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leq \eta \implies \abs{f(x)-f(a)} \leq \epsilon.
+  \end{equation}
+  Soit $x_1 \in A_{a, 1}$, $\abs{x_1 - a_1}\leq \eta$. Alors
+  \begin{equation}
+    \norme{(x_1, a_2) - (a_1, a_2)} = \sqrt{(x_1-a_1)^2 +(a_2-a_2)^2}=\abs{x_1-a_1}\leq \eta.
+  \end{equation}
+  Donc $\abs{f(x_1, a_2) - f(a_1, a_2)} \leq \epsilon$. C'est-à-dire $\abs{\varphi_{a, 1}(x_1)-\varphi_{a, 1}(a_1)} \leq \epsilon$. Alors $\varphi_{a, 1}$ est continue en $a_1$. De même pour $\varphi_{a, 2}$.
+\end{proof}
+
+La réciproque est fausse. En effet, soit $\fonction{f}{\R^2}{\R}{(x, y)}{\begin{cases} \frac{xy}{x^2+y^2} & (x, y) \neq (0, 0) \\ 0 & (x, y)=(0, 0) \end{cases}}$. Les application $\varphi_{0, 1}$ et $\varphi_{0, 2}$ sont constantes nulles donc continues. Cependant pour tout naturel $n$ non nul $f\left(\frac{1}{n}, \frac{1}{n}\right)=\frac{\frac{1}{n} \frac{1}{n}}{\frac{1}{n^2} + \frac{1}{n^2}}=\frac{1}{2}$ qui ne tend pas vers zéro. Alors $f$ n'est pas continue en zéro.
+
+\emph{Retenir que la continuité de $f$ implique la continuité des applications partielles et que la réciproque est \emph{fausse}.}
+
+\subsubsection{Espace vectoriel et anneau $\cont{A}{\R}$}
+
+\begin{defdef}
+  Soient $A \subset \R^2$ et $f \in \R^A$. On dit que $f$ est continue sur $A$ si elle est continue en tout point de $A$. On note $\cont{A}{\R}$ l'ensemble des fonctions de $A$ vers $\R$ continues sur $A$.
+\end{defdef}
+\begin{prop}
+  $(\cont{A}{\R}, +, \perp)$ est un $\R$-espace vectoriel. $(\cont{A}{\R}, +, \times)$ est un anneau commutatif non intègre. L'ensemble des inversibles de cet anneau est $\uinv{\cont{A}{\R}} = \enstq{f \in \cont{A}{\R}}{0 \notin f(A)}$.
+\end{prop}
+\begin{proof}
+  La démonstration est identique à celle pour les fonctions d'une variable réelle.
+\end{proof}
+%
+
+\subsection{Généralisation aux fonctions à valeurs dans $\R^2$}
+
+\begin{defdef}
+  Soit $A \subset \R^2$, $f : A \longmapsto \R^2$. On appelle applications coordonnées de $f$ les applications $f_1 : A \longmapsto \R$ et $f_2 : A \longmapsto \R$ telles que
+  \begin{equation}
+    \forall x \in A \quad f(x) = (f_1(x), f_2(x)).
+  \end{equation}
+\end{defdef}
+\begin{defdef}
+  Soit $A \subset \R^2$, $f : A \longmapsto \R^2$ et $a \in A$. On dit que $f$ est continue en $a$ si et seulement si
+  \begin{equation}
+    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a}\leq \eta \implies \norme{f(x)-f(a)}\leq \epsilon.
+  \end{equation}
+\end{defdef}
+\begin{prop}
+  Soit $A \subset \R^2$, $f : A \longmapsto \R^2$ et $a \in A$. La fonction $f$ est continue en $a$ si et seulement si les applications coordonnées de $f$ sont continues en $a$.
+\end{prop}
+
+\emph{Ne pas confondre applications partielles et applications coordonnées.} La continuité de $f : A \rightarrow \R^2$ équivaut à la continuité de ses applications coorodonnées tandis qur $g : A \rightarrow \R$ peut avoir des applications partielles continues sans être continue.
+
+\subsection{Composée de fonctions continues}
+
+\begin{theo}
+  Soient $A \subset \R^2$, $\B\subset \R$ ou $\R^2$ et $p \in \{1, 2\}$. Soient $f : A \rightarrow B$ et $g: B \rightarrow \R^p$. Soeint $a \in A$ et $b=f(a) \in B$. Si $f$ est continue en $a$ et $g$ continue en $b$ alors $g \circ f$ est continue en $a$.
+
+Par conséquent, si $f$ est continue sur $A$ et $g$ continue sur $B$ alors $g \circ f$ est continue sur $A$.
+\end{theo}
+
+\section{Calcul différentiel}
+
+\subsection{Dérivée en un point selon un vecteur}
+
+\subsubsection{Définition de la dérivée en un point selon un vecteur}
+
+Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \R^U$. Pour tout $h>0$, on s'intéresse à l'application $t \longmapsto f(a+th)$. $U$ est un ouvert, $a \in U$ et $f$ est définie sur $U$ donc $f$ est définie au voisinage de $a$.
+
+Pour tout $t$ au voisinage de $0$, $a+th$ est au voisinage de $a$ donc $t \longmapsto f(a+th)$ est définie au voisinage de zéro. Plus concrétement, il existe $r>0$ tel que $B(a, r) \subset U$.
+\begin{align}
+  \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leq r \\
+  &\iff \abs{t} \norme{h} \leq r.
+\end{align}
+Si $h=(0, 0)$, alors $t \longmapsto f(a+th)$ est définie sur $\R$. Sinon, $a+th \in B(a, r) \iff \abs{t} \leq \frac{r}{\norme{h}}$. L'application $t \longmapsto f(a+th)$ est définie au moins sur $\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}$. Dans tous les cas, il existe $\delta>0$ tel que $\Psi_h : t \longmapsto f(a+th)$ soit définie au moins sur $\intervalleoo{-\delta}{\delta}$. 
+
+Il est légitime de se demander si $\fonction{\Psi_h}{\intervalleoo{-\delta}{\delta}}{\R}{t}{f(a+th)}$ est dérivable en zéro.
+
+\begin{defdef}
+  Si $\Psi_h$ est dérivable, on dit que $f$ admet une dérivée en $a$ selon le vecteur $h$ et on note
+  \begin{equation}
+    D_h f(a) = \Psi_h'(0) = \lim\limits_{t \to 0}\frac{f(a+th)-f(a)}{t}.
+  \end{equation}
+\end{defdef}
+
+
+\subsubsection{Dérivée partielle première}
+
+Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \R^U$. Notons $(e_1, e_2)$ la base canonique de $\R^2$.
+
+\begin{defdef}
+  Sous réserve d'existence de $D_h f(a)$ pou $h \in \{e_1, e_2\}$, on pose~:
+  \begin{align}
+    \derivep{f}{x_1}(a) &= D_{e_1}f(a); \\
+    \derivep{f}{x_2}(a) &= D_{e_2}f(a). \\
+  \end{align}
+\end{defdef}
+
+\emph{Interprétation~:}
+\begin{align}
+  D_{e_1}f(a) &= \lim\limits_{t \to 0}\frac{f(a+te_1)-f(a)}{t} \\
+  &= \lim\limits_{t \to 0}\frac{f(a_1+t, a_2)-f(a_1, a_2)}{t}\\
+  &= \lim\limits_{t \to 0}\frac{\varphi_{a, 1}(a_1+t)-\varphi_{a, 1}(a_1)}{t}\\
+  &= \varphi_{a, 1}'(a_1).
+\end{align}
+Alors $\derivep{f}{x_1}(a)$ existe si et seulement si l'application partielle $\varphi_{1, 1}$ est dérivable en $a_1$. Auquel cas~:
+\begin{equation}
+  \derivep{f}{x_1}(a) = \varphi_{a, 1}'(a_1).
+\end{equation}
+
+\emph{Notation~:} Les dérivées partielles peuvent être notées $\derivep{f}{x_1}(a) = D_1 f(a)$.
+
+\emph{Attention~: $f$ peut admettre des dérivées partielles en un point, et même être dérivable en un point selon tout vecteur, sans pour autant être continue en ce point.}
+
+On peut exhiber le cas de la fonction $\fonction{f}{\R^2}{\R}{(x, y)}{\begin{cases} \frac{y^2}{x} & x\neq 0 \\ 0 & x=0 \end{cases}}$. En notant $a=(0, 0)$ on a
+\begin{equation}
+  \forall t>0 \ h_1\neq 0 \quad \frac{f(a+th)-f(a)}{t} = \frac{f(th)}{t} = \frac{h_2^2}{h_1}.
+\end{equation}
+Donc $\lim\limits_{t\to 0} \frac{f(a+th)-f(a)}{t}$ existe. Si $h_1=0$ alors pour tout $t>0$ on a $\frac{f(a+th)-f(a)}{t}=0$.
+
+La fonction $f$ admet une dérivée en $(0, 0)$ selon tout vecteur $h$. Par contre, pour tout naturel $n$ non nul
+\begin{equation}
+  f\left(\frac{1}{n^2}, \frac{1}{n}\right)=1,
+\end{equation}
+et ne tend pas vers zéro, donc $f$ n'est pas continue en zéro.
+
+\subsection{Fonction de classe $\classe{1}$ sur un ouvert}
+
+Soient $U$ un ouvert de $\R^2$ et $f \in \R^U$.
+
+\begin{defdef}
+  On dit que $f$ est de classe $\classe{1}$ sur l'ouvert $U$ si et seulement si pour tout vecteur $h$ l'application $\fonction{g_h}{U}{\R}{a}{D_h f(a)}$ est définie et continue sur $U$.
+
+  On note $\classe{1}(U, \R)$ l'ensemble des fonctions de $U$ vers $\R$ qui sont de classe $\classe{1}$.
+\end{defdef}
+%
+\begin{prop}
+  Si $f \in \classe{1}(U, \R)$ alors $f$ admet des dérivées partielles premières et elles sont continues sur $U$.
+\end{prop}
+\begin{proof}
+  C'est une conséquence immédiate de la définition en prenant $h=e_1$ et $h=e_2$.
+\end{proof}
+%
+\begin{theo}[Théorème fondamental]
+  Soient $U$ un ouvert de $\R^2$ et $f \in \R^U$. Si les applications dérivées partielles d'ordre $1$, $\derivep{f}{x_1}$ et $\derivep{f}{x_2}$ sont définies et continues sur l'ouvert $U$, alors~:
+  \begin{enumerate}
+  \item pour tout $a \in U$, $f$ admet un $DL_1(a)$~: pour tout $h \in \R^2$ au voisinage de $(0,0)$ on a
+    \begin{equation}
+      f(a+h) = f(a) + h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2} + \petito{\norme{h}};
+    \end{equation}
+  \item pour tout $a \in U$ et pour tout $h \in \R^2$, $f$ admet une dérivée en $a$ selon $h$ et
+    \begin{equation}
+      D_h f(a) = h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2},
+    \end{equation}
+    d'où pour $h$ au voisinage de $(0, 0)$
+    \begin{equation}
+      f(a+h) = f(a) + D_h f(a) + \petito{\norme{h}};
+    \end{equation}
+  \item $f \in \classe{1}(U, \R)$;
+  \item pour tout $a \in U$, l'application $\fonction{L}{\R^2}{\R}{h}{D_h f(a)}$ est une forme linéaire sur $\R^2$ appelée différentielle de $f$ en $a$ et notée $\D f_a$.
+  \end{enumerate}
+\end{theo}
+
+\emph{Notation différentielle~:} Soient $U$ un ouvert de $\R^2$ et $f \in \classe{1}(U, \R^2)$. Notons $\fonction{p_1}{\R^2}{\R}{(x_1, x_2)}{x_1}$ et $\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}$. $p_1$ et $p_2$ sont de classe $\classe{1}$. Pour tout $a$ et $h$ de $\R^2$ on a
+\begin{align}
+  D_h p_1(a) &= h_1 \derivep{p_1}{x_1}(a) + h_2 \derivep{p_1}{x_2}(a) =h_1 \\
+  D_h p_2(a) &= h_1 \derivep{p_2}{x_1}(a) + h_2 \derivep{p_2}{x_2}(a) =h_2.
+\end{align}
+Ainsi
+\begin{align}
+  D_h f(a) &= h_1 \derivep{f}{x_1}(a) + h_2 \derivep{f}{x_2}(a) \\
+  &= D_h p_1(a) \derivep{f}{x_1}(a) + D_h p_2(a) \derivep{f}{x_2}(a),  
+\end{align}
+et comme c'est vrai pour tout vecteur $h$ on a
+\begin{equation}
+  D f(a) = D p_1(a) \derivep{f}{x_1}(a) + D p_2(a) \derivep{f}{x_2}(a),
+\end{equation}
+et en passant en notation différentielle
+\begin{equation}
+  \D f(a) = \derivep{f}{x_1}(a)\D x_1 + \derivep{f}{x_2}(a) \D x_2.
+\end{equation}
+
+\subsection{Gradient}
+
+Soient $U$ un ouvert de $\R^2$ et $f \in \classe{1}(U, \R)$. Pour tout $a \in U$, l'application $\fonction{\D f_a}{\R^2}{\R}{h}{D_h f(a)}$ est une forme linéaire.
+
+
+\begin{defdef}
+  Pour tout $a \in U$, le vecteur normal de cette forme linéaire est appelé gradient de $f$ en $a$, et est noté $\grad f(a)$. C'est l'unique vecteur $\vn$ tel que pour tout vecteur $\vu \in \R^2$ on a
+  \begin{equation}
+    \D f_a(\vu) = \prodscal{\vu}{\vn}.
+  \end{equation}  
+\end{defdef}
+
+D'après l'expression de $\D f_a$ on a
+\begin{align}
+  \grad f(a) &= \left(\derivep{f}{x_1}(a), \derivep{f}{x_2}(a)\right) \\
+  &= \derivep{f}{x_1}(a) \vect{e_1} + \derivep{f}{x_2}(a) \vect{e_2}.
+\end{align}
+
+\emph{Remarque}~: L'application $\grad : a \longmapsto \grad f(a)$ est appelée champ de vecteurs.
+
+\subsection{Espace vectoriel et anneau $\classe{1}(U, \R)$}
+
+\begin{lemme}
+  Soient $U$ un ouvert de $\R^2$. Si $f$ et $g$ sont deux fonctions de classe $\classe{1}$, alors $fg$ est de classe $\classe{1}$. De plus pour tout $a \in U$,
+  \begin{equation}
+    \grad (fg)(a) = f(a) \grad g(a) + g(a) \grad f(a).
+  \end{equation}
+  De plus pour tout vecteur $h \in \R^2$ on a aussi
+  \begin{equation}
+    D_h (fg)(a) = f(a) D_h g(a) + g(a) D_h f(a).
+  \end{equation}
+\end{lemme}
+\begin{proof}
+  On fixe $a \in U$. Notons $\alpha$, $\beta$ et $\gamma$ les premières applications partielles respectives de $f$, $g$ et $fg$ en $a$. Alors $\alpha$ et $\beta$ sont dérivable en $a_1$~:
+  \begin{align}
+    \alpha'(a_1) &= \derivep{f}{x_1}(a) \\
+    \beta'(a_1) &= \derivep{g}{x_1}(a).
+  \end{align}
+  On a $\gamma = \alpha \beta$, donc $\gamma$ est dérivable en $a_1$ et
+  \begin{align}
+    \gamma'(a_1) &= \alpha(a_1) \beta'(a_1) + \beta(a_1) \alpha'(a_1) \\
+    &=\alpha(a_1) \derivep{g}{x_1}(a) + \beta(a_1) \derivep{f}{x_1}(a_1) \\
+    &=f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a).
+  \end{align}
+  Alors $\derivep{fg}{x_1}(a)$ existe et vaut $f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a)$. Ce qui est vrai pour tout $a \in U$, donc $\derivep{fg}{x_1}$ est défini sur $U$ et son expression montre qu'elle est continue. De la même manière on montre que $\derivep{fg}{x_2}$ est définie et continue sur $U$. Alors, d'après le théorème fondamental, $fg$ est de classe $\classe{1}$.
+\end{proof}
+
+\begin{lemme}
+  Soient $U$ un ouvert de $\R^2$ et $f \in classe{1}(U, \R)$ telle que $0 \not\in f(U)$. Alors $\frac{1}{f}$ est de classe $\classe{1}$. De plus pour tout $a \in U$,
+  \begin{equation}
+    \grad \left(\frac{1}{f}\right)(a) = \frac{-1}{f(a)^2} \grad f(a).
+  \end{equation}
+  De plus pour tout vecteur $h \in \R^2$ on a aussi
+  \begin{equation}
+    D_h \left(\frac{1}{f}\right)(a) = \frac{-1}{f(a)^2} D_h f(a).
+  \end{equation}
+\end{lemme}
+\begin{proof}
+Soit $\varphi$ la première application partielle de $f$ en $a$. Comme $0 \notin f(U)$, $\frac{1}{f}$ est définie. Soit $\psi$ la première application partielle de $\frac{1}{f}$ en $a$. Ainsi $\psi= \frac{1}{\varphi}$. L'applicatin $f$ est de classe $\classe{1}$ donc $\varphi$ est dérivable en $a_1$ et $\psi'(a_1)=-\frac{\varphi'(a_1)}{\varphi(a_1)^2}$. Cela signifie que $\derivep{\frac{1}{f}}{x_1}(a)$ existe et vaut $-\frac{\varphi'(a_1)}{\varphi(a_1)^2}=-\frac{1}{\varphi(a_1)^2}\derivep{f}{x_1}(a)$.
+
+C'est vrai pour tout $a \in U$ donc $\derivep{\frac{1}{f}}{x_1}$ est définie sur $U$. L'application $f$ étant de classe $\classe{1}$, l'expression $\derivep{\frac{1}{f}}{x_1}$ montre qu'elle est continue. De même, $\derivep{\frac{1}{f}}{x_2}$ est définie et continue sur $U$.
+
+Le théorème fondmental permet alors de conclure que $\frac{1}{f}$ est de classe $\classe{1}$ sur $U$.
+\end{proof}
+\begin{lemme}
+  Soit $U$ un ouvert de $\R^2$. Pour toutes fonctions $f$ et $g$ de classe $\classe{1}$ sur $U$ et pour tout réel $\lambda$, la fonction $\lambda f +g$ est de classe $\classe{1}$ sur $U$. 
+
+De plus, pour tout $a \in U$ et pour tout $h \in \R^2$,
+\begin{gather}
+  \grad{\lambda f+g}(a) = \lambda \grad{f}(a) + \grad{g}(a), \\
+  D_h(\lambda f+g)(a) = \lambda D_h(f)(a) + D_h(g)(a).
+\end{gather}
+\end{lemme}
+\begin{theo}
+  Soit $U$ un ouvert de $\R^2$. Alors $\classe{1}(U, \R)$ est un sous-espace vectoriel et un sous-anneau de $\cont{U}{\R}$. De plus
+    \begin{equation}
+      \uinv{\classe{1}(U, \R)}=\enstq{f \in \classe{1}(U, \R)}{0 \notin f(U)}.
+    \end{equation}
+\end{theo}
+
+\subsection{Dérivée d'une fonction composée}
+
+\begin{theo}
+  Soit $U$ un ouvert de $\R^2$ et $f \in \classe{1}(U, \R)$. Soit $I$ un intervalle réel et $\varphi \in \classe{1}(I, \R^2)$ telle que $\varphi(I) \subset U$. On note $\varphi_1$ et $\varphi_2$ les applications coordonnées de $\varphi$. On dispose de $f \circ \varphi$. 
+  
+  Alors $f \circ \varphi \in \classe{1}(I, \R)$ et pour tout $t \in I$ on a
+  \begin{equation}
+    (f \circ \varphi)'(t) = \derivep{f}{x_1}(\varphi(t))\varphi_1'(t) + \derivep{f}{x_2}(\varphi(t))\varphi_2'(t).
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Soit $t_0 \in I$. Montrons que $f \circ \varphi$ est dérivable en $t_0$ en prouvant qu'elle admet un développement limité à l'ordre $1$ en $t_0$.
+
+  D'abord $f$ est de classe $\classe{1}$ donc pour tout $a \in U$, on a
+  \begin{equation}
+    f(a+h) = f(a) + D_h f(a) + \petito{\norme{h}}.
+  \end{equation}
+  Pour $t$ au voisinage de $t_0$, $\varphi(t)$ est au voisinage de $\varphi(t_0)$. On l'applique avec $a = \varphi(t_0)$ et $h=\varphi(t)-\varphi(t_0)$~:
+  \begin{align}
+    f\circ \varphi(t) = f\circ \varphi(t_0)  + \derivep{f}{x_1}(\varphi(t_0))(\varphi_1(t)-\varphi_1(t_0)) \notag \\ + \derivep{f}{x_2}(\varphi(t_0))(\varphi_2(t)-\varphi_2(t_0)) + \norme{\varphi(t)-\varphi(t_0)}\epsilon(\norme{\varphi(t)-\varphi(t_0)}),
+  \end{align}
+  avec $\lim\limits_{0}\epsilon=0$.
+
+  Les fonctions $\varphi_1$ et $\varphi_2$ sont donc de classe $\classe{1}$ au voisinage de $t_0$.
+  \begin{gather}
+    \varphi_1(t)=\varphi_1(t_0)+\varphi_1'(t_0)(t-t_0) + (t-t_0)\petito{1}\\
+    \varphi_2(t)=\varphi_2(t_0)+\varphi_2'(t_0)(t-t_0) + (t-t_0)\petito{1}.
+  \end{gather}
+  Au voisinage de $t_0$,
+  \begin{align}
+    f \circ \varphi(t) &= f \circ \varphi(t_0) + \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0)(t-t_0) + \derivep{f}{x_1}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
+    &+ \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)(t-t_0) + \derivep{f}{x_2}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
+    &+ \norme{(\varphi_1'(t_0)(t-t_0)+ (t-t_0)\petito{1} + \varphi_2'(t_0)(t-t_0)+ (t-t_0)\petito{1})}\petito{1} \\
+    &= f \circ \varphi(t_0) + (t-t_0)\left[ \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0) \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)\right] +\petito{t-t_0}. 
+  \end{align}
+  Alors $f \circ \varphi$ admet un développement limité à l'ordre $1$ en $t_0$.
+  \begin{equation}
+    (f \circ \varphi)'(t_0) = \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0) + \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0).
+  \end{equation}
+\end{proof}
+%
+On peut généraliser au cas où $\varphi$ est définie sur un ouvert de $\R^2$.
+%
+\begin{theo}
+  Soient $U$ et $V$ deux ouverts de $\R^2$. Soient $f \in \classe{1}(U, \R)$ et $\varphi \in \classe{1}(V, \R^2)$ telles que $\varphi(V) \subset U$. On dispose donc de l'application $f \circ \varphi : V \rightarrow \R$. 
+
+Alors l'application $f\circ \varphi$ est de classe $\classe{1}$, pour tout $a \in V$ et pour $i \in \{1, 2\}$ on a
+\begin{equation}
+  \derivep{f\circ \varphi}{x_i}(a) = \derivep{f}{x_1}(\varphi(a))\derivep{\varphi_1}{x_i}(a) + \derivep{f}{x_2}(\varphi(a))\derivep{\varphi_2}{x_i}(a).
+\end{equation}
+\end{theo}
+
+\paragraph{Interprétation géométrique du gradient}
+
+\begin{prop}
+  Soient $U$ un ouvert de $\R^2$ et $f \in \classe{1}(U, \R)$. On appelle lignes de niveaux de $f$ les ensembles suivants~:
+  \begin{equation}
+    \Gamma_\alpha = \enstq{(x,y) \in U}{f(x,y)=\alpha \in \R}.
+  \end{equation}
+  Soit $\alpha \in \R$ et supposons que $\Gamma_\alpha$ est paramétrée par $(I, g)$ ($I$ un intervalle réel et $g \in \classe{1}(U, \R^2)$) et que la courbe est régulière. 
+
+  Alors pour tout $t \in I$, la courbe $\Gamma_\alpha$ admet au point $M(t)$ une tangente orthogonale à $\grad f(M(t))$.
+\end{prop}
+\begin{proof}
+  Pour tout $t \in I$, $f(g(t))=\alpha$ et $f$ et $g$ sont de classe $\classe{1}$. On applique le théorème de dérivation d'une fonction composée~:
+  \begin{equation}
+    (f \circ g)'(t) = \derivep{f}{x_1}(g(t))g_1'(t) + \derivep{f}{x_2}(g(t))g_2'(t) = 0.
+  \end{equation}
+  Ce qui est équivalent à écrire que le produit scalaire entre $\grad f(M(t))$ et le vecteur directeur dela tangente en $M$ est nul.
+\end{proof}
+
+\subsection{Extension locale d'une fonction de classe $\classe{1}$ sur un ouvert}
+
+\subsubsection{Définition}
+
+\begin{defdef}
+  Soient $A \subset \R^2$, $a \in A$ et $f \in \R^A$.
+  \begin{enumerate}
+  \item On dit que $f$ présente un maximum (minimum) local en $a$ si et seulement s'il existe un voisinage $V$ de $a$ tel que pour tout $x \in A \cap V$ on a $f(x) \leq f(a)$ ($f(x) \geq f(a)$);
+  \item on dit que $f$ présente un extremum local en $a$ si elle admet un maximum local ou un minimum local;
+  \item on dit que l'extremum est global lorsque l'inégalité est vraie sur $A$ tout entier;
+  \item on dit que l'extremum est strict lorsque l'inégalité est stricte pour $x \neq a$.
+  \end{enumerate}
+\end{defdef}
+
+\subsubsection{Condition nécessaire d'existence}
+
+\begin{defdef}
+  Soit $U$ un ouvert de $\R^2$. Soient $f \in \classe{1}(U, \R)$ et $a \in U$. On dit que $a$ est un point critique pour $f$ lorsque $\grad f(a)=\vect{0}$.
+\end{defdef}
+
+\begin{theo}
+  Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \classe{1}(U, \R)$. Si $f$ admet un extremum local en $a$, alors $a$ est un point critique de $f$. La réciproque est fausse.
+\end{theo}
+\begin{proof}
+  Supposons que $f$ admet un maximum local en $a$. Il existe $r>0$ tel que $B(a, r) \subset U$ et pour tout $x \in B(a, r)$ on a $f(x)\leq f(a)$. 
+
+  Soit, pour tout $h\in \R^2$, l'application $\psi_h: t \rightarrow f(a+th)$. On sait qu'il existe $\delta>0$ tel que $\Psi_h$ soit au moins définie sur $\intervalleoo{-\delta}{\delta}$. Si $\norme{th}\leq r$ et $\abs{t}\leq \delta$ alors $f(a+th)$ est définie et $f(a+th) \leq f(a)$. 
+
+Or $\psi_h$ est dérivable en $0$, $\psi_h$ admet un maximum local en zéro, zéro est à l'intérieur de son intervalle de définition donc $\psi_h'(0)=0$. On a montré que pour tout $h \in \R^2$ $D_h f(a)=0$. L'application $\D f_a$ est une forme linéaire nulle donc son vecteur normal ($\grad f(a)$) est nul.
+\end{proof}
+%
+La réciproque est fausse. En effet soit $\fonction{f}{\R^2}{\R}{(x,y)}{xy}$, de classe $\classe{1}$. Pour tout $(x,y) \in \R^2$ on a
+\begin{equation}
+  \derivep{f}{x} = y \qquad \derivep{f}{y} = x,
+\end{equation}
+donc $(0, 0)$ est un point critique. Cependant, est-ce un extremum ?
+
+$f$ n'admet pas de maximum en $(0,0)$~:
+\begin{equation}
+  \forall r>0 \ \exists (x,y) \in B((0,0), r) \quad f(x, y)>0
+\end{equation}
+en prenant par exemple $x=y=\frac{r}{2}$ alors $f(x,y)=\frac{r^2}{4}>0$
+
+$f$ n'admet pas de minimum en $(0,0)$~:
+\begin{equation}
+  \forall r>0 \ \exists (x,y) \in B((0,0), r) \quad f(x, y)<0
+\end{equation}
+en prenant par exemple $x=\frac{r}{2}$ et $y=-x$ alors $f(x,y)=-\frac{r^2}{4}<0$.
+
+Un tel point est appelé point col ou point selle.
+
+\emph{Il faut absolument se placer sur un ouvert.} Sinon on ne peut pas appliquer le théorème. C'est comme pour les fonctions d'une variable, on se place à l'intérieur d'un intervalle.
+
+En pratique pour rechercher des extremums~:
+\begin{itemize}
+\item si le domaine de départ n'est pas ouvert, on le sépare en ``plusieurs morceaux'' et on traite la frontière à part;
+\item sur le ou les ``morceaux'' ouverts, on commence par déterminer les points critiques, et en chaque point critique trouvé on regarde s'il y a vraiment un extremum ou pas.
+\end{itemize}
+
+\subsection{Fonctions de classe $\classe{1}$, Théorème de Schwarz}
+
+Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \R^U$. Supposons que $f$ est de classe $\classe{1}$ sur $U$. On dispose des applications $\derivep{f}{x_1}$ et $\derivep{f}{x_2}$ qui sont continues. 
+
+Si $\derivep{f}{x_1}$ admet une dérivée partielle première par rapport à $x_1$ ($x_2$), on la note $\deriveps{f}{x_1}$ $\left( \derivepc{f}{x_2}{x_1}\right)$. Si $\derivep{f}{x_2}$ admet une dérivée partielle première par rapport à $x_1$ ($x_2$), on la note $\derivepc{f}{x_1}{x_2}$ $\left(\deriveps{f}{x_2}\right)$. $f$ admet au plus quatre dérivées partielles secondes.
+
+\begin{defdef}
+  Soient $U$ un ouvert de $\R^2$ et $f \in \R^U$. Si les quatre dérivées partielles secondes de $f$ sont définies et \emph{continues} sur $U$, on dit que $f$ est de classe $\classe{2}$ sur $U$.
+\end{defdef}
+
+\begin{theo}[Théorème de Schwarz (admis)]
+  Soient $U$ un ouvert de $\R^2$, $f$ une application de classe $\classe{2}$ sur $U$. Alors pour tout $a \in U$
+  \begin{equation}
+    \derivepc{f}{x_2}{x_1} (a) = \derivepc{f}{x_1}{x_2} (a).
+  \end{equation}
+\end{theo}
+
+\subsection{Exemple d'équation au dérivées partielles}
+
+Les équations aux dérivée partielles sont la généralisation des équations différentielles aux fonctions à plusieurs variables.
+
+
+
+Déterminez l'ensemble des fonctions $f \in \classe{2}(\R^2, \R)$ telles que
+\begin{equation}
+  \forall (x,y) \in \R^2 \qquad \deriveps{f}{x}(x, y) = 0
+\end{equation}
+
+
+Il existe une fonction $g \in \classe{2}(\R, \R)$ telle que pour tout $(x, y) \in \R^2$ on a $\derivep{f}{x}(x, y)=g(y)$. Puis il existe $h \in  \classe{2}(\R, \R)$ telle que pour tout $(x, y) \in \R^2$ on a $f(x, y) = g(y)x+h(y)$.
+
+Réciproquement, s'il existe $(g, h) \in \classe{2}(\R, \R)^2$ tel que pour tout $(x, y) \in \R^2$ on a $f(x, y) = g(y)x+h(y)$ alors $f \in \classe{2}(\R^2, \R)$ et pour tout $(x, y) \in \R^2$
+\begin{equation}
+  \derivep{f}{x}(x,y)=y \quad   \deriveps{f}{x}(x,y)=0.
+\end{equation}

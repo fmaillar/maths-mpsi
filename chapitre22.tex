@@ -1,0 +1,905 @@
+\chapter{Matrices}
+\label{chap:matrices}
+\minitoc
+\minilof
+\minilot
+
+\section{Opérations sur les matrices}
+
+\subsection{$\K$-espace vectoriel $\Mnp{n}{p}{\K}$}
+
+\subsubsection{Définition}
+
+\begin{defdef}
+  On appelle matrice à $n$ lignes et $p$ colonnes à coefficients dans $\K$ toute application $\fonction{A}{\intervalleentier{1}{n} \times \intervalleentier{1}{p}}{\K}{(i,j)}{a_{ij}}$.
+\end{defdef}
+
+\emph{Notation}~: Au lieu d'écrire $\fonction{A}{\intervalleentier{1}{n} \times \intervalleentier{1}{p}}{\K}{(i,j)}{a_{ij}}$, on note $A=(a_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}$. On note aussi la matrice $A$ par un ``tableau'' rectangulaire de $n$ lignes et $p$ colonnes
+\begin{equation}
+  \begin{pmatrix}
+    a_{11} & \ldots & a_{1p} \\
+    \vdots & a_{ij} & \vdots \\
+    a_{n1} & \ldots & a_{np}
+  \end{pmatrix}.
+\end{equation}
+
+\emph{Vocabulaire}~:
+\begin{itemize}
+\item Si $n=p$, on parle de matrice carrée. La diagonale de $A$ est le vecteur $(a_{ii})_{i \in \intervalleentier{1}{n}}$;
+\item si $n=1$, on parle de matrice ligne;
+\item si $p=1$, on parle de matrice colonne;
+\item pour tout $i \in \intervalleentier{1}{n}$, le vecteur $(a_{ij})_{j \in \intervalleentier{1}{p}}$ est le le $i$\ieme{} vecteur ligne;
+\item pour tout $j \in \intervalleentier{1}{p}$, le vecteur $(a_{ij})_{i \in \intervalleentier{1}{n}}$ est le le $j$\ieme{} vecteur colonne.
+\end{itemize}
+
+On appelle sous matrice de la matrice $\fonction{A}{\intervalleentier{1}{n} \times \intervalleentier{1}{p}}{\K}{(i,j)}{a_{ij}}$ toute restriction de l'application $A$ à $I_1 \times J_1$ avec $I_1\neq \emptyset \subset \intervalleentier{1}{n}$ et $J_1 \neq \emptyset \subset \intervalleentier{1}{p}$.
+
+L'ensemble des matrices à $n$ lignes et $p$ colonnes à coefficients dans $\K$ est noté $\Mnp{n}{p}{\K}$
+\begin{equation}
+  \Mnp{n}{p}{\K}=\{A=(a_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}, \forall (i,j) \in \intervalleentier{1}{n} \times \intervalleentier{1}{p} \quad a_{ij} \in \K\}
+\end{equation}
+
+Pour tout couple $(n,p) \in \N^*\times \N^*$, on définit la matrice nulle à $n$ lignes et $p$ colonnes par $0_{n,p}=(0)_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}$. 
+
+Si $n=p$, on définit la matrice identité, notée $I_n$ par $I_n=(\delta_{ij})_{(i,j)\in \intervalleentier{1}{n}^2}$.
+
+\begin{defdef}[Égalité de deux matrices]
+  Soit quatre entiers naturels non nuls $n,p,n'$ et $p'$. Soient deux matrices $M \in  \Mnp{n}{p}{\K}$ et $N \in Mnp{n'}{p'}{\K}$. Alors
+  \begin{equation}
+    M=N \iff n=n',\ p=p' \text{~et~} \forall (i,j) \in \intervalleentier{1}{n} \times \intervalleentier{1}{p} \ \ a_{ij}=b_{ij}.
+  \end{equation}
+\end{defdef}
+
+\subsubsection{Structure de $\K$-espace vectoriel}
+
+On munit l'ensemble $\Mnp{n}{p}{\K}$ de deux lois~:
+
+\begin{itemize}
+\item une addition, notée $+$, définie par~:
+  \begin{equation}
+    \forall (A,B) \in \Mnp{n}{p}{\K}^2 \quad S=A+B \in \Mnp{n}{p}{\K}
+  \end{equation}
+  avec
+  \begin{equation}
+    \forall (i,j) \in \intervalleentier{1}{n} \times \intervalleentier{1}{p} \quad s_{ij}=a_{ij}+b_{ij}.
+  \end{equation}
+\item une multiplication externe, notée $\cdot$, définie par~:
+  \begin{equation}
+    \forall A \in \Mnp{n}{p}{\K} \ \forall \lambda \in \K \quad B=\lambda A \in \Mnp{n}{p}{\K}
+  \end{equation}
+  avec
+  \begin{equation}
+    \forall (i,j) \in \intervalleentier{1}{n} \times \intervalleentier{1}{p} \quad b_{ij}=\lambda a_{ij}
+  \end{equation}
+\end{itemize}
+
+\begin{theo}
+  L'ensemble $(\Mnp{n}{p}{\K}, +, \perp)$ est un $\K$-espace vectoriel de dimension finie égale à $np$.
+
+  La base canonique de $\Mnp{n}{p}{\K}$ est la famille $(E_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}$ où pour tout $(i_0,j_0)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}$ on a $E_{i_0j_0}=(e_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}$ et
+  \begin{equation}
+    \forall (i,j) \in \intervalleentier{1}{n} \times \intervalleentier{1}{p} \quad e_{ij} = \delta_{ii_0} \delta_{jj_0}.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Toute matrice $A=(a_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}} \in \Mnp{n}{p}{\K}$ s'écrit comme
+  \begin{equation}
+    A=\sum_{i=1}^n\sum_{j=1}^p a_{ij} E_{ij}.
+  \end{equation}
+  Tout élément de $\Mnp{n}{p}{\K}$ s'écrit comme une combinaison linéaire de la famille $(E_{ij})_{(i,j)\in \intervalleentier{1}{n} \times \intervalleentier{1}{p}}$. Le cardinal de $(E_{i,j})$ vaut $np$ donc cette famille est une base de $\Mnp{n}{p}{\K}$.
+\end{proof}
+
+\subsubsection{Matrice d'application linéaire}
+
+Soit $E$ un $\K$-espace vectoriel de dimension finie non nulle $p$ et $\E=(e_1, \ldots, e_p)$ une base de $E$. Soit $F$ un autre $\K$-espace vectoriel de dimension finie non nulle $n$ et $\F=(f_1, \ldots, f_n)$ une base de $F$. Soit $u \in \Lin{E}{F}$.
+\begin{defdef}
+  On appelle matrice de l'application linéaire $u$ dans les bases $\E$ et $\F$ et on note $\Mat_{\E,\F}(u)$ la matrice $M \in \Mnp{n}{p}{\K}$ telle que
+  \begin{equation}
+    \forall j \in \intervalleentier{1}{p} \quad u(e_j) = \sum_{i=1}^n a_{ij} f_i.
+  \end{equation}
+
+Si $E=F$, $\E=\F$ et on parle de matrice dans la base $\E$ de l'endomorphisme linéaire $u$ de $E$. La matrice $\Mat_\E(u)$ est alors carrée.
+\end{defdef}
+
+\emph{Exemples}~: Soit un $\K$-espace vectoriel $E$ de dimension finie non nulle $p$.
+\begin{itemize}
+\item Homothéties~: Soit un scalaire $\alpha$ et l'homothétie $\fonction{h_\alpha}{E}{E}{x}{\alpha x}$. Soit $\E=(e_1,\ldots, e_p)$ une base de $E$. Pour tout $j \in \intervalleentier{1}{p}$ on a $h(e_j)=\alpha e_j$. Alors $\Mat_\E(h_\alpha)=\alpha I_p$. Si $\alpha=1$, on voit que $I_p$ est la matrice de l'identité.
+\item Projecteurs et symétries~: Soient $E_1$ et $E_2$ deux sous espaces vectoriels supplémentaires de $E$ de dimension non nulles.
+  \begin{equation}
+    E=E_1 \oplus E_2 \quad \dim(E_1)=r \in \intervalleentier{1}{p-1}.
+  \end{equation}
+
+Soit $p$ le projecteur sur $E_1$ parallèlement à $E_2$ et $s$ la symétrie associée, $s=2p -\Id$. Soit $\E=(e_1, \ldots, e_r, e_{r+1}, \ldots, e_p)$ une base adpatée à la décomposition $E=E_1 \oplus E_2$, puisqu'ils sont supplémentaires dans $E$. Soient
+\begin{equation}
+  P=\Mat_\E(p) \quad S=\Mat_\E(s)
+\end{equation}
+et
+\begin{equation}
+  \begin{cases}
+    p(e_i)=e_i, s(e_i)=e_i & i \in \intervalleentier{1}{r} \\
+    p(e_i)=0, s(e_i)=-e_i & i \in \intervalleentier{r+1}{p}.
+  \end{cases}
+\end{equation}
+\end{itemize}
+
+\subsubsection{Isomorphisme canonique entre $\Lin{\K^p}{\K^n}$ et $\Mnp{n}{p}{\K}$}
+
+
+Soient $\E_c$ et $\F_c$ les bases canoniques respectives de $\K^p$ et $\K^n$. Soit l'application $\fonction{\Phi}{\Lin{\K^p}{\K^n}}{\Mnp{n}{p}{\K}}{u}{\Mat_{\E_c,\F_c}(u)}$.
+
+\begin{prop}
+  L'application $\Phi$ est linéaire.
+\end{prop}
+\begin{proof}
+  Soient $u$ et $v$ deux applications de $\Lin{\K^p}{\K^n}$ et un scalaire $\lambda$. 
+
+Pour tout $j \in \intervalleentier{1}{p}$, le $j$\ieme{} vecteur colonne de la matrice $\Mat_{\E_c,\F_c}(\lambda u+v)$ est le vecteur des coordonnées de $(\lambda u+v)(e_j)$ dans la base $\F_c$. De plus
+\begin{equation}
+  (\lambda u+v)(e_j) = \lambda u(e_j) +v(e_j).
+\end{equation}
+
+Ensuite, on applique les définitions de la somme de matrice et de la multiplication par un scalaire pour obtenir le résultat.
+\end{proof}
+
+\begin{prop}
+  L'application $\Phi$ est bijective.
+\end{prop}
+\begin{proof}
+  Pour toute matrice $M \in \Mnp{n}{p}{\K}$, il existe une unique application linéaire $u \in \Lin{\K^p}{\K^n}$ telle que $\Phi(u)=M$ car~: une application linéaire est entiérement déternminée par l'image d'une base. Ainsi, $u$ est entiérement déterminée par la donnée de $(u(e_1), \ldots, u(e_p))$. Les vecteurs $u(e_1), \ldots, u(e_p)$ sont complétement déterminés par leurs coordonnées dans la base $\F_c$.
+\end{proof}
+
+Grâce à ces propositions, il découle le théorème suivant.
+\begin{theo}
+  $\Phi$ est un isomorphisme de $\K$-espaces vectoriels de $\Lin{\K^p}{\K^n}$ sur $\Mnp{n}{p}{\K}$. Nous disposons alors de $\Phi^{-1}$. Pour toute matrice $A \in \Mnp{n}{p}{\K}$, l'application $u=\Phi^{-1}(A)$ est appelée application linéaire canoniquement associée à la matrice $A$.
+\end{theo}
+
+\emph{Exemple}~: Soit la matrice $A=\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$. Soit $u$ l'application linéaire canoniquement associée à $A$. Alors
+\begin{equation}
+  u((1,0,0))=(1,4) \quad u((0,1,0))=(2,5) \quad u((0,0,1))=(3,6)
+\end{equation}
+Pour tout vecteur $x=(x_1,x_2,x_3) \in \R^3$ on a
+\begin{equation}
+  u(x)=x_1(1,4) + x_2(2,5) +x_3(3,6)=(x_1+2x_2+3x_3, 4x_1+5x_2+6x_3)
+\end{equation}
+
+\subsubsection{Identification d'un vecteur de $\K^n$ et une matrice colonne}
+
+Soit l'application $\fonction{\Psi}{\K^n}{\Mnp{n}{1}{\K}}{(x_1,\ldots,x_n)}{\begin{pmatrix}x_1 \\ \vdots \\ x_n \end{pmatrix}}$.
+
+\begin{theo}
+  L'application $\Psi$ est un ismorphisme de $\K$-espaces vectoriels de $\K^n$ sur $\Mnp{n}{1}{\K}$ qui permet d'identifier les vecteurs de $\K^n$ avec les matrices colonnes de $\Mnp{n}{1}{\K}$.
+\end{theo}
+
+\subsubsection{Identification d'un vecteur de $\K^p$ et une matrice ligne}
+
+Soit l'application $\fonction{\gamma}{(\K^p)^{*}}{\Mnp{1}{p}{\K}}{f}{\begin{pmatrix}f(e_1) & \ldots & f(e_p) \end{pmatrix}}$.
+
+\begin{theo}
+  L'application $\gamma$ est un ismorphisme de $\K$-espaces vectoriels de $(\K^p)^{*}=\Lin{\K^p}{\K}$ sur $\Mnp{1}{p}{\K}$ qui permet d'identifier les formes linéaires de $(\K^p)^{*}$ avec les matrices lignes de $\Mnp{n}{1}{\K}$.
+\end{theo}
+
+\subsection{Produits de matrices}
+
+\subsubsection{Définition}
+
+Soient trois naturels non nuls $n$, $p$ et $m$.
+
+\begin{defdef}
+  Soient deux matrices $A \in \Mnp{n}{p}{\K}$ et $B \in \Mnp{m}{n}{\K}$. On définit le produit $BA$ par 
+\begin{equation}
+  BA=(c_{ij})_{(i,j)\in \intervalleentier{1}{m} \times \intervalleentier{1}{p}} \in \Mnp{m}{p}{\K}
+\end{equation}
+avec
+\begin{equation}
+  \forall i \in \intervalleentier{1}{m} \ \forall j \in \intervalleentier{1}{p} \quad c_{ij}=\sum_{k=1}^n b_{ik}a_{kj}.
+\end{equation}
+
+En pratique,
+\begin{equation}
+  \begin{pmatrix} b_{i1} & \ldots & b_{in} \end{pmatrix} \begin{pmatrix} a_{1j} \\ \vdots \\ a_{nj} \end{pmatrix} = \begin{pmatrix} b_{i1}a_{1j} & \ldots & b_{in}a_{nj}\end{pmatrix}.
+\end{equation}
+\end{defdef}
+
+\danger Pour donner un sens à $BA$, il faut que le nombre de colonne de $B$ soit égal au nombre de lignes de $A$.
+
+\danger Le produit $BA$ peut être défini sans que $AB$ existe.
+
+\danger Même si les deux produits sont définis, ils ne sont en général pas de même dimension.
+
+\danger Même si les deux produits sont définis et s'ils sont de même dimension, ils ne sont pas égaux en général. En effet si on note $A=E_{12}=\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$ et $B=E_{21}=\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$ alors
+\begin{equation}
+  BA = E_{22} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix} \quad AB = E_{11} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}
+\end{equation}
+
+
+\emph{Exemple}~: Produit de matrices de bases canoniques. Soient $n$, $m$ et $p$ trois naturels non nuls. Notons $(E_{ij})$ la base canonique de $\Mnp{n}{p}{\K}$, $(E'_{ij})$ la base canonique de $\Mnp{m}{n}{\K}$ et $(E''_{ij})$ la base canonique de $\Mnp{m}{p}{\K}$. Pour tous $i \in \intervalleentier{1}{m}$, $j \in \intervalleentier{1}{n}$, $k \in \intervalleentier{1}{n}$ et $l \in \intervalleentier{1}{p}$ on a
+\begin{equation}
+  E'_{ij} E_{kl} =(e_{\alpha \beta}) \in \Mnp{m}{p}{\K}.
+\end{equation}
+Alors
+\begin{align}
+  e_{\alpha \beta} &=\sum_{\gamma=1}^n (E'_{ij})_{\alpha \gamma} (E_{kl})_{\gamma \beta}\\
+  &=\sum_{\gamma=1}^n \delta_{i\alpha} \delta_{j\gamma} \delta_{k\gamma} \delta_{l\beta} \\
+  &= \delta_{i\alpha} \delta_{jk} \delta_{l\beta}\\
+  &= \delta_{jk} (\delta_{i\alpha} \delta_{l\beta})\\
+  &= \delta_{jk} (E''_{il})_{\alpha\beta}.
+\end{align}
+Donc
+\begin{equation}
+  E'_{ij} E_{kl} = \delta_{jk} E''_{il}.
+\end{equation}
+
+\subsubsection{Produit matriciel et composé d'applications linéaires}
+
+Soient trois naturels non nuls $m$, $n$ et $p$. Soient $\E_c$ la base canonique de $\K^n$, $\F_c$ la base canonique de $\K^m$,  $\Gb_c$ la base canonique de $\K^p$.
+
+\begin{prop}
+  Soient $u \in \Lin{\K^p}{\K^n}$ et $v \in \Lin{\K^n}{\K^m}$. Alors $v \circ u \in \Lin{\K^p}{\K^m}$. Alors
+  \begin{equation}
+    \Mat_{\G_c,\F_c}(v \circ u) = \Mat_{\E_c,\F_c}(v) \Mat_{\G_c,\E_c}(u)
+  \end{equation}
+\end{prop}
+\begin{proof}
+Soient $A= (a_{ij})=\Mat_{\G_c,\E_c}(u)$ et $B=(b_{ij})= \Mat_{\E_c,\F_c}(v)$. On note $C=BA$. Soit un naturel $j \in \intervalleentier{1}{p}$ et alors
+\begin{align}
+  v \circ u (g_j) &= v\left( \sum_{i=1}^n a_{ij} e_i\right) \\
+  &=\sum_{i=1}^n a_{ij} v(e_i) \\
+  &=\sum_{i=1}^n a_{ij} \sum_{k=1}^m b_{ki} f_k \\
+  &=\sum_{k=1}^m c_{kj} f_k
+\end{align}
+D'où $BA=C=\Mat_{\G_c,\F_c}(v \circ u)$.
+\end{proof}
+
+\subsubsection{Écriture matricielle de l'effet d'une application linéaire sur un vecteur}
+
+\begin{prop}
+  Soient $u \in \Lin{\K^p}{\K^n}$, $A$ la matrice de $u$ dans les bases canoniques $\E_c$ et $\F_c$ respectives de $\K^p$ et $\K^n$. Soit $x \in \K^p$ et $y=u(x)$. 
+  $X$ est le vecteur colonne des coordonnées de $x$ dans $\E_c$. $Y$ est le vecteur colonne des coordonnées de $u(x)$ dans $\F_c$. Alors
+  \begin{equation}
+    Y=AX.
+  \end{equation}
+\end{prop}
+
+\begin{proof}
+  Notons $X=\begin{pmatrix} x_1 \\ \vdots \\ x_p \end{pmatrix}$, $A=(a_{ij})$ et $Y=\begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix}$. Pour tout $i \in \intervalleentier{1}{n}$ on a $(AX)_i=\sum_{k=1}^p a_{ik}x_k$. Alors
+  \begin{align}
+    y&=u\left(\sum_{j=1}^p x_je_j \right)\\
+    &=\sum_{j=1}^p x_j u(e_j)\\
+    &=\sum_{j=1}^p x_j \sum_{i=1}^n a_{ij}f_i \\
+    &=\sum_{i=1}^n \left( \sum_{j=1}^p x_j a_{ij}\right)f_i \\
+    &=\sum_{j=1}^p (AX)_i f_i
+  \end{align}
+  Donc $Y=AX$.
+\end{proof}
+
+\subsubsection{Propriétés du produit matriciel}
+
+\begin{theo}
+  Soient quatres naturels non nuls $m$, $n$, $p$ et $k$. Soit un scalaire $\lambda \in \K$. Soient cinq matrices $(B,B') \in \Mnp{m}{n}{\K}^2$, $(C,C') \in \Mnp{n}{p}{\K}^2$ et $C \in \Mnp{k}{m}{\K}$. Alors
+  \begin{enumerate}
+  \item pseudo associativité $C(BA)=(CB)A$;
+  \item pseudo distributivité $B(A+A')=BA+BA'$;
+  \item pseudo distributivité $(B+B')A=BA+B'A$;
+  \item pseudo associativité $(\lambda B)A=\lambda (BA)=B(\lambda A)$;
+  \item élément neutre $I_n A=A$;
+  \item élément neutre $A I_p = A$.
+  \end{enumerate}
+\end{theo}
+\begin{proof}
+  Démontrons par exemple le deuxième point. Soient $u$, $u'$ et $v$ les applications linéaires canoniquement respectiviements associées à $A$, $A'$ et $B$. Alors
+  \begin{align}
+    B(A+A') =& \Mat(v) \cdot (\Mat(u)+\Mat(u')) \\
+    &=\Mat(v \circ (u+u')) \\
+    &=\Mat(v \circ u) + \Mat(v \circ u') \\
+    &=BA +BA'.
+  \end{align}
+
+Les autres se démontrent de manière analogue.
+\end{proof}
+
+\emph{Remarque}~: L'application $\fonction{F}{\Mnp{m}{n}{\K}\times \Mnp{n}{p}{\K}}{\Mnp{m}{p}{\K}}{(B,A)}{BA}$ est linéaire par rapport à chacun de ses arguments mais elle n'est pas linéaire. On dira que $F$ est bilinéaire.
+
+\subsection{Anneau $\Mn{n}{\K}$}
+
+Soit un naturel non nul $n$. On note $\Mn{n}{\K}=\Mnp{n}{n}{\K}$.
+
+\subsubsection{Structure}
+
+On a déjà vu que $(\Mn{n}{\K},+,\perp)$ était un espace vectoriel. Alors $(\Mn{n}{\K},+)$ est un groupe commutatif. De plus la multiplication des matrices est une loi de composition interne sur $\Mn{n}{\K}$. Elle est associative et distributive par rapport à l'addition. De plus $I_n$ est l'élément neutre de la multiplication.
+
+Ainsi, $(\Mn{n}{\K},+,\cdot)$ est un anneau.
+
+\emph{Remarque}~: $\Mn{n}{\K}$ est une $\K$-algèbre. C'est un anneau non-commutatif et non intègre dès que $n\geq 2$.
+\begin{equation}
+  E_{11}E_{1n}=\delta_{11}E_{1n} \qquad E_{1n}E_{11}=\delta_{n1}E_{11}=0 \, (n\geq 2)
+\end{equation}
+
+\subsubsection{Isomorphisme canonique entre $\Mn{n}{\K}$ et $\Endo{\K^p}$}
+
+Soit $\E_c$ la base canonique de $\K^n$. Soit l'application
+\begin{equation}
+  \fonction{\Phi}{\Endo{\K^p}}{\Mn{n}{\K}}{u}{\Mat_{\E_c}(u)}.
+\end{equation}
+
+On sait que $\Phi$ est un isomorphisme d'espaces vectoriels et de plus
+\begin{equation}
+  \forall (u,v) \in \Endo{\K^p}^2 \qquad \Phi(v \circ u) =\Phi(v) \Phi(u) \quad \Phi(\Id)=I_n
+\end{equation}
+
+Alors c'est un isomorphisme d'anneaux.
+
+\subsection{Matrices carrées inversibles, groupe linéaire $\GLn{n}{\K}$}
+
+On définit le groupe linéaire $\GLn{n}{\K}$ comme étant l'ensemble des matrices carrées inversibles. C'est-à-dire
+\begin{equation}
+  \GLn{n}{\K}=\{A \in \Mn{n}{\K}, \exists B \in \Mn{n}{\K} \ AB=BA=I_n\}=\uinv{\Mn{n}{\K}}
+\end{equation}
+
+On en déduit
+\begin{theo}
+  $(\GLn{n}{\K},\cdot)$  est un groupe, le groupe linéaire des matrices carrées.
+\end{theo}
+
+
+\begin{theo}
+  Soit une matrice $A \in \Mn{n}{\K}$ et $u$ l'endomorphisme canoniquement associé à $A$. Il y a équivalence entre les assertions suivantes~:
+  \begin{enumerate}
+  \item $A \in \GLn{n}{\K}$;
+  \item $u \in \GLn{n}{\K^n}$;
+  \item $\exists B \in \Mn{n}{\K} \ AB=I_n$;
+  \item $\exists B \in \Mn{n}{\K} \ BA=I_n$.
+  \end{enumerate}
+\end{theo}
+\begin{proof}
+  Par définition $1 \implies 3$ et $1 \implies 4$. 
+
+  $1 \implies 2$~: $A$ est inversible alors par définition il existe une matrice $B \in \Mn{n}{\K}$ telle que $AB=BA=I_n$. Soit $v$ l'endomorphisme canoniquement associée à $B$. Ainsi $\Mat(u \circ v) = \Mat(v \circ u) =AB=BA=I_n$. Donc $v \circ u=u \circ v=\Id$. Alors $u \in \GL{\K^n}$.
+
+  $2 \implies 1$~: Comme $u$ est inversible, il existe un endomorphisme $v \in \Endo{\K^n}$ tel que $u \circ v=v \circ u=\Id$. Soit alors $B$ la matrice de $v$ dans la base canonique. Alors
+  \begin{equation}
+    AB=\Mat(u) \Mat(v)=\Mat(u \circ v)=\Mat(\Id)
+  \end{equation}
+  alors $AB=I_n$ et $A \in \GLn{n}{\K}$.
+
+  $3 \implies 2$~: Soit $v$ l'endomorphisme canoniquement associé à $B$ alors $u\circ v=\Id$ est bijectif donc surjectif. Alors $u$ est surjectif. Or $u$ est un endormorphisme en dimension finie. Donc $u$ est bijectif.
+
+  $4 \implies 2$~: Soit $v$ l'endomorphisme canoniquement associé à $B$ alors $v\circ u=\Id$ est bijectif donc injectif. Alors $u$ est injectif. Or $u$ est un endormorphisme en dimension finie. Donc $u$ est bijectif.
+\end{proof}
+
+\begin{theo}
+  L'application
+  \begin{equation}
+    \fonction{\tilde{\Phi}}{\GL{\K^n}}{\GLn{n}{\K}}{u}{\Mat_{\E_c}(u)}
+  \end{equation}
+  est un isomorphisme de groupes. Particulièrement pour toute isomorphisme $u \in \GL{\K^n}$ on a $\tilde{\Phi}(u^{-1})=\tilde{\Phi}(u)^{-1}$.
+\end{theo}
+\begin{proof}
+  L'application $\tilde{\Phi}$ est bien définie. Elle est injective puisque c'est une restriction de $\Phi$. Elle est surjective car pour tout $A \in \GLn{n}{\K}$ l'endomorphisme canoniquement associée à $A$ est dans $\GL{\K^n}$. De plus pour tous isomorphismes $u$ et $v$ de $\GL{\K^n}$ on a
+\begin{equation}
+  \tilde{\Phi}(v \circ u)= \tilde{\Phi}(v) \cdot \tilde{\Phi}(u).
+\end{equation}
+ $\tilde{\Phi}$ est un isomorphisme de groupes.
+\end{proof}
+
+\emph{Moyen pratique pour déterminer si une matrice est inversible}
+
+Soit $A \in \Mnp{n}{k}{\K}$ et $u$ l'endomorphisme canoniquement associé. D'après ce qui précéde,
+\begin{align}
+  A \in \GLn{n}{\K} & \iff u \text{~est surjectif}\\
+  & \iff \forall y \in \K^n \ \exists x \in \K^n \quad y=u(x)\\
+  & \iff \forall Y \in \Mnp{n}{1}{\K} \ \exists X \in \Mnp{n}{1}{\K} \quad Y=AX.
+\end{align}
+C'est un système d'équations linéaires à $n$ équations et $n$ inconnues.
+\begin{equation}
+  Y=AX \iff \begin{cases} y_1 = \sum_{k=1}^n a_{1k} x_k \\ \ldots \\ y_n = \sum_{k=1}^n a_{nk} x_k \end{cases}.
+\end{equation}
+
+\subsection{Sous anneau des matrices diagonales et triangulaires}
+
+\subsubsection{Définition}
+
+Soient un naturel $n$ et $A=(a_{ij}) \in \Mn{n}{\K}$. On dit que~:
+\begin{enumerate}
+\item $A$ est diagonale si et seulement si pour tout $(i,j) \in \intervalleentier{1}{n} ^2$ on a $i \neq j \implies a_{ij}=0$. On note $A=\text{diag}(a_{11},\ldots,a_{nn})$. L'ensemble des matrices diagonales de $\Mn{n}{\K}$ est $\Dr_n(\K)$.
+\item $A$ est triangulaire supérieure si et seulement si  pour tout $(i,j) \in \intervalleentier{1}{n} ^2$ on a $i > j \implies a_{ij}=0$. L'ensemble des matrices diagonales de $\Mn{n}{\K}$ est $T_n^s(\K)$.
+\item $A$ est triangulaire inférieure si et seulement si  pour tout $(i,j) \in \intervalleentier{1}{n} ^2$ on a $i < j \implies a_{ij}=0$. L'ensemble des matrices diagonales de $\Mn{n}{\K}$ est $T_n^i(\K)$.
+\end{enumerate}
+
+\subsubsection{Propriétés}
+
+\begin{prop}
+  \begin{equation}
+    T_n^s(\K) \bigcap T_n^i(\K) = \Dr_n(\K)
+  \end{equation}
+\end{prop}
+\begin{prop}
+  $\Dr_n(\K)$, $T_n^s(\K)$ et $T_n^i(\K)$ sont des sous espaces vectoriels de $\Mn{n}{\K}$. De plus
+  \begin{equation}
+    \dim(\Dr_n(\K)) = n \quad \dim(T_n^s(\K))=\dim(T_n^i(\K))=\frac{n(n+1)}{2}
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Soit une matrice diagonale $A=\text{diag}(a_{11},\ldots,a_{nn})$, alors $A=\sum_{i=1}^n a_{ii}E_{ii}$. Ainsi $\Dr_n(\K)=\VectEngendre{(E_{ii})_{1\leq i\leq n}}$ et la famille $(E_{ii})_{1\leq i\leq n}$ est libre (puisque c'est une sous famille de la base canonique). Cette famille est donc une base de $\Dr_n(\K)$ et alors on a bien la dimension $\dim(\Dr_n(\K)) = \Card((E_{ii})_{1\leq i\leq n})=n$.
+
+  De la même manière, on a  $T_n^s(\K) = \VectEngendre{(E_{ij})_{1\leq i \leq j \leq n}}$. De la même manière la famille génératrice est une sous famille de la base canonique. Donc elle est libre. Finalement c'est une base. Le cardinal de cette famille vaut $\frac{n(n-1)}{2}+n=\frac{n(n+1)}{2}$.
+
+  Idem pour $T_n^s(\K)$. 
+\end{proof}
+
+\begin{prop}
+  $\Dr_n(\K)$, $T_n^s(\K)$ et $T_n^i(\K)$ sont des sous anneaux de $\Mn{n}{\K}$. De plus $\Dr_n(\K)$ est commutatif, $T_n^s(\K)$ et $T_n^i(\K)$ ne sont ni commutatifs ni intègre (si $n \geq 2$).
+\end{prop}
+\begin{proof}
+  Ce sont déjà des sous espaces vectoriels, alors il s'agit de vérifier s'ils sont stables par la multiplication et si l'élémentneutre $I_n$ leurs appartient.
+
+  Clairement, $I_n$ est diagonale donc triangulaire supérieure et inférieure. 
+
+  Soient ensuite deux matrices $A$ et $B$ diagonales et on note $C=AB$. Pour tous $i$ et $j$ dans $\intervalleentier{1}{n}$ on a
+  \begin{equation}
+    \begin{cases}
+      i \neq j & c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}=a_{ii}b_{ij}=0 \\
+      i=j & c_{ii}=a_{ii}b_{ii}
+    \end{cases}
+  \end{equation}
+  Alors $C$ est diagonale. De plus pour tout $i \in \intervalleentier{1}{n}$ on a $c_{ii}=b_{ii}a_{ii}$ donc $AB=C=BA$. 
+  
+  Soient ensuite deux matrices $A$ et $B$ triangulaire supérieures et on note $C=AB$. Pour tous $i$ et $j$ dans $\intervalleentier{1}{n}$ on a si $i > j$
+  \begin{equation}
+    c_{ij}=\sum_{k=1}^n a_{ik} b_{kj} = \sum_{k=1}^{i-1} a_{ik} b_{kj} + \sum_{k=i}^{n} a_{ik} b_{kj}
+  \end{equation}
+  Si $k \in \intervalleentier{1}{i-1}$ alors $a_{ik}=0$ et si $k \in \intervalleentier{i}{n}$ alors $b_{ik}=0$. D'où $c_{ij}=0$. Alors $C$ est triangulaire supérieure.
+
+  La preuve est analogue pour la stabilité des matrices triangulaires inférieures.
+\end{proof}
+
+\begin{prop}
+  Soit une matrice $A \in \mathcal{A}$ où $\mathcal{A}=\Dr_n(\K)$ ou $T_n^s(\K)$ ou $T_n^i(\K)$. Ainsi, $A$ est inversible dans $\mathcal{A}$ si et seulement si pour tout $i \in \intervalleentier{1}{n}$ $a_{ii} \neq 0$.
+\end{prop}
+\begin{proof}
+  Dans le premier cas, on suppose que $\mathcal{A}=\Dr_n(\K)$. Alors
+  \begin{align}
+    A \text{~est inversible dans } \Dr_n(\K) &\iff \exists B \in \Dr_n(\K) \ AB=BA=I_n \\
+    &\iff \exists B = \text{diag}(b_{11}, \ldots, b_{nn}) \ \forall i \in \intervalleentier{1}{n} \ a_{ii}b_{ii}=1\\
+    &\iff \forall i \in \intervalleentier{1}{n} \ a_{ii} \in \uinv{\K}\\
+    &\iff \forall i \in \intervalleentier{1}{n} \ a_{ii} \neq 0.
+  \end{align}
+
+  Dans un deuxième cas, on suppose que $\mathcal{A}=T_n^s(\K)$. Alors si on suppose que $A$ est inversible dans $T_n^s(\K)$ alors il existe une matrice triangulaire supérieure $B$ telle que $AB=BA=I_n$. Alors pour tout $i \in \intervalleentier{1}{n}$
+  \begin{align}
+    1=\sum_{k=1}^n a_{ik}b_{ki} &= \sum_{k=1}^{i-1}a_{ik}b_{ki} + a_{ii}b_{ii} + \sum_{k=i+1}^{n}a_{ik}b_{ki} \\
+    &=a_{ii}b_{ii}
+  \end{align}
+   Alors $a_{ii} \in \uinv{\K}$ et donc $a_{ii} \neq 0$.
+
+   Supposons maintenant que pour tout $i \in \intervalleentier{1}{n}$, $a_{ii}$ est non nul. Il s'agit de montrer que $A \in \GLn{n}{\K}$ et que $A^{-1}$ est triangulaire supérieure. Soient $\E_c$ la base canonique de $\K^n$ et $u$ l'endomorphisme canoniquement associé à $A$. 
+
+   Alors pour tout $j \in \intervalleentier{1}{n}$, on a $u(e_j) = \sum_{i=1}^n a_{ij}e_i$. C'est-à-dire
+   \begin{align}
+     u(e_1) &=a_{11} e_{1} \\
+     u(e_2) &=a_{11} e_{1} + a_{22} e_2\\     
+     \ldots \\
+     u(e_n) &= a_{1n}e_1 + \dotsb + a_{nn}e_n.
+   \end{align}
+   Alors comme les $a_{ii}$ sont non nuls, on peut inverser le système d'équation et trouver les $e_i$ en fonction des $u(e_i)$. Alors pour tout $j \in \intervalleentier{1}{n}$ on a $e_j \in \VectEngendre(u(e_1), \ldots, u(e_j))$. La famille $u(\E_c)$ est génératrice de $\K^n$ et elle est de cardinal $n$, c'est donc une base de $\K^n$. Ainsi $u$ est une application bijective. Alors au final $A$ est inversible.
+   \begin{equation}
+     A^{-1} = \Mat_{\E_c}(u^{-1}) \quad \forall j \in \intervalleentier{1}{n} \ u^{-1}(e_j) \in \VectEngendre(e_1, \ldots, e_j).
+   \end{equation}
+   Alors $A^{-1}$ est triangulaire supérieure.
+
+   La démonstration est similaire pour la stabilité des matrices triangualires inférieures.
+\end{proof}
+
+\subsection{Transposition}
+
+Soient deux naturel non nuls $n$ et $p$.
+
+\begin{defdef}
+  Soit une matrice $A=(a_{ij}) \in \Mnp{n}{p}{\K}$. On définit une matrice appelée transposée de $A$, notée $A^\top \in \Mnp{p}{n}{\K}$, par $A^\top=(\alpha_{ij})\in \Mnp{p}{n}{\K}$ telle que pour tout couple $(i,j) \in \intervalleentier{1}{p} \times \intervalleentier{1}{n}$ on ait $\alpha_{ij}=a_{ji}$.
+\end{defdef}
+
+\emph{Exemple}~: $\begin{pmatrix}1 & 3 \\ 2 & 6\end{pmatrix}^\top = \begin{pmatrix}1 & 2 \\ 3 &6\end{pmatrix}$
+
+\begin{prop}
+  Pour toutes matrices $A$ et $B$ de $\Mnp{n}{p}{\K}$ et tout scalaire $\lambda$ on a~:
+  \begin{enumerate}
+  \item $(A^\top)^\top=A$;
+  \item $(\lambda A)^\top=\lambda A^\top$;
+  \item $(A+B)^\top=A^\top+B^\top$;
+  \item pour toute matrice $A$ de $\Mnp{n}{p}{\K}$ et $B$ de $\Mnp{m}{n}{\K}$ $(BA)^\top=A^\top B^\top$.
+  \end{enumerate}
+\end{prop}
+\begin{proof}
+  On démontre le dernier point. On note $A=(a_{ij})$, $A^\top =(\alpha_{ij})$, $B=(b_{ij})$ et $B^\top =(\beta_{ij})$. On définit $C=A^\top B^\top = (c_{ij})$ et $D=BA=(d_{ij})$. Alors pour tout $i \in \intervalleentier{1}{p}$ et tout $j \in \intervalleentier{1}{m}$ on a
+  \begin{equation}
+    c_{ij}=\sum_{k=1}^m \alpha_{ik}\beta_{kj}=\sum_{k=1}^m a_{ki} b_{jk}=d_{ji}
+  \end{equation}
+  Alors $C=D^\top$.
+\end{proof}
+
+\begin{prop}
+  Soit $A \in \GLn{n}{\K}$, alors $A^\top \in \GLn{n}{\K}$ et
+  \begin{equation}
+    (A^\top)^{-1} = (A^{-1})^\top.
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Si $A \in \GLn{n}{\K}$, alors $A^{-1}$ existe et $AA^{-1}=I_n$ et en prenant la transposée, on a $(A^{-1})^\top A^\top=I_n$. Alors $A^\top$ est inversible et $(A^\top)^{-1} = (A^{-1})^\top$.
+\end{proof}
+
+\subsection{Matrices symétriques et antisymétriques}
+
+Soit un naturel non nul $n$ et $A \in \Mn{n}{\K}$. La matrice $A$ est dite
+\begin{itemize}
+\item symétrique si et seulement si $A^\top=A$;
+\item antisymétrique si et seulement si $A^\top=-A$.
+\end{itemize}
+
+L'ensemble des matrices de $\Mn{n}{\K}$ symétriques est noté $\SN{n}{\K}$ et celui des matrices antisymétriques $\AN{n}{\K}$.
+
+\begin{theo}
+  Les ensembles $\Mn{n}{\K}$ et $\SN{n}{\K}$ sont des sous espaces vectoriels supplémentaires de $\Mn{n}{\K}$.
+  \begin{equation}
+    \Mn{n}{\K}=\SN{n}{\K} \oplus \AN{n}{\K}.
+  \end{equation}
+  De plus toute matrice $A \in \Mn{n}{\K}$ se décompose comme
+  \begin{equation}
+    A = \frac{1}{2} (A+A^\top) + \frac{1}{2} (A-A^\top)
+  \end{equation}
+  avec $\frac{1}{2} (A+A^\top) \in \SN{n}{\K}$ et $\frac{1}{2} (A-A^\top) \in \AN{n}{\K}$.
+\end{theo}
+\begin{proof}
+  L'application $\fonction{s}{\Mn{n}{\K}}{\Mn{n}{\K}}{A}{A^\top}$ est un endomrophisme involutif. C'est donc une symétrie. On voit $\SN{n}{\K}=\Inv{s}$ et $\AN{n}{\K}=\Opp{s}$. Alors ce sont des sous espaces vectoriels supplémentaires. Soit $p$ le projecteur associé à $s$. On a $p=\frac{1}{2}(s+\Id)$ et $q=\Id-p$. Alors $\SN{n}{\K}=\Image(p)$ et $\AN{n}{\K}=\Ker(p)=Image(q)$.
+
+  Soit une matrice $A \in \Mn{n}{\K}$. Alors
+  \begin{align}
+    A&= p(A)+ (A-p(A))\\
+    &= p(A)+q(A)
+  \end{align}
+  La famille $p(E_{ij})_{1\leq i,j \leq n}$ est génératrice de $\Image(p)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $p(E_{ij})=p(E_{ji})$. Alors $p(E_{ij})_{1\leq i \leq j \leq n}$ est génératrice de $\Image(p)=\SN{n}{\K}$. Donc $\dim(\SN{n}{\K}) \leq \frac{n(n+1)}{2}$. De même $q(E_{ij})_{1\leq i,j \leq n}$ est génératrice de $\Image(q)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $q(E_{ij})=-q(E_{ji})$, en particulier $Q(E_{ii})=0$. Alors $q(E_{ij})_{1\leq i \leq j \leq n}$ est génératrice de $\Image(q)=\AN{n}{\K}$. Donc $\dim(\AN{n}{\K}) \leq \frac{n(n-1)}{2}$. Or puisqu'ils sont supplémentaires, on a l'égalité dans les dimensions.
+\end{proof}
+
+\emph{Exemple pertinent}~: Pour toute matrice $M \in \Mn{n}{\K}$, les matrices $MM^\top$ et $M^\top M$ sont symétriques. C'est la base de la décomposition en valeurs singulières.
+
+\section{Matrice d'une application linéaire}
+
+Soient deux entiers non nuls $n$ et $p$. Soit un $\K$-espace vectoriel $E$ de dimension finie égale à $p$ et $\E=(e_1,\ldots,e_p)$ une base de $E$. Soit un $\K$-espace vectoriel $F$ de dimension finie égale à $n$ et $\F=(f_1,\ldots,f_n)$ une base de $F$.
+
+\subsection{Matrice d'une application linéaire, étant données deux bases}
+
+\subsubsection{Définitions (Rappel)}
+
+Soit $u \in \Lin{E}{F}$. On appelle matrice de $u$ dans les bases $\E$ et $\F$ (de $E$ et $F$). On note $\Mat_{\E,\F}(u)=(a_{ij})\in\Mn{n}{p}{\K}$ la matrice dont la $j$\ieme{} colonne représente les coordonnées de $u(e_j)$ dans $\F$. C'est-à-dire
+\begin{equation}
+  \forall j \in \intervalleentier{1}{p} \quad u(e_j) = \sum_{i=1}^n a_{ij} f_i.
+\end{equation}
+
+\begin{prop}
+  Soient $u \in \Lin{E}{F}$, $x \in E$ et $y=u(x)$. Soient $A=\Mat_{\E,\F}(u)$, $X$ le vecteur colonne des coordonnées de $x$ dans $\E$ et $Y$ le vecteur colonne des coordonnées de $y$ dans $\F$. Alors $Y=AX$.
+\end{prop}
+
+\emph{Remarque}~: Dans le cas où $E=F$ et $\E=\F$, on note $\Mat_{\E}(u)=\Mat_{\E,\E}(u) \in \Mn{p}{\K}$.
+
+\subsubsection{Propriétés}
+
+Ces propriétés se démontrent de manière similaire que dans le cas ``base canonique''.
+\begin{enumerate}
+\item L'application $\fonction{\Mat_{\E,\F}}{\Lin{E}{F}}{\Mnp{n}{p}{\K}}{u}{\Mat_{\E,\F}(u)}$ est un isomorphisme de $\K$-espaces vectoriels. Pour toute matrice $A \in \Mnp{n}{p}{\K}$ il existe une unique application $u \in \Lin{E}{F}$ telle que $A=\Mat_{\E,\F}(u)$.
+\item Soit un troisième espace vectoriel $G$ de dimension finie non nulle $m$. Soit $\Gb=(g_a,\ldots,g_m)$ une base de $\Gb$. Soient $u \in \Lin{E}{F}$, $v \in \Lin{F}{G}$ et $v \circ u \in \Lin{E}{G}$. Alors
+  \begin{equation}
+    \Mat_{\E,\G}(v \circ u) = \Mat_{\F,\G}(v) \Mat_{\E,\F}(u).
+  \end{equation}
+\item L'application $\fonction{\Mat_\E}{\Endo{E}}{\Mn{n}{\K}}{u}{\Mat_\E(u)}$ est un isomorphismes d'espaces vectoriels et d'anneaux.
+\item L'application $\fonction{\GL\Mat_\E}{\GL{E}}{\GLn{n}{\K}}{u}{\Mat_\E(u)}$ est un isomorphismes de groupes et en particulier
+  \begin{equation}
+    \forall u \in \GL{E} \quad \GL\Mat_\E(u^{-1})=\GL\Mat_\E(u)^{-1}.
+  \end{equation}
+\end{enumerate}
+
+\subsubsection{Théorème de caractérisation des endomorphismes d'espaces vectoriels par les matrices}
+
+\begin{theo}
+  On suppose que $E$ et $F$ ont la même dimension $n$ non nulle. Soit $u \Lin{E}{F}$. Il y a équivalence entre les assertions suivantes~:
+  \begin{enumerate}
+  \item $u$ est un isomorphisme de $E$ dans $F$;
+  \item pour toute base $\E$ de $E$ et toute base $\F$ de $F$,
+    \begin{equation}
+      \Mat_{\E,\F}(u) \in \GLn{n}{\K};
+    \end{equation}
+  \item il existe une base $\E$ de $E$ et une base $\F$ de $F$,
+    \begin{equation}
+      \Mat_{\E,\F}(u) \in \GLn{n}{\K}.
+    \end{equation}
+  \end{enumerate}
+\end{theo}
+\begin{proof}
+  $1 \implies 2$ On dispose de l'application $u^{-1} \in \GL(F)$. On sait que $u^{-1} \circ u = \Id$. Pour toutes bases de $\E$ de $E$ et $\F$ de $F$, on a
+  \begin{equation}
+    \Mat_{\E,\E}(u^{-1} \circ u)=\Mat_{\F,\E}(u^{-1}) \Mat_{\E,\F}(u)=I_n.
+  \end{equation}
+  Alors $\Mat_{\E,\F}(u) \in \GLn{n}{\K}$.
+
+$2 \implies 3$ Comme $E$ et $F$ sont de dimension finie, ils admettent des bases.
+
+$3 \implies 1$ Soit $B=(\Mat_{\E,\F}(u))^{-1}$ et soit $v$ l'unique application linéaire de $F$ dans $E$ telle que $B=\Mat_{\F,\E}(v)$. Alors
+\begin{equation}
+  I_n = \Mat_{\E,\F}(u) \cdot B = B \cdot \Mat_{\E,\F}(u),
+\end{equation}
+et comme $B=\Mat_{\F,\E}(v)$, on a
+\begin{equation}
+  I_n = \Mat_{\F,\F}(u \circ v) = \Mat_{\E,\E}(v \circ u)
+\end{equation}
+Alors $u \circ v = \Id_F$ et $v \circ u = \Id_E$. L'application $u$ est bijective.
+\end{proof}
+
+\subsection{Matrice dans une base des coordonnées d'une famille finie de vecteurs}
+
+\subsubsection{Définitions}
+
+\begin{defdef}
+  Soit un naturel $q$ non nul et $\X=(x_i)_{1 \leq i \leq q} \in E^q$. On définit la matrice de $\X$ dans la base $\E$ de $E$, notée $\Mat_\E(\X)$ par
+  \begin{equation}
+    \Mat_{\E}(\X) =
+    \begin{pmatrix}
+      a_{11} & \ldots & a_{1q} \\
+      \vdots & a_{ij} & \vdots \\
+      a_{p1} & \ldots & a_{pq}
+    \end{pmatrix}
+  \end{equation}
+
+  La $j$\ieme{} colonne de $\Mat_{\E}(\X)$ est composée de coordonnées de $x_j$ dans la base $\E=(e_1, \ldots, e_p)$. Pour tout $j \in \intervalleentier{1}{q}$ on a
+  \begin{equation}
+    x_j = \sum_{i=1}^p a_{ij}e_i.
+  \end{equation}
+  $\Mat_{\E}(\X) \in \Mnp{p}{q}{\K}$. Particulièrement qi $q=1$, $\X=(x)$ avec $x \in E$, et alors $\Mat_{\E}(\X)$ est la matrice colonne des coordonnées du vecteur $x$ dans la base $\E$.
+\end{defdef}
+
+\subsubsection{Caractérisation des bases parmi les matrice}
+
+\begin{theo}
+  Soit $\X=(x_i)_{1 \leq i\leq p}$ une famille de $p$ vecteurs de $E$ ($p=\dim E$). Il y a équivalence entre les assertions suivantes~:
+  \begin{enumerate}
+  \item $\X$ est une base de $E$;
+  \item pour toute base $\E$ de $E$, $\Mat_\E(\X) \in \GLn{p}{\K}$;
+  \item Il existe une base $\E$ de $E$ telle que $\Mat_\E(\X) \in \GLn{p}{\K}$.
+  \end{enumerate}
+\end{theo}
+\begin{proof}
+  $1 \implies 2$~: Soit $E$ une base de $E$. On définit $u$ l'unique application linéaire de $E$ dans $E$ telle que $u(\E)=\X$. Comme $\E$ et $\X$ sont deux bases de $E$, $u$ est bijective et $\Mat_\E(\X)=\Mat_\E(u) \in \GLn{p}{\K}$.
+
+  $2 \implies 3$~: L'espace vect$E$ est de dimension finie, donc il admet au moins une base.
+
+  $3 \implies 1$~: Supposons qu'il existe une base $\E$ de $E$ telle que $\Mat_\E(\X) \in \GLn{p}{\K}$. Soit $u$ l'unique endomorphisme de $E$ tel que $\Mat_\E(u)=\Mat_\E(\X)$. Cette matrice est inversible donc $u$ est aussi inversible. Puisque $u(\E)=\X$, $u \in \GL{E}$, et $\E$ est une base de $E$ alors $\X$ est une base de $E$.
+\end{proof}
+
+\subsection{Matrice dans une base d'une famille finie de formes linéaires}
+
+Soient un naturel $q$ non nul et $\F=(f_1, \ldots f_q) \in (E^*)^q$. On définit la matrice de la famille des formes linéaires $\F$ dans la base $\E='e_1, \ldots, e_p)$ par~:
+\begin{equation}
+  \Mat_\E(\F) = (f_i(e_j)) \in M_{q,p}(\K).
+\end{equation}
+
+\subsection{Matrices de passage, formule de changement de base}
+
+Soient $E$ un $\K$-espace vectoriel de dimension $n \in \N^*$ et deux bases de $E$ $\E=(e_1, \ldots, e_n)$ $\E'=(e'_1, \ldots, e'_n)$. 
+
+\subsubsection{Matrices de passages}
+
+\begin{defdef} 
+  On appelle matrice de passage de $\E$ à $\E'$ et on note $\P_{\E,\E'}$, la matrice
+  \begin{equation}
+    \P_{\E,\E'} = \Mat_\E(\E') \in \Mn{n}{\K}.
+  \end{equation}
+  C'est la matrice carrée dont les colonnes représentent les coordonnées des vecteurs de $\E'$ dans la base $\E$.
+\end{defdef}
+
+\begin{prop}
+  \begin{enumerate}
+  \item $\P_{\E,\E'}$ est inversible car $\E$ et $\E'$ sont inversibles.
+  \item $\P_{\E,\E'} = \Mat_{\E',\E}(\Id_E)$ puisque pour tout $j$, $j$\ieme{} vecteur colonne de la matrice est le vecteur des coordonnées de $e'_j=\Id_E(e'_j)$ dans la base $E$.
+  \item Si $\E''$ est une troisième base de $E$,
+    \begin{equation}
+      \P_{\E,\E''}=\P_{\E,\E'} \cdot \P_{\E',\E''}.
+    \end{equation}
+    \begin{proof}
+      On sait que $\P_{\E,\E''} = \Mat_{\E'',\E}(\Id_E)$, alors
+      \begin{align}
+        \P_{\E,\E'} \cdot \P_{\E',\E''} &= \Mat_{\E',\E}(\Id_E) \Mat_{\E'',\E'}(\Id_E) \\
+        &= \Mat_{\E'',\E}(\Id_E \circ \Id_E) \\
+        &=\P_{\E,\E''}
+      \end{align}
+    \end{proof}
+  \item $(\P_{\E,\E'})^{-1} = \P_{\E',\E}$.
+    \begin{proof}
+      D'après le troisième point, on a $\P_{\E,\E'} \P_{\E',\E}=\P_{\E,\E}=I_n$.
+    \end{proof}
+  \end{enumerate}
+\end{prop}
+
+\subsubsection{Effet d'un changement de base sur la matrice colonne d'un vecteur}
+
+\begin{theo}
+  Soient $\E$ une base de $E$ (``l'ancienne'') et $\E'$ une autre base de $E$ (``la nouvelle''). 
+
+Soit $P=\P_{\E,\E'}$ la matrice de passage de l'ancienne à la nouvelle base. Soit un vecteur $x \in E$, $X=\Mat_\E(x)$, $X'=\Mat_{\E'}(x)$. 
+
+Alors $X=PX'$, \danger les anciennes coordonnées en fonction des nouvelles.
+\end{theo}
+\begin{proof}
+  Pour tout vecteur $x \in E$, on a $\Id_E(x)=x$. On a $\P_{\E,\E'} = \Mat_{\E,\E'}(\Id_E)$ alors $X = \Mat_{\E,\E'}(\Id_E) X'$ c'est-à-dire $X=PX'$.
+\end{proof}
+
+\subsubsection{Effet d'un changement de base sur la matrice d'une application linéaire}
+
+\begin{theo}
+  Soient un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle et un autre $\K$-espace vectoriel $F$ de dimension finie $n$ non nulle. Soient $\E$ et $\E'$ des bases de $E$, $\F$ et $\F'$ des bases de $F$. Soient les matrices de passages $P=\P_{\E,\E'} \in \GLn{p}{\K}$ et $Q=\P_{\F,\F'} \in \GLn{n}{\K}$. Soit une application linéaire $u \in \Lin{E}{F}$ telle que $A=\Mat_{\E,\F}(u)$ et $A'=\Mat_{\E',\F'}(u)$. Alors
+  \begin{equation}
+    A'=Q^{-1}AP.
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Soit  $u \in \Lin{E}{F}$, alors $u \circ \Id_E = u = \Id_F \circ u$. Donc $\Mat_{\E',\F}(u \circ \Id_E) = \Mat_{\E',\F}(\Id_F \circ u)$ Alors en développant $\Mat_{\E,\F}(u) \Mat_{\E',\E}(\Id_E) =\Mat_{\F',\F}(\Id_F) \Mat_{\E',\F'}(u) $. Donc au final $AP=QA'$ et comme $Q$ est inversible on a $A'=Q^{-1}AP$.
+\end{proof}
+
+\begin{theo}
+   Soient un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle, $\E$ et $\E'$ des bases de $E$, et $u$ un endomorphisme de $E$ tel que $A=\Mat_{\E}(u)$ et $A'=\Mat_{\E'}(u)$ alors $A'=P^{-1}AP$.
+\end{theo}
+\begin{proof}
+  C'est un cas particulier du théorème précédent.
+\end{proof}
+
+\section{Rang d'une matrice}
+
+Soient deux naturel non nuls $n$ et $p$, et une matrice $A \in \Mnp{n}{p}{\K}$.
+
+\subsection{Rang du système des vecteurs colonnes}
+
+On note $A=(a_{ij})_{1\leq i\leq n, 1\leq j\leq p}$ et pour tout $j \in \intervalleentier{1}{p}$ le vecteur colonne $j$ est $c_j=(a_{ij})_{1 \leq i \leq n} \in \K^n$. La famille des vecteurs colonnes de la matrice $A$ est $\courbe_A=(c_j)_{1 \leq j \leq p} \in (\K^n)^p$.
+
+\begin{defdef}
+  On appelle rang de la matrice $A$ et on note $\rg(A)$  le rang de la famille de vecteur $\courbe_A$ des colonnes de $A$.
+\end{defdef}
+
+On en déduit que $\rg(A) \leq \min(n,p)$ car $\courbe_A$ est une famille de $p$ vecteurs de $\K^n$. De plus,
+\begin{align}
+  \rg(A) = 0 &\iff \dim \VectEngendre(\courbe_A)=0 \\
+  &\iff \forall j \in \intervalleentier{1}{p} c_j = 0_{\K^n} \\
+  \iff A=0
+\end{align}
+
+\begin{prop}
+  Soit un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle, $\E$ une base de $E$ et $\X=(x_i)_{1\leq i\leq n}$ une famille de vecteur de $E$. Alors
+  \begin{equation}
+    \rg(\X)=\rg(\Mat_\E(\X)).
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Soit $u: E \rightarrow \K^p$ qui à $x \in E$ associe ses coordonnées dans la base $\E$. C'est donc un isomorphisme de $E$ sur $\K^p$. Pour tout $j \in \intervalleentier{1}{n}$ on a $u(x_j)=c_j$ où les $c_j$ sont les colonnes de $\Mat_\E(\X)$. On a
+  \begin{equation}
+    \rg(\Mat_\E(\X)) = \rg(c_1,\ldots,c_n) = \rg(u(x_1),\ldots,u(x_n))=\rg(X),
+  \end{equation}
+  puisque $u$ est bijective.
+\end{proof}
+
+\begin{corth}[Première interprétation]
+  Le rang d'une matrice est égal au rang de toute famille de vecteurs représentée dans une base par cette matrice.
+\end{corth}
+
+\subsection{Rang de l'application linéaire associée}
+
+\begin{theo}
+  Soient un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle et un autre $\K$-espace vectoriel $F$ de dimension finie $n$ non nulle. Soient $\E$ et $\F$ et $\F'$ deux bases respectives de $E$ et $F$. Soit $u \in \Lin{E}{F}$. Alors
+  \begin{equation}
+    \rg(u) = \rg(\Mat_{\E,\F}(u))
+  \end{equation}
+\end{theo}
+\begin{proof}
+  On a
+  \begin{align}
+    \rg(u) = \dim\Image(u) &= \dim \VectEngendre u(\E) \\
+    &= \rg(u(\E))\\
+    &=\rg(\Mat_{\F}(u(\E))\\
+    &=\rg(\Mat_{\E,\F}(u)).
+  \end{align}
+\end{proof}
+
+\begin{corth}[Deuxième interprétation]
+  Le rang d'une matrice est le rang de toute application linéaire représentés par cette matrice dans des bases.
+\end{corth}
+
+\begin{corth}
+  Soit $A \in \Mn{n}{\K}$, alors $A$ est inversible si et seulement si $\rg(A)=n$.
+\end{corth}
+\begin{proof}
+  Soit $u$ l'endomorphisme canoniquement associé à $A$. Alors
+  \begin{align}
+    A \in \GLn{n}{\K} &\iff u \text{~bijectif}\\
+    &\iff u \text{~surjectif}\\
+    &\iff \Image(u)=E\\
+    &\iff \rg(u) = n\\
+    &\iff \rg(A) = n.
+  \end{align}
+\end{proof}
+
+\subsection{Matrice $J_r$}
+
+Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ tel que $r \leq \min(n,p)$. Posons
+\begin{equation}
+  J_{n,p,r}=
+  \begin{pmatrix}
+    I_r & 0_{r,p-r} \\ 0_{n-r,r} & 0_{n-p,p-r}
+  \end{pmatrix}.
+\end{equation}
+
+\begin{prop}
+  \begin{equation}
+    \rg(J_{n,p,r})=r.
+  \end{equation}
+\end{prop}
+
+\begin{theo}
+  Soit une matrice $A \in \Mnp{n}{p}{\K}$ et un un naturel $r$ non nul tel que $r \leq \min(n,p)$. Alors $r=\rg(A)$ si et seulement s'il existe deux matrices $U \in \GLn{n}{\K}$ et $V \in \GLn{p}{\K}$ telles que $A=UJ_{n,p,r}V$.
+\end{theo}
+\begin{proof}
+  $\implies$ Soit l'application linéaire $u$ de $\K^p$ vers $\K^n$ canoniquement associée à $A$. Nous allons construire des bases de $\K^p$ et $\K^n$ dans lesquelles la matrice de $u$ sera $J_{n,p,r}$. 
+  
+  Comme $\rg(u)=\rg(A)=r$, d'après le théorème du rang, on a
+  \begin{equation}
+    \dim \K^p = \rg(u)+\dim \Ker(u),
+  \end{equation}
+  alors $\dim \Ker(u) = p-r$. Soit $(e_{r+1}, \ldots, e_p)$ une base de $\Ker(u)$. Par théorème de la base incomplète, on peut compléter cette famille libre de $\K^p$ en base de $\K^p$ : $(e_1, \ldots, e_r, e_{r+1}, \ldots, e_p)$. Pour tout $i \in \intervalleentier{1}{r}$, on pose $f_i = u(e_i)$. Alors
+  \begin{align}
+    \rg(f_i)_{1 \leq i \leq r} &= \rg(u(e_i))_{1 \leq i \leq r}\\
+    &= \rg(u(e_i))_{1 \leq i \leq p}\\
+    &= \rg(u(\E))\\
+    &=\rg(u)=r.
+  \end{align}
+  Donc $(f_i)_{1\leq i\leq r}$ est une famille libre de $\K^p$ (voir proposition~\ref{prop:caracrangbase}). On peut donc compléter cette famille en une base $\F=(f_1, \ldots, f_r,f_{r+1}, \ldots, f_n)$. Alors pour tout $i \in \intervalleentier{1}{r}$ $u(e_i)=f_i$, et pour tout $i \in \intervalleentier{r+1}{p}$ $u(e_i)=0$. Donc $\Mat_{\E,\F}(u) = J_{n,p,r}$.
+
+  On a $A=\Mat_{\E_c,\F_c}(u)$. Soient $P=\P_{\E_c,\E} \in \GLn{p}{\K}$ et $Q=\P_{\F_c,\F} \in \GLn{n}{\K}$. Alors $J_{n,p,r}=Q^{-1}AP$, c'est-à-dire $A=QJ_{n,p,r}P^{-1}$. En posant $U=Q$, $V=P^{-1}$ on a bien $A=U J_{n,p,r} V$.
+  
+  $\impliedby$  On définit les famille $\E$ et $\F$ de vecteurs respectives de $\K^p$ et $\K^n$ par~:
+  \begin{equation}
+    U=\Mat_{\F_c}(\F)=\P_{\F_c,\F} \quad V^{-1}=\Mat_{\E_c}(\E)=\P_{\E_c,\E}.
+  \end{equation}
+  Comme $U$ et $V^{-1}$ sont inversibles, $\E$ et $\F$ sont des bases respectives de $E$ et $F$. 
+
+  Soit $u$ l'unique application linéaire de $E$ vers $F$ telle que $\Mat_{\E,\F}(u)=J_{n,p,r}$. On voit déjà que $\rg(u)=r$. Ensuite on a
+  \begin{align}
+    A = U J_{n,p,r} V &= \P_{\F_c,\F} \Mat_{\E,\F}(u) (\P_{\E_c,\E})^{-1} \\
+    &=(\P_{\F,\F_c})^{-1} \Mat_{\E,\F}(u) \P_{\E,\E_c}.
+  \end{align}
+  La matrice $A$ est donc représentative de l'application $u$. Donc d'après la deuxième interprétation du rang on a $\rg(A)=\rg(u)=r$.
+\end{proof}
+
+ On a montré que toute application linéaire $u: E \rightarrow F$ de rang $r$ avec $\dim E=p$ et $\dim F=n$ peut être représentée dans des bases de $E$ et $F$ par la matrice $J_{n,p,r}$.
+
+\subsection{Rang de la transposée}
+
+\begin{theo}
+  Pour toute matrice $A \in \Mnp{n}{p}{\K}$, on a
+  \begin{equation}
+    \rg(A^\top)=\rg(A).
+  \end{equation}
+\end{theo}
+\begin{proof}
+  Soit $r=\rg(A)$, il existe deux matrices $U \in \GLn{n}{\K}$ et $V \in \GLn{p}{\K}$ telles que $A=U J_{n,p,r} V$. Alors 
+  \begin{equation}
+    A^\top = V^\top J_{n,p,r}^\top U^\top = V^\top J_{p,n,r} U^\top.
+  \end{equation}
+  Alors $\rg(A^\top)=\rg(A)$.
+\end{proof}
+
+\subsection{Rang d'un système de vecteurs lignes}
+
+On note pour tout toute matrice $A \in \Mnp{n}{p}{\K}$ et pour tout $i \in \intervalleentier{1}{n}$, $L_i=(a_{i1}, \ldots, a_{ip}) \in \K^p$ ety $\L_A=(L_i)_{1\leq i \leq n}$.
+\begin{prop}
+  Pour toute matrice $A \in \Mnp{n}{p}{\K}$, on a
+  \begin{equation}
+    \rg(\L_A)=\rg(A).
+  \end{equation}
+\end{prop}
+\begin{proof}
+  \begin{equation}
+    \rg(A)=\rg(A^\top)=\rg(\courbe_{A^\top})=\rg(\L_A).
+  \end{equation}
+\end{proof}
