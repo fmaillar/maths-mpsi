@@ -5,13 +5,13 @@
 \minilot
 \section{Groupe}
 \subsection{Notion de loi de composition interne}
-\subsubsection{Défintion}
+\subsubsection{Définition}
 \begin{defdef}
-  Soit E un ensemble quelconque, on appele loi de composition interne sur E toute application $*:E\times E \longmapsto E$. Pour $x,y \in E$ on note $x*y$.
+  Soit E un ensemble quelconque, on appelle loi de composition interne sur E toute application $*:E\times E \longmapsto E$. Pour $x,y \in E$ on note $x*y$.
 \end{defdef}
 \subsubsection{Partie stable par une loi de composition interne}
 \begin{defdef}
-  Soit $(E,*)$ un couple où E est un ensemble et $*$ une loi de composition interne sur E. On dit que c'est un magma. Soit $A$ une partie de $E$. On dit que la partie $A$ est stable pour la loi $*$ si et seulement si pour tout $x,y \in A$ $x*y \in A$. On dispose alors de la restriction $*_{A} : A\times A \longmapsto A$. On l'appele loi induite sur $A$ par la loi $*$.
+  Soit $(E,*)$ un couple où E est un ensemble et $*$ une loi de composition interne sur E. On dit que c'est un magma. Soit $A$ une partie de $E$. On dit que la partie $A$ est stable pour la loi $*$ si et seulement si pour tout $x,y \in A$ $x*y \in A$. On dispose alors de la restriction $*_{A} : A\times A \longmapsto A$. On l'appelle loi induite sur $A$ par la loi $*$.
 \end{defdef}
 \subsubsection{Qualités éventuelles d'une loi de composition interne}
 Soit le magma $(E,*)$. Les qualités éventuelles sont les suivantes
@@ -26,10 +26,10 @@ Soit le magma $(E,*)$. Les qualités éventuelles sont les suivantes
   \end{equation}
   qu'on pourra noter $x*y*z$.
 \end{enumerate}
-On dit que E admet un élément neutre pour $*$ lorsqu'il existe un élement $e \in E$ tel que pour tout élément $x \in E$, $x*e=e*x=x$. Soit $e \in E$, alors 
+On dit que E admet un élément neutre pour $*$ lorsqu'il existe un élément $e \in E$ tel que pour tout élément $x \in E$, $x*e=e*x=x$. Soit $e \in E$, alors 
 \begin{itemize}
 \item $e$ est neutre à gauche si et seulement si $\forall x \in E \quad e * x =x$;
-\item $e$ est neutre à droitee si et seulement si $\forall x \in E \quad x * e =x$.
+\item $e$ est neutre à droite si et seulement si $\forall x \in E \quad x * e =x$.
 \end{itemize}
 $e$ est un élément neutre si et seulement si $e$ est neutre à gauche et $e$ est neutre à droite.
 \begin{prop}
@@ -109,7 +109,7 @@ Soit $x \in E$. Pour un naturel $n$ non nul, si la loi $*$ est commutative on d�
 
 \subsubsection{Premiers exemples}
 
-Soit un ensemble $E$, $E^E$ est l'ensemble des applications de $E$ dans $E$. La loi de composition $\circ$ est une loi de composition interne sur $E^E$. Elle est associative et $\Id$ est son élément neutre. Elle n'est en revanche pas commutative et tous les élément de $E^E$ ne sont pas inversibles. Les lois habituelles $+$ et $\times$ sonts des lois associatives et commutatives sur $\N$, $\Z$, $\Q$, $\R$ et $\C$. $0$ est le neutre de $+$ et $1$ est le neutre de $\times$.
+Soit un ensemble $E$, $E^E$ est l'ensemble des applications de $E$ dans $E$. La loi de composition $\circ$ est une loi de composition interne sur $E^E$. Elle est associative et $\Id$ est son élément neutre. Elle n'est en revanche pas commutative et tous les élément de $E^E$ ne sont pas inversibles. Les lois habituelles $+$ et $\times$ sont des lois associatives et commutatives sur $\N$, $\Z$, $\Q$, $\R$ et $\C$. $0$ est le neutre de $+$ et $1$ est le neutre de $\times$.
 
 Soit $E$ un ensemble. $\Part(E)$ est l'ensemble des parties de $E$. Les opérations $\bigcap$ et $\bigcup$ sont des lois de composition internes sur $\Part(E)$. Elles sont toutes deux associatives et commutatives. $E$ est le neutre pour $\bigcap$ et $\emptyset$ est le neutre de $\bigcup$.
 
@@ -247,7 +247,7 @@ En général l'union de sous-groupes n'est pas un sous-groupe.
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soient $(G,*)$ et $(H,\#)$ deux groupes. Une application $f:(G,*) \longrightarrow (H,\#)$ est un morphisme (ou homomorphisme) de groupes du groupe $G$ sur le groupe $H$ si et seulement si
+  Soient $(G,*)$ et $(H,\#)$ deux groupes. Une application $f:(G,*) \longrightarrow (H,\#)$ est un morphisme (ou homo-morphisme) de groupes du groupe $G$ sur le groupe $H$ si et seulement si
   \begin{equation}
     \forall x,y \in G \quad f(x*g) = f(x)\#f(y).
   \end{equation}
@@ -355,7 +355,7 @@ Soient $(G,*)$ et $(H,\#)$ deux groupes et $f$ un morphisme de $G$ sur $H$.
     \end{equation}
     $G'$ est un sous-groupe de $G$ et comme $z$ et $t$ sont dans $G'$ alors $z*y^{-1} \in G'$ d'où $f(z*y^{-1}) \in f(G')$. On a montré que $x\#y^{-1} \in f(G')$.
   \end{itemize}
-  Par caractéristion des sous-groupes, $f(G')$ est un sous-groupe de $H$.
+  Par caractérisation des sous-groupes, $f(G')$ est un sous-groupe de $H$.
 \end{proof}
 
 \begin{theo}\label{theo:theo2sousgroupe}
@@ -684,7 +684,7 @@ Soit $(A,+,\cdot)$ un anneau et $B$ un sous-anneau de $A$, alors
   $(B,+)$ est un sous-groupe de $(A,+)$. $(B,+,\cdot)$ est un anneau, il admet donc un neutre pour $\cdot$. C'est aussi un neutre pour la loi $\cdot$ de $A$. Alors a fortiori par unicité du neutre ils sont égaux. Idem pour $0$. Si la loi sur $A$ est commutative, alors elle est commutative sur B. Si maintenant A est intègre, alors il est commutatif, donc $B$ est commutatif. $A$ est un anneau non nul donc $0 \neq A$ sur $A$. Comme ils ont le même zéro et le même un on a $O \neq 1$ sur $B$. Si on considère un couple $(a,b)$ diviseur de zéro dans $B$ alors c'est aussi un couple diviseurs de zéro dans $A$, et comme $A$ est intègre, il n'en a pas donc le couple $(a,b)$ en question n'existe pas et alors $B$ n'en a pas non plus. Finalement $B$ est un anneau intègre.
 \end{proof}
 
-\subsubsection{Caractèrisation des sous-anneaux}
+\subsubsection{Caractérisation des sous-anneaux}
 
 \begin{theo}
   Soit $(A,+,\cdot)$ un anneau et $B$ une partie de $A$. Alors il y a équivalence entre
@@ -775,7 +775,7 @@ Les ensembles de nombres $\Q$, $\R$ et $\C$ sont des corps. Un corps à deux él
   Soit $(A,+,\cdot)$ un anneau intègre. Il existe un corps $\K$, unique à isomorphisme près, tel que $A$ soit un sous-anneau de $\K$ et tel que les éléments de $\K$ soient de la forme $\frac{a}{b}$, avec $a,b \in A$ et $b \neq 0$. Ce corps $\K$ est appelé corps des fractions de l'anneau intègre $A$.
 \end{theo}
 
-``Unique à isomorphisme près'' signifie que si deux corps $\K$ et $\K'$ vérifient ces hypothèses alors ils sont isomorphes. Comme par exemple, $\Q$ est le corps des fractions de l'anneau intègre $\Z$. $\K(X)$, l'ensemble des fractions rationelles, est le corps des fractions de l'anneau des polynômes $K[X]$.
+``Unique à isomorphisme près'' signifie que si deux corps $\K$ et $\K'$ vérifient ces hypothèses alors ils sont isomorphes. Comme par exemple, $\Q$ est le corps des fractions de l'anneau intègre $\Z$. $\K(X)$, l'ensemble des fractions rationnelles, est le corps des fractions de l'anneau des polynômes $K[X]$.
 
 \section{Arithmétique dans $\Z$}
 
@@ -832,7 +832,7 @@ L'entier $q$ est appelé le quotient de la division euclidienne de $a$ par $b$. 
       a=bq'+r' \\ 0 \leq r' < b
     \end{cases}.
   \end{equation}
-Alors $bq+r=bq'+r'$ et donc $b(q-q')=r'-r$. De plus $\abs{r'-r} < b$. Supposons que $q-q' \neq 0$, alors $\abs{q-q'} \geq 1$ alors $\abs{r'-r}=b\abs{q-q'} \geq b$. Contradcition. Donc $q=q'$. Par conséquent $r=r'$.
+Alors $bq+r=bq'+r'$ et donc $b(q-q')=r'-r$. De plus $\abs{r'-r} < b$. Supposons que $q-q' \neq 0$, alors $\abs{q-q'} \geq 1$ alors $\abs{r'-r}=b\abs{q-q'} \geq b$. Contradiction. Donc $q=q'$. Par conséquent $r=r'$.
 \end{proof}
 \begin{proof}[Existence]
   Soit l'ensemble $A=\enstq{k \in \Z}{bk \leq a}$. Alors 
@@ -1010,7 +1010,7 @@ elle est transitive, si $a$ est associé à $b$ et si $b$ est associé à $c$ al
   \forall a,b,c \in \Z \quad a\Z=b\Z \ b\Z=c\Z \iff a\Z=c\Z.
 \end{equation}
 
-\subsubsection{Sous grupes additifs de $\Z$}
+\subsubsection{Sous groupes additifs de $\Z$}
 
 \begin{theo}
   les sous-groupes additifs de $(\Z,+)$ sont les parties de la forme $a\Z$, $a \in \N$. De plus si $H$ est un sous-groupe de $(\Z,+)$, il existe un unique entier $a \in \N$ tel que $H=a\Z$.
@@ -1243,7 +1243,7 @@ Les multiples communs de $a$ et de $b$ sont exactement les multiples de $\ppcm(a
 Si $a=0$ ou $b=0$ alors $a\Z \cap b\Z = \{0\}=0\Z$ donc $\ppcm(a,b)=0$. Si $a$ et $b$ sont tous les deux non nuls alors $\ppcm(a,b)$ est non nul car $ab \neq 0$ et $ab \in a\Z \cap b\Z$.
 
 \begin{prop}
-  Comme le ppcm est défini de manière unique, on peut définir une application $\fonction{\bigvee}{\Z\times\Z}{\Z}{(a,b)}{\ppcm(a,b)}$. Cette application vérifie les propriétés suivantes
+  Comme le PPCM est défini de manière unique, on peut définir une application $\fonction{\bigvee}{\Z\times\Z}{\Z}{(a,b)}{\ppcm(a,b)}$. Cette application vérifie les propriétés suivantes
   \begin{enumerate}
   \item c'est une loi de composition interne;
   \item elle est commutative, $\ppcm(a,b)=\ppcm(b,a)$;
@@ -1257,7 +1257,7 @@ Si $a=0$ ou $b=0$ alors $a\Z \cap b\Z = \{0\}=0\Z$ donc $\ppcm(a,b)=0$. Si $a$ e
 \begin{proof}
   Soient $a,b$ et $c$ trois relatifs
   \begin{enumerate}
-  \item le ppcm est un entier relatif;
+  \item le PPCM est un entier relatif;
   \item $a\Z \cap b\Z = b\Z \cap a\Z$;
   \item
     \begin{align}
@@ -1269,7 +1269,7 @@ Si $a=0$ ou $b=0$ alors $a\Z \cap b\Z = \{0\}=0\Z$ donc $\ppcm(a,b)=0$. Si $a$ e
     On sait que $ca \mid \mu$ et $cb \mid \mu$. Alors il existe deux relatifs $p$ et $q$ tels que $\mu = cap$ et $\mu=cbq$. Alors $cap=cbq$ et donc $c(ap-bq)=0$. Comme $\Z$ est intègre donc soit $c=0$ ou soit $ap-bq=0$.
     \begin{itemize}
     \item Si $c=0$ alors $\mu=0=\abs{c}=m$;
-    \item Si $c \neq 0$ alors $ap-bq=0$ donc $ap=bq$ est un multiple commun de $a$ et de $b$. C'est donc un multiple du ppcm $m$. Alors $m \mid ap=bq$ et $\abs{c}m \mid cap = bqc=\mu$. 
+    \item Si $c \neq 0$ alors $ap-bq=0$ donc $ap=bq$ est un multiple commun de $a$ et de $b$. C'est donc un multiple du PPCM $m$. Alors $m \mid ap=bq$ et $\abs{c}m \mid cap = bqc=\mu$. 
     \end{itemize}
     On a montré que $\mu \mid \abs{c}m$ et $\abs{c} m \mid \mu$, or ce sont des naturels donc ils sont égaux. $\mu=\abs{c} m$, soit $\ppcm(ca,cb)=\abs{c}\ppcm(a,b)$.
   \item $a\Z \cap a\Z = a\Z$, $a\Z \cap 0\Z = 0\Z$ et $a\Z \cap 1\Z = a\Z \cap \Z=a\Z=|a|\Z$.
@@ -1279,7 +1279,7 @@ Si $a=0$ ou $b=0$ alors $a\Z \cap b\Z = \{0\}=0\Z$ donc $\ppcm(a,b)=0$. Si $a$ e
 
 \subsection{Entiers premiers entre eux}
 
-Soient $a$ et $b$ deux entiers relatifs. On a défini plus tôt dans ce cours, cf.\ définition~\ref{def:premiersentreeux}, que $a$ et $b$ sont premiers entre eux si et seulement si $\Div(a) \cap \Div(b)=\{-1,1\}$ or $\Div(a) \cap \Div(b) = \Div(\pgcd(a,b))$. Donc $a$ et $b$ sont premiers entre eux si et seulement si leur pgcd vaut $1$.
+Soient $a$ et $b$ deux entiers relatifs. On a défini plus tôt dans ce cours, cf.\ définition~\ref{def:premiersentreeux}, que $a$ et $b$ sont premiers entre eux si et seulement si $\Div(a) \cap \Div(b)=\{-1,1\}$ or $\Div(a) \cap \Div(b) = \Div(\pgcd(a,b))$. Donc $a$ et $b$ sont premiers entre eux si et seulement si leur PGCD vaut $1$.
 
 \begin{theo}[Théorème de Bezout]
   Étant donnés deux relatifs $a$ et $b$. Ils sont premiers entre eux si et seulement s'il existe deux relatifs $u$ et $v$ tels que $au+bv=1$.
@@ -1539,7 +1539,7 @@ Il reste à mettre le produit sous la bonne forme.
   \end{equation}
   Soit $i \in \intervalleentier{1}{m}$, alors $p_i \mid n$ et $p_i$ est premier donc il existe un naturel $j \in \intervalleentier{1}{r}$ tel que $p_i \mid q_j$. Le nombre $q_j$ est premier et c'est un naturel donc $p_i=1$ ou $p_i=q_j$. Or $p_i$ est aussi premier donc $p_i=q_j$. on vient de montrer que $\{p_1, \ldots, p_m\} \subset \{q_1, \ldots q_r\}$. Par symétrie des rôle on a l'autre inclusion et donc l'égalité $\{p_1, \ldots, p_m\} = \{q_1, \ldots q_r\}$ et $m=r$.
 
-  Quitte à réindexer les $q_j$, on peut supposer que pour tout $i \in \intervalleentier{1}{m}$, $p_i=q_i$. Alors
+  Quitte à ré-indexer les $q_j$, on peut supposer que pour tout $i \in \intervalleentier{1}{m}$, $p_i=q_i$. Alors
   \begin{equation}
     n=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i}.
   \end{equation}
@@ -1560,7 +1560,7 @@ Il reste à mettre le produit sous la bonne forme.
     \begin{equation}
       a=\prod_{i=1}^m p_i^{k_i}, \quad b=\prod_{i=1}^m p_i^{l_i},
     \end{equation}
-    ce sont des décompositionss primaires dans lesquelles on autorise les puissances $k_i$ et $l_i$ à être nulles. 
+    ce sont des décompositions primaires dans lesquelles on autorise les puissances $k_i$ et $l_i$ à être nulles. 
 
     Alors
     \begin{equation}

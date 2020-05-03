@@ -25,9 +25,9 @@ Soient $F$ un point du plan, $\Dr$ une droite ne passant pas par $F$, $e$ un ré
 \end{equation}
 donc le point $M'$ appartient à la conique $\con{e}$.
 \end{proof}
-Si on considère l'application $\fonction{\varphi}{P\setminus\{\Dr \cup F\}}{\Rplusetoile}{M}{\frac{MF}{MH}}$, où $H$ est le projeté orthogonal de $M$ sur $\Dr$, les coniques $\con{e}$ de directrice $\Dr$ sont les lignes de niveau de $\varphi$. On cherche les points d'intersection entre $\con{e}$ et l'axe $\Delta$. On note $K$ le projeté orthogonal de $F$ sur $\Dr$. On place l'origine des abcisses en $K$ et on oriente $\Delta$ de $K$ vers $F$, on note $d=KF$. 
+Si on considère l'application $\fonction{\varphi}{P\setminus\{\Dr \cup F\}}{\Rplusetoile}{M}{\frac{MF}{MH}}$, où $H$ est le projeté orthogonal de $M$ sur $\Dr$, les coniques $\con{e}$ de directrice $\Dr$ sont les lignes de niveau de $\varphi$. On cherche les points d'intersection entre $\con{e}$ et l'axe $\Delta$. On note $K$ le projeté orthogonal de $F$ sur $\Dr$. On place l'origine des abscisses en $K$ et on oriente $\Delta$ de $K$ vers $F$, on note $d=KF$. 
 
-Soit M sur $\Delta$ le point d'abcisse $x$. Le projeté orthogonal de M sur la directrice $\Dr$ est le point K, puisque $\Dr$ et $\Delta$ sont orthogonal et se croisent en K. On a alors la suite d'équivalence suivante~:
+Soit M sur $\Delta$ le point d'abscisse $x$. Le projeté orthogonal de M sur la directrice $\Dr$ est le point K, puisque $\Dr$ et $\Delta$ sont orthogonal et se croisent en K. On a alors la suite d'équivalence suivante~:
 \begin{align}
   M \in \con{e} &\iff MF = e MK \\
   &\iff MF^2=e^2 MK^2 \\
@@ -38,7 +38,7 @@ Soit M sur $\Delta$ le point d'abcisse $x$. Le projeté orthogonal de M sur la d
 On distingue deux cas~:
 \begin{itemize}
 \item si $e=1$, alors le point M est sur la conique si et seulement si $x=\frac{d}{2}$. Il y a donc un unique point d'intersection entre la conique $\con{1}$ est son axe focal $\Delta$, c'est le milieu de $[KF]$. Cette conique est une parabole;
-\item sinon comme $1-e^2 \neq 0$, on peut calculer le discriminant de ce trinôme qui vaut $(2de)^2$, alors les deux racines réelles du trinôme sont $x_1=\frac{d}{1+e}$ et $x_2=\frac{d}{1-e}$. Soient les points d'intersections $A_1$ et $A_2$ de $\con{e}$ et $\Delta$, d'abcisse respectives $x_1$ et $x_2$. Alors $\vect{KA}=\frac{1}{1+e} \vect{KF}$ et $\vect{KA'}=\frac{1}{1-e} \vect{KF}$. On peut distinguer deux sous-cas~:
+\item sinon comme $1-e^2 \neq 0$, on peut calculer le discriminant de ce trinôme qui vaut $(2de)^2$, alors les deux racines réelles du trinôme sont $x_1=\frac{d}{1+e}$ et $x_2=\frac{d}{1-e}$. Soient les points d'intersections $A_1$ et $A_2$ de $\con{e}$ et $\Delta$, d'abscisse respectives $x_1$ et $x_2$. Alors $\vect{KA}=\frac{1}{1+e} \vect{KF}$ et $\vect{KA'}=\frac{1}{1-e} \vect{KF}$. On peut distinguer deux sous-cas~:
   \begin{itemize}
   \item si $e<1$ alors $x_1$ et $x_2$ sont positifs et les deux points $A$ et $A'$ sont du même côté de $\Dr$ que $F$. On dira que $\con{e}$ est une ellipse;
   \item si $e>1$ alors $A$ est du même côté que $F$ mais $A'$ est de l'autre, dans ce cas là on dira que $\con{e}$ est une hyperbole.
@@ -127,7 +127,7 @@ Si on pose $a=\frac{p}{e^2-1}$ et $b=\frac{p}{\sqrt{e^2-1}}$, alors dans le rep�
   \begin{equation}
     \frac{X^2}{a^2}-\frac{Y^2}{b^2}=1,
   \end{equation}
-avec $a$ et $b$ des réels strictements positifs
+avec $a$ et $b$ des réels strictement positifs
 \end{theo}
 \begin{prop}
   \begin{enumerate}
@@ -140,11 +140,11 @@ avec $a$ et $b$ des réels strictements positifs
   \begin{enumerate}
   \item $\frac{b^2}{a}=\frac{\frac{p^2}{e^2-1}}{\frac{p}{e^2-1}}=p$ et $\frac{b^2}{a}=\frac{\frac{p^2}{e^2-1}}{\frac{p^2}{(e^2-1)^2}}=e^2-1$;
   \item $c=\sqrt{1+\left(\frac{b}{a}\right)^2}=\sqrt{1+e^2-1}=e$ puisque $e>0$ et $d=\frac{p}{e}=\frac{b^2}{a} \frac{a}{c}=\frac{b^2}{c}$;
-  \item à la base l'abcisse de F est $-\frac{de^2}{1-e^2}=\frac{-pe}{1-e^2}=ae=c$ et l'équation de la courbe est $X=-\frac{d}{1-e^2}=-\frac{p/e}{1-e^2}=\frac{a}{e}=\frac{a^2}{c}$
+  \item à la base l'abscisse de F est $-\frac{de^2}{1-e^2}=\frac{-pe}{1-e^2}=ae=c$ et l'équation de la courbe est $X=-\frac{d}{1-e^2}=-\frac{p/e}{1-e^2}=\frac{a}{e}=\frac{a^2}{c}$
   \end{enumerate}
 \end{proof}
 \begin{theo}[Théorème réciproque]
-  Soient deux réels strictement positifs $a$ et $b$ et $c=\sqrt{a^2+b^2}$, un repère orthornormal $R=\rond$. La courbe d'équation cartésienne dans $R$ $\frac{X^2}{a^2}-\frac{Y^2}{b^2}=1$ est une hyperbole de foyer $F(-c,0)$ et de directrice $\Dr$ d'équation $X=\frac{a^2}{c}$ d'excentricité $e=\frac{c}{a}$ et de paramètre $p=\frac{b^2}{a}$.
+  Soient deux réels strictement positifs $a$ et $b$ et $c=\sqrt{a^2+b^2}$, un repère orthonormal $R=\rond$. La courbe d'équation cartésienne dans $R$ $\frac{X^2}{a^2}-\frac{Y^2}{b^2}=1$ est une hyperbole de foyer $F(-c,0)$ et de directrice $\Dr$ d'équation $X=\frac{a^2}{c}$ d'excentricité $e=\frac{c}{a}$ et de paramètre $p=\frac{b^2}{a}$.
 \end{theo}
 L'hyperbole $\H$ est aussi l'hyperbole de foyer $F'(-c,0)$ de directrice $\Dr ':X=-\frac{a^2}{c}$. Les intersections de $\H$ avec l'axe focal sont appelés les sommets de l'hyperbole. Ce sont les points $A(a,0)$ et $A'(-a,0)$.
 \begin{prop}
@@ -157,7 +157,7 @@ L'hyperbole $\H$ est aussi l'hyperbole de foyer $F'(-c,0)$ de directrice $\Dr ':
   \begin{itemize}
   \item On démontre dans ce premier point l'inclusion $\Gamma_1 \subset \H$~: Soit un point $M(t)(x(t),y(t)) \in \Gamma_1$ alors pour chaque instant $t \in \R$, $\frac{x(t)^2}{a^2}-\frac{y(t)^2}{b^2}=\cosh^2(t)-\sinh^2(t)=1$ donc le point $M(t)$ est sur l'hyperbole.
   \item On démontre de la même manière l'inclusion  $\Gamma_2 \subset \H$
-  \item Démontrons maitenant l'inclusion inverse $\H \in \Gamma_1\cup\Gamma_2$. Soit un point $M(x,y)$ sur l'hyperbole, on pose $t=\argsh\left(\frac{y}{b}\right)$ alors $y=b\sinh(t)$ et puisque le point est sur l'hyperbole on écrit~: $\frac{x^2}{a^2}=1+\frac{y^2}{b^2}=\cosh(t)$ donc $x^2=(a\cosh(t))^2$. Si $x\geq 0$ alors $x=a\cosh(t)$ et le point M est sur $\Gamma_1$ sinon $x=-a\cosh(t)$ et il est sur $\Gamma_2$. Dans tous les cas le point M est dans l'union $\Gamma_1 \cup \Gamma_2$.
+  \item Démontrons maintenant l'inclusion inverse $\H \in \Gamma_1\cup\Gamma_2$. Soit un point $M(x,y)$ sur l'hyperbole, on pose $t=\argsh\left(\frac{y}{b}\right)$ alors $y=b\sinh(t)$ et puisque le point est sur l'hyperbole on écrit~: $\frac{x^2}{a^2}=1+\frac{y^2}{b^2}=\cosh(t)$ donc $x^2=(a\cosh(t))^2$. Si $x\geq 0$ alors $x=a\cosh(t)$ et le point M est sur $\Gamma_1$ sinon $x=-a\cosh(t)$ et il est sur $\Gamma_2$. Dans tous les cas le point M est dans l'union $\Gamma_1 \cup \Gamma_2$.
   \end{itemize}
 Finalement $\H=\Gamma_1 \cup \Gamma_2$.
 \end{proof}
@@ -180,7 +180,7 @@ Si on pose $a=\frac{-p}{1-e^2}$ et $b=\frac{p}{\sqrt{1-e^2}}$, alors dans le rep
   \begin{equation}
     \frac{X^2}{a^2}+\frac{Y^2}{b^2}=1
   \end{equation}
-  avec $a$ et $b$ des réels strictements positifs.
+  avec $a$ et $b$ des réels strictement positifs.
 \end{theo}
 \begin{prop}
   \begin{enumerate}
@@ -193,11 +193,11 @@ Si on pose $a=\frac{-p}{1-e^2}$ et $b=\frac{p}{\sqrt{1-e^2}}$, alors dans le rep
   \begin{enumerate}
   \item $\frac{b^2}{a}=\frac{\frac{p^2}{1-e^2}}{\frac{p}{1-e^2}}=p$ et $\frac{b^2}{a^2}=\frac{\frac{p^2}{1-e^2}}{\frac{p^2}{(1-e^2)^2}}=1-e^2$;
   \item $\frac{c}{a}=\sqrt{1-\left(\frac{b}{a}\right)^2}=\sqrt{1-1+e^2}=e$ puisque $e>0$ et $d=\frac{p}{e}=\frac{b^2}{a} \frac{a}{c}=\frac{b^2}{c}$;
-  \item à la base l'abcisse de $F$ est $-\frac{de^2}{1-e^2}=\frac{-pe}{1-e^2}=ae=c$ et l'équation de la courbe est $X=-\frac{d}{1-e^2}=-\frac{p/e}{1-e^2}=\frac{a}{e}=\frac{a^2}{c}$
+  \item à la base l'abscisse de $F$ est $-\frac{de^2}{1-e^2}=\frac{-pe}{1-e^2}=ae=c$ et l'équation de la courbe est $X=-\frac{d}{1-e^2}=-\frac{p/e}{1-e^2}=\frac{a}{e}=\frac{a^2}{c}$
   \end{enumerate}
 \end{proof}
 \begin{theo}[Théorème réciproque]
-  Soient deux réels strictement positifs $a$ et $b$ et $c=\sqrt{a^2-b^2}$, un repère orthornormal $R=\rond$. La courbe d'équation cartésienne dans $R$ $\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1$ est une ellipse de foyer $F(c,0)$ et de directrice $\Dr$ d'équation $X=\frac{a^2}{c}$ d'excentricité $e=\frac{c}{a}$ et de paramètre $p=\frac{b^2}{a}$.
+  Soient deux réels strictement positifs $a$ et $b$ et $c=\sqrt{a^2-b^2}$, un repère orthonormal $R=\rond$. La courbe d'équation cartésienne dans $R$ $\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1$ est une ellipse de foyer $F(c,0)$ et de directrice $\Dr$ d'équation $X=\frac{a^2}{c}$ d'excentricité $e=\frac{c}{a}$ et de paramètre $p=\frac{b^2}{a}$.
 \end{theo}
 %L'ellipse $\Elli$ est aussi l' de foyer $F'(-c,0)$ de directrice $\Dr ':X=-\frac{a^2}{c}$. Les intersections de $\H$ avec l'axe focal sont appelés les sommets de l'hyperbole. Ce sont les points $A(a,0)$ et $A'(-a,0)$.
 \begin{prop}
@@ -306,7 +306,7 @@ On se donne six réels, $a$, $b$, $c$, $d$, $e$ et $f$ avec $a$, $b$, $c$ non to
 \begin{equation}
   ax^2+bxy+cy^2+dx+ey+f=0 \label{eq:con2gre2}
 \end{equation}
-Un paramètre important de~\eqref{eq:con2gre2} est son discriminant $\Delta=b^2-4ac$. L'idée est de reconnaître l'équation d'une conique par des changements de RON\@. On doit se débarasser des termes $xy$ et de degré 1 en $x$ et $y$.
+Un paramètre important de~\eqref{eq:con2gre2} est son discriminant $\Delta=b^2-4ac$. L'idée est de reconnaître l'équation d'une conique par des changements de RON\@. On doit se débarrasser des termes $xy$ et de degré 1 en $x$ et $y$.
 
 \subsection{Étape 1~: si $b\neq 0$, on se ramène par changement de repère à l'équation où $b=0$}
 Soit $(\vect{u_{\varphi}},\vect{v_{\varphi}})$ la nouvelle BON\@. On va choisir $\varphi$ judicieusement pour que l'équation de la courbe $\con{{}}$ dans la nouvelle base n'ait pas de termes en $xy$. Si $M(x,y)$ dans $\rond$, on note $M(X,Y)$ ses coordonnées dans $(O,\vect{u}_\varphi,\vect{v}_\varphi)$ alors~:
@@ -464,7 +464,7 @@ puisque le point $M_0$ est sur la conique. Alors
 \begin{equation}
   M \in (T) \iff 2axx_0+b(xy_0+x_0y)+2cyy_0+dx+e_y+dx_0+ey_0+2f=0.
 \end{equation}
-On dit que l'équation de la tangente $T$ à la courbe $\con{{}}$ est obtenue à partir de l'équation de $\con{{}}$ par la régle du dédoublement. En pratique $\frac{X^2}{a^2} + \frac{Y^2}{b^2}=1$ alors la tangente en un point $(x_0,y_0)$ est telle que
+On dit que l'équation de la tangente $T$ à la courbe $\con{{}}$ est obtenue à partir de l'équation de $\con{{}}$ par la règle du dédoublement. En pratique $\frac{X^2}{a^2} + \frac{Y^2}{b^2}=1$ alors la tangente en un point $(x_0,y_0)$ est telle que
 \begin{equation}
   \frac{1}{a^2}(2xx_0) + \frac{1}{b^2}(2yy_0)=2 \iff \frac{1}{a^2}(xx_0) + \frac{1}{b^2}(yy_0)=1.
 \end{equation}
@@ -504,7 +504,7 @@ Si on note les coordonnées de $M(x,y)$ dans le repère initial $\rond$, alors
 
 \subsubsection{Cas de l'ellipse}
 \begin{prop}
-  Soit $\Ell$ une ellipse de foyer $F$ et $F'$. Soit $M$ un poit de l'ellipse. La tangente $T$ en $M$ à l'ellipse est la bissectrice extérieure de l'angle $\widehat{F'MF}$.
+  Soit $\Ell$ une ellipse de foyer $F$ et $F'$. Soit $M$ un point de l'ellipse. La tangente $T$ en $M$ à l'ellipse est la bissectrice extérieure de l'angle $\widehat{F'MF}$.
 \end{prop}
 \begin{proof}
   Soient $(I,f(t))$ un paramétrage de l'ellipse avec $f$ une application dérivable et les applications $h=\norme{\vect{F'M}}$ $g=\norme{\vect{FM}}$. On sait que $g+h=2a$ avec $\vect{FM}$ et $\vect{F'M}$ tous deux non nuls (puisqu'on sait que les foyers ne sont pas sur l'ellipse). Alors $g$ et $h$ sont dérivables. Soit un réel $t$, alors~:
@@ -517,7 +517,7 @@ Si on note les coordonnées de $M(x,y)$ dans le repère initial $\rond$, alors
   \begin{equation}
     0=g'(t)+h'(t)=\frac{\vect{FM}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{FM}(t)}}\frac{\vect{F'M}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{F'M}(t)}}=(\vect{u}+\vect{v})\cdot \derived{\vect{OM}}{t}.
   \end{equation}
-Le vecteur $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}+\vect{v})$ avec $\vect{u}$ unitaire qui dirige $(FM)$ et $\vect{v}$ unitaire qui dirige $(F'M)$, donc $\vect{u}+\vect{v}$ dirige la bissectrice intérieure de $\widehat{F'MF}$. Alors $T$ est la droite passant par $M$ de vecteur normal $\vect{u}+\vect{v}$, donc $T$ est la bissetrice extérieure de l'angle $\widehat{F'MF}$.
+Le vecteur $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}+\vect{v})$ avec $\vect{u}$ unitaire qui dirige $(FM)$ et $\vect{v}$ unitaire qui dirige $(F'M)$, donc $\vect{u}+\vect{v}$ dirige la bissectrice intérieure de $\widehat{F'MF}$. Alors $T$ est la droite passant par $M$ de vecteur normal $\vect{u}+\vect{v}$, donc $T$ est la bissectrice extérieure de l'angle $\widehat{F'MF}$.
 \end{proof}
 
 \subsubsection{Cas de l'hyperbole}
@@ -529,5 +529,5 @@ Le vecteur $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}+\vect{v
 \begin{equation}
 \forall t \in I \quad 0=g'(t)-h'(t)=(\vect{u}-\vect{v})\cdot \derived{\vect{OM}}{t}(t).
 \end{equation}
- Le vecteur vitesse $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}-\vect{v})$ avec $\vect{u}$ unitaire qui dirige $(FM)$ et $\vect{v}$ unitaire qui dirige $(F'M)$, donc $\vect{u}-\vect{v}$ dirige la bissectrice extérieure de $\widehat{F'MF}$. Alors $T$ est la droite passant par $M$ de vecteur normal $\vect{u}-\vect{v}$, donc $T$ est la bissetrice intérieure de l'angle $\widehat{F'MF}$.
+ Le vecteur vitesse $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}-\vect{v})$ avec $\vect{u}$ unitaire qui dirige $(FM)$ et $\vect{v}$ unitaire qui dirige $(F'M)$, donc $\vect{u}-\vect{v}$ dirige la bissectrice extérieure de $\widehat{F'MF}$. Alors $T$ est la droite passant par $M$ de vecteur normal $\vect{u}-\vect{v}$, donc $T$ est la bissectrice intérieure de l'angle $\widehat{F'MF}$.
 \end{proof}

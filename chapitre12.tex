@@ -160,7 +160,7 @@ En général, ce n'est pas une égalité. Il suffit de prendre $X=\intervalleff{
   \begin{equation}
     f(x)+g(x) \leq \sup\limits_{X}f + \sup\limits_{X}g.
   \end{equation}
-  Donc $\sup\limits_{X}f + \sup\limits_{X}g$ est un majorant de $f+g$, donc $f+g$ admet une borne supérieure. Par définiton, comme c'est le plus petit des majorants, en passant à la borne supérieure dans l'inégalité on a bien le résultat
+  Donc $\sup\limits_{X}f + \sup\limits_{X}g$ est un majorant de $f+g$, donc $f+g$ admet une borne supérieure. Par définition, comme c'est le plus petit des majorants, en passant à la borne supérieure dans l'inégalité on a bien le résultat
   \begin{equation}
     \sup\limits_{X}(f+g) \leq \sup\limits_{X}f + \sup\limits_{X}g.
   \end{equation}
@@ -188,13 +188,13 @@ En général, ce n'est pas une égalité. Il suffit de prendre $X=\intervalleff{
     \begin{equation}
       \lambda \sup\limits_{X} f= \lambda \sup\limits_{X} \frac{1}{\lambda} \lambda f.
     \end{equation}
-    Or d'après la première partie de la preuve, en notant $g=\lambda f$ et en appliquant l'Eq.~\eqref{eq:inégalité2} à la fonction $g$ et au réel $\frac{1}{\lambda}$, on a
+    Or d'après la première partie de la preuve, en notant $g=\lambda f$ et en appliquant l'équation.~\eqref{eq:inégalité2} à la fonction $g$ et au réel $\frac{1}{\lambda}$, on a
     \begin{equation}
       \label{eq:inegalite1}
       \sup\limits_{X}\frac{1}{\lambda} g \leq \frac{1}{\lambda} \sup\limits_{X}g.
     \end{equation}
 %on sait que $\sup\limits_{X}\frac{1}{\lambda} \lambda f \leq \frac{1}{\lambda} \sup\limits_{X}\lambda f$. 
-Or $\dfrac{1}{\lambda}g=f$ et en multipliant par $\lambda > 0$ de chaque coté de l'Eq.~\eqref{eq:inegalite1}, on obtient
+Or $\dfrac{1}{\lambda}g=f$ et en multipliant par $\lambda > 0$ de chaque coté de l'équation.~\eqref{eq:inegalite1}, on obtient
     \begin{equation}
       \lambda \sup\limits_{X} f \leq \sup\limits_{X}\lambda f.
     \end{equation}
@@ -268,7 +268,7 @@ Grâce à ce lemme, on peut déduire trois propositions~:
   \end{equation}
 \end{prop}
 \begin{proof}
-  Les applications $f$ est $g$ sont minorées, donc d'après le lemme $-f$ et $-g$ sont majorées. Alors d'après la propriété sur la borne suéprieure $-f-g$ est majorée. Encore d'après le lemme l'application $f+g$ est minorée et
+  Les applications $f$ est $g$ sont minorées, donc d'après le lemme $-f$ et $-g$ sont majorées. Alors d'après la propriété sur la borne supérieure $-f-g$ est majorée. Encore d'après le lemme l'application $f+g$ est minorée et
   \begin{equation}
     \inf\limits_{X}(f+g)=-\sup\limits_{X}(-f-g).
   \end{equation}
@@ -540,7 +540,7 @@ La réciproque est fausse. Par exemple, on prend $I=[-1,1]$, $I'=[0,1]$, $a=0$ e
 alors $\lim\limits_{x \to 0}f_{|I^{'}}(x)=1$ cependant $f$ n'admet pas de limite en zéro.
 \end{prop}
 \begin{proof}
-  On a $ I' \subset I$, par exmple si $\lim\limits_{a} f =\ell$ alors
+  On a $ I' \subset I$, par exemple si $\lim\limits_{a} f =\ell$ alors
   \begin{equation}
     \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in I' \subset I \quad \abs{x-a} \leq \eta \implies \abs{f(x) - \ell} \leq \epsilon.
   \end{equation}
@@ -548,7 +548,7 @@ alors $\lim\limits_{x \to 0}f_{|I^{'}}(x)=1$ cependant $f$ n'admet pas de limite
 
 \emph{Limites à droite et limite à gauche}~:
 
-Soit $f \in \R^I$, $a\in \R$ et $I'=I \cap ]a, +\infty[ \neq \emptyset$. Alors $f$ est définie au voisinage de $a$. On considére la restriction de $f$ à $I'$. On dit que $f$ admet une limite à droite en $a$ si $f_{|I^{'}}$ admet une limite en $a$. On note sous réserve d'existence
+Soit $f \in \R^I$, $a\in \R$ et $I'=I \cap ]a, +\infty[ \neq \emptyset$. Alors $f$ est définie au voisinage de $a$. On considère la restriction de $f$ à $I'$. On dit que $f$ admet une limite à droite en $a$ si $f_{|I^{'}}$ admet une limite en $a$. On note sous réserve d'existence
 \begin{equation}
   \lim\limits_{\begin{array}{l} x \to a \\ x \in I\end{array}}f(x)=\lim\limits_{\begin{array}{c} x \to a \\ >\end{array}}f(x)=\lim\limits_{x \to a^{+}}f(x)=\lim\limits_{a^{+}}f
 \end{equation}
@@ -569,7 +569,7 @@ Soit $f \in \R^I$, $a\in \R$ et $I'=I \cap ]a, +\infty[ \neq \emptyset$. Alors $
 On définit de la même manière la limite à gauche et les propriétés sont identiques.
 
 \begin{prop}
-  Soient $f \in \R^I$, $a \in \R$ et $\ell \in \Rbar$. La fonction $f$ admet $\ell$ pour limite à gauche et limite à droite en $a$ si et seuleument si $\lim\limits_{\begin{array}{c} x \to a \\ x \in I\setminus\{a\}\end{array}}f(x)=\ell$.
+  Soient $f \in \R^I$, $a \in \R$ et $\ell \in \Rbar$. La fonction $f$ admet $\ell$ pour limite à gauche et limite à droite en $a$ si et seulement si $\lim\limits_{\begin{array}{c} x \to a \\ x \in I\setminus\{a\}\end{array}}f(x)=\ell$.
 \end{prop}
 \begin{proof}
   \begin{itemize}
@@ -595,7 +595,7 @@ On définit de la même manière la limite à gauche et les propriétés sont id
   \end{itemize}
 \end{proof}
 
-L'égalité des limites à gauche et à droite à $\ell$ n'est pas équivalente à $\lim\limits_{a}f=\ell$. En effet, si on considére la fonction définie sur $\intervalleff{0}{1}$ qui est nulle partout sauf en $1$ où elle vaut $1$. Alors les limites à droite et à gauche sont nulles pourtant la limite de $f$ en zéro n'existe pas. Si $f$ tend vers $\ell$ en zéro, alors les limites à gauche et à droite sont égales à $\ell=0$. En effet, si $f$ était de limite nulle en zéro on aurait
+L'égalité des limites à gauche et à droite à $\ell$ n'est pas équivalente à $\lim\limits_{a}f=\ell$. En effet, si on considère la fonction définie sur $\intervalleff{0}{1}$ qui est nulle partout sauf en $1$ où elle vaut $1$. Alors les limites à droite et à gauche sont nulles pourtant la limite de $f$ en zéro n'existe pas. Si $f$ tend vers $\ell$ en zéro, alors les limites à gauche et à droite sont égales à $\ell=0$. En effet, si $f$ était de limite nulle en zéro on aurait
 \begin{equation}
   \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in \intervalleff{-1}{1} \quad \abs{x-0} \leq \eta \implies \abs{f(x)-0} \leq \epsilon.
 \end{equation}
@@ -801,7 +801,7 @@ Soit $a \in \Rbar$.
 
 \subsection{Opérations algébriques}
 
-les opérations 1,2,3 et 4 concernants les limites finies et infinies, la somme, le produit et le quotient sont sur le polycopié.
+les opérations 1,2,3 et 4 concernant les limites finies et infinies, la somme, le produit et le quotient sont sur le polycopié.
 
 \subsubsection{Composition}
 \begin{theo}
@@ -877,7 +877,7 @@ Par exemple, montrons que la fonction cosinus n'a pas de limite en $+\infty$. So
 
 \subsubsection{Définitions}
 
-Soient $X$ une partie de $\R$ contenant au moins deux éléments et $f \in \R^X$. Soit $x$ et $x'$ deux élements de $X$. Alors
+Soient $X$ une partie de $\R$ contenant au moins deux éléments et $f \in \R^X$. Soit $x$ et $x'$ deux éléments de $X$. Alors
 \begin{enumerate}
 \item $f$ est croissante si $x \leq x' \implies f(x) \leq f(x')$;
 \item $f$ est décroissante si $x \leq x' \implies f(x) \geq f(x')$;
@@ -901,7 +901,7 @@ Soient $X$ une partie de $\R$ contenant au moins deux éléments et $f \in \R^X$
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  Les quatre premiers points se démontrent facilement, intéressons nous au cinquième et au sixième. Si $f$ est croissante et que $f(X)\subset \intervalleoo{0}{+\infty}[$ ou $f(X)\subset \intervalleoo{-\infty}{0}$. Alors soit deux éléments $x$ et $x'$ de $X$. Si $x \leq x'$  alors $f(x) \leq f(x')$. Dans les deux cas $f(x)f(x') > 0$. Donc en divisant on a $\frac{f(x)}{f(x)f(x')} \leq \frac{f(x')}{f(x)f(x')}$ et en simplifiant $\frac{1}{f(x')} \leq \frac{1}{f(x)}$. Alors $\frac{1}{f}$ décroit.
+  Les quatre premiers points se démontrent facilement, intéressons nous au cinquième et au sixième. Si $f$ est croissante et que $f(X)\subset \intervalleoo{0}{+\infty}[$ ou $f(X)\subset \intervalleoo{-\infty}{0}$. Alors soit deux éléments $x$ et $x'$ de $X$. Si $x \leq x'$  alors $f(x) \leq f(x')$. Dans les deux cas $f(x)f(x') > 0$. Donc en divisant on a $\frac{f(x)}{f(x)f(x')} \leq \frac{f(x')}{f(x)f(x')}$ et en simplifiant $\frac{1}{f(x')} \leq \frac{1}{f(x)}$. Alors $\frac{1}{f}$ décroît.
 \end{proof}
 \begin{theo}
   Soient $f \in \R^X$ et $g \in \R^Y$ tels que $f(X) \subset Y$. Si $f$ et $g$ sont monotones alors $g \circ f$ est monotone. De plus
@@ -918,7 +918,7 @@ Soient $X$ une partie de $\R$ contenant au moins deux éléments et $f \in \R^X$
 \begin{proof}
   \begin{itemize}
   \item[$\implies$] Soit $(x,x') \in X^2$ tels que $x < x'$. Alors $f(x) \leq f(x')$ puisque $f$ croît et ensuite comme $x \neq x'$ et que $f$ est injective alors $f(x) < f(x')$. Donc $f$ est strictement croissante.
-  \item[$\impliedby$] $f$ est strictement monotone donc $f$ est monotone. Soit $x$ et $x'$ deux éléments de $X$ différents. Deus cas de figure se présentent
+  \item[$\impliedby$] $f$ est strictement monotone donc $f$ est monotone. Soit $x$ et $x'$ deux éléments de $X$ différents. Deux cas de figure se présentent
     \begin{itemize}
     \item soit $x < x'$ auquel cas $f(x) < f(x')$ donc $f(x) \neq f(x')$;
     \item soit $x > x'$ auquel cas $f(x) > f(x')$ donc $f(x) \neq f(x')$.
@@ -927,7 +927,7 @@ Soient $X$ une partie de $\R$ contenant au moins deux éléments et $f \in \R^X$
   \end{itemize}
 \end{proof}
 \begin{cor}
-  Soit $f \in \R^X$ une application strictement monotone, alors $f$ induit une bijection $g$ de $X$ sur $f(X)$. De plus la bijection réciproque $g^{-1}$ (notée abusivement $f^{-1}$) est strictement monotone, de même snes de monotonie que $f$.
+  Soit $f \in \R^X$ une application strictement monotone, alors $f$ induit une bijection $g$ de $X$ sur $f(X)$. De plus la bijection réciproque $g^{-1}$ (notée abusivement $f^{-1}$) est strictement monotone, de même sens de monotonie que $f$.
 \end{cor}
 \begin{proof}
   La fonction $f$ est injective d'après le théorème précédent. La fonction $g=f^{|f(X)}$ est surjective. Donc $g$ est bijective. On définit donc sa bijection réciproque $g^{-1}:f(X) \longrightarrow X$. On suppose que $f$ est strictement décroissante. Montrons que $g^{-1}$ est strictement décroissante.
@@ -955,7 +955,7 @@ Montrons cette dernière inégalité pour conclure. Soient $(x, x') \in f(X)^2$,
 \begin{proof}
   Soit la partie $E=\enstq{f(x)}{x \in \intervallefo{a}{b}}$.
   \begin{itemize}
-  \item si $f$ est majorée, alors $E$ est une partie non vide et majorée de $\R$. Elle admet donc une borne supérieure notée S. Par caractérisation de la borne supéieure
+  \item si $f$ est majorée, alors $E$ est une partie non vide et majorée de $\R$. Elle admet donc une borne supérieure notée S. Par caractérisation de la borne supérieure
     \begin{equation}
       \forall \epsilon >0 \ \exists y_0 \in E \quad S-\epsilon <y_0 \leq S,
     \end{equation}
@@ -1011,7 +1011,7 @@ Il existe des énoncés analogues pour les fonctions décroissantes.
 
 \section{Continuité sur un intervalle}
 
-Soit $I$ un intervalle de $\R$ qui contient au moins deux éléents distincts.
+Soit $I$ un intervalle de $\R$ qui contient au moins deux éléments distincts.
 
 \subsection{Retour sur la continuité en un point}
 
@@ -1057,7 +1057,7 @@ On notera $\contpoint{a}{I}{\R}$ l'ensemble des applications de $\R^I$ qui sont 
 \subsubsection{Restrictions et prolongements}
 
 \begin{prop}
-  Soient $f \in \R^I$, $J$ un intervalle inclu dans $I$ qui contient au moins deux points. Si la fonction $f$ est continue, alors $f_{|J}$ est continue. La réciproque est fausse.
+  Soient $f \in \R^I$, $J$ un intervalle inclus dans $I$ qui contient au moins deux points. Si la fonction $f$ est continue, alors $f_{|J}$ est continue. La réciproque est fausse.
 \end{prop}
 \begin{proof}
   Soit $a \in J$ alors $a \in I$ et puisque $f$ est continue $f(a) = \lim\limits_{x\in I, x\to a} f(x)$ et comme $J \subset I$, d'après les résultats sur les restrictions de la continuité en un point, on peut écrire que $f_{|J}(a) = \lim\limits_{x\in I, x\to a} f_{|J}(x)$, alors $f_{|J}$ est continue en $a$. Puisque c'est vrai pour tout $a \in J$ alors $f_{|J}$ est continue. 
@@ -1143,7 +1143,7 @@ Soit alors $c_n=\frac{a_n+b_n}{2}$. Si $f(c_n) >0$ alors $a_{n+1}=c_n$ et $b_{n+
 \item La suite $(a_n)$ est croissante et la suite $(b_n)$ est décroissante;
 \item pour tout naturel $n$, $b_{n+1}-a_{n+1}=\frac{b_n -a_n}{2}$. 
 \end{enumerate}
-La suite $(b_n-a_n)$ est géométrique de raison $\frac{1}{2}$ donc elle tend vers zéro. Les suite $(a_n)$ et $(b_n)$ sont adjacentes. Alors elles tendent vers la même limite qu'on note $c$. Alors pour tout naturel $n$, $a\leq a_n \leq c \leq b_n \leq b$. donc $c \in [a,b]$. On sait que $f$ est  continue en $c$. Alors les suites $(f(a_n))$ et $(f(b_n))$ tendent vers $f(c)$. D'ailleurs pour tout naturel $n$, $f(a_n) \geq 0 \geq f(b_n)$ donc en passant à la limite on obient que $f(c) \geq 0 \geq f(c)$ donc $f(c)=0$. On a trouvé un élément $c \in \intervalleff{a}{b}$ tel que $f(c)=0$. Or $f(a)f(b) < 0$ donc $c$ est dans$\intervalleoo{a}{b}$.
+La suite $(b_n-a_n)$ est géométrique de raison $\frac{1}{2}$ donc elle tend vers zéro. Les suite $(a_n)$ et $(b_n)$ sont adjacentes. Alors elles tendent vers la même limite qu'on note $c$. Alors pour tout naturel $n$, $a\leq a_n \leq c \leq b_n \leq b$. donc $c \in [a,b]$. On sait que $f$ est  continue en $c$. Alors les suites $(f(a_n))$ et $(f(b_n))$ tendent vers $f(c)$. D'ailleurs pour tout naturel $n$, $f(a_n) \geq 0 \geq f(b_n)$ donc en passant à la limite on obtient que $f(c) \geq 0 \geq f(c)$ donc $f(c)=0$. On a trouvé un élément $c \in \intervalleff{a}{b}$ tel que $f(c)=0$. Or $f(a)f(b) < 0$ donc $c$ est dans$\intervalleoo{a}{b}$.
 \end{proof}
 \begin{cor}[Théorème des valeurs intermédiaires]
   Soient $f$ une application continue sur $I \subset \R$ à valeurs réelles et $(a,b) \in I^2$ tels que $a < b$. Alors pour tout $\lambda$ strictement comprit entre $f(a)$ et $f(b)$, il existe un réel $c \in \intervalleoo{a}{b}$ tel que $\lambda =f(c)$.
@@ -1167,13 +1167,13 @@ La suite $(b_n-a_n)$ est géométrique de raison $\frac{1}{2}$ donc elle tend ve
 \begin{proof}
   \begin{enumerate}
   \item Soit par exemple $I=\intervallefo{a}{b}$ avec $\lim\limits_{b} f =+\infty$. Alors il existe $d \in I$ tel que $f(d)>0$. On sait qu'il existe $e \in I$ tel que $f(e) < 0$. Alors d'après le théorème il existe $c \in I$ tel que $f(c)=0$.
-  \item Soit par exmple $I=\intervalleoo{a}{b}$ avec $\lim\limits_{b} f =+\infty$ et $\lim\limits_{a} f =-\infty$ alors il existe $d$ et $e$ dans I tels que $f(d)>0$ et $f(e) <0$. D'après le théorème, il existe un point $c$ de I tel que $f(c)=0$.
+  \item Soit par exemple $I=\intervalleoo{a}{b}$ avec $\lim\limits_{b} f =+\infty$ et $\lim\limits_{a} f =-\infty$ alors il existe $d$ et $e$ dans I tels que $f(d)>0$ et $f(e) <0$. D'après le théorème, il existe un point $c$ de I tel que $f(c)=0$.
   \end{enumerate}
 \end{proof}
 
 \subsubsection[Image continue d'un segment]{Image d'un segment $\intervalleff{a}{b}$ par une application continue}
 
-Si $A$ est une partie de $\R$ non majorée, on définit $\sup A = + \infty$ par convention. Si on voit $A$ comme une partie de $\Rbar$, alors $+\infty$ est un majorant de $A$ dans $\Rbar$ et c'est même le seul donc c'est le plus peti et donc $+\infty=\sup_{\Rbar} A$.
+Si $A$ est une partie de $\R$ non majorée, on définit $\sup A = + \infty$ par convention. Si on voit $A$ comme une partie de $\Rbar$, alors $+\infty$ est un majorant de $A$ dans $\Rbar$ et c'est même le seul donc c'est le plus petit et donc $+\infty=\sup_{\Rbar} A$.
 
 \begin{lemme}
   Soient $A$ et $B$ deux parties non vide de $\R$, alors
@@ -1194,7 +1194,7 @@ Alors pour tout réel $\alpha < \beta< \gamma$ et pour toute application $f$
 \end{equation}
 %
 \begin{theo}[Théorème des bornes]
-  Soient $a<b$ deux réels et $f:\intervalleff{a}{b} \longrightarrow \R$ continue.Alors $f$ est bornée et atteint ses bornes, c'est-à-dire qu'il existe $c$ et $d$ dans $\intervalleff{a}{b}$ tels que $f(c)=\sup\limits_{\intervalleff{a}{b}}f$ et $f(d)=\inf\limits_{\intervalleff{a}{b}}f$
+  Soient $a<b$ deux réels et $f:\intervalleff{a}{b} \longrightarrow \R$ continue. Alors $f$ est bornée et atteint ses bornes, c'est-à-dire qu'il existe $c$ et $d$ dans $\intervalleff{a}{b}$ tels que $f(c)=\sup\limits_{\intervalleff{a}{b}}f$ et $f(d)=\inf\limits_{\intervalleff{a}{b}}f$
 \end{theo}
 \begin{proof}
   On construit deux suites $(a_n)$ et $(b_n)$ par récurrence. Initialement $a_0=a$ et $b_0=b$. Soit $S=\sup\limits_{\intervalleff{a}{b}}f \in \R\cup\{+\infty\}$ alors $S=\sup\limits_{\intervalleff{a_0}{b_0}}f \in \R\cup\{+\infty\}$. On suppose avoir construit $(a_n)$ et $(b_n)$ telles que $S=\sup\limits_{\intervalleff{a_n}{b_n}}f \in \R\cup\{+\infty\}$ alors on pose $c_n=\frac{a_n+b_n}{2}$. On sait d'après le lemme que 
@@ -1212,7 +1212,7 @@ Alors pour tout réel $\alpha < \beta< \gamma$ et pour toute application $f$
   \item la suite $a$ est croissante et la suite $b$ est décroissante;
   \item la suite $(b-a)_n$ tend vers zéro.
   \end{enumerate}
-  Alors les suite $(a_n)$ et $(b_n)$ sont adjacentes, elles tendent alors vers la même limite notée $c$. Alors $c \in \intervalleff{a}{b}$. Il reste à prouver que $S$ est finie et que $f(c)=S$. Supposons par l'absurde que $S=+\infty$. Alors pour tout naturel $n$, $+\infty = \sup\limits_{\intervalleff{a_n}{b_n}}f$. Il existe alors $x_n \in \intervalleff{a_n}{b_n}$ tel que $f(x_n) \geq n$. On sait aussi que pour tout naturel $n$, $a_n \leq x_n \leq b_n$ et que par théorème des gendarmes $(x_n)_{n _in \N}$ tend vers $c$. D'une part, pour tout naturel $n$, $f(x_n) \geq n$ donc en passant à la limite $\lim f(x_n) = +\infty$. D'autre part comme $f$ est continue sur $\intervalleff{a}{b}$, notamment en $c$, alors $(f(x_n))_{n\in \N}$ tend vers $f(c)$. On arrive donc à une aburdité par unicité de la limite donc $S$ est finie. Avec $\epsilon=\frac{1}{n+1}$, par caractérisation de la borne supérieure, il existe $x_n \in \intervalleff{a_n}{b_n}$ tel que
+  Alors les suite $(a_n)$ et $(b_n)$ sont adjacentes, elles tendent alors vers la même limite notée $c$. Alors $c \in \intervalleff{a}{b}$. Il reste à prouver que $S$ est finie et que $f(c)=S$. Supposons par l'absurde que $S=+\infty$. Alors pour tout naturel $n$, $+\infty = \sup\limits_{\intervalleff{a_n}{b_n}}f$. Il existe alors $x_n \in \intervalleff{a_n}{b_n}$ tel que $f(x_n) \geq n$. On sait aussi que pour tout naturel $n$, $a_n \leq x_n \leq b_n$ et que par théorème des gendarmes $(x_n)_{n _in \N}$ tend vers $c$. D'une part, pour tout naturel $n$, $f(x_n) \geq n$ donc en passant à la limite $\lim f(x_n) = +\infty$. D'autre part comme $f$ est continue sur $\intervalleff{a}{b}$, notamment en $c$, alors $(f(x_n))_{n\in \N}$ tend vers $f(c)$. On arrive donc à une absurdité par unicité de la limite donc $S$ est finie. Avec $\epsilon=\frac{1}{n+1}$, par caractérisation de la borne supérieure, il existe $x_n \in \intervalleff{a_n}{b_n}$ tel que
   \begin{equation}
     S-\frac{1}{n+1} < f(x_n) \leq S.
   \end{equation}
@@ -1274,7 +1274,7 @@ Alors pour tout réel $\alpha < \beta< \gamma$ et pour toute application $f$
     \begin{equation}
       f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S} \text{~ou~} f(\intervallefo{a}{b}) = \intervalleff{f(a)}{S}.
     \end{equation}
-    Dans le cas général, on ne peut rien dire de plus. Dans le cas où $f$ est strictement croissante, on va montrer que $f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}$. Il faut montrer que $S$ n'admet pas d'antécédants. On suppose par l'absurde que $S$ en admet un. Alors il existe un réel $c \in \intervallefo{a}{b}$ tel que $f(c)=S$. Puisque $f$ croît strictement il existe un $x \in \intervalleoo{c}{b}$ tel que $f(x) \geq f(c)=S$. Or c'est aburde puisue $S$ est la borne supérieure de $f$. Alors $S$ n'admet pas d'antécédant et $f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}$.
+    Dans le cas général, on ne peut rien dire de plus. Dans le cas où $f$ est strictement croissante, on va montrer que $f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}$. Il faut montrer que $S$ n'admet pas d'antécédents. On suppose par l'absurde que $S$ en admet un. Alors il existe un réel $c \in \intervallefo{a}{b}$ tel que $f(c)=S$. Puisque $f$ croît strictement il existe un $x \in \intervalleoo{c}{b}$ tel que $f(x) \geq f(c)=S$. Or c'est absurde puisque $S$ est la borne supérieure de $f$. Alors $S$ n'admet pas d'antécédent et $f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}$.
   \end{enumerate}
 \end{proof}
 
@@ -1319,7 +1319,7 @@ Alors pour tout réel $\alpha < \beta< \gamma$ et pour toute application $f$
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  Tout a déjà été vu sauf la continuité de $f^{-1}$. On sait que $f^{-1}$ est strictement monotone (déja vu) et que $I=f^{-1}(f(I))$ est un intervalle. Donc $f^{-1}$ est continue.
+  Tout a déjà été vu sauf la continuité de $f^{-1}$. On sait que $f^{-1}$ est strictement monotone (déjà vu) et que $I=f^{-1}(f(I))$ est un intervalle. Donc $f^{-1}$ est continue.
 \end{proof}
 
 \subsubsection[Pour qu'une application continue soit monotone]{Condition suffisante pour qu'une application continue soit monotone}
@@ -1344,7 +1344,7 @@ comme $f$ est injective, cela signifie que $t_0a+(1-t_0)c=t_0b+(1-t_0)d$ donc $t
   \item $f$ est une bijection et $f$ est continue;
   \item $f$ est une bijection et $f$ est monotone.
   \end{enumerate}
-  Une telle application qui vérifie l'une ou l'autre hypothèse est appellée un \emph{homéomorphisme}.
+  Une telle application qui vérifie l'une ou l'autre hypothèse est appelée un \emph{homéomorphisme}.
 \end{cor}
 \begin{proof}
   \begin{itemize}
@@ -1358,7 +1358,7 @@ comme $f$ est injective, cela signifie que $t_0a+(1-t_0)c=t_0b+(1-t_0)d$ donc $t
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soit $I$ un intervalle réel et $f$ une application continue de I dans $\R$. On dit que $f$ est uniformément continue sur $I$, ou uniformémément continue, si et seulement si
+  Soit $I$ un intervalle réel et $f$ une application continue de I dans $\R$. On dit que $f$ est uniformément continue sur $I$, ou uniformément continue, si et seulement si
   \begin{equation}
     \forall \epsilon > 0 \ \exists \eta > 0 \ \forall (x,x') \in I^2 \quad \abs{x-x'} \leq \eta \implies \abs{f(x)-f(x')} \leq \epsilon
   \end{equation}
@@ -1371,7 +1371,7 @@ Si la fonction $f$ est non uniformément continue cela équivaut à
 \subsubsection{Propriétés}
 
 \begin{theo}
-  Soit $f$ une application de I vers $\R$. Si $f$ est uniforméméent continue, alors elle est continue. La réciproque est fausse.
+  Soit $f$ une application de I vers $\R$. Si $f$ est uniformément continue, alors elle est continue. La réciproque est fausse.
 \end{theo}
 \begin{proof}
   Pour tout $(x,x') \in I^2$ on note
@@ -1428,7 +1428,7 @@ La fonction $f$ n'est pas uniformément continue. On dispose cependant du théor
   \begin{equation}\label{eq:etoile}
     \forall n \in \N \quad \abs{f(x_{\varphi{n}})-f(y_{\varphi{n}})} > \epsilon.
   \end{equation}
-  Les suites $(y_{\varphi(n)})$ et $(x_{\varphi(n)})$ convergent de même limite $c$, $f$ est continue sur $\intervalleff{a}{b}$ par hypothèse donc particuliérement en $c$. Par conséquent les suites $f(x_{\varphi{n}})$ et $f(y_{\varphi{n}})$ convergent vers $f(c)$. On peut donc passer à la limite dans l'équation~\ref{eq:etoile} pour écrire que $0 \geq \epsilon$. C'est absurde puisqu'on avait posé $\epsilon >0$. Alors la fonction $f$ est uniformément continue.
+  Les suites $(y_{\varphi(n)})$ et $(x_{\varphi(n)})$ convergent de même limite $c$, $f$ est continue sur $\intervalleff{a}{b}$ par hypothèse donc particulièrement en $c$. Par conséquent les suites $f(x_{\varphi{n}})$ et $f(y_{\varphi{n}})$ convergent vers $f(c)$. On peut donc passer à la limite dans l'équation~\ref{eq:etoile} pour écrire que $0 \geq \epsilon$. C'est absurde puisqu'on avait posé $\epsilon >0$. Alors la fonction $f$ est uniformément continue.
 \end{proof}
 \begin{prop}
   \begin{enumerate}
@@ -1477,7 +1477,7 @@ Si $f$ est $k-$lipschitzienne, alors $f$ est $k'-$lipschitzienne pour tout $k' \
 \end{equation}
 Donc $f$ est uniformément continue.
 \end{proof}
-La réciproque est fausse. On en donne un contre-exemple. Soit $I=\intervalleff{0}{1}$ et $\fonction{f}{I}{\R}{x}{\sqrt{x}}$. Alors $f$ est continue sur le segment $I$. D'après le théorème de Heine, elle est uniformément continue. Montrons qu'elle n'est pas lipschitzienne. Supposons par l'absurde qu'elle le soit, alors il existe un $k >0$ tel que pour tout $(x,x') \in I^2$, $\abs{\sqrt{x}-\sqrt{x'}} \leq k\abs{x-x'}$. Soit alors en prenant $x'=0$ on a $\sqrt{x} \leq k x$. Alors pour tout $x \in \intervalleof{0}{1}$ on aurait $\frac{\sqrt{x}}{x}=\frac{1}{\sqrt{x}} \leq k$. Par passage à la limite en $0$ on aurait $k \geq + \infty$. Ce qui est complétement absurde. Alors $f$ n'est pas lipschitzienne.
+La réciproque est fausse. On en donne un contre-exemple. Soit $I=\intervalleff{0}{1}$ et $\fonction{f}{I}{\R}{x}{\sqrt{x}}$. Alors $f$ est continue sur le segment $I$. D'après le théorème de Heine, elle est uniformément continue. Montrons qu'elle n'est pas lipschitzienne. Supposons par l'absurde qu'elle le soit, alors il existe un $k >0$ tel que pour tout $(x,x') \in I^2$, $\abs{\sqrt{x}-\sqrt{x'}} \leq k\abs{x-x'}$. Soit alors en prenant $x'=0$ on a $\sqrt{x} \leq k x$. Alors pour tout $x \in \intervalleof{0}{1}$ on aurait $\frac{\sqrt{x}}{x}=\frac{1}{\sqrt{x}} \leq k$. Par passage à la limite en $0$ on aurait $k \geq + \infty$. Ce qui est complètement absurde. Alors $f$ n'est pas lipschitzienne.
 
 Si on note $\Lip{I}{\R}$ l'ensemble des applications lipschitziennes de $I$ dans $\R$ et $\mu\cont{I}{\R}$ l'ensemble des applications uniformément continues de I dans $\R$. Alors on a montré que
 \begin{equation}
@@ -1571,7 +1571,7 @@ Soit $X$ une partie de $\R$ qui contient au moins deux éléments. On note $\C^X
   \end{itemize}
 \end{prop}
 \begin{proof}
-  On a déja vu la preuve pour la partie réelle et la partie imaginaire. Soit $x \in X$, alors $\abs{\bar{f}(x)-\bar{\ell}} = \abs{f(x)-\ell} \rightarrow 0$ et $\abs{\abs{f}(x)-\abs{\ell}} \leq \abs{f(x)-\ell} \rightarrow 0$.
+  On a déjà vu la preuve pour la partie réelle et la partie imaginaire. Soit $x \in X$, alors $\abs{\bar{f}(x)-\bar{\ell}} = \abs{f(x)-\ell} \rightarrow 0$ et $\abs{\abs{f}(x)-\abs{\ell}} \leq \abs{f(x)-\ell} \rightarrow 0$.
 \end{proof}
 \begin{prop}
   Soient $f \in \C^X$ et $a \in \Rbar$. Si $f$ admet une limite en $a$, alors $f$ est bornée au voisinage de $a$.

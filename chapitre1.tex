@@ -4,7 +4,7 @@
 \minilof
 \minilot
 %
-\lettrine{V}{ous} connaissez depuis la classe de Terminale les fonctions trigonométriques, l’exponentielle et le logarithme népérien. Notre premier objectif sera de démontrer rigoureusement leurs propriétés. Nous introduirons aussi les fonctions hyperboliques ainsi que les fonctions réciproques des fonctions trigonométriques et hyperboliques. Pour comprendre quelques démonstrations, vous aurez besoin des notions de base de l’analyse~: limites, continuité, dérivabilité et convexité. Quelques théorèmes sont donnés dans l'annexe~\ref{chap:theogen}.
+Vous connaissez depuis la classe de Terminale les fonctions trigonométriques, l’exponentielle et le logarithme népérien. Notre premier objectif sera de démontrer rigoureusement leurs propriétés. Nous introduirons aussi les fonctions hyperboliques ainsi que les fonctions réciproques des fonctions trigonométriques et hyperboliques. Pour comprendre quelques démonstrations, vous aurez besoin des notions de base de l’analyse~: limites, continuité, dérivabilité et convexité. Quelques théorèmes sont donnés dans l'annexe~\ref{chap:theogen}.
 %
 \section{Logarithmes \& exponentielles}
 \label{sec:chap1-logetexp}
@@ -15,12 +15,12 @@
 \begin{defdef}
 \label{def:chap1-deflognep}
 On appelle fonction logarithme népérien l'unique primitive de la fonction continue $\fonction{f}{\Rplusetoile}{\R}{t}{\frac{1}{t}}$ qui s'annule en $1$. On a donc pour tout $x$ strictement positif
-\begin{equation} 
+\begin{equation}
   \ln x=\int_{1}^{x} \frac{\diff t}{t}.
 \end{equation}
 \end{defdef}
 %
-Ainsi, par définition, on a~: 
+Ainsi, par définition, on a~:
 \begin{itemize}
 \item $\ln 1 = 0$;
 \item $\ln$ est dérivable sur $\Rplusetoile$;
@@ -30,22 +30,22 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 %
 \begin{theo}
 \label{theo:lognep1}
-  Pour tout $x, y \in \Rplusetoile$, on a 
-  \begin{equation} 
-    \ln(xy)=\ln x + \ln y. 
-  \end{equation}  
+  Pour tout $x, y \in \Rplusetoile$, on a
+  \begin{equation}
+    \ln(xy)=\ln x + \ln y.
+  \end{equation}
 \end{theo}
 \begin{proof}
-  Soit $y \in \Rplusetoile$ fixé. On définit la fonction 
+  Soit $y \in \Rplusetoile$ fixé. On définit la fonction
   \begin{equation}
     \fonction{f_y}{\Rplusetoile}{\R}{x}{\ln(xy)},
   \end{equation}
   alors $f_y$ est dérivable sur $\Rplusetoile$ par produit et composition de fonctions qui le sont. En dérivant la fonction $f_y$, on a pour tout $x \in \Rplusetoile$
-   \begin{equation} 
+   \begin{equation}
      f_y'(x)=y \frac{1}{xy}=\frac{1}{x}=\ln' x.
    \end{equation}
-  Il existe donc une constante réelle $c$ telle que 
-  \begin{equation} 
+  Il existe donc une constante réelle $c$ telle que
+  \begin{equation}
     f_y(x)=\ln(xy)=\ln x + c.
   \end{equation}
   Or $f_y(1)=\ln(y)=c$.
@@ -63,14 +63,14 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
   \begin{itemize}
   \item $ 0 = \ln 1 = \ln \left(\frac{1}{x} \cdot x \right) = \ln \left(\frac{1}{x}\right) + \ln x $.
   \item $ \ln \left(\frac{x}{y}\right)=\ln x + \ln \left(\frac{1}{y}\right)=\ln x - \ln y$.
-  \item On montre la proposition par récurrence sur $n$~: 
-    \begin{itemize} 
+  \item On montre la proposition par récurrence sur $n$~:
+    \begin{itemize}
     \item On a $\ln(x^0) = 0 = 0 \cdot \ln(x)$.
-    \item Ensuite, supposons la propriété vraie au rang $n$, montrons qu'elle est vraie au rang $n+1$~: 
+    \item Ensuite, supposons la propriété vraie au rang $n$, montrons qu'elle est vraie au rang $n+1$~:
       \begin{equation}
         \ln x^{n+1} = \ln x + \ln x^n = \ln x + n \cdot \ln x = (n+1) \ln x.
       \end{equation}
-      Par théorème de récurrence, la proposition est vraie pour tous les entiers naturels. 
+      Par théorème de récurrence, la proposition est vraie pour tous les entiers naturels.
     \item Montrons le pour les entiers négatifs. Si $n \in \Z\setminus\N$, alors
       \begin{equation}
         \ln x^n = -\ln x^{-n}=-(-n\ln x)=n\ln x.
@@ -105,21 +105,21 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 %
 \begin{theo}
   L'ensemble $E$ des fonctions dérivables de $\R^{\Rplusetoile}$ telles que~:
-  \begin{equation} 
+  \begin{equation}
     \label{eq:fonclog}
     \forall x, y \in \Rplusetoile \quad f(xy)=f(x)+f(y)
   \end{equation}
-  est la droite vectorielle engendrée par le logarithme népérien, c'est-à-dire que~: 
+  est la droite vectorielle engendrée par le logarithme népérien, c'est-à-dire que~:
   \begin{equation}
     E=\enstq{\fonction{f_{\alpha}}{\Rplusetoile}{\R}{x}{\alpha \ln x}}{\alpha \in \R}.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit une fonction $f \in \R^{\Rplusetoile}$ dérivable sur $\Rplusetoile$ vérifiant l'Eq.~\eqref{eq:fonclog}. Comme $f$ est dérivable, on peut dériver l'Eq.~\eqref{eq:fonclog} par rapport à $x$ et on obtient pour tout $y$ strictement positif
-  \begin{equation} 
+  Soit une fonction $f \in \R^{\Rplusetoile}$ dérivable sur $\Rplusetoile$ vérifiant l'équation.~\eqref{eq:fonclog}. Comme $f$ est dérivable, on peut dériver l'équation.~\eqref{eq:fonclog} par rapport à $x$ et on obtient pour tout $y$ strictement positif
+  \begin{equation}
     y f'(xy)=f'(x).
   \end{equation}
-  Pour $x=1$, on a 
+  Pour $x=1$, on a
   \begin{equation}
     y f'(y)=f'(1),
   \end{equation}
@@ -127,9 +127,9 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
   \begin{equation}
     f(y)=f'(1)\ln y + f(1).
   \end{equation}
-  En appliquant l'Eq.~\eqref{eq:fonclog} en $x=y=1$, on a $f(1)=2f(1)$ donc $f(1)=0$.
+  En appliquant l'équation.~\eqref{eq:fonclog} en $x=y=1$, on a $f(1)=2f(1)$ donc $f(1)=0$.
 
-  On a montré que si une fonction $f$ de $\R^{\Rplusetoile}$ dérivable vérifie l'Eq.~\eqref{eq:fonclog}, alors elle est proportionnelle au logarithme népérien. La réciproque est due au théorème~\ref{theo:lognep1}. 
+  On a montré que si une fonction $f$ de $\R^{\Rplusetoile}$ dérivable vérifie l'équation.~\eqref{eq:fonclog}, alors elle est proportionnelle au logarithme népérien. La réciproque est due au théorème~\ref{theo:lognep1}.
 \end{proof}
 %
 \subsection{Logarithmes de base a}
@@ -151,8 +151,8 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
   Ce sont des conséquences immédiates de la définition et des propriétés du logarithme népérien.
 \end{proof}
 %
-\begin{prop} 
-  Soient $x$ et $y$ deux réels strictement positifs, $a$ et $b$ deux bases de logarithme~\footnote{Une base de logarithem est un réel strictement positif différent de 1}, alors~:
+\begin{prop}
+  Soient $x$ et $y$ deux réels strictement positifs, $a$ et $b$ deux bases de logarithme~\footnote{Une base de logarithme est un réel strictement positif différent de 1}, alors~:
   \begin{gather}
     \log_a xy=\log_a x + \log_a y; \\
     \log_b x=\log_ba \log_ax; \\
@@ -175,29 +175,29 @@ Le logarithme décimal en base $10$ et le logarithme binaire en base $2$.
 \end{figure}
 \subsection{Exponentielle}
 \label{subsec:chap1-exp}
-\begin{defdef} 
+\begin{defdef}
   L'application logarithme népérien est continue sur $\Rplusetoile$ et strictement croissante, telle que $\lim\limits_{0^+} \ln =-\infty$ et $\lim\limits_{+\infty} \ln = +\infty$. Alors le logarithme népérien induit une bijection de $\Rplusetoile$ sur $\R$. L'application réciproque du logarithme népérien est la fonction exponentielle notée $\exp$ telle que
   \begin{equation}
     \fonction{\exp}{\R}{\Rplusetoile}{x}{\exp(x)}.
-  \end{equation}  
+  \end{equation}
 \end{defdef}
 %
 \begin{prop} Les fonctions logarithme népérien et exponentielle vérifient
-  \begin{equation} 
+  \begin{equation}
     \forall (x,y) \in \R \times \Rplusetoile \quad y=\exp(x) \iff x=\ln y.
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
-  C'est une conséquence de la définition. 
+\begin{proof}
+  C'est une conséquence de la définition.
 \end{proof}
 %
-\begin{prop} 
-  La fonction exponentielle est dérivable sur $\R$ et 
-  \begin{equation} 
+\begin{prop}
+  La fonction exponentielle est dérivable sur $\R$ et
+  \begin{equation}
     \forall x \in \R \quad \exp'(x)=\exp(x).
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   La fonction $\ln$ est dérivable sur $\Rplusetoile$ et pour tout réel $y$, $\exp(y)>0$. Alors d'après les théorèmes généraux~\footnote{cf.\ annexe~\ref{chap:theogen}}, on a
   \begin{equation}
     \exp'(y)=\frac{1}{\ln'(\exp(y))}=\exp(y).
@@ -211,15 +211,15 @@ Le logarithme décimal en base $10$ et le logarithme binaire en base $2$.
 On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ sur le groupe multiplicatif $(\R^*,\times)$~\footnote{cf.\ chapitre~\ref{chap:groupes}}.
 
 \end{prop}
-\begin{proof} 
-  Soient deux réels $x$ et $y$. Comme 
+\begin{proof}
+  Soient deux réels $x$ et $y$. Comme
   \begin{equation}
     \ln(\exp(x+y))=x+y=\ln(\exp(x))+\ln(\exp(y))=\ln(\exp(x) \exp(y)),
   \end{equation}
   en appliquant l'exponentielle~\footnote{L'exponentielle est une fonction bijective} on obtient le résultat.
 \end{proof}
 %
-\begin{prop} 
+\begin{prop}
   Soient $x$ et $y$ deux réels et un entier relatif $n$, alors
   \begin{gather}
     \exp(-x)=\frac{1}{\exp(x)}; \\
@@ -227,15 +227,15 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
     \exp(nx)=\exp(x)^n.
   \end{gather}
 \end{prop}
-\begin{proof} 
-  \begin{itemize} 
+\begin{proof}
+  \begin{itemize}
   \item $\ln(\exp(-x))=-x=-\ln(\exp(x))=\ln \left(\frac{1}{\exp(x)}\right)$ et on peut composer par $\exp$~\footnote{Idem} pour obtenir le résultat;
   \item $\exp(x-y)=\exp(x) \exp(-y)=\frac{\exp(x)}{\exp(y)}$;
   \item $\ln(\exp(nx))=nx=n \ln(\exp(x))=\ln(\exp(x)^n)$ puis en composant par $\exp$, on a le résultat.
   \end{itemize}
 \end{proof}
 %
-\begin{prop} 
+\begin{prop}
   La fonction exponentielle admet les limites suivantes~:
   \begin{gather}
     \lim\limits_{x \to \infty} \exp(x)=+\infty;\\
@@ -243,7 +243,7 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
     \lim\limits_{x \to 0} \frac{\exp(x)-1}{x}=1.
   \end{gather}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Les deux premières propositions sont des conséquences de la définition et la dernière est la limite du taux d'accroissement en zéro, soit la dérivée en 0 de l'exponentielle.
 \end{proof}
 %
@@ -258,46 +258,46 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
   L'ensemble $E$ des fonctions de $\R^{\R}$ dérivables qui vérifient l'équation
   \begin{equation}
     \label{eq:foncexp}
-    \forall x, y \in \R \quad f(x+y)=f(x) \cdot f(y) 
+    \forall x, y \in \R \quad f(x+y)=f(x) \cdot f(y)
   \end{equation}
-  est 
-  \begin{equation} 
+  est
+  \begin{equation}
     E=\left\{0\right\} \cup \enstq{\fonction{g_{\alpha}}{\R}{\R}{x}{\exp(\alpha x)}}{\alpha \in \R}.
   \end{equation}
 \end{theo}
-\begin{proof} 
-  Soit une fonction $f \in \R^{\R}$ dérivable qui vérifie l'Eq.~\eqref{eq:foncexp}, alors en dérivant cette équation on obtient~:
-  \begin{equation} 
+\begin{proof}
+  Soit une fonction $f \in \R^{\R}$ dérivable qui vérifie l'équation.~\eqref{eq:foncexp}, alors en dérivant cette équation on obtient~:
+  \begin{equation}
     \label{eq:foncexpun}
     f'(x+y)=f'(x)f(y)=f(x)f'(y).
   \end{equation}
   Deux cas sont possibles~:
   \begin{itemize}
   \item la fonction nulle est solution,
-  \item si la fonction n'est pas nulle, il existe une réel $x_0$ tel que $f(x_0) \neq 0$. Alors 
+  \item si la fonction n'est pas nulle, il existe une réel $x_0$ tel que $f(x_0) \neq 0$. Alors
     \begin{equation}
       \forall y \in \R \quad f(x_0)= f(x_0-y)f(y).
     \end{equation}
-    Soit $y \in \R$, alors $f(y) \neq 0$. La fonction $f$ ne s'annulant donc jamais, on peut reprendre l'Eq.~\ref{eq:foncexpun} et écrire que 
+    Soit $y \in \R$, alors $f(y) \neq 0$. La fonction $f$ ne s'annulant donc jamais, on peut reprendre l'équation.~\ref{eq:foncexpun} et écrire que
     \begin{equation}
       \label{eq:foncexpdeux}
       \forall x \in \R \quad \frac{f'(x)}{f(x)}=\frac{f'(0)}{f(0)}.
     \end{equation}
-    D'après l'Eq.~\ref{eq:foncexp}, on a 
+    D'après l'équation.~\ref{eq:foncexp}, on a
     \begin{equation}
       f(0)=f(0)^2.
     \end{equation}
-    Comme $f$ ne s'annule pas, nécessairement $f(0)=1$. La fonction $f$ est donc toujours positive. D'après l'Eq.~\eqref{eq:foncexpdeux}, il existe un réel $c$ tel que 
+    Comme $f$ ne s'annule pas, nécessairement $f(0)=1$. La fonction $f$ est donc toujours positive. D'après l'équation.~\eqref{eq:foncexpdeux}, il existe un réel $c$ tel que
     \begin{equation}
       \forall x \in \R \quad \ln \abs{f(x)}=\ln f(x)=f'(0) x + c.
     \end{equation}
-    Alors 
+    Alors
     \begin{equation}
       f(x)=\exp(f'(0) x +c),
     \end{equation}
     et comme $f(0)=1$, on a $c=0$.
   \end{itemize}
-  La réciproque est due à la proposition~\ref{prop-chap1:addexp}. Si une fonction est dans $E$ alors elle vérifie l'Eq.~\ref{eq:foncexp}.
+  La réciproque est due à la proposition~\ref{prop-chap1:addexp}. Si une fonction est dans $E$ alors elle vérifie l'équation.~\ref{eq:foncexp}.
 \end{proof}
 %
 \subsection{Exponentielles de base a}
@@ -305,29 +305,29 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
 \begin{defdef}
   Soit une base $a$ de logarithme dans $\Rplusetoile\setminus\{1\}$. Comme l'application logarithme népérien, l'application $\log_a$ induit une bijection de $\Rplusetoile$ sur $\R$ et admet une bijection réciproque appelée exponentielle de base $a$, notée $\exp_a$.
 \end{defdef}
-\begin{prop} 
-  \begin{equation} 
+\begin{prop}
+  \begin{equation}
     \forall x \in \R \ \forall y \in \Rplusetoile \ \forall a \in \Rplusetoile\setminus\{1\} \quad y=\exp_a(x) \iff x=\log_a(y).
   \end{equation}
 \end{prop}
-\begin{proof} 
-  C'est une conséquence directe de la définition. 
+\begin{proof}
+  C'est une conséquence directe de la définition.
 \end{proof}
 %
-\begin{prop} 
-  \begin{equation} 
+\begin{prop}
+  \begin{equation}
     \forall x \in \R \ \forall a \in \Rplusetoile\setminus\{1\} \quad \exp_a(x)=\exp(a\ln x).
   \end{equation}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   On sait que~:
   \begin{equation}
     \log_a(\exp_a(x))=x=\frac{\ln(\exp(x \ln a))}{\ln a}=\log_a(\exp(x \ln a)),
-  \end{equation} 
-  et en appliquant $\exp_a$, qui est bijective, on obtient le résultat. 
+  \end{equation}
+  et en appliquant $\exp_a$, qui est bijective, on obtient le résultat.
 \end{proof}
 %
-\begin{prop} 
+\begin{prop}
   Soient $a$ une base de logarithme, $x$ et $y$ deux réels et $n$ un entier relatif. Alors les propriétés suivantes sont vraies~: la fonction $\exp_a$ est indéfiniment dérivable sur $\R$ et
   \begin{equation}
     \forall x \in \R \quad \exp_a'(x)=\ln a \exp_a(x).
@@ -341,11 +341,11 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
     \exp_{\frac{1}{a}}(x)=\exp(-x \ln a)=\exp_a(-x).
   \end{gather}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Ce sont des conséquences immédiates des propriétés de l'exponentielle.
 \end{proof}
 %
-En appliquant la formule précédente en $x=1$, et on a~: $\exp_a(n)=\exp_a(1)^n=a^n$. Alors on pose 
+En appliquant la formule précédente en $x=1$, et on a~: $\exp_a(n)=\exp_a(1)^n=a^n$. Alors on pose
 \begin{equation}
   \forall x \in \R \quad a^x=\exp_a(x)=\exp(x \ln a)
 \end{equation}
@@ -362,7 +362,7 @@ En particulier pour l'exponentielle~: $\e^x=\exp(x)$. On pose aussi que pour tou
 \label{sec:chap1-puissances}
 \subsection{Les fonctions puissances}
 \label{subsec:chap1-fonctionspuissances}
-\begin{defdef} 
+\begin{defdef}
   Soit un réel $\alpha$. On appelle fonction puissance d'exposant $\alpha$ la fonction
   \begin{equation}
     \fonction{f_{\alpha}}{\Rplusetoile}{\R}{x}{x^{\alpha}=\e^{\alpha \ln x}}.
@@ -377,11 +377,11 @@ En particulier pour l'exponentielle~: $\e^x=\exp(x)$. On pose aussi que pour tou
     \ln x^{\alpha} = \alpha \ln x.
   \end{gather}
 \end{prop}
-\begin{proof} 
-  Ce sont des conséquences immédiates de la définition. 
+\begin{proof}
+  Ce sont des conséquences immédiates de la définition.
 \end{proof}
 %
-\begin{prop} 
+\begin{prop}
   Soient deux réels $\alpha$ et $\beta$, puis deux réels strictement positifs $x$ et $y$. Les formules suivantes sont vraies
   \begin{gather}
     x^{\alpha+\beta}=x^\alpha x^\beta;\\
@@ -389,13 +389,13 @@ En particulier pour l'exponentielle~: $\e^x=\exp(x)$. On pose aussi que pour tou
     (x^\alpha)^\beta=x^{\alpha\beta}.
   \end{gather}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Soient deux réels $\alpha$ et $\beta$, puis deux réels strictement positifs $x$ et $y$. Alors
-  \begin{gather} 
+  \begin{gather}
   x^{\alpha+\beta}=\e^{(\alpha+\beta)\ln x}=\e^{\alpha \ln x} \e^{\beta \ln x}=x^\alpha x^\beta;\\
   (xy)^\alpha=\e^{\alpha \ln (xy)}=\e^{\alpha \ln x +\alpha \ln y}=\e^{\alpha \ln x} \e^{\alpha \ln y}=x^\alpha x^\beta ;\\
   (x^\alpha)^\beta=(\e^{\alpha \ln x})^\beta=\e^{\beta \ln(\e^{\alpha \ln x})}=\e^{\beta \alpha \ln x}=x^{\alpha \beta}.
-  \end{gather} 
+  \end{gather}
 \end{proof}
 
 Les fonctions puissances admettent les limites suivantes~:
@@ -406,13 +406,13 @@ Les fonctions puissances admettent les limites suivantes~:
     \alpha<0 & \lim\limits_{+\infty}f_\alpha=0 \quad \lim\limits_{0^{+}}f_\alpha=+\infty.
   \end{cases}
 \end{equation}
-\begin{prop} 
-  Pour tout $\alpha \in \R$, la fonction $f_\alpha$ est dérivable sur $\Rplusetoile$ telle que 
+\begin{prop}
+  Pour tout $\alpha \in \R$, la fonction $f_\alpha$ est dérivable sur $\Rplusetoile$ telle que
   \begin{equation}
     \forall x \in \Rplusetoile \quad f'_\alpha(x)=\alpha x^{\alpha -1}.
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   La fonction $f_\alpha$ est dérivable par composition de fonctions qui le sont et pour tout $x > 0$ on a
   \begin{equation}
     f_\alpha'(x)=\frac{\alpha}{x} \e^{\alpha \ln x}=\frac{\alpha}{x} x^\alpha=\alpha x^{\alpha-1}.
@@ -443,12 +443,12 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 %
 \subsection{Dérivation des fonctions de la forme exponentielle}
 \label{subsec:chap1-derivationdesfonctionsdelaformeexponentielle}
-\begin{prop} 
-  Soient $I$ un intervalle réel, $u$ et $v$ des fonctions dérivables de $\R^{I}$, alors la fonction $u^v$ est dérivable. 
+\begin{prop}
+  Soient $I$ un intervalle réel, $u$ et $v$ des fonctions dérivables de $\R^{I}$, alors la fonction $u^v$ est dérivable.
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Soit un réel $x$ de $I$ et soit $f(x)=\e^{v(x) \ln u(x)}$. la fonction $f$ est dérivable comme produit et composée de fonctions qui le sont, et
-  \begin{align} 
+  \begin{align}
     f'(x) &=\left[ v'(x) \ln u(x) + v(x) \frac{u'(x)}{u(x)} \right]\e^{v(x) \ln u(x)} \\
     &= \left[v'(x)u(x)\ln u(x) + v(x) u'(x) \right]u(x)^{v(x)-1}.
   \end{align}
@@ -456,14 +456,14 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 %
 \section{Croissances comparées}
 \label{sec:chap1-croissancescomparees}
-\begin{theo} 
-  \begin{equation} 
+\begin{theo}
+  \begin{equation}
     \lim\limits_{x \to +\infty} \frac{\ln x}{x}=0^+.
-  \end{equation} 
+  \end{equation}
   Ce qui traduit la \og lenteur \fg{} de croissance du logarithme népérien par rapport à l'identité. On écrira par la suite $\ln x=o_{+\infty}(x)$.
 \end{theo}
-\begin{proof} 
-  Soient deux réels $x$ et $t$ supérieurs à 1, alors 
+\begin{proof}
+  Soient deux réels $x$ et $t$ supérieurs à 1, alors
   \begin{align}
     \sqrt{t} & \leq t \\
     \frac{1}{t} &\leq \frac{1}{\sqrt{t}}\\
@@ -475,22 +475,22 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 %
 \begin{prop}
   \label{prop-chap1:croissancecomparelnpuissance}
-  Soient $\alpha$ et $\beta$ deux réels strictement positifs, alors 
-  \begin{equation} 
+  Soient $\alpha$ et $\beta$ deux réels strictement positifs, alors
+  \begin{equation}
     \lim\limits_{x \to +\infty} \frac{(\ln x)^\alpha}{x^\beta} = 0^+ \quad \lim\limits_{x \to 0^+} x^\beta \abs{\ln x}^\alpha=0^+.
-  \end{equation} 
+  \end{equation}
   Ce qui veut dire que les puissances \og l'emportent \fg{} toujours devant les logarithmes.
 \end{prop}
-\begin{proof} 
-  Soit un réel $x \geq 1$ alors 
-  \begin{equation} 
+\begin{proof}
+  Soit un réel $x \geq 1$ alors
+  \begin{equation}
     \frac{\ln x^\alpha}{x^\beta}=\left(\frac{\alpha}{\beta} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}} \right)^\alpha.
   \end{equation}
-  On a 
+  On a
   \begin{equation}
     x^{\frac{\beta}{\alpha}}\underset{x \to +\infty}{\longrightarrow}+\infty,
-  \end{equation} 
-  donc par composition de limites 
+  \end{equation}
+  donc par composition de limites
   \begin{equation}
     \lim\limits_{x \to \infty} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}}=0^{+}.
   \end{equation}
@@ -505,32 +505,32 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
   Soit en appliquant la première limite ---~puisque $\frac{1}{x}\underset{x \to 0^+}{\longrightarrow}+\infty$~--- on obtient le résultat.
 \end{proof}
 %
-\begin{prop} 
-  Soient $\alpha$ et $\beta$ deux réels strictement positifs, alors 
-  \begin{equation} 
+\begin{prop}
+  Soient $\alpha$ et $\beta$ deux réels strictement positifs, alors
+  \begin{equation}
     \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty \quad \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+
   \end{equation}
   Ce qui traduit la prépondérance des fonctions exponentielles face aux fonctions puissances.
 \end{prop}
 %
-\begin{proof} 
-  Soit un réel $x$ strictement positif. On pose $y=\e^{x}$ alors 
+\begin{proof}
+  Soit un réel $x$ strictement positif. On pose $y=\e^{x}$ alors
   \begin{equation}
     \frac{\e^{\alpha x}}{x^\beta}=\frac{y^\alpha}{\ln(y)^\beta}
   \end{equation}
-  puisque $\e^{x} \underset{x \to \infty}{\rightarrow}+\infty$ la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie 
+  puisque $\e^{x} \underset{x \to \infty}{\rightarrow}+\infty$ la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie
   \begin{equation}
     \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty.
   \end{equation}
-  Soit un réel $x$ strictement négatif, alors 
+  Soit un réel $x$ strictement négatif, alors
   \begin{equation}
     \e^{\alpha x}\abs{x}^\beta=\frac{(-x)^\beta}{\e^{\alpha(-x)}}.
   \end{equation}
-  D'après la première limite 
+  D'après la première limite
   \begin{equation}
     \lim\limits_{x \to - \infty} \frac{\e^{\alpha (-x)}}{(-x)^\beta}=+\infty.
-  \end{equation} 
-  D'où 
+  \end{equation}
+  D'où
   \begin{equation}
     \lim\limits_{x\to -\infty}\frac{(-x)^\beta}{\e^{\alpha (-x)}}=\lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+.
   \end{equation}
@@ -576,9 +576,9 @@ On présente un tableau récapitulatif, la table~\ref{tab:fonctiontrigo}, des di
 \end{figure}
 %
 Soit un réel $x$ et un réel $y \in D_2$, alors
-\begin{gather} 
+\begin{gather}
   \cos^2 x+\sin^2 x=1;\\
-  \sin \left(\frac{\pi}{2}+x\right)= \sin \left(\frac{\pi}{2}-x\right)=\cos x; \\ 
+  \sin \left(\frac{\pi}{2}+x\right)= \sin \left(\frac{\pi}{2}-x\right)=\cos x; \\
   \cos \left(\frac{\pi}{2}-x\right)=\sin x=-\cos\left(\frac{\pi}{2}+x\right);\\
   \tan \left(\frac{\pi}{2}-y \right)=\cot y=-\cot \left(\frac{\pi}{2}+y\right).
 \end{gather}
@@ -592,7 +592,7 @@ Soit un réel $x$ et un réel $y \in D_2$, alors
 %
 \renewcommand{\arraystretch}{2.2}
 \begin{table}
-  \centering  
+  \centering
   \begin{tabular}{|c|c|c|c|c|c|}
     \hline
     $\displaystyle x$& $\displaystyle 0$&$\displaystyle \frac{\pi}{6}$&$\displaystyle \frac{\pi}{4}$&$\displaystyle \frac{\pi}{3}$&$\displaystyle \frac{\pi}{2}$\\ \hline
@@ -606,15 +606,15 @@ Soit un réel $x$ et un réel $y \in D_2$, alors
 \end{table}
 \renewcommand{\arraystretch}{1}
 \paragraph{Dérivées}
-Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs ensembles de définition, et on a:
-\begin{gather} 
+Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs ensembles de définition, et on a:
+\begin{gather}
 \forall x \in \R \quad \sin'x=\cos x \ \cos'x=-\sin x; \\
 \forall x \in D_1 \quad \tan'x=\frac{1}{\cos^2 x}=1+\tan^2 x; \\
 \forall x \in D_2 \quad \cot'x=\frac{-1}{\sin^2 x}=-1-\cot^2 x.
 \end{gather}
-\begin{prop} 
+\begin{prop}
   Les fonctions trigonométriques vérifient les égalités suivantes~:
-  \begin{gather} 
+  \begin{gather}
     \forall x, y \in \R \quad \cos x = \cos y \iff \exists k \in \Z \ x=\pm y + 2k\pi;\\
     \forall x, y \in \R \quad \sin x = \sin y \iff \begin{cases} \exists k \in \Z & x = y + 2 k \pi \\ \exists k \in \Z & x = \pi - y + 2 k \pi\end{cases}; \\
     \forall x, y \in D_1 \quad \tan x = \tan y \iff \exists k \in \Z \ x = y + k \pi;\\
@@ -630,41 +630,41 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
   La fonction $\fonction{\sin}{\intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}}{\intervalleff{-1}{1}}{x}{\sin x}$ est une bijection~\footnote{parce qu'elle est continue, strictement croissante telle que $\sin -\frac{\pi}{2}=-1$  et $\sin \frac{\pi}{2}=1$} et cette bijection admet une réciproque appelée arcsinus notée $\arcsin$.
 \end{defdef}
 %
-\begin{prop} 
-  \begin{equation} 
+\begin{prop}
+  \begin{equation}
     \forall x \in \intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}} \forall y \in \intervalleff{-1}{1} \quad y = \sin x \iff x = \arcsin y;
-  \end{equation} 
+  \end{equation}
   et
-  \begin{gather} 
+  \begin{gather}
     \sin(\arcsin y)) = y, \\
     \arcsin(\sin x) = x.
-  \end{gather} 
+  \end{gather}
 \end{prop}
-\begin{proof} 
-  C'est une conséquence de la définition de $\arcsin$. 
+\begin{proof}
+  C'est une conséquence de la définition de $\arcsin$.
 \end{proof}
 \emph{Remarque~:} La formule $\arcsin(\sin x) = x$ n'est valable que dans $\intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ et la deuxième dans $\intervalleff{-1}{1}$.
 %
-\begin{prop} 
-  La fonction $\arcsin$ est impaire et strictement croissante. 
+\begin{prop}
+  La fonction $\arcsin$ est impaire et strictement croissante.
 \end{prop}
-\begin{proof} 
+\begin{proof}
   La fonction $\arcsin$ est croissante par construction car sa réciproque est strictement croissante. Ensuite, l'intervalle $\intervalleff{-1}{1}$ est centré en 0 et puisque sinus est impaire on a
-  \begin{equation} 
+  \begin{equation}
     \forall y \in \intervalleff{-1}{1} \quad \sin (\arcsin -y)=-y=-\sin(\arcsin y)=\sin (-\arcsin y).
   \end{equation}
   En appliquant la fonction $\arcsin$~\footnote{qui est bijective} à chaque membre, on trouve que la fonction $\arcsin$ est impaire.
 \end{proof}
 %
-\begin{prop} 
-  La fonction arcsinus est dérivable sur $\intervalleoo{-1}{1}$ et 
+\begin{prop}
+  La fonction arcsinus est dérivable sur $\intervalleoo{-1}{1}$ et
   \begin{equation}
     \forall y \in \intervalleoo{-1}{1} \quad \arcsin'y = \frac{1}{\sqrt{1-y^2}}.
   \end{equation}
 \end{prop}
-\begin{proof} 
-  La fonction sinus est dérivable sur $\intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ telle que $\sin'=\cos$. Si $y=\pm 1$ alors $\cos(\arcsin y)=0$ et donc arcsinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en $-1$ et $1$. Si $y \in \intervalleoo{-1}{1}$, alors $\cos(\arcsin y) \neq 0$, arcsinus et donc dérivable en $y$ et 
-  \begin{equation} 
+\begin{proof}
+  La fonction sinus est dérivable sur $\intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ telle que $\sin'=\cos$. Si $y=\pm 1$ alors $\cos(\arcsin y)=0$ et donc arcsinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en $-1$ et $1$. Si $y \in \intervalleoo{-1}{1}$, alors $\cos(\arcsin y) \neq 0$, arcsinus et donc dérivable en $y$ et
+  \begin{equation}
     \arcsin' y = \frac{1}{\cos( \arcsin y)}=\frac{1}{\sqrt{1-\sin^2(\arcsin y)}}=\frac{1}{\sqrt{1-y^2}}.
   \end{equation}
 \end{proof}
@@ -681,39 +681,39 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
   La fonction $\fonction{\cos}{\intervalleff{0}{\pi}}{\intervalleff{-1}{1}}{x}{\cos x}$ est une bijection~\footnote{parce qu'elle est continue, strictement décroissante telle que $\cos 0=1$ et $\cos \pi=-1$.} et cette bijection admet une réciproque appelée arccosinus notée $\arccos$.
 \end{defdef}
 %
-\begin{prop} 
-  \begin{equation} 
+\begin{prop}
+  \begin{equation}
     \forall x \in \intervalleff{0}{\pi} \forall y \in \intervalleff{-1}{1} \quad y = \cos x \iff x = \arccos y;
-  \end{equation} 
-  et 
-  \begin{gather} 
-    \cos(\arccos y) = y, \\ 
+  \end{equation}
+  et
+  \begin{gather}
+    \cos(\arccos y) = y, \\
     \arccos(\cos x) = x.
   \end{gather}
 \end{prop}
-\begin{proof} 
-  C'est une conséquence de la définition de la fonction $\arccos$. 
+\begin{proof}
+  C'est une conséquence de la définition de la fonction $\arccos$.
 \end{proof}
 %
 \emph{Remarque~:} La première formule n'est valable que dans l'intervalle $\intervalleff{0}{\pi}$ et la deuxième dans l'intervalle $\intervalleff{-1}{1}$.
-\begin{prop} 
-  La fonction $\arccos$ est strictement décroissante. 
+\begin{prop}
+  La fonction $\arccos$ est strictement décroissante.
 \end{prop}
-\begin{proof} 
+\begin{proof}
   La fonction $\arccos$ est décroissante par construction.
 \end{proof}
 %
-\begin{prop} 
-  La fonction arcsinus est dérivable sur $\intervalleoo{-1}{1}$ et 
+\begin{prop}
+  La fonction arcsinus est dérivable sur $\intervalleoo{-1}{1}$ et
   \begin{equation}
     \forall y \in \intervalleoo{-1}{1} \quad \arccos'y = -\frac{1}{\sqrt{1-y^2}}.
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
-  La fonction cosinus est dérivable sur l'intevalle $\intervalleff{0}{\pi}$ telle que $\cos'=-\sin$. Si $y=\pm 1$ alors $-\sin(\arccos(y))=0$  et donc arccosinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en $-1$ et $1$. Si $y \in \intervalleoo{-1}{1}$, alors $-\sin(\arccos y) \neq 0$, arccosinus et donc dérivable en $y$ et 
-  \begin{equation} 
+\begin{proof}
+  La fonction cosinus est dérivable sur l'intervalle $\intervalleff{0}{\pi}$ telle que $\cos'=-\sin$. Si $y=\pm 1$ alors $-\sin(\arccos(y))=0$  et donc arccosinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en $-1$ et $1$. Si $y \in \intervalleoo{-1}{1}$, alors $-\sin(\arccos y) \neq 0$, arccosinus et donc dérivable en $y$ et
+  \begin{equation}
     \arccos' y = \frac{1}{-\sin( \arccos y)}=\frac{-1}{\sqrt{1-\cos^2(\arccos y)}}=\frac{-1}{\sqrt{1-y^2}}.
-  \end{equation} 
+  \end{equation}
 \end{proof}
 %
 \begin{figure}
@@ -733,20 +733,20 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item puisque $\arcsin x \in \intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ alors 
+  \item puisque $\arcsin x \in \intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ alors
     \begin{equation}
       \cos( \arcsin x)=\sqrt{1- \sin^2(\arcsin x)}=\sqrt{1-x^2} \geq 0
     \end{equation}
     On fait le même raisonnement avec $\arccos x$.
-  \item On sait aussi que 
+  \item On sait aussi que
     \begin{equation}
       \cos( \arccos x) = x = \sin( \arcsin x)=\cos \left( \frac{\pi}{2} - \arcsin x \right),
-    \end{equation} 
+    \end{equation}
     et puisque $\cos$ est bijective sur $\intervalleff{0}{\pi}$, on a égalité.
-  \item De la même manière 
+  \item De la même manière
     \begin{equation}
       \cos( \arccos -x)=-x=-\cos( \arccos x)=\cos(\pi - \arccos x),
-    \end{equation} 
+    \end{equation}
     et comme cosinus est bijectif dans $\intervalleff{0}{\pi}$, on en déduit l'égalité.
   \end{itemize}
 \end{proof}
@@ -754,7 +754,7 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
 \subsection{Fonction arctangente}
 \label{subsec:chap1-fonctionarctangente}
 \begin{defdef}
-  La restriction de la fonction tangente à l'intervalle $\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}$ est une bijection~\footnote{Idem}, sa réciproque est la fonction arctangente notée $\arctan$. 
+  La restriction de la fonction tangente à l'intervalle $\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}$ est une bijection~\footnote{Idem}, sa réciproque est la fonction arctangente notée $\arctan$.
 \end{defdef}
 \begin{prop}
   Soit un réel $x$ quelconque et un réel $y$ non nul. Alors
@@ -764,19 +764,19 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
     \arctan y + \arctan \frac{1}{y} = \sgn(y) \frac{\pi}{2}.
   \end{gather}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Soit un réel $x$ quelconque et un réel $y$ non nul, alors
   \begin{itemize}
-  \item puisque $-\frac{\pi}{2} < \arctan x < \frac{\pi}{2}$ alors $\cos(\arctan x)>0$ donc 
+  \item puisque $-\frac{\pi}{2} < \arctan x < \frac{\pi}{2}$ alors $\cos(\arctan x)>0$ donc
     \begin{equation}
       \cos(\arctan x)=\sqrt{\cos^2(\arctan x)}=\sqrt{\frac{1}{1+\tan^2(\arctan x)}}=\frac{1}{\sqrt{1+x^2}};
     \end{equation}
-  \item de la même manière on a 
-    \begin{equation} 
+  \item de la même manière on a
+    \begin{equation}
       \cos(\arctan x)=\sin( \arctan x) \tan(\arctan x) = \frac{x}{\sqrt{1+x^2}};
     \end{equation}
-  \item soit la fonction $\fonction{f}{\Rplusetoile}{\R}{y}{\arctan y + \arctan \frac{1}{y}}$ dérivable et pour tout réel $y$ positif, on a 
-    \begin{equation} 
+  \item soit la fonction $\fonction{f}{\Rplusetoile}{\R}{y}{\arctan y + \arctan \frac{1}{y}}$ dérivable et pour tout réel $y$ positif, on a
+    \begin{equation}
       f'(y)=\frac{1}{1+y^2} - \frac{1}{y^2} \cdot \frac{1}{1+\frac{1}{y^2}}=0.
     \end{equation}
     La fonction $f$ est donc constante et en $y=1$ on a $f(1)=\frac{\pi}{2}=f(y)$. Si $y$ est strictement négatif, alors comme $\arctan$ est impaire, on a $f(y)=-\frac{\pi}{2}$.
@@ -795,18 +795,18 @@ Les fonctions sinus, cosinus, tangente et cotangentes sont dérivables sur leurs
   Soient des réels $x$ et $y$ tels que $x^2+y^2=1$, alors il existe un unique réel $\theta$ dans $\intervalleof{-\pi}{\pi}$ tel que $x=\cos \theta$ et $y=\sin \theta$.
 \end{theo}
 \begin{proof}[Existence]
-  On sait que $x^2=1-y^2$ avec $x^2 \in \intervalleff{0}{1}$ donc $x \in \intervalleff{-1}{1}$. On peut donc définir un $\theta_0=\arccos x \in \intervalleff{0}{\pi}$ tel que $x=\cos \theta_0$. Ainsi $y^2=1-x^2=\sin^2 \theta_0$. Puisque $\theta_0 \in \intervalleff{0}{\pi}$ on a $\sin \theta_0>0$ alors $\abs{y}=\sin \theta_0$. 
-Si $y \geq 0$ et comme $\theta_0 \in \intervalleff{0}{\pi}$, alors $\theta=\theta_0$ est le bon réel. 
+  On sait que $x^2=1-y^2$ avec $x^2 \in \intervalleff{0}{1}$ donc $x \in \intervalleff{-1}{1}$. On peut donc définir un $\theta_0=\arccos x \in \intervalleff{0}{\pi}$ tel que $x=\cos \theta_0$. Ainsi $y^2=1-x^2=\sin^2 \theta_0$. Puisque $\theta_0 \in \intervalleff{0}{\pi}$ on a $\sin \theta_0>0$ alors $\abs{y}=\sin \theta_0$.
+Si $y \geq 0$ et comme $\theta_0 \in \intervalleff{0}{\pi}$, alors $\theta=\theta_0$ est le bon réel.
 
 Mais si $y<0$, alors on prend l'opposé $\theta=-\theta_0 \in \intervalleof{-\pi}{0}$.
 
 On a bien montré l'existence d'un réel $\theta \in \intervalleof{-\pi}{\pi}$ tel que $x=\cos \theta$ et $y=\sin \theta$.
 \end{proof}
 \begin{proof}[Unicité]
-  Supposons qu'il existe deux réel $\theta$ et $\theta'$ tels que 
-  \begin{equation} 
+  Supposons qu'il existe deux réel $\theta$ et $\theta'$ tels que
+  \begin{equation}
     \begin{cases} x=\cos \theta = \cos \theta' \\ y=\sin \theta = \sin \theta' \end{cases},
-  \end{equation}  
+  \end{equation}
   alors $x=\cos \abs{\theta}=\cos \abs{\theta'}$ puisque la fonction cosinus est paire. Les réels $\abs{\theta}$ et $\abs{\theta'}$ sont dans $\intervalleff{0}{\pi}$. La restriction de cosinus à $\intervalleff{0}{\pi}$ est bijective, on en déduit que $\abs{\theta}=\abs{\theta'}$. Deux cas se présentent~:
   \begin{itemize}
   \item Soit $\theta'=\theta$;
@@ -818,29 +818,29 @@ On a bien montré l'existence d'un réel $\theta \in \intervalleof{-\pi}{\pi}$ t
 \label{sec:chap1-trigohyper}
 \subsection{Fonctions sinus et cosinus hyperbolique}
 \label{subsec:chap1-sinushetcosh}
-\begin{defdef} 
-  On définit les applications de $\R$ dans $\R$, appelées respectivement sinus et cosinus hyperbolique, notée $\hsin$ et $\hcos$, par 
-  \begin{gather} 
+\begin{defdef}
+  On définit les applications de $\R$ dans $\R$, appelées respectivement sinus et cosinus hyperbolique, notée $\hsin$ et $\hcos$, par
+  \begin{gather}
     \forall x \in \R \quad \hsin x = \frac{\e^x - \e^{-x}}{2}, \\
     \forall x \in \R \quad \hcos x = \frac{\e^x + \e^{-x}}{2}.
   \end{gather}
 \end{defdef}
 %
-\begin{prop} 
-  La fonction sinus hyperbolique est impaire et cosinus hyperbolique est paire. Les fonctions sinus hyperbolique et cosinus hyperbolique sont dérivables sur $\R$ avec $\hsin'=\hcos$ et $\hcos'=\hsin$. 
+\begin{prop}
+  La fonction sinus hyperbolique est impaire et cosinus hyperbolique est paire. Les fonctions sinus hyperbolique et cosinus hyperbolique sont dérivables sur $\R$ avec $\hsin'=\hcos$ et $\hcos'=\hsin$.
 \end{prop}
-\begin{proof} 
+\begin{proof}
   $\R$ est centré en $0$ et ---~grâce aux calculs~--- $\hsin(-x)=-\hsin x$ et $\hcos(-x)=\hcos x$. La fonction exponentielle est dérivable sur $\R$, donc $\hsin$ et $\hcos$ sont dérivables et les calculs donnent bien la formule.
 \end{proof}
 %
 \begin{prop} Soit un réel $x$, alors
-\begin{gather} 
-  \hcos x + \hsin x = \e^x, \\ 
-  \hcos x - \hsin x = \e^{-x}, \\ 
+\begin{gather}
+  \hcos x + \hsin x = \e^x, \\
+  \hcos x - \hsin x = \e^{-x}, \\
   \hcos^2 x - \hsin^2 x = 1.
 \end{gather}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   Ces formules sont des conséquences de la définition.
 \end{proof}
 %
@@ -855,7 +855,7 @@ Les fonctions $\hsin$ et $\hcos$ permettent de paramétrer l'hyperbole $\mathcal
 %
 \subsection{Fonctions tangente et cotangente hyperbolique}
 \label{subsec:chap1-tanhetcotanh}
-\begin{defdef} 
+\begin{defdef}
   On définit la tangente hyperbolique, noté $\htan$, et la cotangente hyperbolique, notée $\hcotan$, comme
   \begin{gather}
     \forall x \in \R \quad \htan(x)=\frac{\hsin x}{\hcos x}=\frac{\e^x - \e^{-x}}{\e^x+\e^{-x}}, \\
@@ -863,30 +863,30 @@ Les fonctions $\hsin$ et $\hcos$ permettent de paramétrer l'hyperbole $\mathcal
   \end{gather}
 \end{defdef}
 %
-\begin{prop} 
-  Les fonctions tangente et cotangente hyperbolique sont impaires. Elles sont dérivables sur leurs ensembles de définition respectifs et on a 
-  \begin{equation} 
-    \forall x \in \R \quad \htan' x = 1-\htan^2 x = \frac{1}{\hcos^2 x} 
-  \end{equation} 
-  et 
-  \begin{equation} 
+\begin{prop}
+  Les fonctions tangente et cotangente hyperbolique sont impaires. Elles sont dérivables sur leurs ensembles de définition respectifs et on a
+  \begin{equation}
+    \forall x \in \R \quad \htan' x = 1-\htan^2 x = \frac{1}{\hcos^2 x}
+  \end{equation}
+  et
+  \begin{equation}
     \forall y \in \Rplusetoile \quad \hcotan' x=1-\hcotan^2 x=-\frac{1}{\hsin^2 x}.
   \end{equation}
 \end{prop}
-\begin{proof} 
+\begin{proof}
   $\R$ est centré en zéro et on vérifie que
   \begin{gather}
-    \htan(-x)=-\htan x, \\ 
+    \htan(-x)=-\htan x, \\
     \hcotan(-x) = -\hcotan x.
   \end{gather}
-  Ensuite puisque $\hsin$ et $\hcos$ sont dérivables sur $\R$ et puisque $\hcos$ ne s'annule pas sur $\R$, on a pour tout réel $x$ 
+  Ensuite puisque $\hsin$ et $\hcos$ sont dérivables sur $\R$ et puisque $\hcos$ ne s'annule pas sur $\R$, on a pour tout réel $x$
   \begin{equation}
     \htan' x = \frac{\hcos^2 x - \hsin^2 x}{\hcos^2 x},
-  \end{equation} 
-  qui nous donne la formule. De la même manière $\sinh$ ne s'annule qu'en $x=0$ donc pour $x$ non nul, on a la formule 
+  \end{equation}
+  qui nous donne la formule. De la même manière $\sinh$ ne s'annule qu'en $x=0$ donc pour $x$ non nul, on a la formule
   \begin{equation}
     \hcotan' x = \frac{\hsin^2 x - \hcos^2 x}{\hsin^2 x},
-  \end{equation} 
+  \end{equation}
   qui nous donne aussi la formule.
 \end{proof}
 La fonction tangente hyperbolique est strictement croissante et la cotangente décroît sur $\Rmoinsetoile$ et sur $\Rplusetoile$.
@@ -911,7 +911,7 @@ En théorie la seule formule exigible est $\hcos^2-\hsin^2=1$ mais les autres ex
 \end{defdef}
 %
 \begin{prop}
-  \begin{equation} 
+  \begin{equation}
     \forall x, y \in \R \quad y=\hsin x \iff x=\argsh y.
   \end{equation}
 \end{prop}
@@ -920,11 +920,11 @@ En théorie la seule formule exigible est $\hcos^2-\hsin^2=1$ mais les autres ex
 La fonction $\argsh$ est impaire et strictement croissante.
 \end{prop}
 \begin{proof}
-  Soit un réel $x$, alors 
+  Soit un réel $x$, alors
   \begin{equation}
     x=\hsin (\argsh x)=-\hsin(-\argsh x),
-  \end{equation} 
-  donc 
+  \end{equation}
+  donc
   \begin{equation}
     -x=\hsin(\argsh -x)=\hsin(-\argsh x).
   \end{equation}
@@ -935,40 +935,40 @@ La fonction $\argsh$ est impaire et strictement croissante.
   et comme $\R$ est centré en zéro, alors $\argsh$ est impaire.
 \end{proof}
 %
-\begin{prop} 
-  La fonction argument sinus hyperbolique est dérivable sur $\R$ et pour tout réel $x$, on a 
-  \begin{equation} 
-    \argsh' x= \frac{1}{\sqrt{1+x^2}}. 
-  \end{equation} 
+\begin{prop}
+  La fonction argument sinus hyperbolique est dérivable sur $\R$ et pour tout réel $x$, on a
+  \begin{equation}
+    \argsh' x= \frac{1}{\sqrt{1+x^2}}.
+  \end{equation}
 \end{prop}
-\begin{proof} 
-  La fonction sinus hyperbolique est dérivable sur $\R$ et 
+\begin{proof}
+  La fonction sinus hyperbolique est dérivable sur $\R$ et
   \begin{equation}
     \forall y \in \R \quad \hsin' (\argsh y)=\hcos(\argsh y)>0,
-  \end{equation} 
-  donc la fonction argument sinus hyperbolique est dérivable en $y$ et 
-  \begin{equation} 
+  \end{equation}
+  donc la fonction argument sinus hyperbolique est dérivable en $y$ et
+  \begin{equation}
     \argsh' y =\frac{1}{\hcos( \argsh y)}=\frac{1}{\sqrt{1+\hsin^2(\argsh y)}}=\frac{1}{\sqrt{1+y^2}}.
   \end{equation}
 \end{proof}
 %
 \begin{prop}[Expression logarithmique]
 La fonction argument sinus hyperbolique peut s'exprimer ainsi
- \begin{equation} 
+ \begin{equation}
    \forall x \in \R \quad \argsh x = \ln(x+\sqrt{1+x^2}).
- \end{equation} 
+ \end{equation}
 \end{prop}
-\begin{proof} 
-  Soient deux réels $x$ et $y$ tels que $y=\argsh x$ alors $x=\frac{\e^y - \e^{-y}}{2}$. C'est-à-dire 
+\begin{proof}
+  Soient deux réels $x$ et $y$ tels que $y=\argsh x$ alors $x=\frac{\e^y - \e^{-y}}{2}$. C'est-à-dire
   \begin{equation}
     \e^y - \e^{-y} -2x=0,
-  \end{equation} 
-  soit 
+  \end{equation}
+  soit
   \begin{equation}
     \e^{2y}-1-2x\e^{y}=0.
-  \end{equation} 
-  Les solutions réelles de l'équation $Y^2-2xY-1=0$ sont $x-\sqrt{x^2+1}<0$ et $x+\sqrt{x^2+1}$ et donc $\e^y=x+\sqrt{x^2+1}$ soit pour finir l'expression logarithmique 
-  \begin{equation} 
+  \end{equation}
+  Les solutions réelles de l'équation $Y^2-2xY-1=0$ sont $x-\sqrt{x^2+1}<0$ et $x+\sqrt{x^2+1}$ et donc $\e^y=x+\sqrt{x^2+1}$ soit pour finir l'expression logarithmique
+  \begin{equation}
     \argsh x = y = \ln(x+\sqrt{x^2+1}).
   \end{equation}
 \end{proof}
@@ -987,7 +987,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \end{defdef}
 %
 \begin{prop}
-  \begin{equation} 
+  \begin{equation}
     \forall x \in \Rplus \ \forall y \in \intervallefo{1}{+\infty} \quad y=\hcos x \iff x = \argch y ;
   \end{equation}
   et on a
@@ -997,30 +997,30 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
   \end{gather}
 \end{prop}
 %
-\begin{prop} 
-  La fonction argument cosinus hyperbolique est strictement croissante et est dérivable sur son domaine de définition telle que 
-  \begin{equation} 
+\begin{prop}
+  La fonction argument cosinus hyperbolique est strictement croissante et est dérivable sur son domaine de définition telle que
+  \begin{equation}
     \forall x\geq{}1 \quad \argch' x =\frac{1}{\sqrt{x^2-1}}.
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
-  Puisque la fonction cosinus hyperbolique est dérivable sur $\Rplus$ et que $\hsin(\argch y) \neq 0$ On tire que $\argch$ n'est pas dérivable en un~: $\hcos'(\argch 1)=0$ la courbe admet une tangente verticale. Si $y>1$, alors $\argch$ est dérivable en $y$ et 
-  \begin{equation} 
+\begin{proof}
+  Puisque la fonction cosinus hyperbolique est dérivable sur $\Rplus$ et que $\hsin(\argch y) \neq 0$ On tire que $\argch$ n'est pas dérivable en un~: $\hcos'(\argch 1)=0$ la courbe admet une tangente verticale. Si $y>1$, alors $\argch$ est dérivable en $y$ et
+  \begin{equation}
     \argch'(y)=\frac{1}{\hsin(\argch y)}=\frac{1}{\sqrt{\hcos^2(\argch y)-1}}=\frac{1}{\sqrt{y^2-1}}.
-  \end{equation} 
+  \end{equation}
 \end{proof}
 %
 \begin{prop}[Expression logarithmique] La fonction argument cosinus hyperbolique peut s'exprimer telle que
-  \begin{equation} 
+  \begin{equation}
     \forall x>1 \quad \argch x = \ln \left(x +\sqrt{x^2-1}\right).
   \end{equation}
-\end{prop} 
-\begin{proof} 
+\end{prop}
+\begin{proof}
   \begin{equation}
     \forall x \in \Rplus \ \forall y \intervallefo{1}{+\infty} \quad x=\argch y \iff y=\hsin x.
   \end{equation}
   Soit donc en remplaçant $\hcos$ par son expression
-  \begin{equation} 
+  \begin{equation}
     \e^{2x} +1 - 2y\e^x =0.
   \end{equation}
   Ainsi $\e^x$ est solution de $X^2-2yX+1=0$ soit $\e^x = y \pm \sqrt{y^2-1}$. En choisissant la solution supérieure à un on obtient $x=\ln \left(y+\sqrt{y^2-1} \right)$.
@@ -1035,49 +1035,49 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \subsection{Fonction argument tangente hyperbolique}
 \label{subsec:chap1-fonctionargtanh}
-\begin{defdef} 
-  La fonction tangente hyperbolique induit une bijection de $\R$ sur $\intervalleoo{-1}{1}$. Elle admet donc une réciproque appelée argument tangente hyperbolique notée $\argth$. 
+\begin{defdef}
+  La fonction tangente hyperbolique induit une bijection de $\R$ sur $\intervalleoo{-1}{1}$. Elle admet donc une réciproque appelée argument tangente hyperbolique notée $\argth$.
 \end{defdef}
 %
-\begin{prop} 
-  Pour tous réel $x$ et $y$ de $\intervalleoo{-1}{1}$, on a 
-  \begin{gather} 
+\begin{prop}
+  Pour tous réel $x$ et $y$ de $\intervalleoo{-1}{1}$, on a
+  \begin{gather}
     y=\htan x \iff x= \argth x, \\
-    \argth(\htan x)=x, \\ 
+    \argth(\htan x)=x, \\
     \htan(\argth y)=y.
-  \end{gather} 
+  \end{gather}
 \end{prop}
 %
-\begin{prop} 
-  La fonction argument tangente hyperbolique est impaire et strictement croissante. 
+\begin{prop}
+  La fonction argument tangente hyperbolique est impaire et strictement croissante.
 \end{prop}
 %
-\begin{prop} 
-  La fonction argument tangente hyperbolique est dérivable sur son ensemble de définition telle que 
-  \begin{equation} 
+\begin{prop}
+  La fonction argument tangente hyperbolique est dérivable sur son ensemble de définition telle que
+  \begin{equation}
     \forall x \in \intervalleoo{-1}{1} \quad \argth'(x)=\frac{1}{1-x^2}.
-  \end{equation} 
+  \end{equation}
 \end{prop}
-\begin{proof} 
-  Puisque tangente hyperbolique est dérivable sur $\R$ et que 
+\begin{proof}
+  Puisque tangente hyperbolique est dérivable sur $\R$ et que
   \begin{equation}
     \htan'(\argth y)=1-\htan^2(\argth y)=1-y^2>0,
   \end{equation}
-  alors la fonction $\argth$ est dérivable et la formule est donnée. 
+  alors la fonction $\argth$ est dérivable et la formule est donnée.
 \end{proof}
 %
 \begin{prop}[Expression logarithmique]
   La fonction argument tangente hyperbolique peut s'écrire telle que
-  \begin{equation} 
+  \begin{equation}
     \forall y \in \intervalleoo{-1}{1} \quad \argth y =\frac{1}{2} \ln \left( \frac{1+y}{1-y} \right).
-  \end{equation} 
+  \end{equation}
 \end{prop}
 \begin{proof}
   \begin{equation}
     \forall (x,y) \in \R \times \intervalleoo{-1}{1} \quad y=\htan x = \frac{\e^{2x}-1}{\e^{2x}+1},
   \end{equation}
-  de la même manière on arrive à une équation du deuxième degré~: 
-  \begin{equation} 
+  de la même manière on arrive à une équation du deuxième degré~:
+  \begin{equation}
     \e^{2x} = \frac{1+y}{1-y} ,
   \end{equation}
   et puisque $-1<y<1$, on peut passer au logarithme et on obtient la formule.
