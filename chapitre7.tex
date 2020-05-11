@@ -23,9 +23,10 @@ Soient $F$ un point du plan, $\Dr$ une droite ne passant pas par $F$, $e$ un ré
 \begin{equation}
   \frac{M'F}{M'H'} = \frac{MF}{MH} = e,
 \end{equation}
+
 donc le point $M'$ appartient à la conique $\con{e}$.
 \end{proof}
-Si on considère l'application $\fonction{\varphi}{P\setminus\{\Dr \cup F\}}{\Rplusetoile}{M}{\frac{MF}{MH}}$, où $H$ est le projeté orthogonal de $M$ sur $\Dr$, les coniques $\con{e}$ de directrice $\Dr$ sont les lignes de niveau de $\varphi$. On cherche les points d'intersection entre $\con{e}$ et l'axe $\Delta$. On note $K$ le projeté orthogonal de $F$ sur $\Dr$. On place l'origine des abscisses en $K$ et on oriente $\Delta$ de $K$ vers $F$, on note $d=KF$. 
+Si on considère l'application $\fonction{\varphi}{P\setminus\{\Dr \cup F\}}{\Rplusetoile}{M}{\frac{MF}{MH}}$, où $H$ est le projeté orthogonal de $M$ sur $\Dr$, les coniques $\con{e}$ de directrice $\Dr$ sont les lignes de niveau de $\varphi$. On cherche les points d'intersection entre $\con{e}$ et l'axe $\Delta$. On note $K$ le projeté orthogonal de $F$ sur $\Dr$. On place l'origine des abscisses en $K$ et on oriente $\Delta$ de $K$ vers $F$, on note $d=KF$.
 
 Soit M sur $\Delta$ le point d'abscisse $x$. Le projeté orthogonal de M sur la directrice $\Dr$ est le point K, puisque $\Dr$ et $\Delta$ sont orthogonal et se croisent en K. On a alors la suite d'équivalence suivante~:
 \begin{align}
@@ -218,7 +219,7 @@ Si on pose $a=\frac{-p}{1-e^2}$ et $b=\frac{p}{\sqrt{1-e^2}}$, alors dans le rep
   Soient $F$ et $F'$ deux points distincts et $a$ un réel tel que $2a>FF'$. Alors l'ensemble des points M du plan tel que $MF+MF'=2a$ est une ellipse de foyers $F$ et $F'$.
 \end{prop}
 \begin{proof}
-  Soit O le milieu de $[FF']$ et le vecteur $\vi=\frac{\vect{FF'}}{FF'}$ et le vecteur $\vj$ tel que le repère $R=\rond$ soit orthonormal direct. Les coordonnées de F et F' sont tels que $F'(c,0)$ et $F(-c,0)$. Soit $\epsilon=\enstq{M \in \P}{MF+MF'=2a}$, pour tout point $M(x,y)$, 
+  Soit O le milieu de $[FF']$ et le vecteur $\vi=\frac{\vect{FF'}}{FF'}$ et le vecteur $\vj$ tel que le repère $R=\rond$ soit orthonormal direct. Les coordonnées de F et F' sont tels que $F'(c,0)$ et $F(-c,0)$. Soit $\epsilon=\enstq{M \in \P}{MF+MF'=2a}$, pour tout point $M(x,y)$,
   \begin{align}
     M \in \epsilon & \iff MF+MF'=2a \\
     & \iff \sqrt{(x+c)^2+y^2} + \sqrt{(x-c)^2+y^2}=2a \\
@@ -326,11 +327,11 @@ c'est à dire qu'il existe six réels A,B,C,D,E et F tels que~:
 \end{equation}
 avec
 \begin{equation}
- B=(c-a)\sin(2\varphi)+b\cos(2\varphi). 
+ B=(c-a)\sin(2\varphi)+b\cos(2\varphi).
 \end{equation}
 Alors
 \begin{equation}
- B=0 \iff \cotan(2\varphi)=\frac{a-c}{b}. 
+ B=0 \iff \cotan(2\varphi)=\frac{a-c}{b}.
 \end{equation}
 Puisque la cotangente induit une bijection de $\intervalleoo{0}{\pi}$ sur $\R$ alors il existe un certain $\varphi$ tel que $B=0$. On choisit maintenant $\varphi$ tel que $B=0$. Montrons que $B^2-4AC=-4AC=b^2-4ac$~:
 \begin{align}
@@ -456,7 +457,7 @@ M \in (T) &\iff \vect{M_0 M} \cdot \vect{u}=0 \\
 &\iff (x-x_0)(2ax_0+by_0+d)+(y-y_0)(2cy_0+bx_0+e)=0 \\
 &\iff 2axx_0 + b(xy_0+yx_0)+2cyy_0 +dx+ey - \alpha=0
 \end{align}
-avec 
+avec
 \begin{equation}
 \alpha=2ax_0^2+  2bx_0y_0+2cy_0^2+dx_0+ey_0=-2f-dx_0-ey_0,
 \end{equation}
@@ -479,14 +480,14 @@ alors
 \begin{equation}
   \rho'(\theta) \vect{u}_\theta + \rho(\theta) \vect{v}_\theta = \frac{p}{(1+e\cos\theta)^2} \vect{w}_\theta,
 \end{equation}
-avec $\vect{w}_\theta = e\sin\theta\vect{u}_\theta + (1+e\cos\theta)\vect{v}_\theta$ le vecteur directeur de la tangente $T$. Dans le repère $(O,\vect{u}_\theta, \vect{v}_\theta)$ soit $M(X,Y)$, alors 
+avec $\vect{w}_\theta = e\sin\theta\vect{u}_\theta + (1+e\cos\theta)\vect{v}_\theta$ le vecteur directeur de la tangente $T$. Dans le repère $(O,\vect{u}_\theta, \vect{v}_\theta)$ soit $M(X,Y)$, alors
 \begin{align}
-  M \in T & \iff  \Det(\vect{M_\theta M},\vect{w}_\theta)=0 \\ 
+  M \in T & \iff  \Det(\vect{M_\theta M},\vect{w}_\theta)=0 \\
   & \iff \begin{vmatrix} X-\rho(\theta) & e\sin\theta \\ Y & 1+e\cos\theta \end{vmatrix} = 0 \\
   & \iff X(1+e\cos\theta)-\rho(\theta)(1+e\cos\theta)-e\sin\theta Y = 0\\
   & \iff (1+e\cos\theta)X-e\sin\theta Y=p.
 \end{align}
-Si on note les coordonnées de $M(x,y)$ dans le repère initial $\rond$, alors 
+Si on note les coordonnées de $M(x,y)$ dans le repère initial $\rond$, alors
 \begin{align}
   M \in T &\iff (1+e\cos\theta)(\cos\theta x+\sin\theta y)-e\sin\theta(-\sin\theta x+\cos\theta y)=p\\
 &\iff (e+\cos\theta)x+\sin\theta y=p.
