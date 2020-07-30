@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "courbepolaire.ps"
+set terminal png
+set output "courbepolaire.png"
 set grid
 set xzeroaxis 
 set yzeroaxis 

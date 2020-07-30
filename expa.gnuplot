@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "expa.ps"
+set terminal png
+set output "expa.png"
 set size square
 set grid
 set style line 1 lt 1 lw 3 pt 3 linecolor rgb "red"

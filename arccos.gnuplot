@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "arccos.ps"
+set terminal png
+set output "arccos.png"
 set grid
 set size square
 set style line 1 lt 1 lw 3 pt 3 linecolor rgb "red"

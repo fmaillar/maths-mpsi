@@ -1,20 +1,20 @@
 filename=mathematiques
 
-pdf: dvi
-	 dvipdf ${filename}.dvi > /dev/null
-
-#ps: dvi
-#	dvips -t a4 ${filename}.dvi -o ${filename}.ps > /dev/null
-
+pdf: ps
+	 ps2pdf ${filename}.ps 
+	 
+ps: dvi
+	dvips -t a4 ${filename}.dvi -o ${filename}.ps 
+	
 dvi:
-	gnuplot *.gnuplot||true
-	as *.asy||true
+#	gnuplot *.gnuplot||true
+#	as *.asy||true
 	latex ${filename}
 #	bibtex ${filename}||true
 #	makeindex ${filename}.idx
 #	latex ${filename}> /dev/null
-	latex ${filename}> /dev/null
-	latex ${filename}> /dev/null
+	latex ${filename} #> /dev/null
+	latex ${filename} #> /dev/null
 
 read:
 	evince ${filename}.pdf &

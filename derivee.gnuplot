@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "derivee.ps"
+set terminal png
+set output "derivee.png"
 #set yrange [0:5]
 set size square
 set grid

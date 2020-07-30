@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "logbase.ps"
+set terminal png
+set output "logbase.png"
 set size square
 set grid
 set style line 1 lt 1 lw 3 pt 3 linecolor rgb "red"

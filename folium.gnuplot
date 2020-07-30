@@ -1,6 +1,6 @@
 reset
-set terminal postscript enhanced color
-set output "folium.ps"
+set terminal png
+set output "folium.png"
 set grid
 set noborder
 set size 0.7,1
