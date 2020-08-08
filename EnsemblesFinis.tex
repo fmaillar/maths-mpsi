@@ -6,21 +6,11 @@
 \begin{proof}
   On démontre par récurrence sur $p \in \N^*$ la propriété $\P(p)$ ``pour tout $q \in \N^*$ s'il existe une bijection $\varphi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q}$ alors $p=q$''.
 
-\emph{Initialisation}. Soit $q \in \N^*$. On suppose qu'il existe une bijection
-\begin{equation}
-  \varphi : \{1\} \longmapsto \intervalleentier{1}{q}.
-\end{equation}
-Si on a $q \geq 2$, comme $\varphi$ est surjective, il existe $x \in \{1\}$ (donc $x=1$) tel que $\varphi(x)=1$. Il existe aussi $y \in \{1\}$ (donc $y=1$) tel que $\varphi(y) = 2$. C'est impossible donc $q=1$. $\P(1)$ est vraie
+\emph{Initialisation}. Soit $q \in \N^*$. On suppose qu'il existe une bijection $\varphi : \{1\} \longmapsto \intervalleentier{1}{q}$. Si on a $q \geq 2$, comme $\varphi$ est surjective, il existe $x \in \{1\}$ (donc $x=1$) tel que $\varphi(x)=1$. Il existe aussi $y \in \{1\}$ (donc $y=1$) tel que $\varphi(y) = 2$. C'est impossible donc $q=1$. $\P(1)$ est vraie
 
-\emph{Hérédité}. Soit $p \in \N^*$. Supposons que $\P(p)$ soit vraie et montrons $\P(p+1)$. Soit un naturel $q$ non nul. On suppose l'existence d'une bijection
-\begin{equation}
-  \varphi : \intervalleentier{1}{p+1} \longmapsto \intervalleentier{1}{q}.
-\end{equation}
-Notons déjà que $q$ est nécessairement supérieur ou égal à 2~\footnote{car sinon $q=1$ or $p \geq 1$ donc $p+1 \geq 2$} d'où $\varphi(1)=1=\varphi(2)$ ce qui est impossible puisque $\varphi$ est injective. L'astuce consiste à construire une bijection
-\begin{equation}
-  \psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}
-\end{equation}
-afin d'utiliser l'hypothèse de récurrence.
+\emph{Hérédité}. Soit $p \in \N^*$. Supposons que $\P(p)$ soit vraie et montrons $\P(p+1)$. Soit un naturel $q$ non nul. On suppose l'existence d'une bijection $\varphi : \intervalleentier{1}{p+1} \longmapsto \intervalleentier{1}{q}$.
+
+Notons déjà que $q$ est nécessairement supérieur ou égal à 2~\footnote{car sinon $q=1$ or $p \geq 1$ donc $p+1 \geq 2$} d'où $\varphi(1)=1=\varphi(2)$ ce qui est impossible puisque $\varphi$ est injective. L'astuce consiste à construire une bijection $\psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}$ afin d'utiliser l'hypothèse de récurrence.
 
 On distingue deux cas :
 \begin{itemize}
@@ -42,10 +32,7 @@ On distingue deux cas :
     On a $\alpha \neq p+1$~\footnote{car $\varphi(p+1)=q \neq i$} donc $\alpha \in \intervalleentier{1}{p}$ et $i= \varphi(\alpha)=\psi(\alpha)$. L'application $\psi$ est surjective.
   \end{itemize}
   Finalement $\psi$ est bijective.
-\item Cas 2. $\varphi(p+1) \neq q$. On pose $a=\varphi(p+1)$ et $b=\varphi^{-1}(q)$~\footnote{c'est possible puisque $\varphi$ est bijective}. On définit
-  \begin{equation}
-    \psi :\intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}
-  \end{equation}
+\item Cas 2. $\varphi(p+1) \neq q$. On pose $a=\varphi(p+1)$ et $b=\varphi^{-1}(q)$~\footnote{c'est possible puisque $\varphi$ est bijective}. On définit $    \psi :\intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}$
   par
   \begin{equation}
     \forall i \in \intervalleentier{1}{p} \setminus \{b\} \quad \psi(i)=\varphi(i) \ \psi(b)=a.
