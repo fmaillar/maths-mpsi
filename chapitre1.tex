@@ -98,7 +98,7 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=1]{lognep.png}
+  \includegraphics[scale=0.6]{lognep.png}
   \caption{Tracé du logarithme népérien}
   \label{fig:traceln}
 \end{figure}
@@ -169,7 +169,7 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 Le logarithme décimal en base $10$ et le logarithme binaire en base $2$.
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{logbase.png}
+  \includegraphics[scale=0.6]{logbase.png}
   \caption{Tracé des logarithmes de bases quelconque}
   \label{fig:traceloga}
 \end{figure}
@@ -231,7 +231,7 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
   \begin{itemize}
   \item $\ln(\exp(-x))=-x=-\ln(\exp(x))=\ln \left(\frac{1}{\exp(x)}\right)$ et on peut composer par $\exp$~\footnote{Idem} pour obtenir le résultat;
   \item $\exp(x-y)=\exp(x) \exp(-y)=\frac{\exp(x)}{\exp(y)}$;
-  \item $\ln(\exp(nx))=nx=n \ln(\exp(x))=\ln(\exp(x)^n)$ puis en composant par $\exp$, on a le résultat.
+  \item $\ln(\exp(nx))=nx=n \ln(\exp(x))=\ln(\exp(x)^n)$ puis en composant par l'exponentielle, on a le résultat.
   \end{itemize}
 \end{proof}
 %
@@ -249,7 +249,7 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif $(\R,+)$ 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{exp.png}
+  \includegraphics[scale=0.6]{exp.png}
   \caption{Tracé de l'exponentielle}
   \label{fig:traceexp}
 \end{figure}
@@ -353,7 +353,7 @@ En particulier pour l'exponentielle~: $\e^x=\exp(x)$. On pose aussi que pour tou
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{expa.png}
+  \includegraphics[scale=0.6]{expa.png}
   \caption{Tracé des exponentielles de base quelconque}
   \label{fig:traceexpa}
 \end{figure}
@@ -421,8 +421,8 @@ Les fonctions puissances admettent les limites suivantes~:
 
 Lorsque $\alpha \geq 0$, les fonctions $f_\alpha$ peuvent se prolonger en zéro pour obtenir une fonction continue. Deux cas se présentent~:
 \begin{itemize}
-\item Si $\alpha>0$ on pose $\fonction{\tilde{f}_\alpha}{\R+}{\R}{x}{\begin{cases} f_\alpha(x) & x>0 \\ 0 & x=0 \end{cases}}$;
-\item Si $\alpha=0$ on pose $\fonction{\tilde{f}_0}{\R+}{\R}{x}{1}$.
+\item Si $\alpha>0$ on pose $\fonction{\tilde{f}_\alpha}{\Rpluss}{\R}{x}{\begin{cases} f_\alpha(x) & x>0 \\ 0 & x=0 \end{cases}}$;
+\item Si $\alpha=0$ on pose $\fonction{\tilde{f}_0}{\Rpluss}{\R}{x}{1}$.
 \end{itemize}
 Le prolongement en zéro des fonction puissances s'effectue de cette manière~:
 \begin{itemize}
@@ -434,7 +434,7 @@ Le prolongement en zéro des fonction puissances s'effectue de cette manière~:
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{puiss.png}
+  \includegraphics[scale=0.6]{puiss.png}
   \caption{Tracé de quelques fonctions puissance}
   \label{figtracepuissance}
 \end{figure}
@@ -508,7 +508,7 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 \begin{prop}
   Soient $\alpha$ et $\beta$ deux réels strictement positifs, alors
   \begin{equation}
-    \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty \quad \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+
+    \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty \quad \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+.
   \end{equation}
   Ce qui traduit la prépondérance des fonctions exponentielles face aux fonctions puissances.
 \end{prop}
@@ -516,9 +516,9 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 \begin{proof}
   Soit un réel $x$ strictement positif. On pose $y=\e^{x}$ alors
   \begin{equation}
-    \frac{\e^{\alpha x}}{x^\beta}=\frac{y^\alpha}{\ln(y)^\beta}
+    \frac{\e^{\alpha x}}{x^\beta}=\frac{y^\alpha}{\ln(y)^\beta},
   \end{equation}
-  puisque $\e^{x} \underset{x \to \infty}{\rightarrow}+\infty$ la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie
+  puisque $\e^{x} \underset{x \to \infty}{\longrightarrow}+\infty$ la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie
   \begin{equation}
     \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty.
   \end{equation}
@@ -538,7 +538,7 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 %
 \section{Trigonométrie circulaire}
 \label{sec:chap1-trigocirc}
-On présente un tableau récapitulatif, la table~\ref{tab:fonctiontrigo}, des différentes fonctions trigonométriques de base et leurs propriétés. On a tracé les mêmes fonctions sur le cercle trigonométrique de la figure~\ref{fig:cercletrigo}.
+On présente un tableau récapitulatif~\ref{tab:fonctiontrigo} des différentes fonctions trigonométriques de base et leurs propriétés. On a tracé les mêmes fonctions sur le cercle trigonométrique de la figure~\ref{fig:cercletrigo}.
 \begin{table}[!h]
   \centering
   \begin{tabular}{|c|c|c|c|c|}
@@ -585,7 +585,7 @@ Soit un réel $x$ et un réel $y \in D_2$, alors
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{trig.png}
+  \includegraphics[scale=0.6]{trig.png}
   \caption[Tracé de quelques fonctions trigonométriques]{Tracé de quelques fonctions trigonométriques. En rouge sinus, en bleu cosinus, en vert tangente et en rose cotangente}
   \label{fig:tracetrigo}
 \end{figure}
@@ -670,7 +670,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{proof}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{arcsin.png}
+  \includegraphics[scale=0.6]{arcsin.png}
   \caption{Tracé de arcsinus}
   \label{fig:tracearcsinus}
 \end{figure}
@@ -718,7 +718,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{arccos.png}
+  \includegraphics[scale=0.6]{arccos.png}
   \caption{Tracé de arccosinus}
   \label{fig:tracearccosinus}
 \end{figure}
@@ -785,7 +785,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{arctan.png}
+  \includegraphics[scale=0.6]{arctan.png}
   \caption{Tracé de arctangente}
   \label{fig:tracearctangente}
 \end{figure}
@@ -846,7 +846,7 @@ On a bien montré l'existence d'un réel $\theta \in \intervalleof{-\pi}{\pi}$ t
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{trigh.png}
+  \includegraphics[scale=0.6]{trigh.png}
   \caption{Tracé de fonctions hyperbolique $\hsin$ et $\hcos$}
   \label{fig:tracesinhcosh}
 \end{figure}
@@ -893,7 +893,7 @@ La fonction tangente hyperbolique est strictement croissante et la cotangente d�
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{tanh.png}
+  \includegraphics[scale=0.6]{tanh.png}
   \caption{Tracé de fonctions hyperbolique $\htan$ et $\hcotan$}
   \label{fig:tracetanhcoth}
 \end{figure}
@@ -975,7 +975,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{argsinh.png}
+  \includegraphics[scale=0.6]{argsinh.png}
   \caption{Tracé de fonctions hyperbolique $\hsin$ et $\argsh$}
   \label{fig:tracesinhargsh}
 \end{figure}
@@ -1028,7 +1028,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{argcosh.png}
+  \includegraphics[scale=0.6]{argcosh.png}
   \caption{Tracé de fonctions hyperbolique $\hcos$ et $\argch$}
   \label{fig:tracecoshargcosh}
 \end{figure}
@@ -1085,7 +1085,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4,angle=-90]{argtanh.png}
+  \includegraphics[scale=0.6]{argtanh.png}
   \caption{Tracé de fonctions hyperbolique $\htan$ et $\argth$}
   \label{fig:tracetanhargth}
 \end{figure}

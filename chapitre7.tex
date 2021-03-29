@@ -28,7 +28,7 @@ donc le point $M'$ appartient à la conique $\con{e}$.
 \end{proof}
 Si on considère l'application $\fonction{\varphi}{P\setminus\{\Dr \cup F\}}{\Rplusetoile}{M}{\frac{MF}{MH}}$, où $H$ est le projeté orthogonal de $M$ sur $\Dr$, les coniques $\con{e}$ de directrice $\Dr$ sont les lignes de niveau de $\varphi$. On cherche les points d'intersection entre $\con{e}$ et l'axe $\Delta$. On note $K$ le projeté orthogonal de $F$ sur $\Dr$. On place l'origine des abscisses en $K$ et on oriente $\Delta$ de $K$ vers $F$, on note $d=KF$.
 
-Soit M sur $\Delta$ le point d'abscisse $x$. Le projeté orthogonal de M sur la directrice $\Dr$ est le point K, puisque $\Dr$ et $\Delta$ sont orthogonal et se croisent en K. On a alors la suite d'équivalence suivante~:
+Soit M sur $\Delta$ le point d'abscisse $x$. Le projeté orthogonal de M sur la directrice $\Dr$ est le point $K$, puisque $\Dr$ et $\Delta$ sont orthogonales et se croisent en $K$. On a alors la suite d'équivalence suivante~:
 \begin{align}
   M \in \con{e} &\iff MF = e MK \\
   &\iff MF^2=e^2 MK^2 \\
@@ -121,14 +121,14 @@ Alors finalement, on distingue deux sous-cas.
 \subsubsection{Cas des hyperboles ($e>1$)}
 Si on pose $a=\frac{p}{e^2-1}$ et $b=\frac{p}{\sqrt{e^2-1}}$, alors dans le repère $\rond$ l'équation devient~:
 \begin{equation}
-  M(X,Y) \in \con{e} \iff \frac{X^2}{a^2}-\frac{Y^2}{b^2}=1
+  M(X,Y) \in \con{e} \iff \frac{X^2}{a^2}-\frac{Y^2}{b^2}=1.
 \end{equation}
 \begin{theo}
-  Il existe une repère orthonormal direct dans lequel l'hyperbole admet pour équation cartésienne~:
+  Il existe un repère orthonormal direct dans lequel l'hyperbole admet pour équation cartésienne~:
   \begin{equation}
     \frac{X^2}{a^2}-\frac{Y^2}{b^2}=1,
   \end{equation}
-avec $a$ et $b$ des réels strictement positifs
+avec $a$ et $b$ des réels strictement positifs.
 \end{theo}
 \begin{prop}
   \begin{enumerate}
@@ -140,7 +140,7 @@ avec $a$ et $b$ des réels strictement positifs
 \begin{proof}
   \begin{enumerate}
   \item $\frac{b^2}{a}=\frac{\frac{p^2}{e^2-1}}{\frac{p}{e^2-1}}=p$ et $\frac{b^2}{a}=\frac{\frac{p^2}{e^2-1}}{\frac{p^2}{(e^2-1)^2}}=e^2-1$;
-  \item $c=\sqrt{1+\left(\frac{b}{a}\right)^2}=\sqrt{1+e^2-1}=e$ puisque $e>0$ et $d=\frac{p}{e}=\frac{b^2}{a} \frac{a}{c}=\frac{b^2}{c}$;
+  \item $c=a\sqrt{1+\left(\frac{b}{a}\right)^2}=a\sqrt{1+e^2-1}=ae$ puisque $e>0$ et $d=\frac{p}{e}=\frac{b^2}{a} \frac{a}{c}=\frac{b^2}{c}$;
   \item à la base l'abscisse de F est $-\frac{de^2}{1-e^2}=\frac{-pe}{1-e^2}=ae=c$ et l'équation de la courbe est $X=-\frac{d}{1-e^2}=-\frac{p/e}{1-e^2}=\frac{a}{e}=\frac{a^2}{c}$
   \end{enumerate}
 \end{proof}
@@ -386,7 +386,7 @@ alors on obtient (en posant $F'=F-\frac{D^2}{4A}-\frac{E^2}{4C}$):
 \end{equation}
 Deux cas sont alors possibles~:
 \begin{itemize}
-\item si $F'=0$ alors $X'=\pm \sqrt{\frac{-C}{A}}$ et la courbe $\con{{}}$ est la réunion de deux droites sécantes d'équation $X'=\sqrt{\frac{-C}{A}}$ et $X'=-\sqrt{\frac{-C}{A}}$;
+\item si $F'=0$ alors $X'=\pm \sqrt{\frac{-C}{A}}Y'$ et la courbe $\con{{}}$ est la réunion de deux droites sécantes d'équation $X'=\sqrt{\frac{-C}{A}}Y'$ et $X'=-\sqrt{\frac{-C}{A}}Y'$;
 \item sinon alors $\frac{-C}{F'}Y^2-\frac{A}{F'}X^2=0$ et $\con{{}}$ est une hyperbole dont les asymptotes sont les droites précédentes.
 \end{itemize}
 
@@ -423,7 +423,7 @@ Soient $a,b,c,d,e$ et $f$ six réels avec $a,b,c$ non tous nuls et $\con{{}}$ la
 \begin{equation}
   ax^2+bxy+cy^2+dx+ey+f=0
 \end{equation}
-On suppose de plus que $\con{{}}$ est une conique propre. Nous avons vu dans la section~\ref{sec:eqred} que $\con{{}}$ peut être paramétrées par $(I,x,y)$ avec $x$ et $y$ dérivables. Nous rappelons que les équations étaient dans un bon repère telles que~:
+On suppose de plus que $\con{{}}$ est une conique propre. Nous avons vu dans la section~\ref{sec:eqred} que $\con{{}}$ peut être paramétrée par $(I,x,y)$ avec $x$ et $y$ dérivables. Nous rappelons que les équations étaient dans un bon repère telles que~:
 \begin{itemize}
 \item pour une parabole on a $\begin{cases} x(t) &= \frac{t^2}{2p} \\ y(t) &= t \end{cases}$;
 \item pour une ellipse on a $\begin{cases} x(t) &= a\cos t\\ y(t) &= b\sin t \end{cases}$;
@@ -435,7 +435,7 @@ On a aussi vu dans la section~\ref{sec:eqcart} que n'importe quelle conique adme
 \end{equation}
 Les fonctions $x$ et $y$ sont dérivables, alors si on dérive cette équation on a~:
 \begin{equation}
-  \forall t \in I \quad x'(t)+[2ax(t)+by(t)+d]+y'(t)+[2cy(t)+bx(t)+e]=0
+  \forall t \in I \quad x'(t) \cdot [2ax(t)+by(t)+d]+y'(t)+[2cy(t)+bx(t)+e]=0
 \end{equation}
 Montrons que si $(x_0,y_0)$ est un point de la courbe $\con{{}}$ alors $(2ax_0+by_0+d,2cy_0+bx_0+e)\neq (0,0)$.
 \begin{proof}
@@ -516,7 +516,7 @@ Si on note les coordonnées de $M(x,y)$ dans le repère initial $\rond$, alors
 \end{gather}
   Alors pour tout $t \in I$
   \begin{equation}
-    0=g'(t)+h'(t)=\frac{\vect{FM}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{FM}(t)}}\frac{\vect{F'M}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{F'M}(t)}}=(\vect{u}+\vect{v})\cdot \derived{\vect{OM}}{t}.
+    0=g'(t)+h'(t)=\frac{\vect{FM(t)}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{FM(t)}(t)}} + \frac{\vect{F'M(t)}\cdot\derived{\vect{OM}}{t}}{\norme{\vect{F'M(t)}(t)}}=(\vect{u}+\vect{v})\cdot \derived{\vect{OM}}{t}.
   \end{equation}
 Le vecteur $\derived{\vect{OM}}{t}$ est orthogonal au vecteur $(\vect{u}+\vect{v})$ avec $\vect{u}$ unitaire qui dirige $(FM)$ et $\vect{v}$ unitaire qui dirige $(F'M)$, donc $\vect{u}+\vect{v}$ dirige la bissectrice intérieure de $\widehat{F'MF}$. Alors $T$ est la droite passant par $M$ de vecteur normal $\vect{u}+\vect{v}$, donc $T$ est la bissectrice extérieure de l'angle $\widehat{F'MF}$.
 \end{proof}

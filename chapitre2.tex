@@ -165,6 +165,9 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
   \emph{Cas d'égalité}~: Notons ici que $\frac{z'}{z}=x + \ii y$ avec $x$ et $y$ deux réels. On va montrer que l'égalité est vraie si et seulement si $y=0$ et $x \geq 0$.
   \begin{align}
     \abs{z+z'}=\abs{z}+\abs{z'} &\iff \abs{1+\frac{z'}{z}}^2=\left(1+\abs{\frac{z'}{z}}\right)^2 \\
+    &\iff \abs{1+x+\ii y}^2 = (1+ \abs{x+ \ii y})^2 \\
+    &\iff (1+x)^2+y^2 = (1+\sqrt{x^2+y^2})^2 \\
+    &\iff 1+2x+x^2+y^2 = 1 + 2\sqrt{x^2+y^2} + x^2+y^2 \\
     &\iff x = \sqrt{x^2+y^2}\\
     &\iff y=0 \text{~et~} x \geq 0.
   \end{align}
@@ -322,18 +325,20 @@ Si $\vect{a}$ est un vecteur on définit son affixe comme l'affixe du point $M$ 
 %
 \begin{prop} Soient deux réels $\theta$ et $\theta'$ et un entier relatif $n$, alors~:
   \begin{gather}
-    \expc{}{(\theta+\theta')}=\frac{\expc{}{\theta}}{\expc{}{\theta'}};\\
+    \expc{}{(\theta-\theta')}=\frac{\expc{}{\theta}}{\expc{}{\theta'}};\\
     \expc{}{n \theta}=(\expc{}{\theta})^n;\\
-    \cos \theta = \frac{\expc{}{\theta}+\expc{}{-\theta}}{2} \quad \sin \theta = \frac{\expc{}{\theta}-\expc{}{-\theta}}{2\ii}.
+    \cos \theta = \frac{\e^{\ii \theta}+\e^{-\ii\theta}}{2} \quad \sin \theta = \frac{\e^{\ii \theta}-\e^{-\ii\theta}}{2\ii}.
   \end{gather}
 \end{prop}
+\begin{proof}
+	La première égalité découle directement de la proposition précédente, $\psi$ est un morphisme de $(\R,+)$ sur $(\U,\times)$. Ensuite, la deuxième égalité se démontre par récurrence et la dernière découle directement de la définition de l'exponentielle complexe.
+\end{proof}
 
 Soient un entier naturel $n$ non nul et $\theta \in \R \setminus 2\pi\Z$. La somme vaut~:
 \begin{align}
   \sum_{k=0}^n \cos(k\theta) =& \frac{1}{2} \sum_{k=0}^n (\expc{}{k \theta} + \expc{}{-k \theta})\\
   =&\frac{1}{2} \left[\frac{1-\expc{}{(n+1)\theta}}{1-\expc{}{\theta}}\right] + \frac{1}{2} \left[\frac{1-\expc{}{(-(n+1) \theta)}}{1-\expc{}{-\theta}}\right]\\
-  =&\frac{1}{2} \left[\frac{\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\frac{\theta}{2}}} \left(\frac{\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}-\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\left(-\frac{\theta}{2}\right)} - \expc{}{\frac{\theta}{2}}} \right)\right] \notag \\
-  &+ \frac{1}{2} \left[\frac{\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}}{\expc{}{\left(-\frac{\theta}{2}\right)}} \left(\frac{\expc{}{(n+1) \frac{\theta}{2}}-\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}}{\expc{}{\frac{\theta}{2}} - \expc{}{\left(-\frac{\theta}{2}\right)}} \right)\right] \\
+  =&\frac{1}{2} \left[\frac{\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\frac{\theta}{2}}} \left(\frac{\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}-\expc{}{(n+1) \frac{\theta}{2}}}{\expc{}{\left(-\frac{\theta}{2}\right)} - \expc{}{\frac{\theta}{2}}} \right)\right] \notag + \frac{1}{2} \left[\frac{\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}}{\expc{}{\left(-\frac{\theta}{2}\right)}} \left(\frac{\expc{}{(n+1) \frac{\theta}{2}}-\expc{}{\left(-(n+1) \frac{\theta}{2}\right)}}{\expc{}{\frac{\theta}{2}} - \expc{}{\left(-\frac{\theta}{2}\right)}} \right)\right] \\
   =& \frac{1}{2} \frac{\sin \left(\frac{(n+1)\theta}{2} \right)}{\sin \left( \frac{\theta}{2} \right)} \left[\expc{}{n \frac{\theta}{2}} +\expc{}{\left(-n \frac{\theta}{2}\right)} \right] \\
   =& \frac{\sin \left(\frac{(n+1)\theta}{2} \right)}{\sin \left( \frac{\theta}{2} \right)} \cos \left( \frac{n\theta}{2} \right).
 \end{align}
@@ -440,7 +445,7 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 \begin{prop}
   Soit un complexe $z$ non nul, alors
   \begin{equation}
-    \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \R+^2 \quad z=\expc{\rho}{\theta}=\expc{\rho'}{\theta'} \iff
+    \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \Rpluss \times \Rpluss \quad z=\expc{\rho}{\theta}=\expc{\rho'}{\theta'} \iff
     \begin{cases}
       \rho = \rho' = \abs{z} \\
       \congru{\theta}{\theta'}{2\pi}
@@ -505,7 +510,7 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 \emph{Interprétation géométrique}~: Les points d'affixes $z \in \U_n$ forment les sommets d'un polygone régulier à $n$ cotés centré en O dont l'un des sommet est $1$. La représentation géométrique de l'ensemble $\U_5$ est donnée par le figure~\ref{fig:racinesnieme}.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth, scale=1]{racines-nieme.png}
+  \includegraphics[scale=2.5]{racines-nieme.png}
   \caption{Représentation dans le plan complexe de $U_5$}
   \label{fig:racinesnieme}
 \end{figure}

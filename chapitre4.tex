@@ -4,7 +4,7 @@
 \minilof
 \minilot
 
-\lettrine{C}e chapitre présente les équations différentielles linéaires du premier et du deuxième ordre. Les équations différentielles apparaissent dans toutes les branches de la physique. Elles sont en général la description d'un phénomène variant dans l'espace ou dans le temps. Les équations différentielles que nous étudieront là ne sont qu'une petite partie de celle qui existent et qui sont pour la plupart non linéaires, comme par exemple les équations de Navier-Stokes.
+Ce chapitre présente les équations différentielles linéaires du premier et du deuxième ordre. Les équations différentielles apparaissent dans toutes les branches de la physique. Elles sont en général la description d'un phénomène variant dans l'espace ou dans le temps. Les équations différentielles que nous étudieront là ne sont qu'une petite partie de celle qui existent et qui sont pour la plupart non linéaires, comme par exemple les équations de Navier-Stokes.
 
 On considère des fonctions à valeurs dans un corps $\K$. Soit un entier naturel non nul $n$, $I$ un intervalle réel et $a_0, \ldots a_n$ et $b$ des fonctions de $I$ dans $\K$ au moins continues. On considère l'équation différentielle
 \begin{equation}
@@ -25,7 +25,7 @@ En pratique on traitera dans ce cours du cas où $n=1$ de façon complète et du
 où $t_0 \in I$  et les $y_i$ sont des scalaires fixes dans $\K$.
 \section{Équation différentielle linéaire homogène du premier ordre}
 \label{sec:equadifflinhomog1}
-\subsection{Solution d'une équation différentielle linéaire homogène du premier ordre à coefficients constants}
+\subsection[Solution équation homogène coefficients constants]{Solution d'une équation différentielle linéaire homogène du premier ordre à coefficients constants}
 \label{subsec:solutioneqdifflinhomog1coefconstants}
 Soit un scalaire $a \in \K$. On s'intéresse à l'équation 
 \begin{equation}
@@ -42,13 +42,16 @@ Soit $\lambda \in \K$ tel que , $\fonction{f}{\R}{\K}{t}{\lambda \e^{-at}}$. $f$
 \begin{equation}
 \forall t \in \R \quad f'(t)+af(t)=-a \lambda \e^{-at}+a \lambda \e^{-at}=0,
 \end{equation}
-donc la fonction $f$ est solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. Soit maintenant une fonction $f$ solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. Posons la fonction $\fonction{g}{\R}{\K}{t}{f(t)\e^{at}}$ $g$ est dérivable par produit de fonctions qui le sont et
+donc la fonction $f$ est solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. 
+
+Soit maintenant une fonction $f$ solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. Posons la fonction $\fonction{g}{\R}{\K}{t}{f(t)\e^{at}}$ $g$ est dérivable par produit de fonctions qui le sont et
 \begin{equation}
 \forall t \in \R \quad g'(t)=f'(t)\e^{at} + af(t)\e^{at}=\e^{at}(f'(t)+af(t))=0,
 \end{equation}
-la fonction $g$ est donc constante sur $\R$. Il existe donc un réel $\lambda$ tel que $\forall t \in \R \quad g(t)=\lambda$. Par conséquent $f(t)=g(t)\e^{-at}=\lambda \e^{-at}$
+la fonction $g$ est donc constante sur $\R$. Il existe donc un réel $\lambda$ tel que $\forall t \in \R \quad g(t)=\lambda$. Par conséquent $f(t)=g(t)\e^{-at}=\lambda \e^{-at}$.
 \end{proof}
-\subsection{Solution d'une équation différentielle linéaire homogène du premier ordre à coefficients non constants}
+
+\subsection[Solution équation homogène coefficients non constants]{Solution d'une équation différentielle linéaire homogène du premier ordre à coefficients non constants}
 Soient maintenant $I$ un intervalle réel, $a$ une fonction de $I$ vers $\K$ au moins continue sur $I$. On considère l'équation
 \begin{equation}
 y'+a(t)y=0 \label{eq:Hdiff1}.
@@ -61,7 +64,9 @@ La fonction $a$ est continue sur $I$, donc elle admet une primitive $A$ sur $I$.
 \begin{equation}
 \ln\abs{f(t)}=-A(t) +K \iff \abs{f(t)}=\e^K \e^{-A(t)}.
 \end{equation}
-La fonction $f$ est continue, car dérivable, et ne s'annule pas sur l'intervalle $I$ donc elle est de signe constant sur $I$. Dans les deux cas on pose $\lambda=\pm \e^K$ et on a $f(t)=\lambda e^{-A(t)}$. Revenons maintenant au cas général où $\K \in \{\R, \C\}$.
+La fonction $f$ est continue, car dérivable, et ne s'annule pas sur l'intervalle $I$ donc elle est de signe constant sur $I$. Dans les deux cas on pose $\lambda=\pm \e^K$ et on a $f(t)=\lambda e^{-A(t)}$. 
+
+Revenons maintenant au cas général où $\K \in \{\R, \C\}$.
 %
 \begin{theo}\label{theo:2}
 Soit $A$ une primitive de la fonction $a$ continue sur $I$. Soit $f:I \longrightarrow \K$, $f$ est solution de l'équation $\H$ si est seulement s'il existe un scalaire $\lambda$ tel que $\forall t \in I \quad f(t)=\lambda \e^{-A(t)}$

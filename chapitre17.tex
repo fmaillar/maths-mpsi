@@ -849,13 +849,13 @@ $\E$ est libre et génératrice donc c'est une base de $E$.
 \subsection{Théorème du rang}
 
 \begin{theo}
-  Soient un $\K$-espace vectoriel $E$ de dimension quelconque, $F$ un $\K$-espace vectoriel quelconque et $u \in \Lin{E}{F}$. Alors le sous-espace vectoriel $\Image(u)$ de $F$ est de dimension finie et on a
+  Soient $E$ un $\K$-espaces vectoriel de dimension finie, $F$ un $\K$-espace vectoriel de dimension quelconque et $u \in \Lin{E}{F}$. Alors le sous-espace vectoriel $\Image(u)$ de $F$ est de dimension finie et on a
   \begin{equation}
     \Dim_\K E = \Dim_\K \Ker(u) + \Dim_\K \Image(u).
   \end{equation}
 \end{theo}
 
-\emph{Le théorème du rang fait intervenir la dimension de l'espace vectoriel de départ, l'espace darrivée n'est pas supposé de dimension finie. Le théorème du rang ne signifie pas que l'image et le noyau de $u$ sont supplémentaires. Ce qui n'aurait aucun sens puisqu'ils ne sont pas dans le même espace vectoriel. C'est faux même si $E=F$.}
+\emph{Le théorème du rang fait intervenir la dimension de l'espace vectoriel de départ, l'espace d'arrivée n'est pas supposé de dimension finie. Le théorème du rang ne signifie pas que l'image et le noyau de $u$ sont supplémentaires. Ce qui n'aurait aucun sens puisqu'ils ne sont pas dans le même espace vectoriel. C'est faux même si $E=F$.}
 \begin{proof}
   $E$ est de dimension finie, le noyau $\Ker(u)$ est un sous-espace vectoriel de $E$ donc il existe un supplémentaire $S$ du noyau dans $E$ : $E= S \oplus \Ker(u)$.
   
@@ -966,7 +966,7 @@ De plus $\rg(u) = \Dim_\K F$ si et seulement si $u$ est surjective.
   \end{align}
 \end{theo}
 \begin{proof}
-  $\Image(v \circ u) \subset \Image(v)$ et $\Image(v \circ u)$ est de dimension finie (car $v$ est de rang gini).
+  $\Image(v \circ u) \subset \Image(v)$ et $\Image(v \circ u)$ est de dimension finie (car $v$ est de rang fini).
   \begin{align}
     \Image(v \circ u) &= \{y \in \G, \exists x \in E \ y=v \circ u(x) \}\\
     &=\{y \in \G, \exists z \in \Image(u) \ y=v(z)\}\\
@@ -1041,7 +1041,7 @@ Soit un $\K$-espace vectoriel $E$ quelconque. On ne suppose pas pour l'instant q
   \end{itemize}
 \end{prop}
 \begin{proof}
-  On avait déjà vu qu'une forme linéaire non null est surjective. On peut aussi utiliser la dimension : $\Image(f)$ est un sous-espace vectoriel de $\K$ donc $\Image(f) = \{0\}$ ou $\Image(f) = \K$ alors en passant à la dimension on a le résultat voulu.
+  On avait déjà vu qu'une forme linéaire non nulle est surjective. On peut aussi utiliser la dimension : $\Image(f)$ est un sous-espace vectoriel de $\K$ donc $\Image(f) = \{0\}$ ou $\Image(f) = \K$ alors en passant à la dimension on a le résultat voulu.
 \end{proof}
 
 \subsubsection{Hyperplan vectoriel}

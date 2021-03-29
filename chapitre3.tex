@@ -3,13 +3,14 @@
 \minitoc
 \minilof
 \minilot
-\lettrine{L}{a théorie des ensembles} comprend l'étude des ensembles, l'étude de leurs parties et l'étude de leurs interactions grâce aux applications. On s'intéresse particulièrement aux injections, aux surjections et aux bijections. La troisième section présente les relations binaires comme la relation d'ordre ou la relation d'équivalence. La quatrième et dernière section se focalise sur les familles d'éléments comme par exemple des suites. 
+
+La théorie des ensembles comprend l'étude des ensembles, l'étude de leurs parties et l'étude de leurs interactions grâce aux applications. On s'intéresse particulièrement aux injections, aux surjections et aux bijections. La troisième section présente les relations binaires comme la relation d'ordre ou la relation d'équivalence. La quatrième et dernière section se focalise sur les familles d'éléments comme par exemple des suites. 
 
 Ce chapitre est primordial dans le programme de MPSI, il décrit le langage nécessaire pour travailler de manière sérieuse en mathématiques.
 %
 \section{Vocabulaire relatif aux ensembles}
 \label{chap3-sec:vocabensemble}
-Nous prenons comme notion primitive les notions d'ensemble, d'élément et d'appartenance. On ne cherchera pas à les définir, \og$x \in E$\fg{} sera lu \og l'élément $x$ appartient à l'ensemble $E$ \fg{}.
+Nous prenons comme notion primitive les notions d'ensemble, d'élément et d'appartenance. On ne cherchera pas à les définir, \og$x \in E$\fg{} sera lu \og \emph{l'élément $x$ appartient à l'ensemble $E$} \fg{}.
 %
 \subsection{Égalité de deux ensembles}
 \label{chap3-subsec:egalitededeuxensembles}
@@ -27,31 +28,32 @@ Nous prenons comme notion primitive les notions d'ensemble, d'élément et d'app
 \end{defdef}
 \begin{prop} 
   \begin{equation}
-    E=F \iff E \subset F \text{~et~} F \subset E.
+    E=F \iff E \subset F \textrm{~et~} F \subset E.
   \end{equation}
 \end{prop}
-Pour dire que $E$ est strictement inclus dans $F$ c'est à dire $E \subset F \text{~et~} F \not\subset E$, on notera $E \subsetneq F$
+Pour dire que $E$ est strictement inclus dans $F$ c'est à dire $E \subset F \textrm{~et~} F \not\subset E$, on notera $E \subsetneq F$
 \begin{equation}
-  E \subsetneq F \iff \left[\forall x \quad \left(x \in E \iff x \in F \right) \right] \text{~et~} \left[\exists x \in F \quad x \not\in E \right].
+  E \subsetneq F \iff \left[\forall x \quad \left(x \in E \iff x \in F \right) \right] \textrm{~et~} \left[\exists x \in F \quad x \not\in E \right].
 \end{equation}
 %
 \subsection{Ensemble des parties d'un ensemble}
 \label{chap3-subsec:ensembledesparties}
-\begin{prop}[Admise]
+\begin{axiome}[Axiome de l'ensemble des parties]
   Soit un ensemble $E$. Il existe un ensemble dont les éléments sont les parties de $E$. On l'appelle ensemble des partie de $E$ et il est noté $\Part(E)$ et
 \begin{equation}
   A \in \Part(E) \iff A \subset E.
 \end{equation}
-\end{prop}
+\end{axiome}
 Il n'y a que deux autres façons de définir un ensemble~:
 \begin{itemize}
-\item en extension, c'est-à-dire qu'on énumère les éléments de l'ensemble, par exemple $S=\{1;2;3\}$
+\item en extension, c'est-à-dire qu'on énumère les éléments de l'ensemble, par exemple $S=\{1;2;3\}$ ;
 \item en compréhension, c'est-à-dire qu'on définit l'ensemble $E$ comme sous-ensemble d'un ensemble plus grand. Le sous ensemble des éléments de $F$ qui vérifie une certaine propriété, par exemple l'ensemble des entiers pairs de $\Z$, $E_1=\enstq{n\in\Z}{\exists k \in \Z \quad n=2k}$.
 \end{itemize}
 %
 \subsection{Opérations sur les parties d'un ensemble}
 \label{chap3-subsec:operationparties}
-Soient $E$ un ensemble, $A$ et $B$ des parties de $E$. On définit les opérations sur les ensembles $A$ et $B$ suivantes:
+Soient $E$ un ensemble, $A$ et $B$ des parties de $E$. On définit les opérations sur les ensembles $A$ et $B$ suivantes
+décrites dans les paragraphes suivants.
 %
 \subsubsection{Complémentaire de $A$ dans $E$} 
 \label{chap3-subsubsec:complementaire}
@@ -60,6 +62,7 @@ C'est l'ensemble de $E$ qui ne sont pas des éléments de $A$, noté $\complemen
   \forall x \in E \quad x \in \complement_E A \iff x \not\in A.
 \end{equation}
 Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:comp}.
+%
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -74,13 +77,26 @@ Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:comp}
 \caption{Représentation du complémentaire}
 \label{chap3-fig:comp}
 \end{figure}
+%
 \begin{prop}
   Soient $A$ et $B$ deux parties de $E$
   \begin{gather}
-  \complement_E (\complement_E A)=A;\\
-  A \subset B \iff \complement_E B \subset \complement_E A.
+  \complement_E (\complement_E A)=A; \label{eq:comp1}\\
+  A \subset B \iff \complement_E B \subset \complement_E A. \label{eq:comp2}
   \end{gather}
 \end{prop}
+\begin{proof}
+    Prouvons \eqref{eq:comp1}. Soit $a \in E$, $a \in \complement_E (\complement_E A)$ équivaut à $a \not\in \complement_E A$ ; ce qui équivaut à
+    $a \in A$.
+    
+    Prouvons la première implication de \eqref{eq:comp2}. Soit $x \in \complement_E B$ alors $x \not\in B$, alors par
+    hypothèse ($A \subset B$), $x$ ne peut pas être dans $A$, $x \not\in A$, donc $x$ est dans le complémentaire de
+    $A$~: $x \in \complement_E A$.
+
+    Prouvons la deuxième implication de \eqref{eq:comp2}. Soit $x \in A$, alors $x \not\in \complement_E A$, alors par
+    hypothèse ($\complement_E B \subset \complement_E A$), $x$ ne peut pas être dans $\complement_E B$, $x \not\in
+    \complement_E B$, donc par définition du complémentaire, $x \in B$.
+\end{proof}
 %
 \subsubsection{Intersection des parties $A$ et $B$}
 \label{chap3-subsubsec:intersection}
@@ -89,7 +105,8 @@ C'est l'ensemble des éléments qui sont à la fois dans $A$ et dans $B$, on le 
   \forall x \in E \quad x \in A \cap B \iff x \in A \text{~et~} x \in B.
 \end{equation}
 Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:inter}.
-\begin{figure}[h]
+
+\begin{figure}
 \centering
 \begin{tikzpicture}
 \draw \En; 
@@ -104,7 +121,7 @@ Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:inter
 \caption{Représentation de l'intersection}
 \label{chap3-fig:inter}
 \end{figure}
-%
+
 \subsubsection{Réunion des parties $A$ et $B$}
 \label{chap3-subsubsec:reunion}
 C'est l'ensemble des éléments qui appartiennent au moins à l'une des parties $A$ et $B$, on le note $A \cup B$.
@@ -112,7 +129,8 @@ C'est l'ensemble des éléments qui appartiennent au moins à l'une des parties 
   \forall x \in E \quad x \in A \cup B \iff x \in A \text{~ou~} x \in B
 \end{equation}
 Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:reunion}.
-\begin{figure}[h]
+
+\begin{figure}
 \centering
 \begin{tikzpicture}
 \draw \En; 
@@ -136,7 +154,8 @@ C'est l'ensemble des éléments de $E$ qui appartiennent à $A$ mais pas à $B$,
   A \setminus B=A \cap \complement_E B.
 \end{gather}
 Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diff}.
-\begin{figure}[h]
+
+\begin{figure}
 \centering
 \begin{tikzpicture}
 \draw \En; 
@@ -154,12 +173,14 @@ Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diff}
 
 \subsubsection{Différence symétrique de $A$ et $B$}
 \label{chap3-subsubsec:differencesymetrique}
-C'est l'ensemble des éléments de $E$ qui appartiennent à exactement une des parties $A$ et $B$, on le note $A \Delta B$ et
+C'est l'ensemble des éléments de $E$ qui appartiennent à exactement une des parties $A$ et $B$, on le note $A \Delta
+B$~:
 \begin{equation}
   \forall x \in E \quad x \in A \Delta B \iff x \in A \cup B \text{~et~} x \not\in A \cap B.
 \end{equation}
 Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diffsym}.
-\begin{figure}[h]
+
+\begin{figure}
 \centering
 \begin{tikzpicture}
 \draw \En; 
@@ -175,7 +196,7 @@ Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diffs
 \caption{Représentation de la différence symétrique $A \Delta B$}
 \label{chap3-fig:diffsym}
 \end{figure}
-%
+
 \begin{prop}
   Soient $A$ et $B$ des parties de $E$, on a 
   \begin{gather}
@@ -183,46 +204,51 @@ Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diffs
     A \Delta B =(A \cup B) \setminus (B \cap A) = (A \cup B) \cap \bar{A \cap B} =(A \cup B) \cap (\bar{A} \cup \bar{B})
   \end{gather}
 \end{prop}
-%
+
 \subsubsection{Propriétés}
 \label{chap3-subsubsec:prop}
-\begin{prop}
-  Soient $A, B$ et $C$ trois parties de $E$, on a les axiomes suivants respectivement~: 
-  La commutativité
-  \begin{gather}
-     A \cap B= B \cap A, \\  
-     A \cup B=B \cup A;
-  \end{gather}
-  l'associativité
-  \begin{gather}
-    A \cap (B \cap C)=(A \cap B) \cap C, \\ 
-    A \cup (B \cup C)=(A \cup B) \cup C;
-  \end{gather}
-  la distributivité
-  \begin{gather}
-    A \cap (B \cup C)=(A \cap B) \cup (B \cap C), \\ 
-    A \cup (B \cap C)=(A \cup B) \cap (A \cup C);
-  \end{gather}
-  la stabilité
-  \begin{gather}
-    A \subset B \implies (A \cap C) \subset (B \cap C), \\ 
-    A \subset B \implies (A \cup C) \subset (B \cup C);
-  \end{gather}
-  les lois de De Morgan
-  \begin{gather}
-    \complement_E (A \cup B)=\complement_E A \cap \complement_E B, \\ 
-    \complement_E (A \cap B)=\complement_E A \cup \complement_E B;
-  \end{gather}
-  les lois de Boole
-  \begin{gather}
-    A \cap (A \cup B)=A, \\ 
-    A \cup (A \cap B)=A.
-  \end{gather}
-\end{prop}
+\begin{axiome}
+  Soient $A, B$ et $C$ trois parties de $E$, on a les axiomes suivants respectivement~:
+  \begin{itemize}
+    \item La commutativité
+        \begin{gather}
+            A \cap B= B \cap A, \\  
+            A \cup B=B \cup A;
+        \end{gather}
+    \item l'associativité
+        \begin{gather}
+            A \cap (B \cap C)=(A \cap B) \cap C, \\ 
+            A \cup (B \cup C)=(A \cup B) \cup C;
+        \end{gather}
+    \item la distributivité
+        \begin{gather}
+            A \cap (B \cup C)=(A \cap B) \cup (B \cap C), \\ 
+            A \cup (B \cap C)=(A \cup B) \cap (A \cup C);
+        \end{gather}
+    \item la stabilité
+        \begin{gather}
+            A \subset B \implies (A \cap C) \subset (B \cap C), \\ 
+            A \subset B \implies (A \cup C) \subset (B \cup C);
+        \end{gather}
+    \item les lois de De Morgan
+        \begin{gather}
+            \complement_E (A \cup B)=\complement_E A \cap \complement_E B, \\ 
+            \complement_E (A \cap B)=\complement_E A \cup \complement_E B;
+        \end{gather}
+    \item les lois de Boole
+        \begin{gather}
+            A \cap (A \cup B)=A, \\ 
+            A \cup (A \cap B)=A.
+        \end{gather}
+    \end{itemize}
+\end{axiome}
 %
 \subsection{Ensemble vide}
 \label{chap3-subsec:ensemblevide}
 Si $E$ est un ensemble, $\complement_E E$ est la seule partie de $E$ sans élément. On l'appelle la partie vide de $E$. Si $F$ est un autre ensemble, on a $\complement_E E = \complement_F F$. On parlera de l'ensemble vide de $E$ au lieu de dire la partie vide de $E$, on le note $\emptyset$. Quelque soit l'ensemble $E$, $\complement_E E =\emptyset$.
+
+Faire attention à ne pas confondre $\emptyset = \{\}$ qui ne contient rien avec $\{\emptyset\}$ qui contient l'ensemble
+vide.
 
 \subsection{Produit cartésien de deux ensembles}
 \label{chap3-subsec:prodcart}
@@ -249,7 +275,8 @@ Par l'absurde, si $x \neq x'$ on a $\{x\}=\{x',y'\}$ et $\{x,y\} = \{x'\}$ donc 
 \end{proof}
 %
 \begin{defdef}
-  Soient $E$ et $F$ deux ensembles, on appelle produit cartésien de $E$ et $F$, qu'on note $E \times F$ l'ensemble $E \times F = \{(x,y), x \in E \ y\in F\}$.
+  Soient $E$ et $F$ deux ensembles, on appelle produit cartésien de $E$ et $F$, qu'on note $E \times F$ l'ensemble $E
+  \times F = \enstq{(x,y)}{x \in E \ y \in F}$.
 \end{defdef}
 Si $E=F$ alors on note $E \times E=E^2$. Si on dispose de $n$ ensemble $E_k$, on définit par récurrence le produit $\prod_{k=1}^n E_k$ et les n-uplets $(x_k)$.
 
@@ -258,14 +285,15 @@ Si $E=F$ alors on note $E \times E=E^2$. Si on dispose de $n$ ensemble $E_k$, on
 \subsection{Notion d'application}
 \label{chap3-subsec:notiondapplication}
 \begin{defdef}
-  On appelle application tout triplet $(E,F,\Gamma)$ où $E$ et $F$ sont des ensembles, $\Gamma$ une partie de $E \times F$ telle que 
+  On appelle application tout triplet $(E, F, \Gamma)$ où $E$ et $F$ sont des ensembles, $\Gamma$ une partie de $E \times F$ telle que 
   \begin{equation}
     \forall x \in E \ \exists! y \in F \quad (x,y) \in \Gamma.
   \end{equation}
 \end{defdef}
-Une représentation graphique de la notion d'application est donné sur la figure~\ref{chap3-fig:application}.
-
-Soit une application $f=(E,F,\Gamma)$, alors $E$ est l'ensemble de départ, $F$ celui d'arrivée et $\Gamma$ est le graphe de $f$. Pour un élément $x \in E$, soit $y$ l'unique élément de $F$ tel que $(x,y) \in \Gamma$ alors $y$ est l'image de $x$ par l'application $f$ ($y=f(x)$) et $x$ est l'antécédent de $y$ par $f$. On note $\fonction{f}{E}{F}{x}{f(x)}$ et on dit que $f$ est une application de $E$ dans $F$. On note $F^E$ l'ensemble des applications de $E$ dans $F$.
+Une représentation graphique de la notion d'application est donné sur la figure~\ref{chap3-fig:application}. Soit une
+application $f=(E,F,\Gamma)$, alors $E$ est l'ensemble de départ, $F$ celui d'arrivée et $\Gamma$ est le graphe de $f$.
+Pour un élément $x \in E$, soit $y$ l'unique élément de $F$ tel que $(x,y) \in \Gamma$ alors $y$ est l'image de $x$ par
+l'application $f$ et $x$ est l'antécédent de $y$ par $f$. On écrit $y=f(x)$. On note $\fonction{f}{E}{F}{x}{f(x)}$ et on dit que $f$ est une application de $E$ dans $F$. On note $F^E$ l'ensemble des applications de $E$ dans $F$.
 %
 \begin{defdef}
   Soient $f=(E,F,\Gamma)$ et $g=(E',F',\Gamma')$ deux applications, on dit que $f=g$ si $E=E'$, $F=F'$ et $\Gamma=\Gamma'$.
@@ -286,7 +314,8 @@ Dans le cas où on sait déjà que $E=E'$ et $F=F'$, on a
 \label{chap3-restrictionetprolongement}
 \subsubsection{Restriction au départ} 
 \label{chap3-subsubsec:restrictiondep}
-Soit $f=(E,F,\Gamma)$ et $A$ une partie de $E$, posons $\Gamma_A=\enstq{(x,f(x))}{x \in A} \subset A \times F$. pour tous élément $x$ de $A$, il existe un unique élément $y$ de $F$ tel que $(x,y) \in \Gamma_A$. $(A,F, \Gamma_A)$ est donc une application. On l'appelle restriction de $f$ au départ à la partie $A$, notée $f_{|A}$, telle que
+Soit $f=(E,F,\Gamma)$ et $A$ une partie de $E$, posons $\Gamma_A=\enstq{(x,f(x))}{x \in A} \subset A \times F$. Pour
+tout élément $x$ de $A$, il existe un unique élément $y$ de $F$ tel que $(x,y) \in \Gamma_A$. Le triplet $(A,F, \Gamma_A)$ est donc une application. On l'appelle restriction de $f$ au départ à la partie $A$, notée $f_{|A}$, telle que
 \begin{equation}
 \fonction{f_{|A}}{A}{F}{x}{f(x)}.
 \end{equation}
@@ -294,11 +323,16 @@ On dira aussi que l'application $f$ est un prolongement au départ de $f_{|A}$. 
 %
 \subsubsection{Restriction à l'arrivée}
 \label{chap3-subsubsec:restrictionarr}
-Soit une application $f=(E,F,\Gamma)$ et $B$ une partie de $F$ telle que $f(E) \subset B$. Alors $\Gamma \in E \times B$ et $(E,B,\Gamma)$ est une application. On l'appelle restriction de $f$ à l'arrivée à la partie $B$, notée $f^{|B}$, telle que
+Soit une application $f=(E,F,\Gamma)$ et $B$ une partie de $F$ telle que $f(E) \subset B$. Alors $\Gamma \in E \times B$ et le triplet $(E,B,\Gamma)$ est une application. On l'appelle restriction de $f$ à l'arrivée à la partie $B$, notée $f^{|B}$, telle que
 \begin{equation}
 \fonction{f^{|B}}{E}{B}{x}{f(x)}.
 \end{equation}
-On dit que l'application $f$ est un prolongement de l'application $f^{|B}$. Remarquons que \primo $f^{|F}=f$, \secundo l'application $f^{|f(E)}$ est surjective et \tertio pour définir la restriction à l'arrivée à $B$, il faut vérifier l'hypothèse $f(E) \subset B$ (sinon ça n'a aucun sens).
+On dit que l'application $f$ est un prolongement de l'application $f^{|B}$. Remarquons que~:
+\begin{enumerate}
+    \item $f^{|F}=f$, 
+    \item l'application $f^{|f(E)}$ est surjective et 
+    \item pour définir la restriction à l'arrivée à $B$, il faut vérifier l'hypothèse $f(E) \subset B$ (sinon ça n'a aucun sens).
+\end{enumerate}
 
 \subsubsection{Prolongement au départ}
 \label{chap3-subsubsec:prolongementdep}
@@ -325,7 +359,7 @@ Une représentation graphique de la composition est donnée par la figure~\ref{c
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{compose.png}
+  \includegraphics[scale=0.4]{compose.png}
   \caption{Représentation graphique de la composition}
   \label{chap3-fig:compose}
 \end{figure}
@@ -551,6 +585,9 @@ Soient $x$ et $x'$ deux éléments de $E$ tels que $g \circ f(x) = g \circ f(x')
 \begin{prop}
   Une application $f:E \longrightarrow F$ est surjective si et seulement si $f(E)=F$.
 \end{prop}
+\begin{proof}
+    Par définition tout élément de $F$ admet au moins un antécédent par $f$ dans $E$, ce qui équivaut à $F \subset f(E)$ et l'autre inclusion est evidente par définition des applications $f(E) \subset F$.
+\end{proof}
 \begin{theo}
   La composée de deux applications surjectives est surjective.
 \end{theo}
@@ -703,7 +740,7 @@ Il est important de préciser dans quel ensemble la partie est majorée et minor
 \emph{Exemples}~:
 \begin{enumerate}
 \item Dans $(\mathfrak{P}(E), \subset)$ $\emptyset$ est le plus petit élément et $E$ est le plus grand.
-\item Dans $(\N,|)$, 1 est le plus petit élément et 0 est le plus grand.
+\item Dans $(\N,|)$, avec $|$ la relation de divisibilité, $1$ est le plus petit élément et $0$ est le plus grand.
 \end{enumerate}
 %
 \begin{defdef}[Borne supérieure et borne inférieure]

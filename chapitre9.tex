@@ -7,7 +7,7 @@
 
 \subsection{Ensemble des naturels $\N$}
 
-L'ensemble des entiers naturels $\N=\{0,1,2,\ldots\}$ est muni de deux lois de compositions internes~: une addition notée $+$ et d'une multiplication notée $\times$ ou $\cdot$ ou rien du tout qui vérifient les propriétés suivantes. On notera $N^*=\N\setminus\{0\}$.
+L'ensemble des entiers naturels $\N=\{0,1,2,\ldots\}$ est muni de deux lois de compositions internes~: une addition notée $+$ et d'une multiplication notée $\times$ ou $\cdot$ ou rien du tout qui vérifient les propriétés suivantes. On notera $\N^*=\N\setminus\{0\}$.
 
 \begin{prop}[Loi $+$]
   Elle est associative 
@@ -75,17 +75,17 @@ On munit l'ensemble $\N$ d'une relation d'ordre total notée $\leq$ qui vérifie
   \label{theo:rec}
   Soient A une partie de $\N$, et $n_0\in\N$ tel que
   \begin{itemize}
-  \item \emph{Initialisation} $n_0\in A$;
-  \item \emph{Hérédité} $\forall n\geq n_0 \quad n\in A \implies n+1\in A$;
+  \item Initialisation~: $n_0\in A$;
+  \item Hérédité~: $\forall n\geq n_0 \quad n\in A \implies n+1\in A$;
   \end{itemize}
-  \emph{Conclusion} Alors $\forall n \in N \quad n\geq n_0 \implies n \in A$.
+  Conclusion~: Alors $\forall n \in N \quad n\geq n_0 \implies n \in A$.
 \end{theo}
 \begin{proof}
-  Soit $E=\N\cap \intervallefo{n_0}{+\infty}$ et $B=\complement_E A$. Montrons par l'absurde que B est vide. 
+  Soit $E=\N\cap \intervallefo{n_0}{+\infty}$, l'ensemble des entiers plus grands ou égaux à $n_0$ et $B=\complement_E A$. Montrons par l'absurde que $B$ est vide. 
 
-Supposons que B est non vide, alors il admet un plus petit élément noté $\alpha$. Alors $\alpha\geq n_0$ par hypothèse (Initialisation) et $n_0\in A$ donc $\alpha\geq n_0+1\geq 1$. Par suite $\alpha-1\geq n_0$. 
+Supposons que $B$ soit non vide, alors il admet un plus petit élément noté $\alpha$. Alors par définition de $E$, $\alpha\geq n_0$ ; et par hypothèse d'initialisation $n_0\in A$, donc $\alpha > n_0$, c'est-à-dire donc $\alpha\geq n_0+1\geq 1$. Par suite $\alpha-1\geq n_0$. 
 
-Puisque $\alpha$ est le plus petit élément de $B$, $\alpha-1 \notin B$ donc $\alpha-1 \in A$. Or par hypothèse (Hérédité) on sait que $\alpha-1+1=\alpha\in A$. 
+Puisque $\alpha$ est le plus petit élément de $B$, $\alpha-1 \notin B$ donc $\alpha-1 \in A$. Alors par hypothèse d'hérédité, on obtient que $\alpha-1+1=\alpha\in A$. 
 
 L'hypothèse de départ qu'on avait fait nous disait que $\alpha \in B$. L'élément $\alpha$ ne peut être à la fois dans $A$ et dans $B$, on arrive donc à une absurdité, alors B est vide, $E=A$.
 \end{proof}
@@ -93,30 +93,30 @@ L'hypothèse de départ qu'on avait fait nous disait que $\alpha \in B$. L'élé
   \label{cor:recsimple}
   Soit $\P$ une propriété définie sur $\N\cap \intervallefo{n_0}{+\infty}$ telle que
   \begin{itemize}
-  \item \emph{Initialisation} $\P(n_0)$ est vraie;
-  \item \emph{Hérédité}  $\forall n\geq n_0 \quad \P(n) \implies \P(n+1)$;
+  \item Initialisation $\P(n_0)$ est vraie;
+  \item Hérédité $\forall n\geq n_0 \quad \P(n) \implies \P(n+1)$;
   \end{itemize}
-  \emph{Conclusion} alors $\forall n\geq n_0 \quad \P(n)$.
+  Conclusion alors $\forall n\geq n_0 \quad \P(n)$.
 \end{cor}
 \begin{proof}
   On applique le théorème de récurrence à $A=\enstq{n\in\N}{\P(n)}$ puisque~:
   \begin{itemize}
-  \item \emph{Initialisation} $\P(n_0) \iff n_0 \in A$
-  \item \emph{Hérédité}
+  \item Initialisation $\P(n_0) \iff n_0 \in A$
+  \item Hérédité
     \begin{equation}
       \left(\forall n\geq n_0 \quad \P(n) \implies \P(n+1)\right) \iff \left( \forall n \geq n_0 \quad n\in A \implies n+1\in A\right)
     \end{equation}
   \end{itemize}
-  \emph{Conclusion} alors d'après le théorème $A=\N\cap \intervallefo{n_0}{+\infty}$
+  Conclusion alors d'après le théorème $A=\N\cap \intervallefo{n_0}{+\infty}$
 \end{proof}
 \begin{cor}[Récurrence double]
   \label{cor:recdouble}
   Soit P une propriété définie sur $\N\cap \intervallefo{n_0}{+\infty}$ telle que
  \begin{itemize}
-  \item \emph{Initialisation} $\P(n_0)$ et $\P(n_1)$ sont vraie;
-  \item \emph{Hérédité} $\forall n\geq n_0 \ \P(n)$ et $\P(n+1) \implies \P(n+2)$;
+  \item Initialisation $\P(n_0)$ et $\P(n_1)$ sont vraie;
+  \item Hérédité $\forall n\geq n_0 \ \P(n)$ et $\P(n+1) \implies \P(n+2)$;
   \end{itemize}
-  \emph{Conclusion} alors $\forall n \in \N\cap \intervallefo{n_0}{+\infty} \ \P(n)$ 
+  Conclusion alors $\forall n \in \N\cap \intervallefo{n_0}{+\infty} \ \P(n)$ 
 \end{cor}
 \begin{proof}
   On définit sur $\N\cap \intervallefo{n_0}{+\infty}$ la propriété $Q(n)=(\P(n) \text{ et } \P(n+1))$ et on applique le corollaire~\ref{cor:recsimple} à $Q$.
@@ -126,10 +126,10 @@ Il ne faut pas oublier d'initialiser deux fois. Il existe aussi des récurrences
   \label{cor:recforte}
   Soit P une propriété définie sur $\N\cap \intervallefo{n_0}{+\infty}$ telle que
   \begin{itemize}
-  \item \emph{Initialisation} $\P(n_0)$ est vraie;
-  \item \emph{Hérédité}  $\forall n \in \N\cap \intervallefo{n_0}{+\infty} \ (\P(n_0), \ldots, \P(n)) \implies \P(n+1)$
+  \item Initialisation $\P(n_0)$ est vraie;
+  \item Hérédité $\forall n \in \N\cap \intervallefo{n_0}{+\infty} \ (\P(n_0), \ldots, \P(n)) \implies \P(n+1)$
   \end{itemize}
-  \emph{Conclusion} alors $\forall n \in \N\cap \intervallefo{n_0}{+\infty}\ \ \P(n)$
+  Conclusion alors $\forall n \in \N\cap \intervallefo{n_0}{+\infty}\ \ \P(n)$
 \end{cor}
 \begin{proof}
   On définit sur $\N\cap \intervallefo{n_0}{+\infty}$ la propriété $R(n)=(\P(n_0), \ldots, \P(n))$ et on applique le corollaire~\ref{cor:recsimple} à $R$.
@@ -160,7 +160,7 @@ De même on peut définir une unique suite $(u_n)_{n\in\N}$ par la donnée de~:
   \end{equation}
 \end{prop}
 \begin{proof}
-  Pour tout entier $n$ on définit la propriété $\P(n) "u_n=u_0+nr$. On initialise et on voit que $\P(0)$ est vraie. Ensuite on vérifie l'hérédité : soit un entier $n$ et on suppose que $\P(n)$ est vraie, alors $u_{n+1}=u_n+r$ par définition et $u_{n+1}=u_0+(n+1)r$ par hypothèse de récurrence, donc $\P(n+1)$ est vraie. Alors d'après  le théorème de récurrence la proposition est vraie.
+  Pour tout entier $n$ on définit la propriété $\P(n) \ u_n=u_0+nr$. On initialise et on voit que $\P(0)$ est vraie. Ensuite on vérifie l'hérédité : soit un entier $n$ et on suppose que $\P(n)$ est vraie, alors $u_{n+1}=u_n+r$ par définition et $u_{n+1}=u_0+(n+1)r$ par hypothèse de récurrence, donc $\P(n+1)$ est vraie. Alors d'après le théorème de récurrence la proposition est vraie.
 \end{proof}
 \begin{prop}
   Soit $u$ une suite arithmétique de premier terme $a\in\C$ et de raison $r\in\C$, alors pour tout entier $n$
@@ -173,7 +173,7 @@ De même on peut définir une unique suite $(u_n)_{n\in\N}$ par la donnée de~:
   \begin{equation}
     S_n=\sum_{k=0}^n u_0+kr= \sum_{k=0}^n u_0 + r\sum_{k=0}^n k.
   \end{equation}
-  On montre par récurrence que $\sum_{k=0}^n k=\frac{n(n+1)}{2}$, en effet pour $n=0$ $\sum_{k=0}^0 k=0=\frac{0(0+1)}{2}$ et pour l'hérédité si on considère que la somme est vraie pour un entier $n \geq 1$ alors $\sum_{k=0}^{n+1} k= n+1+\frac{n(n+1)}{2}=\frac{(n+2)(n+1)}{2}$.
+  On montre par récurrence que $\sum_{k=0}^n k=\frac{n(n+1)}{2}$, en effet pour $n=0$ $\sum_{k=0}^0 k=0=\frac{0(0+1)}{2}$ et pour l'hérédité si on considère que la somme est vraie pour un entier $n \geq 1$ alors $\sum_{k=0}^{n+1} k= n+1 \sum_{k=0}^n k=n+1+\frac{n(n+1)}{2}=\frac{(n+2)(n+1)}{2}$.
 \end{proof}
 \begin{defdef}[Suite géométrique]
   Une suite géométrique à valeur dans $\C$ est une suite définie par la donnée de $u_0\in\C$ et d'une relation de récurrence
@@ -189,7 +189,7 @@ De même on peut définir une unique suite $(u_n)_{n\in\N}$ par la donnée de~:
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit pour tout $n\in\N$ la propriété $\P(n)\ u_n=u_0r^n$. On remarque que $\P(0)$ est vraie puisque $r^0=1$. Soit un naturel $n\geq 1$ et supposons que $\P(n)$ soit vraie. Alors $u_{n+1}=r u_n$ par définition et par hypothèse de récurrence $u_{n+1}=r u_0 r^n=u_0 r^{n+1}$ donc $\P(n+1)$ est vraie. Par théorème de récurrence pour tout entier $n\in\N$ $\P(n)$ est vraie.
+  Soit pour tout $n\in\N$ la propriété $\P(n)\ u_n=u_0r^n$. On remarque que $\P(0)$ est vraie puisque $r^0=1$. Soit un naturel $n\geq 1$ et supposons que $\P(n)$ soit vraie. Alors $u_{n+1}=r u_n$ par définition et par hypothèse de récurrence $u_{n+1}=r u_n = r u_0 r^n=u_0 r^{n+1}$ donc $\P(n+1)$ est vraie. Par théorème de récurrence pour tout entier $n\in\N$ $\P(n)$ est vraie.
 \end{proof}
 \begin{prop}
   Soit $u$ une suite géométrique de premier terme $u_0\in\C$ et de raison $r\in\C$. Soient $p$ et $q$ deux entiers naturels tels que $p\leq q$, alors
@@ -223,15 +223,15 @@ et puisque $r\neq 1$ on a bien  $S_{p,q}=\frac{u_p-u_{q+1}}{1-r}$.
   \item si $a=0$ alors $-b^{n+1}=-b b^n$;
   \item si $a\neq 0$ et $a\neq b$, on définit la suite géométrique $u$ de premier terme $1$ et de raison $\frac{b}{a}$ qui existe puisque $a\neq 0$ et qui est différente de $1$ puisque $a\neq b$. En appliquant la proposition précédente on a~: 
 \begin{equation}
-  S_{0,n}=\sum_{k=0}\left(\frac{b}{a}\right)^k=\frac{1-\left(\frac{b}{a}\right)^{n+1}}{1-\frac{b}{a}},
+  S_{0,n}=\sum_{k=0}^n\left(\frac{b}{a}\right)^k=\frac{1-\left(\frac{b}{a}\right)^{n+1}}{1-\frac{b}{a}},
 \end{equation}
 donc
 \begin{equation}
-  a^n \sum_{k=0}\left(\frac{b}{a}\right)^k = \frac{a^{n+1}-b^{n+1}}{a-b},
+  a^n \sum_{k=0}^n\left(\frac{b}{a}\right)^k = \frac{a^{n+1}-b^{n+1}}{a-b},
 \end{equation}
 finalement
 \begin{equation}
-  (a-b)\sum_{k=0}b^ka^{n-k}=(a-b)\sum_{k=0}b^{n-k}a^{k}=a^{n+1}-b^{n+1}.
+  (a-b)\sum_{k=0}^n b^ka^{n-k}=(a-b)\sum_{k=0}^n b^{n-k}a^{k}=a^{n+1}-b^{n+1}.
 \end{equation}
 \end{itemize}
 On peut aussi le démontrer directement en utilisant les sommes télescopiques comme dans le calcul de $S_{p,q}$.

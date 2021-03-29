@@ -38,12 +38,12 @@ Pour tout réel $\varphi$ on définit $\begin{cases}\vu_\varphi=\cos\varphi\vi+\
 \begin{defdef}
   Soit $M$ un point de l'espace $\E$, on appelle système de coordonnées cylindriques de $M$ dans $\Rep$ tout triplet de réels $(r,\varphi,z)$ avec $r>0$ tel que $\vect{OM}=r\vu_\varphi+z\vk$. Alors $\vect{OM}=r\cos\varphi\vi+r\sin\varphi\vj+z\vk$, on peut retrouver les coordonnées cartésiennes. On a $r=OP$, l'unicité de $z$ est claire car c'est la conséquence de l'unicité des coordonnées cartésiennes. 
 \begin{itemize}
-\item Si $M\notin(Oz)$ alors $P\neq 0$ et donc $\congru{\varphi}{\widehat{(\vi;\vect{OP})}}{2\pi}$;
+\item Si $M\notin(Oz)$ alors $P\neq O$ et donc $\congru{\varphi}{\widehat{(\vi;\vect{OP})}}{2\pi}$;
 \item par contre si $M\in(Oz)$ alors on définit le repère cylindrique associé à $M$, $(0,\vu_\varphi,\vv_\varphi,\vk)$ et c'est un repère orthonormal direct de l'espace.
 \end{itemize}
 \end{defdef}
 
-\emph{Remarque}~: Soit $r_0>0$, l'ensemble des points $M$ de l'espace dont un système de coordonnées cylindrique est $(r_0,\varphi,z)$ lorsque $(\varphi,z)$ varie dans $\R^2$ est un cylindre de rayon $r_0$ d'axe $(Oz)$ d'où le nom de coordonnées cylindriques.
+\emph{Remarque}~: Soit $r_0>0$, l'ensemble des points $M$ de l'espace dont un système de coordonnées cylindriques est $(r_0,\varphi,z)$ lorsque $(\varphi,z)$ varie dans $\R^2$ est un cylindre de rayon $r_0$ d'axe $(Oz)$ d'où le nom de coordonnées cylindriques.
 
 \subsection{Coordonnées sphériques}
 On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que $\vect{OM}=r\vu_\varphi+z\vk$, donc si on note $\rho=OM$ on a $\rho=\sqrt{r^2+z^2}$. 
@@ -52,7 +52,7 @@ On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que 
 \item Si le point $M$ est l'origine alors $\rho=r=z=0$, on peut prendre n'importe quel $\theta \in \intervalleff{0}{\pi}$ et on a encore $\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}$.
 \end{itemize}
 \begin{defdef}
-  Étant donné un point $M$ de l'espace, on appelle système de coordonnées sphérique de $M$ tout triplet $(\rho,\varphi,\theta)\in\R+\times\R\times \intervalleff{0}{\pi}$ tel que $\vect{OM}=\rho\vu_{\varphi,\theta}$. On appelle $r$ la rayon, $\theta$ la colatitude ($\frac{\pi}{2}-\theta$ est la latitude) et $\varphi$ la longitude.
+  Étant donné un point $M$ de l'espace, on appelle système de coordonnées sphérique de $M$ tout triplet $(\rho,\varphi,\theta)\in\Rpluss \times \R \times \intervalleff{0}{\pi}$ tel que $\vect{OM}=\rho\vu_{\varphi,\theta}$. On appelle $r$ la rayon, $\theta$ la colatitude ($\frac{\pi}{2}-\theta$ est la latitude) et $\varphi$ la longitude.
 \end{defdef}
 Alors $\vect{OM}=\rho\vu_{\varphi,\theta}=\rho\sin\theta\cos\varphi\vi+\rho\sin\theta\sin\varphi\vj+\rho\cos\theta\vk$. On peut retrouver les coordonnées cartésiennes à partir des coordonnées cylindriques grâce à~:
 \begin{equation}
@@ -152,7 +152,7 @@ Notons que si $\vu$ et $\vv$ ne sont pas colinéaires alors en particulier ils s
   Soient $\vu$ et $\vv$ deux vecteurs de $\E$, alors~:
   \begin{enumerate}
   \item $\vu \wedge \vv \bot (\vu,\vv)$;
-  \item $\vu \wedge \vv = 0 \iff \vu \& \vv \text{ sont colinéaires}$.
+  \item $\vu \wedge \vv = 0 \iff \vu \textrm{ et } \vv \text{ sont colinéaires}$.
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -254,7 +254,7 @@ Si $\vu$ et $\vv$ sont deux vecteurs non colinéaires, $\norme{\vu\wedge\vv}$ es
   \item[$\impliedby$] On suppose ces trois vecteurs coplanaires alors~:
     \begin{itemize}
     \item Si $\vu$ et $\vv$ sont colinéaires alors leur produit vectoriel est nul donc le déterminant des trois vecteurs est nul;
-    \item sinon s'il existe deux réels $\lambda,\mu$ tels que $\vw\lambda\vu+\mu\vv$ alors $(\vu\wedge)\cdot\vw=\lambda(\vu\wedge\vv)\cdot\vu+\mu(\vu\wedge\vv)\cdot\vv=0$ puisque $\vu\wedge\vv$ est orthogonal à $\vu$ et à $\vv$.
+    \item sinon s'il existe deux réels $\lambda,\mu$ tels que $\vw = \lambda\vu+\mu\vv$ alors $(\vu\wedge\vv)\cdot\vw=\lambda(\vu\wedge\vv)\cdot\vu+\mu(\vu\wedge\vv)\cdot\vv=0$ puisque $\vu\wedge\vv$ est orthogonal à $\vu$ et à $\vv$.
     \end{itemize}
   \item[$\implies$] On suppose que le produit mixte est nul, alors $\vu\wedge\vv$ et $\vw$ sont orthogonaux. 
     \begin{itemize}

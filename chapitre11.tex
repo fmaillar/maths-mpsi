@@ -283,7 +283,7 @@ Pour démontrer qu'une suite réelle diverge, on peut parfois montrer soit qu'un
   Le produit d'une suite réelle de limite nulle par une suite réelle bornée est de limite nulle. En particulier le produit d'une suite réelle de limite nulle et d'une suite réelle convergente est de limite nulle.
 \end{prop}
 \begin{proof}
-  Soient $u$ et $v$ deux suites réelles telles que $u$ soit de limite nulle et $v$ bornée. Il existe alors un réel strictement positif $M$ tel que pour tout entier $n$ $v_n \leq M$. Puisque $u$ est de limite nulle, pour tout $epsilon>0$ il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geq n_0$ alors $\abs{u_n} \leq \frac{\epsilon}{M}$. Pour tout entier naturel $n$  si $n \geq n_0$ $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leq M \frac{\epsilon}{M}=\epsilon$. Donc la suite réelle $uv$ tend vers 0.
+  Soient $u$ et $v$ deux suites réelles telles que $u$ soit de limite nulle et $v$ bornée. Il existe alors un réel strictement positif $M$ tel que pour tout entier $n$ $v_n \leq M$. Puisque $u$ est de limite nulle, pour tout $\epsilon>0$ il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geq n_0$ alors $\abs{u_n} \leq \frac{\epsilon}{M}$. Pour tout entier naturel $n$  si $n \geq n_0$ $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leq M \frac{\epsilon}{M}=\epsilon$. Donc la suite réelle $uv$ tend vers 0.
 \end{proof}
 
 \subsection{Opérations sur les limites}
@@ -392,7 +392,7 @@ avec PL ``pas de limite'' et FI ``forme indéterminée''
     $\times$ & $l'>0$ & $l'=0$ & $l'<0$ & $+\infty$ & $-\infty$ & PL \\ \hline
     $l>0$ & $ll'$ & $0$ & $ll'$ & $+\infty$ & $-\infty$ & PL \\ \hline
     $l=0$ & $0$ & $0$ & $0$ & FI & FI & FI \\ \hline
-    $l>0$ & $ll'$ & $0$ & $ll'$ & $-\infty$ & $+\infty$ & PL \\ \hline
+    $l<0$ & $ll'$ & $0$ & $ll'$ & $-\infty$ & $+\infty$ & PL \\ \hline
     $+\infty$ & $+\infty$ & FI & $-\infty$ & $+\infty$ & $-\infty$ & FI \\ \hline
     $-\infty$ & $-\infty$ & FI & $+\infty$ & $-\infty$ & $+\infty$ & FI \\ \hline
     PL & PL & FI & PL & FI & FI & FI \\ \hline
@@ -417,7 +417,7 @@ avec PL ``pas de limite'' et FI ``forme indéterminée''
   Soient $u$ et $v$ deux suites réelles convergentes et on suppose qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n \leq v_n$. Alors $\lim u \leq \lim v$.
 \end{prop}
 \begin{proof}
-  Soit un naturel $n$ et soit la suite réelle $w=v-u$. Alors la suite réelle $w$ est positive, $\forall n \in \N \quad w_n=\abs{w_n}$. Alors
+  Soit un naturel $n \geq n_0$ et soit la suite réelle $w=v-u$. Alors, au-delà de $n_0$, la suite réelle $w$ est positive, $w_n=\abs{w_n}$. Alors
   \begin{equation}
     \lim w_n=\lim \abs{w_n}=\abs{\lim w_n}.
   \end{equation}
@@ -434,7 +434,7 @@ Finalement
   Soient $u$ et $v$ deux suites réelles convergentes de même limite $l$ et une troisième suite réelle $w$ telle qu'il existe un entier $n_0$ et que pour tout naturel $n$ si $n \geq n_0$ on ait $u_n \leq w_n \leq v_n$. Alors $w$ converge vers $l$.
 \end{theo}
 \begin{proof}
-  Soit un entier $n$, si $n \geq n_0$ alors $0 \leq w_n-u_n \leq v_n -u_n$. Puisque $u$ et $v$ ont la même limite, $v-u$ est de limite nulle. Donc pour $n \geq n_0$ $\abs{w_n-u_n}$. Par conséquent, $w-u$ est convergente de limite nulle. Puisque $w=(w-u)+u$ avec $\lim w-u=0$ et $\lim u=l$ on a $\lim w =l$.
+  Soit un entier $n$, si $n \geq n_0$ alors $0 \leq w_n-u_n \leq v_n -u_n$. Puisque $u$ et $v$ ont la même limite, $v-u$ est de limite nulle. Donc pour $n \geq n_0$ $\abs{w_n-u_n} \leq \abs{v_n-u_n}$. Alors par passage à la limite, $\lim (w-u) \leq \lim (v-u)$. Par conséquent, $w-u$ est convergente de limite nulle. Puisque $w=(w-u)+u$ avec $\lim (w-u)=0$ et $\lim u=l$ on a $\lim w =l$.
 \end{proof}
 \begin{prop}
   Soient $u$ et $v$ deux suites réelles telles qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n<v_n$. Alors
@@ -483,15 +483,15 @@ Dans ce paragraphe bien faire la différence entre~:
   \end{itemize}
 \end{theo}
 \begin{proof}
-  Supposons que $u$ soit majorée. Il existe alors un réel $M$ tel que pour tout naturel $n$ $u_n \leq M$. Soit $A=\{u_n, n \in \R\}$ A est une partie non vide et majorée de $\R$, donc elle admet une borne supérieure qu'on note $l$. Par caractérisation de la borne supérieure
+  Supposons, dans un premier temps, que $u$ soit majorée. Il existe alors un réel $M$ tel que pour tout naturel $n$ $u_n \leq M$. Soit $A=\{u_n, n \in \R\}$ A est une partie non vide et majorée de $\R$, donc elle admet une borne supérieure qu'on note $l$. Par caractérisation de la borne supérieure
   \begin{align}
-    \forall \epsilon > 0 & \ \exists a \in A \quad l-\epsilon < a \leq l \\
-    & \exists n_0 \in \N \quad l-\epsilon < u_{n_0} \leq l \\
-    \forall n \in \N \ n \geq n_0 & \ l \geq u_n \geq u_{n_0} > l-\epsilon
+      \forall \epsilon > 0 & \ \exists a \in A \quad l-\epsilon &< a \leq l \\
+      \forall \epsilon > 0 & \ \exists n_0 \in \N \quad l-\epsilon &< u_{n_0} \leq l \\
+      \forall \epsilon > 0 & \ \exists n_0 \in \N \forall n \geq n_0 \quad l &\geq u_n \geq u_{n_0} > l-\epsilon
   \end{align}
 donc pour tout naturel $n$ si $n \geq n_0$ alors $\abs{u_n-l}=l-u_n \leq \epsilon$ donc $\lim u =l$.
 
-Supposons d'autre part que la suite réelle $u$ ne soit pas majorée. Alors pour tout réel $M$ il existe un naturel $n_0$ tel que $u_{n_0} \geq M$. Or $u$ est croissante donc pour tout naturel $n \geq n_0$ alors $u_n \geq u_{n_0} \geq M$. Donc $\lim u =+\infty$.
+Supposons, dans un deuxième temps, que la suite réelle $u$ ne soit pas majorée. Alors pour tout réel $M$ il existe un naturel $n_0$ tel que $u_{n_0} \geq M$. Or $u$ est croissante donc pour tout naturel $n \geq n_0$ alors $u_n \geq u_{n_0} \geq M$. Donc $\lim u =+\infty$.
 \end{proof}
 En appliquant ce théorème à la suite réelle $-u$ on obtient le théorème suivant
 \begin{theo}
@@ -523,15 +523,15 @@ En appliquant ce théorème à la suite réelle $-u$ on obtient le théorème su
   \begin{equation}
     \sup\enstq{u_n-v_n}{n \in \N}=\lim u-v=0.
   \end{equation}
-Par conséquent, pour tout naturel $n$ on a $u_n-v_n \leq 0$ donc $u_n \leq v_n$ or $v$ décroît par conséquent $u_n \leq v_n \leq v_0$.
+Par conséquent, pour tout naturel $n$ on a $u_n-v_n \leq 0$ donc $u_n \leq v_n$ or $v$ décroît par conséquent $u_n \leq v_n \leq v_0$. La suite réelle $u$ est alors croissante et majorée donc elle converge. On note $l$ sa limite. 
 
-La suite réelle $u$ est alors croissante et majorée donc elle converge. On note $l$ sa limite. Ensuite, $v=(v-u)+u$ et $v-u$ est de limite nulle et $u$ tend vers $l$ donc $v$ tend vers $l$. On a montré que $u$ et $v$ converge de même limite $l$. De plus
+Ensuite, $v=(v-u)+u$ et $v-u$ est de limite nulle et $u$ tend vers $l$ donc $v$ tend vers $l$. On a montré que $u$ et $v$ converge de même limite $l$. De plus
 \begin{equation}
   l=\sup\enstq{u_n}{n\in \N}=\inf\enstq{v_n}{n\in \N}.
 \end{equation}
 Ainsi
 \begin{equation}
-  \forall n \in \N u_n \leq l \leq v_n.
+  \forall n \in \N \quad u_n \leq l \leq v_n.
 \end{equation}
 \end{proof}
 
@@ -603,7 +603,7 @@ Alors il existe un réel $l$ tel que $\bigcap_{n \in \N} I_n = \{l\}$.
   \end{equation}
 La suite réelle $a$ est croissante et la suite réelle $b$ est décroissante. Les suites réelles $a$ et $b$ sont donc adjacentes. Elle convergent donc toutes les deux vers une limite $l$ et pour tout naturel $n$, $a_n \leq l \leq b_n$. On a donc montré que les suites réelles sont convergentes de même limite $l$. Prouvons maintenant que $\bigcap_{n \in \N} I_n = \{l\}$
 
-D'une part, pour tout naturel $n$ on a $l \in I_n$ alors $l \in \bigcap_{n \in \N} I_n$. D'autre part soit $x \in \bigcap_{n \in \N}$ alors pour tout naturel $n$ $x \in I_n$ donc $a_n \leq x \leq b_n$. Puisque $a$ et $b$ sont convergentes de limite $l$, en passant à la limite dans l'inégalité il vient que $x=l$. Par conséquent $\bigcap_{n \in \N} I_n = \{l\}$.
+D'une part, pour tout naturel $n$ on a $l \in I_n$ alors $l \in \bigcap_{n \in \N} I_n$. D'autre part soit $x \in \bigcap_{n \in \N} I_n$ alors pour tout naturel $n$ $x \in I_n$ donc $a_n \leq x \leq b_n$. Puisque $a$ et $b$ sont convergentes de limite $l$, en passant à la limite dans l'inégalité il vient que $x=l$. Donc $\bigcap_{n \in \N} I_n \subset \{l\}$. Par conséquent, par double inclusion, $\bigcap_{n \in \N} I_n = \{l\}$.
 \end{proof}
 
 \subsection{Théorème de Bolzano-Weiertrass}
@@ -682,7 +682,7 @@ Le procédé utilisé ici s'appelle la dichotomie. Il permet de prouver l'existe
 \begin{prop}
   La définition de la relation de domination est équivalente à : soient deux suites réelles $u$ et $v$, alors
   \begin{equation}
-    u=\grandO{v} \iff \exists M \in \R+ \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{u_n} \leq M \abs{v_n}.
+    u=\grandO{v} \iff \exists M \in \Rpluss \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{u_n} \leq M \abs{v_n}.
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -754,7 +754,7 @@ En particulier $u=\grandO{1} \iff u$ est bornée.
 \begin{proof}
   Supposons que $u=\petito{v}$ alors il existe un naturel $n_0$ tel que pour tout entier, si $n \geq n_0$ alors $u_n = v_n w_n$. La suite $w$ tend vers zéro donc
   \begin{equation}
-    \forall \epsilon > 0 \exists n_1 \in \N \forall n \in \N \ n \geq n_1 \implies \abs{w_n} \leq \epsilon.
+    \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \ n \geq n_1 \implies \abs{w_n} \leq \epsilon.
   \end{equation}
   Alors pour tout naturel $n$, si $n \geq \max(n_0, n_1)$ alors $\abs{u_n} = \abs{v_n w_n} \leq \epsilon \abs{v_n}$.
 
