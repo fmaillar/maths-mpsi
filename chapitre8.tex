@@ -48,7 +48,7 @@ Pour tout réel $\varphi$ on définit $\begin{cases}\vu_\varphi=\cos\varphi\vi+\
 \subsection{Coordonnées sphériques}
 On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que $\vect{OM}=r\vu_\varphi+z\vk$, donc si on note $\rho=OM$ on a $\rho=\sqrt{r^2+z^2}$. 
 \begin{itemize}
-\item Si le point $M$ est différent de l'origine alors $\rho>0$ et $\frac{r^2}{\rho^2}+\frac{z^2}{\rho^2}=1$; alors il existe $\theta\in \intervalleff{0}{2\pi}$ tel que $\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}$ on a $r\geq 0$ et $z\geq 0$ donc on peut choisir $\theta\in \intervalleff{0}{\pi}$ et on a $\vect{OM}=\rho\vu_{\varphi,\theta}$ où $\vu_{\varphi,\theta}=\sin\theta\vu_\varphi+\cos\theta\vk$.
+\item Si le point $M$ est différent de l'origine alors $\rho>0$ et $\frac{r^2}{\rho^2}+\frac{z^2}{\rho^2}=1$; alors il existe $\theta\in \intervalleff{0}{2\pi}$ tel que $\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}$ on a $r\geqslant 0$ et $z\geqslant 0$ donc on peut choisir $\theta\in \intervalleff{0}{\pi}$ et on a $\vect{OM}=\rho\vu_{\varphi,\theta}$ où $\vu_{\varphi,\theta}=\sin\theta\vu_\varphi+\cos\theta\vk$.
 \item Si le point $M$ est l'origine alors $\rho=r=z=0$, on peut prendre n'importe quel $\theta \in \intervalleff{0}{\pi}$ et on a encore $\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}$.
 \end{itemize}
 \begin{defdef}
@@ -511,7 +511,7 @@ Il s'agit de la borne inférieur, la plus petite distance de $M$ à un point de 
       \vect{MN}\perp X \iff \lambda=\vect{AM}\cdot\vi \wedge \mu=\vect{AM}\vj.
     \end{equation}
     Il existe un seul point H de X tel que $\vect{MH}\perp X$.
-  \item $X$ est une droite ou un plan. Soit $M'$ un point de $X$, $\vect{MH}$ est orthogonal à $\vect{HM'}$; le théorème de Pythagore nous donne $MM'^2=MH^2+M'H^2$ donc $MM'^2\geq MH^2$. Et $MM'=MH \iff HM'=0 \iff H=M'$, la distance est atteinte pour $M'=H$ et seulement pour $M'=H$
+  \item $X$ est une droite ou un plan. Soit $M'$ un point de $X$, $\vect{MH}$ est orthogonal à $\vect{HM'}$; le théorème de Pythagore nous donne $MM'^2=MH^2+M'H^2$ donc $MM'^2\geqslant MH^2$. Et $MM'=MH \iff HM'=0 \iff H=M'$, la distance est atteinte pour $M'=H$ et seulement pour $M'=H$
   \end{itemize}
 \end{proof}
 
@@ -609,7 +609,7 @@ C'est la plus petite distance d'un point de $\Dr$ à un autre point de $\Dr'$.
   \end{equation}
 Il existe des réels $\alpha$ et $\beta$ tel que $\vect{MH}=\alpha\vu$ puisque M et H sont sur $\Dr$ et $\vect{M'H'}=\beta\vu'$ puisque $M'$ et $H'$ sont sur $\Dr'$; il reste aussi $\vect{HH'}=c\vv$. Alors $\vect{MM'}=(\alpha\vu+\beta\vu')+c\vv$. Le vecteur $\vv$ est orthogonal à $\alpha\vu+\beta\vu'$.
 
-Le théorème de Pythagore affirme donc que $MM'^2=\norme{\alpha\vu+\beta\vu'}^2+HH'^2$. Alors pour tous M de $\Dr$ et tout $M'$ de $\Dr'$ on a $MM'\geq HH'$.
+Le théorème de Pythagore affirme donc que $MM'^2=\norme{\alpha\vu+\beta\vu'}^2+HH'^2$. Alors pour tous M de $\Dr$ et tout $M'$ de $\Dr'$ on a $MM'\geqslant HH'$.
 
 \begin{align}
   MM'=HH' &\iff \norme{\alpha\vu+\beta\vu'}^2=0\\
@@ -759,7 +759,7 @@ Ainsi
       M\in S\cap S' \iff \begin{cases} z=\frac{\rho^2-\rho'^2+d^2}{2d} \\x^2+y^2=0\end{cases},
     \end{equation}
     et l'intersection est constituée d'un seul point H dont les coordonnées sont de la forme $(0,0,z_H)$ et $\vect{AH}=z_H \vc$, le point H est sur la droite $(AA')$;
-  \item si $\abs{\rho-\rho'}\leq d \leq \rho+\rho'$ alors $\alpha>0$ donc
+  \item si $\abs{\rho-\rho'}\leqslant d \leqslant \rho+\rho'$ alors $\alpha>0$ donc
     \begin{equation}
       M\in S\cap S' \iff \begin{cases} z=\frac{\rho^2-\rho'^2+d^2}{2d} \\x^2+y^2=\alpha\end{cases},
     \end{equation}
@@ -810,7 +810,7 @@ donc
 \end{equation}
 Finalement 
 \begin{equation}
-  N \in X \iff  \begin{cases}x=0 \\ -r\leq y \leq r\end{cases}.
+  N \in X \iff  \begin{cases}x=0 \\ -r\leqslant y \leqslant r\end{cases}.
 \end{equation}
 On trouve un segment de la droite $(H,\vj)$
 \item Dans le cas où $\sin \theta\neq 0$, alors les plans $\P$ et $\P'$ ne sont pas orthogonaux. Alors

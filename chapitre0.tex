@@ -86,4 +86,92 @@ Les négations des quantificateurs sont les suivantes~:
   \neg(\exists x \in E \quad P(x)) &\iff \forall x \in E \quad \neg P(x).
 \end{align}
 La variable $x$ est dite muette.
+\cleardoublepage
+\section{Exercices}
+\begin{exercice}
+Soit $(a, b, c) \in \R^3$. Écrire les négations des propositions suivantes~:
+\begin{enumerate}
+    \item $a=b=c$;
+    \item $ab=0$;
+    \item $-3 \leqslant a < 3 < c$.
+\end{enumerate}
+\end{exercice}
+%
+\begin{exercice}
+Soit $x$ un réel quelconque. Que signifient les propositions suivantes et que peut-on en conclure ?
+\begin{enumerate}
+    \item $\forall \epsilon>0 \quad x<\epsilon$;
+    \item $\forall \epsilon>0 \quad \abs{x}<\epsilon$;
+    \item $\exists \epsilon>0 \quad x<\epsilon$;
+\end{enumerate}
+\end{exercice}
+%
+\begin{exercice}[Fonctions monotones et strictement monotones]
+
+\begin{enumerate}
+    \item Rappeler la définition d'une fonction croissante, d'une fonction strictement croissante.
+    \item Soit $f$ une fonction définie sur un intervalle $I$ contenant au moins deux points. Ecrire avec des
+            quantificateurs que $f$ n'est pas croissante, puis que $f$ n'est pas strictement croissante, que $f$ n'est
+            pas monotone et enfin que $f$ n'est pas strictement monotone.
+    \item Une fonction peut-elle être à la fois croissante et décroissante ? Strictement croissante et strictement
+            décroissante ?
+    \item Soient $a$ et $b$ des éléments de $I$. On suppose que $f$ est croissante sur $I$.
+    \begin{enumerate}
+        \item On suppose que $f(a) \leqslant f(b)$. Que peut on dire de $a$ et $b$ ?
+        \item On suppose que $f(a) < f(b)$. Que peut on dire de $a$ et $b$ ?
+    \end{enumerate}
+    \item Reprendre la question précédente avec $f$ strictement croissante sur $I$.
+\end{enumerate}
+\end{exercice}
+%
+\begin{exercice}[Fonction nulle, fonction qui s'annule]
+
+Soient $I$ un intervalle contenant au moins deux points et $f$ une fonction de $I$ vers $\R$. Exprimer les
+propositions suivantes ainsi que leurs négations à l'aide des quantificateurs~:
+\begin{enumerate}
+    \item $f$ est l'application nulle ;
+    \item $f$ s'annule ;
+    \item $f$ est à valeurs positive.
+\end{enumerate}
+Quel(s) sens peut-on donner à l'assertion $f>0$ ?
+\end{exercice}
+%
+\begin{exercice}
+
+Soit $E$ un ensemble de nombres. Ecrire en langage courant la signification des propositions suivantes~:
+\begin{enumerate}
+    \item $\forall x \in E \ \exists y \in E \quad x \neq y$;
+    \item $\forall x \in E \ \exists y \in E \quad x = y$;
+    \item $\exists x \in E \ \forall y \in E \quad x = y$;
+    \item $\forall x \in E \ \forall \ \forall z \in E \quad (x=y \textrm{~ou~} y=z \textrm{~ou~} z=x)$.
+\end{enumerate}
+\end{exercice}
+%
+\begin{exercice}[Fonctions paires et impaires]
+
+\begin{enumerate}
+    \item Donner la définition d'une fonction paire, d'une fonction impaire, d'une fonction non paire et d'une fonction non impaire.
+    \item Toute fonction est-elle soit paire soit impaire ?
+    \item Existe-t-il des fonctinos de $\R$ vers $\R$ qui sont à la fois paires  et impaires ? Si oui les expliciter.
+    \item Soit $f$ de $\R$ vers $\R$. Prouver qu'il existe un unique couple $(\varphi, \psi)$ de fonctions de $\R$ vers
+        $\R$ tel que $f=\varphi+\psi$ avec $\varphi$ paire et $\psi$ impaire.
+    \item Peut-on généraliser ce résultat aux fonctions de $\R$ vers $\C$ ? Si c'est possible, l'appliquer à la fonction $\fonction{f}{\R}{\C}{x}{\exp(\ii x)}$.
+\end{enumerate}
+\end{exercice}
+%
+\begin{exercice}
+
+Donner la valeur de vérité (Vrai ou Faux) des propositions suivantes~:
+\begin{enumerate}
+    \item $2+2=4$ et $1=0$;
+    \item $2+2=4$ ou $1=0$;
+    \item $\forall x \in \R \quad x=1$;
+    \item $\exists x \in \R \quad x\neq 1$;
+    \item $\forall x \in \R \ \exists y \in \R \quad xy=1$;
+    \item $\exists x \in \R \ \exists y \in \R \quad xy=1$;
+    \item $\forall n \in \N \quad (n^2 \textrm{~est pair}) \implies n \textrm{~est pair})$;
+    \item $\forall x \in \R \quad (8=7 \implies x=1)$;
+    \item $\forall x \in \R \quad (x \geqslant 7 \implies x^2 \geqslant 49)$;
+\end{enumerate}
+\end{exercice}
 

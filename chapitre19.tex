@@ -158,7 +158,7 @@ C'est légitime puisque~:
 \begin{prop}
   Soient $F$ et $G$ dans $\K(X)$, alors
   \begin{align}
-    \deg(F+G) \leq \max(\deg(F),\deg(G)) \\
+    \deg(F+G) \leqslant \max(\deg(F),\deg(G)) \\
     \deg(FG) = \deg(F)+\deg(G).
   \end{align}
 \end{prop}
@@ -166,10 +166,10 @@ C'est légitime puisque~:
   Soient $(A,B)$ et $(C,D)$ deux représentants respectifs de $F$ et $G$. Alors $F+G=\frac{AD+BC}{BD}$ et $FG=\frac{AC}{BD}$. Leurs degrés valent~:
   \begin{align}
     \deg(F+G) &= \deg(AD+BC)-\deg(BD) \\ 
-    & \leq \max(\deg(AB),\deg(BC))-\deg(B)-\deg(D) \\
-    & \leq \max(\deg(A)+\deg(D),\deg(B)+\deg(C))-\deg(B)-\deg(D)\\
-    & \leq \max(\deg(A)-\deg(B),\deg(C)-\deg(D))\\
-    & \leq \max(\deg(F),\deg(G));
+    & \leqslant \max(\deg(AB),\deg(BC))-\deg(B)-\deg(D) \\
+    & \leqslant \max(\deg(A)+\deg(D),\deg(B)+\deg(C))-\deg(B)-\deg(D)\\
+    & \leqslant \max(\deg(A)-\deg(B),\deg(C)-\deg(D))\\
+    & \leqslant \max(\deg(F),\deg(G));
   \end{align}
   et pour le produit
   \begin{align}
@@ -373,7 +373,7 @@ C'est légitime, puisque~:
   \begin{equation}
     F=E+G=E_1+G_1 \qquad \deg(G)<0 \ \deg(G_1)<0.
   \end{equation}
-  Alors $E-E_1=G_1-G \in \K(X)$ et $\deg(G_1-G)\leq \max(\deg(G_1),\deg(G))<0$, donc $\deg(E-E_1)<0$. De plus $E-E_1 \in \K[X]$ alors $\deg(E-E_1)=-\infty$ et donc $E-E_1$ est nul. Finalement $E=E_1$ et $G=G_1$.
+  Alors $E-E_1=G_1-G \in \K(X)$ et $\deg(G_1-G)\leqslant \max(\deg(G_1),\deg(G))<0$, donc $\deg(E-E_1)<0$. De plus $E-E_1 \in \K[X]$ alors $\deg(E-E_1)=-\infty$ et donc $E-E_1$ est nul. Finalement $E=E_1$ et $G=G_1$.
 \end{proof}
 \begin{proof}[Existence]
   Soit $(A,B) \in \K[X]^2$ avec $B$ non nul, un représentant quelcuonque de la fraction rationelle $F$. Le polynôme $B$ est non nul, on peut donc effectuer la division euclidienne de $A$ par $B$~:
@@ -414,7 +414,7 @@ En particulier, si $E$ désigne la partie entière de la fonction rationelle $\f
   \end{align}
   De plus
   \begin{equation}
-    \deg\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right) \leq \max\left(\deg\left(\lambda \frac{R_1}{B}\right),\deg\left(\lambda \frac{R_2}{D}\right)\right) <0.
+    \deg\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right) \leqslant \max\left(\deg\left(\lambda \frac{R_1}{B}\right),\deg\left(\lambda \frac{R_2}{D}\right)\right) <0.
   \end{equation}
   Ainsi,
   \begin{equation}
@@ -442,7 +442,7 @@ En particulier, si $E$ désigne la partie entière de la fonction rationelle $\f
   \begin{equation}
     \frac{R-R_1}{(X-a)^n}=G_1-G
   \end{equation}
-  Comme $a$ n'est pas un pole de $G$ ni de $G_1$, alors ce n'est pas un pôle de $G_1-G$. Par l'absurde, supposons que $R-R_1\neq 0$, alors $a$ est une racine de $R-R_1$ d'ordre $p$ ($p \in \intervalleentier{0}{n-1}$, $a$ n'est pas forcèment racine, on peut prendre $p=0$, $p\leq n-1$ car $\deg(R-R_1)\leq n-1$). Alors il existe un polynôme $Q$ tel que
+  Comme $a$ n'est pas un pole de $G$ ni de $G_1$, alors ce n'est pas un pôle de $G_1-G$. Par l'absurde, supposons que $R-R_1\neq 0$, alors $a$ est une racine de $R-R_1$ d'ordre $p$ ($p \in \intervalleentier{0}{n-1}$, $a$ n'est pas forcèment racine, on peut prendre $p=0$, $p\leqslant n-1$ car $\deg(R-R_1)\leqslant n-1$). Alors il existe un polynôme $Q$ tel que
   \begin{equation}
     R-R_1=(X-a)^p \quad \text{et} \quad Q(a)\neq 0.
   \end{equation}
@@ -450,7 +450,7 @@ Ainsi
 \begin{equation}
   \frac{R-R_1}{(X-a)^n} = \frac{(X-a)^pQ}{(X-a)^n} = \frac{Q}{(X-a)^{n-p}}.
 \end{equation}
-Comme $Q(a)\neq 0$, $a$ est un pôle d'ordre $n-p\geq n-(n-1)=1$. Alors $a$ est ``vraiment'' un pôle. Cependant $\frac{R-R_1}{(X-a)^n}=G_1-G$ et on avait pris comme hypothèse que $a$ n'est pas un pôle de $G_1-G$. (Contradiction).
+Comme $Q(a)\neq 0$, $a$ est un pôle d'ordre $n-p\geqslant n-(n-1)=1$. Alors $a$ est ``vraiment'' un pôle. Cependant $\frac{R-R_1}{(X-a)^n}=G_1-G$ et on avait pris comme hypothèse que $a$ n'est pas un pôle de $G_1-G$. (Contradiction).
 \end{proof}
 \begin{proof}[Existence]
   Soit $(A,B)$ un représentant irréductible de $F$. Comme $a$ est un pôle de $F$ d'ordre $n$, il existe un polynôme $C \in \K[X]$ tel que
@@ -494,7 +494,7 @@ Comme $Q(a)\neq 0$, $a$ est un pôle d'ordre $n-p\geq n-(n-1)=1$. Alors $a$ est 
     F &= \sum_{i=1}^n \frac{\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1\\
     &= \frac{\sum_{i=1}^n\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1
   \end{align}
-  avec $\deg\left(\sum_{i=1}^n\alpha_i(X-a)^{n-i}\right)\leq n-1 <n$. D'après l'unicité du lemme, on a forcèment
+  avec $\deg\left(\sum_{i=1}^n\alpha_i(X-a)^{n-i}\right)\leqslant n-1 <n$. D'après l'unicité du lemme, on a forcèment
   \begin{equation}
     \left(\sum_{i=1}^n\alpha_i(X-a)^{n-i},G_1\right) = (R,G)_{\text{lemme}}
   \end{equation}
@@ -810,11 +810,11 @@ d'où $b=-\frac{1}{100}$.
 
 \subsection{Exemple classique DES de $\frac{P'}{P}$ lorsque $P \in \C[X]\setminus\C$}
 
-Soit $P \in \C[X]\setminus\C$, $\deg(P)\geq 1$. Le polynôme $P$ est scindé donc il existe $n \in \N^*$, $\alpha_1, \ldots, \alpha_n$ des complexes deux à deux distincts, $k_1,\ldots, k_n$ des entiers naturels non nuls et un complexe non nul $\lambda$ tels que
+Soit $P \in \C[X]\setminus\C$, $\deg(P)\geqslant 1$. Le polynôme $P$ est scindé donc il existe $n \in \N^*$, $\alpha_1, \ldots, \alpha_n$ des complexes deux à deux distincts, $k_1,\ldots, k_n$ des entiers naturels non nuls et un complexe non nul $\lambda$ tels que
 \begin{equation}
   P = \lambda \prod_{i=1}^n (X-a_i)^{k_i}
 \end{equation}
- Comme $\deg(P)\geq 1$, on a $\deg(P')=\deg(P)-1$. Alors $\deg\left(\frac{P'}{P}\right)=-1<0$. La partie entière de $frac{P'}{P}$ est nulle. Il existe de façon unique des complexes $\alpha_{i,j}$ tels que
+ Comme $\deg(P)\geqslant 1$, on a $\deg(P')=\deg(P)-1$. Alors $\deg\left(\frac{P'}{P}\right)=-1<0$. La partie entière de $frac{P'}{P}$ est nulle. Il existe de façon unique des complexes $\alpha_{i,j}$ tels que
  \begin{equation}
    \frac{P'}{P} = \sum_{i=1}^n \sum_{j=1}^{k_i} \frac{\alpha_{i,j}}{(X-a_i)^j}.
  \end{equation}

@@ -1730,11 +1730,11 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
 \begin{proof}
   $\impliedby$, Supposons que  $\courbe{}$ est stable par barycentration à coefficients positifs non nuls. Alors si $A$ et $B$ sont dans $\courbe{}$, tous leurs barycentres à coefficients positifs non nuls le sont aussi et donc $\courbe{}$ est une partie convexe.
 
-  $\implies$, On va montrer par récurrence sur $\N\setminus\{0,1\}$ l'assertion $\P(n)$ ``pour toute famille $(A_i,\lambda_i)_{i =1, \ldots, n}$ de points pondérés de $\courbe{}$ telle que tous les $\lambda_i \geq 0$ et $\sum_{i=1}^n \lambda_i\neq 0$ alors $\Bary(A_i,\lambda_i)_{i=1, \ldots, n} \in \courbe{}$''.
+  $\implies$, On va montrer par récurrence sur $\N\setminus\{0,1\}$ l'assertion $\P(n)$ ``pour toute famille $(A_i,\lambda_i)_{i =1, \ldots, n}$ de points pondérés de $\courbe{}$ telle que tous les $\lambda_i \geqslant 0$ et $\sum_{i=1}^n \lambda_i\neq 0$ alors $\Bary(A_i,\lambda_i)_{i=1, \ldots, n} \in \courbe{}$''.
 
   \emph{Initialisation}~: $\P(2)$ est vraie par définition d'une partie convexe.
 
-  \emph{Hérédité}~: Soit $n \geq 2$ et supposons $\P(n)$. Soit une famille, $(A_{i}, \lambda_i)_{i=1, \ldots, n+}$ telle que pour tout $i$ $A_{i} \in \courbe{}$, $\lambda_{i} \geq 0$ et $\sum_{i=1}^{n+1}\lambda_i \neq 0$. Deux cas se présentent~:
+  \emph{Hérédité}~: Soit $n \geqslant 2$ et supposons $\P(n)$. Soit une famille, $(A_{i}, \lambda_i)_{i=1, \ldots, n+}$ telle que pour tout $i$ $A_{i} \in \courbe{}$, $\lambda_{i} \geqslant 0$ et $\sum_{i=1}^{n+1}\lambda_i \neq 0$. Deux cas se présentent~:
   \begin{enumerate}
   \item si $\sum_{i=1}^{n}\lambda_i =0$ alors pour tout $i \in \llbracket 1,n \rrbracket \lambda_i =0$ et donc
     \begin{equation}
@@ -1749,7 +1749,7 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
   \end{enumerate}
   Dans les deux cas, $G \in \courbe{}$ et alors par définiton $\courbe{}$ est une partie convexe. Alors $\P(n+1)$ est vraie.
 
-  \emph{Conclusion}~: on a montré que $\P(2)$ est vraie et que $\forall n \geq 2 \P(n) \implies \P(n+1)$ alors par théorème de récurrence $\P(n)$ est vraie pour tout $n \geq 2$.
+  \emph{Conclusion}~: on a montré que $\P(2)$ est vraie et que $\forall n \geqslant 2 \P(n) \implies \P(n+1)$ alors par théorème de récurrence $\P(n)$ est vraie pour tout $n \geqslant 2$.
 \end{proof}
 
 \begin{cor}

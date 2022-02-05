@@ -586,7 +586,7 @@ Soient $x$ et $x'$ deux éléments de $E$ tels que $g \circ f(x) = g \circ f(x')
   Une application $f:E \longrightarrow F$ est surjective si et seulement si $f(E)=F$.
 \end{prop}
 \begin{proof}
-    Par définition tout élément de $F$ admet au moins un antécédent par $f$ dans $E$, ce qui équivaut à $F \subset f(E)$ et l'autre inclusion est evidente par définition des applications $f(E) \subset F$.
+    Par définition tout élément de $F$ admet au moins un antécédent par $f$ dans $E$, ce qui équivaut à $F \subset f(E)$ et l'autre inclusion est évidente par définition des applications $f(E) \subset F$.
 \end{proof}
 \begin{theo}
   La composée de deux applications surjectives est surjective.
@@ -629,7 +629,7 @@ Pour tout $y \in F$ il existe un unique $x \in E$ tel que $y=f(x)$ ---~définiti
   \end{gather}
 \end{prop}
 \begin{proof}
-Soit $(x,y) \in E \times F$ tels que $x=f^{-1}(y) \iff y=f(x)$. pour tous élément $x$ de $E$, il existe un unique $y$ dans $F$ tel que $x=f^{-1}(y)$. Donc $f^{-1}$ est une bijection.
+Soit $(x,y) \in E \times F$ tels que $x=f^{-1}(y) \iff y=f(x)$. Pour tous élément $x$ de $E$, il existe un unique $y$ dans $F$ tel que $x=f^{-1}(y)$. Donc $f^{-1}$ est une bijection.
 \end{proof}
 %
 \begin{theo}[Caractérisation des bijections]
@@ -638,7 +638,7 @@ Soient $E$ et $F$ des ensembles et $f:E \longrightarrow F$ une application. L'ap
 \begin{proof}
   Supposons l'existence d'une application $g:F \longrightarrow E$ telle que $g \circ f = \Id_E$ et $f \circ g = \Id_F$. Montrons que $f$ est injective et surjective.
   \begin{itemize}
-  \item Soient $x$ et $x'$ dans $E$ tels que $f(x)=f(x')$ alors $g \circ f(x) = g \circ f(x')$ donc $x=x'$. f est donc injective.
+  \item Soient $x$ et $x'$ dans $E$ tels que $f(x)=f(x')$ alors $g \circ f(x) = g \circ f(x')$ donc $x=x'$. $f$ est donc injective.
   \item Soit $y \in F$ alors $y=\Id_F(y)=f(g(y))$ si on pose $x=g(y) \in E$ alors $y=f(x)$. On a montré qu'il existe $x \in E$ tel que y=f(x), donc $f$ est surjective.
   \end{itemize}
   On en conclus que $f$ est bijective.
@@ -698,7 +698,7 @@ On peut définir des qualités éventuelles d'une relation binaire. Soit $E$ un 
 \subsubsection{Définition et exemples}
 \label{chap3-subsubsec:relationordredef}
 \begin{defdef}
-On appelle relation d'ordre sur $E$ toute relation binaire sur $E$ qui est réflexive, antisymétrique et transitive. Un ensemble muni d'une relation d'ordre est appelé un ensemble ordonné. On note souvent $\prec$ les relations d'ordre, on réserve la notation $\leq$ à l'ordre usuel, sur les ensembles de nombres.
+On appelle relation d'ordre sur $E$ toute relation binaire sur $E$ qui est réflexive, antisymétrique et transitive. Un ensemble muni d'une relation d'ordre est appelé un ensemble ordonné. On note souvent $\prec$ les relations d'ordre, on réserve la notation $\leqslant$ à l'ordre usuel, sur les ensembles de nombres.
 \end{defdef}
 
 \emph{Exemples}~: les relations d'ordres usuelles sur $\R$, $\Z$, $\Q$ et $\N$; La relation d'ordre strict sur $\R$ n'est pas une relation d'ordre car elle n'est pas réflexive. La relation de divisibilité est une relation d'ordre sur $\N$. La relation d'inclusion sur l'ensemble $\mathfrak{P}(E)$ est une relation d'ordre.

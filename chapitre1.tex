@@ -419,7 +419,7 @@ Les fonctions puissances admettent les limites suivantes~:
   \end{equation}
 \end{proof}
 
-Lorsque $\alpha \geq 0$, les fonctions $f_\alpha$ peuvent se prolonger en zéro pour obtenir une fonction continue. Deux cas se présentent~:
+Lorsque $\alpha \geqslant 0$, les fonctions $f_\alpha$ peuvent se prolonger en zéro pour obtenir une fonction continue. Deux cas se présentent~:
 \begin{itemize}
 \item Si $\alpha>0$ on pose $\fonction{\tilde{f}_\alpha}{\Rpluss}{\R}{x}{\begin{cases} f_\alpha(x) & x>0 \\ 0 & x=0 \end{cases}}$;
 \item Si $\alpha=0$ on pose $\fonction{\tilde{f}_0}{\Rpluss}{\R}{x}{1}$.
@@ -447,7 +447,7 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
   Soient $I$ un intervalle réel, $u$ et $v$ des fonctions dérivables de $\R^{I}$, alors la fonction $u^v$ est dérivable.
 \end{prop}
 \begin{proof}
-  Soit un réel $x$ de $I$ et soit $f(x)=\e^{v(x) \ln u(x)}$. la fonction $f$ est dérivable comme produit et composée de fonctions qui le sont, et
+  Soit un réel $x$ de $I$ et soit $f(x)=\e^{v(x) \ln u(x)}$. La fonction $f$ est dérivable comme produit et composée de fonctions qui le sont, et
   \begin{align}
     f'(x) &=\left[ v'(x) \ln u(x) + v(x) \frac{u'(x)}{u(x)} \right]\e^{v(x) \ln u(x)} \\
     &= \left[v'(x)u(x)\ln u(x) + v(x) u'(x) \right]u(x)^{v(x)-1}.
@@ -465,10 +465,10 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
 \begin{proof}
   Soient deux réels $x$ et $t$ supérieurs à 1, alors
   \begin{align}
-    \sqrt{t} & \leq t \\
-    \frac{1}{t} &\leq \frac{1}{\sqrt{t}}\\
-    0 \leq \ln x = \int_{1}^{x} \frac{\diff t}{t} &\leq \int_1^x\frac{\diff t}{\sqrt{t}}=2\sqrt{x}-2\\
-    0 \leq \frac{\ln x}{x} &\leq \frac{2}{\sqrt{x}} - \frac{2}{x}.
+    \sqrt{t} & \leqslant t \\
+    \frac{1}{t} &\leqslant \frac{1}{\sqrt{t}}\\
+    0 \leqslant \ln x = \int_{1}^{x} \frac{\diff t}{t} &\leqslant \int_1^x\frac{\diff t}{\sqrt{t}}=2\sqrt{x}-2\\
+    0 \leqslant \frac{\ln x}{x} &\leqslant \frac{2}{\sqrt{x}} - \frac{2}{x}.
   \end{align}
   En passant à la limite, et d'après le théorème des gendarmes on obtient la limite en zéro.
 \end{proof}
@@ -482,7 +482,7 @@ Si $\alpha \neq 0$, les fonctions $f_{\frac{1}{\alpha}}$ et $f_\alpha$ sont réc
   Ce qui veut dire que les puissances \og l'emportent \fg{} toujours devant les logarithmes.
 \end{prop}
 \begin{proof}
-  Soit un réel $x \geq 1$ alors
+  Soit un réel $x \geqslant 1$ alors
   \begin{equation}
     \frac{\ln x^\alpha}{x^\beta}=\left(\frac{\alpha}{\beta} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}} \right)^\alpha.
   \end{equation}
@@ -735,7 +735,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
   \begin{itemize}
   \item puisque $\arcsin x \in \intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}$ alors
     \begin{equation}
-      \cos( \arcsin x)=\sqrt{1- \sin^2(\arcsin x)}=\sqrt{1-x^2} \geq 0
+      \cos( \arcsin x)=\sqrt{1- \sin^2(\arcsin x)}=\sqrt{1-x^2} \geqslant 0
     \end{equation}
     On fait le même raisonnement avec $\arccos x$.
   \item On sait aussi que
@@ -796,7 +796,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{theo}
 \begin{proof}[Existence]
   On sait que $x^2=1-y^2$ avec $x^2 \in \intervalleff{0}{1}$ donc $x \in \intervalleff{-1}{1}$. On peut donc définir un $\theta_0=\arccos x \in \intervalleff{0}{\pi}$ tel que $x=\cos \theta_0$. Ainsi $y^2=1-x^2=\sin^2 \theta_0$. Puisque $\theta_0 \in \intervalleff{0}{\pi}$ on a $\sin \theta_0>0$ alors $\abs{y}=\sin \theta_0$.
-Si $y \geq 0$ et comme $\theta_0 \in \intervalleff{0}{\pi}$, alors $\theta=\theta_0$ est le bon réel.
+Si $y \geqslant 0$ et comme $\theta_0 \in \intervalleff{0}{\pi}$, alors $\theta=\theta_0$ est le bon réel.
 
 Mais si $y<0$, alors on prend l'opposé $\theta=-\theta_0 \in \intervalleof{-\pi}{0}$.
 
@@ -1000,7 +1000,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \begin{prop}
   La fonction argument cosinus hyperbolique est strictement croissante et est dérivable sur son domaine de définition telle que
   \begin{equation}
-    \forall x\geq{}1 \quad \argch' x =\frac{1}{\sqrt{x^2-1}}.
+    \forall x\geqslant{}1 \quad \argch' x =\frac{1}{\sqrt{x^2-1}}.
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -1017,7 +1017,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall x \in \Rplus \ \forall y \intervallefo{1}{+\infty} \quad x=\argch y \iff y=\hsin x.
+    \forall x \in \Rplus \ \forall y \in \intervallefo{1}{+\infty} \quad x=\argch y \iff y=\hsin x.
   \end{equation}
   Soit donc en remplaçant $\hcos$ par son expression
   \begin{equation}
@@ -1089,3 +1089,24 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
   \caption{Tracé de fonctions hyperbolique $\htan$ et $\argth$}
   \label{fig:tracetanhargth}
 \end{figure}
+\cleardoublepage
+\section{Exercices}
+\begin{exercice}
+    Soit $a > 1$ et $\alpha \in \R$.
+    \begin{itemize}
+        \item Discuter le nombre de racines sur $\intervalleoo{0}{+\infty}$ de l'équation~:
+            \begin{equation}
+                \label{eq:fiche1-1}
+                a^x = x^\alpha
+            \end{equation}
+        \item Démontrer que l'équation~:
+            \begin{equation}
+                a^(a^x) = x
+            \end{equation}
+            a les mêmes racines que l'équation~:
+            \begin{equation}
+                a^x = x.
+            \end{equation}
+            En déduire le nombre de racines de l'équation \eqref{eq:fiche1-1}.
+    \end{itemize}
+\end{exercice}

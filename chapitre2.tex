@@ -10,7 +10,7 @@ La première section se focalise sur leur définition et leurs propriétés. On 
 
 \section{Corps des nombres complexes}
 \label{sec:corpsdescomplexes}
-La construction de ce corps est hors-programme. On le définit tel quel.
+La construction de ce corps est hors programme. On le définit tel quel.
 \begin{defdef}
   L'ensemble des complexes est défini par
   \begin{equation}
@@ -73,7 +73,7 @@ La construction de ce corps est hors-programme. On le définit tel quel.
   \end{equation}
   alors
   \begin{equation}
-    \underbrace{(x-x')^2}_{\geq 0}=\underbrace{-(y'-y)^2}_{\leq 0}.
+    \underbrace{(x-x')^2}_{\geqslant 0}=\underbrace{-(y'-y)^2}_{\leqslant 0}.
   \end{equation}
   Finalement
   \begin{equation}
@@ -129,7 +129,7 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
 \begin{proof}
   Soit un complexe $z$, notons $x$ sa partie réelle et $y$ sa partie imaginaire, alors
   \begin{equation}
-    z \bar{z}=x^2+y^2 \geq 0,
+    z \bar{z}=x^2+y^2 \geqslant 0,
   \end{equation}
   et
   \begin{equation}
@@ -146,7 +146,7 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
   \begin{gather}
     \abs{z}=\abs{\bar{z}}; \\
     \abs{z \cdot z'}=\abs{z} \cdot \abs{z'}; \\
-    \abs{z+z'}\leq\abs{z}+\abs{z'}.
+    \abs{z+z'}\leqslant\abs{z}+\abs{z'}.
   \end{gather}
   Avec égalité s'il existe un réel $\lambda$ tel que $z'=\lambda z$.
 \end{prop}
@@ -158,18 +158,18 @@ On appelle le réel $x$ la partie réelle du complexe $z$, $x=\Re(z)$ et on appe
   \end{equation}
   On pose $u=z \bar{z'}$ et on a
   \begin{equation}
-    (\abs{z}+\abs{z'})^2-\abs{z+z'}^2=2 \abs{u}-2 \Re(u) \geq 0.
+    (\abs{z}+\abs{z'})^2-\abs{z+z'}^2=2 \abs{u}-2 \Re(u) \geqslant 0.
   \end{equation}
-  On a montré que $(\abs{z}+\abs{z'})^2 \geq \abs{z+z'}^2$ et comme ce sont des nombres positifs, en appliquant la racine carré~\footnote{qui est une fonction croissante}, on obtient l'inégalité triangulaire.
+  On a montré que $(\abs{z}+\abs{z'})^2 \geqslant \abs{z+z'}^2$ et comme ce sont des nombres positifs, en appliquant la racine carré~\footnote{qui est une fonction croissante}, on obtient l'inégalité triangulaire.
 
-  \emph{Cas d'égalité}~: Notons ici que $\frac{z'}{z}=x + \ii y$ avec $x$ et $y$ deux réels. On va montrer que l'égalité est vraie si et seulement si $y=0$ et $x \geq 0$.
+  \emph{Cas d'égalité}~: Notons ici que $\frac{z'}{z}=x + \ii y$ avec $x$ et $y$ deux réels. On va montrer que l'égalité est vraie si et seulement si $y=0$ et $x \geqslant 0$.
   \begin{align}
     \abs{z+z'}=\abs{z}+\abs{z'} &\iff \abs{1+\frac{z'}{z}}^2=\left(1+\abs{\frac{z'}{z}}\right)^2 \\
     &\iff \abs{1+x+\ii y}^2 = (1+ \abs{x+ \ii y})^2 \\
     &\iff (1+x)^2+y^2 = (1+\sqrt{x^2+y^2})^2 \\
     &\iff 1+2x+x^2+y^2 = 1 + 2\sqrt{x^2+y^2} + x^2+y^2 \\
     &\iff x = \sqrt{x^2+y^2}\\
-    &\iff y=0 \text{~et~} x \geq 0.
+    &\iff y=0 \text{~et~} x \geqslant 0.
   \end{align}
 \end{proof}
 %
@@ -206,14 +206,14 @@ En pratique, on multiplie par le complexe conjugué : $\frac{1}{x+\ii y}=\frac{x
   \end{equation}
   et on définit le disque fermé, noté $D_f(a,r)$, par~:
   \begin{equation}
-    D_f(a,r)=\enstq{z\in\C}{\abs{z-a}\leq r}.
+    D_f(a,r)=\enstq{z\in\C}{\abs{z-a}\leqslant r}.
   \end{equation}
 \end{defdef}
 %
 \subsection{Plan complexe}
 \label{subsec:plancomplexe}
 %
-Soit $\P$ le plan euclidien muni d'un repère orthonormé $(O,\vect{u}, \vect{v})$. Si $M$ est un point du plan $\mathcal{P}$ de coordonnées $(x,y)$ dans le repère $(O,\vect{u}, \vect{v})$, on appelle l'affixe de $M$, le complexe $z=x + \ii y$. pour tous complexe $z$, il existe un point du plan $\mathcal{P}$ d'affixe $z$, c'est $M(z)$. L'application $\fonction{\varphi}{\C}{\P}{z}{M(z)}$ est une bijection. Cette bijection permet ``d'identifier'' $\C$ et le plan $\P$. Dans ce cadre~:
+Soit $\P$ le plan euclidien muni d'un repère orthonormé $(O,\vect{u}, \vect{v})$. Si $M$ est un point du plan $\mathcal{P}$ de coordonnées $(x,y)$ dans le repère $(O,\vect{u}, \vect{v})$, on appelle l'affixe de $M$, le complexe $z=x + \ii y$. Pour tous complexe $z$, il existe un point du plan $\mathcal{P}$ d'affixe $z$, c'est $M(z)$. L'application $\fonction{\varphi}{\C}{\P}{z}{M(z)}$ est une bijection. Cette bijection permet ``d'identifier'' $\C$ et le plan $\P$. Dans ce cadre~:
 \begin{itemize}
 \item $M(\bar{z})$ est le symétrique de $M(z)$ par rapport à l'axe $(O,\vect{u})$;
 \item $M(-z)$ est le symétrique de $M(z)$ par rapport au point O;
@@ -381,7 +381,7 @@ Car
   \begin{align}
     \cos n \theta + \ii \sin n \theta =& (\cos \theta + \ii \sin \theta)^n\\
     =& \sum_{k=0}^n \binom{n}{k} \ii^k \sin^k \theta \cos^{n-k} \theta\\
-    =& \sum_{2p \leq n} \binom{n}{2p} (-1)^p \sin^{2p} \theta \cos^{n-2p} \theta \\ &+ \ii \sin \theta \sum_{2p +1\leq n} \binom{n}{2p+1} (-1)^p \sin^{2p} \theta \cos^{n-2p-1} \theta.
+    =& \sum_{2p \leqslant n} \binom{n}{2p} (-1)^p \sin^{2p} \theta \cos^{n-2p} \theta \\ &+ \ii \sin \theta \sum_{2p +1\leqslant n} \binom{n}{2p+1} (-1)^p \sin^{2p} \theta \cos^{n-2p-1} \theta.
   \end{align}
   En remplaçant par $\sin^2 \theta$ par $1-\cos^2 \theta$, on obtient
   \begin{equation}
@@ -408,7 +408,7 @@ Pour tout réel $\theta$ on a~:
   \cos^2 \theta = \frac{1+\cos 2\theta}{2}; \\
   \sin^2 \theta = \frac{1-\cos 2\theta}{2}.
 \end{gather}
-Si l'exposant $p \geq 3$, on utilise les formules d'Euler
+Si l'exposant $p \geqslant 3$, on utilise les formules d'Euler
 \begin{gather}
   \cos^p \theta = \left(\frac{\expc{}{\theta}+\expc{}{\theta}}{2} \right)^p, \\
   \sin^p \theta = \left(\frac{\expc{}{\theta}-\expc{}{\theta}}{2 \ii} \right)^p,
@@ -496,12 +496,12 @@ L'écriture $z=\expc{\abs{z}}{\theta}$ avec $\theta \in \R$ est appelée forme t
 \begin{proof}
   Soit un complexe $z$ de $\U_n$ noté $\expc{\rho}{\theta}$, alors comme $z^n=1$ on a $\rho=1$ et $\congru{n\theta}{0}{2\pi}$ c'est à dire que $z \in \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$.
   \begin{itemize}
-  \item Soient deux entiers relatifs $k$ et $l$ de $\intervalleentier{0}{n-1}$ alors $\abs{\frac{2\pi}{n}k - \frac{2\pi}{n}l} \leq 2\pi$ donc $\expc{}{\frac{2\pi k}{n}} \neq \expc{}{\frac{2\pi l}{n}}$. Il y a donc $n$ racines distinctes.
+  \item Soient deux entiers relatifs $k$ et $l$ de $\intervalleentier{0}{n-1}$ alors $\abs{\frac{2\pi}{n}k - \frac{2\pi}{n}l} \leqslant 2\pi$ donc $\expc{}{\frac{2\pi k}{n}} \neq \expc{}{\frac{2\pi l}{n}}$. Il y a donc $n$ racines distinctes.
   \item Soit un entier relatif $k$, il existe un entier $l \in \intervalleentier{0}{n-1}$ tel que $\congru{k}{l}{n}$~:
       Puisque si on définit $k$ tel que $p=\Ent\left( \frac{k}{n} \right)$ alors
       \begin{align}
-        np \leq & k < np +n \\
-        0 \leq & k-np \leq n-1 <n.
+        np \leqslant & k < np +n \\
+        0 \leqslant & k-np \leqslant n-1 <n.
       \end{align}
     \end{itemize}
     Alors on a démontré que $\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$, on déduit l'autre inclusion en vérifiant que tous les éléments de $\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}$ élevés à la puissance $n$ font 1.
@@ -565,20 +565,20 @@ Soient $a$, $b$, $c$ trois complexes avec a non nul. On s'intéresse à l'équat
   \label{eq:eq1}
   az^2+bz+c=0,
 \end{equation}
-avec $z \in \C$ l'inconnue. On note $\mathcal{S}$ l'ensemble des solutions de l'Eq.~\eqref{eq:eq1}. Ces solutions sont les racines complexes du trinôme $aX^2+bX+c$.
+avec $z \in \C$ l'inconnue. On note $\mathcal{S}$ l'ensemble des solutions de l'équation \eqref{eq:eq1}. Ces solutions sont les racines complexes du trinôme $aX^2+bX+c$.
 
 Mise sous forme canonique du trinôme~: le trinôme peut se factoriser en cherchant les racines
 \begin{align}
   az^2+bz+c &= a \left(z^2+ 2 \frac{b}{2a}z + \frac{b^2}{4a^2} - \frac{b^2}{4a^2} +\frac{c}{a} \right)\\
   &=a \left( \left(z+\frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} \right).
 \end{align}
-Comme $a$ est non nul, les solution de l'Eq.~\eqref{eq:eq1} sont des solutions de l'équation
+Comme $a$ est non nul, les solution de l'équation \eqref{eq:eq1} sont des solutions de l'équation
 \begin{equation}
   \left(z+\frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} =0.
 \end{equation}
 %
 \begin{defdef}
-  On définit le discriminant de l'Eq.~\eqref{eq:eq1} comme étant le complexe $\Delta=b^2-4ac$.
+  On définit le discriminant de l'équation \eqref{eq:eq1} comme étant le complexe $\Delta=b^2-4ac$.
 \end{defdef}
 %
 \begin{enumerate}
@@ -592,7 +592,7 @@ Comme $a$ est non nul, les solution de l'Eq.~\eqref{eq:eq1} sont des solutions d
 \end{equation}
 \end{enumerate}
 
-\emph{Cas particulier} : si $a$, $b$ et $c$ sont réels alors le discriminant $\Delta$ de l'Eq.~\eqref{eq:eq1} est réel et admet deux racines (si $\Delta \neq 0$) et donc~:
+\emph{Cas particulier} : si $a$, $b$ et $c$ sont réels alors le discriminant $\Delta$ de l'équation \eqref{eq:eq1} est réel et admet deux racines (si $\Delta \neq 0$) et donc~:
 \begin{itemize}
 \item soit le discriminant est positif et alors
   \begin{equation}
@@ -628,7 +628,7 @@ Si le nombre $2$ apparaît naturellement en facteur dans $b$, on pose $b'=\frac{
     \alpha +\beta = s \\
     \alpha \beta=p
   \end{cases}$.
-  Plus généralement si $\alpha$ et $\beta$ sont les deux racines de l'Eq.~\eqref{eq:eq1} alors $\begin{cases} \alpha + \beta = -\frac{b}{a} \\ \alpha \beta = \frac{c}{a} \end{cases}$.
+  Plus généralement si $\alpha$ et $\beta$ sont les deux racines de l'équation \eqref{eq:eq1} alors $\begin{cases} \alpha + \beta = -\frac{b}{a} \\ \alpha \beta = \frac{c}{a} \end{cases}$.
 \end{proof}
 %
 \section{Exponentielle complexe}
@@ -740,3 +740,10 @@ Si le réel $k<0$ alors $E_k=\emptyset$, s'il est nul alors $E_0=\{A(a)\}$, s'il
 Si le réel $k$ est strictement positif non égal à 1 alors $\frac{MA}{MB}=k$ et donc $(\vect{MA}+k\vect{MB}) \cdot (\vect{MA}-k\vect{MB})=0$. Soit $I$ le barycentre de $(A,1)(B,k)$ et $J$ le barycentre de $(A,1)(B,-k)$ alors $(1+k)(1-k) \vect{MI} \cdot \vect{MJ} =0$ comme $k \neq \pm 1$ on a que M est sur le cercle de diamètre $[IJ]$.
 
 Si $z \in \{a,b\}$ alors $E_\lambda=\emptyset$ et sinon $E_\lambda$ est la droite qui forme l'angle $\lambda$ avec la droite $(A(a)B(b))$.
+\section{Exercices}
+\begin{exercice}
+Résoudre sur $\R$ l'équation~:
+\begin{equation}
+    \frac{\sin x + \sin 2x + \sin 3x}{\cos x + \cos 2x + \cos 3x} = 1
+\end{equation}
+\end{exercice}

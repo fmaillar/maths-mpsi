@@ -47,7 +47,7 @@ Soit une fonction $f \in \R^I$. On suppose que $f$ est continue par morceaux sur
 On peut définir l'application $\fonction{\Phi_f}{I}{\R}{x}{\int_a^x f(t)\,\diff t}$.
 
 \begin{prop}
-  Soit $f \in \CM(I,\R)$. Si on suppose que $f \geq 0$ alors l'application $\Phi_f$ définie comme ci-dessus est croissante.
+  Soit $f \in \CM(I,\R)$. Si on suppose que $f \geqslant 0$ alors l'application $\Phi_f$ définie comme ci-dessus est croissante.
 \end{prop}
 \begin{proof}
   Soit $(x_1,x_2)\in I^2$ tel que $x_1<x_2$. Alors
@@ -56,16 +56,16 @@ On peut définir l'application $\fonction{\Phi_f}{I}{\R}{x}{\int_a^x f(t)\,\diff
     &= \int_a^{x_2} f(t)\,\diff t + \int_{x_1}^a f(t)\,\diff t \\
     &= \int_{x_1}^{x_2} f(t)\,\diff t
   \end{align}
-  et comme $f$ est positive alors $\Phi_f(x_2)-\Phi_f(x_1) \geq 0$ par positivité de l'intagrale. Finalement $\Phi_f$ est croissante.
+  et comme $f$ est positive alors $\Phi_f(x_2)-\Phi_f(x_1) \geqslant 0$ par positivité de l'intagrale. Finalement $\Phi_f$ est croissante.
 \end{proof}
 
 \begin{prop}
   Soit $f \in \CM(I,\R)$. Si on suppose que $f$ est bornée alors l'application $\Phi_f$ définie comme ci-dessus est lipschitzienne. 
 \end{prop}
 \begin{proof}
-  Comme $f$ est bornée, il existe un réel $k$ positif tel que pour tout $x \in I$, $\abs{f(x)}\leq k$. Soient $(x_1,x_2) \in I^2$, alors
+  Comme $f$ est bornée, il existe un réel $k$ positif tel que pour tout $x \in I$, $\abs{f(x)}\leqslant k$. Soient $(x_1,x_2) \in I^2$, alors
   \begin{equation}
-    \abs{\Phi_f(x_2)-\Phi_f(x_1)} = \abs{\int_{x_1}^{x_2} f(t)\,\diff t} \leq \abs{x_2-x_1} \norme{f}_{\infty} \leq k \abs{x_2 -x_1}.
+    \abs{\Phi_f(x_2)-\Phi_f(x_1)} = \abs{\int_{x_1}^{x_2} f(t)\,\diff t} \leqslant \abs{x_2-x_1} \norme{f}_{\infty} \leqslant k \abs{x_2 -x_1}.
   \end{equation}
   Ce qui montre que $\Phi$ est lipschitzienne. 
 \end{proof}
@@ -109,11 +109,11 @@ Or $x_0 \in J$, donc $\Phi_f$ est continue en $x_0$ pour tout $x_0 \in I$. Donc 
 
   Comme la fonction $f$ est continue en $x_0$, on a par définition
   \begin{equation}
-    \forall \epsilon >0 \ \exists \eta>0 \ \forall x \in I \quad \abs{x-x_0} \leq \eta \implies \abs{f(x)-f(x_0)} = \abs{\epsilon(x)} \leq \epsilon.
+    \forall \epsilon >0 \ \exists \eta>0 \ \forall x \in I \quad \abs{x-x_0} \leqslant \eta \implies \abs{f(x)-f(x_0)} = \abs{\epsilon(x)} \leqslant \epsilon.
   \end{equation}
-  Or pour tout $x \in I \setminus\{x_0\}$ si $\abs{x-x_0}\leq \eta$, pour tout $t \in [(x_0;x)]$, on a $\abs{t-x_0} \leq \eta$ et par conséquent $\abs{\epsilon(t)}\leq \epsilon$.
+  Or pour tout $x \in I \setminus\{x_0\}$ si $\abs{x-x_0}\leqslant \eta$, pour tout $t \in [(x_0;x)]$, on a $\abs{t-x_0} \leqslant \eta$ et par conséquent $\abs{\epsilon(t)}\leqslant \epsilon$.
 
-  Ainsi pour tout $x \in I \setminus\{x_0\}$, si $\abs{x-x_0}\leq \eta$ alors on a $\abs{\frac{1}{x-x_0} \int_{x_0}^x\epsilon(t)\,\diff t} \leq \frac{\abs{x-x_0}}{\abs{x-x_0}}\epsilon=\epsilon$. Donc
+  Ainsi pour tout $x \in I \setminus\{x_0\}$, si $\abs{x-x_0}\leqslant \eta$ alors on a $\abs{\frac{1}{x-x_0} \int_{x_0}^x\epsilon(t)\,\diff t} \leqslant \frac{\abs{x-x_0}}{\abs{x-x_0}}\epsilon=\epsilon$. Donc
   \begin{equation}
     \lim\limits_{x \to x_0} \frac{1}{x-x_0} \int_{x_0}^x\epsilon(t)\,\diff t=0
   \end{equation}
@@ -300,15 +300,15 @@ Si $0 \in I$ et si $a=0$ on parle de développement de Mac-Laurin.
 
 Soit un naturel $n$. On pose $n'=E\left(\frac{n}{2}\right)$ et $n''=E\left(\frac{n-1}{2}\right)$. C'est-à-dire que ce sont les entiers tels que
 \begin{align}
-  2n' \leq n \leq 2n'+2 \\
-  2n'' +1 \leq n \leq 2n''+3
+  2n' \leqslant n \leqslant 2n'+2 \\
+  2n'' +1 \leqslant n \leqslant 2n''+3
 \end{align}
 $2n'$ est le plus grand entier pair inférieur à $n$ et $2n''+1$ est le plus grand entier impair inférieur à $n$. Alors la table~\ref{tab:MacLaurin} donne les développements.
 
 \begin{table}[!h]
   \centering
   \begin{tabular}{|c|c|c|c|}\hline
-    $f(x)$ &  $f^{(k)}(0), k\geq 1$ & $T_n(x)$ & $I$ \\ \hline
+    $f(x)$ &  $f^{(k)}(0), k\geqslant 1$ & $T_n(x)$ & $I$ \\ \hline
     $\e^x$ &  $1$ & $\sum_{k=0}^n \frac{1}{k!}x^k$ & $\R$ \\ \hline
     $\cosh x$  & $1$ si $k$ pair & $\sum_{k=0}^{n'} \frac{1}{(2k)!}x^{2k}$ & $\R$ \\
     &  $0$ si $k$ impair & & \\ \hline
@@ -381,7 +381,7 @@ donc $\P(n+1)$ est vraie.
 \begin{theo}
   Soient un intervalle $I$, $a \in I$, $n \in \N$ et $f \in \classe{n+1}(I,\R)$. La fonction $f^{(n+1)}$ est continue sur un segment donc bornée. Pour tout réel $x \in I$ alors
   \begin{equation}
-    \abs{f(x)-T_{n,f,a}(x)} \leq \frac{\abs{x-a}^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
+    \abs{f(x)-T_{n,f,a}(x)} \leqslant \frac{\abs{x-a}^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
   \end{equation}
 
 C'est l'inégalité de Taylor-Lagrange à l'ordre $n$ appliquée à $f$ au point $a$.
@@ -393,17 +393,17 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre $n$ appliquée à $f$ au point
   \end{equation}
   Deux cas se présentent~:
   \begin{enumerate}
-  \item Si $x \geq a$ alors
+  \item Si $x \geqslant a$ alors
     \begin{align}
-      \abs{R_n(x)} &\leq \int_a^x \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
-      &\leq \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(x-t)^n}{n!}\,\diff t\\
-      &\leq \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(x-a)^{n+1}}{(n+1)!};
+      \abs{R_n(x)} &\leqslant \int_a^x \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
+      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(x-t)^n}{n!}\,\diff t\\
+      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(x-a)^{n+1}}{(n+1)!};
     \end{align}
-  \item Si $x \leq a$ alors
+  \item Si $x \leqslant a$ alors
     \begin{align}
-      \abs{R_n(x)} &\leq \int_x^a \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
-      &\leq \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(t-x)^n}{n!}\,\diff t\\
-      &\leq \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(a-x)^{n+1}}{(n+1)!}.
+      \abs{R_n(x)} &\leqslant \int_x^a \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
+      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(t-x)^n}{n!}\,\diff t\\
+      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(a-x)^{n+1}}{(n+1)!}.
     \end{align}
   \end{enumerate}
   Dans les deux cas,
@@ -454,7 +454,7 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre $n$ appliquée à $f$ au point
   \end{align}
   On note $\epsilon_1(x)=\left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x)$. Puisque $c_x \in [(a,x)]$, le théorème des gendarmes nous dit que $\lim\limits_{x \to a} c_x =a$. De plus on sait que $\lim\limits_{x \to a}\epsilon(x)=0$. Alors par composition de limites, $\lim\limits_{x \to a} \epsilon(c_x)=0$. 
 
-De plus pour tout $x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leq 1$ alors finalement $F(x)-B_{n+1}(x) = \petito{(x-a)^{n+1}}$.
+De plus pour tout $x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leqslant 1$ alors finalement $F(x)-B_{n+1}(x) = \petito{(x-a)^{n+1}}$.
 \end{proof}
 
 \begin{corth}
@@ -653,7 +653,7 @@ On approche $I$ par $T_1=\int_a^bg(x)\,\diff x$. Lorsqu'on calcule on a
 
 En $n$ pas, $n \in \N\setminus\{0,1\}$. On considère la subdivision régulière $\sigma$ de $\intervalleff{a}{b}$ à $n+1$ points.
 \begin{equation}
-  \sigma = (a_k)_{0 \leq k \leq n} \ \forall k \in \llbracket 0,n \rrbracket \quad a_k = a+ k \frac{b-a}{n}
+  \sigma = (a_k)_{0 \leqslant k \leqslant n} \ \forall k \in \llbracket 0,n \rrbracket \quad a_k = a+ k \frac{b-a}{n}
 \end{equation}
 
 Sur chaque intervalle $\intervalleff{a_k}{a_{k+1}}$ on définit la fonction affine $g_k$ qui prend les mêmes valeurs que $f$ en $a_k$ et $a_{k+1}$. C'est-à-dire
@@ -676,7 +676,7 @@ On cherche à majorer la quantité $\int_a^bf(x)\,\diff x -T_n$. Lorsque $n=1$, 
 \begin{lemme}
   Soit une fonction $f \in \classe{2}(\intervalleff{a}{b},\R)$. La fonction $f''$ est continue sur $\intervalleff{a}{b}$ et donc bornée. Alors
   \begin{equation}
-    \abs{\int_a^bf(x)\,\diff x - (b-a)\frac{f(a)+f(b)}{2}} \leq \frac{\abs{b-a}^3}{12} \sup\limits_{\intervalleff{a}{b}}\abs{f''}.
+    \abs{\int_a^bf(x)\,\diff x - (b-a)\frac{f(a)+f(b)}{2}} \leqslant \frac{\abs{b-a}^3}{12} \sup\limits_{\intervalleff{a}{b}}\abs{f''}.
   \end{equation}
 \end{lemme}
 \begin{proof}
@@ -705,11 +705,11 @@ Donc
 \end{equation}
 Alors
 \begin{equation}
-  \abs{\int_a^b (f(x)-g(x))\,\diff x} \leq \frac{M_2}{2} \int_a^b (x-a)(x-b)\,\diff x.
+  \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{2} \int_a^b (x-a)(x-b)\,\diff x.
 \end{equation}
 L'intégrale vaut $\frac{(b-a)^3}{6}$ donc
 \begin{equation}
-  \abs{\int_a^b f(x)\,\diff x -\frac{b-a}{2}(f(a)+f(b))} = \abs{\int_a^b (f(x)-g(x))\,\diff x} \leq \frac{M_2}{12} (b-a)^3.
+  \abs{\int_a^b f(x)\,\diff x -\frac{b-a}{2}(f(a)+f(b))} = \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{12} (b-a)^3.
 \end{equation}
 \end{proof}
 
@@ -717,10 +717,10 @@ Pour démontrer plus génralement cette majoration, suppososn que $n \in \N\setm
 \begin{align}
   \left|\int_a^b f(x)\,\diff x-T_{n}\right| &= \left| \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} f(x)\,\diff x -  \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} g_k(x)\,\diff x \right| \\
   &= \left| \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
-  &\leq \sum_{k=0}^{n-1} \left|\int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
-  &\leq \sum_{k=0}^{n-1} \frac{M_2}{12} (a_{k+1}-a_k)^3 \\
-  &\leq \frac{M_2}{12} \sum_{k=0}^{n-1} \left(\frac{b-a}{n}\right)^3 \\
-  &\leq \frac{M_2}{12} \frac{(b-a)^3}{n^2}.
+  &\leqslant \sum_{k=0}^{n-1} \left|\int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
+  &\leqslant \sum_{k=0}^{n-1} \frac{M_2}{12} (a_{k+1}-a_k)^3 \\
+  &\leqslant \frac{M_2}{12} \sum_{k=0}^{n-1} \left(\frac{b-a}{n}\right)^3 \\
+  &\leqslant \frac{M_2}{12} \frac{(b-a)^3}{n^2}.
 \end{align}
 
 On a ainsi montré que si $f$ est de classe $\classe{2}$ sur $\intervalleff{a}{b}$ alors
@@ -976,12 +976,12 @@ De l'étude de la dérivation des fonctions à valeurs complexes, il vient~:
 \begin{prop}
   Soit $f \in \classe{1}(I,\R)$ et deux réels $a<b$. Alors $f'$ est bornée sur $\intervalleff{a}{b}$ et
   \begin{equation}
-    |f(b)-f(a)| \leq \sup\limits_{\intervalleff{a}{b}}|f'|(b-a)
+    |f(b)-f(a)| \leqslant \sup\limits_{\intervalleff{a}{b}}|f'|(b-a)
   \end{equation}
 \end{prop}
 \begin{proof}
   \begin{equation}
-    |f(b)-f(a)| = \left|\int_a^b f'(t)\,\diff t\right| \leq \int_a^b |f'(t)\,\diff t| \leq (b-a) \sup\limits_{\intervalleff{a}{b}}|f'|.
+    |f(b)-f(a)| = \left|\int_a^b f'(t)\,\diff t\right| \leqslant \int_a^b |f'(t)\,\diff t| \leqslant (b-a) \sup\limits_{\intervalleff{a}{b}}|f'|.
   \end{equation}
 \end{proof}
 
@@ -1005,7 +1005,7 @@ De l'étude de la dérivation des fonctions à valeurs complexes, il vient~:
 \begin{theo}
   Soient un intervalle $I$, $a \in I$, $n \in \N$ et $f \in \classe{{n+1}} (I,\C)$. La fonction $f^{(n+1)}$ est continue sur un segment donc bornée. Pour tout réel $x \in I$ alors
   \begin{equation}
-    \left|f(x)-\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right| \leq \frac{|x-a|^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
+    \left|f(x)-\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right| \leqslant \frac{|x-a|^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
   \end{equation}
 
 C'est l'inégalité de Taylor-Lagrange à l'ordre $n$ appliquée à $f$ au point $a$.
@@ -1028,7 +1028,7 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre $n$ appliquée à $f$ au point
 \end{proof}
 
 \begin{defdef}
-  Soient $I$ un intervalle réel, $a \in I$, $n \in \N$, $f \in \C^I$. La fonction $f$ admet un $DL_n(a)$ si et seulement s'il existe une famille $(a_k)_{0\leq k\leq n} \in \C^{n+1}$ et une application $\epsilon \in \R^I$ telles que
+  Soient $I$ un intervalle réel, $a \in I$, $n \in \N$, $f \in \C^I$. La fonction $f$ admet un $DL_n(a)$ si et seulement s'il existe une famille $(a_k)_{0\leqslant k\leqslant n} \in \C^{n+1}$ et une application $\epsilon \in \R^I$ telles que
   \begin{equation}
     \forall x \in I \quad f(x)=\sum_{k=0}^n a_k (x-a)^k + \epsilon(x)(x-a)^n.
   \end{equation}

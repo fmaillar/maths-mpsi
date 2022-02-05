@@ -33,7 +33,7 @@ On munit $\R^\N$ d'une deuxième loi de composition interne appelée multiplicat
 \end{prop}
 Ainsi, $(\R^\N,+,\perp,\cdot)$ est une $\R$-algèbre. La suite réelle constante égale à $1$ est neutre pour la multiplication.
 \begin{defdef}
-  On dit qu'une suite réelle $u$ est constante s'il existe un réel $k$ tel que pour entier $n$ $u_n=k$. On dit qu'une suite réelle $u$ est stationnaire s'il existe un entier $n_0$ et un réel $k$ tels que pour tout entier naturel $n$, si $n\geq n_0$ alors $u_n=k$.
+  On dit qu'une suite réelle $u$ est constante s'il existe un réel $k$ tel que pour entier $n$ $u_n=k$. On dit qu'une suite réelle $u$ est stationnaire s'il existe un entier $n_0$ et un réel $k$ tels que pour tout entier naturel $n$, si $n\geqslant n_0$ alors $u_n=k$.
 \end{defdef}
 
 \subsection{$\R$-espace vectoriel $B(\R)$ des suites réelles bornées}
@@ -41,24 +41,24 @@ Ainsi, $(\R^\N,+,\perp,\cdot)$ est une $\R$-algèbre. La suite réelle constante
 \begin{defdef}
   Soit $u$ une suite réelle. On dit que~:
   \begin{enumerate}
-  \item la suite $u$ est majorée s'il existe un réel $M$ tel que pour tout entier naturel $n$ $u_n\leq M$
-  \item la suite $u$ est minorée s'il existe un réel $m$ tel que pour tout entier naturel $n$ $u_n\geq m$
+  \item la suite $u$ est majorée s'il existe un réel $M$ tel que pour tout entier naturel $n$ $u_n\leqslant M$
+  \item la suite $u$ est minorée s'il existe un réel $m$ tel que pour tout entier naturel $n$ $u_n\geqslant m$
   \item la suite $u$ est bornée si elle est majorée et minorée.
   \end{enumerate}
 \end{defdef}
 \begin{prop}
-  Soit une suite réelle $u$, alors $u$ est bornée si et seulement s'il existe un réel positif $M$ tel que pour tout naturel $n$ $\abs{u_n}\leq M$.
+  Soit une suite réelle $u$, alors $u$ est bornée si et seulement s'il existe un réel positif $M$ tel que pour tout naturel $n$ $\abs{u_n}\leqslant M$.
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[$\impliedby$] S'il existe un réel $M\geq 0$ tel que pour tout naturel $n$ $\abs{u_n}\leq M$, alors $u$ est majorée par $M$ et minoré par $-M$ donc $u$ est bornée.
-  \item[$\implies$] Si $u$ est bornée, il existe deux réels $m$ et $M$ tels que pour tout naturel $n$ $m\leq u_n \leq M$. Posons $M_0=\max(\abs{m},\abs{M})$, alors pour tout naturel $n$
+  \item[$\impliedby$] S'il existe un réel $M\geqslant 0$ tel que pour tout naturel $n$ $\abs{u_n}\leqslant M$, alors $u$ est majorée par $M$ et minoré par $-M$ donc $u$ est bornée.
+  \item[$\implies$] Si $u$ est bornée, il existe deux réels $m$ et $M$ tels que pour tout naturel $n$ $m\leqslant u_n \leqslant M$. Posons $M_0=\max(\abs{m},\abs{M})$, alors pour tout naturel $n$
     \begin{equation}
-      -M_0\leq -\abs{m} \leq m\leq u_n\leq M\leq \abs{M}\leq M_0,
+      -M_0\leqslant -\abs{m} \leqslant m\leqslant u_n\leqslant M\leqslant \abs{M}\leqslant M_0,
     \end{equation}
     donc en passant à la valeur absolue
     \begin{equation}
-      \forall n \in \N \quad \abs{u_n}\leq M_0.
+      \forall n \in \N \quad \abs{u_n}\leqslant M_0.
     \end{equation}
   \end{itemize}
 \end{proof}
@@ -67,9 +67,9 @@ On note $B(\R)$ l'ensemble des suites réelles bornées.
   L'ensemble $B(\R)$ est un espace vectoriel.
 \end{prop}
 \begin{proof}
-  Premièrement $B(\R)$ est non vide, puisque la suite réelle nulle est bornée. La combinaison linéaire de deux suites réelles bornées est bornée, en effet soient $u$ et $v$ bornées et un réel $\lambda$. Il existe donc deux réels positifs $M$ et $M'$ tel que pour tout naturel $n$ $\abs{u_n}\leq M$ et $\abs{v_n}\leq M'$. Alors pour tout naturel $n$
+  Premièrement $B(\R)$ est non vide, puisque la suite réelle nulle est bornée. La combinaison linéaire de deux suites réelles bornées est bornée, en effet soient $u$ et $v$ bornées et un réel $\lambda$. Il existe donc deux réels positifs $M$ et $M'$ tel que pour tout naturel $n$ $\abs{u_n}\leqslant M$ et $\abs{v_n}\leqslant M'$. Alors pour tout naturel $n$
   \begin{equation}
-    \abs{\lambda u_n + v_n}\leq \abs{\lambda}\abs{u_n}+\abs{v_n}\leq \abs{\lambda} M+M'.
+    \abs{\lambda u_n + v_n}\leqslant \abs{\lambda}\abs{u_n}+\abs{v_n}\leqslant \abs{\lambda} M+M'.
   \end{equation}
 Donc $\lambda u+v$ est bornée. Ainsi $B(\R)$ est un espace vectoriel.
 \end{proof}
@@ -77,7 +77,7 @@ Donc $\lambda u+v$ est bornée. Ainsi $B(\R)$ est un espace vectoriel.
   Le produit de deux suites réelles bornées est bornée.
 \end{prop}
 \begin{proof}
-  Soient $u$ et $v$ bornées. Il existe donc $M$ et $M'$ des réels positifs tels que pour tout naturel $n$ $\abs{u_n}\leq M$ et $\abs{v_n}\leq M'$ donc $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leq MM'$. 
+  Soient $u$ et $v$ bornées. Il existe donc $M$ et $M'$ des réels positifs tels que pour tout naturel $n$ $\abs{u_n}\leqslant M$ et $\abs{v_n}\leqslant M'$ donc $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leqslant MM'$. 
 \end{proof}
 
 \subsection{Notion de suite réelle convergente et de suite réelle divergente}
@@ -87,7 +87,7 @@ Donc $\lambda u+v$ est bornée. Ainsi $B(\R)$ est un espace vectoriel.
 \begin{defdef}
   Soit une suite réelle $u$. On dit que la suite réelle $u$ converge ou tend vers $0$ si et seulement si
   \begin{equation}
-    \forall \epsilon >0 \ \exists n_0\in \N \ \forall n \in \N \quad n\geq n_0 \implies \abs{u_n}\leq \epsilon
+    \forall \epsilon >0 \ \exists n_0\in \N \ \forall n \in \N \quad n\geqslant n_0 \implies \abs{u_n}\leqslant \epsilon
   \end{equation}
 \end{defdef}
 \begin{defdef}
@@ -99,14 +99,14 @@ Donc $\lambda u+v$ est bornée. Ainsi $B(\R)$ est un espace vectoriel.
 \begin{proof}[Unicité]
   Soit une suite réelle $u$. On suppose qu'il existe deux réels différents $l$ et $l'$ tels que $u$ tende vers ces deux réels. Alors
   \begin{align}
-    \forall \epsilon >0 \ \exists n_0\in \N \ \forall n\in\N \quad n\geq n_0 \implies \abs{u_n-l}\leq \epsilon \\ 
-    \forall \epsilon >0 \ \exists n_1\in \N \ \forall n\in\N \quad n\geq n_1 \implies \abs{u_n-l'}\leq \epsilon.
+    \forall \epsilon >0 \ \exists n_0\in \N \ \forall n\in\N \quad n\geqslant n_0 \implies \abs{u_n-l}\leqslant \epsilon \\ 
+    \forall \epsilon >0 \ \exists n_1\in \N \ \forall n\in\N \quad n\geqslant n_1 \implies \abs{u_n-l'}\leqslant \epsilon.
   \end{align}
-  Puisque $l$ et $l'$ sont différents, prenons $\epsilon=\frac{\abs{l-l'}}{3}$ et $n_2=max(n_1,n_0)$ alors pour tout naturel $n$ si $n\geq n_2$ alors
+  Puisque $l$ et $l'$ sont différents, prenons $\epsilon=\frac{\abs{l-l'}}{3}$ et $n_2=max(n_1,n_0)$ alors pour tout naturel $n$ si $n\geqslant n_2$ alors
 \begin{equation}
-  \abs{l-l'}\leq \abs{l-u_n}+\abs{u_n-l'}\leq \frac{2}{3} \abs{l-l'},
+  \abs{l-l'}\leqslant \abs{l-u_n}+\abs{u_n-l'}\leqslant \frac{2}{3} \abs{l-l'},
 \end{equation}
-alors puisque $\abs{l-l'}>0$ on obtient $1\leq \frac{2}{3}$, ce qui est absurde. Donc $l=l'$.
+alors puisque $\abs{l-l'}>0$ on obtient $1\leqslant \frac{2}{3}$, ce qui est absurde. Donc $l=l'$.
 \end{proof}
 \begin{defdef}
   Une suite réelle qui n'est pas convergente est divergente.
@@ -117,11 +117,11 @@ alors puisque $\abs{l-l'}>0$ on obtient $1\leq \frac{2}{3}$, ce qui est absurde.
 \begin{proof}
   La suite réelle $u$ converge vers $l$ donc
   \begin{equation}
-    \forall \epsilon>0 \ \exists n_0 \in \N \ \forall n \in \N \quad n\geq n_0 \implies \abs{u_n-l}\leq \epsilon.
+    \forall \epsilon>0 \ \exists n_0 \in \N \ \forall n \in \N \quad n\geqslant n_0 \implies \abs{u_n-l}\leqslant \epsilon.
   \end{equation}
-  Alors pour tout naturel $n$, si $n\geq n_0$ on a
+  Alors pour tout naturel $n$, si $n\geqslant n_0$ on a
   \begin{equation}
-    \abs{\abs{u_n}-\abs{l}}=\abs{\abs{u_n}-\abs{-l}}\leq \abs{u_n+(-l)}\leq \epsilon.
+    \abs{\abs{u_n}-\abs{l}}=\abs{\abs{u_n}-\abs{-l}}\leqslant \abs{u_n+(-l)}\leqslant \epsilon.
   \end{equation}
   Donc $\abs{u}$ tend vers $\abs{l}$.
 \end{proof}
@@ -130,20 +130,20 @@ La réciproque est fausse, en effet il peut arriver que $\abs{u}$ converge sans 
   Toute suite réelle convergente est bornée. \emph{La réciproque est fausse}.
 \end{prop}
 \begin{proof}
-  Soit $u\in \R^\N$, on suppose que $u$ converge vers $l$. On écrit la définition avec $\epsilon=1$. Il existe alors un naturel $n_0$ tel que pour tout $n\geq n_0$ $\abs{u_n-l}\leq 1$. Alors
+  Soit $u\in \R^\N$, on suppose que $u$ converge vers $l$. On écrit la définition avec $\epsilon=1$. Il existe alors un naturel $n_0$ tel que pour tout $n\geqslant n_0$ $\abs{u_n-l}\leqslant 1$. Alors
   \begin{equation}
-    \abs{u_n}=\abs{u_n-l+l}\leq \abs{u_n-l}+\abs{l},
+    \abs{u_n}=\abs{u_n-l+l}\leqslant \abs{u_n-l}+\abs{l},
   \end{equation}
   alors
   \begin{equation}
-    \abs{u_n}\leq 1+\abs{l}.
+    \abs{u_n}\leqslant 1+\abs{l}.
   \end{equation}
   Soient $M_0=\max(\abs{u_0},\ldots,\abs{u_{n_0-1}})$ et $M=\max(1+\abs{l},M_0)$, alors
   \begin{equation}
     \forall n \in \N \quad
     \begin{cases}
-      n \geq n_0 & \abs{u_n}\leq 1+\abs{l}\leq M \\
-      n>n_0 & \abs{u_n}\leq M_0\leq M
+      n \geqslant n_0 & \abs{u_n}\leqslant 1+\abs{l}\leqslant M \\
+      n>n_0 & \abs{u_n}\leqslant M_0\leqslant M
     \end{cases}.
   \end{equation}
   Dans tous les cas, on majore la valeur absolue de $u$ par $M$. Donc $u$ est bornée.
@@ -153,26 +153,26 @@ Si on sait qu'une suite réelle n'est pas bornée, on peut en conclure directeme
 \begin{prop}
   Soient une suite réelle $u$ et deux réels $a$ et $b$. On suppose que $u$ converge vers une limite $l\in\R$
   \begin{enumerate}
-  \item si $a<l$ alors il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n\geq n_0$ alors $u_n\geq a$
-  \item si $b>l$ alors il existe un naturel $n_1$ tel que pour tout naturel $n$, si $n\geq n_1$ alors $u_n\leq b$
-  \item si $a\leq l\leq b$ alors il existe un naturel $n_2$ tel que pour tout naturel $n$, si $n\geq n_2$ alors $a \leq u_n \leq b$
+  \item si $a<l$ alors il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n\geqslant n_0$ alors $u_n\geqslant a$
+  \item si $b>l$ alors il existe un naturel $n_1$ tel que pour tout naturel $n$, si $n\geqslant n_1$ alors $u_n\leqslant b$
+  \item si $a\leqslant l\leqslant b$ alors il existe un naturel $n_2$ tel que pour tout naturel $n$, si $n\geqslant n_2$ alors $a \leqslant u_n \leqslant b$
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item si $a<l$ alors on pose $\epsilon=l-a>0$, il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $\abs{u_n-l}\leq l-a$ alors $a-l \leq u_n \leq l-a$ donc $a \leq u_n$
-  \item De la même manière, si $b>l$ on pose $\epsilon=b-l$ et il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geq n_1$ alors $\abs{u_n-l} \leq b-l$ alors $u_n-l \leq \abs{u_n-l}\leq b-l$ donc $u_n \leq b$
-  \item Soit $n_2=\max(n_1,n_0)$ donc pour tout naturel $n$, si $n \geq n_2$ alors $u_n \geq a$ et $u_n \leq b$ donc $a \leq u_n \leq b$.
+  \item si $a<l$ alors on pose $\epsilon=l-a>0$, il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $\abs{u_n-l}\leqslant l-a$ alors $a-l \leqslant u_n \leqslant l-a$ donc $a \leqslant u_n$
+  \item De la même manière, si $b>l$ on pose $\epsilon=b-l$ et il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geqslant n_1$ alors $\abs{u_n-l} \leqslant b-l$ alors $u_n-l \leqslant \abs{u_n-l}\leqslant b-l$ donc $u_n \leqslant b$
+  \item Soit $n_2=\max(n_1,n_0)$ donc pour tout naturel $n$, si $n \geqslant n_2$ alors $u_n \geqslant a$ et $u_n \leqslant b$ donc $a \leqslant u_n \leqslant b$.
   \end{enumerate}
 \end{proof}
 \begin{defdef}
-  Soit une propriété $P$ portant sur un entier $n$. On dira que $P$ est vraie ``à partir d'un certain rang'' s'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n\geq n_0$ alors $P(n)$ est vraie.
+  Soit une propriété $P$ portant sur un entier $n$. On dira que $P$ est vraie ``à partir d'un certain rang'' s'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n\geqslant n_0$ alors $P(n)$ est vraie.
 \end{defdef}
 \begin{cor}
   Soit une suite réelle $u$. Si $u$ converge vers une limite $l$ positive alors il existe un réel $a$ positif tel que $u$ soit minorée par $a$ ``à partir d'un certain rang''
 \end{cor}
 \begin{proof}
-  Soit $a=\frac{l}{2}$ alors $0<a<l$. On applique la proposition avec ce réel $a$. Il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n \geq a$. La suite réelle $u$ est donc minorée ``à partir d'un certain rang''.
+  Soit $a=\frac{l}{2}$ alors $0<a<l$. On applique la proposition avec ce réel $a$. Il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n \geqslant a$. La suite réelle $u$ est donc minorée ``à partir d'un certain rang''.
 \end{proof}
 \begin{cor}
   Soit une suite réelle $u$. Si $u$ converge vers une limite $l$ non nulle, alors il existe un réel $a$ strictement positif tel que la suite réelle $\abs{u}$ soit minorée par $a$ ``à partir d'un certain rang''.
@@ -186,13 +186,13 @@ Si on sait qu'une suite réelle n'est pas bornée, on peut en conclure directeme
 \begin{defdef}
   Soit une suite réelle $u$, on dit que $u$ tend vers $+\infty$ si et seulement si
   \begin{equation}
-    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geq n_0 \implies u_n \geq A,
+    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geqslant n_0 \implies u_n \geqslant A,
   \end{equation}
   et on note $\lim\limits_{n\to\infty}u_n=+\infty$. 
 
   On dit aussi que $u$ tend vers $-\infty$ si et seulement si
   \begin{equation}
-    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geq n_0 \implies u_n \leq A
+    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geqslant n_0 \implies u_n \leqslant A
   \end{equation}
   et on note $\lim\limits_{n\to\infty}u_n=-\infty$.
 \end{defdef}
@@ -201,9 +201,9 @@ Une suite réelle qui tend vers $\pm\infty$ diverge. De telles suites réelles s
   Soit une suite réelle $u$. Si $u$ tend vers $\pm\infty$ alors $\abs{u}$ tend vers $+\infty$.
 \end{prop}
 \begin{proof}
-  En effet, si la limite de $u$ est $+\infty$, alors pour tout réel $A$ il existe un naturel $n_0$  tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n \geq A$, donc $\abs{u_n} \geq u_n \geq A$. Ainsi $\abs{u}$ tend vers $+\infty$. 
+  En effet, si la limite de $u$ est $+\infty$, alors pour tout réel $A$ il existe un naturel $n_0$  tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n \geqslant A$, donc $\abs{u_n} \geqslant u_n \geqslant A$. Ainsi $\abs{u}$ tend vers $+\infty$. 
 
-  De la même manière si $u$ tend $-\infty$ alors  pour tout réel $B$ il existe un naturel $n_1$  tel que pour tout naturel $n$ si $n \geq n_1$ alors $u_n \leq -B$, alors $-u_n \geq B$ donc $\abs{u_n} \geq -u_n \geq B$. Ainsi $\abs{u}$ tend vers $+\infty$. 
+  De la même manière si $u$ tend $-\infty$ alors  pour tout réel $B$ il existe un naturel $n_1$  tel que pour tout naturel $n$ si $n \geqslant n_1$ alors $u_n \leqslant -B$, alors $-u_n \geqslant B$ donc $\abs{u_n} \geqslant -u_n \geqslant B$. Ainsi $\abs{u}$ tend vers $+\infty$. 
 \end{proof}
 \begin{prop}
   Soit une suite réelle $u$.
@@ -214,7 +214,7 @@ Une suite réelle qui tend vers $\pm\infty$ diverge. De telles suites réelles s
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item D'après la définition, $u$ n'est pas majorée. En particulier pour tout réel $A$ il existe un entier $n_0$ tel que $u_{n_0} \geq A$. Si on applique la définition avec $A=0$ alors pour tout entier $n$ plus grand que $n_0$ $u_{n_0} \geq 0$. Soient $m_0=\min(u_0,\ldots,u_{n_0-1},0)$ et un naturel $n$. Si $n > n_0$ alors $u_n \geq 0 \geq m_0$. Si $n \leq n_0$ alors $u_n \geq m_0$. Donc pour tout entier $n$ $u_n \geq m_0$. La suite réelle $u$ est minorée
+  \item D'après la définition, $u$ n'est pas majorée. En particulier pour tout réel $A$ il existe un entier $n_0$ tel que $u_{n_0} \geqslant A$. Si on applique la définition avec $A=0$ alors pour tout entier $n$ plus grand que $n_0$ $u_{n_0} \geqslant 0$. Soient $m_0=\min(u_0,\ldots,u_{n_0-1},0)$ et un naturel $n$. Si $n > n_0$ alors $u_n \geqslant 0 \geqslant m_0$. Si $n \leqslant n_0$ alors $u_n \geqslant m_0$. Donc pour tout entier $n$ $u_n \geqslant m_0$. La suite réelle $u$ est minorée
   \item idem
   \end{enumerate}
 \end{proof}
@@ -226,13 +226,13 @@ La suite réelle $\abs{u}$ peut tendre vers $+\infty$ sans que $u$ tende vers $+
   Soit une suite réelle $u$, on dit que $v$ est une suite réelle extraite de $u$ s'il existe une application $\varphi:\N \longmapsto \N$ strictement croissante telle que $\forall n\in \N \quad v_n=u_{\varphi(n)}$.
 \end{defdef}
 \begin{lemme}
-  Soit une application $\varphi:\N \longmapsto \N$ strictement croissante, alors pour tout naturel $n$ $\varphi(n) \geq n$.
+  Soit une application $\varphi:\N \longmapsto \N$ strictement croissante, alors pour tout naturel $n$ $\varphi(n) \geqslant n$.
 \end{lemme}
 \begin{proof}
-  On montre par récurrence sur $n \in \N$ la propriété $\P(n)$ $\varphi(n) \geq n$.
+  On montre par récurrence sur $n \in \N$ la propriété $\P(n)$ $\varphi(n) \geqslant n$.
   \begin{itemize}
-  \item[I] $n=0$, puisque $\varphi(0) \in \N$ alors $\varphi(0) \geq 0$.
-  \item[H] soit $n \in \N$, supposons $\P(n)$ alors puisque $\varphi$ est strictement croissante $\varphi(n+1) > \varphi(n)$ et par hypothèse de récurrence $\varphi(n+1) > n$ et comme $\varphi(n+1) \in \N$ on a $\varphi(n+1) \geq n+1$. Alors $\P(n+1)$ est vraie.
+  \item[I] $n=0$, puisque $\varphi(0) \in \N$ alors $\varphi(0) \geqslant 0$.
+  \item[H] soit $n \in \N$, supposons $\P(n)$ alors puisque $\varphi$ est strictement croissante $\varphi(n+1) > \varphi(n)$ et par hypothèse de récurrence $\varphi(n+1) > n$ et comme $\varphi(n+1) \in \N$ on a $\varphi(n+1) \geqslant n+1$. Alors $\P(n+1)$ est vraie.
   \item[C] par théorème de récurrence, la propriété $\P$ est vraie pour tout naturel $n$.
   \end{itemize}
 \end{proof}
@@ -240,7 +240,7 @@ La suite réelle $\abs{u}$ peut tendre vers $+\infty$ sans que $u$ tende vers $+
   Soient $u$ une suite réelle et $v$ une suite réelle extraite de $u$. Si $u$ converge vers un réel $l$ alors $v$ converge aussi vers $l$. La réciproque est fausse.
 \end{prop}
 \begin{proof}
-  Puisque $v$ est extraite de $u$, il existe une application $\varphi:\N \longmapsto \N$ strictement croissante telle que pour tout naturel $n$ $v_n=u_{\varphi(n)}$. Puisque $u$ converge vers $l$, pour tout $\epsilon>0$ il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geq n_0$ alors $\abs{u_n-l} \leq \epsilon$. D'après le lemme, pour tout naturel $n_0$, $\varphi(n) \geq n \geq n_0$ donc $\abs{v_n-l}=\abs{u_{\varphi(n)}-l} \leq \epsilon$. Alors $v$ converge vers $l$.
+  Puisque $v$ est extraite de $u$, il existe une application $\varphi:\N \longmapsto \N$ strictement croissante telle que pour tout naturel $n$ $v_n=u_{\varphi(n)}$. Puisque $u$ converge vers $l$, pour tout $\epsilon>0$ il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geqslant n_0$ alors $\abs{u_n-l} \leqslant \epsilon$. D'après le lemme, pour tout naturel $n_0$, $\varphi(n) \geqslant n \geqslant n_0$ donc $\abs{v_n-l}=\abs{u_{\varphi(n)}-l} \leqslant \epsilon$. Alors $v$ converge vers $l$.
 \end{proof}
 Pour démontrer qu'une suite réelle diverge, on peut parfois montrer soit qu'une de ses sous-suites réelles diverge, soit que deux de ses sous-suites réelles ont des limites différentes. Comme par exemple la suite réelle de terme général $u_n=(-1)^n$.
 \begin{prop}
@@ -249,14 +249,14 @@ Pour démontrer qu'une suite réelle diverge, on peut parfois montrer soit qu'un
 \begin{proof}
   Soit un réel $\epsilon>0$. Il existe alors deux naturels $n_1$ et $n_2$ tels que pour tout naturel $n$
   \begin{align}
-    n \geq n_0 \implies \abs{u_{2n}-l} \leq \epsilon \\  n \geq n_1 \implies \abs{u_{2n+1}-l} \leq \epsilon
+    n \geqslant n_0 \implies \abs{u_{2n}-l} \leqslant \epsilon \\  n \geqslant n_1 \implies \abs{u_{2n+1}-l} \leqslant \epsilon
   \end{align}
-  On note $n_2=\max(2n_0,2n_1+1)$ et si $n \geq n_2$ alors
+  On note $n_2=\max(2n_0,2n_1+1)$ et si $n \geqslant n_2$ alors
   \begin{itemize}
-  \item $n$ est pair, il existe donc un naturel $p$ tel que $n=2p$ donc $p\geq n_0$ d'où $\abs{u_n-l}=\abs{u_{2p}-l} \leq \epsilon$
-  \item $n$ est impair, il existe donc un naturel $p$ tel que $n=2p+1$ donc $p\geq n_1$ d'où $\abs{u_n-l}=\abs{u_{2p+1}-l} \leq \epsilon$
+  \item $n$ est pair, il existe donc un naturel $p$ tel que $n=2p$ donc $p\geqslant n_0$ d'où $\abs{u_n-l}=\abs{u_{2p}-l} \leqslant \epsilon$
+  \item $n$ est impair, il existe donc un naturel $p$ tel que $n=2p+1$ donc $p\geqslant n_1$ d'où $\abs{u_n-l}=\abs{u_{2p+1}-l} \leqslant \epsilon$
   \end{itemize}
-  Alors pour tout naturel $n$ si $n \geq n_2$ alors $\abs{u_n-l} \leq \epsilon$. Donc $u$ converge vers $l$.
+  Alors pour tout naturel $n$ si $n \geqslant n_2$ alors $\abs{u_n-l} \leqslant \epsilon$. Donc $u$ converge vers $l$.
 \end{proof}
 \begin{prop}
   Soit une suite réelle $u$ et $v$ une suite réelle extraite de $u$. Si $u$ est bornée, alors $v$ est aussi bornée. La réciproque est fausse.
@@ -270,11 +270,11 @@ Pour démontrer qu'une suite réelle diverge, on peut parfois montrer soit qu'un
 \begin{proof}
   La suite réelle nulle est de limite nulle, donc il est non vide. Cet espace est stable par combinaison linéaire, en effet soient deux suites réelles de limite nulle et un réel $\lambda$. Montrons que $\lambda u+v$ est de limite nulle. Déjà si $\lambda=0$ alors $\lambda u+v=v$ est de limite nulle. On suppose désormais que $\lambda$ est non nul. Soit $\epsilon>0$ il existe deux naturels $n_0$ et $n_1$ tels que pour tout naturel $n$
   \begin{align}
-    n \geq n_0 \implies \abs{u_n} \leq \frac{\epsilon}{2\abs{\lambda}} \\ n \geq n_1 \implies \abs{v_n} \leq \frac{\epsilon}{2}
+    n \geqslant n_0 \implies \abs{u_n} \leqslant \frac{\epsilon}{2\abs{\lambda}} \\ n \geqslant n_1 \implies \abs{v_n} \leqslant \frac{\epsilon}{2}
   \end{align}
-  Posons $n_2=\max(n_0,n_1)$ alors si $n \geq n_2$ on a
+  Posons $n_2=\max(n_0,n_1)$ alors si $n \geqslant n_2$ on a
   \begin{equation}
-    \abs{\lambda u_n + v_n}\leq \abs{\lambda}\abs{u_n}+\abs{v_n}\leq \epsilon
+    \abs{\lambda u_n + v_n}\leqslant \abs{\lambda}\abs{u_n}+\abs{v_n}\leqslant \epsilon
   \end{equation}
   donc $\lambda u+v$ tend vers 0.
 \end{proof}
@@ -283,7 +283,7 @@ Pour démontrer qu'une suite réelle diverge, on peut parfois montrer soit qu'un
   Le produit d'une suite réelle de limite nulle par une suite réelle bornée est de limite nulle. En particulier le produit d'une suite réelle de limite nulle et d'une suite réelle convergente est de limite nulle.
 \end{prop}
 \begin{proof}
-  Soient $u$ et $v$ deux suites réelles telles que $u$ soit de limite nulle et $v$ bornée. Il existe alors un réel strictement positif $M$ tel que pour tout entier $n$ $v_n \leq M$. Puisque $u$ est de limite nulle, pour tout $\epsilon>0$ il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geq n_0$ alors $\abs{u_n} \leq \frac{\epsilon}{M}$. Pour tout entier naturel $n$  si $n \geq n_0$ $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leq M \frac{\epsilon}{M}=\epsilon$. Donc la suite réelle $uv$ tend vers 0.
+  Soient $u$ et $v$ deux suites réelles telles que $u$ soit de limite nulle et $v$ bornée. Il existe alors un réel strictement positif $M$ tel que pour tout entier $n$ $v_n \leqslant M$. Puisque $u$ est de limite nulle, pour tout $\epsilon>0$ il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geqslant n_0$ alors $\abs{u_n} \leqslant \frac{\epsilon}{M}$. Pour tout entier naturel $n$  si $n \geqslant n_0$ $\abs{u_n v_n}=\abs{u_n}\abs{v_n}\leqslant M \frac{\epsilon}{M}=\epsilon$. Donc la suite réelle $uv$ tend vers 0.
 \end{proof}
 
 \subsection{Opérations sur les limites}
@@ -306,20 +306,20 @@ $l(v_n-l)$ tend vers zéro, puisque c'est une suite réelle de limite nulle mult
 \end{proof}
 L'ensemble des suites réelles convergentes est un sous espace vectoriel de $\R^\N$.
 \begin{prop}
-  Soit une suite réelle $u$. On suppose que $u$ converge vers une limite $l$ non nulle. Alors il existe un entier naturel $n_0$ tel que pour tout $n \geq n_0$ $u_n \neq 0$. La suite réelle $\left(\frac{1}{u_n}\right)_{n \geq n_0}$ est convergente et tend vers $\frac{1}{l}$
+  Soit une suite réelle $u$. On suppose que $u$ converge vers une limite $l$ non nulle. Alors il existe un entier naturel $n_0$ tel que pour tout $n \geqslant n_0$ $u_n \neq 0$. La suite réelle $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$ est convergente et tend vers $\frac{1}{l}$
 \end{prop}
 \begin{proof}
-  $l$ est non nulle donc il existe un réel $a$ strictement positif et un naturel $n_0$ tels que pour tout entier $n$ si $n \geq n_0$ alors $\abs{u_n} \geq a >0$. En particulier si $n \geq n_0$ alors $u_n \neq 0$ donc on peut considérer la suite réelle $\left(\frac{1}{u_n}\right)_{n \geq n_0}$. Soit un entier $n$ tel que $n \geq n_0$ alors
+  $l$ est non nulle donc il existe un réel $a$ strictement positif et un naturel $n_0$ tels que pour tout entier $n$ si $n \geqslant n_0$ alors $\abs{u_n} \geqslant a >0$. En particulier si $n \geqslant n_0$ alors $u_n \neq 0$ donc on peut considérer la suite réelle $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$. Soit un entier $n$ tel que $n \geqslant n_0$ alors
   \begin{equation}
     \frac{1}{u_n}-\frac{1}{l}=\frac{1}{lu_n}(l-u_n).
   \end{equation}
   Or on sait que
   \begin{align}
-    \forall n \geq n_0 \quad &\abs{u_n} \geq a > 0 \\
-    & 0 \leq \frac{1}{\abs{u_n}} \leq \frac{1}{a} \\
-    & 0 \leq \frac{1}{\abs{lu_n}} \leq \frac{1}{a\abs{l}}.
+    \forall n \geqslant n_0 \quad &\abs{u_n} \geqslant a > 0 \\
+    & 0 \leqslant \frac{1}{\abs{u_n}} \leqslant \frac{1}{a} \\
+    & 0 \leqslant \frac{1}{\abs{lu_n}} \leqslant \frac{1}{a\abs{l}}.
   \end{align}
-  La suite réelle $\left(\frac{1}{\abs{lu_n}}\right)_{n \geq n_0}$ est bornée et la suite réelle $(l-u_n)_{n \geq n_0}$ tend vers 0. Leur produit est une suite réelle de limite nulle. Autrement dit la suite réelle de terme général $\frac{1}{u_n}$ tend donc vers $\frac{1}{l}$.
+  La suite réelle $\left(\frac{1}{\abs{lu_n}}\right)_{n \geqslant n_0}$ est bornée et la suite réelle $(l-u_n)_{n \geqslant n_0}$ tend vers 0. Leur produit est une suite réelle de limite nulle. Autrement dit la suite réelle de terme général $\frac{1}{u_n}$ tend donc vers $\frac{1}{l}$.
 \end{proof}
 
 \subsubsection{Suites réelles tendant vers l'infini}
@@ -328,7 +328,7 @@ L'ensemble des suites réelles convergentes est un sous espace vectoriel de $\R^
   Soient $u$ et $v$ deux suites réelles telles que $u$ tende vers $+\infty$ et $v$ soit minorée. Alors $u+v$ tend vers $+\infty$.
 \end{prop}
 \begin{proof}
-  $v$ est minorée, il existe alors un réel $a$ tel que pour tout entier naturel $n$ tel que $u_n \geq a$. Comme $u$ tend vers $+\infty$, soit un réel $A$, il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geq n_0$ alors $u_n \geq A-a$. Ainsi si $n \geq n_0$ $u_n+v_n \geq A-a+a =A$ alors $u+v$ tend vers $+\infty$.
+  $v$ est minorée, il existe alors un réel $a$ tel que pour tout entier naturel $n$ tel que $u_n \geqslant a$. Comme $u$ tend vers $+\infty$, soit un réel $A$, il existe un entier naturel $n_0$ tel que pour tout entier naturel $n$ si $n \geqslant n_0$ alors $u_n \geqslant A-a$. Ainsi si $n \geqslant n_0$ $u_n+v_n \geqslant A-a+a =A$ alors $u+v$ tend vers $+\infty$.
 \end{proof}
 \begin{prop}
   De la même manière on montre que si $u$ tend vers $-\infty$ et si $v$ est majorée, alors $u+v$ tend vers $-\infty$.
@@ -337,30 +337,30 @@ L'ensemble des suites réelles convergentes est un sous espace vectoriel de $\R^
   Soient deux suites réelles $u$ et $v$. On suppose que $u$ tend vers $+\infty$ et que $v$ est minorée par un réel strictement positif, au moins à partir d'un certain rang. Alors $uv$ tend vers $+\infty$.
 \end{prop}
 \begin{proof}
-  $v$ est minorée donc il existe un réel $a>0$ et il existe un naturel $n_0$ tel que pour tout entier $n$ si $n \geq n_0$ alors $v_n \geq a > 0$. La suite réelle $u$ tend vers $+\infty$, donc pour tout réel $A$ positif il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geq n_1$ alors $u_n \geq \frac{A}{a}$. Soit $n_2=\max(n_0,n_1)$ alors pour tout naturel $n$, si $n \geq n_2$ alors $u_nv_n \geq \frac{A}{a} a=A$. Alors $uv$ tend vers $+\infty$.
+  $v$ est minorée donc il existe un réel $a>0$ et il existe un naturel $n_0$ tel que pour tout entier $n$ si $n \geqslant n_0$ alors $v_n \geqslant a > 0$. La suite réelle $u$ tend vers $+\infty$, donc pour tout réel $A$ positif il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geqslant n_1$ alors $u_n \geqslant \frac{A}{a}$. Soit $n_2=\max(n_0,n_1)$ alors pour tout naturel $n$, si $n \geqslant n_2$ alors $u_nv_n \geqslant \frac{A}{a} a=A$. Alors $uv$ tend vers $+\infty$.
 \end{proof}
 \begin{prop}
-  Soit une suite réelle $u$, on suppose que $u$ diverge vers $+\infty$. Alors il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geq n_0$ alors $u_n>0$. La suite réelle $\left(\frac{1}{u_n}\right)_{n \geq n_0}$ est de limite nulle. 
+  Soit une suite réelle $u$, on suppose que $u$ diverge vers $+\infty$. Alors il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geqslant n_0$ alors $u_n>0$. La suite réelle $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$ est de limite nulle. 
 \end{prop}
 \begin{proof}
-  Soit $\epsilon > 0$, il existe un naturel $n_1$ tel que pour tout entier $n$ si $n \geq n_1$ alors $\frac{1}{u_n} \geq \frac{1}{\epsilon} > 0$. D'où
+  Soit $\epsilon > 0$, il existe un naturel $n_1$ tel que pour tout entier $n$ si $n \geqslant n_1$ alors $\frac{1}{u_n} \geqslant \frac{1}{\epsilon} > 0$. D'où
   \begin{align}
-    \forall n \in \N \quad n \geq n_1 \implies 0 < \frac{1}{u_n} \geq \epsilon \\
-    \forall n \in \N \quad n \geq n_1 \implies \abs{\frac{1}{u_n}}= \frac{1}{u_n} \geq \epsilon.
+    \forall n \in \N \quad n \geqslant n_1 \implies 0 < \frac{1}{u_n} \geqslant \epsilon \\
+    \forall n \in \N \quad n \geqslant n_1 \implies \abs{\frac{1}{u_n}}= \frac{1}{u_n} \geqslant \epsilon.
   \end{align}
   Donc $\frac{1}{u}$ tend vers 0.
 \end{proof}
 \begin{prop}
-  Soit une suite réelle $u$. On suppose que $u$ est de limite nulle et qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n > 0$, alors la suite réelle $\left(\frac{1}{u_n}\right)_{n \geq n_0}$ tend vers $+\infty$.
+  Soit une suite réelle $u$. On suppose que $u$ est de limite nulle et qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n > 0$, alors la suite réelle $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$ tend vers $+\infty$.
 \end{prop}
 \begin{proof}
-  Soit $A>0$ alors il existe un naturel $n_1$ tel que pour $n \geq n_1$ $\abs{u_n} \leq \frac{1}{A}$. Soit $n_2=\max(n_0,n_1)$ alors pour tout naturel $n \geq n_2$ on a
+  Soit $A>0$ alors il existe un naturel $n_1$ tel que pour $n \geqslant n_1$ $\abs{u_n} \leqslant \frac{1}{A}$. Soit $n_2=\max(n_0,n_1)$ alors pour tout naturel $n \geqslant n_2$ on a
   \begin{equation}
-    0 < u_n=\abs{u_n} \leq \frac{1}{A}.
+    0 < u_n=\abs{u_n} \leqslant \frac{1}{A}.
   \end{equation}
   D'où
   \begin{equation}
-    0 < A \leq \frac{1}{u_n},
+    0 < A \leqslant \frac{1}{u_n},
   \end{equation}
   donc $\frac{1}{u}$ tend vers $+\infty$
 \end{proof}
@@ -405,39 +405,39 @@ avec PL ``pas de limite'' et FI ``forme indéterminée''
 \begin{prop}
   Soient une suite réelle $u$ et un réel $l$. On suppose qu'il existe une suite réelle $\alpha$ et un naturel $n_0$ tels que
   \begin{itemize}
-  \item $\forall n \in \N \quad n \geq n_0 \implies \abs{u_n-l} \leq \alpha_n$;
+  \item $\forall n \in \N \quad n \geqslant n_0 \implies \abs{u_n-l} \leqslant \alpha_n$;
   \item $\alpha$ est de limite nulle.
   \end{itemize}
   Alors $u$ tend vers $l$.
 \end{prop}
 \begin{proof}
-  Il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geq n_0$ alors $\abs{u_n-l} \leq \alpha_n$. Pour tout $\epsilon>0$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n\geq n_1$ alors $\abs{\alpha_n} \leq \epsilon$. Soit $n_2=\max(n_1,n_0)$ alors pour tout naturel $n$, si $n \geq n_2$ alors $\abs{u_n-l}\leq \abs{\alpha_n}\leq \epsilon$. Donc $u$ tend vers $l$.
+  Il existe un naturel $n_0$ tel que pour tout naturel $n$, si $n \geqslant n_0$ alors $\abs{u_n-l} \leqslant \alpha_n$. Pour tout $\epsilon>0$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n\geqslant n_1$ alors $\abs{\alpha_n} \leqslant \epsilon$. Soit $n_2=\max(n_1,n_0)$ alors pour tout naturel $n$, si $n \geqslant n_2$ alors $\abs{u_n-l}\leqslant \abs{\alpha_n}\leqslant \epsilon$. Donc $u$ tend vers $l$.
 \end{proof}
 \begin{prop}[Passage à la limite]
-  Soient $u$ et $v$ deux suites réelles convergentes et on suppose qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n \leq v_n$. Alors $\lim u \leq \lim v$.
+  Soient $u$ et $v$ deux suites réelles convergentes et on suppose qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n \leqslant v_n$. Alors $\lim u \leqslant \lim v$.
 \end{prop}
 \begin{proof}
-  Soit un naturel $n \geq n_0$ et soit la suite réelle $w=v-u$. Alors, au-delà de $n_0$, la suite réelle $w$ est positive, $w_n=\abs{w_n}$. Alors
+  Soit un naturel $n \geqslant n_0$ et soit la suite réelle $w=v-u$. Alors, au-delà de $n_0$, la suite réelle $w$ est positive, $w_n=\abs{w_n}$. Alors
   \begin{equation}
     \lim w_n=\lim \abs{w_n}=\abs{\lim w_n}.
   \end{equation}
 Alors la limite de $w$ est positive. On sait aussi d'après la proposition sur la limite d'une somme de suites réelles convergentes que
 \begin{equation}
-  \lim w_n = \lim v_n - \lim u_n \geq 0.
+  \lim w_n = \lim v_n - \lim u_n \geqslant 0.
 \end{equation}
 Finalement
 \begin{equation}
-  \lim u_n \leq \lim v_n.
+  \lim u_n \leqslant \lim v_n.
 \end{equation}
 \end{proof}
 \begin{theo}[Théorème des gendarmes]
-  Soient $u$ et $v$ deux suites réelles convergentes de même limite $l$ et une troisième suite réelle $w$ telle qu'il existe un entier $n_0$ et que pour tout naturel $n$ si $n \geq n_0$ on ait $u_n \leq w_n \leq v_n$. Alors $w$ converge vers $l$.
+  Soient $u$ et $v$ deux suites réelles convergentes de même limite $l$ et une troisième suite réelle $w$ telle qu'il existe un entier $n_0$ et que pour tout naturel $n$ si $n \geqslant n_0$ on ait $u_n \leqslant w_n \leqslant v_n$. Alors $w$ converge vers $l$.
 \end{theo}
 \begin{proof}
-  Soit un entier $n$, si $n \geq n_0$ alors $0 \leq w_n-u_n \leq v_n -u_n$. Puisque $u$ et $v$ ont la même limite, $v-u$ est de limite nulle. Donc pour $n \geq n_0$ $\abs{w_n-u_n} \leq \abs{v_n-u_n}$. Alors par passage à la limite, $\lim (w-u) \leq \lim (v-u)$. Par conséquent, $w-u$ est convergente de limite nulle. Puisque $w=(w-u)+u$ avec $\lim (w-u)=0$ et $\lim u=l$ on a $\lim w =l$.
+  Soit un entier $n$, si $n \geqslant n_0$ alors $0 \leqslant w_n-u_n \leqslant v_n -u_n$. Puisque $u$ et $v$ ont la même limite, $v-u$ est de limite nulle. Donc pour $n \geqslant n_0$ $\abs{w_n-u_n} \leqslant \abs{v_n-u_n}$. Alors par passage à la limite, $\lim (w-u) \leqslant \lim (v-u)$. Par conséquent, $w-u$ est convergente de limite nulle. Puisque $w=(w-u)+u$ avec $\lim (w-u)=0$ et $\lim u=l$ on a $\lim w =l$.
 \end{proof}
 \begin{prop}
-  Soient $u$ et $v$ deux suites réelles telles qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geq n_0$ alors $u_n<v_n$. Alors
+  Soient $u$ et $v$ deux suites réelles telles qu'il existe un naturel $n_0$ tel que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n<v_n$. Alors
   \begin{gather}
     \lim u =+\infty \implies \lim v =+\infty,\\
     \lim v =-\infty \implies \lim u =-\infty.
@@ -445,8 +445,8 @@ Finalement
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item Pour tout réel $A$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geq n_1$ alors $u_n \geq A$. Soit $n_2=\max(n_0,n_1)$, donc pour tout naturel $n$, si $n \geq n_2$ alors $v_n \geq u_n \geq A$ donc $\lim v=+\infty$.
-  \item Pour tout réel $A$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geq n_1$ alors $v_n \leq A$. Soit $n_2=\max(n_0,n_1)$, donc pour tout naturel $n$, si $n \geq n_2$ alors $u_n \leq v_n \leq A$ donc $\lim v=+\infty$.
+  \item Pour tout réel $A$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geqslant n_1$ alors $u_n \geqslant A$. Soit $n_2=\max(n_0,n_1)$, donc pour tout naturel $n$, si $n \geqslant n_2$ alors $v_n \geqslant u_n \geqslant A$ donc $\lim v=+\infty$.
+  \item Pour tout réel $A$ il existe un naturel $n_1$ tel que pour tout naturel $n$ si $n \geqslant n_1$ alors $v_n \leqslant A$. Soit $n_2=\max(n_0,n_1)$, donc pour tout naturel $n$, si $n \geqslant n_2$ alors $u_n \leqslant v_n \leqslant A$ donc $\lim v=+\infty$.
   \end{itemize}
 \end{proof}
 Dans ce paragraphe bien faire la différence entre~:
@@ -462,8 +462,8 @@ Dans ce paragraphe bien faire la différence entre~:
 \begin{defdef}
   Soit une suite réelle $u$. On dit que $u$ est
   \begin{itemize}
-  \item croissante, si pour tout naturel $n$ $u_n \leq u_{n+1}$;
-  \item décroissante, si pour tout naturel $n$ $u_n \geq u_{n+1}$;
+  \item croissante, si pour tout naturel $n$ $u_n \leqslant u_{n+1}$;
+  \item décroissante, si pour tout naturel $n$ $u_n \geqslant u_{n+1}$;
   \item monotone, si $u$ est croissante ou décroissante.
   \end{itemize}
 \end{defdef}
@@ -483,15 +483,15 @@ Dans ce paragraphe bien faire la différence entre~:
   \end{itemize}
 \end{theo}
 \begin{proof}
-  Supposons, dans un premier temps, que $u$ soit majorée. Il existe alors un réel $M$ tel que pour tout naturel $n$ $u_n \leq M$. Soit $A=\{u_n, n \in \R\}$ A est une partie non vide et majorée de $\R$, donc elle admet une borne supérieure qu'on note $l$. Par caractérisation de la borne supérieure
+  Supposons, dans un premier temps, que $u$ soit majorée. Il existe alors un réel $M$ tel que pour tout naturel $n$ $u_n \leqslant M$. Soit $A=\{u_n, n \in \R\}$ A est une partie non vide et majorée de $\R$, donc elle admet une borne supérieure qu'on note $l$. Par caractérisation de la borne supérieure
   \begin{align}
-      \forall \epsilon > 0 & \ \exists a \in A \quad l-\epsilon &< a \leq l \\
-      \forall \epsilon > 0 & \ \exists n_0 \in \N \quad l-\epsilon &< u_{n_0} \leq l \\
-      \forall \epsilon > 0 & \ \exists n_0 \in \N \forall n \geq n_0 \quad l &\geq u_n \geq u_{n_0} > l-\epsilon
+      \forall \epsilon > 0 & \ \exists a \in A \quad l-\epsilon < a \leqslant l \\
+      \forall \epsilon > 0 & \ \exists n_0 \in \N \quad l-\epsilon < u_{n_0} \leqslant l \\
+      \forall \epsilon > 0 & \ \exists n_0 \in \N \ \forall n \geqslant n_0 \quad l \geqslant u_n \geqslant u_{n_0} > l-\epsilon
   \end{align}
-donc pour tout naturel $n$ si $n \geq n_0$ alors $\abs{u_n-l}=l-u_n \leq \epsilon$ donc $\lim u =l$.
+donc pour tout naturel $n$ si $n \geqslant n_0$ alors $\abs{u_n-l}=l-u_n \leqslant \epsilon$ donc $\lim u =l$.
 
-Supposons, dans un deuxième temps, que la suite réelle $u$ ne soit pas majorée. Alors pour tout réel $M$ il existe un naturel $n_0$ tel que $u_{n_0} \geq M$. Or $u$ est croissante donc pour tout naturel $n \geq n_0$ alors $u_n \geq u_{n_0} \geq M$. Donc $\lim u =+\infty$.
+Supposons, dans un deuxième temps, que la suite réelle $u$ ne soit pas majorée. Alors pour tout réel $M$ il existe un naturel $n_0$ tel que $u_{n_0} \geqslant M$. Or $u$ est croissante donc pour tout naturel $n \geqslant n_0$ alors $u_n \geqslant u_{n_0} \geqslant M$. Donc $\lim u =+\infty$.
 \end{proof}
 En appliquant ce théorème à la suite réelle $-u$ on obtient le théorème suivant
 \begin{theo}
@@ -515,7 +515,7 @@ En appliquant ce théorème à la suite réelle $-u$ on obtient le théorème su
 \begin{prop}
   Soient $u$ et $v$ deux suites réelles adjacentes, alors $u$ et $v$ convergent de même limite $l$, de plus
   \begin{equation}
-    \forall n \in \N \quad u_n \leq l \leq v_n
+    \forall n \in \N \quad u_n \leqslant l \leqslant v_n
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -523,7 +523,7 @@ En appliquant ce théorème à la suite réelle $-u$ on obtient le théorème su
   \begin{equation}
     \sup\enstq{u_n-v_n}{n \in \N}=\lim u-v=0.
   \end{equation}
-Par conséquent, pour tout naturel $n$ on a $u_n-v_n \leq 0$ donc $u_n \leq v_n$ or $v$ décroît par conséquent $u_n \leq v_n \leq v_0$. La suite réelle $u$ est alors croissante et majorée donc elle converge. On note $l$ sa limite. 
+Par conséquent, pour tout naturel $n$ on a $u_n-v_n \leqslant 0$ donc $u_n \leqslant v_n$ or $v$ décroît par conséquent $u_n \leqslant v_n \leqslant v_0$. La suite réelle $u$ est alors croissante et majorée donc elle converge. On note $l$ sa limite. 
 
 Ensuite, $v=(v-u)+u$ et $v-u$ est de limite nulle et $u$ tend vers $l$ donc $v$ tend vers $l$. On a montré que $u$ et $v$ converge de même limite $l$. De plus
 \begin{equation}
@@ -531,13 +531,13 @@ Ensuite, $v=(v-u)+u$ et $v-u$ est de limite nulle et $u$ tend vers $l$ donc $v$ 
 \end{equation}
 Ainsi
 \begin{equation}
-  \forall n \in \N \quad u_n \leq l \leq v_n.
+  \forall n \in \N \quad u_n \leqslant l \leqslant v_n.
 \end{equation}
 \end{proof}
 
 \subsection{Valeurs décimales approchées d'un réel}
 
-Soit un réel $x$. Pour tout naturel $n$, on définit $P_n=E(10^n x)$. $P_n$ est l'unique entier relatif tel que $P_n \leq 10^n x \leq p_n+1$. Autrement dit $\frac{P_n}{10^n} \leq x \leq \frac{P_n+1}{10^n}$.
+Soit un réel $x$. Pour tout naturel $n$, on définit $P_n=E(10^n x)$. $P_n$ est l'unique entier relatif tel que $P_n \leqslant 10^n x \leqslant p_n+1$. Autrement dit $\frac{P_n}{10^n} \leqslant x \leqslant \frac{P_n+1}{10^n}$.
 \begin{defdef}
   Pour tout naturel $n$, on appelle 
   \begin{itemize}
@@ -551,24 +551,24 @@ Soit un réel $x$. Pour tout naturel $n$, on définit $P_n=E(10^n x)$. $P_n$ est
 \begin{proof}
   Soit un naturel $n$, alors $v_n-u_n=\frac{1}{10^n}$ et $\lim v-u=0$. De plus
   \begin{align}
-    P_n \leq 10^n x \leq P_n +1 \\
-    10 P_n \leq 10^{n+1} x \leq 10 P_n +10.
+    P_n \leqslant 10^n x \leqslant P_n +1 \\
+    10 P_n \leqslant 10^{n+1} x \leqslant 10 P_n +10.
   \end{align}
   $P_{n+1}$ est l'unique entier tel que
   \begin{equation}
-    P_{n+1} \leq 10^{n+1} x \leq P_{n+1}+1.
+    P_{n+1} \leqslant 10^{n+1} x \leqslant P_{n+1}+1.
   \end{equation}
-$10P_n$ et $10P_n +10$ sont des entiers, donc $\begin{cases} 10 P_n \leq P_{n+1} \\ p_{n+1}+1 \leq 10 P_n +10\end{cases}$. Alors 
+$10P_n$ et $10P_n +10$ sont des entiers, donc $\begin{cases} 10 P_n \leqslant P_{n+1} \\ p_{n+1}+1 \leqslant 10 P_n +10\end{cases}$. Alors 
 \begin{equation}
-u_{n+1} = \frac{P_{n+1}}{10^{n+1}} \geq \frac{10 P_n}{10^{n+1}} = \frac{P_n}{10^n}=u_n.
+u_{n+1} = \frac{P_{n+1}}{10^{n+1}} \geqslant \frac{10 P_n}{10^{n+1}} = \frac{P_n}{10^n}=u_n.
 \end{equation}
  La suite réelle $u$ est donc croissante. Et
 \begin{equation}
-v_{n+1} = \frac{P_{n+1}+1}{10^{n+1}} \leq \frac{10 P_n+10}{10^{n+1}} = \frac{P_n+1}{10^n}= v_n.
+v_{n+1} = \frac{P_{n+1}+1}{10^{n+1}} \leqslant \frac{10 P_n+10}{10^{n+1}} = \frac{P_n+1}{10^n}= v_n.
 \end{equation}
 La suite réelle $v$ est donc décroissante. Ainsi les suites réelles $u$ et $v$ sont adjacentes. Elles admettent donc une même limite notée $l$. De plus par définition
 \begin{equation}
-  u_n \leq x \leq v_n.
+  u_n \leqslant x \leqslant v_n.
 \end{equation}
 En passant à la limite on a $l=x$
 \end{proof}
@@ -599,11 +599,11 @@ Alors il existe un réel $l$ tel que $\bigcap_{n \in \N} I_n = \{l\}$.
 \begin{proof}
   On sait que $\lim b-a = 0$. L'hypothèse de décroissance par inclusion s'écrit aussi
   \begin{equation}
-    \forall n \in \N \quad a_n \leq a_{n+1} \leq b_{n+1} \leq b_n.
+    \forall n \in \N \quad a_n \leqslant a_{n+1} \leqslant b_{n+1} \leqslant b_n.
   \end{equation}
-La suite réelle $a$ est croissante et la suite réelle $b$ est décroissante. Les suites réelles $a$ et $b$ sont donc adjacentes. Elle convergent donc toutes les deux vers une limite $l$ et pour tout naturel $n$, $a_n \leq l \leq b_n$. On a donc montré que les suites réelles sont convergentes de même limite $l$. Prouvons maintenant que $\bigcap_{n \in \N} I_n = \{l\}$
+La suite réelle $a$ est croissante et la suite réelle $b$ est décroissante. Les suites réelles $a$ et $b$ sont donc adjacentes. Elle convergent donc toutes les deux vers une limite $l$ et pour tout naturel $n$, $a_n \leqslant l \leqslant b_n$. On a donc montré que les suites réelles sont convergentes de même limite $l$. Prouvons maintenant que $\bigcap_{n \in \N} I_n = \{l\}$
 
-D'une part, pour tout naturel $n$ on a $l \in I_n$ alors $l \in \bigcap_{n \in \N} I_n$. D'autre part soit $x \in \bigcap_{n \in \N} I_n$ alors pour tout naturel $n$ $x \in I_n$ donc $a_n \leq x \leq b_n$. Puisque $a$ et $b$ sont convergentes de limite $l$, en passant à la limite dans l'inégalité il vient que $x=l$. Donc $\bigcap_{n \in \N} I_n \subset \{l\}$. Par conséquent, par double inclusion, $\bigcap_{n \in \N} I_n = \{l\}$.
+D'une part, pour tout naturel $n$ on a $l \in I_n$ alors $l \in \bigcap_{n \in \N} I_n$. D'autre part soit $x \in \bigcap_{n \in \N} I_n$ alors pour tout naturel $n$ $x \in I_n$ donc $a_n \leqslant x \leqslant b_n$. Puisque $a$ et $b$ sont convergentes de limite $l$, en passant à la limite dans l'inégalité il vient que $x=l$. Donc $\bigcap_{n \in \N} I_n \subset \{l\}$. Par conséquent, par double inclusion, $\bigcap_{n \in \N} I_n = \{l\}$.
 \end{proof}
 
 \subsection{Théorème de Bolzano-Weiertrass}
@@ -614,7 +614,7 @@ D'une part, pour tout naturel $n$ on a $l \in I_n$ alors $l \in \bigcap_{n \in \
 \begin{proof}
  La démonstration s'effectue en deux mouvements principaux. Le premier mouvement va construire par récurrence une suite réelle décroissante de segments emboîtés dont la longueur tend vers zéro. On en conclura grâce au théorème des segments emboîtés que la suite réelle tend vers un réel $l$. Le deuxième mouvement va construire une sous-suite réelle de $u$ qui converge vers $l$ en définissant par récurrence une application $\varphi : \N \longmapsto \N$ strictement croissante. On montrera que la sous-suite réelle $(u_{\varphi(n)})_{n \in \N}$ converge.
 
- Soit une suite réelle bornée $u$. Soient $m$ un minorant de $u$ et $M$ un majorant de $u$. Alors pour tout naturel $n$, $m \leq u_n \leq M$.
+ Soit une suite réelle bornée $u$. Soient $m$ un minorant de $u$ et $M$ un majorant de $u$. Alors pour tout naturel $n$, $m \leqslant u_n \leqslant M$.
 
 \emph{Premier mouvement}~:
 
@@ -626,7 +626,7 @@ Construisons par récurrence une suite réelle de segments emboîtés $(\interva
 
 Attention, cela signifie que $u_k \in \intervalleff{a_n}{b_n}$ pour une infinité d'indices $k$, mais surtout pas que $\intervalleff{a_n}{b_n}$ contient une infinité de termes de la suites réelles $u$. Un contre exemple est une suite réelle constante.
 
-\emph{Initialisation}~: Soit $a_0=m$ et $b_0=M$ alors pour tout naturel $k$ $a_0 \leq u_k \leq b_0$. Du coup $\enstq{k \in \N}{a_0 \leq u_k \leq b_0}=\N$ est infini.
+\emph{Initialisation}~: Soit $a_0=m$ et $b_0=M$ alors pour tout naturel $k$ $a_0 \leqslant u_k \leqslant b_0$. Du coup $\enstq{k \in \N}{a_0 \leqslant u_k \leqslant b_0}=\N$ est infini.
 
 \emph{Hérédité}~: Supposons avoir construit les segments vérifiant les hypothèses. C'est-à-dire que
 \begin{itemize}
@@ -653,21 +653,21 @@ La suite réelle $b-a$ est géométrique de raison $\frac{1}{2}$ de premier term
 
 \emph{Deuxième mouvement}~: On construit une sous-suite réelle de $u$ qui converge vers $l$. On définit par récurrence une application $\varphi : \N \longmapsto \N$ strictement croissante telle que
 \begin{equation}
-  \forall n \in \N \quad a_n \leq u_{\varphi(n)} \leq b_n.
+  \forall n \in \N \quad a_n \leqslant u_{\varphi(n)} \leqslant b_n.
 \end{equation}
 
-\emph{Initialisation}~: On pose $\varphi(0)=0$ alors $a_0=m \leq u_{\varphi(0)}=u_{0} \leq b_0=M$.
+\emph{Initialisation}~: On pose $\varphi(0)=0$ alors $a_0=m \leqslant u_{\varphi(0)}=u_{0} \leqslant b_0=M$.
 
 \emph{Hérédité}~: Supposons avoir construit $\varphi(0) < \ldots < \varphi(n)$ tels que
 \begin{equation}
-  \forall p \in \intervalleentier{0}{n} \quad a_p \leq u_{\varphi(p)} \leq b_p.
+  \forall p \in \intervalleentier{0}{n} \quad a_p \leqslant u_{\varphi(p)} \leqslant b_p.
 \end{equation}
 
 On sait d'après le premier mouvement de la démonstration que l'ensemble $\enstq{k \in \N}{u_k \in \intervalleff{a_{n+1}}{b_{n+1}}}$ est infini. C'est une partie de $\N$ infinie donc elle n'est pas majorée.
 
 Il existe $k_0 \in \N$ tel que $u_{k_0}\in \intervalleff{a_{n+1}}{b_{n+1}}$ et $k_0 > \varphi(n)$. On pose $k_0=\varphi(n+1)$. Ainsi $\varphi(n+1) > \varphi(n)$ et $u_{\varphi(n+1)}=u_{k_0}\in \intervalleff{a_{n+1}}{b_{n+1}}$.
 
-\emph{Conclusion}~: On a défini une application $\varphi : \N \longmapsto \N$ strictement croissante telle que pour tout naturel $n$, $u_{\varphi(n)} \in \intervalleff{a_{n}}{b_{n}}$. La suite réelle $(u_{\varphi(n)})_{n \in \N}$ est une suite réelle extraite de $u$ et pour tout naturel $n$ $a_n \leq u_{\varphi(n)} \leq b_n$. On sait que les suites réelles $a$ et $b$ convergent de même limite $l$. On déduit du théorème des gendarmes que $(u_{\varphi(n)})_{n \in \N}$ converge vers $l$.
+\emph{Conclusion}~: On a défini une application $\varphi : \N \longmapsto \N$ strictement croissante telle que pour tout naturel $n$, $u_{\varphi(n)} \in \intervalleff{a_{n}}{b_{n}}$. La suite réelle $(u_{\varphi(n)})_{n \in \N}$ est une suite réelle extraite de $u$ et pour tout naturel $n$ $a_n \leqslant u_{\varphi(n)} \leqslant b_n$. On sait que les suites réelles $a$ et $b$ convergent de même limite $l$. On déduit du théorème des gendarmes que $(u_{\varphi(n)})_{n \in \N}$ converge vers $l$.
 \end{proof}
 
 Le procédé utilisé ici s'appelle la dichotomie. Il permet de prouver l'existence d'une suite réelle extraite qui converge mais ne donne pas de méthode pratique pour en trouver une.
@@ -677,26 +677,26 @@ Le procédé utilisé ici s'appelle la dichotomie. Il permet de prouver l'existe
 \subsection{Relation de domination}
 
 \begin{defdef}
-  Soient $u$ et $v$ deux suites réelles. On dit que $u$ est dominée par $v$ et on écrit $u=\grandO{v}$ ou encore $u_n=\grandO{v_n}$ lorsque $n$ tend vers l'infini si et seulement s'il existe une suite réelle $w$ bornée et un naturel $n_0$ tels que pour tout naturel $n$ si $n \geq n_0$ alors $u_n = v_n w_n$. 
+  Soient $u$ et $v$ deux suites réelles. On dit que $u$ est dominée par $v$ et on écrit $u=\grandO{v}$ ou encore $u_n=\grandO{v_n}$ lorsque $n$ tend vers l'infini si et seulement s'il existe une suite réelle $w$ bornée et un naturel $n_0$ tels que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n = v_n w_n$. 
 \end{defdef}
 \begin{prop}
   La définition de la relation de domination est équivalente à : soient deux suites réelles $u$ et $v$, alors
   \begin{equation}
-    u=\grandO{v} \iff \exists M \in \Rpluss \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{u_n} \leq M \abs{v_n}.
+    u=\grandO{v} \iff \exists M \in \Rpluss \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies \abs{u_n} \leqslant M \abs{v_n}.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si $u=\grandO{v}$ il existe une suite réelle bornée $w$ telle qu'à partir d'un certain rang $n_0$ pour tout naturel $n$ on a $u_n=v_n w_n$ alors il existe un réel $M$ positif tel que pour tout entier $n$ $\abs{w_n} \leq M$. Alors pour tout entier $n > n_0$, $\abs{u_n}\leq M \abs{v_n}$.
+  Si $u=\grandO{v}$ il existe une suite réelle bornée $w$ telle qu'à partir d'un certain rang $n_0$ pour tout naturel $n$ on a $u_n=v_n w_n$ alors il existe un réel $M$ positif tel que pour tout entier $n$ $\abs{w_n} \leqslant M$. Alors pour tout entier $n > n_0$, $\abs{u_n}\leqslant M \abs{v_n}$.
 
-Si $n \in \intervalleentier{0}{n_0-1}$ on pose $w_n=0$. Si $n \geq n_0$ et si $v_n \neq 0$ on pose $w_n = \frac{u_n}{v_n}$ ainsi $u_n = v_n w_n$; si $v_n = 0$ alors $\abs{u_n} \leq M \abs{v_n}$ donc $u_n=0$ on pose $w_n=0$ ainsi $u_n=v_n w_n$.
+Si $n \in \intervalleentier{0}{n_0-1}$ on pose $w_n=0$. Si $n \geqslant n_0$ et si $v_n \neq 0$ on pose $w_n = \frac{u_n}{v_n}$ ainsi $u_n = v_n w_n$; si $v_n = 0$ alors $\abs{u_n} \leqslant M \abs{v_n}$ donc $u_n=0$ on pose $w_n=0$ ainsi $u_n=v_n w_n$.
 
-On a construit une suite réelle $w$ telle que pour tout naturel $n$ si $n \geq n_0$ alors $u_n = v_n w_n$. De plus $w$ est bornée puisque pour tout naturel $n$ si $n \leq n_0 -1$ alors $w_n=0$ sinon si $n \geq n_0$ et $v_n=0$ alors $w_n=0$ mais si $v_n \neq 0$ alors $\abs{w_n}=\abs{\frac{u_n}{v_n}} \leq M$. La suite réelle $w$ est donc bornée donc $u=\grandO{v}$.
+On a construit une suite réelle $w$ telle que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n = v_n w_n$. De plus $w$ est bornée puisque pour tout naturel $n$ si $n \leqslant n_0 -1$ alors $w_n=0$ sinon si $n \geqslant n_0$ et $v_n=0$ alors $w_n=0$ mais si $v_n \neq 0$ alors $\abs{w_n}=\abs{\frac{u_n}{v_n}} \leqslant M$. La suite réelle $w$ est donc bornée donc $u=\grandO{v}$.
 \end{proof}
 \begin{prop}
   Soient $u$ et $v$ deux suites réelles. On suppose que $v$ ne s'annule pas, alors $u$ est dominée par $v$ si et seulement si $\frac{u}{v}$ est bornée.
 \end{prop}
 \begin{proof}
-  La suite réelle $v$ ne s'annule pas donc $u$ est dominée par $v$ si et seulement s'il existe un réel positif $M$ et un entier $n_0$ tel que pour tout entier $n$ si $n \geq n_0$ alors $\abs{\frac{u_n}{v_n}} \leq M$. Ce qui est équivalent à la suite réelle $\frac{u}{v}$ est bornée à partir d'un certain rang ce qui équivaut à  ce que la suite réelle $\frac{u}{v}$ est bornée.
+  La suite réelle $v$ ne s'annule pas donc $u$ est dominée par $v$ si et seulement s'il existe un réel positif $M$ et un entier $n_0$ tel que pour tout entier $n$ si $n \geqslant n_0$ alors $\abs{\frac{u_n}{v_n}} \leqslant M$. Ce qui est équivalent à la suite réelle $\frac{u}{v}$ est bornée à partir d'un certain rang ce qui équivaut à  ce que la suite réelle $\frac{u}{v}$ est bornée.
 \end{proof}
 
 En particulier $u=\grandO{1} \iff u$ est bornée.
@@ -713,26 +713,26 @@ En particulier $u=\grandO{1} \iff u$ est bornée.
   \begin{enumerate}
   \item Il existe deux suites bornées $w_1$, $w_2$ et deux naturels $n_1$ et $n_2$ tels que pour tout naturel $n$
     \begin{align}
-      n \geq n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
-      n \geq n_2 \implies u_{2,n}=v_{1,n}w_{2,n}.
+      n \geqslant n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
+      n \geqslant n_2 \implies u_{2,n}=v_{1,n}w_{2,n}.
     \end{align}
-    Soit $n_0=\max(n_1,n_2)$ donc si $n \geq n_0$ alors $u_{1,n} + u_{2,n}= v_{1,n} (w_{2,n}+w_{1,n})$. La suite $w_{1} + w_{2}$ est bornée donc $u_1+u_2=\grandO{v_1}$.
+    Soit $n_0=\max(n_1,n_2)$ donc si $n \geqslant n_0$ alors $u_{1,n} + u_{2,n}= v_{1,n} (w_{2,n}+w_{1,n})$. La suite $w_{1} + w_{2}$ est bornée donc $u_1+u_2=\grandO{v_1}$.
   \item Il existe deux suites bornées $w_1$, $w_2$ et deux naturels $n_1$ et $n_2$ tels que pour tout naturel $n$
     \begin{align}
-      n \geq n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
-      n \geq n_2 \implies u_{2,n}=v_{1,n}w_{2,n},
+      n \geqslant n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
+      n \geqslant n_2 \implies u_{2,n}=v_{1,n}w_{2,n},
     \end{align}
-    alors pour tout naturel $n \geq \max(n_1,n_2)$ on a
+    alors pour tout naturel $n \geqslant \max(n_1,n_2)$ on a
     \begin{equation}
       u_{1,n} u_{2,n} = v_{1,n} v_{2,n} w_{1,n} w_{2,n}.
     \end{equation}
     La suite $w_1 w_2$ est le produit de deux suites bornées donc elle est bornée, alors $u_1u_2=\grandO{v_1v_2}$.
   \item Il existe deux suites bornées $w_1$, $w_2$ et deux naturels $n_1$ et $n_2$ tels que pour tout naturel $n$ 
     \begin{align}
-      n \geq n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
-      n \geq n_2 \implies v_{1,n}=u_{2,n}w_{2,n}, 
+      n \geqslant n_1 \implies u_{1,n}=v_{1,n}w_{1,n} \\
+      n \geqslant n_2 \implies v_{1,n}=u_{2,n}w_{2,n}, 
     \end{align}
-    alors pour tout naturel $n \geq \max(n_1,n_2)$ on a
+    alors pour tout naturel $n \geqslant \max(n_1,n_2)$ on a
     \begin{equation}
       u_{1,n}=(v_{2,n} w_{2,n})w_{1,n}=(w_{2,n} w_{1,n}) v_{2,n}.
     \end{equation}
@@ -743,30 +743,30 @@ En particulier $u=\grandO{1} \iff u$ est bornée.
 \subsection{Relation de négligeabilité}
 
 \begin{defdef}
-  Soient $u$ et $v$ deux suites réelles, on dit que $u$ est négligeable devant $v$ et on note $u=\petito{v}$ lorsque $n$ tend vers l'infini s'il existe une suite $w$ de limite nulle et un naturel $n_0$ à partir duquel on ait pour tout naturel $n \geq n_0$ $u_n = v_n w_n$.
+  Soient $u$ et $v$ deux suites réelles, on dit que $u$ est négligeable devant $v$ et on note $u=\petito{v}$ lorsque $n$ tend vers l'infini s'il existe une suite $w$ de limite nulle et un naturel $n_0$ à partir duquel on ait pour tout naturel $n \geqslant n_0$ $u_n = v_n w_n$.
 \end{defdef}
 \begin{prop}
   La définition de la relation de négligeabilité est équivalente à : soient deux suites réelles $u$ et $v$ telles que
   \begin{equation}
-    u=\petito{v} \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{u_n} \leq \epsilon \abs{v_n}.
+    u=\petito{v} \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies \abs{u_n} \leqslant \epsilon \abs{v_n}.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Supposons que $u=\petito{v}$ alors il existe un naturel $n_0$ tel que pour tout entier, si $n \geq n_0$ alors $u_n = v_n w_n$. La suite $w$ tend vers zéro donc
+  Supposons que $u=\petito{v}$ alors il existe un naturel $n_0$ tel que pour tout entier, si $n \geqslant n_0$ alors $u_n = v_n w_n$. La suite $w$ tend vers zéro donc
   \begin{equation}
-    \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \ n \geq n_1 \implies \abs{w_n} \leq \epsilon.
+    \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \ n \geqslant n_1 \implies \abs{w_n} \leqslant \epsilon.
   \end{equation}
-  Alors pour tout naturel $n$, si $n \geq \max(n_0, n_1)$ alors $\abs{u_n} = \abs{v_n w_n} \leq \epsilon \abs{v_n}$.
+  Alors pour tout naturel $n$, si $n \geqslant \max(n_0, n_1)$ alors $\abs{u_n} = \abs{v_n w_n} \leqslant \epsilon \abs{v_n}$.
 
   D'autre part, pour tout naturel $n$, on définit la suite $w$~:
   \begin{equation}
     \begin{cases} w_n=\frac{u_n}{v_n} & v_n \neq 0 \\ w_n=0 & v_n=0\end{cases}.
   \end{equation}
-  Avec $\epsilon=1$ il existe un naturel $n_0$ tel que pour tout entier $n$, si $n \geq n_0$ alors $\abs{u_n} \leq \abs{v_n}$. Montrons que $w$ tend vers zéro. On sait que
+  Avec $\epsilon=1$ il existe un naturel $n_0$ tel que pour tout entier $n$, si $n \geqslant n_0$ alors $\abs{u_n} \leqslant \abs{v_n}$. Montrons que $w$ tend vers zéro. On sait que
   \begin{align}
-    & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geq n_1 \implies \abs{u_n} \leq \epsilon \abs{v_n} \\ 
-    \iff & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geq n_1 \implies \abs{w_n}= \begin{cases} 0 \leq \epsilon & v_n=0 \\ \abs{\frac{u_n}{v_n}} \leq \epsilon & v_n\neq 0 \end{cases} \\
-    \iff & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geq n_1 \implies \abs{w_n} \leq \epsilon.
+    & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geqslant n_1 \implies \abs{u_n} \leqslant \epsilon \abs{v_n} \\ 
+    \iff & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geqslant n_1 \implies \abs{w_n}= \begin{cases} 0 \leqslant \epsilon & v_n=0 \\ \abs{\frac{u_n}{v_n}} \leqslant \epsilon & v_n\neq 0 \end{cases} \\
+    \iff & \forall \epsilon > 0 \ \exists n_1 \in \N \ \forall n \in \N \quad n \geqslant n_1 \implies \abs{w_n} \leqslant \epsilon.
   \end{align}
   Alors $w$ est de limite nulle donc $u=\petito{v}$. Les définitions sont équivalentes.
 \end{proof}
@@ -778,8 +778,8 @@ En particulier $u=\grandO{1} \iff u$ est bornée.
 \end{prop}
 \begin{proof}
   \begin{align}
-    u=\petito{v} & \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{u_n} \leq \epsilon \abs{v_n} \\
-    & \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies \abs{\frac{u_n}{v_n}} \leq \epsilon \\
+    u=\petito{v} & \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies \abs{u_n} \leqslant \epsilon \abs{v_n} \\
+    & \iff \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies \abs{\frac{u_n}{v_n}} \leqslant \epsilon \\
     & \iff \lim \frac{u}{v} =0.
   \end{align}
 \end{proof}
@@ -806,7 +806,7 @@ En particulier $u=\petito{1} \iff \lim u =0$.
   La preuve est presque identique à la preuve pour la relation de domination.
   \begin{itemize}
   \item idem. La somme de deux suites de limites nulle est une somme de limite nulle.
-  \item Il existe une suite $w_1$ de limite nulle et un naturel $n_1$ tel que si $n \geq n_1$ alors $u_{1,n}=v_{1,n} w_{1,n}$. Il existe une suite $w_2$ bornée et un naturel $n_2$ tel que si $n \geq n_2$ alors $u_{2,n}=v_{2,n} w_{2,n}$. Pour tout naturel $n \geq \max(n_1,n_2)$ on a $u_{1,n}u_{2,n} = (w_{1,n}w_{2,n}) v_{1,n}v_{2,n}$ Or $w_{1,n}w_{2,n}$ est une suite de limite nulle (puisque c'est le produit d'une suite bornée par une suite de limite nulle), donc $u_1u_2=\petito{v_1 v_2}$.
+  \item Il existe une suite $w_1$ de limite nulle et un naturel $n_1$ tel que si $n \geqslant n_1$ alors $u_{1,n}=v_{1,n} w_{1,n}$. Il existe une suite $w_2$ bornée et un naturel $n_2$ tel que si $n \geqslant n_2$ alors $u_{2,n}=v_{2,n} w_{2,n}$. Pour tout naturel $n \geqslant \max(n_1,n_2)$ on a $u_{1,n}u_{2,n} = (w_{1,n}w_{2,n}) v_{1,n}v_{2,n}$ Or $w_{1,n}w_{2,n}$ est une suite de limite nulle (puisque c'est le produit d'une suite bornée par une suite de limite nulle), donc $u_1u_2=\petito{v_1 v_2}$.
   \item idem pour les autres points.
   \end{itemize}
 \end{proof}
@@ -829,10 +829,10 @@ En particulier $u=\petito{1} \iff \lim u =0$.
 \subsection{Relation d'équivalence}
 
 \begin{defdef}
-  Soient $u$ et $v$ deux suites réelles. On dit que $u$ est équivalente à $v$ et on note $u \sim v$ en l'infini s'il existe une suite $w$ qui tend vers $1$ et un naturel $n_0$ tel que pour tout naturel $n$, si $n \geq n_0$ alors $u_n =w_n v_n$.
+  Soient $u$ et $v$ deux suites réelles. On dit que $u$ est équivalente à $v$ et on note $u \sim v$ en l'infini s'il existe une suite $w$ qui tend vers $1$ et un naturel $n_0$ tel que pour tout naturel $n$, si $n \geqslant n_0$ alors $u_n =w_n v_n$.
 \end{defdef}
 
-Si $u$ est équivalente à $v$, alors $v$ est équivalente à $u$. En effet $w$ tend vers $1$, alors il existe un naturel $n_1$ tel que pour tout naturel $n$, si $n \geq n_1$ $w_n >0$. Donc pour tout naturel $n \geq \max(n_0,n_1)$, $v_n = \frac{1}{w_n} u_n$ et la suite $\frac{1}{w}$ tend vers 1. On dira que $u$ et $v$ sont équivalentes.
+Si $u$ est équivalente à $v$, alors $v$ est équivalente à $u$. En effet $w$ tend vers $1$, alors il existe un naturel $n_1$ tel que pour tout naturel $n$, si $n \geqslant n_1$ $w_n >0$. Donc pour tout naturel $n \geqslant \max(n_0,n_1)$, $v_n = \frac{1}{w_n} u_n$ et la suite $\frac{1}{w}$ tend vers 1. On dira que $u$ et $v$ sont équivalentes.
 
 \begin{prop}
   Soient $u$ et $v$ deux suite réelles. Alors
@@ -842,9 +842,9 @@ Si $u$ est équivalente à $v$, alors $v$ est équivalente à $u$. En effet $w$ 
 \end{prop}
 \begin{proof}
   \begin{align}
-    u \sim v & \iff \exists w \in \R^\N \ \lim w =1 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies u_n= v_n w_n \\
-    & \iff \exists w \in \R^\N \ \lim w =1 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies u_n-v_n= v_n (w_n -1) \\
-    & \iff \exists z \in \R^\N \ \lim z =0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geq n_0 \implies u_n-v_n= v_n z_n \\
+    u \sim v & \iff \exists w \in \R^\N \ \lim w =1 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n= v_n w_n \\
+    & \iff \exists w \in \R^\N \ \lim w =1 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n-v_n= v_n (w_n -1) \\
+    & \iff \exists z \in \R^\N \ \lim z =0 \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n-v_n= v_n z_n \\
     u \sim v & \iff u-v = \petito{v}.
   \end{align}
 \end{proof}
@@ -876,16 +876,16 @@ En particulier pour tout réel $l$ non nul, $u \sim l$ signifie que $\lim u =l$.
   \begin{enumerate}
   \item Il existe deux suites $w_1$ et $w_2$ de limite égale à $1$ et deux entiers $n_1$ et $n_2$ tels que pour tout entier naturel $n$
     \begin{align}
-      n \geq n_1 \implies u_{1,n} = w_{1,n} u_{2,n}, \\
-      n \geq n_2 \implies u_{2,n} = w_{2,n} v_{2,n}.
+      n \geqslant n_1 \implies u_{1,n} = w_{1,n} u_{2,n}, \\
+      n \geqslant n_2 \implies u_{2,n} = w_{2,n} v_{2,n}.
     \end{align}
-    Donc pour tout $n \geq \max(n_1,n_2)$ on a $u_{1,n}=(w_{1,n}w_{2,n}) v_{1,n}$. La suite $w_1 w_2$ tend vers $1$ donc $u_1 \sim v_1$.
+    Donc pour tout $n \geqslant \max(n_1,n_2)$ on a $u_{1,n}=(w_{1,n}w_{2,n}) v_{1,n}$. La suite $w_1 w_2$ tend vers $1$ donc $u_1 \sim v_1$.
   \item Il existe deux suites $w_1$ et $w_2$ de limite égale à $1$ et deux entiers $n_1$ et $n_2$ tels que pour tout entier naturel $n$
   \begin{align}
-    n \geq n_1 \implies u_{1,n} = w_{1,n} u_{2,n}, \\
-    n \geq n_2 \implies u_{2,n} = w_{2,n} v_{2,n}.
+    n \geqslant n_1 \implies u_{1,n} = w_{1,n} u_{2,n}, \\
+    n \geqslant n_2 \implies u_{2,n} = w_{2,n} v_{2,n}.
   \end{align}
-  Donc pour tout $n \geq \max(n_1,n_2)$ on a $u_{1,n}v_{1,n}=(w_{1,n}w_{2,n}) u_{2,n}v_{2,n}$. La suite $w_1 w_2$ tend vers $1$ donc $u_1 v_1\sim u_2 v_2$.
+  Donc pour tout $n \geqslant \max(n_1,n_2)$ on a $u_{1,n}v_{1,n}=(w_{1,n}w_{2,n}) u_{2,n}v_{2,n}$. La suite $w_1 w_2$ tend vers $1$ donc $u_1 v_1\sim u_2 v_2$.
 \item idem pour les autres points.
 \end{enumerate}
 \end{proof}
@@ -901,7 +901,7 @@ On peut faire des produits et des quotients d'équivalents, mais on ne peut pas 
   Étant données deux suites réelles $u$ et $v$ équivalentes, si $v$ tend vers une limite $l$ réelle ou infinie, alors $u$ admet la même limite $l$.
 \end{prop}
 \begin{proof}
-  Puisque $u$ et $v$ sont équivalentes, il existe une suite réelle $w$ de limite égale à $1$ et un naturel $n_0$ tels que pour tout naturel $n$ si $n \geq n_0$ alors $u_n = w_n v_n$ En passant à la limite, on obtient $\lim u=\lim w \lim v =l$.
+  Puisque $u$ et $v$ sont équivalentes, il existe une suite réelle $w$ de limite égale à $1$ et un naturel $n_0$ tels que pour tout naturel $n$ si $n \geqslant n_0$ alors $u_n = w_n v_n$ En passant à la limite, on obtient $\lim u=\lim w \lim v =l$.
 \end{proof}
 \begin{prop}
   Soient $u$ et $v$ deux suites réelles équivalentes. Alors
@@ -911,7 +911,7 @@ On peut faire des produits et des quotients d'équivalents, mais on ne peut pas 
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  Il existe une suite $w$ de limite égale à $1$ telle qu'il existe un naturel $n_0$ et si pour tout naturel $n$ $n \geq n_0$ alors $u_n = v_n w_n$. Comme $w$ tend vers $1$, il existe un naturel $n_1$ à partir duquel $w$ est strictement positive. Donc pour tout naturel $n$, si $n \geq \max(n_0,n_1)$ alors $u_n = w_n v_n$ avec $w_n >0$. On en déduit les deux points de la proposition.
+  Il existe une suite $w$ de limite égale à $1$ telle qu'il existe un naturel $n_0$ et si pour tout naturel $n$ $n \geqslant n_0$ alors $u_n = v_n w_n$. Comme $w$ tend vers $1$, il existe un naturel $n_1$ à partir duquel $w$ est strictement positive. Donc pour tout naturel $n$, si $n \geqslant \max(n_0,n_1)$ alors $u_n = w_n v_n$ avec $w_n >0$. On en déduit les deux points de la proposition.
 \end{proof}
 
 La relation d'équivalence est symétrique et transitive. Pour toute suite réelle $u$, on peut écrire que $u \sim u$, elle est donc réflexive. C'est donc une \emph{vraie} relation d'équivalence.
@@ -946,7 +946,7 @@ Pour le quatrième cas, la suite $u$ n'admet pas forcément de limite.
   Soit une suite $u$ géométrique de raison $r$ et $S$ la suite définie comme étant la somme partielle de $u$. Alors
   \begin{enumerate}
   \item si $\abs{r} < 1$ la série converge et $\lim S = \frac{u_0}{1-r}$;
-  \item si $\abs{r} \geq 1$ et $u_0 \neq 0$ la série diverge.
+  \item si $\abs{r} \geqslant 1$ et $u_0 \neq 0$ la série diverge.
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -1027,7 +1027,7 @@ Elles sont définies par une relation de récurrence de la forme $u_{n+1}=f(u_n)
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall n \geq 1 \ n^\beta \neq 0 \quad \frac{n^\alpha}{n^\beta}=\frac{1}{n^{\beta-\alpha}} \rightarrow 0
+    \forall n \geqslant 1 \ n^\beta \neq 0 \quad \frac{n^\alpha}{n^\beta}=\frac{1}{n^{\beta-\alpha}} \rightarrow 0
   \end{equation}
 \end{proof}
 
@@ -1036,7 +1036,7 @@ Elles sont définies par une relation de récurrence de la forme $u_{n+1}=f(u_n)
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall n \geq 1 \ (n^\alpha \neq 0) \quad \frac{\ln^\beta n}{n^\alpha} \rightarrow 0.
+    \forall n \geqslant 1 \ (n^\alpha \neq 0) \quad \frac{\ln^\beta n}{n^\alpha} \rightarrow 0.
   \end{equation}
 En effet
 \begin{equation}
@@ -1051,7 +1051,7 @@ En effet
   Pour tout réel $a$, $a^n=\petito{n!}$.
 \end{prop}
 \begin{proof}
-  Soit un naturel $n$, alors puisque $n! \neq 0$ on écrit $\frac{a^n}{n!}=\prod_{k=1}^n \left(\frac{a}{k}\right)$. Soit un naturel $N$ tel que $N \geq \abs{a}$ alors pour tout naturel $n \geq N$
+  Soit un naturel $n$, alors puisque $n! \neq 0$ on écrit $\frac{a^n}{n!}=\prod_{k=1}^n \left(\frac{a}{k}\right)$. Soit un naturel $N$ tel que $N \geqslant \abs{a}$ alors pour tout naturel $n \geqslant N$
   \begin{equation}
     \frac{a^n}{n!} = \frac{a^N}{N!} \prod_{k=N+1}^n \left(\frac{a}{k}\right),
   \end{equation}
@@ -1059,15 +1059,15 @@ En effet
   \begin{equation}
     \abs{\prod_{k=N+1}^n \left(\frac{a}{k}\right)} = \prod_{k=N+1}^n \left(\frac{\abs{a}}{k}\right).
   \end{equation}
-  Pour tout naturel $k$ tel que $N+1 \leq k \leq n$ ou $\frac{1}{n} \leq \frac{1}{k} \leq \frac{1}{N+1}$ on a
+  Pour tout naturel $k$ tel que $N+1 \leqslant k \leqslant n$ ou $\frac{1}{n} \leqslant \frac{1}{k} \leqslant \frac{1}{N+1}$ on a
   \begin{equation}
-    \abs{\prod_{k=N+1}^n \left(\frac{a}{k}\right)} \leq \prod_{k=N+1}^n \frac{\abs{a}}{N+1} = \left(\frac{\abs{a}}{N+1}\right)^{n-N}.
+    \abs{\prod_{k=N+1}^n \left(\frac{a}{k}\right)} \leqslant \prod_{k=N+1}^n \frac{\abs{a}}{N+1} = \left(\frac{\abs{a}}{N+1}\right)^{n-N}.
   \end{equation}
   Alors du coup
   \begin{equation}
-    \forall n \in \N \quad \abs{\frac{a^n}{n!}} \leq \frac{a^N}{N!} \left(\frac{\abs{a}}{N+1}\right)^{n-N}.
+    \forall n \in \N \quad \abs{\frac{a^n}{n!}} \leqslant \frac{a^N}{N!} \left(\frac{\abs{a}}{N+1}\right)^{n-N}.
   \end{equation}
-  De plus $0 \leq \frac{\abs{a}}{N+1} < 1$ donc $\left(\frac{a^N}{N!} \left(\frac{\abs{a}}{N+1}\right)^{n-N}\right)_{n \geq N}$ converge de limite nulle. Par théorème des gendarmes $\left(\frac{a^n}{n!}\right)_{n\in \N}$ tend vers zéro.
+  De plus $0 \leqslant \frac{\abs{a}}{N+1} < 1$ donc $\left(\frac{a^N}{N!} \left(\frac{\abs{a}}{N+1}\right)^{n-N}\right)_{n \geqslant N}$ converge de limite nulle. Par théorème des gendarmes $\left(\frac{a^n}{n!}\right)_{n\in \N}$ tend vers zéro.
 \end{proof}
 
 \subsection{Exemples d'équivalents}
@@ -1092,7 +1092,7 @@ Soit une suite réelle $u$ telle que $\lim u \neq 0$. On suppose que $u$ n'est p
   Soit une suite complexe $u$. Alors $u$ est bornée si et seulement si sa partie imaginaire et sa partie réelle sont bornées.
 \end{prop}
 \begin{proof}
-  Supposons que $u$ est bornée, alors il existe un réel $M$ tel que pour tout naturel $n$ $\abs{u_n} \leq M$ alors $\abs{\Re(u_n)} \leq \abs{u_n}$ et $\abs{\Im(u_n)} \leq \abs{u_n}$. Alors $\Re(u)$ et $\Im(u)$ sont bornées.
+  Supposons que $u$ est bornée, alors il existe un réel $M$ tel que pour tout naturel $n$ $\abs{u_n} \leqslant M$ alors $\abs{\Re(u_n)} \leqslant \abs{u_n}$ et $\abs{\Im(u_n)} \leqslant \abs{u_n}$. Alors $\Re(u)$ et $\Im(u)$ sont bornées.
 
 Supposons maintenant que $\Re(u)$ et $\Im(u)$ sont bornées. Alors il existe deux réels $M$ et $N$ qui majorent respectivement $\Re(u)$ et $\Im(u)$. Du coup le réel $\sqrt{N^2+M^2}$ majore $\abs{u}$ donc $u$ est bornée.
 \end{proof}
@@ -1114,7 +1114,7 @@ Il existe alors deux réels $M$ et $N$ qui majorent respectivement $\abs{u}$ et 
 \begin{proof}
   Supposons que $u$ tendent vers deux complexes $\lambda$ et $\lambda'$ alors on a
   \begin{equation}
-    0 \leq \abs{\lambda - \lambda'} \leq \abs{u_n-\lambda} + \abs{u_n-\lambda'}.
+    0 \leqslant \abs{\lambda - \lambda'} \leqslant \abs{u_n-\lambda} + \abs{u_n-\lambda'}.
   \end{equation}
 Par théorème des gendarmes comme les deux suites tendent vers zéro, alors $\lambda=\lambda'$.
 \end{proof}
@@ -1125,14 +1125,14 @@ Par théorème des gendarmes comme les deux suites tendent vers zéro, alors $\l
 \begin{proof}
   Si $u$ converge vers $\lambda=\alpha+ i \beta$ on sait que pour tout naturel $n$, $\abs{u_n-\lambda}=\abs{\Re(u_n)-\alpha + i(\Im(u_n)-\beta)}$. Alors
   \begin{align}
-    0 \leq \abs{\Re(u_n) -\alpha} \leq \abs{u_n-\lambda}, \\ 
-    0 \leq \abs{\Im(u_n) -\beta} \leq \abs{u_n-\lambda}.
+    0 \leqslant \abs{\Re(u_n) -\alpha} \leqslant \abs{u_n-\lambda}, \\ 
+    0 \leqslant \abs{\Im(u_n) -\beta} \leqslant \abs{u_n-\lambda}.
   \end{align}
   Par théorème des gendarmes, on en déduit que les deux suites réelles $\Re u$ et $\Im u$ tendent respectivement vers $\alpha$ et $\beta$.
 
   Supposons désormais que deux suites réelles $\Re u$ et $\Im u$ tendent respectivement vers deux réels $\alpha$ et $\beta$. Posons $\lambda = \alpha + i \beta$, alors pour tout naturel $n$ on a par inégalité triangulaire
 \begin{equation}
-  \abs{u_n-\lambda} \leq \abs{\Re(u_n) - \alpha} + \abs{\Im(u_n) - \beta}.
+  \abs{u_n-\lambda} \leqslant \abs{\Re(u_n) - \alpha} + \abs{\Im(u_n) - \beta}.
 \end{equation}
 En appliquant le théorème des gendarmes on en conclue que $u$ tend vers le complexe $\lambda$.
 \end{proof}
@@ -1143,8 +1143,8 @@ En appliquant le théorème des gendarmes on en conclue que $u$ tend vers le com
 \begin{proof}
   Soit un naturel $n$, alors 
   \begin{itemize}
-  \item $0 \leq \abs{}u_n\abs{-}\lambda\abs{} \leq \abs{u_n - \lambda}$, donc $\abs{u}$ tend vers $\abs{\lambda}$;
-  \item $0 \leq \abs{\bar{u_n} - \bar{\lambda}}\leq \abs{u_n - \lambda}$, donc $\bar{u}$ tend vers $\bar{\lambda}$;
+  \item $0 \leqslant \abs{}u_n\abs{-}\lambda\abs{} \leqslant \abs{u_n - \lambda}$, donc $\abs{u}$ tend vers $\abs{\lambda}$;
+  \item $0 \leqslant \abs{\bar{u_n} - \bar{\lambda}}\leqslant \abs{u_n - \lambda}$, donc $\bar{u}$ tend vers $\bar{\lambda}$;
   \item voir proposition ci-avant;
   \item idem.
   \end{itemize}
@@ -1154,7 +1154,7 @@ En appliquant le théorème des gendarmes on en conclue que $u$ tend vers le com
   Soit une suite complexe $u$, si elle converge alors elle est bornée.
 \end{prop}
 \begin{proof}
-  Il existe un complexe $\lambda$  tel que $\abs{u-\lambda}$ tende vers zéro, alors $\abs{u-\lambda}$ est bornée. Il existe un réel $M$ tel que pour tout naturel $n$ $\abs{u_n-\lambda} \leq M$ donc $\abs{u_n} \leq \abs{u_n-\lambda}+\abs{\lambda} \leq M+\abs{\lambda}$ donc $u$ est bornée.
+  Il existe un complexe $\lambda$  tel que $\abs{u-\lambda}$ tende vers zéro, alors $\abs{u-\lambda}$ est bornée. Il existe un réel $M$ tel que pour tout naturel $n$ $\abs{u_n-\lambda} \leqslant M$ donc $\abs{u_n} \leqslant \abs{u_n-\lambda}+\abs{\lambda} \leqslant M+\abs{\lambda}$ donc $u$ est bornée.
 \end{proof}
 
 \subsection{Opérations sur les limites}
@@ -1170,12 +1170,12 @@ En appliquant le théorème des gendarmes on en conclue que $u$ tend vers le com
   %Soit un naturel $n$
 \end{proof}
 \begin{prop}
-  Soit une suite complexe $u$, supposons que $u$ converge vers un complexe $\lambda$. Il existe donc un naturel $n_0$ à partir duquel $u$ est non nulle. Donc la suite $\left(\frac{1}{u_n}\right)_{n \geq n_0}$ tend vers $\frac{1}{\lambda}$.
+  Soit une suite complexe $u$, supposons que $u$ converge vers un complexe $\lambda$. Il existe donc un naturel $n_0$ à partir duquel $u$ est non nulle. Donc la suite $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$ tend vers $\frac{1}{\lambda}$.
 \end{prop}
 \begin{proof}
-  On sait que $\abs{u}$ tend vers $\abs{\lambda}>0$ et pour tout naturel $n$ si $n \geq n_0$ alors $\abs{u_n} \geq 0$, on peu alors définir la suite inverse $\left(\frac{1}{u_n}\right)_{n \geq n_0}$ et on sait que
+  On sait que $\abs{u}$ tend vers $\abs{\lambda}>0$ et pour tout naturel $n$ si $n \geqslant n_0$ alors $\abs{u_n} \geqslant 0$, on peu alors définir la suite inverse $\left(\frac{1}{u_n}\right)_{n \geqslant n_0}$ et on sait que
   \begin{equation}
-    \forall n \in \N \quad n \geq n_0 \implies \frac{1}{u_n}=\frac{\bar{u_n}}{\abs{u_n}^2}.
+    \forall n \in \N \quad n \geqslant n_0 \implies \frac{1}{u_n}=\frac{\bar{u_n}}{\abs{u_n}^2}.
   \end{equation}
 La suite réelle $\frac{1}{\abs{u_n}^2}$ tend vers $\frac{1}{\abs{\lambda}^2}$ et de plus on sait que $\lim \bar{u}=\bar{\lambda}$. Alors par produit $\lim \frac{1}{u}=\frac{1}{\lambda}$
 \end{proof}

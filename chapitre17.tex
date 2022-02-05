@@ -453,13 +453,13 @@ Finalament $u$ est bijective si et seulement si $\X$ est une base de $E$.
 \begin{cor}
   Soit $E$ un $\K$-espace vectoriel de dimension finie. Soit $\Lb$ une famille libre de $E$, $\G$ une famille génératrice de $E$. Alors
   \begin{equation}
-    \Card(\Lb) \leq \Card(\G)
+    \Card(\Lb) \leqslant \Card(\G)
   \end{equation}
 \end{cor}
 \begin{proof}[Démonstration par l'absurde]
-  Soit $n = \Card(\G)$. Supposons que $\Card(\Lb) \geq n+1$, alors il existe une sous famille $\Lb'$ de $\Lb$ telle que $\Card(\Lb')=n+1$ et $\Lb' \subset \VectEngendre(\G)=E$. D'après le lemme $\Lb'$ serait liée, ce qui est impossible puisque c'est une sous famille d'une famille libre, donc $\Lb'$ est libre. Aburde.  Ainsi 
+  Soit $n = \Card(\G)$. Supposons que $\Card(\Lb) \geqslant n+1$, alors il existe une sous famille $\Lb'$ de $\Lb$ telle que $\Card(\Lb')=n+1$ et $\Lb' \subset \VectEngendre(\G)=E$. D'après le lemme $\Lb'$ serait liée, ce qui est impossible puisque c'est une sous famille d'une famille libre, donc $\Lb'$ est libre. Aburde.  Ainsi 
   \begin{equation}
-    \Card(\Lb) \leq \Card(\G)
+    \Card(\Lb) \leqslant \Card(\G)
   \end{equation}
 \end{proof}
 
@@ -467,7 +467,7 @@ Finalament $u$ est bijective si et seulement si $\X$ est une base de $E$.
   Soit un $\K$-espace vectoriel $E$ de dimension finie. Toutes les bases de $E$ sont finies de même cardinal. Ce cardinal est appelé la dimension de $E$ sur $\K$ noté $\Dim_\K E$.
 \end{theo}
 \begin{proof}
-  Soient deux bases de $E$ $\B_1$ et $\B_2$. Comme $\B_1$ et libre et $\B_2$ est génératrice d'aprèse le corollaire $\Card(\B_1) \leq \Card(\B_2)$ et en inversant les rôles on obtient l'inégalité réxirproque. Finalement $\Card(\B_1)=\Card(\B_2)$.
+  Soient deux bases de $E$ $\B_1$ et $\B_2$. Comme $\B_1$ et libre et $\B_2$ est génératrice d'aprèse le corollaire $\Card(\B_1) \leqslant \Card(\B_2)$ et en inversant les rôles on obtient l'inégalité réxirproque. Finalement $\Card(\B_1)=\Card(\B_2)$.
 \end{proof}
 
 \emph{Remarque}~: Ne pas oublier de préciser le corps de l'espace vectoriel, puisque $\Dim_\C \C=1$ et $\Dim_\R \C=2$. La dimension de l'espace nul est nulle car il est engendré par l'ensemble vide.
@@ -475,7 +475,7 @@ Finalament $u$ est bijective si et seulement si $\X$ est une base de $E$.
 \begin{theo}[Caractérisation des bases parmi les familles génératrices]
   Soit un $\K$-espace vectoriel $E$ de dimension finie. Soit $\G$ une famille génératrice de $E$. Alors
   \begin{equation}
-    \Card(\G) \geq \Dim_\K E
+    \Card(\G) \geqslant \Dim_\K E
   \end{equation}
 et
 \begin{equation}
@@ -483,7 +483,7 @@ et
 \end{equation}
 \end{theo}
 \begin{proof}
-  Soit $\B$ une base de $E$. Alors $\Card(\B)=\Dim_\K E$ et $\B$ est libre donc d'après le corollaire $\Card(\B) = \Dim_\K E \leq \Card(\G)$.
+  Soit $\B$ une base de $E$. Alors $\Card(\B)=\Dim_\K E$ et $\B$ est libre donc d'après le corollaire $\Card(\B) = \Dim_\K E \leqslant \Card(\G)$.
 
   $\impliedby$ Théorème de la dimension.
 
@@ -497,7 +497,7 @@ et
 \begin{theo}[Caractérisation des bases parmi les familles libres]
   Soit un $\K$-espace vectoriel $E$ de dimension finie. Soit $\Lb$ une famille libre de $E$. Alors
   \begin{equation}
-    \Card(\Lb) \leq \Dim_\K E,
+    \Card(\Lb) \leqslant \Dim_\K E,
   \end{equation}
   et
   \begin{equation}
@@ -505,7 +505,7 @@ et
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit $\B$ une base de $E$, alors elle est génératrice donc $\Card(\Lb) \leq \Card(\B)=\Dim_\K E$.
+  Soit $\B$ une base de $E$, alors elle est génératrice donc $\Card(\Lb) \leqslant \Card(\B)=\Dim_\K E$.
 
   $\impliedby$ Théorème de la dimension.
   
@@ -558,14 +558,14 @@ On note $p=\Dim_\K E$ et $n=\Dim_\K F$. Soient $\B=(b_1,\ldots, b_p)$ une base d
     \end{equation}
 Soit la famille $\mathcal{F}=(f_k)_{k \in \intervalleentier{1}{n+p}}$ définie par~:
 \begin{itemize}
-\item si $1 \leq k \leq p$ alors $f_k=(b_k,0)$;
-\item si $p+1 \leq k < n$ alors $f_k=(0,e_{k-p})$.
+\item si $1 \leqslant k \leqslant p$ alors $f_k=(b_k,0)$;
+\item si $p+1 \leqslant k < n$ alors $f_k=(0,e_{k-p})$.
 \end{itemize}
 Ainsi
 \begin{equation}
   (x,y)=\sum_{i=1}^p x_i f_i + \sum_{j=p+1}^{n+p} y_{j-p} f_j.
 \end{equation}
-On vient de montrer que la famille $\mathcal{F}$ est génératrice de $E \times F$ de cardinal $n+p$. On a montré que $E \times F$ est de dimension finie et que $\Dim_\K E\times F \leq n+p$. 
+On vient de montrer que la famille $\mathcal{F}$ est génératrice de $E \times F$ de cardinal $n+p$. On a montré que $E \times F$ est de dimension finie et que $\Dim_\K E\times F \leqslant n+p$. 
 
 Montrons qu'elle est libre. Soit $(\lambda_k)_{k \in \intervalleentier{1}{n+1}} \in \K^{n+p}$ telle que $\sum_{i=1}^{n+p} \lambda_i f_i =(0,0)$. Alors
 \begin{align}
@@ -656,7 +656,7 @@ La famille $\B^*$ est la famille des applications coordonnées de la base $\B$.
 \begin{theo}
   Tout sous-espace vcetoriel $E_1$ d'un $\K$-espace vectoriel $E$ de dimension finie est de dimension finie et
   \begin{equation}
-    \Dim_\K E_1 \leq \Dim_\K E
+    \Dim_\K E_1 \leqslant \Dim_\K E
   \end{equation}
 de plus $\Dim_\K E_1 = \Dim_\K E \iff E_1 =E$.
 \end{theo}
@@ -696,12 +696,12 @@ Finalement $\Lb$ est une base de $E_1$. Alors $E_1$ est est de dimension finie �
 \begin{prop}
   Soit un $\K$-espace vectoriel $E$ de dimension finie. Alors toute famille $\X$ de vecteurs de $E$ est de rang fini et vérifie
   \begin{equation}
-    \rg(\X) \leq \Dim_\K E.
+    \rg(\X) \leqslant \Dim_\K E.
   \end{equation}
 De plus $\rg(\X) = \Dim_\K E$ si et seulement si $\X$ est génératrice de $E$.
 \end{prop}
 \begin{proof}
-  Soit $E_1=\VectEngendre(\X)$. $E_1$ est un sous-espace vectoriel de $E$, donc il est de dimension finie et $\Dim_\K E_1 \leq \Dim_\K E$. De plus
+  Soit $E_1=\VectEngendre(\X)$. $E_1$ est un sous-espace vectoriel de $E$, donc il est de dimension finie et $\Dim_\K E_1 \leqslant \Dim_\K E$. De plus
   \begin{align}
     \rg(\X) = \Dim_\K E &\iff \Dim_\K E_1 = \Dim_\K E\\
     & \iff E_1=\VectEngendre(\X)=E,
@@ -710,10 +710,10 @@ De plus $\rg(\X) = \Dim_\K E$ si et seulement si $\X$ est génératrice de $E$.
 \end{proof}
 
 \begin{prop}\label{prop:caracrangbase}
-   Soit un $\K$-espace vectoriel $E$. Soit $\X$ une famille génératrice finie de vecteurs de $E$. Alors $\X$ est de rang fini et $\rg(\X) \leq \Card(\X)$. De plus $\rg(\X)=\Card(\X)$ si et seulement si $\X$ est libre.
+   Soit un $\K$-espace vectoriel $E$. Soit $\X$ une famille génératrice finie de vecteurs de $E$. Alors $\X$ est de rang fini et $\rg(\X) \leqslant \Card(\X)$. De plus $\rg(\X)=\Card(\X)$ si et seulement si $\X$ est libre.
 \end{prop}
 \begin{proof}
-  Soit $E_1=\VectEngendre(\X)$. Comme $\X$ est une famille génératrice finie de $E_1$, $E_1$ est de dimension finie et $\Dim_\K E_1 \leq \Card(\X)$ et donc $\rg(\X) \leq \Card(\X)$. De plus 
+  Soit $E_1=\VectEngendre(\X)$. Comme $\X$ est une famille génératrice finie de $E_1$, $E_1$ est de dimension finie et $\Dim_\K E_1 \leqslant \Card(\X)$ et donc $\rg(\X) \leqslant \Card(\X)$. De plus 
   \begin{align}
     \rg(\X) = \Card(\X) &\iff \Dim_\K E_1 = \Card(\X)\\
     &\iff \X \text{~est une base de } E_1\\
@@ -730,14 +730,14 @@ De plus $\rg(\X) = \Dim_\K E$ si et seulement si $\X$ est génératrice de $E$.
   \begin{equation}
     \courbe = \enstq{\Card \Lb}{\Lb \text{~famille libre }, \Lb \subset \X},
   \end{equation}
-  si $\Lb$ est une famille libre telle que $\Lb \subset \X$, alors $\L$ est une famille libre de $\VectEngendre(\X)$. Par hypothèse, $\VectEngendre(\X)$ est de dimension finie donc $\Card \Lb \leq \Dim_\K \VectEngendre(\X)=\rg(\X)$. Alors $\courbe$ est une partie de $\N$ non vide (puisque $0 \in \courbe$) et majorée. Alors elle admet un plus grand élément noté $p$.
+  si $\Lb$ est une famille libre telle que $\Lb \subset \X$, alors $\L$ est une famille libre de $\VectEngendre(\X)$. Par hypothèse, $\VectEngendre(\X)$ est de dimension finie donc $\Card \Lb \leqslant \Dim_\K \VectEngendre(\X)=\rg(\X)$. Alors $\courbe$ est une partie de $\N$ non vide (puisque $0 \in \courbe$) et majorée. Alors elle admet un plus grand élément noté $p$.
 
-  On a $p \leq \rg(\X)$, puisque c'est un majorant, et il existe une famille $\Lb \subset \X$ telle que $\Card \Lb =p$. Comme $\X$ est génératrice de $\VectEngendre(\X)$ et que $\Lb$ est libre incluse dans $\X$ il existe une base $\B$ de $\VectEngendre(\X)$ telle que $\Lb \subset \B \subset \X$. Comme la base $\B$ est une famille libre on a $\Card \B \in \courbe$. Comme c'est aussi une base $\Card \B = \Dim_\K \VectEngendre (\X) = \rg(\X)$. D'où $\rg(\X) \leq p = \max \courbe$.
+  On a $p \leqslant \rg(\X)$, puisque c'est un majorant, et il existe une famille $\Lb \subset \X$ telle que $\Card \Lb =p$. Comme $\X$ est génératrice de $\VectEngendre(\X)$ et que $\Lb$ est libre incluse dans $\X$ il existe une base $\B$ de $\VectEngendre(\X)$ telle que $\Lb \subset \B \subset \X$. Comme la base $\B$ est une famille libre on a $\Card \B \in \courbe$. Comme c'est aussi une base $\Card \B = \Dim_\K \VectEngendre (\X) = \rg(\X)$. D'où $\rg(\X) \leqslant p = \max \courbe$.
 
 On a alors les deux inégalité
 \begin{equation}
   \begin{cases}
-    \rg(\X) \leq p \\ \rg(\X) \geq p,
+    \rg(\X) \leqslant p \\ \rg(\X) \geqslant p,
   \end{cases}
 \end{equation}
 d'où l'égalité $\rg(\X) = p= \max \courbe$.
@@ -878,7 +878,7 @@ $\E$ est libre et génératrice donc c'est une base de $E$.
 \begin{theo}
   Soient $E$ et $F$ deux $\K$-espace vectoriels et $u \in \Lin{E}{F}$. On suppose que $E$ est de dimension finie. Alors $u$ est de rang fini et
   \begin{equation}
-    \rg(u) \leq \Dim_\K E.
+    \rg(u) \leqslant \Dim_\K E.
   \end{equation}
 De plus $\rg(u) = \Dim_\K E$ si et seulement si $u$ est injective.
 \end{theo}
@@ -887,7 +887,7 @@ De plus $\rg(u) = \Dim_\K E$ si et seulement si $u$ est injective.
   \begin{equation}
     \Dim_\K E = \Dim_\K \Ker(u) + \rg(u),
   \end{equation}
-  alors l'inégalité est vraie~: $\rg(u) \leq \Dim_\K E$ et
+  alors l'inégalité est vraie~: $\rg(u) \leqslant \Dim_\K E$ et
   \begin{align}
     \rg(u) = \Dim_\K E &\iff \Dim_\K \Ker(u) = 0\\
     &\iff \Ker(u)=\{0\}.
@@ -898,14 +898,14 @@ De plus $\rg(u) = \Dim_\K E$ si et seulement si $u$ est injective.
 \begin{theo}
   Soient $E$ et $F$ deux $\K$-espace vectoriels et $u \in \Lin{E}{F}$. On suppose que $F$ est de dimension finie. Alors $u$ est de rang fini et
 \begin{equation}
-    \rg(u) \leq \Dim_\K F.
+    \rg(u) \leqslant \Dim_\K F.
   \end{equation}
 De plus $\rg(u) = \Dim_\K F$ si et seulement si $u$ est surjective.
 \end{theo}
 \begin{proof}
   $\Image(u)$ est un sous-espace vectoriel de $F$, or $F$ est de dimension finie donc $\Image(u)$ aussi. Alors
   \begin{equation}
-    \rg(u) = \Dim_\K \Image(u) \leq \Dim_\K F.
+    \rg(u) = \Dim_\K \Image(u) \leqslant \Dim_\K F.
   \end{equation}
   De plus $\rg(u) = \Dim_\K F$ si et seulement si $\Image(u)=F$ c'est à dire si et seulement $u$ est surjective.
 \end{proof}

@@ -45,7 +45,7 @@ Ne pas confondre avec l'application linéaire $g: E^2 \rightarrow F$, parce que 
 
 \subsection{Qualités éventuelles d'une application $p$-linéaire}
 
-Supposons que $p\geq 2$. Soient $E$ et $F$ deux $\K$-espaces vectoriels et $f \in \pLin{p}{E}{F}$.
+Supposons que $p\geqslant 2$. Soient $E$ et $F$ deux $\K$-espaces vectoriels et $f \in \pLin{p}{E}{F}$.
 
 \begin{defdef}
   On dira que
@@ -139,7 +139,7 @@ La fonction $\fonction{f}{\R^2}{\R}{(x,y)}{xy}$ est une forme bilinéaire symét
 
 \subsection{Formes linéaires alternées}
 
-Soient $n\in \N$, $n\geq 2$ et $E$ un $\K$-espace vectoriel de dimension $n$. Notons $\AN{n}{E}$ l'ensemble des formes $n$-linéaires alternées sur $E$. $\AN{n}{E}$ est un $\K$-espace vectoriel.
+Soient $n\in \N$, $n\geqslant 2$ et $E$ un $\K$-espace vectoriel de dimension $n$. Notons $\AN{n}{E}$ l'ensemble des formes $n$-linéaires alternées sur $E$. $\AN{n}{E}$ est un $\K$-espace vectoriel.
 
 \begin{theo}
 \label{theo:detbases}
@@ -164,7 +164,7 @@ En d'autre termes, pour toute base $\E$ de $E$, $\Det_\E$ est une forme $n$-lin�
 
 \subsubsection{Définition}
 
-Soient $n \in \N$, $n\geq 2$. $E$ un $\K$-espace vectoriel de dimension $n$ et $\E$ une base de $E$.
+Soient $n \in \N$, $n\geqslant 2$. $E$ un $\K$-espace vectoriel de dimension $n$ et $\E$ une base de $E$.
 \begin{defdef}
   Pour toute famille $\X=(x_1, \ldots, x_n)$ de $n$ vecteurs de $E$, on définit le déterminant de $\X$ dans la base $\E$, noté $\Det_\E(\X)$, par
   \begin{equation}
@@ -534,7 +534,7 @@ Initialement, en prenant $n=1$, on a bien $\Det(A)=a_{11}$ donc $\P(1)$ est vrai
 
 \subsection{Manipulations sur les lignes et les colonnes}
 
-Soient $A=(a_{ij})\in \Mn{n}{\K}$, $D$ un déterminant d'ordre $n \geq 2$  de coefficients les $a_{ij}$, $\courbe_A$ la famille des colonnes de $A$ et $\Lb_A$ la famille des lignes de $A$. $\E_c$ est la base canonique de $\K^n$.
+Soient $A=(a_{ij})\in \Mn{n}{\K}$, $D$ un déterminant d'ordre $n \geqslant 2$  de coefficients les $a_{ij}$, $\courbe_A$ la famille des colonnes de $A$ et $\Lb_A$ la famille des lignes de $A$. $\E_c$ est la base canonique de $\K^n$.
 
 En théorie on utilise~:
 \begin{itemize}
@@ -585,7 +585,7 @@ En retranchant la deuxième ligne à la troisième ligne et à la quatrième lig
 
 \subsection{Développement par rapport à une ligne et développement par rapport à une colonne}
 
-Soit $D$ un déterminant d'ordre $n\geq 2$. Soit $A=(a_{ij}) \in \Mn{n}{\K}$ telle que $D=\Det(A)$. On note $\E_c$ la base canonique de $\K^n$, $\courbe_A$ la famille des colonnes de $A$, $\Lb_A$ la famille des lignes de $A$. Soit $j_0 \in \intervalleentier{1}{n}$.
+Soit $D$ un déterminant d'ordre $n\geqslant 2$. Soit $A=(a_{ij}) \in \Mn{n}{\K}$ telle que $D=\Det(A)$. On note $\E_c$ la base canonique de $\K^n$, $\courbe_A$ la famille des colonnes de $A$, $\Lb_A$ la famille des lignes de $A$. Soit $j_0 \in \intervalleentier{1}{n}$.
 
 Pour tout couple $(i,j) \in \intervalleentier{1}{n}^2$, on note $A_{ij}=\Det_{\E_c}(C_1, \ldots, C_{j-1}, e_i, C_{j+1}, \ldots, C_n)$.
 
@@ -657,7 +657,7 @@ où $M_{ij}$ est la matric obtenue à partir de $A$ en enlevant la $i$\ieme{} li
 
 \subsection{Exemple classique~: Le déterminant de Van der Monde}
 
-Soit un naturel $n \geq 2$ et $(a_1, \ldots, a_n) \in \K^n$. On pose
+Soit un naturel $n \geqslant 2$ et $(a_1, \ldots, a_n) \in \K^n$. On pose
 \begin{equation}
   V_n(a_1, \ldots, a_n) =
   \begin{vmatrix}
@@ -697,7 +697,7 @@ V_n(a_1, \ldots, a_n)  &=\prod_{i=2}^n(a_i-a_1) V_{n-1}(a_1, \ldots, a_n) \\
 \end{align}
 En itérant le processus on obtient
 \begin{equation}
-  V_n(a_1, \ldots, a_n) = \prod_{1 \le i < j \leq n} (a_j-a_i),
+  V_n(a_1, \ldots, a_n) = \prod_{1 \le i < j \leqslant n} (a_j-a_i),
 \end{equation}
 sachant que $V_2(a_{n-1},a_n)=a_n-a_{n-1}$.
 
@@ -732,7 +732,7 @@ avec $A$ les cofacteurs. $P$ est un polynôme de degré inférieur ou égal à $
   \end{align}
   En itérant ce calcul, on a
   \begin{equation}
-    V_{n}(a_1, \ldots, a_n) = \prod_{1 \le i < j \leq n} (a_j-a_i),
+    V_{n}(a_1, \ldots, a_n) = \prod_{1 \le i < j \leqslant n} (a_j-a_i),
   \end{equation}
   sachant que $V_2(a_{n-1},a_n)=a_n-a_{n-1}$.
 \end{enumerate}
@@ -745,9 +745,9 @@ La formul est valable dans les deux cas.
 \subsection{Comatrice. Calcul de l'inverse d'une matrice}
 
 \begin{defdef}
-  Soient $n \geq 2$ et $A \in \Mn{n}{\K}$. On appelle comatrice de $A$, noté $\Com A$, la matrice dont les coefficients sont les cofacteurs de $A$~:
+  Soient $n \geqslant 2$ et $A \in \Mn{n}{\K}$. On appelle comatrice de $A$, noté $\Com A$, la matrice dont les coefficients sont les cofacteurs de $A$~:
   \begin{equation}
-    \Com A = (A_{ij})_{1 \leq i,j \leq n} \quad A_{ij}=(-1)^{i+j} \Det M_{ij}
+    \Com A = (A_{ij})_{1 \leqslant i,j \leqslant n} \quad A_{ij}=(-1)^{i+j} \Det M_{ij}
   \end{equation}
   où $M_{ij}$ est la sous-matrice de $A$ obtenue en enlevant la colonne $j$ et la ligne $i$.
 \end{defdef}
@@ -759,7 +759,7 @@ La formul est valable dans les deux cas.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit $A=(a_{ij})_{1 \leq i,j \leq n}$, ${\Com A}^{\top} = (b_{ij})_{1 \leq i,j \leq n}$ (c.-à-d. $\forall (i,j) \in \intervalleentier{1}{n}^2 \quad b_{ij}=A_{ji}$) et $C=(c_{ij})_{1 \leq i,j \leq n}={\Com A}^{\top} A$. Alors pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a
+  Soit $A=(a_{ij})_{1 \leqslant i,j \leqslant n}$, ${\Com A}^{\top} = (b_{ij})_{1 \leqslant i,j \leqslant n}$ (c.-à-d. $\forall (i,j) \in \intervalleentier{1}{n}^2 \quad b_{ij}=A_{ji}$) et $C=(c_{ij})_{1 \leqslant i,j \leqslant n}={\Com A}^{\top} A$. Alors pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a
   \begin{equation}
     c_{ij} = \sum_{k=1}^n b_{ik}a_{kj} = \sum_{k=1}^n A_{ki} a_{kj}.
   \end{equation}
@@ -836,7 +836,7 @@ On appelle déterminant de $(\Lb)$ ou de $(\H)$ le déterminant de la matrice $A
 
 \subsection{Orientation d'un espace vectoriel réel de dimension finie}
 
-Soit un $\R$-espace vectoriel $E$ de dimension finie $n\geq 1$. Soient $\B$ et $\B'$ deux bases de $E$. Alors
+Soit un $\R$-espace vectoriel $E$ de dimension finie $n\geqslant 1$. Soient $\B$ et $\B'$ deux bases de $E$. Alors
 \begin{equation}
   \Det_{\B}(\B') =  \Det_{\B'}(\B) = 1
 \end{equation}

@@ -1,0 +1,10 @@
+*.aux
+*.swp
+*.log
+*.pdf
+mathematiques.m[lt][ftc][1-9]*
+mathematiques.lo[fgt]
+mathematiques.mtc*
+mathematiques.toc
+mathematiques.maf
+mathematiques.out

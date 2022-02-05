@@ -75,13 +75,13 @@ Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_
 \begin{prop}
   Soient deux polynômes $A$ et $B$ de $\K[X]$ et un scalaire $\lambda$. Alors
   \begin{enumerate}
-  \item $\deg(A+B) \leq \max(\deg(A),\deg(B))$, si $\deg(A)=\deg(B)$ il y a égalité;
+  \item $\deg(A+B) \leqslant \max(\deg(A),\deg(B))$, si $\deg(A)=\deg(B)$ il y a égalité;
   \item $\deg(\lambda A) = \begin{cases} \deg(A) & \lambda \neq 0 \\ -\infty & \lambda =0 \end{cases}$
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Si $A$ et $B$ sont nuls alors $\max(\deg(A),\deg(B))=0$ et leur somme est nulle et donc son degré vaut $\deg(A+B)=-\infty$ on a bien $\deg(A+B) \leq \max(\deg(A),\deg(B))$. 
+  \item Si $A$ et $B$ sont nuls alors $\max(\deg(A),\deg(B))=0$ et leur somme est nulle et donc son degré vaut $\deg(A+B)=-\infty$ on a bien $\deg(A+B) \leqslant \max(\deg(A),\deg(B))$. 
 
     Si $A$ ou $B$ est non nul, on pose $n=\max(\deg(A),\deg(B))$. On peut écrire
     \begin{align}
@@ -92,7 +92,7 @@ Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_
     \begin{equation}
       A+B = (a_0+b_0, \ldots, a_n+b_n, 0, \ldots, 0).
     \end{equation}
-    Déjà $\deg(A+B) \leq n = \max(\deg(A),\deg(B))$. Deux cas se présentent
+    Déjà $\deg(A+B) \leqslant n = \max(\deg(A),\deg(B))$. Deux cas se présentent
     \begin{enumerate}
     \item Si $\deg(A) \neq \deg(B)$, un terme parmi $a_n$ et $b_n$ est nul et l'autre est non nul alors $\deg(A+B)=n$;
     \item Si $\deg(A) = \deg(B)$, $a_n$ et $b_n$ sont tous les deux différents de zéro et on peut avoir $a_n+b_n=0$ ou $a_n+b_n \neq 0$ donc on ne peut rien dire de plus.
@@ -115,7 +115,7 @@ Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_
   \begin{equation}
     \forall n>r \quad c_n = \sum_{k=0}^n a_kb_{n-k} = \sum_{k=0}^p a_kb_{n-k} + \sum_{k=p+1}^n a_kb_{n-k}.
   \end{equation}
-  Or $\forall k>p \ a_k=0$ et $\forall k \leq p$ on a $q=r-p <n-p \leq n-k \leq n$ donc $n-k>q$ et $b_{n-k}=0$. Ainsi
+  Or $\forall k>p \ a_k=0$ et $\forall k \leqslant p$ on a $q=r-p <n-p \leqslant n-k \leqslant n$ donc $n-k>q$ et $b_{n-k}=0$. Ainsi
   \begin{equation}
     \forall n>r \quad c_n = 0.
   \end{equation}
@@ -182,7 +182,7 @@ Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_
     \end{align}
     Divisons l'étude en trois parties~:
     \begin{itemize}
-    \item     Si $k \in \intervalleentier{0}{p-1}$ alors $1-p \leq -k \leq 0$ et donc $q+1 \leq p+q-k \leq p+q$. Le polynôme $B$ est de degré $q$ donc $b_{p+q-k}=0$ et alors $\sum_{k=0}^{p-1} a_k b_{p+q-k}=0$. 
+    \item     Si $k \in \intervalleentier{0}{p-1}$ alors $1-p \leqslant -k \leqslant 0$ et donc $q+1 \leqslant p+q-k \leqslant p+q$. Le polynôme $B$ est de degré $q$ donc $b_{p+q-k}=0$ et alors $\sum_{k=0}^{p-1} a_k b_{p+q-k}=0$. 
     \item Si $k \in \intervalleentier{p+1}{p+q}$, $a_k =0$ puisque $A$ est de degré $p$, donc $\sum_{k=p+1}^{p+q} a_k b_{p+q-k}=0$
     \item Alors $c_{p+q}=a_pb_q \neq 0$ (puisque $a_p \neq 0$ et $b_q \neq 0$ et que $\K$ est intègre). 
       \end{itemize}
@@ -243,14 +243,14 @@ On note $X = (0,1,0, \ldots, 0)$ et il est appelé l'``indeterminé''. On pose $
   \begin{equation}
     c_n = \sum_{j=0}^n \delta_{1j} \delta_{n-j,k}
   \end{equation}
-  si $n=0$ alors $c_n=0$, si $n \geq 1$ alors $c_n=\delta_{n-1,k}$ donc $c_n=1$ si $n=k+1$ et zéro sinon. Finalement $c_n=\delta_{n,k+1}$. $\P(k=1)$ est vraie.
+  si $n=0$ alors $c_n=0$, si $n \geqslant 1$ alors $c_n=\delta_{n-1,k}$ donc $c_n=1$ si $n=k+1$ et zéro sinon. Finalement $c_n=\delta_{n,k+1}$. $\P(k=1)$ est vraie.
 
   \emph{Conclusion}~: Par théorème de récurrence, $\P(n)$ est vraie pour tout naturel $n$.
 \end{proof}
 
 On identifiera le scalaire $\lambda$ avec le polynome $\lambda \in \K[X]$.
 
-Soit $A=(a_n)_{n \in \N} \in \K[X]$ et $N \geq \deg(A)$. Alors
+Soit $A=(a_n)_{n \in \N} \in \K[X]$ et $N \geqslant \deg(A)$. Alors
 \begin{equation}
   A = (a_0, \ldots, a_N, 0, \ldots, 0) = \sum_{k=1}^N a_k (\delta_{n,k})_{n \in \N}=\sum_{k=0}^N a_k X^k.
 \end{equation}
@@ -258,14 +258,14 @@ Nous adopterons la notation
 \begin{equation}
   A = \sum_{k=0}^N a_k X^k,
 \end{equation}
-avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
+avec $N \geqslant \deg(A)$ pour le polynôme $A$. On pourra écrire
 \begin{equation}
   A = \sum_{n>0} a_n X^n = \sum_{n=0}^{\infty} a_n X^n.
 \end{equation}
 
 \emph{Ce sont des sommes finies car $A$ est un polynôme donc la suite $a$ est nulle à partir d'un certain rang}. L'intérêt de ces deux écritures est de ne pas avoir besoin de connaître le degré de $A$. Avec ces notations~:
 \begin{itemize}
-\item le polynôme $A=\sum_{n\geq 0} a_n X^n$ est nul si et seulement si $\forall n \in \N \quad a_n =0$;
+\item le polynôme $A=\sum_{n\geqslant 0} a_n X^n$ est nul si et seulement si $\forall n \in \N \quad a_n =0$;
 \item deux polynômes $A$ et $B$ sont égaux si et seulement si $\forall n \in \N \quad a_n =b_n$;
 \item les monômes sont les polynômes de la formes $A=\lambda X^n$ avec $\lambda \in \K$ et $n \in \N$;
 \item La somme des polynômes $P=\sum_{k=0}^n a_k X^k$ et $Q=\sum_{k=0}^m b_k X^k$ vaut
@@ -281,9 +281,9 @@ avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
 \subsection{Composition de polynômes}
 
 \begin{defdef}
-  Soient $P=\sum_{n \geq 0} a_n X^n$ et $Q=\sum_{n \geq 0} b_n X^n$ deux polynômes à coefficients dans $\K$. On définit un polynôme noté $P \circ Q$ ou $P(Q)$ par
+  Soient $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{n \geqslant 0} b_n X^n$ deux polynômes à coefficients dans $\K$. On définit un polynôme noté $P \circ Q$ ou $P(Q)$ par
   \begin{equation}
-    P \circ Q = P(Q) = \sum_{n \geq 0} a_n Q^n.
+    P \circ Q = P(Q) = \sum_{n \geqslant 0} a_n Q^n.
   \end{equation}
 \end{defdef}
 
@@ -306,7 +306,7 @@ avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
   \begin{equation}
     P \circ Q = \sum_{k=0}^n a_k Q^k = \sum_{k=0}^n a_k \left(\sum_{j=0}^m b_j X^j\right)^k,
   \end{equation}
-  et donc $\deg(P \circ Q) \leq mn$. Le coefficient devant $X^{mn}$ vaut $a_n b_m^n \neq 0$ car $a_n \neq 0$ et $b_m \neq 0$. Donc $\deg(P \circ Q) =mn = \deg(P) \cdot \deg(Q)$.
+  et donc $\deg(P \circ Q) \leqslant mn$. Le coefficient devant $X^{mn}$ vaut $a_n b_m^n \neq 0$ car $a_n \neq 0$ et $b_m \neq 0$. Donc $\deg(P \circ Q) =mn = \deg(P) \cdot \deg(Q)$.
 \end{proof}
 
 \begin{prop}
@@ -319,21 +319,21 @@ avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
   \end{itemize}
 \end{prop}
 \begin{proof}
-  Notons $P=\sum_{n \geq 0} a_n X^n$, $Q=\sum_{n \geq 0} b_n X^n$, $P=\sum_{n \geq 0} c_n X^n$. Alors
+  Notons $P=\sum_{n \geqslant 0} a_n X^n$, $Q=\sum_{n \geqslant 0} b_n X^n$, $P=\sum_{n \geqslant 0} c_n X^n$. Alors
   \begin{itemize}
-  \item $(\lambda P+Q)\circ R = \sum_{n \geq 0} (\lambda a_n+b_n) R^n = \lambda \sum_{n \geq 0} a_n R^n + \sum_{n \geq 0} b_n R^n$, soit alors $ (\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R$;
-  \item $P \circ (Q \circ R) = \sum_{n \geq 0} a_n (Q \circ R)^n$ et $Q \circ R = \sum_{k \geq 0} b_k R^k$ alors
+  \item $(\lambda P+Q)\circ R = \sum_{n \geqslant 0} (\lambda a_n+b_n) R^n = \lambda \sum_{n \geqslant 0} a_n R^n + \sum_{n \geqslant 0} b_n R^n$, soit alors $ (\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R$;
+  \item $P \circ (Q \circ R) = \sum_{n \geqslant 0} a_n (Q \circ R)^n$ et $Q \circ R = \sum_{k \geqslant 0} b_k R^k$ alors
     \begin{align}
-      P \circ (Q \circ R) = \left(\sum_{n \geq 0} a_n Q^n \right) \circ R &= \sum_{n \geq 0} (Q^n \circ R) \\
-      &= \sum_{n \geq 0} a_n Q(R)^n\\
+      P \circ (Q \circ R) = \left(\sum_{n \geqslant 0} a_n Q^n \right) \circ R &= \sum_{n \geqslant 0} (Q^n \circ R) \\
+      &= \sum_{n \geqslant 0} a_n Q(R)^n\\
       &=P \circ (Q \circ R);
     \end{align}
   \item on note pour tout naturel $n$, $d_n=\sum_{k=0}^n a_k b_{n-k}$ et on a
     \begin{align}
-      (PQ)\circ R &= \sum_{n \geq 0} d_n R^n \\
-      &= \sum_{n \geq 0} \sum_{k=0}^n a_k b_{n-k} R^{n-k}R^k \\
-      &= \sum_{k \geq 0} a_k R^k \sum_{n \geq k} b_{n-k} R^{n-k}\\
-      &=\sum_{k\geq 0} a_k R^k \sum_{j \geq 0} b_j R^j\\
+      (PQ)\circ R &= \sum_{n \geqslant 0} d_n R^n \\
+      &= \sum_{n \geqslant 0} \sum_{k=0}^n a_k b_{n-k} R^{n-k}R^k \\
+      &= \sum_{k \geqslant 0} a_k R^k \sum_{n \geqslant k} b_{n-k} R^{n-k}\\
+      &=\sum_{k\geqslant 0} a_k R^k \sum_{j \geqslant 0} b_j R^j\\
       &=P(R) \cdot Q(R).
     \end{align}
   \end{itemize}
@@ -352,9 +352,9 @@ avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
 \danger Ici il n'y a pas d'ensemble de définition ni de quantificateur, il s'agit d'égalités entre deux polynômes. \emph{Cependant} si $f \in \R^I$ est paire c'est équivalent à ce que $I$ soit centré en zéro et pour tout réel $x$ $f(-x)=f(x)$.
 
 \begin{proof}
-  On le démontre pour $P$ pair (la démonstration est analogue pour le cas impair). On note $P = \sum_{n\geq 0} a_n X^n$, alors
+  On le démontre pour $P$ pair (la démonstration est analogue pour le cas impair). On note $P = \sum_{n\geqslant 0} a_n X^n$, alors
   \begin{align}
-    P(X) = P(-X) &\iff \sum_{n \geq 0} a_n X^n = \sum_{n \geq 0} a_n (-1)^n X^n\\
+    P(X) = P(-X) &\iff \sum_{n \geqslant 0} a_n X^n = \sum_{n \geqslant 0} a_n (-1)^n X^n\\
     &\iff \forall n \in \N \quad a_n=a_n(-1)^n\\
     &\iff \forall n \in \N \quad n \text{~est impair et~} a_n=-a_n\\
     &\iff \forall p \in \N \quad a_{2p+1}=0\\
@@ -364,7 +364,7 @@ avec $N \geq \deg(A)$ pour le polynôme $A$. On pourra écrire
 
 \subsection{$\K$-espace vectoriel $\K_n[X]$}
 
-On note $\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leq n}$.
+On note $\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leqslant n}$.
 
 \begin{prop}
   L'ensemble $\K_n[X]$ est un sous-espace vectoriel du $\K$-espace vectoriel $\K[X]$.
@@ -376,16 +376,16 @@ On note $\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leq n}$.
   \end{equation}
   et
   \begin{align}
-    \deg(\lambda P+Q) &\leq \max(\deg(\lambda P),\deg(Q))\\
-    &\leq \max(\deg(P),\deg(Q))\\
-    &\leq n
+    \deg(\lambda P+Q) &\leqslant \max(\deg(\lambda P),\deg(Q))\\
+    &\leqslant \max(\deg(P),\deg(Q))\\
+    &\leqslant n
   \end{align}
   et donc $\lambda P +Q \in \K_n[X]$.
 
   Finalement $\K_n[X]$ est bien un sous-espace vectoriel de $\K[X]$. 
 \end{proof}
 
-Cependant ce n'est pas un sous anneau dès que $n \geq 1$. Puisque $X^n \in \K_n[X]$ mais $X^n \cdot X^n = x^{2n} \notin \K_n[X]$.
+Cependant ce n'est pas un sous anneau dès que $n \geqslant 1$. Puisque $X^n \in \K_n[X]$ mais $X^n \cdot X^n = x^{2n} \notin \K_n[X]$.
 
 \begin{prop}
   Pour tout naturel $n$, la famille $\B=(1,X, \ldots, X^n)$ est une base de $\K_n[X]$ et donc $\dim_\K \K_n[X]=n+1$.
@@ -393,7 +393,7 @@ Cependant ce n'est pas un sous anneau dès que $n \geq 1$. Puisque $X^n \in \K_n
 \begin{proof}
   Déjà $\B \subset \K_n[X]$. Par définition, si $P \in \K_n[X]$ alors il existe $(a_0,\ldots, a_n) \in \K^{n+1}$ tel que $P=\sum_{k=0}^n a_k X^k$. alors $\B$ est génératrice.
 
-  Soit $(a_0,\ldots, a_n) \in \K^{n+1}$ tel que $\sum_{k=0}^n a_k X^k =0$ alors pour tout $k$ tel que $0\leq k \leq n$ on a $a_k=0$ (un polynôme est nul si et seulement si ses coefficients sont nuls). La famille $\B$ est donc libre.
+  Soit $(a_0,\ldots, a_n) \in \K^{n+1}$ tel que $\sum_{k=0}^n a_k X^k =0$ alors pour tout $k$ tel que $0\leqslant k \leqslant n$ on a $a_k=0$ (un polynôme est nul si et seulement si ses coefficients sont nuls). La famille $\B$ est donc libre.
 
 Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B = n+1$.
 \end{proof}
@@ -408,7 +408,7 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
   Alors toute sous-famille finie $(P_i)_{i \in J}$, avec $J \subset I$ fini, est libre.
 \end{prop}
 \begin{proof}
-  Soit $J=\{i_1, \ldots, i_k\} \subset I$. Quitte à réindexer, on peut supposer que $\deg(P_{i_1}) \leq \ldots \leq \deg(P_{i_k})$. Soit $k$ scalaires $\alpha_{i_1}, \ldots, \alpha_{i_k}$. On suppose que $\sum_{i \in J} \alpha_i P_i=0$. Supposons que cette famille est liée, c'est-à-dire qu'il existe $l \in J$ tel que $\alpha_l \neq 0$. Soit la partie $\{j \in J, \alpha_{ij} \neq 0\}$. Elle est incluse dans $\N$ et elle est non vide et elle est finie (parce que $J$ est fini). Alors elle admet un plus grand élément $j_0$. Ainsi $\alpha_{ij_0} \neq 0$.
+  Soit $J=\{i_1, \ldots, i_k\} \subset I$. Quitte à réindexer, on peut supposer que $\deg(P_{i_1}) \leqslant \ldots \leqslant \deg(P_{i_k})$. Soit $k$ scalaires $\alpha_{i_1}, \ldots, \alpha_{i_k}$. On suppose que $\sum_{i \in J} \alpha_i P_i=0$. Supposons que cette famille est liée, c'est-à-dire qu'il existe $l \in J$ tel que $\alpha_l \neq 0$. Soit la partie $\{j \in J, \alpha_{ij} \neq 0\}$. Elle est incluse dans $\N$ et elle est non vide et elle est finie (parce que $J$ est fini). Alors elle admet un plus grand élément $j_0$. Ainsi $\alpha_{ij_0} \neq 0$.
   \begin{gather}
     \forall j > j_0 \quad \alpha_{ij}=0 \\
     0 = \sum_{i \in J} \alpha_i P_i = \sum_{j=1}^{j_0-1} \alpha_{ij} P_{ij} + \alpha_{ij_0} P_{ij_0}\\
@@ -416,12 +416,12 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
   \end{gather}
   En passant au degré on a donc
   \begin{equation}
-    \deg(P_{ij_0}) \leq \max\limits_{1 \leq j \leq j_0-1}(\deg(P_{ij})) < \deg(P_{ij_0}).
+    \deg(P_{ij_0}) \leqslant \max\limits_{1 \leqslant j \leqslant j_0-1}(\deg(P_{ij})) < \deg(P_{ij_0}).
   \end{equation}
   Ce qui est complétement absurde. Alors $(P_i)_{i \in J}$ est libre.
 \end{proof}
 
-\emph{Conséquences}~: l'espace vectoriel $\K[X]$ est de dimension infinie, car il existe dans $\K[X]$ des familles libres de cardinal aussi grand qu'on le souhaite. Supposons qu'il est de dimension finie, soit alors $p$ sa dimension. On note $\Lb=(1, \ldots, X^p)$ une famille libre. Son cardinal vaut $p+1 \geq \Dim \K[X]$, ce qui est absurde.
+\emph{Conséquences}~: l'espace vectoriel $\K[X]$ est de dimension infinie, car il existe dans $\K[X]$ des familles libres de cardinal aussi grand qu'on le souhaite. Supposons qu'il est de dimension finie, soit alors $p$ sa dimension. On note $\Lb=(1, \ldots, X^p)$ une famille libre. Son cardinal vaut $p+1 \geqslant \Dim \K[X]$, ce qui est absurde.
 
 \subsection{Division euclidienne dans $\K[X]$}
 
@@ -443,7 +443,7 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
   \end{align}
   donc $BQ_2+R_2 = BQ_1+R_1$ et donc $B(Q_1-Q_2) = R_2-R_1$.
 
-  Si $Q_1-Q_2 \neq 0$ alors $\deg(Q_1-Q_2) \in \N$ et alors $\deg(B(Q_1-Q_2)) = \deg(B) + \deg(Q_1-Q_2) \geq \deg(B)$. Or $\deg(R_2-R_1) \leq \max(\deg(R_1),\deg(R_2)) < \deg(B)$. Ce qui est absurde. 
+  Si $Q_1-Q_2 \neq 0$ alors $\deg(Q_1-Q_2) \in \N$ et alors $\deg(B(Q_1-Q_2)) = \deg(B) + \deg(Q_1-Q_2) \geqslant \deg(B)$. Or $\deg(R_2-R_1) \leqslant \max(\deg(R_1),\deg(R_2)) < \deg(B)$. Ce qui est absurde. 
 
   Donc $Q_1=Q_2$ et ainsi $R_1=R_2$.
 \end{proof}
@@ -452,7 +452,7 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
 
   \emph{Initialisation}~: $n=m$ (degré de $B$). Soit un polynôme $A$ de degré strictement inférieur à $m$. On peut écrire $\begin{cases} A=0 \cdot B+A \\ \deg(A) < \deg(B)=m\end{cases}$. Alors le couple $(Q,R)=(0,A)$ vérifient l'assertion. $\P(m)$ est vraie.
 
-  \emph{Hérédité}~: Soit $n \geq m$ et on suppose $\P(n)$, déduisons en $\P(n+1)$. Soit $A$ un polynôme de degré strictement inférieur à $n+1$. Alors $A=\sum_{k=0}^n a_k X^k \in \K_n[X]$. Soit $A_2 = A-a_nb_m^{-1}X^{n-m}B$ (possible puisque $b_m \neq 0$ et $n \geq m$. $A$ et $a_nb_m^{-1}X^{n-m}B$ sont de degré au plus $n$ tous les deux. De plus le coefficient devant $X^n$ vaut~:
+  \emph{Hérédité}~: Soit $n \geqslant m$ et on suppose $\P(n)$, déduisons en $\P(n+1)$. Soit $A$ un polynôme de degré strictement inférieur à $n+1$. Alors $A=\sum_{k=0}^n a_k X^k \in \K_n[X]$. Soit $A_2 = A-a_nb_m^{-1}X^{n-m}B$ (possible puisque $b_m \neq 0$ et $n \geqslant m$. $A$ et $a_nb_m^{-1}X^{n-m}B$ sont de degré au plus $n$ tous les deux. De plus le coefficient devant $X^n$ vaut~:
   \begin{itemize}
   \item $a_n$ dans $A$;
   \item $a_nb_m^{-1}b_m=a_n$ dans $a_nb_m^{-1}X^{n-m}B$.
@@ -465,7 +465,7 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
   \end{align}
   avec $Q=Q_2+a_n b_m^{-1}X^{n-m}$ et $R=R_2$ et donc $\deg(R) < \deg(B)$. Alors $\P(n+1)$ est vérifiée.
 
-  \emph{Conclusion}~: Par théorème de récurrence $\forall n \geq m \ \P(n)$.
+  \emph{Conclusion}~: Par théorème de récurrence $\forall n \geqslant m \ \P(n)$.
 \end{proof}
 
 \subsection{Diviseurs et multiples}
@@ -483,11 +483,11 @@ mais il n'est diviseur que de lui-même
   \forall A \in \K[X] \quad 0_{\K[X]}\mid{}A \implies A=0_{\K[X]}
 \end{equation}
 
-Si $B$ est non nul et si $A\mid{}B$, alors $\deg(B) \geq \deg(A)$. En effet, il existe un polynôme non nul tel que $B=AQ$ et en passant au degré
+Si $B$ est non nul et si $A\mid{}B$, alors $\deg(B) \geqslant \deg(A)$. En effet, il existe un polynôme non nul tel que $B=AQ$ et en passant au degré
 \begin{equation}
   \deg(B) = \deg(A)+\deg(Q)
 \end{equation}
-donc $\deg(B) \geq \deg(A)$, car $\deg(Q)\in \N$.
+donc $\deg(B) \geqslant \deg(A)$, car $\deg(Q)\in \N$.
 
 \begin{prop}
   Pour tous polynômes $A,B,C$ on a
@@ -526,7 +526,7 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
   La divison euclidienne nous indique su'il existe un unique couple de polynômes $(Q,R)$ tels que~:
   \begin{equation}
     \begin{cases}
-      A=BQ+R \\ \deg(R) \leq \deg(B)
+      A=BQ+R \\ \deg(R) \leqslant \deg(B)
     \end{cases}
   \end{equation}
   Si on fait l'hypothèse que le reste de la division euclidienne de $A$ par $B$ dans $\K[X]$ est nul ($\deg(R)=-\infty<\deg(B)$) alors $A=BQ$ et donc $B$ divise $A$.
@@ -558,9 +558,9 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
 \subsection{Fonction polynomiale associée à un polynôme}
 
 \begin{defdef}
-  Soit un polynôme $P$ à coefficients dans $\K$ tel que $P=\sum_{n \geq 0}a_n X^n$. On définit une application $\widetilde{P} \in \K^\K$ par~:
+  Soit un polynôme $P$ à coefficients dans $\K$ tel que $P=\sum_{n \geqslant 0}a_n X^n$. On définit une application $\widetilde{P} \in \K^\K$ par~:
   \begin{equation}
-    \forall x \in \K \quad \widetilde{P}(x) = \sum_{n \geq 0} a_n x^n=\sum_{n=0}^N a_n x^n \quad (\forall N \geq \deg(P)).
+    \forall x \in \K \quad \widetilde{P}(x) = \sum_{n \geqslant 0} a_n x^n=\sum_{n=0}^N a_n x^n \quad (\forall N \geqslant \deg(P)).
   \end{equation}
   $\widetilde{P}$ est appelée fonction polynomiale associée au polynôme $P$.
 \end{defdef}
@@ -582,19 +582,19 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
 \begin{proof}
   \begin{enumerate}
   \item La linéarité est claire;
-  \item On note $P=\sum_{n \geq 0}a_n X^n$, $Q=\sum_{n \geq 0}b_n X^n$ et $QP=\sum_{n \geq 0}c_n X^n$ avec pour tout naturel $n$ $c_n = \sum_{k=0}^n a_kb_{n-k}$. Alors
+  \item On note $P=\sum_{n \geqslant 0}a_n X^n$, $Q=\sum_{n \geqslant 0}b_n X^n$ et $QP=\sum_{n \geqslant 0}c_n X^n$ avec pour tout naturel $n$ $c_n = \sum_{k=0}^n a_kb_{n-k}$. Alors
     \begin{align}
-      (PQ)(\alpha)&=\sum_{n \geq 0}c_n \alpha^n \\
-      &=\sum_{n \geq 0} \sum_{k=0}^n a_k b_{n-k} \alpha^n\\
-      &=\sum_{k \geq 0} \sum_{n \geq k} a_k b_{n-k} \alpha^k \alpha^{n-k}\\
-      &=\sum_{k \geq 0}  a_k  \alpha^k \sum_{j \geq 0} b_j \alpha^j \quad (j=n-k)\\
+      (PQ)(\alpha)&=\sum_{n \geqslant 0}c_n \alpha^n \\
+      &=\sum_{n \geqslant 0} \sum_{k=0}^n a_k b_{n-k} \alpha^n\\
+      &=\sum_{k \geqslant 0} \sum_{n \geqslant k} a_k b_{n-k} \alpha^k \alpha^{n-k}\\
+      &=\sum_{k \geqslant 0}  a_k  \alpha^k \sum_{j \geqslant 0} b_j \alpha^j \quad (j=n-k)\\
       &=P(\alpha) Q(\alpha)
     \end{align}
-  \item On note $P=\sum_{n \geq 0}a_n X^n$ et on a
+  \item On note $P=\sum_{n \geqslant 0}a_n X^n$ et on a
     \begin{align}
-      (P \circ Q)(\alpha) &= \left(\sum_{n \geq 0} a_n Q^n \right)(\alpha)\\
-      &= \sum_{n \geq 0} a_n Q^n(\alpha) \quad \text{~d'après} (1)\\
-      &= \sum_{n \geq 0} a_n Q^n(\alpha) \quad \text{~d'après} (2)\\
+      (P \circ Q)(\alpha) &= \left(\sum_{n \geqslant 0} a_n Q^n \right)(\alpha)\\
+      &= \sum_{n \geqslant 0} a_n Q^n(\alpha) \quad \text{~d'après} (1)\\
+      &= \sum_{n \geqslant 0} a_n Q^n(\alpha) \quad \text{~d'après} (2)\\
       &= P(Q(\alpha))
     \end{align}
   \end{enumerate}
@@ -650,7 +650,7 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
 \begin{proof}
   Soit un un polynôme $P$ non nul à coefficients dans $\K$. On prouve cette propriété par contraposée. Si $P$ admet au moins $n+1$ racines distinctes $\alpha_1, \ldots, \alpha_{n+1}$. Alors $\prod_{i=1}^{n+1} (X-\alpha_i)$ divise $P$. Comme $P$ est non nul en passant au degré on a
   \begin{equation}
-    \deg(P) \geq \deg\left(\prod_{i=1}^{n+1} (X-\alpha_i)\right) = n+1
+    \deg(P) \geqslant \deg\left(\prod_{i=1}^{n+1} (X-\alpha_i)\right) = n+1
   \end{equation}
   et donc on a le résultat en passant par la contraposée.
 \end{proof}
@@ -671,7 +671,7 @@ Si $\alpha \in \K$ est racine du polynôme $P$, alors $X-\alpha$ divise $P$ et d
 \begin{equation}
   \courbe = \{n \in \N^*, (X-\alpha)^n \mid{} P\}
 \end{equation}
-alors c'est une partie de $\N^*$ non vide (puisque $1 \in \courbe$) et majorée par le degré de $P$. En effet si $n \in \courbe$ alors $(X-\alpha)^n \mid{} P$ et en passant au degré on a $\deg(X-\alpha)^n \leq \deg P$ et donc $n \leq \deg(P)$. Ainsi $\courbe$ admet un plus grand élément. D'où la définition
+alors c'est une partie de $\N^*$ non vide (puisque $1 \in \courbe$) et majorée par le degré de $P$. En effet si $n \in \courbe$ alors $(X-\alpha)^n \mid{} P$ et en passant au degré on a $\deg(X-\alpha)^n \leqslant \deg P$ et donc $n \leqslant \deg(P)$. Ainsi $\courbe$ admet un plus grand élément. D'où la définition
 
 \begin{defdef}
   Soient un un polynôme $P$ à coefficients dans $\K$ et un scalaire $\alpha$. On suppose que $\alpha$ est racine de $P$. Alors il existe un unique naturel $r \neq 0$ tel que $\alpha$ soit racine de $P$ d'ordre strictement égal à $r$, ($r=\max \courbe$).
@@ -755,11 +755,11 @@ Il y a deux manière de compter les racines d'un polynôme~:
   \end{itemize}
   D'après le corollaire~\ref{cor:tresImportant}, en comptant les racines avec leurs ordres de multiplicité
   \begin{equation}
-    \sum_{i=1}^p r_i \geq n+1
+    \sum_{i=1}^p r_i \geqslant n+1
   \end{equation}
   On a montré que $\prod_{i=1}^p (X-\alpha_i)^{r_i}$ divise $P$ donc en passant au degré
   \begin{equation}
-    \deg(P) \geq \deg\left(\prod_{i=1}^p (X-\alpha_i)^{r_i}\right) = \sum_{i=1}^p r_i \geq n+1
+    \deg(P) \geqslant \deg\left(\prod_{i=1}^p (X-\alpha_i)^{r_i}\right) = \sum_{i=1}^p r_i \geqslant n+1
   \end{equation}
 \end{proof}
 
@@ -785,11 +785,11 @@ Dans cette section $\K=\R$ ou $\C$.
 \subsection{Notion de polynôme dérivé}
 
 \begin{defdef}
-  Soit $P = \sum_{n \geq 0}a_n X^n$ un polynôme à coefficients dans $\K$. On définit le polynôme dérivée, noté $P'$, par
+  Soit $P = \sum_{n \geqslant 0}a_n X^n$ un polynôme à coefficients dans $\K$. On définit le polynôme dérivée, noté $P'$, par
   \begin{align}
-    P' &= \sum_{n \geq 1} na_n X^{n-1} \\
-    &=\sum_{n=1}^N na_n X^{n-1} && \forall N \geq \deg(P) \\
-    &=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p} && \forall N \geq \deg(P) \\
+    P' &= \sum_{n \geqslant 1} na_n X^{n-1} \\
+    &=\sum_{n=1}^N na_n X^{n-1} && \forall N \geqslant \deg(P) \\
+    &=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p} && \forall N \geqslant \deg(P) \\
   \end{align}
 \end{defdef}
 
@@ -807,9 +807,9 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si $\deg(P)>0$ on écrit $P$ sous la forme $P=\sum_{n=0}^N a_n X^n$ avec $N=\deg(P) \in \N^*$ et tel que $a_N \neq 0$. Alors $P'=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p}$ et de plus $\deg(P') \leq N-1$ $(N-1+1)a_{N-1+1}=Na_N \neq 0$. Le degré vaut donc $\deg(P') = N-1=\deg(P)-1$.
+  Si $\deg(P)>0$ on écrit $P$ sous la forme $P=\sum_{n=0}^N a_n X^n$ avec $N=\deg(P) \in \N^*$ et tel que $a_N \neq 0$. Alors $P'=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p}$ et de plus $\deg(P') \leqslant N-1$ $(N-1+1)a_{N-1+1}=Na_N \neq 0$. Le degré vaut donc $\deg(P') = N-1=\deg(P)-1$.
 
-  Si $\deg(P) \leq 0$, alors $P$ est un polynôme constant et son polynôme dérivée est nul. Alors son degré vaut $\deg(P')=-\infty$.
+  Si $\deg(P) \leqslant 0$, alors $P$ est un polynôme constant et son polynôme dérivée est nul. Alors son degré vaut $\deg(P')=-\infty$.
 \end{proof}
 
 \begin{prop}[Linéarité]
@@ -819,13 +819,13 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $P=\sum_{n \geq 0} a_n X^n$ et $Q=\sum_{n \geq 0} b_n X^n$. Alors $\lambda P+Q = \sum_{n \geq 0} (\lambda a_n+b_n) X^n$. Par définition du polynôme dérivé, on a
+  On note $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{n \geqslant 0} b_n X^n$. Alors $\lambda P+Q = \sum_{n \geqslant 0} (\lambda a_n+b_n) X^n$. Par définition du polynôme dérivé, on a
   \begin{equation}
-    (\lambda P+Q)' = \sum_{n \geq 1} n(\lambda a_n+b_n) X^{n-1}
+    (\lambda P+Q)' = \sum_{n \geqslant 1} n(\lambda a_n+b_n) X^{n-1}
   \end{equation}
   D'où
   \begin{align}
-    (\lambda P+Q)' &= \lambda \sum_{n \geq 1} n a_n X^{n-1} + \sum_{n \geq 1} n b_n X^{n-1}\\
+    (\lambda P+Q)' &= \lambda \sum_{n \geqslant 1} n a_n X^{n-1} + \sum_{n \geqslant 1} n b_n X^{n-1}\\
     &=\lambda P' +Q'
   \end{align}
 \end{proof}
@@ -837,13 +837,13 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $P=\sum_{n \geq 0} a_n X^n$ et $Q=\sum_{k \geq 0} b_k X^k$. Alors
+  On note $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{k \geqslant 0} b_k X^k$. Alors
   \begin{equation}
-    PQ = \left(\sum_{n \geq 0} a_n X^n\right) \left(\sum_{k \geq 0} b_k X^k\right) = \sum_{n \geq 0} \sum_{k \geq 0} a_nb_k X^{n+k}
+    PQ = \left(\sum_{n \geqslant 0} a_n X^n\right) \left(\sum_{k \geqslant 0} b_k X^k\right) = \sum_{n \geqslant 0} \sum_{k \geqslant 0} a_nb_k X^{n+k}
   \end{equation}
   La dérivation est linéaire donc~:
   \begin{equation}
-    (PQ)' = \sum_{n \geq 0} \sum_{k \geq 0} a_nb_k (X^{n+k})'
+    (PQ)' = \sum_{n \geqslant 0} \sum_{k \geqslant 0} a_nb_k (X^{n+k})'
   \end{equation}
   avec pour tous naturel $k$ et $n$
   \begin{align}
@@ -852,9 +852,9 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{align}
   Alors
   \begin{align}
-    (PQ)' &= \sum_{n \geq 0} \sum_{k \geq 0} a_nb_k ((X^n)'X^k +(X^k)'X^n) \\
-    &= \sum_{n \geq 0} a_n (X^n)' \cdot \sum_{k \geq 0} b_k X^k + \sum_{n \geq 0} a_n X^n \cdot \sum_{k \geq 0} b_k (X^k)' \\
-    &= \left(\sum_{n \geq 0} a_n X^n\right)' Q + P \left(\sum_{k \geq 0} b_k X^k\right)' \\
+    (PQ)' &= \sum_{n \geqslant 0} \sum_{k \geqslant 0} a_nb_k ((X^n)'X^k +(X^k)'X^n) \\
+    &= \sum_{n \geqslant 0} a_n (X^n)' \cdot \sum_{k \geqslant 0} b_k X^k + \sum_{n \geqslant 0} a_n X^n \cdot \sum_{k \geqslant 0} b_k (X^k)' \\
+    &= \left(\sum_{n \geqslant 0} a_n X^n\right)' Q + P \left(\sum_{k \geqslant 0} b_k X^k\right)' \\
     &=P'Q+PQ'
   \end{align}
 \end{proof}
@@ -873,7 +873,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \begin{prop}
   Soient $P \in \K[X]$ et $n \in \N$, alors
   \begin{equation}
-    \deg(P) \leq n \iff P^{(n+1)} = 0
+    \deg(P) \leqslant n \iff P^{(n+1)} = 0
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -881,12 +881,12 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \begin{equation}
     \deg(P^{(k)}) = \deg(P)-k = 0
   \end{equation}
-  Ainsi $P^{(k+1)}$ est le polynôme nul. Alors si on dérivent encore plus, c'est-à-dire si $\deg(P) \leq n$ alors $P^{(n+1)}=0$.
+  Ainsi $P^{(k+1)}$ est le polynôme nul. Alors si on dérivent encore plus, c'est-à-dire si $\deg(P) \leqslant n$ alors $P^{(n+1)}=0$.
 
-  Montrons la deuxième implication par contraposée~: si maintenant $\deg(P) \geq n+1$ alors par récurrence ``immédiate''
+  Montrons la deuxième implication par contraposée~: si maintenant $\deg(P) \geqslant n+1$ alors par récurrence ``immédiate''
   \begin{align}
-    \deg(P^{(n)}) &\geq n+1-n = 1 \\
-    \deg(P^{(n+1)}) &\geq 0
+    \deg(P^{(n)}) &\geqslant n+1-n = 1 \\
+    \deg(P^{(n+1)}) &\geqslant 0
   \end{align}
   Alors $P^{(n+1)}$ n'est pas le polynôme nul. 
 \end{proof}
@@ -932,7 +932,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \begin{align}
     \forall (n,k) \in \N^2 \quad &(X^n)^{(k)} = n(n-1) \ldots (n-k+1) X^{n-k}\\
     = &\begin{cases}
-      \frac{n!}{(n-k)!} X^{n-k} & k \leq n \\
+      \frac{n!}{(n-k)!} X^{n-k} & k \leqslant n \\
       0 & k > n
     \end{cases}
   \end{align}
@@ -940,17 +940,17 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \begin{proof}
   Pour un nturel $n$ fixé, on prouve pour tout $k \in \K$ l'assertion $\P_n(k)$ ``$(X^n)^{(k)} = n(n-1) \ldots (n-k+1) X^{n-k}=
     \begin{cases}
-      \frac{n!}{(n-k)!} X^{n-k} & k \leq n \\
+      \frac{n!}{(n-k)!} X^{n-k} & k \leqslant n \\
       0 & k > n
     \end{cases}$~''
 
     \emph{Initialisation}~: $\P_n(0)$ est vraie puisque $(X^n)^{(0)} = X^n$.
 
-    \emph{Hérédité}~: Soit un naturel $k$, supposons $\P_n(k)$. Si $k \leq n$ alors
+    \emph{Hérédité}~: Soit un naturel $k$, supposons $\P_n(k)$. Si $k \leqslant n$ alors
     \begin{align}
       (X^n)^{(k)} &= \frac{n!}{(n-k)!} X^{n-k} \\
       (X^n)^{(k+1)} &= \frac{n!}{(n-k)!} (n-k) X^{n-k-1} \\
-      &=\begin{cases} 0 & n=k \\ \frac{n!}{(n-k-1)!} X^{n-k-1} & k \leq n-1 \end{cases}
+      &=\begin{cases} 0 & n=k \\ \frac{n!}{(n-k-1)!} X^{n-k-1} & k \leqslant n-1 \end{cases}
     \end{align}
     Si $k > n$ alors $(X^n)^{(k)}$ donc $(X^n)^{(k+1)}=0$
 
@@ -962,7 +962,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \begin{theo}[Formule de Taylor pour les polynômes]
   Soit $P \in \K[X]$ et $a \in \K$, alors
   \begin{equation}
-    P = \sum_{n=0}^N \frac{P^{(n)}(a)}{n!} (X-a)^n \quad \forall N \geq \deg(P)
+    P = \sum_{n=0}^N \frac{P^{(n)}(a)}{n!} (X-a)^n \quad \forall N \geqslant \deg(P)
   \end{equation}
 \end{theo}
 \begin{proof}
@@ -970,9 +970,9 @@ Cependant si $\K=\C$, on ne sait rien faire.
 
   L'application $\varphi$ est linéaire~: Soient $(P,Q) \in \K[X]^2$ et $\lambda \in \K$ alors
   \begin{align}
-    \varphi(\lambda P +Q) &= \sum_{n \geq 0} \frac{(\lambda P+Q)^{(n)}(a)}{n!}(X-a)^n\\
- &= \sum_{n \geq 0} \frac{\lambda P^{(n)}(a) +Q^{(n)}(a)}{n!}(X-a)^n\\
- &= \lambda \sum_{n \geq 0} \frac{P^{(n)}(a)}{n!}(X-a)^n + \sum_{n \geq 0} \frac{Q^{(n)}(a)}{n!}(X-a)^n \\
+    \varphi(\lambda P +Q) &= \sum_{n \geqslant 0} \frac{(\lambda P+Q)^{(n)}(a)}{n!}(X-a)^n\\
+ &= \sum_{n \geqslant 0} \frac{\lambda P^{(n)}(a) +Q^{(n)}(a)}{n!}(X-a)^n\\
+ &= \lambda \sum_{n \geqslant 0} \frac{P^{(n)}(a)}{n!}(X-a)^n + \sum_{n \geqslant 0} \frac{Q^{(n)}(a)}{n!}(X-a)^n \\
  &= \lambda\varphi(P) +\varphi(Q)
   \end{align}
   Calculons pour tout $n \in \N$, $\varphi(X^n)$. D'après le lemme
@@ -1003,7 +1003,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{align}
   \begin{itemize}
   \item Si $r=1$, alors $P'(\alpha)=Q(\alpha) \neq 0$ donc $\alpha$ n'est pas racine de $P'$;
-  \item Si $r \geq 2$ alors $P'(\alpha) = 0$ et donc $\alpha$ est racine de $P'$. De plus
+  \item Si $r \geqslant 2$ alors $P'(\alpha) = 0$ et donc $\alpha$ est racine de $P'$. De plus
     \begin{align}
       P' &= (X-\alpha)^{r-1} (rQ + (X-\alpha)Q') \\
       &= (X-\alpha)^{r-1} Q_2
@@ -1030,7 +1030,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
       P(\alpha) = \ldots = P^{(r-1)}(\alpha)=0 \\
       P^{(r)}(\alpha) \neq 0
     \end{cases}$
-    alors la formule de Taylor pour $P$ en $\alpha$ nous donne pour tout naturel $N \geq \deg(P)$~:
+    alors la formule de Taylor pour $P$ en $\alpha$ nous donne pour tout naturel $N \geqslant \deg(P)$~:
     \begin{align}
       P &= \sum_{n=0}^N \frac{P^{(n)}}{n!} (X-\alpha)^n \\
       &= \sum_{n=r}^N \frac{P^{(n)}}{n!} (X-\alpha)^n \\
@@ -1065,11 +1065,11 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \begin{defdef}
   Soient $n \in \N^*$, $(x_1, \ldots, x_n) \in \K^n$. On définit les fonctions symétriques élémentaires de $x_1, \ldots, x_n$ notées $\sigma_1, \ldots, \sigma_n$ par~:
   \begin{align}
-    \sigma_1 &=\sum_{1\leq i_1 \leq n} x_{i_1} \\
-    \sigma_2 &=\sum_{1\leq i_1 \leq i_2 \leq n} x_{i_1} x_{i_2} \\
+    \sigma_1 &=\sum_{1\leqslant i_1 \leqslant n} x_{i_1} \\
+    \sigma_2 &=\sum_{1\leqslant i_1 \leqslant i_2 \leqslant n} x_{i_1} x_{i_2} \\
     \ldots \\
-    \sigma_p &=\sum_{1\leq i_1 \leq i_2 \leq \ldots \leq i_p\leq n} x_{i_1} x_{i_2} \ldots x_{i_p} \\
-    \sigma_n &= \prod_{1 \leq i_1 \leq n} x_{i_1}
+    \sigma_p &=\sum_{1\leqslant i_1 \leqslant i_2 \leqslant \ldots \leqslant i_p\leqslant n} x_{i_1} x_{i_2} \ldots x_{i_p} \\
+    \sigma_n &= \prod_{1 \leqslant i_1 \leqslant n} x_{i_1}
   \end{align}
 \end{defdef}
 
@@ -1374,7 +1374,7 @@ Dans $\R$, il faut remarque que $\bar{\jmath}=-\e^{\ii\pi/3}$ et $-\bar{\jmath}=
   \emph{Hérédité}~: Soit $n \in \N$ et on suppose $\P(n)$. Montrons que cela implique $\P(n+1)$. Soient deux polynômes $A$ et $B$ à coefficients dans $\K$ tels que $\deg(B)<n+1$. Deux cas sont possibles~:
   \begin{enumerate}
   \item Si $\deg(B)<n$ alors on applmique l'hypothèse de récurrence au couple $(A,B)$;
-  \item si $\deg(B)=n$, alors $B$ est non nul et on peut effectuer la division euclidienne de $A$ par $B$, alors il existe un unique couple de polynôme $(Q,R) \in \K[X]^2$ tel que $A=BQ+R$ et $\deg(R)\leq\deg(B)=n$.
+  \item si $\deg(B)=n$, alors $B$ est non nul et on peut effectuer la division euclidienne de $A$ par $B$, alors il existe un unique couple de polynôme $(Q,R) \in \K[X]^2$ tel que $A=BQ+R$ et $\deg(R)\leqslant\deg(B)=n$.
 
     On applique l'hypothèse de récurrence au couple $(B,R)$ et il existe un polynôme $D$ à coefficients dans $\K$ dont les diviseurs sont exactement les divisurs communs de $B$ et $R$ (c'est-à-dire les diviseurs communs de $A$ et $B$). Il existe un couple $(U_1,V_1) \in \K[X]^2$ tel que
     \begin{equation}
@@ -1407,7 +1407,7 @@ Dans $\R$, il faut remarque que $\bar{\jmath}=-\e^{\ii\pi/3}$ et $-\bar{\jmath}=
 
 \subsection{Algorithme d'Euclide}
 
-Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui permet de calculer le PGCD de deux polynômes $A$ et $B$. On pose $R_0=A$, $R_1=B$ et pour tout $n\geq 2$
+Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui permet de calculer le PGCD de deux polynômes $A$ et $B$. On pose $R_0=A$, $R_1=B$ et pour tout $n\geqslant 2$
  si $R_n \neq 0$ on définit $R_{n+1}$ comme le reste de la division euclidienne de $R_{n-1}$ par $R_n$. Le PGCD de $A$ et de $B$ est égal au dernier reste non nul, normalisé.
 
 \subsection{PPCM de deux polynômes}
@@ -1603,7 +1603,7 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
 \begin{prop}
   Soient $A$ et $B$ dans $\K[X]$ non constants tels que $A\wedge B=1$. Alors il existe un unique couple $(U_0,V_0) \in \K[X]^2$ tel que
   \begin{equation}
-    AU_0+BV_0 = 1 \quad \deg(U_0) \leq \deg(B) \quad \deg(V_0) \leq \deg(A).
+    AU_0+BV_0 = 1 \quad \deg(U_0) \leqslant \deg(B) \quad \deg(V_0) \leqslant \deg(A).
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -1635,12 +1635,12 @@ On pose alors $U=-\frac{1}{3}(X-1)$ et $B=\frac{1}{3}(1-(X-1)^2)$ avec $\deg(U)=
 \begin{defdef}
   Soit $P \in \K[X]$. Le polynôme $P$ est dit irréductible sur le corps $\K$ si~:
   \begin{itemize}
-  \item $\deg(P) \geq 1$
+  \item $\deg(P) \geqslant 1$
   \item les diviseurs de $P$ sont exactements les polynômes constants non nul et les associés de $P$.
   \end{itemize}
   Autrement dit, $P$ est dit irréductible sur le corps $\K$ si et seulement si
   \begin{itemize}
-  \item $\deg(P) \geq 1$
+  \item $\deg(P) \geqslant 1$
   \item $\forall A,B \in \K[X] \quad P=AB \implies \deg(A)=0 \text{~ou~} \deg(B)=0$
   \end{itemize}
 \end{defdef}
@@ -1674,7 +1674,7 @@ On pose alors $U=-\frac{1}{3}(X-1)$ et $B=\frac{1}{3}(1-(X-1)^2)$ avec $\deg(U)=
   \item Si $\Delta=0$ alors $P$ admet une racine double $x_0$ et $X-x_0\mid{}P$, $P$ n'est pas irréductible.
   \item Si $\Delta <0$ alors $P$ n'admet pas de racines réelles. S'il existait deux polynômes $A$ et $B$ de $\R[X]$ tels que $P=AB$ avec $\deg(A) = \deg(B)=1$, alors $A$ admettrait une racine réelle et donc $P$ aussi (Absurde), donc $P$ est irréductible.
   \end{itemize}
-  Si $P \i n \R[X]$ tel que $deg(P)\geq 3$ alors d'après le théorème de factorisation, on pourrait écrire $P$ comme un produit de polynômes de degré $1$ ou $2$~: $P$ admet des diviseurs non constants et non associés à lui-même. Alors $P$ n'est pas irréductible.
+  Si $P \i n \R[X]$ tel que $deg(P)\geqslant 3$ alors d'après le théorème de factorisation, on pourrait écrire $P$ comme un produit de polynômes de degré $1$ ou $2$~: $P$ admet des diviseurs non constants et non associés à lui-même. Alors $P$ n'est pas irréductible.
 \end{proof}
 
 \subsubsection{Propriétés des polynômes irréductibles}
@@ -1717,7 +1717,7 @@ On pose alors $U=-\frac{1}{3}(X-1)$ et $B=\frac{1}{3}(1-(X-1)^2)$ avec $\deg(U)=
 \begin{cor}
   Soient $A$ et $B$ deux polynômes de $\K[X]$ tels que $A=\lambda \prod_{i=1}^n P_i^{\alpha_i}$ et $B=\mu \prod_{i=1}^n P_i^{\beta_i}$ où $n \in \N^*$ et $P_1, \ldots, P_n$ sont irréductibles, unitaires et deux à deux distincts ; $(\lambda, \mu)\in\K$ et $\alpha_1, \ldots, \alpha_n$, $\beta_1,\ldots \beta_n \in \N$. Alors
   \begin{align}
-    A\mid{}B \iff \forall i \in \intervalleentier{1}{n} \quad \alpha_i \leq \beta_i \\
+    A\mid{}B \iff \forall i \in \intervalleentier{1}{n} \quad \alpha_i \leqslant \beta_i \\
     A \wedge B = \prod_{i=1}^n P_i^{\min(\alpha_i,\beta_i)}\\
     A \vee B = \prod_{i=1}^n P_i^{\max(\alpha_i,\beta_i)}
   \end{align}

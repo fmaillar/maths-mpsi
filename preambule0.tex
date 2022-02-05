@@ -156,6 +156,7 @@ breaklinks = true%
 \theoremstyle{definition} \newtheorem{defdef}{Définition}[chapter]
 %\newtheorem*{defdef_etoile}{Définition}
 \newtheorem{prop}{Proposition}[chapter]
+%\newtheorem{exercice}{Exercice}[chapter]
 \newtheorem{rappel}{Rappel}[chapter]
 \newtheorem{proprietes}{Propriétés}[chapter]
 \theoremstyle{plain} \newtheorem{cor}{Corollaire}[prop]
@@ -386,3 +387,14 @@ breaklinks = true%
 %   \let\@ifnextchar\new@ifnextchar
 %   \array{*\c@MaxMatrixCols c}}
 % \makeatother
+%
+\newcounter{exercice}
+\counterwithin*{exercice}{chapter}
+\newenvironment{exercice}[1][]{%
+\stepcounter{exercice}%
+\par\vspace{5pt}\noindent
+\fbox{\textbf{Exercice~\thechapter.\theexercice}}%
+\hrulefill\par\vspace{10pt}\noindent\rmfamily}%
+{\par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par}
+%
+\numberwithin{equation}{section}

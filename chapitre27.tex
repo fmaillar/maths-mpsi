@@ -337,7 +337,7 @@ Soient $n \in \N^*$, $A=(a_{ij})_{(i,j) \in \intervalleentier{1}{n}^2} \in \Mn{n
 
 \emph{Calcul de $A^\top A$ et $A A^\top$}
 
-On note $A^\top = (\alpha_{ij})_{1\leq i,j \leq n}$, $A^\top A= (c_{ij})_{1\leq i,j \leq n}$ et $A A^\top=(d_{ij})_{1\leq i,j \leq n}$. Alors pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a
+On note $A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}$, $A^\top A= (c_{ij})_{1\leqslant i,j \leqslant n}$ et $A A^\top=(d_{ij})_{1\leqslant i,j \leqslant n}$. Alors pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a
 \begin{gather}
   \alpha_{ij}=a_{ji};\\
   c_{ij} = \sum_{k=1}^n \alpha_{ik}a_{kj}=\sum_{k=1}^n a_{ki}a_{kj} = \prodscal{\courbe_i}{\courbe_j};\\
@@ -826,7 +826,7 @@ Soit $E_3$ l'espace euclidien supposé orienté.
       u &=(s \circ s) \circ v = s \circ v.
     \end{align}
     Alors $u$ est le produit d'au plus deux réflexions.
-  \item Cas 4~: $\Dim F=0$, soit $a \in E_3 \setminus \{0\}$ tel que $\norme{a}=1$ et soit $b=u(a)\neq a$. Alors $\norme{b}=1$, car $u$ est orthogonal. Soit $s$ l'unique réflexion telle que $a=s(b)$ et $b=s(a)$. Soit $v=s \circ u$, alors $v(a)=s(b)=a$. Comme $a \neq 0$, on a $\VectEngendre(a) \subset \Inv(v)$ et donc $\Dim \Inv(v) \geq 1$. L'application $v$ est le produit d'au plus deux réflexions, et alors $u=s \circ v$ est le produit d'au plus trois réflexions.
+  \item Cas 4~: $\Dim F=0$, soit $a \in E_3 \setminus \{0\}$ tel que $\norme{a}=1$ et soit $b=u(a)\neq a$. Alors $\norme{b}=1$, car $u$ est orthogonal. Soit $s$ l'unique réflexion telle que $a=s(b)$ et $b=s(a)$. Soit $v=s \circ u$, alors $v(a)=s(b)=a$. Comme $a \neq 0$, on a $\VectEngendre(a) \subset \Inv(v)$ et donc $\Dim \Inv(v) \geqslant 1$. L'application $v$ est le produit d'au plus deux réflexions, et alors $u=s \circ v$ est le produit d'au plus trois réflexions.
   \end{itemize}
 \end{proof}
 
@@ -852,17 +852,17 @@ Soit $r \in \SOrth{E_3}$. D'après la sous-section précédente, $r$ est le prod
 \begin{proof}
   Si $r=\Id$, alors le résultat est évident ($\congru{theta}{0}{2\pi}$). Sinon, il existe deux hyperplans distincts $P$ et $H$ tels que $r=s_P \circ s_H$ où $s_P$($s_H$) est la réflexion par rapport à $P$($H$). Soit $\Dr = P \cap H$.
 
-  Comme $p \neq H$ alors $\Dim \Dr \leq 1$. $P+H$ est un sous-espace vectoriel de $E_3$, donc
+  Comme $p \neq H$ alors $\Dim \Dr \leqslant 1$. $P+H$ est un sous-espace vectoriel de $E_3$, donc
   \begin{align}
-    3 &\geq \Dim(P+H) = \Dim P +\Dim H -\Dim(Dr) \\
-    3 &\geq 4 - \Dim Dr
-    \Dim \Dr &\geq 1.
+    3 &\geqslant \Dim(P+H) = \Dim P +\Dim H -\Dim(Dr) \\
+    3 &\geqslant 4 - \Dim Dr
+    \Dim \Dr &\geqslant 1.
   \end{align}
   Alors $\Dr$ est de dimension 1, c'est un droite. Soit $k \in E_3$ unitaire tel que $\Dr = \VectEngendre(k)$.
   \begin{equation}
     r(k) = s_P(s_H(k))=s_P(k)=k.
   \end{equation}
-  alors $\Dr \subset \Inv(r)$ et alors $\Dim \Inv(r) \geq 1$. Si $\Dim \Inv(r)=2$ alors $r$ est une réflexion (aburde) et si $\Dim \Inv(r)=3$ alors $r=\Id$ (absurde). Donc $\Dim\Inv(r)=1$.
+  alors $\Dr \subset \Inv(r)$ et alors $\Dim \Inv(r) \geqslant 1$. Si $\Dim \Inv(r)=2$ alors $r$ est une réflexion (aburde) et si $\Dim \Inv(r)=3$ alors $r=\Id$ (absurde). Donc $\Dim\Inv(r)=1$.
 
   Finalement $\Dr = \Inv(v)$. Soit $F=\Dr^\perp$. $\Dr$ est stable par $r$, donc $F$ est stable par $r$. Soit $\varphi=r_{|F}^{|F} \in \Orth{F}$. On induit une orientation sur $F$ à l'aide de l'orientation de $\Dr$ par $k$.
 

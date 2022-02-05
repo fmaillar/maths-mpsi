@@ -15,7 +15,7 @@ Soient $A$ une partie de $\R$ et $a \in \Rbar$ tel que $a$ est un point de $A$ o
   \end{itemize}
 \end{defdef}
 \begin{prop}
-  Si $U$ et $V$ sont deux voisinages de $a$, alors $U \cap V$ est aussi un voisingae de $a$.
+  Si $U$ et $V$ sont deux voisinages de $a$, alors $U \cap V$ est aussi un voisinage de $a$.
 \end{prop}
 
 \subsection{Relation de domination}
@@ -239,7 +239,7 @@ Contre exemple de la réciproque : Soient $A=\intervalleoo{0}{+\infty}$, $a=+\in
   Soient deux fonctions $f$ et $g$ de $\R^A$. Si $f\sim_a g$ alors $fg$ est positive au voisinage de $a$. De plus si $f$ est à valeurs strictement positives au voisinage de $a$, alors $g$ aussi.
 \end{prop}
 \begin{proof}
-  Il existe une fonction $\varphi$ de limite égale à 1 en $a$ telle qu'au voisinage de $a$ on a $f=\varphi g$. Alors au voisinage de $a$ $fg=\varphi g^2$. Au voisinage de $a$, $\varphi$ est à valeurs strictement positives donc $\varphi g^2 \geq 0$ et ainsi $fg \geq 0$. Si $g$ est à valeurs strictement positives au voisinage de $a$, alors $f=\varphi g$ est à valeurs strictement positives au voisinage de $a$.
+  Il existe une fonction $\varphi$ de limite égale à 1 en $a$ telle qu'au voisinage de $a$ on a $f=\varphi g$. Alors au voisinage de $a$ $fg=\varphi g^2$. Au voisinage de $a$, $\varphi$ est à valeurs strictement positives donc $\varphi g^2 \geqslant 0$ et ainsi $fg \geqslant 0$. Si $g$ est à valeurs strictement positives au voisinage de $a$, alors $f=\varphi g$ est à valeurs strictement positives au voisinage de $a$.
 \end{proof}
 \begin{prop}[Compatibilités]
   Soient $f$, $g$, $f_1$, $g_1$, $f_2$, et $g_2$ des fonctions de $\R^A$, alors~:
@@ -264,7 +264,7 @@ Contre exemple de la réciproque : Soient $A=\intervalleoo{0}{+\infty}$, $a=+\in
 \subsection{Exemples fondamentaux d'équivalents -- comparaison de fonctions usuelles}
 
 \subsubsection{Polynômes}
-Soit $f$ une fonction polynomiale de $\R$ dans $\R$. Il existe deux entiers naturels $p, n$ avec $p \leq n$ et des réels $a_p, \ldots, a_n$ avec $a_p \neq 0$ et $a_n \neq 0$ tels que
+Soit $f$ une fonction polynomiale de $\R$ dans $\R$. Il existe deux entiers naturels $p, n$ avec $p \leqslant n$ et des réels $a_p, \ldots, a_n$ avec $a_p \neq 0$ et $a_n \neq 0$ tels que
 \begin{equation}
   \forall x \in \R \quad f(x)=\sum_{k=p}^{n} a_k x^k = a_p x^P + \dotsb + a_n x^n
 \end{equation}
@@ -510,15 +510,15 @@ Retenir qu'en général, on ne peut pas sommer les équivalents. Prenons par exe
   Il existe un voisinage $W$ de $a$ dans lequel $g_1$ et $g_2$ sont strictements positives. Soit le voisinage de $a$, $U_0=U \cap V \cap W$, alors
   \begin{align}
     \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} & =\frac{\abs{(\varphi_1(x)-1)g_1(x) + (\varphi_2(x)-1)g_2(x)}}{g_1(x)+g_2(x)}\\
-    & \leq \frac{g_1(x)\abs{\varphi_1(x) -1}}{g_1(x)+g_2(x)} + \frac{g_2(x)\abs{\varphi_2(x) -1}}{g_1(x)+g_2(x)}
+    & \leqslant \frac{g_1(x)\abs{\varphi_1(x) -1}}{g_1(x)+g_2(x)} + \frac{g_2(x)\abs{\varphi_2(x) -1}}{g_1(x)+g_2(x)}
   \end{align}
   De plus
   \begin{equation}
-    \forall x \in W \ \frac{g_1(x)}{g_1(x)+g_2(x)} \leq 1 \quad \frac{g_2(x)}{g_1(x)+g_2(x)} \leq 1.
+    \forall x \in W \ \frac{g_1(x)}{g_1(x)+g_2(x)} \leqslant 1 \quad \frac{g_2(x)}{g_1(x)+g_2(x)} \leqslant 1.
   \end{equation}
   Alors
   \begin{equation}
-    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} \leq \abs{\varphi_1(x) -1} + \abs{\varphi_2(x) -1}.
+    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} \leqslant \abs{\varphi_1(x) -1} + \abs{\varphi_2(x) -1}.
   \end{equation}
   On sait que $\varphi_1$ et $\varphi_2$ tendent vers $1$ en $a$. Donc par théorème d'encadrement $\frac{f_1+f_2}{g_1+g_2}$ tend vers 1 en $a$. C'est-à-dire que $f_1+f_2 \sim_a g_1+g_2$.
 \end{proof}
@@ -684,7 +684,7 @@ En pratique si on cherche le $DL_n(a)$ de $f$,
 
 On conserve les mêmes notations.
 \begin{theo}
-  Soient $p$ et $n$ deux naturels tels que $p \leq n$. Si $f$ admet le $DL_n(a)$ suivant
+  Soient $p$ et $n$ deux naturels tels que $p \leqslant n$. Si $f$ admet le $DL_n(a)$ suivant
   \begin{equation}
     f(x)=\sum_{k=0}^n \alpha_k (x-a)^k +\petitof{a}{(x-a)^n},
   \end{equation}
@@ -702,7 +702,7 @@ On conserve les mêmes notations.
     & = \sum_{k=0}^p \alpha_k (x-a)^k \\
     & \phantom{=} + (x-a)^p\left[\sum_{k=p+1}^n \alpha_k (x-a)^{k-p} +\epsilon(x)(x-a)^{n-p}\right],
   \end{align}
-  comme tous les entiers $k \geq p+1$ dans la deuxième somme alors 
+  comme tous les entiers $k \geqslant p+1$ dans la deuxième somme alors 
   \begin{equation}
     \lim\limits_{x \to a} \sum_{k=p+1}^n \alpha_k (x-a)^{k-p} +\epsilon(x)(x-a)^{n-p} =0.
   \end{equation}
@@ -918,7 +918,7 @@ On suppose que $f$ admet le $DL_n(a)$ suivant
 \begin{equation}
   f(x) = \sum_{k=0}^n \alpha_k (x-a)^k + \petitof{a}{(x-a)^n}.
 \end{equation}
-Alors $f(x) \sim_a \sum_{k=0}^n \alpha_k (x-a)^k$ en supposant qu'il existe $k \leq n-1$ tel que $\alpha_k \neq 0$ alors
+Alors $f(x) \sim_a \sum_{k=0}^n \alpha_k (x-a)^k$ en supposant qu'il existe $k \leqslant n-1$ tel que $\alpha_k \neq 0$ alors
 \begin{equation}
   f(x) - \sum_{k=0}^{n-1} \alpha_k (x-a)^k \sim_a \alpha_n (x-a)^n.
 \end{equation}

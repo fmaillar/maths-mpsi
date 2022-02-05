@@ -11,7 +11,7 @@
 \subsubsection{Théorème de Fubini -- Définitions}
 
 \begin{theo}[Admis]
-  Soient quatre réels $a$, $b$, $c$ et $d$ tels que $a\leq b$ et $c \leq d$, $f$ une fonction continue sur le rectangle $\intervalleff{a}{b} \times \intervalleff{c}{d}$. Alors
+  Soient quatre réels $a$, $b$, $c$ et $d$ tels que $a\leqslant b$ et $c \leqslant d$, $f$ une fonction continue sur le rectangle $\intervalleff{a}{b} \times \intervalleff{c}{d}$. Alors
   \begin{equation}
     \int_a^b\left(\int_c^d f(x,y)\diff y \right)\diff x = \int_c^d\left(\int_a^b f(x,y)\diff x\right)\diff y. 
   \end{equation}
@@ -23,7 +23,7 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
 
 \emph{Interprétation}~:
 \begin{enumerate}
-\item Lorsque $f$ est à valeurs positives, $\iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f$ représente le volume de l'ensemble $\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times \intervalleff{c}{d} \ 0 \leq z \leq f(x,y)}$.
+\item Lorsque $f$ est à valeurs positives, $\iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f$ représente le volume de l'ensemble $\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times \intervalleff{c}{d} \ 0 \leqslant z \leqslant f(x,y)}$.
 \item Lorsque $f=\tilde{1}$ sur le rectangle $\intervalleff{a}{b} \times \intervalleff{c}{d}$,
   \begin{equation}
      \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}\tilde{1}=(a-b)(c-d).
@@ -45,15 +45,15 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
   \end{equation}
 \end{prop}
 \begin{prop}
-  Soient $R_1$ et $R_2$ deux rectangles disjoints du plan, $f$ une fontion continue sur $R_1 \cup R_2$. Alors
+  Soient $R_1$ et $R_2$ deux rectangles disjoints du plan, $f$ une fonction continue sur $R_1 \cup R_2$. Alors
   \begin{equation}
     \iint_{R_1 \cup R_2} f = \iint_{R_1} f + \iint_{R_2} f.
   \end{equation}
 \end{prop}
 \begin{prop}
-  Soient $R$ un rectangle du plan, deux fonctions continues $f$ et $g$. Supposons que $f \leq g$, alors
+  Soient $R$ un rectangle du plan, deux fonctions continues $f$ et $g$. Supposons que $f \leqslant g$, alors
   \begin{equation}
-    \iint_R f \leq \iint_R g.
+    \iint_R f \leqslant \iint_R g.
   \end{equation}
 \end{prop}
 
@@ -64,13 +64,13 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
 \begin{defdef}
   On appelle domaine simple du plan toute partie $\Ddomaine$ de $\R^2$ telle~:
   \begin{itemize}
-  \item qu'il existe quatre réels $a$, $b$, $c$ et $d$ ($a\leq b$ et $c \leq d$) ;
+  \item qu'il existe quatre réels $a$, $b$, $c$ et $d$ ($a\leqslant b$ et $c \leqslant d$) ;
   \item qu'il existe des fonctions continues $\varphi_1$ et $\varphi_2$ de $\intervalleff{a}{b}$ vers $\R$; et $\psi_1$ et $\psi_2$ de $\intervalleff{c}{d}$ vers $\R$ ;
   \end{itemize}
   telles que
   \begin{align}
-    \Ddomaine&=\enstq{(x,y)\in\R^2}{a\leq x\leq b \quad \varphi_1(x)\leq y\leq \varphi_2(x)}\\
-    &=\enstq{(x,y)\in\R^2}{c \leq y \leq d \quad \psi_1(y) \leq x \leq \psi_2(y)}
+    \Ddomaine&=\enstq{(x,y)\in\R^2}{a\leqslant x\leqslant b \quad \varphi_1(x)\leqslant y\leqslant \varphi_2(x)}\\
+    &=\enstq{(x,y)\in\R^2}{c \leqslant y \leqslant d \quad \psi_1(y) \leqslant x \leqslant \psi_2(y)}
   \end{align}
 \end{defdef}
 
@@ -101,9 +101,9 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
 \begin{prop}[Croissance]
   Soient $\Ddomaine$ un domaine simple du plan, $f$ et $g$ deux fonctions continues sur $\Ddomaine$. Alors
   \begin{equation}
-    f \leq g \implies \iint_{\Ddomaine} f \leq \iint_{\Ddomaine} f.
+    f \leqslant g \implies \iint_{\Ddomaine} f \leqslant \iint_{\Ddomaine} f.
   \end{equation}
-  En particulier si $f \geq \tilde{0}$ alors $\iint_{\Ddomaine} f \geq 0$.
+  En particulier si $f \geqslant \tilde{0}$ alors $\iint_{\Ddomaine} f \geqslant 0$.
 \end{prop}
 
 \subsection{Changements de variables}
@@ -132,7 +132,7 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
 \end{defdef}
 %
 \begin{prop}[Admise]
-  Si $\varphi$ est un $\classe{1}$-difféomorhisme de $U$ sur $V$, alors pour tout $(x,y) \in U^2$ la matrice jacobienne $J_\varphi(x,y)$ est inversible et~:
+  Si $\varphi$ est un $\classe{1}$-difféomorphisme de $U$ sur $V$, alors pour tout $(x,y) \in U^2$ la matrice jacobienne $J_\varphi(x,y)$ est inversible et~:
   \begin{equation}
     J_\varphi(x,y)^{-1} = J_{\varphi^{-1}}(x,y).
   \end{equation}
@@ -141,7 +141,7 @@ Cette valeur commune est appelée intégrale double de $f$ sur le rectangle $\in
 \subsubsection{Théorème de changement de variable}
 
 \begin{theo}
-  Soient $U$ et $V$ deux ouverts de $\R^2$, $\varphi$ un $\classe{1}$-difféormorphisme de $U$ sur $V$. Soit $\Ddomaine$ un domaine simple de $\R^2$ tel que $\Ddomaine \subset U$ et $\Delta = \varphi(\Ddomaine)$ soit un domaine simple inclus dans $V$.
+  Soient $U$ et $V$ deux ouverts de $\R^2$, $\varphi$ un $\classe{1}$-difféomorphisme de $U$ sur $V$. Soit $\Ddomaine$ un domaine simple de $\R^2$ tel que $\Ddomaine \subset U$ et $\Delta = \varphi(\Ddomaine)$ soit un domaine simple inclus dans $V$.
 
   Soit $f$ une fonction continue sur $\Ddomaine$ à valeurs dans $\R$, alors
   \begin{equation}
@@ -180,8 +180,8 @@ Soit $\Ddomaine$ un domaine simple de $\R^2$ tel que $\Ddomaine \subset U$ et $\
 
 \emph{Exemple -- Aire d'un disque}~: Soit $\Delta$ le disque de centre $O$ et de rayon $R>0$, tels que
  \begin{align}
-   \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad \Delta=\enstq{(x,y)\in\R^2}{x^2+y^2\leq R^2} \\
-   \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)} \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leq r \leq R \ 0 \leq \theta \leq 2\pi}
+   \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad \Delta=\enstq{(x,y)\in\R^2}{x^2+y^2\leqslant R^2} \\
+   \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)} \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leqslant r \leqslant R \ 0 \leqslant \theta \leqslant 2\pi}
  \end{align}
 Alors
 \begin{align}
@@ -194,7 +194,7 @@ Alors
 
 \section{Champs de vecteurs et champs de scalaires}
 
-On suppose que $n \in \{2, 3\}$ et on considére l'espace vectoriel $\R^n$ muni de sa structure canonique d'espace euclidien. On note $e=(e_i)_{1 \leq i \leq n}$ sa base canonique. Soit $U$ un ouvert de $\R^n$.
+On suppose que $n \in \{2, 3\}$ et on considère l'espace vectoriel $\R^n$ muni de sa structure canonique d'espace euclidien. On note $e=(e_i)_{1 \leqslant i \leqslant n}$ sa base canonique. Soit $U$ un ouvert de $\R^n$.
 
 \subsection{Gradient d'un champ de scalaires}
 
@@ -322,7 +322,7 @@ L'application $\fonction{\rot \vect{F}}{U}{\R^n}{M}{\rot \vect{F}(M)}$ est un ch
   \end{equation}
   d'après le théorème de Schwarz.
 
-  Le calcul donne le même résultat pour la deuxième et troisème composante du vecteur, de telle sorte que $\rot\vect{F}(M)=\vect{0}$.
+  Le calcul donne le même résultat pour la deuxième et troisième composante du vecteur, de telle sorte que $\rot\vect{F}(M)=\vect{0}$.
 \end{proof}
 
 \begin{cor}
@@ -388,7 +388,7 @@ Supposons que la notion de courbe paramétrée s'étend à l'espace ($n \in \{2,
 \end{proof}
 
 \begin{prop}
-  Sous les mêmes hypothèses, on suppose de plus que le champ de vecteurs $\vect{F}$ déribe d'un potentiel scalaire $h$. Alors
+  Sous les mêmes hypothèses, on suppose de plus que le champ de vecteurs $\vect{F}$ dérive d'un potentiel scalaire $h$. Alors
   \begin{equation}
     \oint_\Gamma \vect{F}(M)\vect{\diff M} = h(B)-h(A),
   \end{equation}
@@ -417,5 +417,4 @@ Particulièrement la circulation d'un champ de vecteurs qui dérive d'un potenti
   \begin{equation}
     \oint_\Gamma P(x,y) \diff x +Q(x,y)\diff y = \iint_\Ddomaine \left(\derivep{Q}{x}(x,y) - \derivep{Q}{y}(x,y)\right)\diff x \diff y.
   \end{equation}
-
 \end{theo}

@@ -309,9 +309,9 @@ On a déjà vu que $(\Mn{n}{\K},+,\perp)$ était un espace vectoriel. Alors $(\M
 
 Ainsi, $(\Mn{n}{\K},+,\cdot)$ est un anneau.
 
-\emph{Remarque}~: $\Mn{n}{\K}$ est une $\K$-algèbre. C'est un anneau non-commutatif et non intègre dès que $n\geq 2$.
+\emph{Remarque}~: $\Mn{n}{\K}$ est une $\K$-algèbre. C'est un anneau non-commutatif et non intègre dès que $n\geqslant 2$.
 \begin{equation}
-  E_{11}E_{1n}=\delta_{11}E_{1n} \qquad E_{1n}E_{11}=\delta_{n1}E_{11}=0 \, (n\geq 2)
+  E_{11}E_{1n}=\delta_{11}E_{1n} \qquad E_{1n}E_{11}=\delta_{n1}E_{11}=0 \, (n\geqslant 2)
 \end{equation}
 
 \subsubsection{Isomorphisme canonique entre $\Mn{n}{\K}$ et $\Endo{\K^p}$}
@@ -419,15 +419,15 @@ Soient un naturel $n$ et $A=(a_{ij}) \in \Mn{n}{\K}$. On dit que~:
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit une matrice diagonale $A=\text{diag}(a_{11},\ldots,a_{nn})$, alors $A=\sum_{i=1}^n a_{ii}E_{ii}$. Ainsi $\Dr_n(\K)=\VectEngendre{(E_{ii})_{1\leq i\leq n}}$ et la famille $(E_{ii})_{1\leq i\leq n}$ est libre (puisque c'est une sous famille de la base canonique). Cette famille est donc une base de $\Dr_n(\K)$ et alors on a bien la dimension $\dim(\Dr_n(\K)) = \Card((E_{ii})_{1\leq i\leq n})=n$.
+  Soit une matrice diagonale $A=\text{diag}(a_{11},\ldots,a_{nn})$, alors $A=\sum_{i=1}^n a_{ii}E_{ii}$. Ainsi $\Dr_n(\K)=\VectEngendre{(E_{ii})_{1\leqslant i\leqslant n}}$ et la famille $(E_{ii})_{1\leqslant i\leqslant n}$ est libre (puisque c'est une sous famille de la base canonique). Cette famille est donc une base de $\Dr_n(\K)$ et alors on a bien la dimension $\dim(\Dr_n(\K)) = \Card((E_{ii})_{1\leqslant i\leqslant n})=n$.
 
-  De la même manière, on a  $T_n^s(\K) = \VectEngendre{(E_{ij})_{1\leq i \leq j \leq n}}$. De la même manière la famille génératrice est une sous famille de la base canonique. Donc elle est libre. Finalement c'est une base. Le cardinal de cette famille vaut $\frac{n(n-1)}{2}+n=\frac{n(n+1)}{2}$.
+  De la même manière, on a  $T_n^s(\K) = \VectEngendre{(E_{ij})_{1\leqslant i \leqslant j \leqslant n}}$. De la même manière la famille génératrice est une sous famille de la base canonique. Donc elle est libre. Finalement c'est une base. Le cardinal de cette famille vaut $\frac{n(n-1)}{2}+n=\frac{n(n+1)}{2}$.
 
   Idem pour $T_n^s(\K)$. 
 \end{proof}
 
 \begin{prop}
-  $\Dr_n(\K)$, $T_n^s(\K)$ et $T_n^i(\K)$ sont des sous anneaux de $\Mn{n}{\K}$. De plus $\Dr_n(\K)$ est commutatif, $T_n^s(\K)$ et $T_n^i(\K)$ ne sont ni commutatifs ni intègre (si $n \geq 2$).
+  $\Dr_n(\K)$, $T_n^s(\K)$ et $T_n^i(\K)$ sont des sous anneaux de $\Mn{n}{\K}$. De plus $\Dr_n(\K)$ est commutatif, $T_n^s(\K)$ et $T_n^i(\K)$ ne sont ni commutatifs ni intègre (si $n \geqslant 2$).
 \end{prop}
 \begin{proof}
   Ce sont déjà des sous espaces vectoriels, alors il s'agit de vérifier s'ils sont stables par la multiplication et si l'élémentneutre $I_n$ leurs appartient.
@@ -555,7 +555,7 @@ L'ensemble des matrices de $\Mn{n}{\K}$ symétriques est noté $\SN{n}{\K}$ et c
     A&= p(A)+ (A-p(A))\\
     &= p(A)+q(A)
   \end{align}
-  La famille $p(E_{ij})_{1\leq i,j \leq n}$ est génératrice de $\Image(p)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $p(E_{ij})=p(E_{ji})$. Alors $p(E_{ij})_{1\leq i \leq j \leq n}$ est génératrice de $\Image(p)=\SN{n}{\K}$. Donc $\dim(\SN{n}{\K}) \leq \frac{n(n+1)}{2}$. De même $q(E_{ij})_{1\leq i,j \leq n}$ est génératrice de $\Image(q)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $q(E_{ij})=-q(E_{ji})$, en particulier $Q(E_{ii})=0$. Alors $q(E_{ij})_{1\leq i \leq j \leq n}$ est génératrice de $\Image(q)=\AN{n}{\K}$. Donc $\dim(\AN{n}{\K}) \leq \frac{n(n-1)}{2}$. Or puisqu'ils sont supplémentaires, on a l'égalité dans les dimensions.
+  La famille $p(E_{ij})_{1\leqslant i,j \leqslant n}$ est génératrice de $\Image(p)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $p(E_{ij})=p(E_{ji})$. Alors $p(E_{ij})_{1\leqslant i \leqslant j \leqslant n}$ est génératrice de $\Image(p)=\SN{n}{\K}$. Donc $\dim(\SN{n}{\K}) \leqslant \frac{n(n+1)}{2}$. De même $q(E_{ij})_{1\leqslant i,j \leqslant n}$ est génératrice de $\Image(q)$ et pour tout $(i,j) \in \intervalleentier{1}{n}^2$ on a $q(E_{ij})=-q(E_{ji})$, en particulier $Q(E_{ii})=0$. Alors $q(E_{ij})_{1\leqslant i \leqslant j \leqslant n}$ est génératrice de $\Image(q)=\AN{n}{\K}$. Donc $\dim(\AN{n}{\K}) \leqslant \frac{n(n-1)}{2}$. Or puisqu'ils sont supplémentaires, on a l'égalité dans les dimensions.
 \end{proof}
 
 \emph{Exemple pertinent}~: Pour toute matrice $M \in \Mn{n}{\K}$, les matrices $MM^\top$ et $M^\top M$ sont symétriques. C'est la base de la décomposition en valeurs singulières.
@@ -636,7 +636,7 @@ Alors $u \circ v = \Id_F$ et $v \circ u = \Id_E$. L'application $u$ est bijectiv
 \subsubsection{Définitions}
 
 \begin{defdef}
-  Soit un naturel $q$ non nul et $\X=(x_i)_{1 \leq i \leq q} \in E^q$. On définit la matrice de $\X$ dans la base $\E$ de $E$, notée $\Mat_\E(\X)$ par
+  Soit un naturel $q$ non nul et $\X=(x_i)_{1 \leqslant i \leqslant q} \in E^q$. On définit la matrice de $\X$ dans la base $\E$ de $E$, notée $\Mat_\E(\X)$ par
   \begin{equation}
     \Mat_{\E}(\X) =
     \begin{pmatrix}
@@ -656,7 +656,7 @@ Alors $u \circ v = \Id_F$ et $v \circ u = \Id_E$. L'application $u$ est bijectiv
 \subsubsection{Caractérisation des bases parmi les matrice}
 
 \begin{theo}
-  Soit $\X=(x_i)_{1 \leq i\leq p}$ une famille de $p$ vecteurs de $E$ ($p=\dim E$). Il y a équivalence entre les assertions suivantes~:
+  Soit $\X=(x_i)_{1 \leqslant i\leqslant p}$ une famille de $p$ vecteurs de $E$ ($p=\dim E$). Il y a équivalence entre les assertions suivantes~:
   \begin{enumerate}
   \item $\X$ est une base de $E$;
   \item pour toute base $\E$ de $E$, $\Mat_\E(\X) \in \GLn{p}{\K}$;
@@ -753,13 +753,13 @@ Soient deux naturel non nuls $n$ et $p$, et une matrice $A \in \Mnp{n}{p}{\K}$.
 
 \subsection{Rang du système des vecteurs colonnes}
 
-On note $A=(a_{ij})_{1\leq i\leq n, 1\leq j\leq p}$ et pour tout $j \in \intervalleentier{1}{p}$ le vecteur colonne $j$ est $c_j=(a_{ij})_{1 \leq i \leq n} \in \K^n$. La famille des vecteurs colonnes de la matrice $A$ est $\courbe_A=(c_j)_{1 \leq j \leq p} \in (\K^n)^p$.
+On note $A=(a_{ij})_{1\leqslant i\leqslant n, 1\leqslant j\leqslant p}$ et pour tout $j \in \intervalleentier{1}{p}$ le vecteur colonne $j$ est $c_j=(a_{ij})_{1 \leqslant i \leqslant n} \in \K^n$. La famille des vecteurs colonnes de la matrice $A$ est $\courbe_A=(c_j)_{1 \leqslant j \leqslant p} \in (\K^n)^p$.
 
 \begin{defdef}
   On appelle rang de la matrice $A$ et on note $\rg(A)$  le rang de la famille de vecteur $\courbe_A$ des colonnes de $A$.
 \end{defdef}
 
-On en déduit que $\rg(A) \leq \min(n,p)$ car $\courbe_A$ est une famille de $p$ vecteurs de $\K^n$. De plus,
+On en déduit que $\rg(A) \leqslant \min(n,p)$ car $\courbe_A$ est une famille de $p$ vecteurs de $\K^n$. De plus,
 \begin{align}
   \rg(A) = 0 &\iff \dim \VectEngendre(\courbe_A)=0 \\
   &\iff \forall j \in \intervalleentier{1}{p} c_j = 0_{\K^n} \\
@@ -767,7 +767,7 @@ On en déduit que $\rg(A) \leq \min(n,p)$ car $\courbe_A$ est une famille de $p$
 \end{align}
 
 \begin{prop}
-  Soit un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle, $\E$ une base de $E$ et $\X=(x_i)_{1\leq i\leq n}$ une famille de vecteur de $E$. Alors
+  Soit un $\K$-espace vectoriel $E$ de dimension finie $p$ non nulle, $\E$ une base de $E$ et $\X=(x_i)_{1\leqslant i\leqslant n}$ une famille de vecteur de $E$. Alors
   \begin{equation}
     \rg(\X)=\rg(\Mat_\E(\X)).
   \end{equation}
@@ -822,7 +822,7 @@ On en déduit que $\rg(A) \leq \min(n,p)$ car $\courbe_A$ est une famille de $p$
 
 \subsection{Matrice $J_r$}
 
-Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ tel que $r \leq \min(n,p)$. Posons
+Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ tel que $r \leqslant \min(n,p)$. Posons
 \begin{equation}
   J_{n,p,r}=
   \begin{pmatrix}
@@ -837,7 +837,7 @@ Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ 
 \end{prop}
 
 \begin{theo}
-  Soit une matrice $A \in \Mnp{n}{p}{\K}$ et un un naturel $r$ non nul tel que $r \leq \min(n,p)$. Alors $r=\rg(A)$ si et seulement s'il existe deux matrices $U \in \GLn{n}{\K}$ et $V \in \GLn{p}{\K}$ telles que $A=UJ_{n,p,r}V$.
+  Soit une matrice $A \in \Mnp{n}{p}{\K}$ et un un naturel $r$ non nul tel que $r \leqslant \min(n,p)$. Alors $r=\rg(A)$ si et seulement s'il existe deux matrices $U \in \GLn{n}{\K}$ et $V \in \GLn{p}{\K}$ telles que $A=UJ_{n,p,r}V$.
 \end{theo}
 \begin{proof}
   $\implies$ Soit l'application linéaire $u$ de $\K^p$ vers $\K^n$ canoniquement associée à $A$. Nous allons construire des bases de $\K^p$ et $\K^n$ dans lesquelles la matrice de $u$ sera $J_{n,p,r}$. 
@@ -848,12 +848,12 @@ Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ 
   \end{equation}
   alors $\dim \Ker(u) = p-r$. Soit $(e_{r+1}, \ldots, e_p)$ une base de $\Ker(u)$. Par théorème de la base incomplète, on peut compléter cette famille libre de $\K^p$ en base de $\K^p$ : $(e_1, \ldots, e_r, e_{r+1}, \ldots, e_p)$. Pour tout $i \in \intervalleentier{1}{r}$, on pose $f_i = u(e_i)$. Alors
   \begin{align}
-    \rg(f_i)_{1 \leq i \leq r} &= \rg(u(e_i))_{1 \leq i \leq r}\\
-    &= \rg(u(e_i))_{1 \leq i \leq p}\\
+    \rg(f_i)_{1 \leqslant i \leqslant r} &= \rg(u(e_i))_{1 \leqslant i \leqslant r}\\
+    &= \rg(u(e_i))_{1 \leqslant i \leqslant p}\\
     &= \rg(u(\E))\\
     &=\rg(u)=r.
   \end{align}
-  Donc $(f_i)_{1\leq i\leq r}$ est une famille libre de $\K^p$ (voir proposition~\ref{prop:caracrangbase}). On peut donc compléter cette famille en une base $\F=(f_1, \ldots, f_r,f_{r+1}, \ldots, f_n)$. Alors pour tout $i \in \intervalleentier{1}{r}$ $u(e_i)=f_i$, et pour tout $i \in \intervalleentier{r+1}{p}$ $u(e_i)=0$. Donc $\Mat_{\E,\F}(u) = J_{n,p,r}$.
+  Donc $(f_i)_{1\leqslant i\leqslant r}$ est une famille libre de $\K^p$ (voir proposition~\ref{prop:caracrangbase}). On peut donc compléter cette famille en une base $\F=(f_1, \ldots, f_r,f_{r+1}, \ldots, f_n)$. Alors pour tout $i \in \intervalleentier{1}{r}$ $u(e_i)=f_i$, et pour tout $i \in \intervalleentier{r+1}{p}$ $u(e_i)=0$. Donc $\Mat_{\E,\F}(u) = J_{n,p,r}$.
 
   On a $A=\Mat_{\E_c,\F_c}(u)$. Soient $P=\P_{\E_c,\E} \in \GLn{p}{\K}$ et $Q=\P_{\F_c,\F} \in \GLn{n}{\K}$. Alors $J_{n,p,r}=Q^{-1}AP$, c'est-à-dire $A=QJ_{n,p,r}P^{-1}$. En posant $U=Q$, $V=P^{-1}$ on a bien $A=U J_{n,p,r} V$.
   
@@ -891,7 +891,7 @@ Soient deux naturel non nuls $n$ et $p$. Soit un troisième naturel non nul $r$ 
 
 \subsection{Rang d'un système de vecteurs lignes}
 
-On note pour tout toute matrice $A \in \Mnp{n}{p}{\K}$ et pour tout $i \in \intervalleentier{1}{n}$, $L_i=(a_{i1}, \ldots, a_{ip}) \in \K^p$ ety $\L_A=(L_i)_{1\leq i \leq n}$.
+On note pour tout toute matrice $A \in \Mnp{n}{p}{\K}$ et pour tout $i \in \intervalleentier{1}{n}$, $L_i=(a_{i1}, \ldots, a_{ip}) \in \K^p$ ety $\L_A=(L_i)_{1\leqslant i \leqslant n}$.
 \begin{prop}
   Pour toute matrice $A \in \Mnp{n}{p}{\K}$, on a
   \begin{equation}

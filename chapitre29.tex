@@ -13,10 +13,10 @@
 \begin{defdef}
   Soit $E$ un espace vectoriel réel. On appelle norme sur $E$ toute application $N : E \to \R$ qui vérifie les quatre points suivants~:
   \begin{enumerate}
-  \item Positivité~: pour tout $x \in E$, $N(x)\geq 0$;
+  \item Positivité~: pour tout $x \in E$, $N(x)\geqslant 0$;
   \item Séparation~: pour tout $x \in E$, $N(x)=0$ si et seulement $x=0$;
   \item Homogénéité~: pour tout $x \in E$ et tout $\lambda \in \R$, $N(\lambda x)=\abs{\lambda}N(x)$;
-  \item Inégalité triangulaire~: pour tout $(x, y) \in E^2$, $N(x+y) \leq N(x) + N(y)$.
+  \item Inégalité triangulaire~: pour tout $(x, y) \in E^2$, $N(x+y) \leqslant N(x) + N(y)$.
   \end{enumerate}
 \end{defdef}
 
@@ -34,18 +34,18 @@
 \begin{proof}
   On sait déjà que $\norme{}_2$ est une norme, puisque c'est la norme euclidienne associée au produit scalaire sur $\R^2$. Pour $\norme{}_\infty$, la positivité, la séparation, l'homogénéité sont faciles à démontrer. Pour montrer l'inégalité triangulaire il suffit de remarquer~:
   \begin{align}
-    \abs{x_1+x_2} \leq \abs{x_1}+\abs{x_2} \leq \norme{x}_\infty + \norme{y}_\infty, \\
-    \abs{y_1+y_2} \leq \abs{y_1}+\abs{y_2} \leq \norme{x}_\infty + \norme{y}_\infty,
+    \abs{x_1+x_2} \leqslant \abs{x_1}+\abs{x_2} \leqslant \norme{x}_\infty + \norme{y}_\infty, \\
+    \abs{y_1+y_2} \leqslant \abs{y_1}+\abs{y_2} \leqslant \norme{x}_\infty + \norme{y}_\infty,
   \end{align}
-  alors $\norme{x+y}_\infty = \max(\abs{x_1+x_2}, \abs{y_1+y_2}) \leq \norme{x}_\infty + \norme{y}_\infty$.
+  alors $\norme{x+y}_\infty = \max(\abs{x_1+x_2}, \abs{y_1+y_2}) \leqslant \norme{x}_\infty + \norme{y}_\infty$.
 \end{proof}
 
 \subsubsection{Normes équivalentes}
 
 \begin{defdef}
-  Soient $N_1$ et $N_2$ deux normes sur le même $\R$-espace vectoriel $E$. On dit que $N_1$ et $N_2$ sont équivalentes s'il existe deux réels $\alpha$ et $\beta$ strictements positifs tels que pour tout $x \in E$ on a
+  Soient $N_1$ et $N_2$ deux normes sur le même $\R$-espace vectoriel $E$. On dit que $N_1$ et $N_2$ sont équivalentes s'il existe deux réels $\alpha$ et $\beta$ strictement positifs tels que pour tout $x \in E$ on a
   \begin{equation}
-    \alpha N_1(x) \leq N_2(x) \neq \beta N_1(x).
+    \alpha N_1(x) \leqslant N_2(x) \neq \beta N_1(x).
   \end{equation}  
 \end{defdef}
 La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de $E$ est une relation réflexive, symétrique et transitive~: c'est donc une véritable relation d'équivalence.
@@ -53,19 +53,19 @@ La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de $E$ es
 \begin{prop}
   Les normes $\norme{}_2$ et $\norme{}_\infty$ sur le $\R$-espace vectoriel $\R^2$ sont équivalentes~:
   \begin{equation}
-    \forall x \in \R^2 \quad \norme{x}_\infty \leq \norme{x}_2 \leq \sqrt{2}\norme{x}_\infty.
+    \forall x \in \R^2 \quad \norme{x}_\infty \leqslant \norme{x}_2 \leqslant \sqrt{2}\norme{x}_\infty.
   \end{equation}
 \end{prop}
 \begin{proof}
   Soit $x=(x_1, x_2) \in \R^2$, on a
   \begin{equation}
-    0 \leq \norme{x}_2^2 = x_1^2+x_2^2 \leq 2\norme{x}_\infty.
+    0 \leqslant \norme{x}_2^2 = x_1^2+x_2^2 \leqslant 2\norme{x}_\infty.
   \end{equation}
   Alors
   \begin{equation}
-    \norme{x}_2 \leq \sqrt{2} \norme{x}_\infty,
+    \norme{x}_2 \leqslant \sqrt{2} \norme{x}_\infty,
   \end{equation}
-  et comme $\abs{x_1} \leq \sqrt{x_1^2 + x_2^2}$, $\abs{x_2} \leq \sqrt{x_1^2 + x_2^2}$ on a bien $\norme{x}_\infty \leq \norme{x}_2$.
+  et comme $\abs{x_1} \leqslant \sqrt{x_1^2 + x_2^2}$, $\abs{x_2} \leqslant \sqrt{x_1^2 + x_2^2}$ on a bien $\norme{x}_\infty \leqslant \norme{x}_2$.
 \end{proof}
 
 \emph{Remarque~:} On peut montrer que toutes les normes d'un espace vectoriel \emph{de dimension finie} sont équivalentes.
@@ -75,15 +75,15 @@ La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de $E$ es
 \begin{defdef}
   Soit $(E, N)$ un espace vectoriel normé. Soit $a \in E$ et $r \in \Rplusetoile$. On appelle
   \begin{enumerate}
-  \item boule fermée de centre $a$ et de rayon $r$ l'ensemble
+  \item la boule fermée de centre $a$ et de rayon $r$ l'ensemble
     \begin{equation}
-      \Bbar{a}{r}{} = \enstq{x\in E}{N(x-a) \leq r};
+      \Bbar{a}{r}{} = \enstq{x\in E}{N(x-a) \leqslant r};
     \end{equation}
-  \item boule ouverte de centre $a$ et de rayon $r$ l'ensemble
+  \item la boule ouverte de centre $a$ et de rayon $r$ l'ensemble
     \begin{equation}
       B(a, r) = \enstq{x\in E}{N(x-a) < r};
     \end{equation}
-  \item sphére de centre $a$ et de rayon $r$ l'ensemble
+  \item la sphère de centre $a$ et de rayon $r$ l'ensemble
     \begin{equation}
       S(a, r) = \enstq{x\in E}{N(x-a) = r}.
     \end{equation}    
@@ -93,28 +93,28 @@ La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de $E$ es
 \begin{theo}
   Soient $N_1$ et $N_2$ deux normes équivalentes sur un même $\R$-espace vectoriel $E$. Il existe alors des réels strictement positif $\lambda$ et $\mu$ tels que pour tout $x \in E$ on ait
   \begin{equation}
-    \lambda N_1(x) \leq \N_2(x) \leq \mu N_1(x).
+    \lambda N_1(x) \leqslant \N_2(x) \leqslant \mu N_1(x).
   \end{equation}
   Alors
   \begin{equation}
-    \forall (a, r) \in E \times \Rplusetoile \quad \Bbar{a}{\frac{r}{\mu}}{1} \leq \Bbar{a}{r}{2} \leq \Bbar{a}{\frac{r}{\lambda}}{1},
+    \forall (a, r) \in E \times \Rplusetoile \quad \Bbar{a}{\frac{r}{\mu}}{1} \leqslant \Bbar{a}{r}{2} \leqslant \Bbar{a}{\frac{r}{\lambda}}{1},
   \end{equation}
   où $\bar{B_1}$ ($\bar{B_2}$) désigne la boule fermé au sens de $N_1$ ($N_2$).
 \end{theo}
 \begin{proof}
-  Soit $x \in E$. Si $x \in \Bbar{a}{\frac{r}{\mu}}{1}$, alors $N_1(x-a) \leq \frac{r}{\mu}$, d'où
+  Soit $x \in E$. Si $x \in \Bbar{a}{\frac{r}{\mu}}{1}$, alors $N_1(x-a) \leqslant \frac{r}{\mu}$, d'où
   \begin{equation}
-    N_2(x-a) \leq \mu N_1(x-a) \leq \mu \frac{r}{\mu}=r.
+    N_2(x-a) \leqslant \mu N_1(x-a) \leqslant \mu \frac{r}{\mu}=r.
   \end{equation}
   Donc $x \in \Bbar{a}{r}{2}$.
 
-  Si $x \in \Bbar{a}{r}{2}$ alors $N_2(x-a) \leq r$ et alors $N_1(x-a) \leq \frac{1}{\lambda} N_2(x-a) \leq \frac{r}{\lambda}$. Alors $x \in \Bbar{a}{\frac{r}{\lambda}}{1}$.
+  Si $x \in \Bbar{a}{r}{2}$ alors $N_2(x-a) \leqslant r$ et alors $N_1(x-a) \leqslant \frac{1}{\lambda} N_2(x-a) \leqslant \frac{r}{\lambda}$. Alors $x \in \Bbar{a}{\frac{r}{\lambda}}{1}$.
 \end{proof}
 
 Cela signifie que si $N_1$ et $N_2$ sont équivalentes, alors toute boule pour $N_2$ est incluse dans une boule pour $N_1$, et contient une boule pour $N_1$.
 
 \begin{defdef}
-  Soit $(E, N)$ un espace vectoriel normé. Soit $A \in \P(E)$, on dit que $A$ est une partie bornée de $E$ (pour la norme $N$) lorsqu'il existe $M \in \Rplus$ tel que pour tout $x \in A$ on a $N(x) \leq M$.
+  Soit $(E, N)$ un espace vectoriel normé. Soit $A \in \P(E)$, on dit que $A$ est une partie bornée de $E$ (pour la norme $N$) lorsqu'il existe $M \in \Rplus$ tel que pour tout $x \in A$ on a $N(x) \leqslant M$.
 \end{defdef}
 \begin{defdef}[Définition équivalente]
   Soit $A \in \P(E)$, alors
@@ -123,9 +123,9 @@ Cela signifie que si $N_1$ et $N_2$ sont équivalentes, alors toute boule pour $
   \end{equation}
 \end{defdef}
 \begin{proof}
-  $\implies$ Pour tout $x \in A$, $N(x) \leq M$ donc $N(x-0) \leq M+1$. Ainsi $x \in \Bbar{0}{M+1}{}$.
+  $\implies$ Pour tout $x \in A$, $N(x) \leqslant M$ donc $N(x-0) \leqslant M+1$. Ainsi $x \in \Bbar{0}{M+1}{}$.
 
-  $\impliedby$ Pour tout $x \in A$, $N(x-a) \leq r$, alors $N(x) \leq N(x-a)+N(a) \leq r+N(a)=M$.
+  $\impliedby$ Pour tout $x \in A$, $N(x-a) \leqslant r$, alors $N(x) \leqslant N(x-a)+N(a) \leqslant r+N(a)=M$.
 \end{proof}
 \begin{prop}
   Si $N_1$ et $N_2$ sont deux normes équivalentes sur le $\R$-espace vectoriel normée $E$, alors les parties bornées de $(E, N_1)$ sont les parties bornées de $(E, N_2)$.
@@ -136,7 +136,7 @@ Cela signifie que si $N_1$ et $N_2$ sont équivalentes, alors toute boule pour $
 
 \emph{Propriétés}~:
 \begin{itemize}
-\item L'intesection de deux parties bornées de $E$ est une partie partie bornée de $E$;
+\item L'intersection de deux parties bornées de $E$ est une partie partie bornée de $E$;
 \item l'union de deux parties bornées de $E$ est une partie partie bornée de $E$.
 \end{itemize}
 
@@ -214,7 +214,7 @@ Soit pour tout naturel $n$, $I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}$, 
 \begin{defdef}
   Soit $A \in \P(E)$ et $x \in E$. On dit que le point $x$ est adhérent à la partie $A$ si et seulement si
   \begin{equation}
-    \forall \epsilon>0 \ \exists a \in A \quad N(x-a) \leq \epsilon.
+    \forall \epsilon>0 \ \exists a \in A \quad N(x-a) \leqslant \epsilon.
   \end{equation}
 \end{defdef}
 \emph{Remarque~:} Soit $A \in \P(E)$, alors tous les points de $A$ sont adhérents à $A$.
@@ -243,7 +243,7 @@ On note $\bar{A}$ l'ensemble des point adhérents à la partie $A$. On a toujour
 
 \section{Limites et continuité des fonctions de deux variables réelles}
 
-Soient $E=\R^2$ muni de la norme euclidienne $\norme{.}=\norme{.}_2$ et $A$ une partie non vide de $E$. On s'intéresse à l'ensemble des aplications de $A$ vers $\R$, $\R^A=\F(A, \R)$. On sait que $(\F(A, \R), +, \perp)$ est un $\R$-espace vectoriel et que $(\F(A, \R), +, \times)$ est un anneau commutatif non-intègre. On note $\uinv(A)=\enstq{f \in \F(A, \R)}{0 \in f(A)}$ l'ensemble des inversibles de $A$.
+Soient $E=\R^2$ muni de la norme euclidienne $\norme{.}=\norme{.}_2$ et $A$ une partie non vide de $E$. On s'intéresse à l'ensemble des applications de $A$ vers $\R$, $\R^A=\F(A, \R)$. On sait que $(\F(A, \R), +, \perp)$ est un $\R$-espace vectoriel et que $(\F(A, \R), +, \times)$ est un anneau commutatif non intègre. On note $\uinv(A)=\enstq{f \in \F(A, \R)}{0 \in f(A)}$ l'ensemble des inversibles de $A$.
 
 \subsection{Applications partielles}
 
@@ -262,7 +262,7 @@ Soient $A$ une partie no vide de $E$, $a$ un point de adhérent à $A$ et $f \in
 \begin{defdef}
   Soit $\ell \in \R$. On dit que $f$ admet $\ell$ pour limite au point $a$ si et seulement si
   \begin{equation}
-    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leq \eta \implies \abs{f(x)-\ell} \leq \epsilon.
+    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leqslant \eta \implies \abs{f(x)-\ell} \leqslant \epsilon.
   \end{equation}
   On note $\ell = \lim\limits_{x \to a} f(x)$ ou $\ell=\lim\limits_{a}f$.
 \end{defdef}
@@ -274,13 +274,13 @@ Soient $A$ une partie no vide de $E$, $a$ un point de adhérent à $A$ et $f \in
 
 On montre l'unicité de la limite exactement comme pour les fonction d'une seule variable réelle~: Par l'absurde supposons que $f$ admet en $a$ deux limites distinctes $\ell_1$ et $\ell_2$. Soit $\epsilon = \frac{\abs{\ell_1 - \ell_2}}{3}$. Alors il existe $\eta_1$ et $\eta_2$ strictement positif tels que pour tout $x \in A$~:
 \begin{align}
-  \norme{x-a} \leq \eta_1 &\implies \abs{f(x)-\ell_1}\leq \epsilon, \\
-  \norme{x-a} \leq \eta_2 &\implies \abs{f(x)-\ell_2}\leq \epsilon.
+  \norme{x-a} \leqslant \eta_1 &\implies \abs{f(x)-\ell_1}\leqslant \epsilon, \\
+  \norme{x-a} \leqslant \eta_2 &\implies \abs{f(x)-\ell_2}\leqslant \epsilon.
 \end{align}
 On définit $\eta_0=\min(\eta_1, \eta_2)$ et soit $x \in A \cap B(a,\eta_0)$, alors
 \begin{align}
-  \abs{\ell_1-\ell_2} &\leq \abs{\ell_1-f(x)} + \abs{f(x)-\ell_2} \\
-  &\leq 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
+  \abs{\ell_1-\ell_2} &\leqslant \abs{\ell_1-f(x)} + \abs{f(x)-\ell_2} \\
+  &\leqslant 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
 \end{align}
 Ce qui est absurde. Donc $\ell_1=\ell_2$.
 
@@ -295,7 +295,7 @@ Ce qui est absurde. Donc $\ell_1=\ell_2$.
 
 Ce résultat sert à nier ``$f(x) \to \ell$'' en exhibant une droite $(x_n, y_n)_{n \in \N}$ telle que $f(x_n, y_n) \not\to \ell$. Cela servira à montrer qu'une fonction n'est pas continue en un point.
 
-\subsubsection{Continiuté en un point}
+\subsubsection{Continuité en un point}
 
 \begin{defdef}
   Soient $A \in \P(\R^2)$, $f \in \R^A$ et $a \in A$. La fonction $f$ est continue en $a$ si et seulement si $\lim\limits_a f=f(a)$ existe.
@@ -304,7 +304,7 @@ Ce résultat sert à nier ``$f(x) \to \ell$'' en exhibant une droite $(x_n, y_n)
 \begin{enumerate}
 \item Soient $\fonction{p_1}{\R^2}{\R}{(x_1, x_2)}{x_1}$ et $\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}$ les projecteurs canoniques de $\R^2$. Ces applications sont continues en tout point. En effet,
   \begin{equation}
-    \forall (x, y) \in \R^2 \times \R^2 \quad \abs{p_1(x)-p_1(y)} = \abs{x_1-y_1} \leq \norme{x-y}.
+    \forall (x, y) \in \R^2 \times \R^2 \quad \abs{p_1(x)-p_1(y)} = \abs{x_1-y_1} \leqslant \norme{x-y}.
   \end{equation}
   Il suffit de prendre $\eta=\epsilon$ dans la définition.
 \item Les applications polynomiales de deux variables sont continues.
@@ -312,14 +312,14 @@ Ce résultat sert à nier ``$f(x) \to \ell$'' en exhibant une droite $(x_n, y_n)
 \begin{prop}
   Soient $A \in \P(\R^2)$, $a \in A$ et $f \in \R^A$. Si $f$ est continue au voisinage de $A$, alors elle est bornée au voisinage de $a$. Autrement dit
   \begin{equation}
-    \exists M \in \Rplus \ \exists r \in \Rplus \ \forall a \in A \quad x \in B(a, r) \implies \abs{f(x)} \leq M.
+    \exists M \in \Rplus \ \exists r \in \Rplus \ \forall a \in A \quad x \in B(a, r) \implies \abs{f(x)} \leqslant M.
   \end{equation}
 \end{prop}
 \begin{proof}
   Écrivons la définition de la continuité en $a$ avec $\epsilon=1$~:
   \begin{align}
-    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad \norme{x-a}\leq \eta \implies \abs{f(x)-f(a)}\leq 1 \\
-    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad x \in B(a, \eta) \implies \abs{f(x)} \leq 1+\abs{f(a)}.
+    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad \norme{x-a}\leqslant \eta \implies \abs{f(x)-f(a)}\leqslant 1 \\
+    \exists \eta \in \Rplusetoile \ \forall x \in A &\quad x \in B(a, \eta) \implies \abs{f(x)} \leqslant 1+\abs{f(a)}.
   \end{align}
   En posant $M=f(a)+1$, alors $f$ est bornée par $M$.
 \end{proof}
@@ -336,13 +336,13 @@ Ce résultat sert à nier ``$f(x) \to \ell$'' en exhibant une droite $(x_n, y_n)
   \end{equation}
   La fonction $f$ est continue en $a$~:
   \begin{equation}
-    \forall \epsilon >0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leq \eta \implies \abs{f(x)-f(a)} \leq \epsilon.
+    \forall \epsilon >0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a} \leqslant \eta \implies \abs{f(x)-f(a)} \leqslant \epsilon.
   \end{equation}
-  Soit $x_1 \in A_{a, 1}$, $\abs{x_1 - a_1}\leq \eta$. Alors
+  Soit $x_1 \in A_{a, 1}$, $\abs{x_1 - a_1}\leqslant \eta$. Alors
   \begin{equation}
-    \norme{(x_1, a_2) - (a_1, a_2)} = \sqrt{(x_1-a_1)^2 +(a_2-a_2)^2}=\abs{x_1-a_1}\leq \eta.
+    \norme{(x_1, a_2) - (a_1, a_2)} = \sqrt{(x_1-a_1)^2 +(a_2-a_2)^2}=\abs{x_1-a_1}\leqslant \eta.
   \end{equation}
-  Donc $\abs{f(x_1, a_2) - f(a_1, a_2)} \leq \epsilon$. C'est-à-dire $\abs{\varphi_{a, 1}(x_1)-\varphi_{a, 1}(a_1)} \leq \epsilon$. Alors $\varphi_{a, 1}$ est continue en $a_1$. De même pour $\varphi_{a, 2}$.
+  Donc $\abs{f(x_1, a_2) - f(a_1, a_2)} \leqslant \epsilon$. C'est-à-dire $\abs{\varphi_{a, 1}(x_1)-\varphi_{a, 1}(a_1)} \leqslant \epsilon$. Alors $\varphi_{a, 1}$ est continue en $a_1$. De même pour $\varphi_{a, 2}$.
 \end{proof}
 
 La réciproque est fausse. En effet, soit $\fonction{f}{\R^2}{\R}{(x, y)}{\begin{cases} \frac{xy}{x^2+y^2} & (x, y) \neq (0, 0) \\ 0 & (x, y)=(0, 0) \end{cases}}$. Les application $\varphi_{0, 1}$ et $\varphi_{0, 2}$ sont constantes nulles donc continues. Cependant pour tout naturel $n$ non nul $f\left(\frac{1}{n}, \frac{1}{n}\right)=\frac{\frac{1}{n} \frac{1}{n}}{\frac{1}{n^2} + \frac{1}{n^2}}=\frac{1}{2}$ qui ne tend pas vers zéro. Alors $f$ n'est pas continue en zéro.
@@ -373,19 +373,19 @@ La réciproque est fausse. En effet, soit $\fonction{f}{\R^2}{\R}{(x, y)}{\begin
 \begin{defdef}
   Soit $A \subset \R^2$, $f : A \longmapsto \R^2$ et $a \in A$. On dit que $f$ est continue en $a$ si et seulement si
   \begin{equation}
-    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a}\leq \eta \implies \norme{f(x)-f(a)}\leq \epsilon.
+    \forall \epsilon>0 \ \exists \eta>0 \ \forall x \in A \quad \norme{x-a}\leqslant \eta \implies \norme{f(x)-f(a)}\leqslant \epsilon.
   \end{equation}
 \end{defdef}
 \begin{prop}
   Soit $A \subset \R^2$, $f : A \longmapsto \R^2$ et $a \in A$. La fonction $f$ est continue en $a$ si et seulement si les applications coordonnées de $f$ sont continues en $a$.
 \end{prop}
 
-\emph{Ne pas confondre applications partielles et applications coordonnées.} La continuité de $f : A \rightarrow \R^2$ équivaut à la continuité de ses applications coorodonnées tandis qur $g : A \rightarrow \R$ peut avoir des applications partielles continues sans être continue.
+\emph{Ne pas confondre applications partielles et applications coordonnées.} La continuité de $f : A \rightarrow \R^2$ équivaut à la continuité de ses applications coordonnées tandis que $g : A \rightarrow \R$ peut avoir des applications partielles continues sans être continue.
 
 \subsection{Composée de fonctions continues}
 
 \begin{theo}
-  Soient $A \subset \R^2$, $\B\subset \R$ ou $\R^2$ et $p \in \{1, 2\}$. Soient $f : A \rightarrow B$ et $g: B \rightarrow \R^p$. Soeint $a \in A$ et $b=f(a) \in B$. Si $f$ est continue en $a$ et $g$ continue en $b$ alors $g \circ f$ est continue en $a$.
+  Soient $A \subset \R^2$, $\B\subset \R$ ou $\R^2$ et $p \in \{1, 2\}$. Soient $f : A \rightarrow B$ et $g: B \rightarrow \R^p$. Soient $a \in A$ et $b=f(a) \in B$. Si $f$ est continue en $a$ et $g$ continue en $b$ alors $g \circ f$ est continue en $a$.
 
 Par conséquent, si $f$ est continue sur $A$ et $g$ continue sur $B$ alors $g \circ f$ est continue sur $A$.
 \end{theo}
@@ -398,12 +398,12 @@ Par conséquent, si $f$ est continue sur $A$ et $g$ continue sur $B$ alors $g \c
 
 Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \R^U$. Pour tout $h>0$, on s'intéresse à l'application $t \longmapsto f(a+th)$. $U$ est un ouvert, $a \in U$ et $f$ est définie sur $U$ donc $f$ est définie au voisinage de $a$.
 
-Pour tout $t$ au voisinage de $0$, $a+th$ est au voisinage de $a$ donc $t \longmapsto f(a+th)$ est définie au voisinage de zéro. Plus concrétement, il existe $r>0$ tel que $B(a, r) \subset U$.
+Pour tout $t$ au voisinage de $0$, $a+th$ est au voisinage de $a$ donc $t \longmapsto f(a+th)$ est définie au voisinage de zéro. Plus concrètement, il existe $r>0$ tel que $B(a, r) \subset U$.
 \begin{align}
-  \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leq r \\
-  &\iff \abs{t} \norme{h} \leq r.
+  \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leqslant r \\
+  &\iff \abs{t} \norme{h} \leqslant r.
 \end{align}
-Si $h=(0, 0)$, alors $t \longmapsto f(a+th)$ est définie sur $\R$. Sinon, $a+th \in B(a, r) \iff \abs{t} \leq \frac{r}{\norme{h}}$. L'application $t \longmapsto f(a+th)$ est définie au moins sur $\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}$. Dans tous les cas, il existe $\delta>0$ tel que $\Psi_h : t \longmapsto f(a+th)$ soit définie au moins sur $\intervalleoo{-\delta}{\delta}$. 
+Si $h=(0, 0)$, alors $t \longmapsto f(a+th)$ est définie sur $\R$. Sinon, $a+th \in B(a, r) \iff \abs{t} \leqslant \frac{r}{\norme{h}}$. L'application $t \longmapsto f(a+th)$ est définie au moins sur $\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}$. Dans tous les cas, il existe $\delta>0$ tel que $\Psi_h : t \longmapsto f(a+th)$ soit définie au moins sur $\intervalleoo{-\delta}{\delta}$. 
 
 Il est légitime de se demander si $\fonction{\Psi_h}{\intervalleoo{-\delta}{\delta}}{\R}{t}{f(a+th)}$ est dérivable en zéro.
 
@@ -569,11 +569,11 @@ D'après l'expression de $\D f_a$ on a
   \end{equation}
 \end{lemme}
 \begin{proof}
-Soit $\varphi$ la première application partielle de $f$ en $a$. Comme $0 \notin f(U)$, $\frac{1}{f}$ est définie. Soit $\psi$ la première application partielle de $\frac{1}{f}$ en $a$. Ainsi $\psi= \frac{1}{\varphi}$. L'applicatin $f$ est de classe $\classe{1}$ donc $\varphi$ est dérivable en $a_1$ et $\psi'(a_1)=-\frac{\varphi'(a_1)}{\varphi(a_1)^2}$. Cela signifie que $\derivep{\frac{1}{f}}{x_1}(a)$ existe et vaut $-\frac{\varphi'(a_1)}{\varphi(a_1)^2}=-\frac{1}{\varphi(a_1)^2}\derivep{f}{x_1}(a)$.
+Soit $\varphi$ la première application partielle de $f$ en $a$. Comme $0 \notin f(U)$, $\frac{1}{f}$ est définie. Soit $\psi$ la première application partielle de $\frac{1}{f}$ en $a$. Ainsi $\psi= \frac{1}{\varphi}$. L'application $f$ est de classe $\classe{1}$ donc $\varphi$ est dérivable en $a_1$ et $\psi'(a_1)=-\frac{\varphi'(a_1)}{\varphi(a_1)^2}$. Cela signifie que $\derivep{\frac{1}{f}}{x_1}(a)$ existe et vaut $-\frac{\varphi'(a_1)}{\varphi(a_1)^2}=-\frac{1}{\varphi(a_1)^2}\derivep{f}{x_1}(a)$.
 
 C'est vrai pour tout $a \in U$ donc $\derivep{\frac{1}{f}}{x_1}$ est définie sur $U$. L'application $f$ étant de classe $\classe{1}$, l'expression $\derivep{\frac{1}{f}}{x_1}$ montre qu'elle est continue. De même, $\derivep{\frac{1}{f}}{x_2}$ est définie et continue sur $U$.
 
-Le théorème fondmental permet alors de conclure que $\frac{1}{f}$ est de classe $\classe{1}$ sur $U$.
+Le théorème fondamental permet alors de conclure que $\frac{1}{f}$ est de classe $\classe{1}$ sur $U$.
 \end{proof}
 \begin{lemme}
   Soit $U$ un ouvert de $\R^2$. Pour toutes fonctions $f$ et $g$ de classe $\classe{1}$ sur $U$ et pour tout réel $\lambda$, la fonction $\lambda f +g$ est de classe $\classe{1}$ sur $U$. 
@@ -659,7 +659,7 @@ Alors l'application $f\circ \varphi$ est de classe $\classe{1}$, pour tout $a \i
   \begin{equation}
     (f \circ g)'(t) = \derivep{f}{x_1}(g(t))g_1'(t) + \derivep{f}{x_2}(g(t))g_2'(t) = 0.
   \end{equation}
-  Ce qui est équivalent à écrire que le produit scalaire entre $\grad f(M(t))$ et le vecteur directeur dela tangente en $M$ est nul.
+  Ce qui est équivalent à écrire que le produit scalaire entre $\grad f(M(t))$ et le vecteur directeur de la tangente en $M$ est nul.
 \end{proof}
 
 \subsection{Extension locale d'une fonction de classe $\classe{1}$ sur un ouvert}
@@ -669,7 +669,7 @@ Alors l'application $f\circ \varphi$ est de classe $\classe{1}$, pour tout $a \i
 \begin{defdef}
   Soient $A \subset \R^2$, $a \in A$ et $f \in \R^A$.
   \begin{enumerate}
-  \item On dit que $f$ présente un maximum (minimum) local en $a$ si et seulement s'il existe un voisinage $V$ de $a$ tel que pour tout $x \in A \cap V$ on a $f(x) \leq f(a)$ ($f(x) \geq f(a)$);
+  \item On dit que $f$ présente un maximum (minimum) local en $a$ si et seulement s'il existe un voisinage $V$ de $a$ tel que pour tout $x \in A \cap V$ on a $f(x) \leqslant f(a)$ ($f(x) \geqslant f(a)$);
   \item on dit que $f$ présente un extremum local en $a$ si elle admet un maximum local ou un minimum local;
   \item on dit que l'extremum est global lorsque l'inégalité est vraie sur $A$ tout entier;
   \item on dit que l'extremum est strict lorsque l'inégalité est stricte pour $x \neq a$.
@@ -686,9 +686,9 @@ Alors l'application $f\circ \varphi$ est de classe $\classe{1}$, pour tout $a \i
   Soient $U$ un ouvert de $\R^2$, $a \in U$ et $f \in \classe{1}(U, \R)$. Si $f$ admet un extremum local en $a$, alors $a$ est un point critique de $f$. La réciproque est fausse.
 \end{theo}
 \begin{proof}
-  Supposons que $f$ admet un maximum local en $a$. Il existe $r>0$ tel que $B(a, r) \subset U$ et pour tout $x \in B(a, r)$ on a $f(x)\leq f(a)$. 
+  Supposons que $f$ admet un maximum local en $a$. Il existe $r>0$ tel que $B(a, r) \subset U$ et pour tout $x \in B(a, r)$ on a $f(x)\leqslant f(a)$. 
 
-  Soit, pour tout $h\in \R^2$, l'application $\psi_h: t \rightarrow f(a+th)$. On sait qu'il existe $\delta>0$ tel que $\Psi_h$ soit au moins définie sur $\intervalleoo{-\delta}{\delta}$. Si $\norme{th}\leq r$ et $\abs{t}\leq \delta$ alors $f(a+th)$ est définie et $f(a+th) \leq f(a)$. 
+  Soit, pour tout $h\in \R^2$, l'application $\psi_h: t \rightarrow f(a+th)$. On sait qu'il existe $\delta>0$ tel que $\Psi_h$ soit au moins définie sur $\intervalleoo{-\delta}{\delta}$. Si $\norme{th}\leqslant r$ et $\abs{t}\leqslant \delta$ alors $f(a+th)$ est définie et $f(a+th) \leqslant f(a)$. 
 
 Or $\psi_h$ est dérivable en $0$, $\psi_h$ admet un maximum local en zéro, zéro est à l'intérieur de son intervalle de définition donc $\psi_h'(0)=0$. On a montré que pour tout $h \in \R^2$ $D_h f(a)=0$. L'application $\D f_a$ est une forme linéaire nulle donc son vecteur normal ($\grad f(a)$) est nul.
 \end{proof}

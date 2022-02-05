@@ -8,9 +8,9 @@
 
 \subsection{Définitions}
 
-Soient $E$ et $F$ des $\R$-espaces vectoriels et $f\in E^F$. On dit que $f$ est une application affine si et seulement s'il existe $u \in \Lin{E}{F}$ telle que pour tout couple $(A,B) \in E^2$ on ait $\vect{f(A)f(B)}=u(\vect{AB})$. Une telle application est alors unique et on la note $\vect{f}$ et on l'appelle application linéaire associée à l'application affine $f$.
+Soient $E$ et $F$ des $\R$-espaces vectoriels et $f\in E^F$. On dit que $f$ est une application affine si et seulement s'il existe $u \in \Lin{E}{F}$ telle que pour tout couple $(A,B) \in E^2$ on ait $\vect{f(A)f(B)}=u(\vect{AB})$. Une telle application est alors unique et on la note $\vect{f}$ et on l'appelle application linéaire associée à l'application affine $f$, on a~:
 \begin{equation}
-  f(A)=f(B)+ \vect{f}(\vect{AB})
+  f(A)=f(B)+ \vect{f}(\vect{AB}).
 \end{equation}
 \begin{proof}[Démonstration de l'unicité]
   Si $u$ existe alors soit $\Omega \in E$ fixé. Pour tout $\vect{x} \in E$, on a
@@ -41,7 +41,7 @@ Soient $E$ et $F$ des $\R$-espaces vectoriels et $f\in E^F$. On dit que $f$ est 
 \end{proof}
 %
 \begin{prop}
-  Une application affine conserve l'alignement et le parallèllisme.
+  Une application affine conserve l'alignement et le parallélisme.
 \end{prop}
 \begin{proof}
   Soit $f \in E^F$ une application affine.
@@ -83,7 +83,7 @@ Soient $E$ et $F$ des $\R$-espaces vectoriels et $f\in E^F$. On dit que $f$ est 
 \end{proof}
 
 \begin{prop}
-  Soient $E$ et $F$ deux $\R$ espaces vectoriels. et $f \in F^E$. L'application $f$ est affine si et seulement s'il existe un point $A\in E$ et s'il existe une application linéaire $u \in \Lin{E}{F}$ telle que pour tout point $M \in E$ on a $f(M)=A+u(\vect{OM})$.
+  Soient $E$ et $F$ deux $\R$ espaces vectoriels et $f \in F^E$. L'application $f$ est affine si et seulement s'il existe un point $A\in E$ et s'il existe une application linéaire $u \in \Lin{E}{F}$ telle que pour tout point $M \in E$ on a $f(M)=A+u(\vect{OM})$.
 \end{prop}
 \begin{proof}
   $\implies$. On prend $u=\vect{f}$ et $A=f(0)$.
@@ -180,7 +180,7 @@ Soient $E$ et $F$ des $\R$-espaces vectoriels et $f\in E^F$. On dit que $f$ est 
   Pour toute fonction $h \in E^E$ et tout $\alpha \in \R\setminus\{0, 1\}$, $h$ est une homothétie de rapport $\alpha$ si et seulement si pour tout couple de points $(A, B) \in E^2$ on a $\vect{h(A)h(B)}=\alpha \vect{AB}$.
 \end{prop}
 \begin{proof}
-  L'application $h$ admet-elle un point fixe ? Vérifions-le~:
+  L'application $h$ admet elle un point fixe ? Vérifions le~:
   \begin{align}
     \forall M \in \quad h(M) = M &\iff \vect{h(O)h(M)} = \vect{h(O)M} \\
     &\iff \alpha \vect{OM} =\vect{h(O)O} +\vect{OM} \\
@@ -205,7 +205,7 @@ Finalement les transformation affines dont les parties linéaires s'écrivent so
 Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives les sous-espaces vectoriels $F$ et $G$. On suppose que $E=F \oplus G$.
 
 \begin{prop}
-  Pour tout point $M$ de $E$, il existe un unique point $N$ de $E$ tel que $N \in \F$ et $\vect{MN} \in G$. L'application $\fonction{p}{E}{E}{M}{N}$ est appelée projection affine sur $\F$ parallélement au sous-esape affine $\G$\footnote{ou parallélement au sous-espace vectoriel $G$}.
+  Pour tout point $M$ de $E$, il existe un unique point $N$ de $E$ tel que $N \in \F$ et $\vect{MN} \in G$. L'application $\fonction{p}{E}{E}{M}{N}$ est appelée projection affine sur $\F$ parallèlement au sous-espace affine $\G$\footnote{ou parallèlement au sous-espace vectoriel $G$}.
 \end{prop}
 \begin{proof}
   Soient $M$ et $N$ des points de $E$. On a les équivalences suivantes~:
@@ -222,7 +222,7 @@ Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives 
   Or $\F$ et $M+G$ sont supplémentaires dans $E$, de directions $F$ et $G$ respectivement, vérifiant $F \oplus G =E$. Leur intersection est un singleton. C'est-à-dire que $N$ est unique.
 \end{proof}
 
-\emph{Remarque~:} Si $E$ est euclidien et si $G=F^\perp$, on parle de projection affine orthogonale sur le sous-espace affine $\F$\footnote{pas besoin de préciser parallélement à $G$, car $G$ est déterminé par $\F$}.
+\emph{Remarque~:} Si $E$ est euclidien et si $G=F^\perp$, on parle de projection affine orthogonale sur le sous-espace affine $\F$\footnote{pas besoin de préciser parallèlement à $G$, car $G$ est déterminé par $\F$}.
 
 \begin{prop}
   Avec les notations précédentes, $p$ est une projection affine et $\vect{p}$ est la projection vectorielle de $E$ sur $F$ parallèlement à $G$.
@@ -244,7 +244,7 @@ Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives 
 Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives les sous-espaces vectoriels $F$ et $G$. On suppose que $E=F \oplus G$.
 
 \begin{defdef}
-  Soit $p$ la projection affine sur le sous-espace affine $\F$ parallèlement à $\G$. La symétrie affine $s$ par rapport à $\F$ parallélement à $\G$ est telle que pour tout point $M \in E$, $s(M)$ est l'unique point $N \in E$ qui vérifie l'une des conditions équivalentes suivantes~:
+  Soit $p$ la projection affine sur le sous-espace affine $\F$ parallèlement à $\G$. La symétrie affine $s$ par rapport à $\F$ parallèlement à $\G$ est telle que pour tout point $M \in E$, $s(M)$ est l'unique point $N \in E$ qui vérifie l'une des conditions équivalentes suivantes~:
   \begin{enumerate}
   \item $\vect{MN}=2\vect{Mp(M)}$;
   \item $N = 2p(M)-M$;
@@ -261,7 +261,7 @@ Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives 
 \end{proof}
 
 \begin{prop}
-  Avec les deux notations précédentes, $s$ est une application affine et $\vect{s} = 2\vect{p}-\Id$ est la symétrie vectoriellle par rapport $F$ parallèlement à $G$.
+  Avec les deux notations précédentes, $s$ est une application affine et $\vect{s} = 2\vect{p}-\Id$ est la symétrie vectorielle par rapport $F$ parallèlement à $G$.
 \end{prop}
 \begin{proof}
   Soient $A$ et $B$ deux points de $E$. Alors
@@ -271,7 +271,7 @@ Soient $\F$ et $\G$ deux sous-espaces affines de $E$, de directions respectives 
      &= 2\vect{p}(\vect{AB}) - \vect{AB} \\
      &= (2\vect{p}-\Id)(\vect{AB}).
   \end{align}
-   Donc $s$ est affine, et $\vect{s}=2\vect{p}-\Id$. Comme $\vect{p}$ est la projection sur $F$ parallélement à $G$, $\vect{s}$ est la symétrie par rapport à $F$ parallèlement à $G$.
+   Donc $s$ est affine, et $\vect{s}=2\vect{p}-\Id$. Comme $\vect{p}$ est la projection sur $F$ parallèlement à $G$, $\vect{s}$ est la symétrie par rapport à $F$ parallèlement à $G$.
 \end{proof}
 
 \emph{Remarque~:} Si l'espace $E$ est euclidien et si $G=F^\perp$, on parlera de symétrie affine orthogonale par rapport à $\F$. Si de plus $\F$ est un hyperplan, on parle de réflexion affine.
@@ -317,7 +317,7 @@ Soit $E$ un espace vectoriel euclidien.
     &=\vect{g(A)g(B)} && t \text{~est une translation} \\
     &= g(\vect{AB}). && g \in \Endo{E}
   \end{align}
-  Dela signifie que $f$ est affine avec $\vect{f}=g$.
+  Cela signifie que $f$ est affine avec $\vect{f}=g$.
 \end{proof}
 \begin{prop}
   \label{prop:isom-orth}
@@ -367,7 +367,7 @@ Soit $E$ un espace vectoriel euclidien.
 \begin{defdef}
   On appelle déplacement de $E$ toute isométrie $f$ de $E$ telle que $\vect{f} \in \SOrth{E}$. On note $\Isplus{E}$ l'ensemble des déplacements de $E$.
 
-  On appelle anti-déplacement de $E$ toute isométrie $f$ de $E$ telle que $\vect{f} \in \Orthmin{E}$. On note $\Ismoins{E}$ l'ensemble des anti-déplacements de $E$.
+  On appelle antidéplacement de $E$ toute isométrie $f$ de $E$ telle que $\vect{f} \in \Orthmin{E}$. On note $\Ismoins{E}$ l'ensemble des antidéplacements de $E$.
 \end{defdef}
 
 \begin{prop}
@@ -424,13 +424,13 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
   \end{equation}
 \end{prop}
 \begin{proof}[Unicité]
-  Si $s$ existe, soit $I$ le milieu de $[AB]$. Puisque $s$ conserve le barycentre donc le milieu, $s(I)$ est le mileu de $[s(A)s(B)]$. De plus comme $s(A)=B$ et $s(B)=A$ on a $s(I)=I$. 
+  Si $s$ existe, soit $I$ le milieu de $[AB]$. Puisque $s$ conserve le barycentre donc le milieu, $s(I)$ est le milieu de $[s(A)s(B)]$. De plus comme $s(A)=B$ et $s(B)=A$ on a $s(I)=I$. 
 
   Pour tout point $M$ de $E$, on a
   \begin{equation}
     \vect{s}(\vect{IM}) = \vect{s(I)s(M)} = \vect{Is(M)}.
   \end{equation}
-  En particulier $\vect{s}(\vect{IA})=\vect{IB}$ et $\vect{s}(\vect{IB})=\vect{IA}$. Donc $\vect{s}$ est l'unique réflexion vectorielle qui échange $\vect{IA}$ et $\vect{IB}$ (cf. chapitre \ref{chap:automorphismesorthogonaux}. La réflexio $\vect{s}$ est l'unique réflexion par rapport à l'hyperplan vectoriel $H = \VectEngendre{\vect{AB}}^\perp$.
+  En particulier $\vect{s}(\vect{IA})=\vect{IB}$ et $\vect{s}(\vect{IB})=\vect{IA}$. Donc $\vect{s}$ est l'unique réflexion vectorielle qui échange $\vect{IA}$ et $\vect{IB}$ (\emph{cf} chapitre \ref{chap:automorphismesorthogonaux}. La réflexion $\vect{s}$ est l'unique réflexion par rapport à l'hyperplan vectoriel $H = \VectEngendre{\vect{AB}}^\perp$.
 
   Pour tout vecteur $\vx \in E$, on a
   \begin{equation}
@@ -493,7 +493,7 @@ Soit $E_2$ le plan euclidien. Si $f$ est un déplacement du plan alors $\vect{f}
   L'équation admet une unique solution.
 \end{proof}
 \begin{defdef}
-  On appelle rotation de centre $A$ et d'angle $\theta$ le déplacemet donc l'unique point invariant $A$ et la partie linéaire est la rotation vectorielle d'angle $\theta$.
+  On appelle rotation de centre $A$ et d'angle $\theta$ le déplacement donc l'unique point invariant $A$ et la partie linéaire est la rotation vectorielle d'angle $\theta$.
 \end{defdef}
 %
 \begin{prop}[Produit de deux réflexions]
@@ -509,11 +509,11 @@ Soit $E_2$ le plan euclidien. Si $f$ est un déplacement du plan alors $\vect{f}
 
 \emph{Application~:} Tout déplacement du plan peut s'écrire comme un produit de deux réflexions.
 \begin{enumerate}
-\item Toute translation peut s'écrire comme le produit de deux réflexions par rapport à des droites orthognales au vecteur de translation;
+\item Toute translation peut s'écrire comme le produit de deux réflexions par rapport à des droites orthogonales au vecteur de translation;
 \item Toute rotation peut s'écrire comme le produit de deux réflexions par rapport à des droites concourantes en le centre de rotation.
 \end{enumerate}
 
-Dans le deuxiéme cas, la première droite est quelconque et la deuxième est imposée par la première.
+Dans le deuxième cas, la première droite est quelconque et la deuxième est imposée par la première.
 
 \begin{proof}
   Dans le premier cas, on note $t=t_{\vv}$. Soit $\Dr$ quelconque telle que $\Dr \perp \vv$ et $\Dr'=t_{\vv/2}(\Dr)$. Alors $s'\circ s=t$.
@@ -569,7 +569,7 @@ Soit $E_3$ l'espace vectoriel euclidien, et soit $f$ un déplacement de $E_3$. A
 \emph{Vocabulaire~:} Si $f$ est un déplacement vérifiant les conditions précédentes, on dit que $f$ est la rotation d'axe $\Inv(f)$ et d'angle $\theta$ où $\theta$ est l'angle de la rotation vectorielle $\vect{f}$.
 
 \begin{defdef}
-  On appelle vissage, tout déplacment de l'espace de la forme $v=t \circ r$, où $t$ est une translation de vecteur $\lambda \vk$ ($\lambda \in \R$) et $r$ une rotation d'axe dirigé par $\VectEngendre{\vk}$.
+  On appelle vissage, tout déplacement de l'espace de la forme $v=t \circ r$, où $t$ est une translation de vecteur $\lambda \vk$ ($\lambda \in \R$) et $r$ une rotation d'axe dirigé par $\VectEngendre{\vk}$.
 \end{defdef}
 
 \begin{prop}[Propriétés]
@@ -661,7 +661,7 @@ Le scalaire $\lambda$ est unique, il est déterminé par $\vk$, donc le vecteur 
   On sait que $E_3 = D \oplus D^\perp$, donc il existe un unique couple $(\vu_1, \vu_2) \in D \times D^\perp$ tel que $t_{\vect{Of(O)}} = t_{\vu_1} \circ t_{\vu_2}$. C'est-à-dire que $f= t_{\vu_1} \circ (t_{\vu_2} \circ \vect{f})$. Deux cas se présentent~:
   \begin{itemize}
   \item si $\vu_2=\vect{0}$ alors $f= t_{\vu_1} \circ \vect{f}$ avec $\vu_1$ colinéaire à l'axe de $\vect{f}$;
-  \item sinon, on applique le lemme à $t_{\vu_1}$ et $f$ ($\vu_2$ est colinéaire à l'axe de $\vect{f}$) alors $g=t_{\vu_2} \circ \vect{f}$ est une rotation d'axe parallèle à $D$ et $f=t_{\vu_1} \circ g$ esr un vissage.
+  \item sinon, on applique le lemme à $t_{\vu_1}$ et $f$ ($\vu_2$ est colinéaire à l'axe de $\vect{f}$) alors $g=t_{\vu_2} \circ \vect{f}$ est une rotation d'axe parallèle à $D$ et $f=t_{\vu_1} \circ g$ est un vissage.
   \end{itemize}
 \end{proof}
 
@@ -763,7 +763,7 @@ Les homothéties sont un exemple pertinent de similitude affine du plan.
     \item soit $f$ est une vraie rotation et on peut représenter $\vect{\sigma}$ par $z \longmapsto z\exp{\ii \theta}$, donc on peut représenter $\vect{\sigma}$ par $z \longmapsto az+b$.
     \end{itemize}
 
-    Vérifons les invariants~:
+    Vérifions les invariants~:
     \begin{align}
       \forall M(z) \in E_2 \quad \sigma(M) = M &\iff z(1-a)=b \\
       a=1, b=0 &\quad \Inv(\sigma)=\emptyset\\
@@ -774,7 +774,7 @@ Les homothéties sont un exemple pertinent de similitude affine du plan.
 Soit $\sigma$ une similitude directe qui n'est pas une translation. Le point $\Omega$ est son unique point fixe et $\lambda$ est son rapport. Soit $h$ l'homothétie de centre $\Omega$ de rapport $\lambda$. Il existe un déplacement $f$ tel que $\sigma = h \circ f$. Deux cas se présentent~:
 \begin{itemize}
 \item si $\vect{f}=\Id$ alors $f$ est une translation et elle n'a pas de point fixe;
-\item sinon, alors $f$ est une vraie rotation et admet un point fixe $\Omega$. en effet
+\item sinon, alors $f$ est une vraie rotation et admet un point fixe $\Omega$. En effet
   \begin{equation}
     f(\Omega) = h^{-1}\circ \sigma(\Omega) = h^{-1}(\Omega) = \Omega.
   \end{equation}

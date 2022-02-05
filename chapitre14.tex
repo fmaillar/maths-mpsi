@@ -11,7 +11,7 @@ Dans tout le chapitre $I$ désigne un intevalle réel non vide et non réduit à
 \end{defdef}
 C'est équivalent à ce que $h \longrightarrow \frac{f(a+h)-f(a)}{h}$ admet une limite finie en zéro. Lorsqu'il existe $f'(a)$ est aussi noté $\derived{f}{x}(a)$. Avec les quantificateurs, si $f$ est dérivable en $a$, $f'(a)$ vérifie
 \begin{equation}
-  \forall \epsilon >0 \ \exists \eta > 0 \ \forall x \in I\setminus\{a\} \quad \abs{x-a} \leq \eta \implies \abs{\frac{f(x)-f(a)}{x-a} - f'(a)} \leq \epsilon.
+  \forall \epsilon >0 \ \exists \eta > 0 \ \forall x \in I\setminus\{a\} \quad \abs{x-a} \leqslant \eta \implies \abs{\frac{f(x)-f(a)}{x-a} - f'(a)} \leqslant \epsilon.
 \end{equation}
 
 \subsubsection{Interprétation graphique}
@@ -100,13 +100,13 @@ La réciproque est fausse, on peut avoir des fonctions continues qui ne sont pas
 
 Soit $f \in \R^I$, $a \in I$, on dit que
 \begin{enumerate}
-\item $f$ admet un maximum global en $a$ si $\forall x \in I \quad f(x) \leq f(a)$;
-\item $f$ admet un minimum global en $a$ si $\forall x \in I \quad f(x) \geq f(a)$;
+\item $f$ admet un maximum global en $a$ si $\forall x \in I \quad f(x) \leqslant f(a)$;
+\item $f$ admet un minimum global en $a$ si $\forall x \in I \quad f(x) \geqslant f(a)$;
 \item $f$ admet un extremum global en $a$ si elle admet un maximum ou un minimum global en $a$;
-\item $f$ admet un maximum local en $a$ si $\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h}  \quad f(x) \leq f(a)$;
-\item $f$ admet un minimum local en $a$ si $\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h} \quad f(x) \geq f(a)$;
+\item $f$ admet un maximum local en $a$ si $\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h}  \quad f(x) \leqslant f(a)$;
+\item $f$ admet un minimum local en $a$ si $\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h} \quad f(x) \geqslant f(a)$;
 \item $f$ admet un extremum local en $a$ si elle admet un maximum ou un minimum local en $a$;
-\item On définit les notions d'extremum stricts de la même manière en remplaçant $\leq$ resp.\ $\geq$ par $<$ resp.\ $>$.
+\item On définit les notions d'extremum stricts de la même manière en remplaçant $\leqslant$ resp.\ $\geqslant$ par $<$ resp.\ $>$.
 \end{enumerate}
 
 \subsubsection{Liens avec les dérivées}
@@ -115,12 +115,12 @@ Soit $f \in \R^I$, $a \in I$, on dit que
   Soient $f \in \R^I$ et $a \in I$ qui n'est pas une borne de $I$. On suppose que $f$ est dérivable en $a$ et que $f$ admet un extremum local en $a$. Alors $f'(a)=0$.
 \end{theo}
 \begin{proof}
-  On suppose par exemple que $f$ admet un maximum local en $a$. Le réel $a$ est dans l'intérieur de $I$ donc il existe $h_1>0$ tel que $\intervalleff{a-h_1}{a+h_1} \subset I$. La fonction $f$ admet un maximum local en $a$ donc il existe $h_2>0$ tel que pour tout $x \in I \cap \intervalleff{a-h_2}{a+h_2}$, $f(x) \leq f(a)$. Soit $h_0=\min(h_1,h_2)$ alors $\intervalleff{a-h_0}{a+h_0} \cap A = \intervalleff{a-h_0}{a+h_0}$. Soit $x \in \intervalleff{a-h_0}{a+h_0}$,
+  On suppose par exemple que $f$ admet un maximum local en $a$. Le réel $a$ est dans l'intérieur de $I$ donc il existe $h_1>0$ tel que $\intervalleff{a-h_1}{a+h_1} \subset I$. La fonction $f$ admet un maximum local en $a$ donc il existe $h_2>0$ tel que pour tout $x \in I \cap \intervalleff{a-h_2}{a+h_2}$, $f(x) \leqslant f(a)$. Soit $h_0=\min(h_1,h_2)$ alors $\intervalleff{a-h_0}{a+h_0} \cap A = \intervalleff{a-h_0}{a+h_0}$. Soit $x \in \intervalleff{a-h_0}{a+h_0}$,
   \begin{itemize}
-  \item Si $x > a$ alors $\frac{f(x)-f(a)}{x-a} \leq 0$ et donc par passage à la limite $f'_d(a) \leq 0$;
-  \item Si $x < a$ alors $\frac{f(x)-f(a)}{x-a} \geq 0$ et donc par passage à la limite $f'_g(a) \geq 0$.
+  \item Si $x > a$ alors $\frac{f(x)-f(a)}{x-a} \leqslant 0$ et donc par passage à la limite $f'_d(a) \leqslant 0$;
+  \item Si $x < a$ alors $\frac{f(x)-f(a)}{x-a} \geqslant 0$ et donc par passage à la limite $f'_g(a) \geqslant 0$.
   \end{itemize}
-  Or on sait que $f$ est dérivable en $a$, donc $0 \leq f'_d(a)=f'_g(a) \leq 0$. Donc $f'(a)=0$.
+  Or on sait que $f$ est dérivable en $a$, donc $0 \leqslant f'_d(a)=f'_g(a) \leqslant 0$. Donc $f'(a)=0$.
 \end{proof}
 
 La réciproque est fausse, un contre-exemple suffisant est la fonction cube en zéro. Sa dérivée est nulle et pourtant elle n'admet pas d'extremum. En fait c'est un point d'inflexion. Cependant une fonction peut admettre un extremum en un point où elle n'est pas dérivable. En effet, la fonction valeur absolue admet zéro comme minimum global en zéro alors qu'elle n'est pas dérivable en zéro.
@@ -141,11 +141,11 @@ On a déja dit que si $f$ est dérivable en $a$, alors elle admet un $DL_1(a)$. 
   \end{equation}
   En passant à la limite, puisque $\epsilon$ tend vers zéro en $a$, on a bien $f'(a)=\alpha_1$.
 \end{proof}
-Cependant, la propriété n'est pas généralisable pour un $DLn(a)$ où $n \geq 2$.
+Cependant, la propriété n'est pas généralisable pour un $DLn(a)$ où $n \geqslant 2$.
 
 \subsubsection{Interprétation graphique du $DL_1(a)$}
 
-Si $f$ admet le $DL_1(a)$ $f(x)=\alpha_0 +\alpha_1(x-a) +\petitof{a}{(x-a)}$ avec $x \longrightarrow \alpha_0 +\alpha_1(x-a)$ la fonction affine tangente. On suppose que $f$ admet un $DL_n(a)$ avec $n \geq 2$,
+Si $f$ admet le $DL_1(a)$ $f(x)=\alpha_0 +\alpha_1(x-a) +\petitof{a}{(x-a)}$ avec $x \longrightarrow \alpha_0 +\alpha_1(x-a)$ la fonction affine tangente. On suppose que $f$ admet un $DL_n(a)$ avec $n \geqslant 2$,
 \begin{equation}
   f(x) = \sum_{k=0}^n \alpha_k (x-a)^k +\petitof{a}{(x-a)^n},
 \end{equation}
@@ -403,7 +403,7 @@ Les inclusions sont strictes.
 
 Soit $n=1$, alors si $f$ et $g$ sont dérivables, alors on sait que $fg$ est dérivable d'après les propriétés et $(fg)'=f'g+g'f=\sum_{k=0}^1 \binom{1,k} f^{(k)}g^{(1-k)}$. Donc $\P(1)$ est vraie.
 
-Supposons maintenant $\P(n)$ pour $n \neq 0$, montrons $\P(n+1)$. Soit $f$ et $g$ $n+1$ fois dérivables, alors elles le sont $n$ fois et par hypothèse de récurrence $(fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}$. Pour tout $k \leq n$ $f^{(k)}$ et $g^{(n-k)}$ sont dérivables (puisque $f$ et $g$ le sont $n+1$ fois). Par produit est combinaisons linéaires de fonctions dérivables, la fonction $(fg)^{(n)}$ est dérivable. Autrement dit $fg$ est $n+1$ fois dérivable et
+Supposons maintenant $\P(n)$ pour $n \neq 0$, montrons $\P(n+1)$. Soit $f$ et $g$ $n+1$ fois dérivables, alors elles le sont $n$ fois et par hypothèse de récurrence $(fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}$. Pour tout $k \leqslant n$ $f^{(k)}$ et $g^{(n-k)}$ sont dérivables (puisque $f$ et $g$ le sont $n+1$ fois). Par produit est combinaisons linéaires de fonctions dérivables, la fonction $(fg)^{(n)}$ est dérivable. Autrement dit $fg$ est $n+1$ fois dérivable et
 \begin{align}
   (fg)^{(n+1)}=\left((fg)^{(n)}\right)'&=\sum_{k=0}^n \binom{n}{k} [f^{(k)}g^{(n-k)}]' \\
   &=\sum_{k=0}^n \binom{n}{k} [f^{(k+1)}g^{(n-k)}+f^{(k)}g^{(n-k+1)}]\\
@@ -453,7 +453,7 @@ $\P(1)$ est vraie d'après les propriétés sur la dérivée. Soit $n \in \N^*$,
   Soit un naturel $n$ non nul et $f \in \R^I$. On suppose que $f$ est $n$ fois dérivable et qu'elle est strictement monotone. Alors $f$ induit une bijection de I dur $J=f(I)$ et $f^{-1}$ est $n$ fois dérivable. Idem avec $\classe{n}$ et $\classe{\infty}$.
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-  L'initialisation est vraie pour $n=1$ grâce aux propriétés sur la dérivation. Soit ensuite $n \geq 1$ et supposons $\P(n)$. Soit alors $f$ $n+1$ fois dérivable et $f'(I) \subset ]0,+\infty[$. Par théorème on sait que $f^{-1}$ est dérivable et $(f^{-1})'=\frac{1}{f' \circ f^{-1}}$. Par hypothèse de récurrence on sait que $f^{-1}$ est $n$ fois dérivable. On sait aussi que $f'$ est $n$ fois dérivable. Alors d'après le théorème précédent $f' \circ f^{-1}$ est $n$ fois dérivable. Puisque $f' \circ f^{-1}$ ne s'annule pas, son inverse et aussi $n$ fois dérivable. Donc finalement $(f^{-1})$ est $n$ fois dérivable. Donc $\P(n+1)$ est vraie. Le théorème de récurrence affirme donc que la propriété $\P(n)$ est vraie pour tout naturel $n$ non nul.
+  L'initialisation est vraie pour $n=1$ grâce aux propriétés sur la dérivation. Soit ensuite $n \geqslant 1$ et supposons $\P(n)$. Soit alors $f$ $n+1$ fois dérivable et $f'(I) \subset ]0,+\infty[$. Par théorème on sait que $f^{-1}$ est dérivable et $(f^{-1})'=\frac{1}{f' \circ f^{-1}}$. Par hypothèse de récurrence on sait que $f^{-1}$ est $n$ fois dérivable. On sait aussi que $f'$ est $n$ fois dérivable. Alors d'après le théorème précédent $f' \circ f^{-1}$ est $n$ fois dérivable. Puisque $f' \circ f^{-1}$ ne s'annule pas, son inverse et aussi $n$ fois dérivable. Donc finalement $(f^{-1})$ est $n$ fois dérivable. Donc $\P(n+1)$ est vraie. Le théorème de récurrence affirme donc que la propriété $\P(n)$ est vraie pour tout naturel $n$ non nul.
 \end{proof}
 
 \section{Étude globale de la dérivation sur un intervalle}
@@ -531,7 +531,7 @@ En particulier, si $\theta \in I$ pour tout $x \in I$, il existe $\theta \in \in
 \subsection{Inégalité des accroissements finis}
 
 \begin{theo}[IAF]\label{theo:iaf}
-  Soit un intervalle réel $I$ et $f \in \R^I$. On suppose que $f$ est continue sur $I$ et dérivable sur $\mathring{I}$. On suppose de plus qu'il existe des réels $m,M$ tels que pour tout réel $x \in \mathring{I}$ $m \leq f'(x) \leq M$.
+  Soit un intervalle réel $I$ et $f \in \R^I$. On suppose que $f$ est continue sur $I$ et dérivable sur $\mathring{I}$. On suppose de plus qu'il existe des réels $m,M$ tels que pour tout réel $x \in \mathring{I}$ $m \leqslant f'(x) \leqslant M$.
 
 Alors pour tout réel $x_1 \neq x_2 \in I$ on a $m < \frac{f(x_2)-f(x_1)}{x_2-x_1} < M$.
 \end{theo}
@@ -540,14 +540,14 @@ Alors pour tout réel $x_1 \neq x_2 \in I$ on a $m < \frac{f(x_2)-f(x_1)}{x_2-x_
 \end{proof}
 
 \begin{corth}
-  Soient deux réels $a < b$ et $f \in \R^{\intervalleff{a}{b}}$. On suppose que $f$ est continue sur $\intervalleff{a}{b}$ et dérivable sur $\intervalleoo{a}{b}$ et qu'il existe deux réels $m,M$ tels que pour tout $x \in \intervalleoo{a}{b}$ $m \leq f'(x) \leq M$.
+  Soient deux réels $a < b$ et $f \in \R^{\intervalleff{a}{b}}$. On suppose que $f$ est continue sur $\intervalleff{a}{b}$ et dérivable sur $\intervalleoo{a}{b}$ et qu'il existe deux réels $m,M$ tels que pour tout $x \in \intervalleoo{a}{b}$ $m \leqslant f'(x) \leqslant M$.
 
-Alors pour tout réel $x \in \intervalleff{a}{b}$, $f(a)+m(x-a) \leq f(x) \leq f(a)+M(x-a)$.
+Alors pour tout réel $x \in \intervalleff{a}{b}$, $f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)$.
 \end{corth}\label{corth:iaf2}
 \begin{proof}
   \begin{itemize}
-  \item si $x=a$ alors $f(a) \leq f(a) \leq f(a)$ est vraie
-  \item sinon, $x \in \intervalleof{a}{b}$ et on applique l'inégalité des accroissements finis avec $x_1=a$ et $x_2 \neq x_1$. Alors $m \leq \frac{f(x)-f(a)}{x-a} \leq M$. Comme $x-a >0$ on a bien $f(a)+m(x-a) \leq f(x) \leq f(a)+M(x-a)$.
+  \item si $x=a$ alors $f(a) \leqslant f(a) \leqslant f(a)$ est vraie
+  \item sinon, $x \in \intervalleof{a}{b}$ et on applique l'inégalité des accroissements finis avec $x_1=a$ et $x_2 \neq x_1$. Alors $m \leqslant \frac{f(x)-f(a)}{x-a} \leqslant M$. Comme $x-a >0$ on a bien $f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)$.
   \end{itemize}
 \end{proof}
 
@@ -556,7 +556,7 @@ Alors pour tout réel $x \in \intervalleff{a}{b}$, $f(a)+m(x-a) \leq f(x) \leq f
 \begin{prop}
   Soient $a, b$ deux réels tels que $a < b$ et $f \in \R^{\intervalleff{a}{b}}$. On suppose que $f$ est de classe $\classe{1}$. Alors $f'$ est bornée sur $\intervalleff{a}{b}$ et pour tout $x,y$ de $\intervalleff{a}{b}$ différents on a
   \begin{equation}
-    \inf\limits_{\intervalleff{a}{b}}f' \leq \inf\limits_{[(x,y)]}f' \leq \frac{f(x)-f(y)}{x-y} \leq \sup\limits_{[(x,y)]}f' \leq \sup\limits_{\intervalleff{a}{b}}f'.
+    \inf\limits_{\intervalleff{a}{b}}f' \leqslant \inf\limits_{[(x,y)]}f' \leqslant \frac{f(x)-f(y)}{x-y} \leqslant \sup\limits_{[(x,y)]}f' \leqslant \sup\limits_{\intervalleff{a}{b}}f'.
   \end{equation}
 \end{prop}
 \begin{theo}
@@ -564,23 +564,23 @@ Alors pour tout réel $x \in \intervalleff{a}{b}$, $f(a)+m(x-a) \leq f(x) \leq f
   \begin{itemize}
   \item $f$ est continue sur $I$;
   \item $f$ est dérivable sur $\mathring{I}$;
-  \item qu'il existe $k \in \Rpluss$ tel que pour tout $x \in \mathring{I}$ $\abs{f'(x)} \leq k$.
+  \item qu'il existe $k \in \Rpluss$ tel que pour tout $x \in \mathring{I}$ $\abs{f'(x)} \leqslant k$.
   \end{itemize}
-  Alors pour tout $x,y$ dans $I$, $\abs{f(x)-f(y)} \leq k\abs{x-y}$
+  Alors pour tout $x,y$ dans $I$, $\abs{f(x)-f(y)} \leqslant k\abs{x-y}$
 \end{theo}
 
 Si $a < b$ et si $f \in \classe{1}(\intervalleff{a}{b}, \R)$ alors les hypothèses du théorèmes sont satisfaites avec $k=\sup\limits_{\intervalleff{a}{b}}\abs{f'}$ car $f'$ est continue sur le segment $\intervalleff{a}{b}$ donc elle est bornée.
 
 \begin{proof}
   \begin{itemize}
-  \item si $x_1=x_2$, alors on a bien $0 \leq 0$;
+  \item si $x_1=x_2$, alors on a bien $0 \leqslant 0$;
   \item sinon, grâce aux inéaglités des accroissements finis on a
     \begin{equation}
-      -k \leq \frac{f(x_2)-f(x_1)}{x_2-x_1} \leq k,
+      -k \leqslant \frac{f(x_2)-f(x_1)}{x_2-x_1} \leqslant k,
     \end{equation}
     et donc
     \begin{equation}
-       \abs{f(x_2)-f(x_1)} \leq k\abs{x_2-x_1}.
+       \abs{f(x_2)-f(x_1)} \leqslant k\abs{x_2-x_1}.
     \end{equation}
   \end{itemize}
 \end{proof}
@@ -595,17 +595,17 @@ Si $a < b$ et si $f \in \classe{1}(\intervalleff{a}{b}, \R)$ alors les hypothès
   \item $f$ est constante qur I si et seulement si $f'$ est nulle sur $\mathring{I}$;
   \item $f$ est croissante (resp.\ décroissante) sur I si et seulement si $f'$ est positive (resp.\ négative) sur $\mathring{I}$;
   \item $f$ est strictement croissante (resp.\ strictement décroissante) sur I si et seulement si $f'$ est positive (resp.\ négative) sur $\mathring{I}$ et pour tout $a,b \in I$ qu'il existe un $c \in \intervalleoo{a}{b}$ en lequel $f'$ est non nulle;
-  \item $f$ est $k$-lipschitzienne si et seulement si $\sup\limits_{\mathring{I}} \abs{f'} \leq k$.
+  \item $f$ est $k$-lipschitzienne si et seulement si $\sup\limits_{\mathring{I}} \abs{f'} \leqslant k$.
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  Démontrons le deuxième point pour $f$ croissante. Si $f$ est croissante alors pour tout $x_0 \in \mathring{I}$ et tout $x \in I$ $\frac{f(x)-f(x_0)}{x-x_0} \geq 0$ or on sait que $f$ est dérivable en $x_0$ donc par passage à la limite $f'(x_0) \geq 0$. Si maintenant $f'$ est positive sur $\mathring{I}$ alors pour tout $x,y$ de $I$ tels que $x < y$, par égalité des accroissements finis, il existe $c \in ]x,y[$ tel que $f(x)-f(y) = f'(c)(x-y)$. Or $f'(c) \geq 0$ et $y-x > 0$. Donc $f(y) \geq f(x)$ et ainsi $f$ est croissante. Pour $f$ décroissante on applique le résultat qui précéde à $-f$.
+  Démontrons le deuxième point pour $f$ croissante. Si $f$ est croissante alors pour tout $x_0 \in \mathring{I}$ et tout $x \in I$ $\frac{f(x)-f(x_0)}{x-x_0} \geqslant 0$ or on sait que $f$ est dérivable en $x_0$ donc par passage à la limite $f'(x_0) \geqslant 0$. Si maintenant $f'$ est positive sur $\mathring{I}$ alors pour tout $x,y$ de $I$ tels que $x < y$, par égalité des accroissements finis, il existe $c \in ]x,y[$ tel que $f(x)-f(y) = f'(c)(x-y)$. Or $f'(c) \geqslant 0$ et $y-x > 0$. Donc $f(y) \geqslant f(x)$ et ainsi $f$ est croissante. Pour $f$ décroissante on applique le résultat qui précéde à $-f$.
 
 Le premier point se déduit du deuxième puisque $f$ est constante si et seulement si $f$ est croissante et $f$ est décroissante.
 
-Démontrons le troisième point pour $f$ strictement croissante. La fonction $f$ est strictement croissante si et seulement si elle est croissante et injective, c'est à dire si et seulement si $f' \geq \tilde{0}$ et $f$ injective. Donc d'après l'égalité des accroissement finis pour tout $a,b \in I$ avec $a <b$ il existe un $c \in \intervalleoo{a}{b}$ tel que $f(b)-f(a)=f'(c)(b-a)$. Comme $a \neq b$ et que $f$ est injective alors $f'(c) \neq 0$. Si maintenant on suppose que $f$ est croissante et qu'il existe un $c \in ]a,b[$ tel que $f'(c) \neq 0$. Alors d'après le premier point $f$ n'est pas constante donc $f(a) < f(b)$ (Il serait absurde d'avoir $f(a)=f(b)$). Alors $f$ est strictement croissante. On a montré l'équivalence. Pour $f$ strictement décroissante on applique le résultat à $-f$.
+Démontrons le troisième point pour $f$ strictement croissante. La fonction $f$ est strictement croissante si et seulement si elle est croissante et injective, c'est à dire si et seulement si $f' \geqslant \tilde{0}$ et $f$ injective. Donc d'après l'égalité des accroissement finis pour tout $a,b \in I$ avec $a <b$ il existe un $c \in \intervalleoo{a}{b}$ tel que $f(b)-f(a)=f'(c)(b-a)$. Comme $a \neq b$ et que $f$ est injective alors $f'(c) \neq 0$. Si maintenant on suppose que $f$ est croissante et qu'il existe un $c \in ]a,b[$ tel que $f'(c) \neq 0$. Alors d'après le premier point $f$ n'est pas constante donc $f(a) < f(b)$ (Il serait absurde d'avoir $f(a)=f(b)$). Alors $f$ est strictement croissante. On a montré l'équivalence. Pour $f$ strictement décroissante on applique le résultat à $-f$.
 
-Pour le quatrième point, on a déjà vu que si $f'$ était bornée alors $f$ est $k-$lipschitzienne. Si maintenant on suppose que $f$ est $k-$lipschitzienne et dérivable sur $\mathring{I}$, alors pour tout $x_0 \in \mathring{I}$ et tout $x \in I$ $x \neq x_0$ on a $\abs{\frac{f(x)-f(x_0)}{x-x_0}} \leq k$. Comme $f$ est dérivable en $x_0$, on peut passer à la limite en $x_0$ et donc on a bien $\abs{f'(x_0)} \leq k$. Il faut quand même vérifier que $f$ est bien dérivable avant d'appliquer ce point.
+Pour le quatrième point, on a déjà vu que si $f'$ était bornée alors $f$ est $k-$lipschitzienne. Si maintenant on suppose que $f$ est $k-$lipschitzienne et dérivable sur $\mathring{I}$, alors pour tout $x_0 \in \mathring{I}$ et tout $x \in I$ $x \neq x_0$ on a $\abs{\frac{f(x)-f(x_0)}{x-x_0}} \leqslant k$. Comme $f$ est dérivable en $x_0$, on peut passer à la limite en $x_0$ et donc on a bien $\abs{f'(x_0)} \leqslant k$. Il faut quand même vérifier que $f$ est bien dérivable avant d'appliquer ce point.
 \end{proof}
 
 En particulier si $x \in \mathring{I}$, alors $f'(x)>0$ et donc $f$ est strictement croissante. Ou encore si pour tout $x \in \mathring{I}$,  $f'(x_0) >0$ et si $f'$ ne s'annule qu'en un nombre fini de point alors $f$ est strictement croissante.
@@ -698,7 +698,7 @@ On note $\derivpt{a}{I}{\C}$ l'ensemble des fonctions de $\C^I$ qui sont dériva
 \subsubsection{Dérivées successives}
 
 \begin{defdef}
-  Soit $f \in \C^I$. On pose $f^{(0)}=f$ et on définit par réccurence les dérivées successives de $f$ si elles existent. Pour $n \geq 1 f^{(n)}=f'^{(n-1)}$.
+  Soit $f \in \C^I$. On pose $f^{(0)}=f$ et on définit par réccurence les dérivées successives de $f$ si elles existent. Pour $n \geqslant 1 f^{(n)}=f'^{(n-1)}$.
 
   On note $\Dr^n(I,\C)$ l'ensemble des fonctions de $I$ dans $\C$ qui sont $n$ fois dérivables. On note $\classe{n}(I,\C)$ l'ensemble des fonctions de $\Dr^n(I,\C)$  qui sont continues, on dit qu'elles sont $n$ fois continûment dérivables. Enfin on note $\classe{\infty}(I,\C)$ l'ensemble des fonctions qui sont indéfiniment continûment dérivables.
 \end{defdef}
@@ -760,11 +760,11 @@ Soit $I$ un intervalle réel non vide et non réduit à un point.
 \begin{defdef}
   Soit $f \in \R^I$. La fonction $f$ est convexe si et seulement si
   \begin{equation}
-    \forall (x_1, x_2) \in I^2 \ \forall t \in \intervalleff{0}{1} \quad f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2).
+    \forall (x_1, x_2) \in I^2 \ \forall t \in \intervalleff{0}{1} \quad f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2).
   \end{equation}
   De la même manière la fonction $f$ est concave si et seulement si 
   \begin{equation}
-    \forall (x_1, x_2) \in I^2 \ \forall t \in \intervalleff{0}{1} \quad f(tx_1+(1-t)x_2) \geq tf(x_1)+(1-t)f(x_2).
+    \forall (x_1, x_2) \in I^2 \ \forall t \in \intervalleff{0}{1} \quad f(tx_1+(1-t)x_2) \geqslant tf(x_1)+(1-t)f(x_2).
   \end{equation}
 \end{defdef}
 \begin{prop}
@@ -776,19 +776,19 @@ Soit $I$ un intervalle réel non vide et non réduit à un point.
 \begin{theo}[Inégalité de convexité ou de Jensen]
   Soient $f \in \R^I$ convexe, $n \in \N^*$, $x_1, \ldots x_n \in I$, $\alpha_1, \ldots, \alpha_n \in \R$ tels que
   \begin{equation}
-    \forall k \in \intervalleentier{1}{n} \ \alpha_k \geq 0 \quad \sum_{k=1}^n \alpha_k = 1
+    \forall k \in \intervalleentier{1}{n} \ \alpha_k \geqslant 0 \quad \sum_{k=1}^n \alpha_k = 1
   \end{equation}
   Alors
   \begin{equation}
-    \sum_{k=1}^n \alpha_k x_k \in I \quad f\left(\sum_{k=1}^n \alpha_k x_k \right) \leq \sum_{k=1}^n \alpha_k f(x_k)
+    \sum_{k=1}^n \alpha_k x_k \in I \quad f\left(\sum_{k=1}^n \alpha_k x_k \right) \leqslant \sum_{k=1}^n \alpha_k f(x_k)
   \end{equation}
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-  Soit un naturel $n$ non nul et la propriété $\P$ telle que $\P(n)$ ``$\forall x_1, \ldots x_n \in I \ \forall \alpha_1, \ldots, \alpha_n \in \R$ tels que $\forall k \in \intervalleentier{1}{n} \ \alpha_k \geq 0 \quad \sum_{k=1}^n \alpha_k = 1$ alors $\sum_{k=1}^n \alpha_k x_k \in I \ f\left(\sum_{k=1}^n \alpha_k x_k \right) \leq \sum_{k=1}^n \alpha_k f(x_k)$''.
+  Soit un naturel $n$ non nul et la propriété $\P$ telle que $\P(n)$ ``$\forall x_1, \ldots x_n \in I \ \forall \alpha_1, \ldots, \alpha_n \in \R$ tels que $\forall k \in \intervalleentier{1}{n} \ \alpha_k \geqslant 0 \quad \sum_{k=1}^n \alpha_k = 1$ alors $\sum_{k=1}^n \alpha_k x_k \in I \ f\left(\sum_{k=1}^n \alpha_k x_k \right) \leqslant \sum_{k=1}^n \alpha_k f(x_k)$''.
 
-Pour l'initialisation à $n=1$, on a $\alpha_1=1 \geq 0$ alors $\alpha_1 x_1=x_1 \in I$ et $f(\alpha_1 x_1)=f(x_1)=\alpha_1f(x_1)$ alors $\P(1)$ est vraie.
+Pour l'initialisation à $n=1$, on a $\alpha_1=1 \geqslant 0$ alors $\alpha_1 x_1=x_1 \in I$ et $f(\alpha_1 x_1)=f(x_1)=\alpha_1f(x_1)$ alors $\P(1)$ est vraie.
 
-Soit $n \in \N^*$ et supposons $\P(n)$, montrons $\P(n+1)$. Soient $x_1, \ldots, x_{n+1} \in I \ \forall \alpha_1, \ldots, \alpha_{n+1} \in \R$ tels que $\forall k \in \llbracket 1,n+1 \rrbracket \ \alpha_k \geq 0 \quad \sum_{k=1}^{n+1} \alpha_k = 1$. Deux cas de figure se présentent :
+Soit $n \in \N^*$ et supposons $\P(n)$, montrons $\P(n+1)$. Soient $x_1, \ldots, x_{n+1} \in I \ \forall \alpha_1, \ldots, \alpha_{n+1} \in \R$ tels que $\forall k \in \llbracket 1,n+1 \rrbracket \ \alpha_k \geqslant 0 \quad \sum_{k=1}^{n+1} \alpha_k = 1$. Deux cas de figure se présentent :
 \begin{itemize}
 \item si $\alpha_{n+1}=1$ les autres sont tous nuls et donc 
   \begin{equation}
@@ -800,17 +800,17 @@ Soit $n \in \N^*$ et supposons $\P(n)$, montrons $\P(n+1)$. Soient $x_1, \ldots,
     \sum_{k=1}^{n+1} \alpha_k x_k &= \sum_{k=1}^{n} \alpha_k x_k + \alpha_{n+1} x_{n+1}\\
     &=(1-\alpha_{n+1}) \sum_{k=1}^{n} \frac{\alpha_k}{1-\alpha_{n+1}} x_k + \alpha_{n+1} x_{n+1}.
   \end{align}
-  On note pour tout $k$ tel que $1 \leq k \leq n$ $\beta_k=\frac{\alpha_k}{1-\alpha_{n+1}} \geq 0$. Alors $\sum_{k=1}^n \beta_k = 1$. Par hypothèse de récurrence, $\sum_{k=1}^n \beta_kx_k \in I$. De plus $x_{n+1} \in I$, alors puisque $I$ est un intervalle, il est convexe donc $(1-\alpha_{n+1}) \sum_{k=1}^{n} \beta_k x_k + \alpha_{n+1} x_{n+1} \in I$. En appliquant $f$ qui est convexe on a
+  On note pour tout $k$ tel que $1 \leqslant k \leqslant n$ $\beta_k=\frac{\alpha_k}{1-\alpha_{n+1}} \geqslant 0$. Alors $\sum_{k=1}^n \beta_k = 1$. Par hypothèse de récurrence, $\sum_{k=1}^n \beta_kx_k \in I$. De plus $x_{n+1} \in I$, alors puisque $I$ est un intervalle, il est convexe donc $(1-\alpha_{n+1}) \sum_{k=1}^{n} \beta_k x_k + \alpha_{n+1} x_{n+1} \in I$. En appliquant $f$ qui est convexe on a
   \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leq (1-\alpha_{n+1}) f\left(\sum_{k=1}^n \beta_k x_k \right) + \alpha_{n+1}f(x_{n+1}).
+    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1}) f\left(\sum_{k=1}^n \beta_k x_k \right) + \alpha_{n+1}f(x_{n+1}).
   \end{equation}
-  Par hypothèse de récurrence, puisque pour tout $k$ $\beta_k \geq 0$ et $\sum_{k=1}^n \beta_k = 1$ alors $f\left(\sum_{k=1}^n \beta_k x_k \right) \leq \sum_{k=1}^n \beta_k f(x_k)$. Puisque $1-\alpha_{n+1} \geq 0$ on a
+  Par hypothèse de récurrence, puisque pour tout $k$ $\beta_k \geqslant 0$ et $\sum_{k=1}^n \beta_k = 1$ alors $f\left(\sum_{k=1}^n \beta_k x_k \right) \leqslant \sum_{k=1}^n \beta_k f(x_k)$. Puisque $1-\alpha_{n+1} \geqslant 0$ on a
   \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leq (1-\alpha_{n+1})\sum_{k=1}^n \beta_k f(x_k) + \alpha_{n+1} f(x_{n+1})
+    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1})\sum_{k=1}^n \beta_k f(x_k) + \alpha_{n+1} f(x_{n+1})
   \end{equation}
   Par définition des $\beta_k$ on obtient
   \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leq \sum_{k=1}^{n+1} \alpha_k f(x_k).
+    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant \sum_{k=1}^{n+1} \alpha_k f(x_k).
   \end{equation}
   Alors $\P(n+1)$ est vraie.
 \end{itemize}
@@ -826,7 +826,7 @@ Soit une fonction $f$ de $I$ dans $\R$. La fonction $f$ est convexe si et seulem
 et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x_1)+(1-t)f(x_2))$.
 
 \begin{proof}
-  La fonction $f$ est convexe si et seulement si pour tout $(x_1,x_2) \in I^2$ et tout $t \in \intervalleff{0}{1}$, $f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2)$. Si pour tout $t \in \intervalleff{0}{1}$, tout $x_1,x_2 \in I$ on note $M_1(x_1,f(x_1))$, $M_2(x_2,f(x_2))$, $M(t)(tx_1+(1-t)x_2,f(tx_1+(1-t)x_2))$ et $G(t)(tx_1+(1-t)x_2,tf(x_1)+(1-t)f(x_2))$ alors $f$ est convexe si et seulement si l'ordonnée de $G(t)$ est inférieure à celle de $M(t)$. Finalement $f$ est convexe si et seulement si pour tout point $M_1, M_2$ de la courbe de $f$ l'arc $\wideparen{M_1M_2}$ est sous la corde $[M_1M_2]$.
+  La fonction $f$ est convexe si et seulement si pour tout $(x_1,x_2) \in I^2$ et tout $t \in \intervalleff{0}{1}$, $f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2)$. Si pour tout $t \in \intervalleff{0}{1}$, tout $x_1,x_2 \in I$ on note $M_1(x_1,f(x_1))$, $M_2(x_2,f(x_2))$, $M(t)(tx_1+(1-t)x_2,f(tx_1+(1-t)x_2))$ et $G(t)(tx_1+(1-t)x_2,tf(x_1)+(1-t)f(x_2))$ alors $f$ est convexe si et seulement si l'ordonnée de $G(t)$ est inférieure à celle de $M(t)$. Finalement $f$ est convexe si et seulement si pour tout point $M_1, M_2$ de la courbe de $f$ l'arc $\wideparen{M_1M_2}$ est sous la corde $[M_1M_2]$.
 \end{proof}
 
 \subsection{Premières caractérisations des fonctions convexes}
@@ -834,17 +834,17 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
 \begin{theo}
   Soit une fonction $f$ de I dans $\R$. Alors $f$ est convexe si et seulement si pour tout $x_1, x_2 \in I$ tels que $x_1 < x_2$ et tout réel $t \in \intervalleoo{0}{1}$
   \begin{equation}
-    f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2).
+    f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2).
   \end{equation}
 \end{theo}
 \begin{proof}
   Si $f$ est convexe alors par définition on a pour tout $x_1, x_2 \in I$ tels que $x_1 < x_2$ et tout réel $t \in \intervalleoo{0}{1}$,
   \begin{equation}
-    f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2).
+    f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2).
   \end{equation}
   Supposons aussi que pour tout $x_1, x_2 \in I$ tels que $x_1 < x_2$ et tout réel $t \in \intervalleoo{0}{1}$,
   \begin{equation}
-    f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2).
+    f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2).
   \end{equation}
   Pour avoir la définition il manque
   \begin{enumerate}
@@ -864,7 +864,7 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
 \begin{defdef}
   Soit $f \in \R^I$. On appelle épigraphe de $f$ l'ensemble
   \begin{equation}
-    \epsilon(f) = \enstq{(x,y) \in I\times\R}{y \geq f(x)}.
+    \epsilon(f) = \enstq{(x,y) \in I\times\R}{y \geqslant f(x)}.
   \end{equation}
 \end{defdef}
 \begin{defdef}
@@ -874,7 +874,7 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
   Soit $f \in \R^I$. La fonction $f$ est convexe si et seulement si $\epsilon(f)$ est une partie convexe du plan $\R^2$.
 \end{theo}
 \begin{proof}
-  Supposons que $f$ soit convexe. Soient alors $M_1$ et $M_2$ dans son épigraphe. Alors $y_1\geq f(x_1)$ et $y_2 \geq f(x_2)$. Soit un point $M \in [M_1M_2]$. Il existe un réel $t \in \intervalleff{0}{1}$ tel que $M(tx_1+(1-t)x_2, ty_1+(1-t)y_2)$. Comme $f$ est convexe on a $f(tx_1+(1-t)x_2) \leq tf(x_1)+(1-t)f(x_2) \leq ty_1+(1-t)y_2$. C'est à dire $f(x_M) \leq y_M$. Donc $M$ est dans l'épigraphe de $f$. L'épigraphe de $f$ est donc convexe. 
+  Supposons que $f$ soit convexe. Soient alors $M_1$ et $M_2$ dans son épigraphe. Alors $y_1\geqslant f(x_1)$ et $y_2 \geqslant f(x_2)$. Soit un point $M \in [M_1M_2]$. Il existe un réel $t \in \intervalleff{0}{1}$ tel que $M(tx_1+(1-t)x_2, ty_1+(1-t)y_2)$. Comme $f$ est convexe on a $f(tx_1+(1-t)x_2) \leqslant tf(x_1)+(1-t)f(x_2) \leqslant ty_1+(1-t)y_2$. C'est à dire $f(x_M) \leqslant y_M$. Donc $M$ est dans l'épigraphe de $f$. L'épigraphe de $f$ est donc convexe. 
 
   Supposons ensuite que c'est l'épigraphe de $f$ qui est convexe. Alors pour tout points $M_1,M_2$ de l'épigraphe, le segment $[M_1M_2] \subset \epsilon(f)$. Ce qui signifie que la corde $[M_1M_2]$ est au-dessus de l'arc $\wideparen{M_1M_2}$. Alors $f$ est convexe.
 \end{proof}
@@ -884,17 +884,17 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
 \begin{theo}\label{theo:pentes}
   Soit $f \in \R^I$ convexe, alors
   \begin{equation}
-    \forall (a,b,c) \in I^1 \ a<b<c \quad \frac{f(b)-f(a)}{b-a} \leq \frac{f(c)-f(a)}{c-a} \leq \frac{f(c)-f(b)}{c-b}.
+    \forall (a,b,c) \in I^1 \ a<b<c \quad \frac{f(b)-f(a)}{b-a} \leqslant \frac{f(c)-f(a)}{c-a} \leqslant \frac{f(c)-f(b)}{c-b}.
   \end{equation}
 \end{theo}
 \begin{proof}
-  On sait que $b \in \intervalleoo{a}{c}$ alors il existe un réel $t \in \intervalleoo{0}{1}$ tel que $b=ta+(1-t)c$ et donc $b-a=(1-t)(c-a)$ et $c-b=t(c-a)$. La fonction $f$ est convexe alors $f(b) \leq tf(a)+(1-t)f(c)$. Alors $f(b)-f(a) \leq (1-t)(f(c)-f(a))$. Comme $b-a >0$ on divise et on obtient la premièer inégalité :
+  On sait que $b \in \intervalleoo{a}{c}$ alors il existe un réel $t \in \intervalleoo{0}{1}$ tel que $b=ta+(1-t)c$ et donc $b-a=(1-t)(c-a)$ et $c-b=t(c-a)$. La fonction $f$ est convexe alors $f(b) \leqslant tf(a)+(1-t)f(c)$. Alors $f(b)-f(a) \leqslant (1-t)(f(c)-f(a))$. Comme $b-a >0$ on divise et on obtient la premièer inégalité :
   \begin{equation}
-    \frac{f(b)-f(a)}{b-a} \leq \frac{1-t}{b-a}(f(c)-f(a))=\frac{f(c)-f(a)}{c-a}.
+    \frac{f(b)-f(a)}{b-a} \leqslant \frac{1-t}{b-a}(f(c)-f(a))=\frac{f(c)-f(a)}{c-a}.
   \end{equation}
-  et on a aussi $f(c)-f(b) \geq -tf(a)-(1-t)f(c)+f(c) = t(f(c)-f(a))$. Comme $t=\frac{c-b}{c-a}$ on obtient $f(c)-f(b) \geq \frac{c-b}{c-a}(f(c)-f(a))$. Puisque $c-b>0$ on divise et on a la deuxième inégalité
+  et on a aussi $f(c)-f(b) \geqslant -tf(a)-(1-t)f(c)+f(c) = t(f(c)-f(a))$. Comme $t=\frac{c-b}{c-a}$ on obtient $f(c)-f(b) \geqslant \frac{c-b}{c-a}(f(c)-f(a))$. Puisque $c-b>0$ on divise et on a la deuxième inégalité
   \begin{equation}
-    \frac{f(c)-f(b)}{c-b} \geq \frac{f(c)-f(a)}{c-a}.
+    \frac{f(c)-f(b)}{c-b} \geqslant \frac{f(c)-f(a)}{c-a}.
   \end{equation}
 \end{proof}
 \begin{theo}
@@ -905,33 +905,33 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
   \begin{enumerate}
   \item $x < x' < a$ et dans ce cas le théorème nous dit que
     \begin{equation}
-      \frac{f(x')-f(x)}{x'-x} \leq \frac{f(a)-f(x)}{a-x} \leq \frac{f(a)-f(x')}{a-x'}
+      \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(a)-f(x')}{a-x'}
     \end{equation}
-    et donc $p_a(x) \leq p_a(x')$;
+    et donc $p_a(x) \leqslant p_a(x')$;
   \item $a < x < x'$ et dans ce cas le théorème nous dit que
     \begin{equation}
-      \frac{f(x)-f(a)}{x-a} \leq \frac{f(x')-f(a)}{x'-a} \leq \frac{f(x')-f(x)}{x'-x}
+      \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(x')-f(a)}{x'-a} \leqslant \frac{f(x')-f(x)}{x'-x}
     \end{equation}
-    et donc $p_a(x) \leq p_a(x')$;
+    et donc $p_a(x) \leqslant p_a(x')$;
   \item $x<a<x'$  et dans ce cas le théorème nous dit que
     \begin{equation}
-      \frac{f(a)-f(x)}{a-x} \leq \frac{f(x')-f(x)}{x'-x} \leq \frac{f(x')-f(a)}{x'-a}
+      \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(x')-f(a)}{x'-a}
     \end{equation}
-    et donc $p_a(x) \leq p_a(x')$.
+    et donc $p_a(x) \leqslant p_a(x')$.
   \end{enumerate}
   Dans tous les cas, on a montré que $p_a$ était croissante.
 
-  Supposons maintenant que pour tout $a \in I$ la fonction $p_a$ soit croissante. Soient alors $x_1,x_2 \in I$ tels que $x_1<x_2$ et $t \in \intervalleoo{0}{1}$. Posons $y=tx_1+(1-t)x_2 \in \intervalleoo{x_1}{x_2}$. Nous voulons démontrer que $f(y) \leq tf(x_1)+(1-t)f(x_2)$. Par hypothèse la fonctions $p_{x_1}$ est croissante donc 
+  Supposons maintenant que pour tout $a \in I$ la fonction $p_a$ soit croissante. Soient alors $x_1,x_2 \in I$ tels que $x_1<x_2$ et $t \in \intervalleoo{0}{1}$. Posons $y=tx_1+(1-t)x_2 \in \intervalleoo{x_1}{x_2}$. Nous voulons démontrer que $f(y) \leqslant tf(x_1)+(1-t)f(x_2)$. Par hypothèse la fonctions $p_{x_1}$ est croissante donc 
   \begin{equation}
-    \frac{f(y)-f(x_1)}{y-x_1} \leq \frac{f(x_2)-f(x_1)}{x_2-x_1}.
+    \frac{f(y)-f(x_1)}{y-x_1} \leqslant \frac{f(x_2)-f(x_1)}{x_2-x_1}.
   \end{equation}
   De plus $y-x_1=(1-t)(x_2-x_1)$. Alors l'inégalité devient
   \begin{equation}
-    \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leq \frac{f(x_2)-f(x_1)}{x_2-x_1}.
+    \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leqslant \frac{f(x_2)-f(x_1)}{x_2-x_1}.
   \end{equation}
   Comme $(1-t)(x_2-x_1)>0$ on peut simplifier et alors
   \begin{equation}
-    f(y) \leq f(x_1)+(1-t)(f(x_2)-f(x_1)) = tf(x_1)+(1-t)f(x_2).
+    f(y) \leqslant f(x_1)+(1-t)(f(x_2)-f(x_1)) = tf(x_1)+(1-t)f(x_2).
   \end{equation}
   Par caractérisation, la fonction $f$ est convexe.
 \end{proof}
@@ -945,13 +945,13 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
 \begin{theo}\label{theo:croisderiv}
   Soit $f \in \R^I$. On suppose que $f$ est convexe et dérivable. Alors
   \begin{equation}
-    \forall (a,b) \in I^2 \ a<b \quad f'(a) \leq \frac{f(b)-f(a)}{b-a} \leq f'(b).
+    \forall (a,b) \in I^2 \ a<b \quad f'(a) \leqslant \frac{f(b)-f(a)}{b-a} \leqslant f'(b).
   \end{equation}
 \end{theo}
 \begin{proof}
   Soient $(a,b) \in I^2$ tels que $a <b$ et $x \in \intervalleoo{a}{b}$. D'après le théorème~\ref{theo:pentes} on a
   \begin{equation}
-    \frac{f(x)-f(a)}{x-a} \leq \frac{f(b)-f(a)}{b-a} \leq \frac{f(b)-f(x)}{b-x}.
+    \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(b)-f(a)}{b-a} \leqslant \frac{f(b)-f(x)}{b-x}.
   \end{equation}
   On sait que $f$ est dérivable et par passage à la limite en $a^{+}$ et en $b^{-}$ dans l'inégalité on obtient le résultat.
 \end{proof}
@@ -961,7 +961,7 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
 \begin{proof}
   Si $f$ est convexe alors d'après le théorème~\ref{theo:croisderiv} la dérivée $f'$ est croissante.
 
-  On suppose que $f'$ est croissante. Soient $x_1,x_2 \in I$ tels que $x_1<x_2$ et $t \in \intervalleoo{0}{1}$. Posons $y=tx_1+(1-t)x_2 \in \intervalleoo{x_1}{x_2}$. Nous voulons démontrer que $f(y) \leq tf(x_1)+(1-t)f(x_2)$. La fonction $f$ est continue sur $\intervalleff{x_1}{y}$ et dérivable sur $\intervalleoo{x_1}{y}$. En appliquant l'égalité des accroissements finis, il existe un réel $c_1 \in \intervalleoo{x_1}{y}$ tel que
+  On suppose que $f'$ est croissante. Soient $x_1,x_2 \in I$ tels que $x_1<x_2$ et $t \in \intervalleoo{0}{1}$. Posons $y=tx_1+(1-t)x_2 \in \intervalleoo{x_1}{x_2}$. Nous voulons démontrer que $f(y) \leqslant tf(x_1)+(1-t)f(x_2)$. La fonction $f$ est continue sur $\intervalleff{x_1}{y}$ et dérivable sur $\intervalleoo{x_1}{y}$. En appliquant l'égalité des accroissements finis, il existe un réel $c_1 \in \intervalleoo{x_1}{y}$ tel que
   \begin{equation}
     f(y)-f(x_1)=f'(c_1)(y-x_1)=f'(c_1)(1-t)(x_2-x_1).
   \end{equation}
@@ -970,21 +970,21 @@ et il existe un point $M \in [M_1M_2]$ si et seulement si $M(tx_1+(1-t)x_2, tf(x
     f(x_2)-f(y)=f'(c_2)(x_2-y)=f'(c_2)t(x_2-x_1).
   \end{equation}
 
-Comme $x_1<c_1<y<c_2<y_2$, comme $f'$ croît on a $f'(c_1) \leq f'(c_2)$. Comme $0<t<1$ et $x_1<x_2$ on divise et on obtient
+Comme $x_1<c_1<y<c_2<y_2$, comme $f'$ croît on a $f'(c_1) \leqslant f'(c_2)$. Comme $0<t<1$ et $x_1<x_2$ on divise et on obtient
 \begin{equation}
   f'(c_1) = \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \quad f'(c_2) = \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
 \end{equation}
 Alors
 \begin{equation}
-  \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leq \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
+  \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leqslant \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
 \end{equation}
 Soit alors, puisque $t>0, 1-t>0$ et $x_2-x_1>0$,
 \begin{equation}
-  t(f(y)-f(x_1)) \leq (1-t)(f(x_2)-f(y)).
+  t(f(y)-f(x_1)) \leqslant (1-t)(f(x_2)-f(y)).
 \end{equation}
 Finalement
 \begin{equation}
-  f(y) \leq tf(x_1)+(1-t)f(x_2).
+  f(y) \leqslant tf(x_1)+(1-t)f(x_2).
 \end{equation}
 Par caractérisation des fonctions convexes, la fonction $f$ est convexe.
 \end{proof}
@@ -995,26 +995,26 @@ Par caractérisation des fonctions convexes, la fonction $f$ est convexe.
 \subsubsection{Caractérisation par les tangentes}
 
 \begin{theo}
-  Soit $f \in \deriv{I}{\R}$. La fonction $f$ est convexe si et seulement si pour tout $x,a \in I$, $f(x) \geq f(a)+f'(a)(x-a)$. C'est-à-dire que pour tout $a \in I$, la courbe de $f$ est au-dessus de sa tangente en $a$.
+  Soit $f \in \deriv{I}{\R}$. La fonction $f$ est convexe si et seulement si pour tout $x,a \in I$, $f(x) \geqslant f(a)+f'(a)(x-a)$. C'est-à-dire que pour tout $a \in I$, la courbe de $f$ est au-dessus de sa tangente en $a$.
 \end{theo}
 \begin{proof}
   Supposons que $f$ soit convexe. Soit $a \in I$.
   \begin{itemize}
-  \item Si $x=a$ alors la proposition est vraie $f(a) \geq f(a)$;
-  \item si $x < a$ alors d'après le théorème~\ref{theo:croisderiv} $\frac{f(x)-f(a)}{x-a} \leq f'(a)$ et donc comme $x-a <0$ on a $f(x) \geq f(a)+f'(a)(x-a)$;
-  \item si $x > a$ alors d'après le théorème~\ref{theo:croisderiv} $\frac{f(x)-f(a)}{x-a} \geq f'(a)$ et donc comme $x-a >0$ on a $f(x) \geq f(a)+f'(a)(x-a)$.
+  \item Si $x=a$ alors la proposition est vraie $f(a) \geqslant f(a)$;
+  \item si $x < a$ alors d'après le théorème~\ref{theo:croisderiv} $\frac{f(x)-f(a)}{x-a} \leqslant f'(a)$ et donc comme $x-a <0$ on a $f(x) \geqslant f(a)+f'(a)(x-a)$;
+  \item si $x > a$ alors d'après le théorème~\ref{theo:croisderiv} $\frac{f(x)-f(a)}{x-a} \geqslant f'(a)$ et donc comme $x-a >0$ on a $f(x) \geqslant f(a)+f'(a)(x-a)$.
   \end{itemize}
 
-  Supposons maintenant que  pour tout $(x,a) \in I^2$, $f(x) \geq f(a)+f'(a)(x-a)$. Pour montrer que $f$ est convexe, on va montrer que $f'$ est croissante. Soit $(a,b) \in I^2$ tels que $a \leq b$ alors
+  Supposons maintenant que  pour tout $(x,a) \in I^2$, $f(x) \geqslant f(a)+f'(a)(x-a)$. Pour montrer que $f$ est convexe, on va montrer que $f'$ est croissante. Soit $(a,b) \in I^2$ tels que $a \leqslant b$ alors
   \begin{align}
-    f(b) \geq f(a)+f'(a)(b-a); \\
-    f(a) \geq f(b)+f'(b)(a-b).
+    f(b) \geqslant f(a)+f'(a)(b-a); \\
+    f(a) \geqslant f(b)+f'(b)(a-b).
   \end{align}
   En ajouant ces deux inégalités, on a
   \begin{equation}
-    f(b)+f(a) \geq f(a)+f(b) +(f'(a)-f'(b))(b-a),
+    f(b)+f(a) \geqslant f(a)+f(b) +(f'(a)-f'(b))(b-a),
   \end{equation}
-  alors $(f'(a)-f'(b))(b-a) \leq 0$ et comme $b-a \geq 0$ alors $f'(a) \leq f'(b)$ et donc $f'$ est croissante. Finalement $f$ est convexe.
+  alors $(f'(a)-f'(b))(b-a) \leqslant 0$ et comme $b-a \geqslant 0$ alors $f'(a) \leqslant f'(b)$ et donc $f'$ est croissante. Finalement $f$ est convexe.
 \end{proof}
 
 \section{Suites récurrentes de la forme $u_{n+1}=f(u_n)$}
@@ -1037,7 +1037,7 @@ Pour pouvoir définir une suite $u$ par $\begin{cases} u_0=a \in I \\ u_{n+1}=f(
 \begin{proof}
   Grâce à la deuxième hypothèse, la suite $u$ est définie. Tous les termes de $u$ sont dans I et I est fermé (d'après la troisième hypothèse), donc on écrira des inégalités larges, par exemple
   \begin{equation}
-    \forall n \in \N \quad a \leq u_n \leq b.
+    \forall n \in \N \quad a \leqslant u_n \leqslant b.
   \end{equation}
   On sait que la suite $u$ tend vers $\ell$ par hypothèse. Par passage à la limite dans l'inégalité on obtient que $\ell \in I$. D'ailleurs
   \begin{equation}
@@ -1057,8 +1057,8 @@ Sous les trois premières hypothèses, si la fonction $f$ n'admet pas de point f
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item si $u_0 \leq u_1$, on montre par récurrence la sur $n \in \N$ la propriété $\P(n)$ ``$u_n \leq u_{n+1}$''. $\P(0)$ est vraie par hypothèse. Supposons que pour un $n \in \N$ donné, $\P(n)$ soit vérifiée, alors puisque $f$ est croissante on a $f(u_n) \leq f(u_{n+1})$, c'est-à-dire que $\P(n+1)$ est vraie. Alors par théorème de récurrence la propriété est vraie pour tout $n \in \N$. La suite $u$ croît.
-  \item si $u_0 \geq u_1$, on montre de la même manière que pour tout naturel $n$ $u_n \geq u_{n+1}$. La suite $u$ décroît.
+  \item si $u_0 \leqslant u_1$, on montre par récurrence la sur $n \in \N$ la propriété $\P(n)$ ``$u_n \leqslant u_{n+1}$''. $\P(0)$ est vraie par hypothèse. Supposons que pour un $n \in \N$ donné, $\P(n)$ soit vérifiée, alors puisque $f$ est croissante on a $f(u_n) \leqslant f(u_{n+1})$, c'est-à-dire que $\P(n+1)$ est vraie. Alors par théorème de récurrence la propriété est vraie pour tout $n \in \N$. La suite $u$ croît.
+  \item si $u_0 \geqslant u_1$, on montre de la même manière que pour tout naturel $n$ $u_n \geqslant u_{n+1}$. La suite $u$ décroît.
   \end{enumerate}
 \end{proof}
 
@@ -1072,7 +1072,7 @@ Si $u_0$ est un point fixe de $f$, alors $u$ est constante égale à $u_0$. Sous
 \begin{proof}
   L'application $f$ est décroissante, donc la composée $f \circ f$ est aussi décroissante. Pour tout naturel $n$ $u_{2n+2}=f \circ f(u_{2n})$. D'après la proposition~\ref{prop:fmonotoneu} la suite extraite $(u_{2n})$ est monotone. Deux cas de figure se présentent
   \begin{enumerate}
-  \item si $(u_{2n})$ est croissante alors pour tout naturel $n$ on a $u_{2n} \leq u_{2n+2}$ et comme $f$ est décroissante $f(u_{2n}) \geq f(u_{2n+2})$ c'est à dire $u_{2n+1} \geq u_{2n+3}$. Alors la suite extraite $(u_{2n+1})$ est décroissante;
+  \item si $(u_{2n})$ est croissante alors pour tout naturel $n$ on a $u_{2n} \leqslant u_{2n+2}$ et comme $f$ est décroissante $f(u_{2n}) \geqslant f(u_{2n+2})$ c'est à dire $u_{2n+1} \geqslant u_{2n+3}$. Alors la suite extraite $(u_{2n+1})$ est décroissante;
   \item si $(u_{2n})$ est décroissante on montre de la même manière que $(u_{2n+1})$ est croissante.
     \end{enumerate}
 \end{proof}
@@ -1086,15 +1086,15 @@ On étudie la convergence des suites extraites en regardant si elles sont major�
 
   Alors pour tout naturel $n$
   \begin{align}
-    \abs{u_{n+1}-\ell} \leq M \abs{u_n-\ell}; \\
-    \abs{u_n-\ell} \leq M^n \abs{u_0-\ell}.
+    \abs{u_{n+1}-\ell} \leqslant M \abs{u_n-\ell}; \\
+    \abs{u_n-\ell} \leqslant M^n \abs{u_0-\ell}.
   \end{align}
   En particulier si $M < 1$ alors $u$ tend vers $\ell$.
 \end{prop}
 \begin{proof}
   Il suffit d'appliquer le deuxième corollaire de l'inégalité des accroissements finis~\ref{corth:iaf2}. Soit un naturel $n$, alors
   \begin{equation}
-    \abs{u_{n+1}-\ell}=\abs{f(u_n)-f(\ell)} \leq M \abs{u_n-\ell}.
+    \abs{u_{n+1}-\ell}=\abs{f(u_n)-f(\ell)} \leqslant M \abs{u_n-\ell}.
   \end{equation}
   La deuxième inégalité se démontre par une récurrence SUR $n \in \N$. Si $M<1$ alors la suite $(M^n)$ tend vers zéro et par théorème d'encadrement la suite $u$ tend vers $\ell$.
 \end{proof}
@@ -1108,7 +1108,7 @@ On étudie la convergence des suites extraites en regardant si elles sont major�
 
   On démontre la suite par l'absurde.
 
-  Sinon, alors pour tout naturel $n$ $u_n \neq \ell$. Soit la suite $v=|u-\ell|>0$. Supposons que $u$ tend vers $\ell$ alors $v$ tend vers zéro. On sait que $\abs{f'(l)}>1$. Soit $a \in \R$ tel que $\abs{f'(\ell)}>a>1$. Pour tout naturel $n$ $v_n>0$ donc $\frac{v_{n+1}}{v_n} = \abs{\frac{f(u_n)-f(\ell)}{u_n-\ell}} \to \abs{f'(\ell)}$. Comme $\abs{f'(\ell)}>a$ il existe un naturel $n_0$ à partir duquel $\frac{v_{n+1}}{v_n} \geq a$. Alors par récurrence immédiate pour tout naturel $p$ non nul $v_{n_0+p} \geq a^p v_{n_0}$.
+  Sinon, alors pour tout naturel $n$ $u_n \neq \ell$. Soit la suite $v=|u-\ell|>0$. Supposons que $u$ tend vers $\ell$ alors $v$ tend vers zéro. On sait que $\abs{f'(l)}>1$. Soit $a \in \R$ tel que $\abs{f'(\ell)}>a>1$. Pour tout naturel $n$ $v_n>0$ donc $\frac{v_{n+1}}{v_n} = \abs{\frac{f(u_n)-f(\ell)}{u_n-\ell}} \to \abs{f'(\ell)}$. Comme $\abs{f'(\ell)}>a$ il existe un naturel $n_0$ à partir duquel $\frac{v_{n+1}}{v_n} \geqslant a$. Alors par récurrence immédiate pour tout naturel $p$ non nul $v_{n_0+p} \geqslant a^p v_{n_0}$.
 
 Or $\lim\limits{p \to \infty} v_{n_0+p} = 0$ par hypothèse, mais comme $a >1$ $\lim\limits_{p \to \infty} a^p v_{n_0}= + \infty$. On aboutit à une absurdité. La suite $u$ ne tend pas vers $\ell$.
 \end{proof}
@@ -1123,17 +1123,17 @@ Considérons la fonction $\fonction{f}{\R^{*}}{\R}{x}{1+\frac{1}{x}}$. Deux inte
 \end{gather}
 Alors l'intervalle $I=\intervalleff{1}{2}$ est stable par $f$.
 
-Soit la suite définie pour tout naturel $n$ $u_{n+1}=f(u_n)$ et par $u_0 = a>0$. Déjà $u_2 \in I$ et $I$ est stable par $f$ (on l'a choisit exprès). Pour tout naturel $n \geq 2$, $u_n \in I$. La suite $u$ est bornée. La fonction $f$ est décroissante donc les deux suites extraites $(u_{2n})$ et $(u_{2n+1})$ sont monotones de sens contraires. Comme $u$ est bornées, elles sont bornées donc elles convergent. On pourrait calculer leurs limites et vérifier que c'est la même. Si $u$ tend vers $\ell$, alors $\ell \in I$, et de plus $f(\ell)=\ell$. Lorsqu'on résoud l'équation, la seule solution possible est $\ell=\frac{1+\sqrt{5}}{2}$. On pose $J=\intervalleff{\frac{3}{2}}{2}$, qui est stable par $f$. Pour tout $n \geq 3$, $u_n \in J$. De plus $\ell \in J$.
+Soit la suite définie pour tout naturel $n$ $u_{n+1}=f(u_n)$ et par $u_0 = a>0$. Déjà $u_2 \in I$ et $I$ est stable par $f$ (on l'a choisit exprès). Pour tout naturel $n \geqslant 2$, $u_n \in I$. La suite $u$ est bornée. La fonction $f$ est décroissante donc les deux suites extraites $(u_{2n})$ et $(u_{2n+1})$ sont monotones de sens contraires. Comme $u$ est bornées, elles sont bornées donc elles convergent. On pourrait calculer leurs limites et vérifier que c'est la même. Si $u$ tend vers $\ell$, alors $\ell \in I$, et de plus $f(\ell)=\ell$. Lorsqu'on résoud l'équation, la seule solution possible est $\ell=\frac{1+\sqrt{5}}{2}$. On pose $J=\intervalleff{\frac{3}{2}}{2}$, qui est stable par $f$. Pour tout $n \geqslant 3$, $u_n \in J$. De plus $\ell \in J$.
 \begin{equation}
-  \forall x \in J \quad \abs{f'(x)}\leq \frac{4}{9},
+  \forall x \in J \quad \abs{f'(x)}\leqslant \frac{4}{9},
 \end{equation}
 et d'après l'inégalité des accroissements finis on a
 \begin{equation}
- \forall n \geq 3 \quad \abs{u_{n+1}-\ell}  \leq \frac{4}{9} \abs{u_n-\ell}.
+ \forall n \geqslant 3 \quad \abs{u_{n+1}-\ell}  \leqslant \frac{4}{9} \abs{u_n-\ell}.
 \end{equation}
 Alors
 \begin{equation}
-  \forall n \geq 3 \quad \abs{u_n-\ell} \leq \left(\frac{4}{9}\right)^{n-3}\abs{u_3-\ell}.
+  \forall n \geqslant 3 \quad \abs{u_n-\ell} \leqslant \left(\frac{4}{9}\right)^{n-3}\abs{u_3-\ell}.
 \end{equation}
 En passant à la limite dans l'inégalité, $u$ tend vers $\ell=\frac{1+\sqrt{5}}{2}$.
 
@@ -1152,19 +1152,19 @@ La fonction $f$ est continue et $f(a)f(b) <0$ si et seulement si $f$ s'annule au
 \begin{equation}
   y=f'(u_0)(x-u_0)+f(u_0).
 \end{equation}
-La tangente en $u_0$ s'annule au point d'abcisse $x= u_0-\frac{f(u_0)}{f'(u_0)}=g(u_0)$. Cependant, il n'est pas assuré que $g(u_0) \in I$. On doit supposer en plus que $f$ est de classe $\classe{2}$ et qu'elle est convexe. Si $f(u_0) <0$ on peut encore avoir $g(u_0) \notin I$, alors on suppose que $f(u_0) \geq 0$. Puisque $f(c)=0$ et puisque $f$ est décroissante alors $u_0 \leq c$ et $g(u_0)=u_0 - \frac{f(u_0)}{f'(u_0)} \geq u_0$. La fonction $f$ est convexe alors $\courbe_f$ est au dessus de toutes ses tangentes. C'est-à-dire en particulier en $u_0$~:
+La tangente en $u_0$ s'annule au point d'abcisse $x= u_0-\frac{f(u_0)}{f'(u_0)}=g(u_0)$. Cependant, il n'est pas assuré que $g(u_0) \in I$. On doit supposer en plus que $f$ est de classe $\classe{2}$ et qu'elle est convexe. Si $f(u_0) <0$ on peut encore avoir $g(u_0) \notin I$, alors on suppose que $f(u_0) \geqslant 0$. Puisque $f(c)=0$ et puisque $f$ est décroissante alors $u_0 \leqslant c$ et $g(u_0)=u_0 - \frac{f(u_0)}{f'(u_0)} \geqslant u_0$. La fonction $f$ est convexe alors $\courbe_f$ est au dessus de toutes ses tangentes. C'est-à-dire en particulier en $u_0$~:
 \begin{equation}
-  \forall x \in I \quad f(x) \geq f(u_0)+(x-u_0)f'(u_0).
+  \forall x \in I \quad f(x) \geqslant f(u_0)+(x-u_0)f'(u_0).
 \end{equation}
 En $x=c$, on a
 \begin{equation}
-  0 \geq f(u_0)+(c-u_0)f'(u_0),
+  0 \geqslant f(u_0)+(c-u_0)f'(u_0),
 \end{equation}
  et comme $f'(u_0) < 0$ on divise et on obtient
 \begin{equation}
-  0 \geq c - g(u_0).
+  0 \geqslant c - g(u_0).
 \end{equation}
-Comme $u_1=g(u_0)$ on a $u_0 \geq u_1 \geq c$. Finalement on s'est rapproché de $c$. Comparons $\abs{u_1-c}$ et $\abs{u_0-c}$~:
+Comme $u_1=g(u_0)$ on a $u_0 \geqslant u_1 \geqslant c$. Finalement on s'est rapproché de $c$. Comparons $\abs{u_1-c}$ et $\abs{u_0-c}$~:
 \begin{align}
   \abs{u_1-c} = & \abs{u_0 - \frac{f(u_0)}{f'(u_0)} -c} = \frac{\abs{f'(u_0)u_0 - f(u_0) -f'(u_0)c}}{\abs{f'(u_0)}}\\
   &= \frac{\abs{f(c)-f(u_0)-f'(u_0)(c-u_0)}}{\abs{f'(u_0)}}.
@@ -1179,23 +1179,23 @@ alors
 \end{equation}
 La fonction $f$ est de classe $\classe{2}$ sur $I$ donc il existe un réel $M$ qui borne $f'$~:
 \begin{equation}
-  \forall x \in \intervalleff{a}{b} \quad \abs{f'(x)} \leq M.
+  \forall x \in \intervalleff{a}{b} \quad \abs{f'(x)} \leqslant M.
 \end{equation}
 Comme $f'$ est continue sur un segment, il existe $(\alpha,\beta) \in \intervalleff{a}{b}^2$ tel que~:
 \begin{equation}
-  \forall x \in \intervalleff{a}{b} \quad f'(\alpha) \leq f'(x) \leq f'(\beta) <0.
+  \forall x \in \intervalleff{a}{b} \quad f'(\alpha) \leqslant f'(x) \leqslant f'(\beta) <0.
 \end{equation}
 On pose $m=-f'(\beta)>0$ et on a
 \begin{equation}
-  \forall x \in \intervalleff{a}{b} \quad \abs{f'(x)} \geq m.
+  \forall x \in \intervalleff{a}{b} \quad \abs{f'(x)} \geqslant m.
 \end{equation}
 Alors
 \begin{equation}
-  \abs{u_1-c} \leq \frac{M}{2m} \abs{u_0-c}^2,
+  \abs{u_1-c} \leqslant \frac{M}{2m} \abs{u_0-c}^2,
 \end{equation}
 en posant $k=\frac{M}{2m}$ et en itérant
 \begin{equation}
-  \abs{u_n-c} \leq k^{2^n-1} \abs{u_0-c}^{2^n}.
+  \abs{u_n-c} \leqslant k^{2^n-1} \abs{u_0-c}^{2^n}.
 \end{equation}
 C'est intéressant lorsque $k < 1$ et on parle dans ce cas de convergence quadratique. On construit par récurrence une suite $u$ telle que pour tout naturel $n$, $u_{n+1}=g(u_n)$. Si $k<1$ alors $\lim u =c$. On dispose d'une majoration de $\abs{u_n-c}$ par récurrence donc si on approche $c$ par $u_n$ avec $n$ assez grand, on a une majoration de l'erreur commise.
 

@@ -791,10 +791,10 @@ $(\Z,+,\cdot)$ est un anneau intègre. L'ensemble des inversibles de $\Z$, $\uin
 
 \paragraph{Ordre sur $\Z$}
 
-Muni de l'ordre usuel $\leq$, $\Z$ est un ensemble totalement ordonné. L'ordre est compatible avec la structure d'anneau de $\Z$.
+Muni de l'ordre usuel $\leqslant$, $\Z$ est un ensemble totalement ordonné. L'ordre est compatible avec la structure d'anneau de $\Z$.
 \begin{align}
-  \forall (p,p',q,q') \in \Z^4 &\quad p \leq p' \ q \leq q' \implies p+q \leq p'+q';\\
-  \forall (p,p',q,q') \in \Z^4 &\quad p \leq p' \ 0 \leq q \implies pq \leq p'q.
+  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ q \leqslant q' \implies p+q \leqslant p'+q';\\
+  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ 0 \leqslant q \implies pq \leqslant p'q.
 \end{align}
 
 Toute partie non vide et majorée de $\Z$ admet un plus grand élément. De la même manière, toute partie non vide et minorée de $\Z$ admet un plus petit élément. $\Z$ n'admet ni de plus petit ni de plus grand élément.
@@ -806,7 +806,7 @@ C'est-à-dire que
   \forall a \in \Z \ \forall b \in \N^* \ \exists n \in \N \quad a \neq nb.
 \end{equation}
 \begin{proof}
-  Si $a \leq 0$ on peut prendre $n=0$ puisque $0 \cdot b = 0 \geq a$. Sinon $a \geq 1$ et $b \in \N^*$ donc $b \geq 1$ alors $ab \geq a$. On peut prendre $n=a \in \N$.
+  Si $a \leqslant 0$ on peut prendre $n=0$ puisque $0 \cdot b = 0 \geqslant a$. Sinon $a \geqslant 1$ et $b \in \N^*$ donc $b \geqslant 1$ alors $ab \geqslant a$. On peut prendre $n=a \in \N$.
 \end{proof}
 
 \subsubsection{Division euclidienne}
@@ -816,7 +816,7 @@ La division euclidienne d'un entier relatif par un entier relatif non nul est te
   Pour tout couple $(a,b) \in \Z \times \N$ avec $b \neq 0$. Il existe un unique couple $(q,r) \in \Z^2$ tel que
   \begin{equation}
     \begin{cases}
-      a=bq+r \\ 0 \leq r < b
+      a=bq+r \\ 0 \leqslant r < b
     \end{cases}.
   \end{equation}
 \end{theo}
@@ -826,28 +826,28 @@ L'entier $q$ est appelé le quotient de la division euclidienne de $a$ par $b$. 
   Soient $(q,r)$ et $(q',r')$ deux couples de $\Z^2$ tels que
   \begin{equation}
     \begin{cases}
-      a=bq+r \\ 0 \leq r < b
+      a=bq+r \\ 0 \leqslant r < b
     \end{cases}
     \begin{cases}
-      a=bq'+r' \\ 0 \leq r' < b
+      a=bq'+r' \\ 0 \leqslant r' < b
     \end{cases}.
   \end{equation}
-Alors $bq+r=bq'+r'$ et donc $b(q-q')=r'-r$. De plus $\abs{r'-r} < b$. Supposons que $q-q' \neq 0$, alors $\abs{q-q'} \geq 1$ alors $\abs{r'-r}=b\abs{q-q'} \geq b$. Contradiction. Donc $q=q'$. Par conséquent $r=r'$.
+Alors $bq+r=bq'+r'$ et donc $b(q-q')=r'-r$. De plus $\abs{r'-r} < b$. Supposons que $q-q' \neq 0$, alors $\abs{q-q'} \geqslant 1$ alors $\abs{r'-r}=b\abs{q-q'} \geqslant b$. Contradiction. Donc $q=q'$. Par conséquent $r=r'$.
 \end{proof}
 \begin{proof}[Existence]
-  Soit l'ensemble $A=\enstq{k \in \Z}{bk \leq a}$. Alors 
+  Soit l'ensemble $A=\enstq{k \in \Z}{bk \leqslant a}$. Alors 
   \begin{itemize}
   \item $A$ est une partie de $\Z$;
   \item $A$ est non vide~:
     \begin{itemize}
-    \item si $a \geq 0$ alors $0b \leq a$ donc $0 \in A$;
-    \item si $a < 0$ alors pour tout $k \in \Z$ $bk \leq a \iff -a \leq b(-k)$;
-    \item $\Z$ est archimédien et $b>0$ donc il existe $m \in \N$ tel que $-a \leq bm$ on pose $k=-m \in \Z$ alors $bk \leq a$ donc $k \in A$.
+    \item si $a \geqslant 0$ alors $0b \leqslant a$ donc $0 \in A$;
+    \item si $a < 0$ alors pour tout $k \in \Z$ $bk \leqslant a \iff -a \leqslant b(-k)$;
+    \item $\Z$ est archimédien et $b>0$ donc il existe $m \in \N$ tel que $-a \leqslant bm$ on pose $k=-m \in \Z$ alors $bk \leqslant a$ donc $k \in A$.
     \end{itemize}
-  \item $A$ est majorée, puisque pour tout $k \in \Z$, $bk \leq a \leq \abs{a} \leq b \abs{a}$ car $b \geq 1$. Alors $b(k-\abs{a}) \leq 0$ or $b \geq 0$ donc $k-\abs{a} \geq 0$ alors $k \leq \abs{a}$. Donc $\abs{a}$ est un majorant de $A$.
+  \item $A$ est majorée, puisque pour tout $k \in \Z$, $bk \leqslant a \leqslant \abs{a} \leqslant b \abs{a}$ car $b \geqslant 1$. Alors $b(k-\abs{a}) \leqslant 0$ or $b \geqslant 0$ donc $k-\abs{a} \geqslant 0$ alors $k \leqslant \abs{a}$. Donc $\abs{a}$ est un majorant de $A$.
   \end{itemize}
 
-Finalement $A$ est une partie non vide et majorée de $\Z$ donc $A$ admet un plus grand élément et on le note $q$. On pose $z=ab-q$. Alors $(q,r) \in \Z^2$ par définition. L'élément $q$ est le plus grand de $A$ donc $q \in A$ et $q+1 \notin A$. Ainsi $bq \leq a$ et $b(q+1) > a$. Alors $0 \leq r < b$. 
+Finalement $A$ est une partie non vide et majorée de $\Z$ donc $A$ admet un plus grand élément et on le note $q$. On pose $z=ab-q$. Alors $(q,r) \in \Z^2$ par définition. L'élément $q$ est le plus grand de $A$ donc $q \in A$ et $q+1 \notin A$. Ainsi $bq \leqslant a$ et $b(q+1) > a$. Alors $0 \leqslant r < b$. 
 
 Le couple $(q,r)$ convient.
 \end{proof}
@@ -858,12 +858,12 @@ Le couple $(q,r)$ convient.
   Pour tout couple $(a,b) \in \N^2$ avec $b \neq 0$. Il existe un unique couple $(q,r) \in \N^2$ tel que
   \begin{equation}
     \begin{cases}
-      a=bq+r \\ 0 \leq r < b
+      a=bq+r \\ 0 \leqslant r < b
     \end{cases}.
   \end{equation}
 \end{theo}
 \begin{proof}
-  On applique le théorème précédent. La seule chose à vérifier est alors $q \in \N$. Supposons que $q \notin \N$ alors $q \leq -1$. Puisque $b>0$ donc $bq \leq -b$. Alors $a=bq+r \leq r-b <0$, ce qui contredit l'hypothèse de départ. Donc $q \in \N$.
+  On applique le théorème précédent. La seule chose à vérifier est alors $q \in \N$. Supposons que $q \notin \N$ alors $q \leqslant -1$. Puisque $b>0$ donc $bq \leqslant -b$. Alors $a=bq+r \leqslant r-b <0$, ce qui contredit l'hypothèse de départ. Donc $q \in \N$.
 \end{proof}
 
 \paragraph{Autre division euclidienne dans $\Z$}
@@ -872,7 +872,7 @@ Le couple $(q,r)$ convient.
   Pour tout couple $(a,b) \in \Z^2$ avec $b \neq 0$. Il existe un unique couple $(q,r) \in \Z^2$ tel que
   \begin{equation}
     \begin{cases}
-      a=bq+r \\ 0 \leq r < \abs{b}
+      a=bq+r \\ 0 \leqslant r < \abs{b}
     \end{cases}.
   \end{equation}
 \end{theo}
@@ -881,13 +881,13 @@ Le couple $(q,r)$ convient.
   \begin{equation}
     \exists (q^*, r^*) \in \Z^2 \
     \begin{cases}
-      a=-bq^* + r^* \\ 0 \leq r^* < -b=\abs{b}
+      a=-bq^* + r^* \\ 0 \leqslant r^* < -b=\abs{b}
     \end{cases}.
   \end{equation}
 On pose $r=r^*$ et $q=-q^*$ et on a
   \begin{equation}
     \begin{cases}
-      a=bq+r \\ 0 \leq r < b
+      a=bq+r \\ 0 \leqslant r < b
     \end{cases}.
   \end{equation}
 \end{proof}
@@ -895,13 +895,13 @@ On pose $r=r^*$ et $q=-q^*$ et on a
   Si on a deux couples $(q,r)$ et $(q',r')$ d'entiers relatifs avec
   \begin{equation}
     \begin{cases}
-      a=bq + r \\ 0 \leq r < b
+      a=bq + r \\ 0 \leqslant r < b
     \end{cases}
     \begin{cases}
-      a=bq' + r' \\ 0 \leq r' < b
+      a=bq' + r' \\ 0 \leqslant r' < b
     \end{cases}.
   \end{equation}
-  On a $b(q-q')=r'-r$ et on a $\abs{r'-r} < \abs{b}$. Si $q \neq q'$ alors $\abs{q-q'} \geq 1$ et donc $\abs{r'-r}=\abs{b}\abs{q-q'} \geq \abs{b}$. On a une contradiction donc $q=q'$ et alors $r=r'$.
+  On a $b(q-q')=r'-r$ et on a $\abs{r'-r} < \abs{b}$. Si $q \neq q'$ alors $\abs{q-q'} \geqslant 1$ et donc $\abs{r'-r}=\abs{b}\abs{q-q'} \geqslant \abs{b}$. On a une contradiction donc $q=q'$ et alors $r=r'$.
 \end{proof}
 
 \paragraph{Algorithme de la division euclidienne dans $\N$}
@@ -909,14 +909,14 @@ On pose $r=r^*$ et $q=-q^*$ et on a
 Soit $a,b \in \N$ avec $b \neq 0$. On notera $q(a,b)$ et $r(a,b)$ le quotient et le reste de la division euclidienne de $a$ par $b$.
 
 \begin{prop}
-  Si $a \leq b$ alors $q(a,b)=0$ et $r(a,b)=a$. Si $a \geq b$ alors $q(a,b)=q(a-b,b)+1$ et $r(a,b)=r(a-b,b)$.
+  Si $a \leqslant b$ alors $q(a,b)=0$ et $r(a,b)=a$. Si $a \geqslant b$ alors $q(a,b)=q(a-b,b)+1$ et $r(a,b)=r(a-b,b)$.
 \end{prop}
 \begin{proof}
-  Si $a < b$ alors $a=0 \cdot b + a$. On a $0 \in \N$ et $a \in \N$ et $0 \leq a <b$ par unicité du reste et du quotient $q(a,b)=0$ et $r(a,b)=a$.
+  Si $a < b$ alors $a=0 \cdot b + a$. On a $0 \in \N$ et $a \in \N$ et $0 \leqslant a <b$ par unicité du reste et du quotient $q(a,b)=0$ et $r(a,b)=a$.
 
 Si $a > b$ alors $a=q(a,b)b+r(a,b)$ et donc $a-b=q(a,b)b+r(a,b)-b=(q(a,b)-1)b+r(a,b)$.
 
-On sait que $q(a,b)-1 \in \N$ puisque sinon on aurait $q(a,b) =0$ et alors on aurait $a=r(a,b) \leq b$ ce qui contredit l'hypothèse.
+On sait que $q(a,b)-1 \in \N$ puisque sinon on aurait $q(a,b) =0$ et alors on aurait $a=r(a,b) \leqslant b$ ce qui contredit l'hypothèse.
 
 Par unicité de la division euclidienne de $a-b$ par $b$.
 \begin{equation}
@@ -974,7 +974,7 @@ Par caractérisation des sous-groupes, $a\Z$ est un sous-groupe de $(\Z,+)$.
  \end{prop}
  \begin{proof}
    \begin{itemize}
-   \item[$\implies$] Si $b\mid a$ alors il existe $q \in \Z$ tel que $a=bq+0$ et on a $0\leq \abs{b}$ donc par unicité de la division euclidienne $r(a,b)=0$.
+   \item[$\implies$] Si $b\mid a$ alors il existe $q \in \Z$ tel que $a=bq+0$ et on a $0\leqslant \abs{b}$ donc par unicité de la division euclidienne $r(a,b)=0$.
    \item[$\impliedby$] Si $r(a,b)=0$ alors $a=q(a,b) b+r(a,b)$ avec $q(a,b) \in \Z$ et $r(a,b)=0$ et $q=q(a,b)$ par définition $b|a$.
    \end{itemize}
  \end{proof}
@@ -1030,9 +1030,9 @@ comme $-na \in H$ d'après le premier point et comme $H$ est stable par passage 
 \end{equation}
 On vient de montrer que $a\Z \subset H$. Soit $h \in H$, montrons que $h \in a\Z$. On sait que $a \neq 0$ donc on peut effectuer la division euclidienne de $h$ par $a$
 \begin{equation}
-  \exists! (q,r) \in \Z^2 \quad \begin{cases} h=aq+r \\ 0 \leq r < a \end{cases}.
+  \exists! (q,r) \in \Z^2 \quad \begin{cases} h=aq+r \\ 0 \leqslant r < a \end{cases}.
 \end{equation}
-Déjà $h \in H$ et comme $aq \in a\Z \subset H$ on a $r=h-aq \in H$ puisque $H$ est un sous-groupe de $(\Z,+)$. Or $0 \leq r < a$, si $r \neq 0$ alors $r \in H\setminus\{0\}$ donc $\abs{r}=r \in A$ or $r < a$ et $a$ est le plus petit élément de $H$, c'est impossible. Nécessairement $r=0$. Donc $a\mid h$ et $h \in a\Z$. Ainsi $H \subset a\Z$. Finalement par double inclusion $H=a\Z$. Soit $(a,b) \in \N^2$ tels que $a\Z=b\Z$ alors $a$ et $b$ sont associés alors $a=b$ ou $a=-b$. Or $a \geq 0$ et $b \geq 0$ donc $a=b$. Si $H$ est un sous-groupe de $(\Z,+)$ alors il existe un unique naturel $a$ tel que $H=a\Z$.
+Déjà $h \in H$ et comme $aq \in a\Z \subset H$ on a $r=h-aq \in H$ puisque $H$ est un sous-groupe de $(\Z,+)$. Or $0 \leqslant r < a$, si $r \neq 0$ alors $r \in H\setminus\{0\}$ donc $\abs{r}=r \in A$ or $r < a$ et $a$ est le plus petit élément de $H$, c'est impossible. Nécessairement $r=0$. Donc $a\mid h$ et $h \in a\Z$. Ainsi $H \subset a\Z$. Finalement par double inclusion $H=a\Z$. Soit $(a,b) \in \N^2$ tels que $a\Z=b\Z$ alors $a$ et $b$ sont associés alors $a=b$ ou $a=-b$. Or $a \geqslant 0$ et $b \geqslant 0$ donc $a=b$. Si $H$ est un sous-groupe de $(\Z,+)$ alors il existe un unique naturel $a$ tel que $H=a\Z$.
 \end{proof}
 
 \subsection{PGCD \& PPCM}
@@ -1194,7 +1194,7 @@ On définit l'application $\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a,
 \subsubsection{Algorithme d'Euclide pour la détermination du PGCD}
 
 
-Nous savons que pour tous relatifs $a$ et $b$ on a $a \wedge 0 = \abs{a}$ et $\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)$. Alors on peut supposer, sans perte de généralité, que $(a,b) \in \left(\N^{*}\right)^{2}$. De plus $\pgcd(a,b) =\pgcd(b,a)$, alors on peut supposer de plus que $a \geq b$.
+Nous savons que pour tous relatifs $a$ et $b$ on a $a \wedge 0 = \abs{a}$ et $\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)$. Alors on peut supposer, sans perte de généralité, que $(a,b) \in \left(\N^{*}\right)^{2}$. De plus $\pgcd(a,b) =\pgcd(b,a)$, alors on peut supposer de plus que $a \geqslant b$.
 
 \begin{lemme}
   Soit $r(a,b)$ le reste de la division euclidienne de $a$ par $b$, $b \neq 0$, alors
@@ -1213,7 +1213,7 @@ Nous savons que pour tous relatifs $a$ et $b$ on a $a \wedge 0 = \abs{a}$ et $\p
 
 \paragraph{Algorithme d'Euclide}
 
-Soit $a \geq b$ on pose $r_0=a$, $r_1=b$ et $r_2=r(a,b)$. Alors $\pgcd(a,b) = \pgcd(r_0, r_1) = \pgcd(r_1,r_2)$. Tant que $r_k \neq 0$ on effectue la division euclidienne de $r_{k-1}$ par $r_k$ et on pose $r_{k+1}=r(r_{k-1},r_k)$. Alors $r_{k+1} < r_k$.
+Soit $a \geqslant b$ on pose $r_0=a$, $r_1=b$ et $r_2=r(a,b)$. Alors $\pgcd(a,b) = \pgcd(r_0, r_1) = \pgcd(r_1,r_2)$. Tant que $r_k \neq 0$ on effectue la division euclidienne de $r_{k-1}$ par $r_k$ et on pose $r_{k+1}=r(r_{k-1},r_k)$. Alors $r_{k+1} < r_k$.
 
 La suite $(r_k)_{k \in \N}$ est strictement décroissante, à valeurs dans $\N$. La suite s'annule forcément à partir d'un certain rang. Donc il existe un naturel $n$ tel que $r_n \neq 0$ et $r_{n+1}=0$. Alors $\pgcd(a,b)$ est égal au dernier reste non nul dans la suite des division euclidiennes de l'algorithme d'Euclide.
 
@@ -1405,7 +1405,7 @@ Soient deux relatifs $a$ et $b$. Si $x$ est un diviseur non nul de $a$ il existe
       \begin{equation}
         d\pgcd(a_1,b_1) d\ppcm(a_1,b_1) = d\abs{a_1} d\abs{b_1},
       \end{equation}
-      et comme $d\geq 0$ alors $d=\abs{d}$ et donc    
+      et comme $d\geqslant 0$ alors $d=\abs{d}$ et donc    
     \begin{equation}
        \pgcd(da_1,db_1) \ppcm(da_1,db_1) = \abs{da_1} \abs{db_1},
      \end{equation}
@@ -1470,9 +1470,9 @@ Soient deux relatifs $a$ et $b$. Si $x$ est un diviseur non nul de $a$ il existe
   Tout entier relatif distinct d'une unité admet parmi ses diviseurs au moins un nombre premier.
 \end{prop}
 \begin{proof}
-  Soit $a \in \Z \setminus \{-1,1\}$. Si $a$ est nul alors $a=2 \times 0$ et $2$ est premier. S'il est non nul alors $\abs{a} \geq 2$. On définit $\epsilon(a)=\enstq{\abs{b}}{b \mid a \text{~et~} b\notin \{0,1,-1\}}$. Alors $\epsilon(a) \subset \N$ et il est non vide ($a \in \epsilon(a)$). Alors $\epsilon(a)$ admet un plus petit élément noté $p$. 
+  Soit $a \in \Z \setminus \{-1,1\}$. Si $a$ est nul alors $a=2 \times 0$ et $2$ est premier. S'il est non nul alors $\abs{a} \geqslant 2$. On définit $\epsilon(a)=\enstq{\abs{b}}{b \mid a \text{~et~} b\notin \{0,1,-1\}}$. Alors $\epsilon(a) \subset \N$ et il est non vide ($a \in \epsilon(a)$). Alors $\epsilon(a)$ admet un plus petit élément noté $p$. 
 
-Alors $p \in \N$, $p \mid a$ et $p \geq 2$. Soit $q \in \N$ tel que $q \mid p$. Alors par transitivité $q \mid a$.
+Alors $p \in \N$, $p \mid a$ et $p \geqslant 2$. Soit $q \in \N$ tel que $q \mid p$. Alors par transitivité $q \mid a$.
 
 Si $q<p$ alors $q \notin \epsilon(a)$ car $p$ est le plus petit élément de $\epsilon(a)$. Alors au final $q \notin \epsilon(a)$, $q \mid a$ et $q \in \N$ alors $q=1$. Les seuls diviseurs de $p$ dans $\N$ sont donc $1$ et $p$. Alors $p$ est un nombre premier.
 
@@ -1486,21 +1486,21 @@ On a trouvé un nombre premier parmi les diviseurs de $a$.
 \end{proof}
 
 \begin{prop}[Crible d'Ératosthéne]
-  Tout naturel $n \geq 4$ non premier admet au moins un diviseur $q$ compris entre $2$ et $E(\sqrt{n})$ (partie entière).
+  Tout naturel $n \geqslant 4$ non premier admet au moins un diviseur $q$ compris entre $2$ et $E(\sqrt{n})$ (partie entière).
 \end{prop}
 \begin{proof}
-  Soit un naturel $n \geq 4$ non  premier. Il admet des diviseurs propres, donc il existe $(x,y) \in \N^2$ tels que $n=xy$ avec $x \geq 2$ et $y \geq 2$.
+  Soit un naturel $n \geqslant 4$ non  premier. Il admet des diviseurs propres, donc il existe $(x,y) \in \N^2$ tels que $n=xy$ avec $x \geqslant 2$ et $y \geqslant 2$.
 
-  Quitte à intervertir les rôles de $x$ et $y$, on peut supposer que $x \leq y$. D'où $x^2 \leq n$ et donc $x \leq \sqrt{n}$. Or $x \in \N$ donc $x \leq E(\sqrt{n})$. On a donc trouvé un diviseur $x$ de $n$ compris entre $2$ et $E(\sqrt{n})$.
+  Quitte à intervertir les rôles de $x$ et $y$, on peut supposer que $x \leqslant y$. D'où $x^2 \leqslant n$ et donc $x \leqslant \sqrt{n}$. Or $x \in \N$ donc $x \leqslant E(\sqrt{n})$. On a donc trouvé un diviseur $x$ de $n$ compris entre $2$ et $E(\sqrt{n})$.
 \end{proof}
 
 Pour l'application pratique du crible, on utilise la contraposée. Si $n$ est un entier plus grand que $4$ qui n'admet pas de diviseurs compris entre 2 et $\sqrt{n}$ alors $n$ est un nombre premier.
 
-Soit $n \geq 4$. Supposons connus tous les nombres premiers inférieurs à $E(\sqrt{n})$. Pour chaque $p$ premier tel que $p \leq E(\sqrt{n})$, on garde $p$ et on barre tous les multiples de $p$ inférieur ou égaux à $n$.
+Soit $n \geqslant 4$. Supposons connus tous les nombres premiers inférieurs à $E(\sqrt{n})$. Pour chaque $p$ premier tel que $p \leqslant E(\sqrt{n})$, on garde $p$ et on barre tous les multiples de $p$ inférieur ou égaux à $n$.
 
 Les nombres restants sont les nombres premiers inférieurs à $n$. Par exemple pour $n=100$ $E(\sqrt{n})=10$. L'ensemble des nombres premiers inférieurs à 10 est $\{2,3,5,7\}$. Alors on barre tous les multiples de 2, de 3, de 5 et de 7. Au final l'ensemble des nombres premiers inférieurs à 100 est 
 \begin{align}
-\P_{\leq 100}&=\{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53, \notag \\
+\P_{\leqslant 100}&=\{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53, \notag \\
 & \phantom{=} 61,67,71,73,79,83,89,97\}.
 \end{align}
 
@@ -1509,26 +1509,26 @@ Les nombres restants sont les nombres premiers inférieurs à $n$. Par exemple p
 On suppose que $n$ est un entier naturel.
 
 \begin{theo}
-  Soit $n \in \N$, $n \geq 2$. Il existe $m \in \N^*$, $p_1, \dotsc, p_m$ des nombres premiers distincts, $k_1, \dotsc, k_m$ des naturels non nuls tels que
+  Soit $n \in \N$, $n \geqslant 2$. Il existe $m \in \N^*$, $p_1, \dotsc, p_m$ des nombres premiers distincts, $k_1, \dotsc, k_m$ des naturels non nuls tels que
   \begin{equation}
     n = \prod_{i=1}^m p_i^{k_i}.
   \end{equation}
   De plus cette décomposition est unique à l'ordre des facteurs près. On dit que c'est la décomposition primaire du naturel $n$. L'ensemble $\enstq{p_i}{i \in \intervalleentier{1}{m}}$ est appelé le support primaire de $n$.
 \end{theo}
 \begin{proof}[Existence]
-  On démontre par récurrence forte sur $n \geq 2$ la propriété $\P(n)$ ``$n$ est produit de facteurs premiers''.
+  On démontre par récurrence forte sur $n \geqslant 2$ la propriété $\P(n)$ ``$n$ est produit de facteurs premiers''.
 
 \emph{Initialisation}. Pour $n=2$. $2=2$, $m=1$, $p_1=2$ et $k_1=1$. Donc $\P(2)$ est vraie.
 
-\emph{Hérédité}. Soit $n \geq 2$ et on suppose que $\P(2), \dotsc, \P(n)$ sont vraies. Alors $n+1$ admet au moins un diviseur de $p$ qui est un nombre premier. Deux cas se présentent
+\emph{Hérédité}. Soit $n \geqslant 2$ et on suppose que $\P(2), \dotsc, \P(n)$ sont vraies. Alors $n+1$ admet au moins un diviseur de $p$ qui est un nombre premier. Deux cas se présentent
 \begin{enumerate}
 \item $p=n+1$. Alors $n+1$ est premier, il est égal à un produit de facteurs premiers, $m=1$, $p_1=n+1$ et $k_1=1$.
-\item $p \neq n+1$ et alors $p < n+1$. Il existe un naturel $q$ tel que $n+1=pq$. Le nombre $p$ est premier donc $p \geq 2$. Alors $2 \leq q \leq n$. Comme $\P(q)$ est vraie alors $q$ est égal à un produit de nombres premiers.
+\item $p \neq n+1$ et alors $p < n+1$. Il existe un naturel $q$ tel que $n+1=pq$. Le nombre $p$ est premier donc $p \geqslant 2$. Alors $2 \leqslant q \leqslant n$. Comme $\P(q)$ est vraie alors $q$ est égal à un produit de nombres premiers.
 
   Alors $n+1=pq$ est lui aussi égal à un produit de facteurs premiers, puisque $p$ est premier. Donc $\P(n+1)$ est vraie.
 \end{enumerate}
 
-\emph{Conclusion}. Par théorème de récurrence forte, la propriété $\P$ est vraie pour tout naturel $n \geq 2$.
+\emph{Conclusion}. Par théorème de récurrence forte, la propriété $\P$ est vraie pour tout naturel $n \geqslant 2$.
 
 Il reste à mettre le produit sous la bonne forme.
 \end{proof}
@@ -1543,7 +1543,7 @@ Il reste à mettre le produit sous la bonne forme.
   \begin{equation}
     n=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i}.
   \end{equation}
-  Montrons que pour tout $i \in \intervalleentier{1}{m}$, $k_i=l_i$. S'il existe $i_0 \intervalleentier{1}{m}$ tel que $k_{i_0} \neq l_{i_0}$ (par exemple $k_{i_0} > l_{i_0}$) alors $p_{i_0}^{k_{i_0}} \geq p_{i_0}^{k_{i_0}-l_{i_0}}$. Alors
+  Montrons que pour tout $i \in \intervalleentier{1}{m}$, $k_i=l_i$. S'il existe $i_0 \intervalleentier{1}{m}$ tel que $k_{i_0} \neq l_{i_0}$ (par exemple $k_{i_0} > l_{i_0}$) alors $p_{i_0}^{k_{i_0}} \geqslant p_{i_0}^{k_{i_0}-l_{i_0}}$. Alors
 \begin{align}
     n&=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i} \\
     &p_{i_0}^{l_{i_0}} \cdot p_{i_0}^{k_{i_0}-l_{i_0}} \prod_{i \neq i_0}^m p_i^{k_i} = p_{i_0}^{l_{i_0}} \cdot \prod_{i \neq i_0}^m p_i^{k_i}\\
@@ -1555,7 +1555,7 @@ Il reste à mettre le produit sous la bonne forme.
   Soit $n=\prod_{i=1}^m p_i^{k_i}$ une décomposition primaire. Alors
   \begin{enumerate}
   \item pour $i \in \intervalleentier{1}{m}$ alors $k_i$ est le plus grand entier $k$ tel que $p_i^k \mid n$;
-  \item les diviseurs de $n$ dans $\N$ sont les $\prod_{i=1}^m p_i^{l_i}$ avec $0 \leq l_i \leq k_i$ (pas tout à fait une décomposition primaire);
+  \item les diviseurs de $n$ dans $\N$ sont les $\prod_{i=1}^m p_i^{l_i}$ avec $0 \leqslant l_i \leqslant k_i$ (pas tout à fait une décomposition primaire);
   \item Soient deux naturels $a$ et $b$ et leurs décompositions primaires
     \begin{equation}
       a=\prod_{i=1}^m p_i^{k_i}, \quad b=\prod_{i=1}^m p_i^{l_i},
@@ -1585,14 +1585,14 @@ Il reste à mettre le produit sous la bonne forme.
     Alors $p_i$ diviserait le terme de gauche mais pas celui de droite, c'est absurde donc $p_i^k$ ne divise pas $n$.
   \item Déjà les $p_i^{k_i}$ sont bien des diviseurs de $n$. Soit $q \in \N$ qui divise $n$. Si $p$ est un nombre premier qui divise $q$, alors par transitivité $p$ divise $n$. Puisque $n=\prod_{i=1}^m p_i^{k_i}$ il existe $i \in \intervalleentier{1}{m}$ tel que $p=p_i$.
 
-    Les diviseurs premiers de $q$ sont donc à choisir dans $\{p_1, \ldots, p_m\}$. On peut alors écrire $q=\prod_{i=1}^m p_i^{l_i}$ avec $\forall i \in \intervalleentier{1}{m}$, $l_i \in \N$. Donc pour tout $i\in \intervalleentier{1}{m}$, $p_i^{l_i} \mid q$ donc $p_i^{l_i} \mid n$ et d'après le premier point $l_i \leq k_i$.
-  \item On pose $d= \pgcd(a,b)$ et $\delta = \prod_{i=1}^m p_i^{\min(k_i,l_i)}$. Comme $\min(k_i, l_i) \leq k_i$ alors d'après le deuxième point $\delta \mid a$ et de la même manière $\min(k_i, l_i) \leq l_i$ donc $\delta \mid b$. Alors $\delta \mid d$.
+    Les diviseurs premiers de $q$ sont donc à choisir dans $\{p_1, \ldots, p_m\}$. On peut alors écrire $q=\prod_{i=1}^m p_i^{l_i}$ avec $\forall i \in \intervalleentier{1}{m}$, $l_i \in \N$. Donc pour tout $i\in \intervalleentier{1}{m}$, $p_i^{l_i} \mid q$ donc $p_i^{l_i} \mid n$ et d'après le premier point $l_i \leqslant k_i$.
+  \item On pose $d= \pgcd(a,b)$ et $\delta = \prod_{i=1}^m p_i^{\min(k_i,l_i)}$. Comme $\min(k_i, l_i) \leqslant k_i$ alors d'après le deuxième point $\delta \mid a$ et de la même manière $\min(k_i, l_i) \leqslant l_i$ donc $\delta \mid b$. Alors $\delta \mid d$.
 
     D'autre part $d \mid a$ et $d \mid b$ donc on peut écrire, d'après le deuxième point, $d$ sous la forme
     \begin{equation}
-      d = \prod_{i=1}^m p_i^{\alpha_i} \quad \alpha_i \leq k_i \text{~et~} \alpha_i \leq l_i.
+      d = \prod_{i=1}^m p_i^{\alpha_i} \quad \alpha_i \leqslant k_i \text{~et~} \alpha_i \leqslant l_i.
     \end{equation}
-    Alors $\alpha_i \leq \min(k_i,l_i)$ et donc, toujours d'après le deuxième point, $d \mid \prod_{i=1}^m p_i ^{\\min(l_i,k_i)}=\delta$. Finalement $d$ et $\delta$ sont associés et comme ils sont positifs $d=\delta$. On sait que
+    Alors $\alpha_i \leqslant \min(k_i,l_i)$ et donc, toujours d'après le deuxième point, $d \mid \prod_{i=1}^m p_i ^{\\min(l_i,k_i)}=\delta$. Finalement $d$ et $\delta$ sont associés et comme ils sont positifs $d=\delta$. On sait que
     \begin{equation}
       ab=\abs{ab} = \pgcd(a,b) \cdot \ppcm(a,b),
     \end{equation}
@@ -1635,7 +1635,7 @@ Ainsi $\Z$ est un sous-anneau de $\Q$.
 \subsubsection{Relation d'ordre sur $\Q$}
 
 \begin{defdef}
-  Soient $\frac{a}{b}$ et $\frac{c}{d}$ deux éléments de $\Q$. On définit $\frac{a}{b} \leq \frac{c}{d}$ par $(ad-bc)bd \leq 0$.
+  Soient $\frac{a}{b}$ et $\frac{c}{d}$ deux éléments de $\Q$. On définit $\frac{a}{b} \leqslant \frac{c}{d}$ par $(ad-bc)bd \leqslant 0$.
 \end{defdef}
 
 C'est légitime car~:
@@ -1647,7 +1647,7 @@ C'est légitime car~:
     &=(ad-bc)(b'd')^2(bd),
   \end{align}
   les relatifs $(bd)^2$ et $(b'd')^2$ sont positifs ou nuls donc $(a'd'-b'c')(b'd')$ a le même signe que $(ad-bc)(bd)$;
-\item soient $a$ et $c$ deux relatifs (ce sont aussi des rationnels) et $a \leq c$ dans $\Q$ est équivalent à $\frac{a}{1} \leq \frac{c}{1}$ qui est équivalent à $(a\cdot 1-c \cdot 1)\cdot 1 \cdot 1 \leq 0$ dans $\Z$ qui est équivalent à $a \leq c$ dans $\Z$.
+\item soient $a$ et $c$ deux relatifs (ce sont aussi des rationnels) et $a \leqslant c$ dans $\Q$ est équivalent à $\frac{a}{1} \leqslant \frac{c}{1}$ qui est équivalent à $(a\cdot 1-c \cdot 1)\cdot 1 \cdot 1 \leqslant 0$ dans $\Z$ qui est équivalent à $a \leqslant c$ dans $\Z$.
 \end{enumerate}
 
 La relations d'ordre définie sur $\Q$ prolonge la relation définie sur $\Z$.
@@ -1657,87 +1657,87 @@ La relations d'ordre définie sur $\Q$ prolonge la relation définie sur $\Z$.
 \begin{prop}
   Pour tout relatif $a$ et tout relatif non nul $b$
   \begin{equation}
-    \frac{a}{b} \geq 0 \iff ab \geq_\Z 0.
+    \frac{a}{b} \geqslant 0 \iff ab \geqslant_\Z 0.
   \end{equation}
 \end{prop}
 \begin{proof}
   \begin{align}
-    \frac{a}{b} \geq 0 &\iff \frac{a}{b} \geq \frac{0}{1} \\
-    & \iff (a \cdot 1 - 0 \cdot b)\cdot b \cdot 1 \geq 0 \\
-    & \iff ab \geq 0.
+    \frac{a}{b} \geqslant 0 &\iff \frac{a}{b} \geqslant \frac{0}{1} \\
+    & \iff (a \cdot 1 - 0 \cdot b)\cdot b \cdot 1 \geqslant 0 \\
+    & \iff ab \geqslant 0.
   \end{align}
 \end{proof}
 \begin{prop}
-  La relation $\leq$ définie sur $\Q$ est bien une relation d'ordre, c'est-à-dire qu'elle est réflexive, antisymétrique et transitive.
+  La relation $\leqslant$ définie sur $\Q$ est bien une relation d'ordre, c'est-à-dire qu'elle est réflexive, antisymétrique et transitive.
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall \frac{a}{b} \in \Q \quad \frac{a}{b} \leq \frac{a}{b},
+    \forall \frac{a}{b} \in \Q \quad \frac{a}{b} \leqslant \frac{a}{b},
   \end{equation}
-  puisque $(ab-ba)b^2=0 \leq 0$. La relation d'ordre sur $\Q$ est réflexive.
+  puisque $(ab-ba)b^2=0 \leqslant 0$. La relation d'ordre sur $\Q$ est réflexive.
   \begin{equation}
     \forall (r,s) \in \Q^2 \ \exists (a,c) \in \Z^2 \ \exists (b,d) \in (\Z^*)^2 \quad r=\frac{a}{b} \ s=\frac{c}{d}.
   \end{equation}
-  Si $r\leq s$ et $s \leq r$ alors $(ad-bc)bd \leq 0$ et $(ad-bc)bd \geq 0$ et comme $\leq$ est antisymétrique sur $\Z$ alors $(ad-bc)bd=0$ or $b$ et $d$ sont non nuls et comme $\Z$ est intègre alors $ad=bc$ donc $r=s$. La relation d'ordre sur $\Q$ est antisymétrique.
+  Si $r\leqslant s$ et $s \leqslant r$ alors $(ad-bc)bd \leqslant 0$ et $(ad-bc)bd \geqslant 0$ et comme $\leqslant$ est antisymétrique sur $\Z$ alors $(ad-bc)bd=0$ or $b$ et $d$ sont non nuls et comme $\Z$ est intègre alors $ad=bc$ donc $r=s$. La relation d'ordre sur $\Q$ est antisymétrique.
 
-Soient trois rationnels $r,s$ et $t$ et leur représentants $r=\frac{a}{b}$, $s=\frac{d}{c}$ et $t=\frac{e}{f}$ tels que $r \leq s$ et $s \leq t$. Alors
+Soient trois rationnels $r,s$ et $t$ et leur représentants $r=\frac{a}{b}$, $s=\frac{d}{c}$ et $t=\frac{e}{f}$ tels que $r \leqslant s$ et $s \leqslant t$. Alors
 \begin{align}
-  (ad-bc)bd \leq 0, \\
-  (cf-ed)df \leq 0.
+  (ad-bc)bd \leqslant 0, \\
+  (cf-ed)df \leqslant 0.
 \end{align}
 Comme $f^2$ et $b^2$ sont positifs alors
 \begin{align}
-  abd^2f^2 \leq cdb^2f^2, \\
-  cdf^2b^2 \leq efd^2b^2.
+  abd^2f^2 \leqslant cdb^2f^2, \\
+  cdf^2b^2 \leqslant efd^2b^2.
 \end{align}
 Par transitivité de la relation d'ordre sur $\Z$
 \begin{align}
-  abd^2f^2 \leq efd^2b^2, \\
-  (af-eb)bd^2f \leq 0, \\
-  (af-eb)bf \leq 0.
+  abd^2f^2 \leqslant efd^2b^2, \\
+  (af-eb)bd^2f \leqslant 0, \\
+  (af-eb)bf \leqslant 0.
 \end{align}
-Donc $\frac{a}{b} \leq \frac{e}{f}$. La relation d'ordre sur $\Q$ est transitive.
+Donc $\frac{a}{b} \leqslant \frac{e}{f}$. La relation d'ordre sur $\Q$ est transitive.
 \end{proof}
 \begin{prop}
-  L'ordre $\leq $ est total sur $\Q$.
+  L'ordre $\leqslant $ est total sur $\Q$.
 \end{prop}
 \begin{proof}
-  L'ordre $\leq $ est un ordre total sur $\Z$ donc $\forall \left( \frac{a}{b}, \frac{c}{d} \right) \in \Q^2$ on a soit $(ad-bc)bd \geq 0$ ou soit $(ad-bc)bd \leq 0$. Donc soit $\frac{a}{b} \leq \frac{c}{d}$ ou soit $\frac{a}{b} \geq \frac{c}{d}$.
+  L'ordre $\leqslant $ est un ordre total sur $\Z$ donc $\forall \left( \frac{a}{b}, \frac{c}{d} \right) \in \Q^2$ on a soit $(ad-bc)bd \geqslant 0$ ou soit $(ad-bc)bd \leqslant 0$. Donc soit $\frac{a}{b} \leqslant \frac{c}{d}$ ou soit $\frac{a}{b} \geqslant \frac{c}{d}$.
 \end{proof}
 \begin{prop}
-  $(\Q,+,\cdot, \leq)$ est un corps totalement ordonné, c'est-à-dire que
+  $(\Q,+,\cdot, \leqslant)$ est un corps totalement ordonné, c'est-à-dire que
   \begin{itemize}
   \item $\Q$ est un corps;
-  \item l'ordre $\leq$ est total sur $\Q$;
-  \item l'ordre $\leq$ est compatible avec les lois $+$ et $\cdot$ de $\Q$.
+  \item l'ordre $\leqslant$ est total sur $\Q$;
+  \item l'ordre $\leqslant$ est compatible avec les lois $+$ et $\cdot$ de $\Q$.
   \end{itemize}
 \end{prop}
 \begin{proof}
-  Soient $r,r'$ et $s$ des rationnels. Soient $(a,b)$, $(c,d)$ et $(a',b')$ des représentants respectifs de $r$, $s$ et $r'$. On suppose que $r \leq r'$. Alors $(ab'-a'b)bb' \leq 0$. On sait aussi que $r+s = \frac{ad+cb}{bd}$ et $r'+s=\frac{a'd+cb'}{b'd}$. Alors
+  Soient $r,r'$ et $s$ des rationnels. Soient $(a,b)$, $(c,d)$ et $(a',b')$ des représentants respectifs de $r$, $s$ et $r'$. On suppose que $r \leqslant r'$. Alors $(ab'-a'b)bb' \leqslant 0$. On sait aussi que $r+s = \frac{ad+cb}{bd}$ et $r'+s=\frac{a'd+cb'}{b'd}$. Alors
   \begin{align}
     [(ad+bc)b'd-(a'd+cb')bd](bdb'd) &= (ab'd^2+bb'cd-a'bd^2-bb'cd)(bb'd^2) \\
-    &=(ab'-a'b)(bb')d^4 \leq 0,
+    &=(ab'-a'b)(bb')d^4 \leqslant 0,
   \end{align}
-  puisque $d^4 \leq 0$ et $(ab'-a'b)bb' \leq 0$. Donc $r+r' \leq r'+s$.
+  puisque $d^4 \leqslant 0$ et $(ab'-a'b)bb' \leqslant 0$. Donc $r+r' \leqslant r'+s$.
 
-  On suppose maintenant que $s \geq 0$, c'est à dire $cd \geq 0$. Alors $rs = \frac{ac}{bd}$ et $r's = \frac{a'c}{b'd}$. Donc
+  On suppose maintenant que $s \geqslant 0$, c'est à dire $cd \geqslant 0$. Alors $rs = \frac{ac}{bd}$ et $r's = \frac{a'c}{b'd}$. Donc
   \begin{equation}
-    (acb'd-a'cbd)(bdb'd) = (ab'-a'b)(bb')(cd)d^2 \leq 0,
+    (acb'd-a'cbd)(bdb'd) = (ab'-a'b)(bb')(cd)d^2 \leqslant 0,
   \end{equation}
-  puisque $cd \geq 0$, $d^2 \geq 0$ et $(ab'-a'b)bb' \leq 0$. D'où $rs \leq r's$.
+  puisque $cd \geqslant 0$, $d^2 \geqslant 0$ et $(ab'-a'b)bb' \leqslant 0$. D'où $rs \leqslant r's$.
 \end{proof}
 \begin{prop}
   Le corps totalement ordonné $\Q$ est archimédien. C'est-à-dire que
   \begin{equation}
-    \forall r \in \Q \ \forall s \in \Q^*_+ \ \exists n \in \N \quad r \leq ns
+    \forall r \in \Q \ \forall s \in \Q^*_+ \ \exists n \in \N \quad r \leqslant ns
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soient $\frac{a}{b}$ et $\frac{c}{d}$ des représentants respectifs de $r$ et $s$. Comme $s \geq 0$ on a $cd \geq 0$. Soit un naturel $n$ alors
+  Soient $\frac{a}{b}$ et $\frac{c}{d}$ des représentants respectifs de $r$ et $s$. Comme $s \geqslant 0$ on a $cd \geqslant 0$. Soit un naturel $n$ alors
   \begin{align}
-    r \leq ns &\iff \frac{a}{b} \leq \frac{nc}{d} \\
-    &\iff (ad-bnc)bd \leq 0 \\
-    &\iff abd^2 \leq n(b^2cd).
+    r \leqslant ns &\iff \frac{a}{b} \leqslant \frac{nc}{d} \\
+    &\iff (ad-bnc)bd \leqslant 0 \\
+    &\iff abd^2 \leqslant n(b^2cd).
   \end{align}
   Or l'anneau $(\Z,+,\cdot)$ est archimédien, $b^2cd \in \Z^*_+$ donc le naturel $n$ existe bien. Alors $\Q$ est archimédien.
 \end{proof}

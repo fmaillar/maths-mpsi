@@ -4,7 +4,7 @@
 \minilof
 \minilot
 
-Ce chapitre présente les équations différentielles linéaires du premier et du deuxième ordre. Les équations différentielles apparaissent dans toutes les branches de la physique. Elles sont en général la description d'un phénomène variant dans l'espace ou dans le temps. Les équations différentielles que nous étudieront là ne sont qu'une petite partie de celle qui existent et qui sont pour la plupart non linéaires, comme par exemple les équations de Navier-Stokes.
+Ce chapitre présente les équations différentielles linéaires du premier et du deuxième ordre. Les équations différentielles apparaissent dans toutes les branches de la physique. Elles sont en général la description d'un phénomène variant dans l'espace ou dans le temps. Les équations différentielles que nous étudieront là ne sont qu'une petite partie de celle qui existent et qui sont pour la plupart non linéaires, comme par exemple les équations de Navier Stokes.
 
 On considère des fonctions à valeurs dans un corps $\K$. Soit un entier naturel non nul $n$, $I$ un intervalle réel et $a_0, \ldots a_n$ et $b$ des fonctions de $I$ dans $\K$ au moins continues. On considère l'équation différentielle
 \begin{equation}
@@ -35,16 +35,16 @@ y'+ay=0.
 %
 \begin{theo}
 \label{theo:1}
-Soit une application $f \in \K^{\R}$. $f$ est solution de l'Eq.~\eqref{eq:Hdiff} si et seulement s'il existe un scalaire $\lambda \in \K$ tel que pour tous réel $t$, $f(t)=\lambda \e^{-at}$.
+Soit une application $f \in \K^{\R}$. $f$ est solution de l'équation \eqref{eq:Hdiff} si et seulement s'il existe un scalaire $\lambda \in \K$ tel que pour tous réel $t$, $f(t)=\lambda \e^{-at}$.
 \end{theo}
 \begin{proof}
 Soit $\lambda \in \K$ tel que , $\fonction{f}{\R}{\K}{t}{\lambda \e^{-at}}$. $f$ est dérivable et
 \begin{equation}
 \forall t \in \R \quad f'(t)+af(t)=-a \lambda \e^{-at}+a \lambda \e^{-at}=0,
 \end{equation}
-donc la fonction $f$ est solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. 
+donc la fonction $f$ est solution de l'équation \eqref{eq:Hdiff} sur $\R$. 
 
-Soit maintenant une fonction $f$ solution de l'Eq.~\eqref{eq:Hdiff} sur $\R$. Posons la fonction $\fonction{g}{\R}{\K}{t}{f(t)\e^{at}}$ $g$ est dérivable par produit de fonctions qui le sont et
+Soit maintenant une fonction $f$ solution de l'équation \eqref{eq:Hdiff} sur $\R$. Posons la fonction $\fonction{g}{\R}{\K}{t}{f(t)\e^{at}}$ $g$ est dérivable par produit de fonctions qui le sont et
 \begin{equation}
 \forall t \in \R \quad g'(t)=f'(t)\e^{at} + af(t)\e^{at}=\e^{at}(f'(t)+af(t))=0,
 \end{equation}
@@ -56,7 +56,7 @@ Soient maintenant $I$ un intervalle réel, $a$ une fonction de $I$ vers $\K$ au 
 \begin{equation}
 y'+a(t)y=0 \label{eq:Hdiff1}.
 \end{equation}
-Pour le cas où $\K=\R$, on suppose qu'il existe une solution $f:I \longrightarrow \R$ de l'Eq.~\eqref{eq:Hdiff1} \emph{qui ne s'annule pas sur $I$} telle que
+Pour le cas où $\K=\R$, on suppose qu'il existe une solution $f:I \longrightarrow \R$ de l'équation \eqref{eq:Hdiff1} \emph{qui ne s'annule pas sur $I$} telle que
 \begin{equation}
 \forall t \in I \quad \frac{f'(t)}{f(t)}=-a(t).
 \end{equation}
@@ -76,9 +76,9 @@ Soit $\lambda \in \K$ et $\fonction{f}{I}{\R}{t}{\lambda \e^{-A(t)}}$. $A$ est d
 \begin{equation}
 \forall t \in I \quad f'(t)+a(t)f(t)=\lambda(-A'(t)\e^{-A(t)}) + \lambda a(t)\e^{-A(t)}=0,
 \end{equation}
-$f$ est donc solution de l'Eq.~\eqref{eq:Hdiff1}.
+$f$ est donc solution de l'équation \eqref{eq:Hdiff1}.
 
-Soit maintenant une fonction $f$ solution de l'Eq.~\eqref{eq:Hdiff1} sur $I$. On définit alors la fonction $\fonction{g}{I}{\K}{t}{f(t)\e^{A(t)}}$. La fonction $f$ est dérivable puisque c'est une solution de l'équation différentielle~\eqref{eq:Hdiff1}. La fonction  $A$ est aussi dérivable, l'exponentielle est dérivable donc $g$ est dérivable par composition et produit. Alors
+Soit maintenant une fonction $f$ solution de l'équation \eqref{eq:Hdiff1} sur $I$. On définit alors la fonction $\fonction{g}{I}{\K}{t}{f(t)\e^{A(t)}}$. La fonction $f$ est dérivable puisque c'est une solution de l'équation différentielle~\eqref{eq:Hdiff1}. La fonction  $A$ est aussi dérivable, l'exponentielle est dérivable donc $g$ est dérivable par composition et produit. Alors
 \begin{equation}
 \forall t \in I \quad g'(t)=f'(t) \e^{A(t)} + f(t)A'(t)\e^{A(t)}=\e^{A(t)}(f'(t) + a(t)f(t)) =0.
 \end{equation}
@@ -91,8 +91,8 @@ Il existe donc un scalaire $\lambda$ tel que $\forall t \in I \quad g(t)=\lambda
 \emph{Remarques}~:
 \begin{enumerate}
 \item si on prend comme fonction $a$ une fonction constante, une primitive de $a$ est $A$ une fonction linéaire et on retrouve le résultat du premier théorème;
-\item on constate à posteriori que les solutions de l'Eq.~\eqref{eq:Hdiff1} distinctes de l'application nulle ne s'annulent pas sur $I$;
-\item une combinaison linéaire de solutions de l'Eq.~\eqref{eq:Hdiff1} est une solution de l'Eq.~\eqref{eq:Hdiff1}, si on note $S_{\H} $ l'ensemble des solutions de l'Eq.~\eqref{eq:Hdiff1}, alors puisque $S_\mathcal{H} $ est soit non vide ou soit stable par combinaison linéaire alors c'est un $\K$-espace vectoriel (c'est même une droite vectorielle).
+\item on constate à posteriori que les solutions de l'équation \eqref{eq:Hdiff1} distinctes de l'application nulle ne s'annulent pas sur $I$;
+\item une combinaison linéaire de solutions de l'équation \eqref{eq:Hdiff1} est une solution de l'équation \eqref{eq:Hdiff1}, si on note $S_{\H} $ l'ensemble des solutions de l'équation \eqref{eq:Hdiff1}, alors puisque $S_\mathcal{H} $ est soit non vide ou soit stable par combinaison linéaire alors c'est un $\K$-espace vectoriel (c'est même une droite vectorielle).
 \end{enumerate}
 
 \section{Équation différentielle linéaire du premier ordre avec second membre}
@@ -102,36 +102,36 @@ On considère l'équation différentielle
 y'+a(t)y=b(t) \label{eq:Ediff}
 \end{equation}
 avec $a$ et $b$ des fonctions au moins continues sur l'intervalle réel $I$ à valeurs dans $\K$.
-On considère aussi l'équation homogène à l'Eq.~\eqref{eq:Ediff}, c'est l'Eq.~\eqref{eq:Hdiff}.
+On considère aussi l'équation homogène à l'équation \eqref{eq:Ediff}, c'est l'équation \eqref{eq:Hdiff}.
 \subsection{Solution générale et solution particulière}
 \label{subsec:solutiongeneraleetpart}
 \begin{theo}\label{theo:3}
-Supposons connaître une solution $f_0$ de l'Eq.~\eqref{eq:Ediff}, qu'on appellera solution particulière, alors une fonction $f:I \longrightarrow \K$ est solution de l'Eq.~\eqref{eq:Ediff} si et seulement si la fonction $f-f_0$ est solution de l'Eq.~\eqref{eq:Hdiff}.
+Supposons connaître une solution $f_0$ de l'équation \eqref{eq:Ediff}, qu'on appellera solution particulière, alors une fonction $f:I \longrightarrow \K$ est solution de l'équation \eqref{eq:Ediff} si et seulement si la fonction $f-f_0$ est solution de l'équation \eqref{eq:Hdiff}.
 \begin{equation}
 \mathcal{S}_{\E}=f_0 + \mathcal{S}_{\H}
 \end{equation}
 \end{theo}
 \begin{proof}
-  Soit $f:I \rightarrow \K$ solution de l'Eq.~\eqref{eq:Ediff}. Soit $g=f-f_0$, alors $f$ et $f_0$ sont solutions de l'Eq.~\eqref{eq:Ediff}, donc elles sont dérivables et donc $g$ est dérivable.
+  Soit $f:I \rightarrow \K$ solution de l'équation \eqref{eq:Ediff}. Soit $g=f-f_0$, alors $f$ et $f_0$ sont solutions de l'équation \eqref{eq:Ediff}, donc elles sont dérivables et donc $g$ est dérivable.
   \begin{equation}
     \forall t \in I \quad g'(t)+a(t)g(t)=(f'(t)+a(t)f(t))-(f'_0(t)+a(t)f_0(t))=b(t)-b(t)=0
   \end{equation}
-g est donc solution de l'Eq.~\eqref{eq:Ediff}.
+g est donc solution de l'équation \eqref{eq:Ediff}.
 
-Supposons ensuite que $g=f-f_0$ est solution de l'Eq.~\eqref{eq:Hdiff}, alors $f=f_0+g$ est dérivable et
+Supposons ensuite que $g=f-f_0$ est solution de l'équation \eqref{eq:Hdiff}, alors $f=f_0+g$ est dérivable et
 \begin{align}
   \forall t \in I \quad f'(t)+a(t)f(t)&=(g'(t)+f_0'(t)) + a(t)(g(t)+f_0(t)) \\ &=\underbrace{g'(t)+a(t)g(t)}_{b(t)} + \underbrace{f_0'(t)+a(t)f_0(t)}_{0}
 \end{align}
-donc $f$ est solution de l'Eq.~\eqref{eq:Ediff}.
+donc $f$ est solution de l'équation \eqref{eq:Ediff}.
 \end{proof}
 
-\emph{Remarque}~: Toute la difficulté est bien sûr de trouver une solution particulière de l'Eq.~\eqref{eq:Ediff} dont l'existence n'est pas assurée par le théorème~\ref{theo:3}.
+\emph{Remarque}~: Toute la difficulté est bien sûr de trouver une solution particulière de l'équation \eqref{eq:Ediff} dont l'existence n'est pas assurée par le théorème~\ref{theo:3}.
 
 \subsection{Recherche de solutions particulière}
 \label{subsec:recherchesolutionpart}
-\subsubsection{Lorsque l'Eq.~\eqref{eq:Hdiff} est à coefficient constants}
+\subsubsection{Lorsque l'équation \eqref{eq:Hdiff} est à coefficient constants}
 \label{subsubsec:recherchesolutionpart-coefconstants}
-On suppose que le second membre $b$ est de la forme \og exponentielle-polynôme \fg{}, c'est-à-dire $\forall t \in I \quad b(t)=P(t) \e^{mt}$ où $P$ est une fonction polynomiale, $P(t)=\sum_{i=0}^d \alpha_i t^i$ et $m \in \K$. Dans ce cas on cherche une solution particulière sous la forme $t \longmapsto Q(t)\e^{mt}$ où $Q$ est un polynôme de même degré que $P$.
+On suppose que le second membre $b$ est de la forme \og exponentielle polynôme \fg{}, c'est-à-dire $\forall t \in I \quad b(t)=P(t) \e^{mt}$ où $P$ est une fonction polynomiale, $P(t)=\sum_{i=0}^d \alpha_i t^i$ et $m \in \K$. Dans ce cas on cherche une solution particulière sous la forme $t \longmapsto Q(t)\e^{mt}$ où $Q$ est un polynôme de même degré que $P$.
 
 \emph{Remarques}:
 \begin{itemize}
@@ -139,7 +139,7 @@ On suppose que le second membre $b$ est de la forme \og exponentielle-polynôme 
 \item on peut l'appliquer avec un second membre polynomial ou avec un second membre $t \longmapsto \e^{mt}$;
 \item on peut aussi l'appliquer avec un second membre en sinus ou en cosinus, cosinus hyperbolique ou sinus hyperbolique car ces fonctions s'écrivent comme somme d'exponentielle.
 \end{itemize}
-\subsubsection{Lorsque l'Eq.~\eqref{eq:Hdiff} est à coefficients non constants}
+\subsubsection{Lorsque l'équation \eqref{eq:Hdiff} est à coefficients non constants}
 \label{subsubsec:recherchesolutionpart-coefnnconstants}
 Il n'y a pas de méthode générale. Si on ne voit pas de solution \og évidente \fg{} on utilise la méthode de la variation de la constante.
 %
@@ -200,10 +200,10 @@ Ceci démontre l'existence d'une solution pour l'équation avec second membre et
 %
 \begin{theo} 
   \label{theo:4}
-  Soient $I$ un intervalle réel, $a$ et $b$ deux fonctions au moins dérivables sur $I$. Soit $t_0$ un réel de $I$ et $y$ un scalaire de $\K$. Il existe alors une unique fonction $f:I \longmapsto \R$ solution de l'Eq.~\eqref{eq:Ediff} qui satisfait la condition initiale $y(t_0)=y_0$
+  Soient $I$ un intervalle réel, $a$ et $b$ deux fonctions au moins dérivables sur $I$. Soit $t_0$ un réel de $I$ et $y$ un scalaire de $\K$. Il existe alors une unique fonction $f:I \longmapsto \R$ solution de l'équation \eqref{eq:Ediff} qui satisfait la condition initiale $y(t_0)=y_0$
 \end{theo}
 \begin{proof}
-  Soit $f_0$ une solution particulière ---~dont on connaît l'existence grâce à la variation de la constante. Soit $A$ une primitive de $a$. D'après les théorèmes~\ref{theo:2} et~\ref{theo:3}, on sait qu'une application $f:I \longmapsto \R$ est solution de l'Eq.~\eqref{eq:Ediff} si et seulement si il existe $\mu \in \K$ tel que
+  Soit $f_0$ une solution particulière ---~dont on connaît l'existence grâce à la variation de la constante. Soit $A$ une primitive de $a$. D'après les théorèmes~\ref{theo:2} et~\ref{theo:3}, on sait qu'une application $f:I \longmapsto \R$ est solution de l'équation \eqref{eq:Ediff} si et seulement si il existe $\mu \in \K$ tel que
   \begin{equation}
     \forall t \in I \quad f(t)=f_0(t) + \mu \e^{-A(t)}
   \end{equation}
@@ -223,12 +223,12 @@ Soient à présent $a$, $b$ et $c$ trois applications au moins continues de $I$ 
 \end{equation}
 On distingue deux cas :
 \begin{itemize}
-\item si $a$ ne s'annule pas sur $I$, alors l'Eq.~\eqref{eq:raccord} est équivalent à
+\item si $a$ ne s'annule pas sur $I$, alors l'équation \eqref{eq:raccord} est équivalent à
   \begin{equation}
     y' + \frac{b}{a}(t) y = \frac{c}{a}(t),
   \end{equation}
 et on sait alors résoudre ce genre d'équations comme on vient de le faire auparavant;
-\item si $a$ s'annule, c'est en général en un nombre fini de points. On commence par résoudre l'équation sur les sous-intervalles de $I$ où $a$ ne s'annule pas, ensuite on envisage l'existence de solutions globales sur $I$ qui devront être dérivables ---~donc continues~--- en tout point.
+\item si $a$ s'annule, c'est en général en un nombre fini de points. On commence par résoudre l'équation sur les sous intervalles de $I$ où $a$ ne s'annule pas, ensuite on envisage l'existence de solutions globales sur $I$ qui devront être dérivables ---~donc continues~--- en tout point.
 \end{itemize}
 %
 \section{Équations différentielles homogènes du second ordre à coefficients constants}
@@ -247,11 +247,11 @@ Maintenant $a$, $b$ et $c$ sont des complexes avec $a \neq 0$. On considère l'�
 \begin{align}
   g\text{~est solution de } \eqref{eq:Hdiff2} & \iff ag'' + bg'+cg=0  \\ & \iff ar^2+br+c=0
 \end{align}
-On appelle cette dernière équation \emph{l'équation caractéristique} de l'Eq.~\eqref{eq:Hdiff2}, et on note $\Delta$ son discriminant. Soient $r \in \C$ une racine de cette équation, un complexe $\lambda$ et une fonction $f:t \longmapsto \lambda \e^{rt}$. La fonction $f$ est donc une solution de l'Eq.~\eqref{eq:Hdiff2}.
+On appelle cette dernière équation \emph{l'équation caractéristique} de l'équation \eqref{eq:Hdiff2}, et on note $\Delta$ son discriminant. Soient $r \in \C$ une racine de cette équation, un complexe $\lambda$ et une fonction $f:t \longmapsto \lambda \e^{rt}$. La fonction $f$ est donc une solution de l'équation \eqref{eq:Hdiff2}.
 %
 \begin{theo}
   \label{theo:5} 
-  Les solutions à valeurs complexes de l'Eq~\eqref{eq:Hdiff2} sont de la forme~:
+  Les solutions à valeurs complexes de l'équation \eqref{eq:Hdiff2} sont de la forme~:
   \begin{itemize}
   \item Si le discriminant de l'équation caractéristique est nul~: 
     \begin{equation} 
@@ -265,11 +265,11 @@ On appelle cette dernière équation \emph{l'équation caractéristique} de l'Eq
     avec $r_1 \ r_2$ les racines et $\lambda \ \mu$ des complexes.
   \end{itemize}
 \end{theo}
-\begin{proof}[Analyse] Soit $f$ une solution de l'Eq.\eqref{eq:Hdiff2}. On définit
+\begin{proof}[Analyse] Soit $f$ une solution de l'équation \eqref{eq:Hdiff2}. On définit
   \begin{equation}
     \fonction{g}{\R}{\C}{t}{f(t)\e^{-rt}}.
   \end{equation}
-  Comme $f$ est solution de l'Eq.\eqref{eq:Hdiff2}, elle est dérivable deux fois. Donc pour tout réel $t$ $f(t)=g(t) \e^{rt}$, et en injectant cette forme dans l'équation différentielle, on obtient~:
+  Comme $f$ est solution de l'équation \eqref{eq:Hdiff2}, elle est dérivable deux fois. Donc pour tout réel $t$ $f(t)=g(t) \e^{rt}$, et en injectant cette forme dans l'équation différentielle, on obtient~:
 \begin{equation}
   \forall t \in \R \quad ag''(t)+(2ar+b)g'(t)=0
 \end{equation}
@@ -302,12 +302,12 @@ Dans chacun des deux cas, on est arrivé à trouver la solution $f$ de l'équati
 \begin{proof}[Synthèse]
   Ici aussi, on distingue deux cas
 \begin{itemize}
-\item Cas où le discriminant est nul. L'équation caractéristique admet alors une racine double $r=-\frac{b}{2a}$. On considère alors la fonction $\fonction{f_1}{\R}{\C}{t}{t\e^{rt}}$. Montrons que $f_1$ est solution de l'Eq.~\eqref{eq:Hdiff2}. La fonction $f_1$ est deux fois dérivable et on a 
+\item Cas où le discriminant est nul. L'équation caractéristique admet alors une racine double $r=-\frac{b}{2a}$. On considère alors la fonction $\fonction{f_1}{\R}{\C}{t}{t\e^{rt}}$. Montrons que $f_1$ est solution de l'équation \eqref{eq:Hdiff2}. La fonction $f_1$ est deux fois dérivable et on a 
   \begin{equation}
     \forall t \in \R  \quad af_1''(t)+bf_1'(t)+cf_1(t)=\e^{rt} \left( (ar^2+br+c)t + 2ar+b \right),
   \end{equation}
-$r$ est une racine double donc $ar^2+br+c=2ar+b=0$ donc $f_1$ est solution de l'Eq.~\eqref{eq:Hdiff2}. Soit la fonction $\fonction{f_2}{\R}{\C}{t}{\e^{rt}}$. Elle est solution de l'Eq.\eqref{eq:Hdiff2} puisque $r$ est une racine de l'équation caractéristique.
-\item Cas où le discriminant n'est pas nul. L'équation caractéristique admet alors deux solutions distinctes $r_1$ et $r_2$. Si on pose les fonctions associées $f_1$ et $f_2$, elles sont solutions de l'Eq.~\eqref{eq:Hdiff2}. Puisque l'ensemble des solutions de l'Eq.~\eqref{eq:Hdiff2} est un espace vectoriel alors toute combinaison linéaire de $f_1$ et $f_2$ est une solution de l'Eq.~\eqref{eq:Hdiff2}.
+$r$ est une racine double donc $ar^2+br+c=2ar+b=0$ donc $f_1$ est solution de l'équation \eqref{eq:Hdiff2}. Soit la fonction $\fonction{f_2}{\R}{\C}{t}{\e^{rt}}$. Elle est solution de l'équation \eqref{eq:Hdiff2} puisque $r$ est une racine de l'équation caractéristique.
+\item Cas où le discriminant n'est pas nul. L'équation caractéristique admet alors deux solutions distinctes $r_1$ et $r_2$. Si on pose les fonctions associées $f_1$ et $f_2$, elles sont solutions de l'équation \eqref{eq:Hdiff2}. Puisque l'ensemble des solutions de l'équation \eqref{eq:Hdiff2} est un espace vectoriel alors toute combinaison linéaire de $f_1$ et $f_2$ est une solution de l'équation \eqref{eq:Hdiff2}.
 \end{itemize}
 \end{proof}
 %
@@ -316,7 +316,7 @@ $r$ est une racine double donc $ar^2+br+c=2ar+b=0$ donc $f_1$ est solution de l'
 Dans ce paragraphe, on considère que les scalaires $a$, $b$ et $c$ sont des réels avec $a \neq 0$. On note $\Delta=b^2-4ac$ le discriminant de l'équation caractéristique.
 \begin{theo}
   \label{theo:6} 
-  Les solutions à valeurs complexes de l'Eq.~\eqref{eq:Hdiff2} sont de la forme suivante
+  Les solutions à valeurs complexes de l'équation \eqref{eq:Hdiff2} sont de la forme suivante
   \begin{itemize}
   \item si le discriminant est nul, $t \longmapsto (\lambda t + \mu)\e^{rt}$, avec $r$ la racine double et $\lambda \ \mu$ des réels;
   \item si le discriminant est positif, $t \longmapsto \lambda \e^{r_1 t} + \mu \e^{r_2 t}$, avec $r_1 \ r_2$ les racines et $\lambda \ \mu$ des réels;
@@ -379,29 +379,29 @@ Soient $(a,b,c) \in \K^{*}$, $d:I \longmapsto \K$ une fonction au moins continue
   \label{eq:Ediff2}
   ay'' + by' + cy=d(t)
 \end{equation}
-On note $\mathcal{S}_\E$ l'ensemble des solutions de l'Eq.~\eqref{eq:Ediff2}. On introduit l'équation homogène associée
+On note $\mathcal{S}_\E$ l'ensemble des solutions de l'équation \eqref{eq:Ediff2}. On introduit l'équation homogène associée
 \begin{equation}
   \label{eq:Hdiff3}
   ay''+by'+cy=0
 \end{equation}
-et de la même manière on note $\mathcal{S}_{\H}$ l'ensemble des solutions de l'Eq.~\eqref{eq:Hdiff3}.
+et de la même manière on note $\mathcal{S}_{\H}$ l'ensemble des solutions de l'équation \eqref{eq:Hdiff3}.
 \subsection{Solution générale et solution particulière}
 \label{subsec:solutiongeneraleetsolutionpart}
 \begin{theo}
-Supposons connaître une solution $f_0$ de l'équation $\E$ ---~dite solution particulière~--- alors une application $f:I \longmapsto \K$ est une solution de $\E$ si et seulement si la fonction $f-f_0$ est une solution de l'Eq.~\eqref{eq:Hdiff3}. On a donc $\mathcal{S}_\E=\mathcal{S}_{\H} + f_0$. On dit que la solution générale de $\E$ est la somme d'une solution particulière et de la solution générale de l'Eq.~\eqref{eq:Hdiff3}.
+Supposons connaître une solution $f_0$ de l'équation $\E$ ---~dite solution particulière~--- alors une application $f:I \longmapsto \K$ est une solution de $\E$ si et seulement si la fonction $f-f_0$ est une solution de l'équation \eqref{eq:Hdiff3}. On a donc $\mathcal{S}_\E=\mathcal{S}_{\H} + f_0$. On dit que la solution générale de $\E$ est la somme d'une solution particulière et de la solution générale de l'équation \eqref{eq:Hdiff3}.
 \end{theo}
 \begin{proof}
   Supposons que $f$ est une solution de $\E$ et posons $g=f-f_0$ puisque $f$ et $f_0$ sont des solutions de $\E$, elles sont dérivables deux fois et par conséquent $g$ est aussi dérivable deux fois, et on a
   \begin{align}
     \forall t \in I \quad ag''(t)+bg'(t)+cg(t) &= af''(t)+bf'(t)+cf(t) \\ &- (af_0''(t)+bf_0'(t)+cf_0(t))\\ &= d(t)-d(t)=0
   \end{align}
-La fonction $g$ est donc solution de l'Eq.~\eqref{eq:Hdiff3}.
+La fonction $g$ est donc solution de l'équation \eqref{eq:Hdiff3}.
 
-Soit une application $f:I \longmapsto \K$. Supposons que $g=f-f_0$ soit solution de l'Eq.~\eqref{eq:Hdiff3}. Puisque $g$ est solution de l'Eq.~\eqref{eq:Hdiff3} elle est deux fois dérivable et puisque $f$ est solution de l'Eq.\eqref{eq:Ediff2} alors elle est deux fois dérivable. Ainsi donc $f=g+f_0$ est deux fois dérivable et on a pour tout $t \in I$~:
+Soit une application $f:I \longmapsto \K$. Supposons que $g=f-f_0$ soit solution de l'équation \eqref{eq:Hdiff3}. Puisque $g$ est solution de l'équation \eqref{eq:Hdiff3} elle est deux fois dérivable et puisque $f$ est solution de l'équation \eqref{eq:Ediff2} alors elle est deux fois dérivable. Ainsi donc $f=g+f_0$ est deux fois dérivable et on a pour tout $t \in I$~:
 \begin{align}
   af''(t)+bf'(t)+cf(t)&=(ag''(t)+bg'(t)+cg(t))\notag\\ &\phantom{=}+(af_0''(t)+bf_0'(t)+cf_0(t))\\ &=0+d(t) 
 \end{align}
-donc $f$ est solution de l'Eq.~\eqref{eq:Ediff2}.
+donc $f$ est solution de l'équation \eqref{eq:Ediff2}.
 \end{proof}
 \subsection{Principe de superposition}
 \begin{prop}
@@ -416,20 +416,20 @@ où $d_1$ et $d_2$ sont des fonctions au moins continues de $I$ vers $\K$. Alors
 \end{equation}
 \end{prop}
 \begin{proof}
-  Soient $f_1$ et $f_2$ des solutions respectives de l'Eq.~\eqref{eq:EdiffE1} et de l'Eq.~\eqref{eq:EdiffE2}, alors $f_1$ et $f_2$ sont dérivables sur $I$ donc $f_1+f_2$ aussi~:
+  Soient $f_1$ et $f_2$ des solutions respectives de l'équation \eqref{eq:EdiffE1} et de l'équation \eqref{eq:EdiffE2}, alors $f_1$ et $f_2$ sont dérivables sur $I$ donc $f_1+f_2$ aussi~:
   \begin{align}
     \forall t \in I \quad af''(t)+bf'(t)+cf(t)&=af_1''(t)+bf_1'(t)+cf_1(t) \notag \\ %je met \notag parce que ce n'est qu'unes seule equation avec celle du dessous
     &\phantom{=}+af_2''(t)+bf_2'(t)+cf_2(t)\\ &=d_1(t)+d_2(t)
   \end{align}
-Car $f_1$ et $f_2$ sont solutions de l'Eq.~\eqref{eq:EdiffE1} et de l'Eq.~\eqref{eq:EdiffE2} respectivement. La fonction $f$ est donc une solution de l'Eq.\eqref{eq:Ediff2}.
+Car $f_1$ et $f_2$ sont solutions de l'équation \eqref{eq:EdiffE1} et de l'équation \eqref{eq:EdiffE2} respectivement. La fonction $f$ est donc une solution de l'équation \eqref{eq:Ediff2}.
 \end{proof}
 \emph{Application :} si le second membre est de la forme $d_1(t)+ \dotsb +d_n(t)$ on cherche indépendamment des solutions particulières $f_i$ des équations différentielles correspondantes avec le second membre $d_i$ et ensuite on somme toutes les solutions pour trouver la solution particulière de l'équation de départ.
 
-\subsection{Recherche d'une solution particulière dans le cas où le second membre est une \og exponentielle-polynôme \fg}
+\subsection{Recherche d'une solution particulière dans le cas où le second membre est une \og exponentielle polynôme \fg}
 \label{subsec:recherchesolutionpartexppol}
 Dans ce cours on s'intéresse uniquement à des seconds membre de cette forme.
 \begin{defdef}
-  On appelle exponentielle-polynôme toute fonction $d$ de la forme
+  On appelle exponentielle polynôme toute fonction $d$ de la forme
   \begin{equation}
     d(t)=\sum_{k=1}^{n} \e^{m_k t} P_k (t),
   \end{equation}
@@ -440,14 +440,14 @@ On considère l'équation différentielle  suivante avec $(a,b,c) \in \K^{*}\tim
   \label{eq:Ediff4}
   ay''+by'+cy=\sum_{k=1}^{n} \e^{kt} P_k(t)
 \end{equation}
-On cherche une solution particulière de l'Eq.~\eqref{eq:Ediff4}. Grâce au principe de superposition, il suffit de trouver une solution particulière pour chacune des équation $\E_k$ : 
+On cherche une solution particulière de l'équation \eqref{eq:Ediff4}. Grâce au principe de superposition, il suffit de trouver une solution particulière pour chacune des équation $\E_k$ : 
 \begin{equation}
   \label{eq:Ediffk}
   ay''+by'+cy= \e^{kt} P_k(t)
 \end{equation}
 On admet l'indice $k$ dans une partie de la suite pour alléger la notation.
 \begin{theo}
-  Pour tout entier $k \in \intervalleentier{1}{n}$ il existe une solution particulière $f_k$ de l'Eq.~\eqref{eq:Ediffk} de la forme suivante
+  Pour tout entier $k \in \intervalleentier{1}{n}$ il existe une solution particulière $f_k$ de l'équation \eqref{eq:Ediffk} de la forme suivante
   \begin{itemize}
   \item si $m_k$ n'est pas racine de l'équation caractéristique alors
     \begin{equation}
@@ -465,16 +465,16 @@ On admet l'indice $k$ dans une partie de la suite pour alléger la notation.
     \end{equation}
     où $\deg(Q_k)=\deg(P_k)+2$.
   \end{itemize}
-La fonction $f=\sum_{k=1}^{n} f_k$ est alors une solution particulière de l'Eq.~\eqref{eq:Ediff4}. Dans le deuxième cas, on pourra supposer le terme constant de $Q_k$ nul et dans le troisième cas, on pourra supposer que le terme de degré $0$ et $1$ de $Q_k$ sont nuls.
+La fonction $f=\sum_{k=1}^{n} f_k$ est alors une solution particulière de l'équation \eqref{eq:Ediff4}. Dans le deuxième cas, on pourra supposer le terme constant de $Q_k$ nul et dans le troisième cas, on pourra supposer que le terme de degré $0$ et $1$ de $Q_k$ sont nuls.
 \end{theo}
 \begin{proof}[Analyse]
-Soit  $f$ une solution de l'Eq.~\eqref{eq:Ediffk}. On définit $\fonction{g}{I}{\K}{t}{\e^{-mt}f(t)}$ alors puisque $f$ est solution, elle est deux fois dérivable et donc $g$ est dérivable deux fois. Alors 
+Soit  $f$ une solution de l'équation \eqref{eq:Ediffk}. On définit $\fonction{g}{I}{\K}{t}{\e^{-mt}f(t)}$ alors puisque $f$ est solution, elle est deux fois dérivable et donc $g$ est dérivable deux fois. Alors 
 \begin{gather}
   \forall t \in I \quad f(t)=g(t)\e^{mt}, \\ 
   \forall t \in I \quad f'(t)= (mg(t)+g'(t))\e^{mt}, \\
   \forall t \in I \quad f''(t)=(m^2g(t)+2mg'(t)+g''(t))\e^{mt}.
 \end{gather}
-La fonction $f$ est solution de l'Eq.~\eqref{eq:Ediffk} donc 
+La fonction $f$ est solution de l'équation \eqref{eq:Ediffk} donc 
 \begin{gather}
   \forall t \in I \quad af''(t)+bf'(t)+cf(t)=\e^{mt} P(t), \\
   \forall t \in I \quad  \e^{mt}(am^2g(t)+2amg'(t)+ag''(t))  \notag \\ +\e^{mt}(bmg(t)+bg'(t))+c\e^{mt}g(t)=\e^{mt}P(t), \\
@@ -482,9 +482,9 @@ La fonction $f$ est solution de l'Eq.~\eqref{eq:Ediffk} donc
 \end{gather}
 On a montré que $g$ est solution d'une équation différentielle linéaire du 2\up{nd} ordre à coefficients constants dont le 2\up{nd} membre est un polynôme. On distingue trois cas :
 \begin{enumerate}
-\item si $am^2+bm+c \neq 0$ alors il existe une solution particulière de l'Eq.~\eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de même degré que $P$. Il en existe une seule de cette forme.
-\item si $am^2+bm+c=0$ et $2am+b \neq 0$ alors il existe une solution particulière de l'Eq.~\eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de degré $deg(P)+1$.
-\item si  $am^2+bm+c=0$ et $2am+b = 0$ alors il existe une solution particulière de l'Eq.~\eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de degré $deg(P)+2$.
+\item si $am^2+bm+c \neq 0$ alors il existe une solution particulière de l'équation \eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de même degré que $P$. Il en existe une seule de cette forme.
+\item si $am^2+bm+c=0$ et $2am+b \neq 0$ alors il existe une solution particulière de l'équation \eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de degré $deg(P)+1$.
+\item si  $am^2+bm+c=0$ et $2am+b = 0$ alors il existe une solution particulière de l'équation \eqref{eq:F} sous la forme $g=Q$ où $Q$ est un polynôme de degré $deg(P)+2$.
 \end{enumerate}
 On propose de démontrer ces trois cas un par un.
 
@@ -493,7 +493,7 @@ Si $am^2+bm+c \neq 0$ on pose $P(t)=\sum_{j=0}^{n} \alpha_j t^j$ et on cherche $
 \forall t \in I \qquad g'(t)=\sum_{j=1}^n \beta_j j t^{j-1}=\sum_{j=0}^{n-1} \beta_{j+1} t^j; \\
 \forall t \in I \qquad g''(t)=\sum_{k=0}^{n-2} \beta_{k+2} (k+2)(k+1) t^k.
 \end{gather}
- Ainsi $g$ est solution de l'Eq.~\eqref{eq:F} si et seulement si 
+ Ainsi $g$ est solution de l'équation \eqref{eq:F} si et seulement si 
   \begin{align}
     \forall t \in I \quad  a \sum_{j=0}^{n-2} \beta_{j+2} (j+2)(j+1)t^j+ (2am+b) \sum_{j=0}^{n-1} \beta_{j-1}(j+1)t^j \notag \\
       + (am^2+bm+c)\sum_{j=0}^{n} \beta_j t^j  =  \sum_{j=0}^{n} \alpha_j t^j,
@@ -528,7 +528,7 @@ Comme $g_k$ est solution alors elle est deux fois dérivable et donc $f_k$ est d
   \begin{equation}
     \forall t \in I \ af_k''(t)+bf_k'(t)+cf_k(t)=\e^{m_k t} P_k(t)
   \end{equation}
-La somme $f=\sum_{k=1}^n f_k$ est une solution particulière de l'Eq.~\eqref{eq:Ediff4} d'après le principe de superposition.
+La somme $f=\sum_{k=1}^n f_k$ est une solution particulière de l'équation \eqref{eq:Ediff4} d'après le principe de superposition.
 \end{proof}
 %
 Cette méthode permet également de trouver des solutions particulières pour les seconds membres de la forme
@@ -541,7 +541,7 @@ grâce au passage aux exponentielles complexes.
 Soient $(t_0,y_0,y'_0) \in I \times \K^2$, $(a,b,c) \in \K^{*} \times \K^2$ et $d: I \longmapsto \K$ une fonction exponentielle polynôme. Alors l'équation différentielle $ay''+by'+cy=d(t)$ admet une unique solution qui satisfait les conditions initiales $ \left\{~\begin{array}{l} y(t_0)=y_0 \\ y'(t_0)=y'_0 \end{array}\right.$.
 \end{theo}
 \begin{proof}
-On considère $\K=\C$ pour simplifier les notations. Soit $f_0$ une solution particulière de l'Eq.~\eqref{eq:Ediff4}~\footnote{on peut le faire car le théorème précédent montre qu'il en existe} et on divise le problème en deux cas.
+On considère $\K=\C$ pour simplifier les notations. Soit $f_0$ une solution particulière de l'équation \eqref{eq:Ediff4}~\footnote{on peut le faire car le théorème précédent montre qu'il en existe} et on divise le problème en deux cas.
 
 Le discriminant de l'équation caractéristique est non nul et soient $r_1$ et $r_2$ les racines de l'équation caractéristique. Alors une fonction $f$ est solution de l'équation différentielle si et seulement s'il existe des complexes $\mu$ et $\lambda$ tels que $\forall t \in I \ f(t)=\lambda \e^{r_1 t}+ \mu \e^{r_2 t} + f_0(t)$. Alors la suite d'équivalence est vraie~:
   \begin{align}

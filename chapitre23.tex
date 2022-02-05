@@ -15,7 +15,7 @@ Soient deux naturels non nuls $n$ et $p$, et $A \in \Mnp{n}{p}{\K}$. On note $a_
 \subsubsection{Préliminaire : multiplication de $A$ par les matrices de la base canonique}
 Soit $(j_0,h_0) \in \intervalleentier{1}{n}^2$. Notons $E_{i_0h_0} \in \Mn{n}{\K}$ la matrice dont tous les coefficients sont nuls sauf celui de la ligne $i_0$ et la colonne $h_0$ qui vaut $1$.
 
-Notons $(E'_{ij})_{1\leq i \leq n, 1\leq j \leq p}$ la base canonique de $\Mnp{n}{p}{\K}$. Alors
+Notons $(E'_{ij})_{1\leqslant i \leqslant n, 1\leqslant j \leqslant p}$ la base canonique de $\Mnp{n}{p}{\K}$. Alors
 \begin{align}
   E_{i_0h_0} A &= E_{i_0h_0} \sum_{i=1}^n \sum_{j=1}^p a_{ij} E'_{ij} \\
   &= \sum_{i=1}^n \sum_{j=1}^p a_{ij} (E_{i_0h_0}E'_{ij})\\
@@ -182,7 +182,7 @@ Voir la fiche complémentaire. Les propositions et définitions sont équivalent
       a_{n1}x_1 + \dotsb +a_{np}x_p = b_n
     \end{cases},
   \end{equation}
-  tout $p$-uplet $(x_i)_{1\leq i\leq p} \in \K^p$ qui vérifi les $n$ équations de (L). On note $E(L)$ l'ensemble des solutions de $(L)$. C'est un sous-ensemble éventuellement vide de $\K^p$.
+  tout $p$-uplet $(x_i)_{1\leqslant i\leqslant p} \in \K^p$ qui vérifi les $n$ équations de (L). On note $E(L)$ l'ensemble des solutions de $(L)$. C'est un sous-ensemble éventuellement vide de $\K^p$.
 \end{defdef}
 %
 \begin{defdef}
@@ -200,14 +200,14 @@ Voir la fiche complémentaire. Les propositions et définitions sont équivalent
 \end{equation}
 %
 \subsubsection{Traduction matricielle}
-Soient une matrice $A=(a_{ij}) \in \Mnp{n}{p}{\K}$ et un vecteur $B=(b_{i}) \in \Mnp{n}{1}{\K}$. Pour tout vecteur $X=(x_i)_{1\leq i \leq p} \in \K^p$, on a
+Soient une matrice $A=(a_{ij}) \in \Mnp{n}{p}{\K}$ et un vecteur $B=(b_{i}) \in \Mnp{n}{1}{\K}$. Pour tout vecteur $X=(x_i)_{1\leqslant i \leqslant p} \in \K^p$, on a
 \begin{align}
   X \in E(L) &\iff AX=B, \\
   X \in E(H) &\iff AX=0.
 \end{align}
 %
 \subsubsection{Traduction fonctionelle}
-Soit $u$ l'application linéaire canoniquement associée à $A$, $u \in \Lin{\K^p}{\K^n}$. On note $b \in \K^p$ le vecteur de coordonnées $(b_1, \ldots, b_n)$ dans la base canonique. Pour tout vecteur $x=(x_i)_{1\leq i \leq p} \in \K^p$, on a
+Soit $u$ l'application linéaire canoniquement associée à $A$, $u \in \Lin{\K^p}{\K^n}$. On note $b \in \K^p$ le vecteur de coordonnées $(b_1, \ldots, b_n)$ dans la base canonique. Pour tout vecteur $x=(x_i)_{1\leqslant i \leqslant p} \in \K^p$, on a
 \begin{align}
   x \in E(L) &\iff u(x)=B, \\
   x \in E(H) &\iff x\in\Ker(u).

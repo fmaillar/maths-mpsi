@@ -22,7 +22,7 @@ Soient $\rho$ et $\theta$ deux applications de $I$ vers $\R$ de classe $\classe{
 
 Réciproquement, soit $f$ de $I$ vers $\R^2$ une fonction de classe $\classe{k}$ qui  ne s'annule pas sur $I$. On pose $\fonction{\rho}{I}{\R}{t}{\sqrt{f_1^2(t)+f_2^2(t)}}$, où $f=(f_1, f_2)$, et on voit qu'elle est de classe $\classe{k}$ (car $f_1$ et $f_2$ le sont) et demeure strictement positive. 
 
-On pose $g=f/\rho$, alors $g$ est de classe $\classe{k}$ et $\norme{g}=1$. En appliquant le théorème du relévement~: il existe une fonction $\theta$ de $I$ vers $\R$ de classe $\classe{k}$ telle que $g=\e^{\ii \theta}$, donc $f=\rho \e^{\ii \theta}$.
+On pose $g=f/\rho$, alors $g$ est de classe $\classe{k}$ et $\norme{g}=1$. En appliquant le théorème du relèvement~: il existe une fonction $\theta$ de $I$ vers $\R$ de classe $\classe{k}$ telle que $g=\e^{\ii \theta}$, donc $f=\rho \e^{\ii \theta}$.
 
 \subsection{Paramétrage admissible}
 
@@ -49,7 +49,7 @@ $\varphi$ et $\varphi^{-1}$ sont de classe $\classe{1}$ donc $\varphi$ est déri
 
 \emph{Remarque~:} On peut montrer que les points singuliers, réguliers et biréguliers sont invariants par changement de paramétrage admissibles de classe $\classe{k}$.
 
-\section{Repére de Frenet}
+\section{Repère de Frenet}
 
 Soit $(I, f)$ un arc paramétré régulier de classe $\classe{k}$ et orienté.
 
@@ -74,22 +74,22 @@ On peut aussi écrire $\vect{T}(t_0) = \lim\limits_{t \to t_0} \frac{\vect{f(t)}
 \subsection{Repère de Frenet}
 
 \begin{defdef}
-  On appelle repère de Frenet à la date $t_0$ le repère orthonormal direct $(M(t_0), \vect{T}(t_0), \vect{N}(t_0))$. Par abus de notation on appelle parfois repére de Frenet la base orthonormale directe $(\vect{T}(t_0), \vect{N}(t_0))$.
+  On appelle repère de Frenet à la date $t_0$ le repère orthonormal direct $(M(t_0), \vect{T}(t_0), \vect{N}(t_0))$. Par abus de notation on appelle parfois repère de Frenet la base orthonormale directe $(\vect{T}(t_0), \vect{N}(t_0))$.
 \end{defdef}
 
-\section{Abcisse curviligne}
+\section{Abscisse curviligne}
 
 \subsection{Définition}
 
 \begin{defdef}
-  Soit $(I, f)$ un arc paramétré de classe $\classe{k}$ régulier. On appelle abcisse curviligne toute application $s \in \R^I$ telle quepour tout $t \in I$, on a $s'(t)=\norme{f'(t)}$.
+  Soit $(I, f)$ un arc paramétré de classe $\classe{k}$ régulier. On appelle abscisse curviligne toute application $s \in \R^I$ telle que pour tout $t \in I$, on a $s'(t)=\norme{f'(t)}$.
 \end{defdef}
 
-Par hypothèse, l'application $f'$ est continue et ne s'annule pas. Alors la fonction $s'$ est continue strictement positive. Les abcisses curvilignes sont de la forme
+Par hypothèse, l'application $f'$ est continue et ne s'annule pas. Alors la fonction $s'$ est continue strictement positive. Les abscisses curvilignes sont de la forme
 \begin{equation}
   \fonction{s}{I}{\R}{t}{s_0 + \int_{t_0}^t \norme{f'(u)}\diff u \quad (s_0, t_0) \in \R \times I}.
 \end{equation}
-Si $s_0=0$, on dira que l'origine des dates est prise en $t_0$. Les abcisses curvilignes différent d'une constantes. On en déduit que pour toutes dates $t_1$ et $t_2$ on a
+Si $s_0=0$, on dira que l'origine des dates est prise en $t_0$. Les abscisses curvilignes différent d'une constantes. On en déduit que pour toutes dates $t_1$ et $t_2$ on a
 \begin{equation}
   s(t_2)-s(t_1) = \int_{t_1}^{t_2} \norme{f'(t)}\diff t.
 \end{equation}
@@ -97,21 +97,21 @@ Si $s_0=0$, on dira que l'origine des dates est prise en $t_0$. Les abcisses cur
 \subsection{Propriétés}
 
 \begin{theo}
-  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s \in \R^I$ une abcisse curviligne de $(I, f)$. Alors $s$ induit un changement de paramétrage admissible de classe $\classe{k}$ strictement croissant.
+  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s \in \R^I$ une abscisse curviligne de $(I, f)$. Alors $s$ induit un changement de paramétrage admissible de classe $\classe{k}$ strictement croissant.
 \end{theo}
 \begin{proof}
   Soit $J=s(I)$. Par définition, $s$ est dérivable et pour tout instant $t \in I$, on a $s'(t)=\norme{f'(t)}>0$. La fonction $s$ est continue, strictement croissante et $I$ sur $J$. Donc $s$ induit une bijection de $I$ sur $J$. La fonction $s$ est de classe $\classe{k}$ et comme $s'$ ne s'annule pas, $s^{-1}$ est aussi de classe $\classe{k}$. Finalement $s$ est un changement de paramétrage admissible strictement croissant.
 \end{proof}
 
 \begin{corth}
-  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s$ une abcisse curviligne de l'arc $(I,f)$. Alors $(s(I), f\circ s^{-1})$ définit un paramétrage admissible de classe $\classe{k}$ de $(I, f)$ de même orientation. 
+  Soit $(I,f)$ un arc paramétré de classe $\classe{k}$ régulier et orienté. Soit $s$ une abscisse curviligne de l'arc $(I,f)$. Alors $(s(I), f\circ s^{-1})$ définit un paramétrage admissible de classe $\classe{k}$ de $(I, f)$ de même orientation. 
 
-Ce paramétrage s'appelle paramétrage par l'abcisse curviligne.
+Ce paramétrage s'appelle paramétrage par l'abscisse curviligne.
 \end{corth}
 
 \subsection{Formulaire}
 
-On déduit des calculs d'abcisses curvilignes effectués précedemment les formules suivantes.
+On déduit des calculs d'abscisses curvilignes effectués précédemment les formules suivantes.
 \begin{itemize}
 \item Si l'arc est régulier et représenté paramétriquement par $(I, f)$ avec $f=(x,y)$ où $x$ et $y$ sont des fonctions au moins de classe $\classe{1}$, alors pour tout $a$ et $b$ dans $I$, on a $\ell(\intervalleff{a}{b},f)=\int_a^b\sqrt{x'(t)^2+y'(t)^2}\diff t$.
 \item En particulier si la courbe est définie par une équation cartésienne de la forme $y=\varphi(x)$ avec $\varphi$ une fonction de classe $\classe{1}$ (au moins), alors pour tout $a$ et $b$ dans $I$, on a $\ell(\intervalleff{a}{b},f)=\int_a^b\sqrt{1+\varphi'(t)^2}\diff t$.
@@ -123,7 +123,7 @@ On déduit des calculs d'abcisses curvilignes effectués précedemment les formu
 
 On se place dans le plan $\R^2$ muni de la base orthonormée directe $(\vi, \vj)$. Soit $I$ un intervalle réel et $(I,f)$ un arc paramétré de classe $\classe{k}$ ($k>1$) supposé régulier et orienté. 
 
-On dispose d'une application abcisse curviligne $s$ qui induit un changement de paramétrage admissible de classe $\classe{k}$ de $I$ vers $J=s(I)$, dont on note $\varphi$ la bijection réciproque.
+On dispose d'une application abscisse curviligne $s$ qui induit un changement de paramétrage admissible de classe $\classe{k}$ de $I$ vers $J=s(I)$, dont on note $\varphi$ la bijection réciproque.
 
 L'arc $(J, g)$ avec $g=f \circ \varphi$ est un paramétrage admissible de $(I,f)$ qui à la même orientation et qui est normal.
 
@@ -134,10 +134,10 @@ L'arc $(J, g)$ avec $g=f \circ \varphi$ est un paramétrage admissible de $(I,f)
   \begin{equation}
     \vect{T}(t) = \vect{u_{\alpha(t)}} = \cos(\alpha(t)) \vi + \sin(\alpha(t)) \vj,
   \end{equation}
-  où $\vect{T}(t)$ est le vecteur unitaire tangent à la courbe à l'instant $t$. L'application $\alpha$ est l'application angualaire.
+  où $\vect{T}(t)$ est le vecteur unitaire tangent à la courbe à l'instant $t$. L'application $\alpha$ est l'application angulaire.
 \end{prop}
 \begin{proof}
-  Pour tout $t \in I$, on a $\norme{\vect{T}(t)}=1$. L'application $\fonction{\vect{T}}{I}{\R^2}{t}{\vect{T}(t)}$ est de classe $\classe{k-1}$ et par application du théorème du relévement, il existe une application $\alpha \in \classe{k-1}(I, \R)$ telle que pour tout réel $t \in I$, on a
+  Pour tout $t \in I$, on a $\norme{\vect{T}(t)}=1$. L'application $\fonction{\vect{T}}{I}{\R^2}{t}{\vect{T}(t)}$ est de classe $\classe{k-1}$ et par application du théorème du relèvement, il existe une application $\alpha \in \classe{k-1}(I, \R)$ telle que pour tout réel $t \in I$, on a
   \begin{equation}
     \vect{T}(t) = \vect{u_{\alpha(t)}} = \cos(\alpha(t)) \vi + \sin(\alpha(t)) \vj.
   \end{equation}
@@ -162,7 +162,7 @@ Ainsi
   \cos(\alpha(t)) = \frac{x'(t)}{s'(t)} \quad \sin(\alpha(t)) = \frac{y'(t)}{s'(t)}.
 \end{equation}
 
-Si l'arc, supposé réguleir, est défini par une équation polaire $r=\rho(\theta)$ avec $\rho$ une application de classe $\classe{1}$ alors pour tout $\theta \in I$
+Si l'arc, supposé régulier, est défini par une équation polaire $r=\rho(\theta)$ avec $\rho$ une application de classe $\classe{1}$ alors pour tout $\theta \in I$
 \begin{align}
   \vect{T}(t) &= \vect{f'(t)}{s'(t)} = \frac{\rho'(\theta)\vu_\theta+\rho(\theta)\vv_\theta}{\sqrt{\rho'(\theta)^2+\rho(\theta)^2}} \\
   \vect{N}(t) &= \frac{-\rho(\theta)\vv_\theta+\rho'(\theta)\vu_\theta}{\sqrt{\rho'(\theta)^2+\rho(\theta)^2}}.
@@ -173,7 +173,7 @@ En pratique, pour déterminer $\alpha(\theta)$ on commence par trouver l'angle e
 
 \subsubsection{Définition}
 
-On appelle courbure de l'arc $(I, f)$ l'application $\gamma : J=s(I) \longrightarrow \R$ définie par $\gamma=\derived{\alpha}{s}$. Plusprécisément, on dispose de~:
+On appelle courbure de l'arc $(I, f)$ l'application $\gamma : J=s(I) \longrightarrow \R$ définie par $\gamma=\derived{\alpha}{s}$. Plus précisément, on dispose de~:
 \begin{itemize}
 \item $\alpha \in \classe{k-1}(I, \R)$ ;
 \item $\fonction{s}{I}{J}{t}{s}$;

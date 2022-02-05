@@ -3,26 +3,26 @@
 \minitoc
 \minilof
 \minilot
-\section{Ensemble ordonné $(\R,\leq)$}
+\section{Ensemble ordonné $(\R,\leqslant)$}
 
 \subsection{Notion d'ordre, éléments remarquables}
 
-\subsubsection{Relation d'ordre $\leq$}
+\subsubsection{Relation d'ordre $\leqslant$}
 
-On admet l'existence d'un ensemble $\R$ dont les éléments sont appelés réels, muni d'une relation d'ordre notée $\leq$, c'est-à-dire d'une relation binaire qui est~:
+On admet l'existence d'un ensemble $\R$ dont les éléments sont appelés réels, muni d'une relation d'ordre notée $\leqslant$, c'est-à-dire d'une relation binaire qui est~:
 \begin{itemize}
-\item reflexive, $\forall a \in \R \quad a\leq a$;
-\item antisymétrique, $\forall (a,b) \in \R^2 \quad a\leq b$ et $ b\leq a \implies a=b$;
-\item transitive, $\forall (a,b,c) \in \R^2 \quad a\leq b$ et $b\leq c \implies a\leq c$.
+\item reflexive, $\forall a \in \R \quad a\leqslant a$;
+\item antisymétrique, $\forall (a,b) \in \R^2 \quad a\leqslant b$ et $ b\leqslant a \implies a=b$;
+\item transitive, $\forall (a,b,c) \in \R^2 \quad a\leqslant b$ et $b\leqslant c \implies a\leqslant c$.
 \end{itemize}
-L'ensemble $\R$ est totalement ordonné par $\leq$, c'est-à-dire que deux réels quelconques sont toujours comparables.
+L'ensemble $\R$ est totalement ordonné par $\leqslant$, c'est-à-dire que deux réels quelconques sont toujours comparables.
 
 \subsubsection{Relation d'ordre stricte $<$}
 
 \begin{defdef}
   On définit sur $\R$ une relation binaire, appelée ``ordre'' stricte et notée $<$ par~:
   \begin{equation}
-    \forall (a,b) \in \R^2 \quad x<y \iff x\leq y \text{~et~} x\neq y.
+    \forall (a,b) \in \R^2 \quad x<y \iff x\leqslant y \text{~et~} x\neq y.
   \end{equation}
 \end{defdef}
 Ce n'est pas une relation d'ordre puisqu'elle n'est pas symétrique.
@@ -32,8 +32,8 @@ Ce n'est pas une relation d'ordre puisqu'elle n'est pas symétrique.
 Soit $A$ une partie de $\R$, alors
 \begin{defdef}
   \begin{enumerate}
-  \item on appelle majorant de $A$ dans $\R$ tout élément $a$ de $\R$ tel que $\forall x \in A \ x\leq a$. On dit que $A$ est majorée si elle admet un majorant;
-  \item on appelle minorant de $A$ dans $\R$ tout élément $b$ de $\R$ tel que $\forall x \in A \ b\leq x$. On dit que $A$ est minorée si elle admet un minorant;
+  \item on appelle majorant de $A$ dans $\R$ tout élément $a$ de $\R$ tel que $\forall x \in A \ x\leqslant a$. On dit que $A$ est majorée si elle admet un majorant;
+  \item on appelle minorant de $A$ dans $\R$ tout élément $b$ de $\R$ tel que $\forall x \in A \ b\leqslant x$. On dit que $A$ est minorée si elle admet un minorant;
   \item la partie $A$ est bornée si et seulement si elle est majorée et minorée.
   \end{enumerate}
 \end{defdef}
@@ -57,19 +57,19 @@ Soit $A$ une partie de $\R$.
 \begin{theo}
   Soient $A$ une partie de $\R$ et un réel $a$, alors
   \begin{equation}
-    a=\sup A \iff \begin{cases} \forall x \in A \ x\leq a \\  \forall \epsilon >0 \ \exists x_0\in A \ a-\epsilon<x_0\end{cases}.
+    a=\sup A \iff \begin{cases} \forall x \in A \ x\leqslant a \\  \forall \epsilon >0 \ \exists x_0\in A \ a-\epsilon<x_0\end{cases}.
   \end{equation}
 \end{theo}
 \begin{proof}
   \begin{itemize}
-  \item[$\implies$] si $a=\sup A$, alors par définition $a$ majore $A$ donc pour tout $x \in A$ on a $x\leq a$ et s'il existe un $\epsilon$ positif tel que pour tout $x\in A$ $a-\epsilon\geq x$ alors $a-\epsilon$ est un majorant de $A$, or $a-\epsilon<a$ et c'est impossible puisque $a$ est le plus petit des majorants de $A$. Donc pour tout $\epsilon >0$ il existe $x_0\in A \ a-\epsilon<x_0$.
+  \item[$\implies$] si $a=\sup A$, alors par définition $a$ majore $A$ donc pour tout $x \in A$ on a $x\leqslant a$ et s'il existe un $\epsilon$ positif tel que pour tout $x\in A$ $a-\epsilon\geqslant x$ alors $a-\epsilon$ est un majorant de $A$, or $a-\epsilon<a$ et c'est impossible puisque $a$ est le plus petit des majorants de $A$. Donc pour tout $\epsilon >0$ il existe $x_0\in A \ a-\epsilon<x_0$.
   \item [$\impliedby$] Déjà $a$ est un majorant de $A$. Supposons qu'il existe un majorant $b$ qui soit plus petit que $a$. Soit $\epsilon=a-b>0$, par hypothèse il existe $x_0\in A$ tel que $x_0>a-\epsilon=b$, alors $b$ n'est pas un majorant de $A$. On arrive donc à une contradiction. Il n'existe donc pas de majorant de $A$ qui soit strictement inférieur à $a$. Le réel $a$ est donc la borne supérieure de la partie $A$.
   \end{itemize}
 \end{proof}
 \begin{theo}
   Soient $A$ une partie de $\R$ et $a$ un réel, alors
   \begin{equation}
-    a=\inf A \iff \begin{cases} \forall x \in A \ x\geq a \\  \forall \epsilon >0 \ \exists x_0\in A \ x_0<a+\epsilon\end{cases}.
+    a=\inf A \iff \begin{cases} \forall x \in A \ x\geqslant a \\  \forall \epsilon >0 \ \exists x_0\in A \ x_0<a+\epsilon\end{cases}.
   \end{equation}
 \end{theo}
 \begin{proof}
@@ -80,9 +80,9 @@ Soit $A$ une partie de $\R$.
 Alors,
 \begin{align}
   a=\inf A &\iff -a=\sup(-A)\\
-  &\iff \begin{cases} \forall x \in -A \ x\leq -a \\ \forall \epsilon>0 \ \exists x_0 \in -A \ x_0>-a-\epsilon \end{cases}\\
-  &\iff \begin{cases} \forall y \in A \ -y\leq -a \\ \forall \epsilon>0 \ \exists y_0 \in A \ -y_0>-a-\epsilon \end{cases}\\
-  &\iff \begin{cases} \forall y \in A \ y\geq a \\ \forall \epsilon>0 \ \exists y_0 \in A \ y_0<a+\epsilon \end{cases}.
+  &\iff \begin{cases} \forall x \in -A \ x\leqslant -a \\ \forall \epsilon>0 \ \exists x_0 \in -A \ x_0>-a-\epsilon \end{cases}\\
+  &\iff \begin{cases} \forall y \in A \ -y\leqslant -a \\ \forall \epsilon>0 \ \exists y_0 \in A \ -y_0>-a-\epsilon \end{cases}\\
+  &\iff \begin{cases} \forall y \in A \ y\geqslant a \\ \forall \epsilon>0 \ \exists y_0 \in A \ y_0<a+\epsilon \end{cases}.
 \end{align}
 \end{proof}
 
@@ -142,19 +142,19 @@ L'ensemble $\R$ est muni de deux lois de compositions internes, appelées additi
 \begin{prop}
   Pour tout réels $x$, $y$, et $z$ on a~:
   \begin{align}
-    x\leq y &\implies x+z\leq y+z \\
-    \begin{cases} x\leq y \\ 0\leq z \end{cases} &\implies xz \leq yz.
+    x\leqslant y &\implies x+z\leqslant y+z \\
+    \begin{cases} x\leqslant y \\ 0\leqslant z \end{cases} &\implies xz \leqslant yz.
   \end{align}
-On dit que $(R,+,\times)$ muni de la relation d'ordre $\leq$ est un corps totalement ordonné. La multiplication d'une inégalité par un nombre négatif change le sens de cette inégalité.
+On dit que $(R,+,\times)$ muni de la relation d'ordre $\leqslant$ est un corps totalement ordonné. La multiplication d'une inégalité par un nombre négatif change le sens de cette inégalité.
 \end{prop}
 \begin{enumerate}
 \item Pour tous réels $x$, $y$, $z$ et $t$ on a~:
   \begin{equation}
-    \begin{cases}x\leq y \\ z \leq t \end{cases} \implies x+z\leq y+t;
+    \begin{cases}x\leqslant y \\ z \leqslant t \end{cases} \implies x+z\leqslant y+t;
   \end{equation}
 \item pour tous réels $x$, $y$, $z$ et $t$ on a~:
   \begin{equation}
-    \begin{cases}0\leq x\leq y \\ 0 \leq z \leq t \end{cases} \implies 0\leq xz \leq yt;
+    \begin{cases}0\leqslant x\leqslant y \\ 0 \leqslant z \leqslant t \end{cases} \implies 0\leqslant xz \leqslant yt;
   \end{equation}
 \item pour tout réel $x$ on a~:
   \begin{equation}
@@ -162,7 +162,7 @@ On dit que $(R,+,\times)$ muni de la relation d'ordre $\leq$ est un corps totale
   \end{equation}
 \item pour tous réels $x$ et $y$ on a~:
   \begin{equation}
-    0<x\leq y \iff 0<\frac{1}{y}\leq \frac{1}{x}.
+    0<x\leqslant y \iff 0<\frac{1}{y}\leqslant \frac{1}{x}.
   \end{equation}
 \end{enumerate}
 
@@ -171,19 +171,19 @@ On dit que $(R,+,\times)$ muni de la relation d'ordre $\leq$ est un corps totale
 \begin{defdef}
   Pour tout réel $x$ on définit un réel appelé valeur absolue de $x$ noté $\abs{x}$ par
   \begin{equation}
-    \abs{x}=\begin{cases} x & \text{si } x\geq 0 \\ -x & \text{si } x<0\end{cases},
+    \abs{x}=\begin{cases} x & \text{si } x\geqslant 0 \\ -x & \text{si } x<0\end{cases},
   \end{equation}
 ou encore $\abs{x}=\max(x,-x)$.
 \end{defdef}
 \begin{prop}
   Pour tout réel $x$
   \begin{gather}
-    \abs{x}\geq 0 \\
+    \abs{x}\geqslant 0 \\
     \abs{x}=0 \iff x=0.
   \end{gather}
 \end{prop}
 \begin{proof}
-  si $x\geq 0$ alors $\abs{x}=x\geq 0$ et $\abs{x}=0 \iff x=0$. Sinon si $x<0$ alors $\abs{x}=-x>0$ donc $\abs{x}\geq 0$ et $\abs{x}\neq 0$.
+  si $x\geqslant 0$ alors $\abs{x}=x\geqslant 0$ et $\abs{x}=0 \iff x=0$. Sinon si $x<0$ alors $\abs{x}=-x>0$ donc $\abs{x}\geqslant 0$ et $\abs{x}\neq 0$.
 \end{proof}
 \begin{prop}
   Pour tous réels $x$ et $y$ et tout réel non nul $z$, on a~:
@@ -195,7 +195,7 @@ ou encore $\abs{x}=\max(x,-x)$.
 \begin{prop}[Inégalité triangulaire]
   Soient $x$ et $y$ deux réels, alors
   \begin{equation}
-    \abs{\abs{x}-\abs{y}}\leq \abs{x+y} \leq \abs{x}+\abs{y}.
+    \abs{\abs{x}-\abs{y}}\leqslant \abs{x+y} \leqslant \abs{x}+\abs{y}.
   \end{equation}
 \end{prop}
 \begin{proof}
@@ -203,13 +203,13 @@ ou encore $\abs{x}=\max(x,-x)$.
   \begin{align}
     (\abs{x}+\abs{y})^2-\abs{x+y}^2 &=\abs{x}^2+\abs{y}^2+2\abs{xy}-(x+y)^2\\
     &=x^2+y^2+2\abs{xy}-x^2-y^2-2xy\\
-    &=2(\abs{xy}-xy)\geq 0.
+    &=2(\abs{xy}-xy)\geqslant 0.
   \end{align}
-Donc $\abs{x+y}^2\leq (\abs{x}+\abs{y})^2$ et puisque les deux membres sont positifs $\abs{x+y}\leq \abs{x}+\abs{y}$. D'autre part,
+Donc $\abs{x+y}^2\leqslant (\abs{x}+\abs{y})^2$ et puisque les deux membres sont positifs $\abs{x+y}\leqslant \abs{x}+\abs{y}$. D'autre part,
 \begin{equation}
-  \abs{x}=\abs{x+y-y}\leq \abs{x+y}+\abs{y}.
+  \abs{x}=\abs{x+y-y}\leqslant \abs{x+y}+\abs{y}.
 \end{equation}
-Donc $\abs{x}-\abs{y}\leq \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ on complète en écrivant $\abs{\abs{x}-\abs{y}}\leq \abs{x+y}$.
+Donc $\abs{x}-\abs{y}\leqslant \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ on complète en écrivant $\abs{\abs{x}-\abs{y}}\leqslant \abs{x+y}$.
 \end{proof}
 \begin{defdef}
   Soit une application $d:\R\times\R\longmapsto \R$ appelée distance définie comme suit~:
@@ -220,10 +220,10 @@ Donc $\abs{x}-\abs{y}\leq \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ o
 \begin{prop}
   $d$ est une distance sur $\R$, c'est-à-dire que pour tout réels $x$, $y$ et $z$ on a
   \begin{enumerate}
-  \item $d(x,y)\geq 0$, positivité;
+  \item $d(x,y)\geqslant 0$, positivité;
   \item $d(x,y)=0 \iff x=y$, séparation;
   \item $d(x,y)=d(y,x)$, symétrie;
-  \item $d(x,y)\leq d(x,z)+d(z,y)$, inégalité triangulaire.
+  \item $d(x,y)\leqslant d(x,z)+d(z,y)$, inégalité triangulaire.
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -236,7 +236,7 @@ Donc $\abs{x}-\abs{y}\leq \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ o
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si d'une part $x\geq y$ alors $\abs{x-y}=x-y$ et donc $\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2x}{2}=x$ et $\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2y}{2}=y$. Si d'autre part $x\leq y$ alors $\abs{x-y}=y-x$ et donc $\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2y}{2}=y$ et $\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2x}{2}=x$.
+  Si d'une part $x\geqslant y$ alors $\abs{x-y}=x-y$ et donc $\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2x}{2}=x$ et $\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2y}{2}=y$. Si d'autre part $x\leqslant y$ alors $\abs{x-y}=y-x$ et donc $\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2y}{2}=y$ et $\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2x}{2}=x$.
 \end{proof}
 \begin{defdef}
   Pour tout réel $x$, on note $x^+=\max(x,0)$ et $x^-=\max(-x,0)$.
@@ -254,17 +254,17 @@ Donc $\abs{x}-\abs{y}\leq \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ o
 \begin{prop}
   Pour tous réels $x$ et $y$ et tout réel $h>0$
   \begin{align}
-    \abs{x-y}\leq h \iff & -h \leq x-y \leq h\\
-    &\iff y-h \leq x \leq y+h
+    \abs{x-y}\leqslant h \iff & -h \leqslant x-y \leqslant h\\
+    &\iff y-h \leqslant x \leqslant y+h
   \end{align}
 \end{prop}
 \begin{prop}
-  Soit $A$ une partie de $\R$, alors $A$ est bornée si et seulement s'il existe un réel $M\geq 0$ tel que pour tout élément $a$ de $A$ on a $\abs{a}\leq M$.
+  Soit $A$ une partie de $\R$, alors $A$ est bornée si et seulement s'il existe un réel $M\geqslant 0$ tel que pour tout élément $a$ de $A$ on a $\abs{a}\leqslant M$.
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[$\impliedby$] Supposons qu'il existe un réel $M$ positif tel que pour tout élément $a$ de $A$ on ait $\abs{a}\leq M$. Alors $-M\leq a\leq M$ donc $-M$ est un minorant de $A$ et $M$ en est un majorant. Ainsi $A$ est bornée.
-  \item[$\implies$] Supposons que $A$ soit bornée, c'est-à-dire majorée et minorée, alors il existe deux réels $m_1$ et $m_2$ tels que pour tout élément $a$ de $A$ on ait $m_1\leq a\leq m_2$. Si on pose $M=\max(m_2,-m_1,0)$ alors $\abs{a}\leq M$.
+  \item[$\impliedby$] Supposons qu'il existe un réel $M$ positif tel que pour tout élément $a$ de $A$ on ait $\abs{a}\leqslant M$. Alors $-M\leqslant a\leqslant M$ donc $-M$ est un minorant de $A$ et $M$ en est un majorant. Ainsi $A$ est bornée.
+  \item[$\implies$] Supposons que $A$ soit bornée, c'est-à-dire majorée et minorée, alors il existe deux réels $m_1$ et $m_2$ tels que pour tout élément $a$ de $A$ on ait $m_1\leqslant a\leqslant m_2$. Si on pose $M=\max(m_2,-m_1,0)$ alors $\abs{a}\leqslant M$.
   \end{itemize}
 \end{proof}
 
@@ -273,9 +273,9 @@ Donc $\abs{x}-\abs{y}\leq \abs{x+y}$ et par symétrie des rôles de $x$ et $y$ o
 \begin{defdef}
   On adjoint à $\R$ deux éléments distincts notés $+\infty$ et $-\infty$ et on note $\bar{\R}=\R\cup\{+\infty\}\cup\{-\infty\}$. $\bar{\R}$ est la droite numérique achevée. 
 \end{defdef}
-On prolonge la relation d'ordre $\leq$ définie sur $\R$ à $\bar{\R}$ en posant
+On prolonge la relation d'ordre $\leqslant$ définie sur $\R$ à $\bar{\R}$ en posant
 \begin{equation}
-  \forall x\in \bar{\R} \quad -\infty\leq x\leq +\infty.
+  \forall x\in \bar{\R} \quad -\infty\leqslant x\leqslant +\infty.
 \end{equation}
 Le plus petit (grand) élément de $\bar{\R}$ est $-\infty$ ($+\infty$). On prolonge aussi partiellement les lois $\times$ et $+$ à $\bar{\R}$.
 \begin{table}[!h]
@@ -307,13 +307,13 @@ Le plus petit (grand) élément de $\bar{\R}$ est $-\infty$ ($+\infty$). On prol
   Soient deux réels, $a$ et $b$ tels que $a<b$, les intervalles de $\R$ sont les parties suivantes~:
   \begin{itemize}
   \item $\R=\intervalleoo{-\infty}{+\infty}$;
-  \item $\intervalleff{a}{b}=\enstq{x \in \R}{a\leq x \leq b}$ segment;
-  \item $\intervallefo{a}{b}=\enstq{x \in \R}{a\leq x < b}$ intervalle semi-ouvert ou semi-fermé;
-  \item $\intervalleof{a}{b}=\enstq{x \in \R}{a< x \leq b}$ idem;
+  \item $\intervalleff{a}{b}=\enstq{x \in \R}{a\leqslant x \leqslant b}$ segment;
+  \item $\intervallefo{a}{b}=\enstq{x \in \R}{a\leqslant x < b}$ intervalle semi-ouvert ou semi-fermé;
+  \item $\intervalleof{a}{b}=\enstq{x \in \R}{a< x \leqslant b}$ idem;
   \item $\intervalleoo{a}{b}=\enstq{x \in \R}{a< x < b}$ intervalle ouvert;
-  \item $\intervallefo{a}{+\infty}=\enstq{x \in \R}{a\leq x}$ demi-droite fermée;
+  \item $\intervallefo{a}{+\infty}=\enstq{x \in \R}{a\leqslant x}$ demi-droite fermée;
   \item $\intervalleoo{a}{+\infty}=\enstq{x \in \R}{a< x}$ demi-droite ouverte;
-  \item $\intervalleof{-\infty}{b}=\enstq{x \in \R}{x \leq b}$ demi-droite fermée;
+  \item $\intervalleof{-\infty}{b}=\enstq{x \in \R}{x \leqslant b}$ demi-droite fermée;
   \item $\intervalleoo{-\infty}{b}=\enstq{x \in \R}{x <b}$ demi-droite ouverte;
   \end{itemize}
 \end{defdef}
@@ -332,7 +332,7 @@ On note que l'ensemble vide est aussi un intervalle $\emptyset=\intervalleoo{a}{
 \begin{defdef}
   Soit $A$ une partie de $\R$. On dit que $A$ est convexe si et seulement si
   \begin{equation}
-    \forall (x,y) \in A^2 \quad x\leq y \implies \intervalleff{x}{y}\subset A.
+    \forall (x,y) \in A^2 \quad x\leqslant y \implies \intervalleff{x}{y}\subset A.
   \end{equation}
 \end{defdef}
 \begin{theo}
@@ -340,11 +340,11 @@ On note que l'ensemble vide est aussi un intervalle $\emptyset=\intervalleoo{a}{
   Soit $I$ une partie de $\R$, alors si $I$ est un intervalle alors $I$ est convexe.
 \end{theo}
 \begin{proof}
-  Soient $a$ et $b$ deux réels tels que $a\leq b$, alors
+  Soient $a$ et $b$ deux réels tels que $a\leqslant b$, alors
   \begin{itemize}
-  \item $\R$ est convexe, puisque pour tout réels $x$ et $y$, si $x\leq y$ alors $[x,y]\subset \R$;
-  \item $\intervalleff{a}{b}$ est convexe puisque pour tous réels $x$ et $y$ de $\intervalleff{a}{b}$ si $a\leq x\leq y\leq b$ alors $\intervalleff{x}{y}\subset \intervalleff{a}{b}$. Idem pour les intervalles semi-ouverts et semi-fermés;
-  \item $\intervallefo{a}{+\infty}$ est convexe, puisque pour tous réels $x$ et $y$ de $\intervallefo{a}{+\infty}$ tels que $a\leq x\leq y$ $\intervalleff{x}{y}\subset \intervallefo{a}{+\infty}$. Idem pour les autres demi-droites.
+  \item $\R$ est convexe, puisque pour tout réels $x$ et $y$, si $x\leqslant y$ alors $[x,y]\subset \R$;
+  \item $\intervalleff{a}{b}$ est convexe puisque pour tous réels $x$ et $y$ de $\intervalleff{a}{b}$ si $a\leqslant x\leqslant y\leqslant b$ alors $\intervalleff{x}{y}\subset \intervalleff{a}{b}$. Idem pour les intervalles semi-ouverts et semi-fermés;
+  \item $\intervallefo{a}{+\infty}$ est convexe, puisque pour tous réels $x$ et $y$ de $\intervallefo{a}{+\infty}$ tels que $a\leqslant x\leqslant y$ $\intervalleff{x}{y}\subset \intervallefo{a}{+\infty}$. Idem pour les autres demi-droites.
   \end{itemize}
 \end{proof}
 
@@ -375,14 +375,14 @@ On note que l'ensemble vide est aussi un intervalle $\emptyset=\intervalleoo{a}{
     \begin{itemize}
     \item Si $D_a$ n'est pas majoré, on va montrer que $D_a=\intervallefo{a}{+\infty}$.
       \begin{equation}
-        \forall M \geq a \ \exists b \in D_a \quad b\geq M.
+        \forall M \geqslant a \ \exists b \in D_a \quad b\geqslant M.
       \end{equation}
-      Donc $b\in \intervallefo{a}{+\infty}$ et $b\in I$. On note que $\intervalleff{a}{b}\subset \intervallefo{a}{+\infty}$. Comme I est convexe et que $a,b \in I \ a \leq b$ alors $\intervalleff{a}{b}\subset I$ et $M\in \intervalleff{a}{b} \subset D_a$. On a donc montré que $\intervallefo{a}{+\infty} \subset D_a$ et par définition de $D_a$ l'inclusion réciproque est triviale donc $D_a=\intervallefo{a}{+\infty}$.
+      Donc $b\in \intervallefo{a}{+\infty}$ et $b\in I$. On note que $\intervalleff{a}{b}\subset \intervallefo{a}{+\infty}$. Comme I est convexe et que $a,b \in I \ a \leqslant b$ alors $\intervalleff{a}{b}\subset I$ et $M\in \intervalleff{a}{b} \subset D_a$. On a donc montré que $\intervallefo{a}{+\infty} \subset D_a$ et par définition de $D_a$ l'inclusion réciproque est triviale donc $D_a=\intervallefo{a}{+\infty}$.
     \item Si $D_a$ est majorée et non vide (puisque $a\in D_a$) alors $D_a$ admet une borne supérieure notée $b$. la borne supérieure $b$ est un majorant de $D_a$ donc $D_a \subset \intervalleff{a}{b}$. D'après la caractérisation de la borne supérieure
       \begin{equation}
-        \forall \epsilon >0 \ \exists x_0 \in D_a \ b-\epsilon < x_0\leq b.
+        \forall \epsilon >0 \ \exists x_0 \in D_a \ b-\epsilon < x_0\leqslant b.
       \end{equation}
-      Soit $x\in \intervallefo{a}{b}$, on pose $\epsilon=b-x>0$. Il existe un $x_0\in D_a$ tel que $b-\epsilon<x_0 \leq b$, qui est équivalent à ce que pour tout $x\in[a,b[$ il existe un $x_0\in D_a$ tel que $x<x_0 \leq b$. Comme $\intervalleff{a}{x_0}\subset \intervallefo{a}{+\infty}$ et $\intervalleff{a}{x_0}\subset I$ (car $a,x_0 \in I$ et I est convexe). Alors $\intervalleff{a}{x_0} \subset D_a$. Comme $a\leq x < x_0\leq b$ alors $x\in \intervalleff{a}{x_0}\subset D_a$. Finalement $\intervallefo{a}{b}\subset D_a \subset \intervalleff{a}{b}$, alors $D_a=\intervallefo{a}{b}$ ou $D_a=\intervalleff{a}{b}$.
+      Soit $x\in \intervallefo{a}{b}$, on pose $\epsilon=b-x>0$. Il existe un $x_0\in D_a$ tel que $b-\epsilon<x_0 \leqslant b$, qui est équivalent à ce que pour tout $x\in[a,b[$ il existe un $x_0\in D_a$ tel que $x<x_0 \leqslant b$. Comme $\intervalleff{a}{x_0}\subset \intervallefo{a}{+\infty}$ et $\intervalleff{a}{x_0}\subset I$ (car $a,x_0 \in I$ et I est convexe). Alors $\intervalleff{a}{x_0} \subset D_a$. Comme $a\leqslant x < x_0\leqslant b$ alors $x\in \intervalleff{a}{x_0}\subset D_a$. Finalement $\intervallefo{a}{b}\subset D_a \subset \intervalleff{a}{b}$, alors $D_a=\intervallefo{a}{b}$ ou $D_a=\intervalleff{a}{b}$.
     \end{itemize}
     De la même manière, on peut montrer que soit $G_a=\intervalleof{-\infty}{a}$, soit $G_a=\intervalleff{c}{a}$, soit $G_a=\intervalleof{c}{a}$.
   \end{itemize}
@@ -393,22 +393,22 @@ On note que l'ensemble vide est aussi un intervalle $\emptyset=\intervalleoo{a}{
 \begin{prop}
   Le corps des réels $\R$ est archimédien, c'est-à-dire
   \begin{equation}
-    \forall x>0 \ \forall y\in \R \ \exists n\in \N \quad nx\geq y.
+    \forall x>0 \ \forall y\in \R \ \exists n\in \N \quad nx\geqslant y.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On peut démontrer ce résultat par l'absurde. Supposons qu'il existe un réel $x>0$ et un réel $y$ et que pour tout entier naturel $n$ on ait $nx<y$. Soit $A=\enstq{nx}{n\in \N}$, alors $A$ est non vide (car $0\in A$) et majorée par $y$ d'après l'hypothèse. La partie $A$ admet donc une borne supérieure noté $S$. Soit un naturel $n$, alors $(n+1)x \in A$ donc $(n+1)x\leq S$ donc $nx \leq S-x$. Ceci montre que $S-x$ est un majorant de $A$, or $S-x<S$ puisque $x>0$ et $S$ est censé être le plus grand des majorants de $A$. On aboutit donc à une contradiction. L'hypothèse de départ est fausse.
+  On peut démontrer ce résultat par l'absurde. Supposons qu'il existe un réel $x>0$ et un réel $y$ et que pour tout entier naturel $n$ on ait $nx<y$. Soit $A=\enstq{nx}{n\in \N}$, alors $A$ est non vide (car $0\in A$) et majorée par $y$ d'après l'hypothèse. La partie $A$ admet donc une borne supérieure noté $S$. Soit un naturel $n$, alors $(n+1)x \in A$ donc $(n+1)x\leqslant S$ donc $nx \leqslant S-x$. Ceci montre que $S-x$ est un majorant de $A$, or $S-x<S$ puisque $x>0$ et $S$ est censé être le plus grand des majorants de $A$. On aboutit donc à une contradiction. L'hypothèse de départ est fausse.
 \end{proof}
 
 \subsection{Partie entière d'un réel}\index{partie entiere}
 
 \begin{prop}
-  Pour tout réel $x$, il existe un unique entier $n$ relatif, tel que $n\leq x<n+1$, c'est la partie entière de $x$ et on la note $E(x)$.
+  Pour tout réel $x$, il existe un unique entier $n$ relatif, tel que $n\leqslant x<n+1$, c'est la partie entière de $x$ et on la note $E(x)$.
 \end{prop}
 \begin{proof}[Unicité]
   Soient deux entiers relatifs $n$ et $m$ tels que $E(x)=m=n$, alors
   \begin{align}
-    n\leq x< n+1 \\  m\leq x< m+1.
+    n\leqslant x< n+1 \\  m\leqslant x< m+1.
   \end{align}
   Alors
   \begin{align}
@@ -417,7 +417,7 @@ On note que l'ensemble vide est aussi un intervalle $\emptyset=\intervalleoo{a}{
   et donc $-1<n-m<1$ et comme c'est un entier, forcément $m=n$.
 \end{proof}
 \begin{proof}[Existence]
-  Le corps $\R$ est archimédien, il existe donc deux naturels $n$ et $m$ tels ques $x\leq n$ et  $-x\leq m$. Soit la partie $A=\enstq{k \in \Z}{k\leq x}$, alors $A$ est majorée par $n$ et non vide puisque $-m\in A$. $A$ est une partie de $\Z$ non vide et majorée, elle admet donc un plus grand élément noté $n_0$. Alors $n_0\in \Z$ et $n_0\leq x$. Puisque $n_0$ est le plus grand élément de $A$, $n_0+1$ n'est pas dans $A$. donc $n_0+1>x$. Au final $n_0$ est la partie entière de $x$ : $n_0\leq x<n_0+1$.
+  Le corps $\R$ est archimédien, il existe donc deux naturels $n$ et $m$ tels ques $x\leqslant n$ et  $-x\leqslant m$. Soit la partie $A=\enstq{k \in \Z}{k\leqslant x}$, alors $A$ est majorée par $n$ et non vide puisque $-m\in A$. $A$ est une partie de $\Z$ non vide et majorée, elle admet donc un plus grand élément noté $n_0$. Alors $n_0\in \Z$ et $n_0\leqslant x$. Puisque $n_0$ est le plus grand élément de $A$, $n_0+1$ n'est pas dans $A$. donc $n_0+1>x$. Au final $n_0$ est la partie entière de $x$ : $n_0\leqslant x<n_0+1$.
 \end{proof}
 
 \subsection{Ensembles $\Q$ et $\R\setminus\Q$}
@@ -459,5 +459,5 @@ La conséquence est que ces deux ensembles sont infinis.
   Les ensembles $\Q$ et $\R\setminus\Q$ sont denses dans $\R$.
 \end{theo}
 \begin{proof}
-  D'après la définition de la densité, il faut montrer que pour tout couple de réels $(x,y)$ avec $x<y$ il existe un rationnel $a$ qui soit dans $\intervalleff{x}{y}$ et un irrationnel $b$ qui soit aussi dans $\intervalleff{x}{y}$. Montrons d'abord la densité de $\Q$. Soit le rationnel $q=E\left(\frac{1}{y-x}\right)+1$, donc $0<\frac{1}{q}<y-x$. Soit $p=E(qx)$, alors $p\leq qx<p+1$ et donc $\frac{p}{q}\leq x <\frac{p+1}{q}$. Donc $x<\frac{p}{q}+\frac{1}{q}<x+y-x$. Finalement $x<\frac{p+1}{q}<y$, donc $\frac{p+1}{q}$ est le rationnel recherché, ce qui prouve que $\Q$ est dense dans $\R$. Montrons la densité de $\R\setminus\Q$. Comme $\Q$ est dense dans $\R$, il existe un rationnel $r$ tel que $x+\sqrt{2}<r<y+\sqrt{2}$ et $r-\sqrt{2}\in\R\setminus\Q$ avec $x<r-\sqrt{2}<y$, on montre que  $\R\setminus\Q$ est dense dans $\R$.
+  D'après la définition de la densité, il faut montrer que pour tout couple de réels $(x,y)$ avec $x<y$ il existe un rationnel $a$ qui soit dans $\intervalleff{x}{y}$ et un irrationnel $b$ qui soit aussi dans $\intervalleff{x}{y}$. Montrons d'abord la densité de $\Q$. Soit le rationnel $q=E\left(\frac{1}{y-x}\right)+1$, donc $0<\frac{1}{q}<y-x$. Soit $p=E(qx)$, alors $p\leqslant qx<p+1$ et donc $\frac{p}{q}\leqslant x <\frac{p+1}{q}$. Donc $x<\frac{p}{q}+\frac{1}{q}<x+y-x$. Finalement $x<\frac{p+1}{q}<y$, donc $\frac{p+1}{q}$ est le rationnel recherché, ce qui prouve que $\Q$ est dense dans $\R$. Montrons la densité de $\R\setminus\Q$. Comme $\Q$ est dense dans $\R$, il existe un rationnel $r$ tel que $x+\sqrt{2}<r<y+\sqrt{2}$ et $r-\sqrt{2}\in\R\setminus\Q$ avec $x<r-\sqrt{2}<y$, on montre que  $\R\setminus\Q$ est dense dans $\R$.
 \end{proof}
