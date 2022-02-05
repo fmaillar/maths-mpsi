@@ -4,169 +4,169 @@
 \minilof
 \minilot
 
-Dans tout le chapitre $\K$ désigne un corps, en général $\K=\R$ ou $\C$.
+Dans tout le chapitre \(\K\) désigne un corps, en général \(\K=\R\) ou \(\C\).
 
-\section{Ensemble des polynômes à coefficients dans $\K$}
+\section{Ensemble des polynômes à coefficients dans \(\K\)}
 
 \subsection{Notion de polynôme}
 
 \begin{defdef}
-  On appelle polynôme à une indéterminée à coefficients dans $\K$ toute suite d'éléments de $\K$ nulle à partir d'un certain rang.
+  On appelle polynôme à une indéterminée à coefficients dans \(\K\) toute suite d'éléments de \(\K\) nulle à partir d'un certain rang.
 \end{defdef}
 
-Si $A=(a_n)_{n \in \N}$ est un polynôme, il existe $k \in \N$ tel que pour tout naturel $n$, $n >k$ alors $a_n=0$. On note
+Si \(A=(a_n)_{n \in \N}\) est un polynôme, il existe \(k \in \N\) tel que pour tout naturel \(n\), \(n >k\) alors \(a_n=0\). On note
 \begin{equation}
   A = (a_0, a_1, \ldots, a_k, 0, \ldots).
 \end{equation}
-Les éléments $a_0, \ldots, a_k$ sont appelés les coefficients du polynôme $A$. La suite constante nulle est un polynôme appelé le polynôme nul.
+Les éléments \(a_0, \ldots, a_k\) sont appelés les coefficients du polynôme \(A\). La suite constante nulle est un polynôme appelé le polynôme nul.
 
 On appelle polynôme constants les suites de la forme
 \begin{equation}
   (\lambda, 0, 0, \ldots) \quad (\lambda \in \K).
 \end{equation}
-Autrement dit $A=(a_n)_{n \in \N}$ est un polynôme constant si, et seulement si, pour tout entier $n>1$ $a_n=0$.
+Autrement dit \(A=(a_n)_{n \in \N}\) est un polynôme constant si, et seulement si, pour tout entier \(n>1\) \(a_n=0\).
 
-On appelle monômes, les polynômes $A=(a_n)_{n \in \N}$ tels qu'il existe un naturel $n_0$ tel que pour tout $n$, si $n \neq n_0$ alors $a_n=0$. C'est-à-dire que $A$ est de la forme : $A=(0, 0, \ldots, 0,\lambda,0, \ldots, 0)$ avec $\lambda \in \K$.
+On appelle monômes, les polynômes \(A=(a_n)_{n \in \N}\) tels qu'il existe un naturel \(n_0\) tel que pour tout \(n\), si \(n \neq n_0\) alors \(a_n=0\). C'est-à-dire que \(A\) est de la forme : \(A=(0, 0, \ldots, 0,\lambda,0, \ldots, 0)\) avec \(\lambda \in \K\).
 
-Soit un polynôme $A=(a_n)_{n \in \N}$, on dit que $A$ est pair (resp.\ impair) si et seulement si ses coefficients d'indice impairs (resp.\ pairs) sont nuls.
+Soit un polynôme \(A=(a_n)_{n \in \N}\), on dit que \(A\) est pair (resp.\ impair) si et seulement si ses coefficients d'indice impairs (resp.\ pairs) sont nuls.
 
-On note $\K[X]$ l'ensemble des polynômes à une indéterminée à coefficients dans $\K$.
+On note \(\K[X]\) l'ensemble des polynômes à une indéterminée à coefficients dans \(\K\).
 
 \subsection{Degré d'un polynôme}
 
-Soit $A=(a_n)_{n \in \N}$ un polynôme non nul. Soit $\courbe = \enstq{k \in \N}{a_k \neq 0}$. C'est une partie de $\N$ non vide (puisque $A$ est non nul) et majorée (les termes s'annulent à partir d'un certain rang). Alors $\courbe$ admet un plus grand élément. On en déduit la définition suivante.
+Soit \(A=(a_n)_{n \in \N}\) un polynôme non nul. Soit \(\courbe = \enstq{k \in \N}{a_k \neq 0}\). C'est une partie de \(\N\) non vide (puisque \(A\) est non nul) et majorée (les termes s'annulent à partir d'un certain rang). Alors \(\courbe\) admet un plus grand élément. On en déduit la définition suivante.
 
 \begin{defdef}
-  Soit $A=(a_n)_{n \in \N}$ un polynôme. On définit le degré de $A$ noté $\deg(A)$ par~:
+  Soit \(A=(a_n)_{n \in \N}\) un polynôme. On définit le degré de \(A\) noté \(\deg(A)\) par~:
   \begin{itemize}
-  \item si $A$ est le polynôme nul, $\deg(A)=-\infty$;
-  \item sinon, $\deg(A)=\max \enstq{k \in \N}{a_k \neq 0}$.
+  \item si \(A\) est le polynôme nul, \(\deg(A)=-\infty\);
+  \item sinon, \(\deg(A)=\max \enstq{k \in \N}{a_k \neq 0}\).
   \end{itemize}
 \end{defdef}
 
-\emph{Vocabulaire}~: si $A$ est un polynôme non nul de degré $n$, le coefficient $a_n$ est le coefficient dominant. Si $a_n=1$, le polynôme est dit normalisé, ou unitaire.
+\emph{Vocabulaire}~: si \(A\) est un polynôme non nul de degré \(n\), le coefficient \(a_n\) est le coefficient dominant. Si \(a_n=1\), le polynôme est dit normalisé, ou unitaire.
 
-\emph{Remarque}~: de même si $A$ est non nul à coefficients dans $\K$, l'ensemble $\enstq{k \in \N}{a_k \neq 0}$ admet un plus petit élément. On peut de la même manière définir~:
+\emph{Remarque}~: de même si \(A\) est non nul à coefficients dans \(\K\), l'ensemble \(\enstq{k \in \N}{a_k \neq 0}\) admet un plus petit élément. On peut de la même manière définir~:
 
-Soit $A=(a_n)_{n \in \N}$ un polynôme. On définit la valuation de $A$ notée $\val(A)$ par~:
+Soit \(A=(a_n)_{n \in \N}\) un polynôme. On définit la valuation de \(A\) notée \(\val(A)\) par~:
 \begin{itemize}
-\item si $A$ est nul, $\val(A)=+\infty$;
-\item sinon, $\val(A)=\min \enstq{k \in \N}{a_k \neq 0}$.
+\item si \(A\) est nul, \(\val(A)=+\infty\);
+\item sinon, \(\val(A)=\min \enstq{k \in \N}{a_k \neq 0}\).
 \end{itemize}
 
 
-\subsection{Structure de $\K[X]$}
+\subsection{Structure de \(\K[X]\)}
 
-\subsubsection{Espace vectoriel $\K[X]$}
+\subsubsection{Espace vectoriel \(\K[X]\)}
 
 \begin{lemme}
-  Soient $A=(a_n)_{n \in \N}$ et $B=(b_n)_{n \in \N}$ deux polynômes à coefficients dans $\K$ et un scalaire $\lambda$. Alors la suite $C=\lambda A+B$ est un polynôme à coefficients dans $\K$.
+  Soient \(A=(a_n)_{n \in \N}\) et \(B=(b_n)_{n \in \N}\) deux polynômes à coefficients dans \(\K\) et un scalaire \(\lambda\). Alors la suite \(C=\lambda A+B\) est un polynôme à coefficients dans \(\K\).
 \end{lemme}
 \begin{proof}
-  Déjà comme $A$ et $B$ sont des suites de $\K^\N$ et comme c'est un espace vectoriel (il est stable par combinaison linéaire) donc $C \in \K^N$. Il existe deux entiers $p$ et $q$ tels que la suite $A$ est nulle à partir du rang $p$ et la suite $B$ est nulle à partir du rang $Q$ (puisque ce sont des polynômes). Posons $r=\max(p,q)$. Alors la suite $C$ est nulle à partir du rang $r$, c'est donc un polynôme à coefficients dans $\K$. Alors $\K[X]$ est stable par combinaison linéaire. 
+  Déjà comme \(A\) et \(B\) sont des suites de \(\K^\N\) et comme c'est un espace vectoriel (il est stable par combinaison linéaire) donc \(C \in \K^N\). Il existe deux entiers \(p\) et \(q\) tels que la suite \(A\) est nulle à partir du rang \(p\) et la suite \(B\) est nulle à partir du rang \(Q\) (puisque ce sont des polynômes). Posons \(r=\max(p,q)\). Alors la suite \(C\) est nulle à partir du rang \(r\), c'est donc un polynôme à coefficients dans \(\K\). Alors \(\K[X]\) est stable par combinaison linéaire. 
 \end{proof}
 
-Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_{\K^\N} \in \K[X]$) et il est inclus dans l'espace vectoriel des suites à coefficients dans $\K$. C'est donc un sous-espace vectoriel de $\K^\N$, d'où le théorème suivant.
+Ainsi \(\K[X]\) est stable par combinaison linéaire. De plus il est non vide (\(0_{\K^\N} \in \K[X]\)) et il est inclus dans l'espace vectoriel des suites à coefficients dans \(\K\). C'est donc un sous-espace vectoriel de \(\K^\N\), d'où le théorème suivant.
 
 \begin{theo}
-  $(\K[X], +, \perp)$ est un $\K$-espace vectoriel.
+  \((\K[X], +, \perp)\) est un \(\K\)-espace vectoriel.
 \end{theo}
 
 \begin{prop}
-  Soient deux polynômes $A$ et $B$ de $\K[X]$ et un scalaire $\lambda$. Alors
+  Soient deux polynômes \(A\) et \(B\) de \(\K[X]\) et un scalaire \(\lambda\). Alors
   \begin{enumerate}
-  \item $\deg(A+B) \leqslant \max(\deg(A),\deg(B))$, si $\deg(A)=\deg(B)$ il y a égalité;
-  \item $\deg(\lambda A) = \begin{cases} \deg(A) & \lambda \neq 0 \\ -\infty & \lambda =0 \end{cases}$
+  \item \(\deg(A+B) \leqslant \max(\deg(A),\deg(B))\), si \(\deg(A)=\deg(B)\) il y a égalité;
+  \item \(\deg(\lambda A) = \begin{cases} \deg(A) & \lambda \neq 0 \\ -\infty & \lambda =0 \end{cases}\)
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Si $A$ et $B$ sont nuls alors $\max(\deg(A),\deg(B))=0$ et leur somme est nulle et donc son degré vaut $\deg(A+B)=-\infty$ on a bien $\deg(A+B) \leqslant \max(\deg(A),\deg(B))$. 
+  \item Si \(A\) et \(B\) sont nuls alors \(\max(\deg(A),\deg(B))=0\) et leur somme est nulle et donc son degré vaut \(\deg(A+B)=-\infty\) on a bien \(\deg(A+B) \leqslant \max(\deg(A),\deg(B))\). 
 
-    Si $A$ ou $B$ est non nul, on pose $n=\max(\deg(A),\deg(B))$. On peut écrire
+    Si \(A\) ou \(B\) est non nul, on pose \(n=\max(\deg(A),\deg(B))\). On peut écrire
     \begin{align}
       A &= (a_0, \ldots, a_n, 0 \ldots, 0) \\
       B &= (b_0, \ldots, b_n, 0 \ldots, 0),
     \end{align}
-    avec $a_n$ ou $b_n$ non nul. Ainsi
+    avec \(a_n\) ou \(b_n\) non nul. Ainsi
     \begin{equation}
       A+B = (a_0+b_0, \ldots, a_n+b_n, 0, \ldots, 0).
     \end{equation}
-    Déjà $\deg(A+B) \leqslant n = \max(\deg(A),\deg(B))$. Deux cas se présentent
+    Déjà \(\deg(A+B) \leqslant n = \max(\deg(A),\deg(B))\). Deux cas se présentent
     \begin{enumerate}
-    \item Si $\deg(A) \neq \deg(B)$, un terme parmi $a_n$ et $b_n$ est nul et l'autre est non nul alors $\deg(A+B)=n$;
-    \item Si $\deg(A) = \deg(B)$, $a_n$ et $b_n$ sont tous les deux différents de zéro et on peut avoir $a_n+b_n=0$ ou $a_n+b_n \neq 0$ donc on ne peut rien dire de plus.
+    \item Si \(\deg(A) \neq \deg(B)\), un terme parmi \(a_n\) et \(b_n\) est nul et l'autre est non nul alors \(\deg(A+B)=n\);
+    \item Si \(\deg(A) = \deg(B)\), \(a_n\) et \(b_n\) sont tous les deux différents de zéro et on peut avoir \(a_n+b_n=0\) ou \(a_n+b_n \neq 0\) donc on ne peut rien dire de plus.
     \end{enumerate}
   \item
     \begin{enumerate}
-    \item Si $A$ est non nul alors $\deg(A)=n$. Si $\lambda=0$ alors $\lambda A=0$ et le degré vaut $-\infty$. Si $\lambda \neq 0$ alors $\lambda a_n \neq 0$ et $\deg(\lambda A)=\deg(A)$.
-    \item Si $A$ est nul alors $\deg(\lambda A)=\deg(0)=-\infty=\deg(A)$.
+    \item Si \(A\) est non nul alors \(\deg(A)=n\). Si \(\lambda=0\) alors \(\lambda A=0\) et le degré vaut \(-\infty\). Si \(\lambda \neq 0\) alors \(\lambda a_n \neq 0\) et \(\deg(\lambda A)=\deg(A)\).
+    \item Si \(A\) est nul alors \(\deg(\lambda A)=\deg(0)=-\infty=\deg(A)\).
     \end{enumerate}
   \end{enumerate}
 \end{proof}
 
-\subsubsection{Anneau $\K[X]$}
+\subsubsection{Anneau \(\K[X]\)}
 
 \begin{lemme}
-  Soient $A=(a_n)_{n \in \N}$ et $B=(b_n)_{n \in \N}$ deux polynômes à coefficients dans $\K$ et un scalaire $\lambda$. Alors la suite $C = \left(\sum_{k=0}^n a_kb_{n-k}\right)_{n \in \N}$ est un polynôme à coefficients dans $\K$.
+  Soient \(A=(a_n)_{n \in \N}\) et \(B=(b_n)_{n \in \N}\) deux polynômes à coefficients dans \(\K\) et un scalaire \(\lambda\). Alors la suite \(C = \left(\sum_{k=0}^n a_kb_{n-k}\right)_{n \in \N}\) est un polynôme à coefficients dans \(\K\).
 \end{lemme}
 \begin{proof}
-  Déjà $C$ est une suite à valeurs dans $\K$. Comme $A$ (resp.\ $B$) est un polynôme il existe un entier $p$ (resp.\ $q$) à partir duquel $A$ (resp.\ $B$) est nul. Soit $r=p+q$. Alors
+  Déjà \(C\) est une suite à valeurs dans \(\K\). Comme \(A\) (resp.\ \(B\)) est un polynôme il existe un entier \(p\) (resp.\ \(q\)) à partir duquel \(A\) (resp.\ \(B\)) est nul. Soit \(r=p+q\). Alors
   \begin{equation}
     \forall n>r \quad c_n = \sum_{k=0}^n a_kb_{n-k} = \sum_{k=0}^p a_kb_{n-k} + \sum_{k=p+1}^n a_kb_{n-k}.
   \end{equation}
-  Or $\forall k>p \ a_k=0$ et $\forall k \leqslant p$ on a $q=r-p <n-p \leqslant n-k \leqslant n$ donc $n-k>q$ et $b_{n-k}=0$. Ainsi
+  Or \(\forall k>p \ a_k=0\) et \(\forall k \leqslant p\) on a \(q=r-p <n-p \leqslant n-k \leqslant n\) donc \(n-k>q\) et \(b_{n-k}=0\). Ainsi
   \begin{equation}
     \forall n>r \quad c_n = 0.
   \end{equation}
-  $C$ est donc un polynôme à coefficients dans $\K$.
+  \(C\) est donc un polynôme à coefficients dans \(\K\).
 \end{proof}
 
 \begin{defdef}
-  Étant données deux polynômes $A=(a_n)_{n \in \N}$ et $B=(b_n)_{n \in \N}$ à coefficients dans $\K$, le polynôme $C$ défini par $C = \left(\sum_{k=0}^n a_kb_{n-k}\right)_{n \in \N}$ est appelé produit des polynômes $A$ et $B$ et noté $AB$. On définit une loi de composition interne sur $\K[X]$ appelée multiplication
+  Étant données deux polynômes \(A=(a_n)_{n \in \N}\) et \(B=(b_n)_{n \in \N}\) à coefficients dans \(\K\), le polynôme \(C\) défini par \(C = \left(\sum_{k=0}^n a_kb_{n-k}\right)_{n \in \N}\) est appelé produit des polynômes \(A\) et \(B\) et noté \(AB\). On définit une loi de composition interne sur \(\K[X]\) appelée multiplication
   \begin{equation}
     \fonction{\cdot}{\K[X]\times\K[X]}{\K[X]}{(A,B)}{AB}.
   \end{equation}
 \end{defdef}
 
 \begin{theo}
-  $(\K[X],+,\cdot)$ est un anneau commutatif.
+  \((\K[X],+,\cdot)\) est un anneau commutatif.
 \end{theo}
 \begin{proof}
-  Déjà $(\K[X],+)$ est un groupe abélien puisque $(\K[X],+,\perp)$ est un espace vectoriel.
+  Déjà \((\K[X],+)\) est un groupe abélien puisque \((\K[X],+,\perp)\) est un espace vectoriel.
 
-  La loi $\cdot$ est une loi de composition interne d'après le lemme. Montrons qu'elle est associative. Soient $A=(a_n)_{n \in \N}$, $B=(b_n)_{n \in \N}$ et $C=(c_n)_{n \in \N}$ trois éléments de $\K[X]$. Soient $D=A(BC)$ et $E=(AB)C$. Montrons qu'ils sont égaux. Soit un entier naturel $n$, alors
+  La loi \(\cdot\) est une loi de composition interne d'après le lemme. Montrons qu'elle est associative. Soient \(A=(a_n)_{n \in \N}\), \(B=(b_n)_{n \in \N}\) et \(C=(c_n)_{n \in \N}\) trois éléments de \(\K[X]\). Soient \(D=A(BC)\) et \(E=(AB)C\). Montrons qu'ils sont égaux. Soit un entier naturel \(n\), alors
   \begin{align}
     d_n = \sum_{k=0}^n a_k (BC)_{n-k} &= \sum_{k=0}^n a_k \sum_{j=0}^{n-k} b_j c_{n-k-j} \\
     &=\sum_{\substack{(i,j,k)\in \intervalleentier{0}{n}^3 \\  i+j+k=n}} a_k b_j c_i \\
     e_n = \sum_{k=0}^n (AB)_k c_{n-k} &= \sum_{k=0}^n \sum_{j=0}^{k} a_j  b_{k-j} c_{n-k} \\
     &=\sum_{\substack{(i,j,l)\in \intervalleentier{0}{n}^3 \\  i+j+k=l}} a_i b_j c_l \\
   \end{align}
-  Alors $\forall n \in \N \quad e_n=d_n$ donc $E=D$ et ainsi $\cdot$ est associative.
+  Alors \(\forall n \in \N \quad e_n=d_n\) donc \(E=D\) et ainsi \(\cdot\) est associative.
 
-  La loi $\cdot$ est commutative. Soient $A=(a_n)_{n \in \N}$, $B=(b_n)_{n \in \N}$, $C=AB$ et $D=BA$. Alors pour tout naturel $n$,
+  La loi \(\cdot\) est commutative. Soient \(A=(a_n)_{n \in \N}\), \(B=(b_n)_{n \in \N}\), \(C=AB\) et \(D=BA\). Alors pour tout naturel \(n\),
   \begin{equation}
     c_n = \sum_{k=0}^n a_k b_{n-k} = \sum_{j=0}^n a_{n-j} b_{j} =d_n,
   \end{equation}
-  on a fait un changement de variable $j=n-k$. Alors $C=D$ et donc $AB=BA$.
+  on a fait un changement de variable \(j=n-k\). Alors \(C=D\) et donc \(AB=BA\).
 
-  La loi $\cdot$ est distributive sur la loi $+$. Soient $A=(a_n)_{n \in \N}$, $B=(b_n)_{n \in \N}$ et $C=(c_n)_{n \in \N}$ trois éléments de $\K[X]$. On pose $D=A(B+C)$ et $E=AB+AC$. Alors pour tout naturel $n$,
+  La loi \(\cdot\) est distributive sur la loi \(+\). Soient \(A=(a_n)_{n \in \N}\), \(B=(b_n)_{n \in \N}\) et \(C=(c_n)_{n \in \N}\) trois éléments de \(\K[X]\). On pose \(D=A(B+C)\) et \(E=AB+AC\). Alors pour tout naturel \(n\),
   \begin{align}
     d_n = \sum_{k=0}^n a_k(B+C)_{n-k} &= \sum_{k=0}^n a_k b_{n-k} + \sum_{k=0}^n a_k c_{n-k} \\
     &=(AB)_n +(AC)_n \\
     &=e_n.
   \end{align}
-  Donc $A(B+C)=AB+AC$. On a montré qu'elle est distributive à gauche et comme elle est commutative, alors elle est distributive à droite.
+  Donc \(A(B+C)=AB+AC\). On a montré qu'elle est distributive à gauche et comme elle est commutative, alors elle est distributive à droite.
 
-  Soit $1=(1,0, \ldots, 0)$ le polynôme constant égal à $1$. Si on pos que $A=1$ alors $\forall n \in \N \quad a_n = \delta_{0n}$. Montrons que $1$ est l'élément neutre pour $\cdot$. Pour tout polynôme $B$ on pose le polynôme $C=B \times 1$ et montrons que $C=B$. Pour tout naturel $n$,
+  Soit \(1=(1,0, \ldots, 0)\) le polynôme constant égal à \(1\). Si on pos que \(A=1\) alors \(\forall n \in \N \quad a_n = \delta_{0n}\). Montrons que \(1\) est l'élément neutre pour \(\cdot\). Pour tout polynôme \(B\) on pose le polynôme \(C=B \times 1\) et montrons que \(C=B\). Pour tout naturel \(n\),
   \begin{equation}
     c_n = \sum_{k=0}^n b_{n} a_{n-k} = \sum_{k=0}^n b_{n} \delta_{0,n-k} = b_n \times 1 = b_n.
   \end{equation}
-  Donc $B \times 1 = B$. Comme $\cdot$ est commutative on a aussi $1 \times B=B$ donc $1$ est l'élément neutre pour $\cdot$.
+  Donc \(B \times 1 = B\). Comme \(\cdot\) est commutative on a aussi \(1 \times B=B\) donc \(1\) est l'élément neutre pour \(\cdot\).
 \end{proof}
 
 \begin{prop}
-  Soient $A=(a_n)_{n \in \N}$ et $B=(b_n)_{n \in \N}$ deux polynômes à coefficients dans $\K$. Alors
+  Soient \(A=(a_n)_{n \in \N}\) et \(B=(b_n)_{n \in \N}\) deux polynômes à coefficients dans \(\K\). Alors
   \begin{equation}
     \deg(AB) = \deg(A)+\deg(B)
   \end{equation}
@@ -174,31 +174,31 @@ Ainsi $\K[X]$ est stable par combinaison linéaire. De plus il est non vide ($0_
 \begin{proof}
   Deux cas se présentent~:
   \begin{enumerate}
-  \item Si $A$ ou $B$ est nul alors $AB$ est nul et donc son dégré vaut $-\infty$ c'est à dire égal à $\deg(A)+\deg(B)$.
-  \item Si $A$ et $B$ sont non nuls alors on note respectivements $p$ et $q$ leurs degrés et le degré de $C=AB$ est $p+q$ alors
+  \item Si \(A\) ou \(B\) est nul alors \(AB\) est nul et donc son dégré vaut \(-\infty\) c'est à dire égal à \(\deg(A)+\deg(B)\).
+  \item Si \(A\) et \(B\) sont non nuls alors on note respectivements \(p\) et \(q\) leurs degrés et le degré de \(C=AB\) est \(p+q\) alors
     \begin{align}
       c_{p+q} &= \sum_{k=0}^{p+q} a_k b_{p+q-k} \\
       &= \sum_{k=0}^{p-1} a_k b_{p+q-k} + a_pb_q + \sum_{k=p+1}^{p+q} a_k b_{p+q-k}
     \end{align}
     Divisons l'étude en trois parties~:
     \begin{itemize}
-    \item     Si $k \in \intervalleentier{0}{p-1}$ alors $1-p \leqslant -k \leqslant 0$ et donc $q+1 \leqslant p+q-k \leqslant p+q$. Le polynôme $B$ est de degré $q$ donc $b_{p+q-k}=0$ et alors $\sum_{k=0}^{p-1} a_k b_{p+q-k}=0$. 
-    \item Si $k \in \intervalleentier{p+1}{p+q}$, $a_k =0$ puisque $A$ est de degré $p$, donc $\sum_{k=p+1}^{p+q} a_k b_{p+q-k}=0$
-    \item Alors $c_{p+q}=a_pb_q \neq 0$ (puisque $a_p \neq 0$ et $b_q \neq 0$ et que $\K$ est intègre). 
+    \item     Si \(k \in \intervalleentier{0}{p-1}\) alors \(1-p \leqslant -k \leqslant 0\) et donc \(q+1 \leqslant p+q-k \leqslant p+q\). Le polynôme \(B\) est de degré \(q\) donc \(b_{p+q-k}=0\) et alors \(\sum_{k=0}^{p-1} a_k b_{p+q-k}=0\). 
+    \item Si \(k \in \intervalleentier{p+1}{p+q}\), \(a_k =0\) puisque \(A\) est de degré \(p\), donc \(\sum_{k=p+1}^{p+q} a_k b_{p+q-k}=0\)
+    \item Alors \(c_{p+q}=a_pb_q \neq 0\) (puisque \(a_p \neq 0\) et \(b_q \neq 0\) et que \(\K\) est intègre). 
       \end{itemize}
-Finalement $\deg(C)=p+q$ et $\deg(AB)=\deg(A) + \deg(B)$.
+Finalement \(\deg(C)=p+q\) et \(\deg(AB)=\deg(A) + \deg(B)\).
   \end{enumerate}
 \end{proof}
 
 \begin{cor}
-  $(\K[X],+,\cdot)$ est un anneau intègre.
+  \((\K[X],+,\cdot)\) est un anneau intègre.
 \end{cor}
 \begin{proof}
-  Pour tout polynôme $A$ et $B$, s'ils sont tous les deux non nuls alors
+  Pour tout polynôme \(A\) et \(B\), s'ils sont tous les deux non nuls alors
   \begin{equation}
     \deg(AB) = \deg(A)+\deg(B) \in \N,
   \end{equation}
-  alors $AB \neq 0$. On vient de montrer
+  alors \(AB \neq 0\). On vient de montrer
   \begin{equation}
     A\neq 0 \text{~et~} A \neq 0 \implies AB \neq 0.
   \end{equation}
@@ -206,25 +206,25 @@ Finalement $\deg(C)=p+q$ et $\deg(AB)=\deg(A) + \deg(B)$.
   \begin{equation}
     AB = 0 \implies A=0 \text{~ou~} B=0.
   \end{equation}
-  $\K[X]$ est un anneau commutatif qui n'admet pas de diviseur de zéro : il est intègre.
+  \(\K[X]\) est un anneau commutatif qui n'admet pas de diviseur de zéro : il est intègre.
 \end{proof}
 
 \begin{prop}
-  Les éléments inversibles de l'anneau $(\K[X],+,\cdot)$ sont les polynômes de degré $0$.
+  Les éléments inversibles de l'anneau \((\K[X],+,\cdot)\) sont les polynômes de degré \(0\).
 \end{prop}
 \begin{proof}
-  Soit un polynôme $P \in \K[X]$. Si $P$ est inversible dans $\K[X]$, il existe un autre polynôme $Q \in \K[X]$ tel que $PQ=QP=1$. Alors
+  Soit un polynôme \(P \in \K[X]\). Si \(P\) est inversible dans \(\K[X]\), il existe un autre polynôme \(Q \in \K[X]\) tel que \(PQ=QP=1\). Alors
   \begin{equation}
     \deg(PQ)=\deg(P)+\deg(Q)=0.
   \end{equation}
   Comme les degrés sont des naturels et leur somme est nulle, alors les degrés sont nuls.
 
-  Si $\deg(P)=0$ alors il existe un scalaire $\lambda$ non nul tel que $P=(\lambda,0, \ldots, 0)$ et soit $Q=(1/\lambda, 0, \ldots, 0)$. Alors $PQ=1$
+  Si \(\deg(P)=0\) alors il existe un scalaire \(\lambda\) non nul tel que \(P=(\lambda,0, \ldots, 0)\) et soit \(Q=(1/\lambda, 0, \ldots, 0)\). Alors \(PQ=1\)
 \end{proof}
 
 \subsubsection{Notation définitive des polynômes}
 
-On note $X = (0,1,0, \ldots, 0)$ et il est appelé l'``indeterminé''. On pose $X^0=(1,0, \ldots,0)=1$. On définit par récurrence
+On note \(X = (0,1,0, \ldots, 0)\) et il est appelé l'``indeterminé''. On pose \(X^0=(1,0, \ldots,0)=1\). On définit par récurrence
 \begin{equation}
   \forall k \in \N \quad X^{k+1}=X \cdot X^k.
 \end{equation}
@@ -235,22 +235,22 @@ On note $X = (0,1,0, \ldots, 0)$ et il est appelé l'``indeterminé''. On pose $
   \end{equation}
 \end{lemme}
 \begin{proof}
-  On montre par récurrence sur $k \in \N$ la propriété $\P(k)$ ``$X^k = (\delta_{nk})_{n \in \N}$''.
+  On montre par récurrence sur \(k \in \N\) la propriété \(\P(k)\) ``\(X^k = (\delta_{nk})_{n \in \N}\)''.
 
-  \emph{Initialisation}~: Par définition $\P(0)$ est vraie.
+  \emph{Initialisation}~: Par définition \(\P(0)\) est vraie.
 
-  \emph{Hérédité}~: Soit $k \in \N$ et supposons $\P(k)$. Alors $X^k=(\delta_{nk})_{n \in \N}$. On note $X^{k+1}=X \cdot X^k=(c_n)_{n \in \N}$ et pour tout naturel $n$
+  \emph{Hérédité}~: Soit \(k \in \N\) et supposons \(\P(k)\). Alors \(X^k=(\delta_{nk})_{n \in \N}\). On note \(X^{k+1}=X \cdot X^k=(c_n)_{n \in \N}\) et pour tout naturel \(n\)
   \begin{equation}
     c_n = \sum_{j=0}^n \delta_{1j} \delta_{n-j,k}
   \end{equation}
-  si $n=0$ alors $c_n=0$, si $n \geqslant 1$ alors $c_n=\delta_{n-1,k}$ donc $c_n=1$ si $n=k+1$ et zéro sinon. Finalement $c_n=\delta_{n,k+1}$. $\P(k=1)$ est vraie.
+  si \(n=0\) alors \(c_n=0\), si \(n \geqslant 1\) alors \(c_n=\delta_{n-1,k}\) donc \(c_n=1\) si \(n=k+1\) et zéro sinon. Finalement \(c_n=\delta_{n,k+1}\). \(\P(k=1)\) est vraie.
 
-  \emph{Conclusion}~: Par théorème de récurrence, $\P(n)$ est vraie pour tout naturel $n$.
+  \emph{Conclusion}~: Par théorème de récurrence, \(\P(n)\) est vraie pour tout naturel \(n\).
 \end{proof}
 
-On identifiera le scalaire $\lambda$ avec le polynome $\lambda \in \K[X]$.
+On identifiera le scalaire \(\lambda\) avec le polynome \(\lambda \in \K[X]\).
 
-Soit $A=(a_n)_{n \in \N} \in \K[X]$ et $N \geqslant \deg(A)$. Alors
+Soit \(A=(a_n)_{n \in \N} \in \K[X]\) et \(N \geqslant \deg(A)\). Alors
 \begin{equation}
   A = (a_0, \ldots, a_N, 0, \ldots, 0) = \sum_{k=1}^N a_k (\delta_{n,k})_{n \in \N}=\sum_{k=0}^N a_k X^k.
 \end{equation}
@@ -258,17 +258,17 @@ Nous adopterons la notation
 \begin{equation}
   A = \sum_{k=0}^N a_k X^k,
 \end{equation}
-avec $N \geqslant \deg(A)$ pour le polynôme $A$. On pourra écrire
+avec \(N \geqslant \deg(A)\) pour le polynôme \(A\). On pourra écrire
 \begin{equation}
   A = \sum_{n>0} a_n X^n = \sum_{n=0}^{\infty} a_n X^n.
 \end{equation}
 
-\emph{Ce sont des sommes finies car $A$ est un polynôme donc la suite $a$ est nulle à partir d'un certain rang}. L'intérêt de ces deux écritures est de ne pas avoir besoin de connaître le degré de $A$. Avec ces notations~:
+\emph{Ce sont des sommes finies car \(A\) est un polynôme donc la suite \(a\) est nulle à partir d'un certain rang}. L'intérêt de ces deux écritures est de ne pas avoir besoin de connaître le degré de \(A\). Avec ces notations~:
 \begin{itemize}
-\item le polynôme $A=\sum_{n\geqslant 0} a_n X^n$ est nul si et seulement si $\forall n \in \N \quad a_n =0$;
-\item deux polynômes $A$ et $B$ sont égaux si et seulement si $\forall n \in \N \quad a_n =b_n$;
-\item les monômes sont les polynômes de la formes $A=\lambda X^n$ avec $\lambda \in \K$ et $n \in \N$;
-\item La somme des polynômes $P=\sum_{k=0}^n a_k X^k$ et $Q=\sum_{k=0}^m b_k X^k$ vaut
+\item le polynôme \(A=\sum_{n\geqslant 0} a_n X^n\) est nul si et seulement si \(\forall n \in \N \quad a_n =0\);
+\item deux polynômes \(A\) et \(B\) sont égaux si et seulement si \(\forall n \in \N \quad a_n =b_n\);
+\item les monômes sont les polynômes de la formes \(A=\lambda X^n\) avec \(\lambda \in \K\) et \(n \in \N\);
+\item La somme des polynômes \(P=\sum_{k=0}^n a_k X^k\) et \(Q=\sum_{k=0}^m b_k X^k\) vaut
   \begin{equation}
     P+Q = \sum_{k=0}^{\max(n,m)}(a_k+b_k) X^k.
   \end{equation}
@@ -281,54 +281,54 @@ avec $N \geqslant \deg(A)$ pour le polynôme $A$. On pourra écrire
 \subsection{Composition de polynômes}
 
 \begin{defdef}
-  Soient $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{n \geqslant 0} b_n X^n$ deux polynômes à coefficients dans $\K$. On définit un polynôme noté $P \circ Q$ ou $P(Q)$ par
+  Soient \(P=\sum_{n \geqslant 0} a_n X^n\) et \(Q=\sum_{n \geqslant 0} b_n X^n\) deux polynômes à coefficients dans \(\K\). On définit un polynôme noté \(P \circ Q\) ou \(P(Q)\) par
   \begin{equation}
     P \circ Q = P(Q) = \sum_{n \geqslant 0} a_n Q^n.
   \end{equation}
 \end{defdef}
 
-\emph{Remarque}~: Pour tout polynôme $P \in \K[X]$, $P(X)=P \circ X = P$. $P$ et $P(X)$ représentent le même polynôme et on écrira indifféremment $P$ ou $P(X)$. \emph{Attention à ne pas écrire $f=f(x)$ puisque $f$ est une fonction et $f(x)$ un réel}.
+\emph{Remarque}~: Pour tout polynôme \(P \in \K[X]\), \(P(X)=P \circ X = P\). \(P\) et \(P(X)\) représentent le même polynôme et on écrira indifféremment \(P\) ou \(P(X)\). \emph{Attention à ne pas écrire \(f=f(x)\) puisque \(f\) est une fonction et \(f(x)\) un réel}.
 
-\emph{Exemple}~: On pose $P=X^2-X$ et $Q=3X+4$ alors
+\emph{Exemple}~: On pose \(P=X^2-X\) et \(Q=3X+4\) alors
 \begin{align}
   P \circ Q &= (3X+4)^2-(3X+4) = 9X^2+21X+12\\
   Q \circ P &= 3(X^2-X)+4 = 3X^2-3X+4.
 \end{align}
 
 \begin{prop}
-  Soient deux éléments $P$ et $Q$ de $\K[X]$ tous les deux non nuls. Alors
+  Soient deux éléments \(P\) et \(Q\) de \(\K[X]\) tous les deux non nuls. Alors
   \begin{equation}
     \deg(P\circ Q)=\deg(P) \cdot \deg(Q).
   \end{equation}
 \end{prop}
 \begin{proof}
-  On suppose que $P=\sum_{k=0}^n a_k X^k$ avec $n=\deg(P)$ et $a_n \neq 0$ et $Q=\sum_{k=0}^m b_k X^k$ avec $m=\deg(Q)$ et $b_m \neq 0$. Alors
+  On suppose que \(P=\sum_{k=0}^n a_k X^k\) avec \(n=\deg(P)\) et \(a_n \neq 0\) et \(Q=\sum_{k=0}^m b_k X^k\) avec \(m=\deg(Q)\) et \(b_m \neq 0\). Alors
   \begin{equation}
     P \circ Q = \sum_{k=0}^n a_k Q^k = \sum_{k=0}^n a_k \left(\sum_{j=0}^m b_j X^j\right)^k,
   \end{equation}
-  et donc $\deg(P \circ Q) \leqslant mn$. Le coefficient devant $X^{mn}$ vaut $a_n b_m^n \neq 0$ car $a_n \neq 0$ et $b_m \neq 0$. Donc $\deg(P \circ Q) =mn = \deg(P) \cdot \deg(Q)$.
+  et donc \(\deg(P \circ Q) \leqslant mn\). Le coefficient devant \(X^{mn}\) vaut \(a_n b_m^n \neq 0\) car \(a_n \neq 0\) et \(b_m \neq 0\). Donc \(\deg(P \circ Q) =mn = \deg(P) \cdot \deg(Q)\).
 \end{proof}
 
 \begin{prop}
-  Soient $(P,Q,R) \in \K[X]^3$ et $\lambda \in \K$, alors
+  Soient \((P,Q,R) \in \K[X]^3\) et \(\lambda \in \K\), alors
   \begin{itemize}
-  \item $(\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R$, distributivité à droite mais pas à gauche;
-  \item $(P \circ Q) \circ R = P \circ (Q \circ R)$, associativité;
-  \item $(PQ)\circ R = (P \circ R)(Q \circ R)$;
-  \item $P \circ X = X \circ P=P$.
+  \item \((\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R\), distributivité à droite mais pas à gauche;
+  \item \((P \circ Q) \circ R = P \circ (Q \circ R)\), associativité;
+  \item \((PQ)\circ R = (P \circ R)(Q \circ R)\);
+  \item \(P \circ X = X \circ P=P\).
   \end{itemize}
 \end{prop}
 \begin{proof}
-  Notons $P=\sum_{n \geqslant 0} a_n X^n$, $Q=\sum_{n \geqslant 0} b_n X^n$, $P=\sum_{n \geqslant 0} c_n X^n$. Alors
+  Notons \(P=\sum_{n \geqslant 0} a_n X^n\), \(Q=\sum_{n \geqslant 0} b_n X^n\), \(P=\sum_{n \geqslant 0} c_n X^n\). Alors
   \begin{itemize}
-  \item $(\lambda P+Q)\circ R = \sum_{n \geqslant 0} (\lambda a_n+b_n) R^n = \lambda \sum_{n \geqslant 0} a_n R^n + \sum_{n \geqslant 0} b_n R^n$, soit alors $ (\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R$;
-  \item $P \circ (Q \circ R) = \sum_{n \geqslant 0} a_n (Q \circ R)^n$ et $Q \circ R = \sum_{k \geqslant 0} b_k R^k$ alors
+  \item \((\lambda P+Q)\circ R = \sum_{n \geqslant 0} (\lambda a_n+b_n) R^n = \lambda \sum_{n \geqslant 0} a_n R^n + \sum_{n \geqslant 0} b_n R^n\), soit alors \( (\lambda P+Q)\circ R = \lambda P \circ R +Q \circ R\);
+  \item \(P \circ (Q \circ R) = \sum_{n \geqslant 0} a_n (Q \circ R)^n\) et \(Q \circ R = \sum_{k \geqslant 0} b_k R^k\) alors
     \begin{align}
       P \circ (Q \circ R) = \left(\sum_{n \geqslant 0} a_n Q^n \right) \circ R &= \sum_{n \geqslant 0} (Q^n \circ R) \\
       &= \sum_{n \geqslant 0} a_n Q(R)^n\\
       &=P \circ (Q \circ R);
     \end{align}
-  \item on note pour tout naturel $n$, $d_n=\sum_{k=0}^n a_k b_{n-k}$ et on a
+  \item on note pour tout naturel \(n\), \(d_n=\sum_{k=0}^n a_k b_{n-k}\) et on a
     \begin{align}
       (PQ)\circ R &= \sum_{n \geqslant 0} d_n R^n \\
       &= \sum_{n \geqslant 0} \sum_{k=0}^n a_k b_{n-k} R^{n-k}R^k \\
@@ -342,17 +342,17 @@ avec $N \geqslant \deg(A)$ pour le polynôme $A$. On pourra écrire
 \emph{Polynômes pairs et impairs}
 
 \begin{prop}
-  Pour tout polynôme $P \in \K[X]$, on a
+  Pour tout polynôme \(P \in \K[X]\), on a
   \begin{enumerate}
-  \item P est pair si et seulement si $P(X)=P(-X)$;
-  \item P est impair si et seulement si $P(X)=-P(-X)$.
+  \item P est pair si et seulement si \(P(X)=P(-X)\);
+  \item P est impair si et seulement si \(P(X)=-P(-X)\).
   \end{enumerate}
 \end{prop}
 
-\danger Ici il n'y a pas d'ensemble de définition ni de quantificateur, il s'agit d'égalités entre deux polynômes. \emph{Cependant} si $f \in \R^I$ est paire c'est équivalent à ce que $I$ soit centré en zéro et pour tout réel $x$ $f(-x)=f(x)$.
+\danger Ici il n'y a pas d'ensemble de définition ni de quantificateur, il s'agit d'égalités entre deux polynômes. \emph{Cependant} si \(f \in \R^I\) est paire c'est équivalent à ce que \(I\) soit centré en zéro et pour tout réel \(x\) \(f(-x)=f(x)\).
 
 \begin{proof}
-  On le démontre pour $P$ pair (la démonstration est analogue pour le cas impair). On note $P = \sum_{n\geqslant 0} a_n X^n$, alors
+  On le démontre pour \(P\) pair (la démonstration est analogue pour le cas impair). On note \(P = \sum_{n\geqslant 0} a_n X^n\), alors
   \begin{align}
     P(X) = P(-X) &\iff \sum_{n \geqslant 0} a_n X^n = \sum_{n \geqslant 0} a_n (-1)^n X^n\\
     &\iff \forall n \in \N \quad a_n=a_n(-1)^n\\
@@ -362,15 +362,15 @@ avec $N \geqslant \deg(A)$ pour le polynôme $A$. On pourra écrire
   \end{align}
 \end{proof}
 
-\subsection{$\K$-espace vectoriel $\K_n[X]$}
+\subsection{\(\K\)-espace vectoriel \(\K_n[X]\)}
 
-On note $\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leqslant n}$.
+On note \(\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leqslant n}\).
 
 \begin{prop}
-  L'ensemble $\K_n[X]$ est un sous-espace vectoriel du $\K$-espace vectoriel $\K[X]$.
+  L'ensemble \(\K_n[X]\) est un sous-espace vectoriel du \(\K\)-espace vectoriel \(\K[X]\).
 \end{prop}
 \begin{proof}
-  Par définition $\K_n[X] \subset \K[X]$. Ensuite $\K_n[X]$ est non vide puisque le polynôme nul est dedans. Montrons qu'il est stable par combinaison linéaire. Soit deux polynômes $P$ et $Q$ de $\K_n[X]$ et un scalaire $\lambda$, alors
+  Par définition \(\K_n[X] \subset \K[X]\). Ensuite \(\K_n[X]\) est non vide puisque le polynôme nul est dedans. Montrons qu'il est stable par combinaison linéaire. Soit deux polynômes \(P\) et \(Q\) de \(\K_n[X]\) et un scalaire \(\lambda\), alors
   \begin{equation}
     \lambda P +Q \in \K[X]
   \end{equation}
@@ -380,35 +380,35 @@ On note $\K_n[X]=\enstq{P \in \K[X]}{\deg(P) \leqslant n}$.
     &\leqslant \max(\deg(P),\deg(Q))\\
     &\leqslant n
   \end{align}
-  et donc $\lambda P +Q \in \K_n[X]$.
+  et donc \(\lambda P +Q \in \K_n[X]\).
 
-  Finalement $\K_n[X]$ est bien un sous-espace vectoriel de $\K[X]$. 
+  Finalement \(\K_n[X]\) est bien un sous-espace vectoriel de \(\K[X]\). 
 \end{proof}
 
-Cependant ce n'est pas un sous anneau dès que $n \geqslant 1$. Puisque $X^n \in \K_n[X]$ mais $X^n \cdot X^n = x^{2n} \notin \K_n[X]$.
+Cependant ce n'est pas un sous anneau dès que \(n \geqslant 1\). Puisque \(X^n \in \K_n[X]\) mais \(X^n \cdot X^n = x^{2n} \notin \K_n[X]\).
 
 \begin{prop}
-  Pour tout naturel $n$, la famille $\B=(1,X, \ldots, X^n)$ est une base de $\K_n[X]$ et donc $\dim_\K \K_n[X]=n+1$.
+  Pour tout naturel \(n\), la famille \(\B=(1,X, \ldots, X^n)\) est une base de \(\K_n[X]\) et donc \(\dim_\K \K_n[X]=n+1\).
 \end{prop}
 \begin{proof}
-  Déjà $\B \subset \K_n[X]$. Par définition, si $P \in \K_n[X]$ alors il existe $(a_0,\ldots, a_n) \in \K^{n+1}$ tel que $P=\sum_{k=0}^n a_k X^k$. alors $\B$ est génératrice.
+  Déjà \(\B \subset \K_n[X]\). Par définition, si \(P \in \K_n[X]\) alors il existe \((a_0,\ldots, a_n) \in \K^{n+1}\) tel que \(P=\sum_{k=0}^n a_k X^k\). alors \(\B\) est génératrice.
 
-  Soit $(a_0,\ldots, a_n) \in \K^{n+1}$ tel que $\sum_{k=0}^n a_k X^k =0$ alors pour tout $k$ tel que $0\leqslant k \leqslant n$ on a $a_k=0$ (un polynôme est nul si et seulement si ses coefficients sont nuls). La famille $\B$ est donc libre.
+  Soit \((a_0,\ldots, a_n) \in \K^{n+1}\) tel que \(\sum_{k=0}^n a_k X^k =0\) alors pour tout \(k\) tel que \(0\leqslant k \leqslant n\) on a \(a_k=0\) (un polynôme est nul si et seulement si ses coefficients sont nuls). La famille \(\B\) est donc libre.
 
-Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B = n+1$.
+Alors au final \(\B\) est une base de \(\K_n[X]\) et on a \(\dim_\K \K_n[X]=\Card \B = n+1\).
 \end{proof}
 
-\emph{Vocabulaire}~: La base $\B$ sera appelée la base canonique de $\K_n[X]$.
+\emph{Vocabulaire}~: La base \(\B\) sera appelée la base canonique de \(\K_n[X]\).
 
 \begin{prop}
-  Soit $(P_i)_{i \in I}$ un famille de polynômes de $\K[X]$ ($I$ fini ou infini). On suppose que pour tout couple $(i,j) \in I^2$ on a
+  Soit \((P_i)_{i \in I}\) un famille de polynômes de \(\K[X]\) (\(I\) fini ou infini). On suppose que pour tout couple \((i,j) \in I^2\) on a
   \begin{equation}
     i \neq j \implies \deg(P_i) \neq \deg(P_j).
   \end{equation}
-  Alors toute sous-famille finie $(P_i)_{i \in J}$, avec $J \subset I$ fini, est libre.
+  Alors toute sous-famille finie \((P_i)_{i \in J}\), avec \(J \subset I\) fini, est libre.
 \end{prop}
 \begin{proof}
-  Soit $J=\{i_1, \ldots, i_k\} \subset I$. Quitte à réindexer, on peut supposer que $\deg(P_{i_1}) \leqslant \ldots \leqslant \deg(P_{i_k})$. Soit $k$ scalaires $\alpha_{i_1}, \ldots, \alpha_{i_k}$. On suppose que $\sum_{i \in J} \alpha_i P_i=0$. Supposons que cette famille est liée, c'est-à-dire qu'il existe $l \in J$ tel que $\alpha_l \neq 0$. Soit la partie $\{j \in J, \alpha_{ij} \neq 0\}$. Elle est incluse dans $\N$ et elle est non vide et elle est finie (parce que $J$ est fini). Alors elle admet un plus grand élément $j_0$. Ainsi $\alpha_{ij_0} \neq 0$.
+  Soit \(J=\{i_1, \ldots, i_k\} \subset I\). Quitte à réindexer, on peut supposer que \(\deg(P_{i_1}) \leqslant \ldots \leqslant \deg(P_{i_k})\). Soit \(k\) scalaires \(\alpha_{i_1}, \ldots, \alpha_{i_k}\). On suppose que \(\sum_{i \in J} \alpha_i P_i=0\). Supposons que cette famille est liée, c'est-à-dire qu'il existe \(l \in J\) tel que \(\alpha_l \neq 0\). Soit la partie \(\{j \in J, \alpha_{ij} \neq 0\}\). Elle est incluse dans \(\N\) et elle est non vide et elle est finie (parce que \(J\) est fini). Alors elle admet un plus grand élément \(j_0\). Ainsi \(\alpha_{ij_0} \neq 0\).
   \begin{gather}
     \forall j > j_0 \quad \alpha_{ij}=0 \\
     0 = \sum_{i \in J} \alpha_i P_i = \sum_{j=1}^{j_0-1} \alpha_{ij} P_{ij} + \alpha_{ij_0} P_{ij_0}\\
@@ -418,21 +418,21 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
   \begin{equation}
     \deg(P_{ij_0}) \leqslant \max\limits_{1 \leqslant j \leqslant j_0-1}(\deg(P_{ij})) < \deg(P_{ij_0}).
   \end{equation}
-  Ce qui est complétement absurde. Alors $(P_i)_{i \in J}$ est libre.
+  Ce qui est complétement absurde. Alors \((P_i)_{i \in J}\) est libre.
 \end{proof}
 
-\emph{Conséquences}~: l'espace vectoriel $\K[X]$ est de dimension infinie, car il existe dans $\K[X]$ des familles libres de cardinal aussi grand qu'on le souhaite. Supposons qu'il est de dimension finie, soit alors $p$ sa dimension. On note $\Lb=(1, \ldots, X^p)$ une famille libre. Son cardinal vaut $p+1 \geqslant \Dim \K[X]$, ce qui est absurde.
+\emph{Conséquences}~: l'espace vectoriel \(\K[X]\) est de dimension infinie, car il existe dans \(\K[X]\) des familles libres de cardinal aussi grand qu'on le souhaite. Supposons qu'il est de dimension finie, soit alors \(p\) sa dimension. On note \(\Lb=(1, \ldots, X^p)\) une famille libre. Son cardinal vaut \(p+1 \geqslant \Dim \K[X]\), ce qui est absurde.
 
-\subsection{Division euclidienne dans $\K[X]$}
+\subsection{Division euclidienne dans \(\K[X]\)}
 
 \begin{theo}
-  Soient deux polynômes $A$ et $B$ de $\K[X]$ avec $B$ non nul. Il existe un unique couple $(Q,R) \in \K[X]^2$ tel que
+  Soient deux polynômes \(A\) et \(B\) de \(\K[X]\) avec \(B\) non nul. Il existe un unique couple \((Q,R) \in \K[X]^2\) tel que
   \begin{equation}
     A=BQ+R \quad \deg(R) < \deg(B).
   \end{equation}
 \end{theo}
 \begin{proof}[Unicité]
-  Soient $(Q_1,R_1) \in \K[X]^2$ et $(Q_2,R_2) \in \K[X]^2$ tels que
+  Soient \((Q_1,R_1) \in \K[X]^2\) et \((Q_2,R_2) \in \K[X]^2\) tels que
   \begin{align}
     \begin{cases}
       A=BQ_1+R_1 \\ \deg(R_1) < \deg(B_1)
@@ -441,37 +441,37 @@ Alors au final $\B$ est une base de $\K_n[X]$ et on a $\dim_\K \K_n[X]=\Card \B 
       A=BQ_2+R_2 \\ \deg(R_2) < \deg(B_2)
     \end{cases}
   \end{align}
-  donc $BQ_2+R_2 = BQ_1+R_1$ et donc $B(Q_1-Q_2) = R_2-R_1$.
+  donc \(BQ_2+R_2 = BQ_1+R_1\) et donc \(B(Q_1-Q_2) = R_2-R_1\).
 
-  Si $Q_1-Q_2 \neq 0$ alors $\deg(Q_1-Q_2) \in \N$ et alors $\deg(B(Q_1-Q_2)) = \deg(B) + \deg(Q_1-Q_2) \geqslant \deg(B)$. Or $\deg(R_2-R_1) \leqslant \max(\deg(R_1),\deg(R_2)) < \deg(B)$. Ce qui est absurde. 
+  Si \(Q_1-Q_2 \neq 0\) alors \(\deg(Q_1-Q_2) \in \N\) et alors \(\deg(B(Q_1-Q_2)) = \deg(B) + \deg(Q_1-Q_2) \geqslant \deg(B)\). Or \(\deg(R_2-R_1) \leqslant \max(\deg(R_1),\deg(R_2)) < \deg(B)\). Ce qui est absurde. 
 
-  Donc $Q_1=Q_2$ et ainsi $R_1=R_2$.
+  Donc \(Q_1=Q_2\) et ainsi \(R_1=R_2\).
 \end{proof}
 \begin{proof}[Existence]
-  On fixe $B$ non nul de degré $m$ : $B = \sum_{k=0}^m b_k X^k$. Montrons par récurrence sur $n \in \N$ l'assertion suivante $\P(n)$ ``Pour tout polynôme $A$ de degré strictement inférieur à $n$, il existe un couple $(Q,R)$ de polynômes tel que $\begin{cases} A=BQ+R \\ \deg(R) < \deg(B)\end{cases}$''.
+  On fixe \(B\) non nul de degré \(m\) : \(B = \sum_{k=0}^m b_k X^k\). Montrons par récurrence sur \(n \in \N\) l'assertion suivante \(\P(n)\) ``Pour tout polynôme \(A\) de degré strictement inférieur à \(n\), il existe un couple \((Q,R)\) de polynômes tel que \(\begin{cases} A=BQ+R \\ \deg(R) < \deg(B)\end{cases}\)''.
 
-  \emph{Initialisation}~: $n=m$ (degré de $B$). Soit un polynôme $A$ de degré strictement inférieur à $m$. On peut écrire $\begin{cases} A=0 \cdot B+A \\ \deg(A) < \deg(B)=m\end{cases}$. Alors le couple $(Q,R)=(0,A)$ vérifient l'assertion. $\P(m)$ est vraie.
+  \emph{Initialisation}~: \(n=m\) (degré de \(B\)). Soit un polynôme \(A\) de degré strictement inférieur à \(m\). On peut écrire \(\begin{cases} A=0 \cdot B+A \\ \deg(A) < \deg(B)=m\end{cases}\). Alors le couple \((Q,R)=(0,A)\) vérifient l'assertion. \(\P(m)\) est vraie.
 
-  \emph{Hérédité}~: Soit $n \geqslant m$ et on suppose $\P(n)$, déduisons en $\P(n+1)$. Soit $A$ un polynôme de degré strictement inférieur à $n+1$. Alors $A=\sum_{k=0}^n a_k X^k \in \K_n[X]$. Soit $A_2 = A-a_nb_m^{-1}X^{n-m}B$ (possible puisque $b_m \neq 0$ et $n \geqslant m$. $A$ et $a_nb_m^{-1}X^{n-m}B$ sont de degré au plus $n$ tous les deux. De plus le coefficient devant $X^n$ vaut~:
+  \emph{Hérédité}~: Soit \(n \geqslant m\) et on suppose \(\P(n)\), déduisons en \(\P(n+1)\). Soit \(A\) un polynôme de degré strictement inférieur à \(n+1\). Alors \(A=\sum_{k=0}^n a_k X^k \in \K_n[X]\). Soit \(A_2 = A-a_nb_m^{-1}X^{n-m}B\) (possible puisque \(b_m \neq 0\) et \(n \geqslant m\). \(A\) et \(a_nb_m^{-1}X^{n-m}B\) sont de degré au plus \(n\) tous les deux. De plus le coefficient devant \(X^n\) vaut~:
   \begin{itemize}
-  \item $a_n$ dans $A$;
-  \item $a_nb_m^{-1}b_m=a_n$ dans $a_nb_m^{-1}X^{n-m}B$.
+  \item \(a_n\) dans \(A\);
+  \item \(a_nb_m^{-1}b_m=a_n\) dans \(a_nb_m^{-1}X^{n-m}B\).
   \end{itemize}
-  Donc $A_2$ est de degré au plus $n-1$. D'après $\P(n)$ il existe un couple $(Q_2,R_2) \in \K[X]^2$ tel que $\begin{cases} A=BQ_2+R_2 \\ \deg(R_2) < \deg(B)\end{cases}$. D'où
+  Donc \(A_2\) est de degré au plus \(n-1\). D'après \(\P(n)\) il existe un couple \((Q_2,R_2) \in \K[X]^2\) tel que \(\begin{cases} A=BQ_2+R_2 \\ \deg(R_2) < \deg(B)\end{cases}\). D'où
   \begin{align}
     A&=A_2 + a_n b_m^{-1}X^{n-m}B\\
     &=BQ_2+R_2 +a_n b_m^{-1}X^{n-m}B\\
     &=BQ+R
   \end{align}
-  avec $Q=Q_2+a_n b_m^{-1}X^{n-m}$ et $R=R_2$ et donc $\deg(R) < \deg(B)$. Alors $\P(n+1)$ est vérifiée.
+  avec \(Q=Q_2+a_n b_m^{-1}X^{n-m}\) et \(R=R_2\) et donc \(\deg(R) < \deg(B)\). Alors \(\P(n+1)\) est vérifiée.
 
-  \emph{Conclusion}~: Par théorème de récurrence $\forall n \geqslant m \ \P(n)$.
+  \emph{Conclusion}~: Par théorème de récurrence \(\forall n \geqslant m \ \P(n)\).
 \end{proof}
 
 \subsection{Diviseurs et multiples}
 
 \begin{defdef}
-  Soient $A$ et $B$ deux polynômes de $\K[X]$. On dit que $A$ divise $B$ ou bien que $B$ multiplie $A$ dans $\K[X]$ et on note $A\mid{}B$ s'il existe un polynôme $Q$ tel que $B=AQ$.
+  Soient \(A\) et \(B\) deux polynômes de \(\K[X]\). On dit que \(A\) divise \(B\) ou bien que \(B\) multiplie \(A\) dans \(\K[X]\) et on note \(A\mid{}B\) s'il existe un polynôme \(Q\) tel que \(B=AQ\).
 \end{defdef}
 
 \emph{Remarque}~: Le polynôme nul est multiple de tous les polynômes puisque
@@ -483,14 +483,14 @@ mais il n'est diviseur que de lui-même
   \forall A \in \K[X] \quad 0_{\K[X]}\mid{}A \implies A=0_{\K[X]}
 \end{equation}
 
-Si $B$ est non nul et si $A\mid{}B$, alors $\deg(B) \geqslant \deg(A)$. En effet, il existe un polynôme non nul tel que $B=AQ$ et en passant au degré
+Si \(B\) est non nul et si \(A\mid{}B\), alors \(\deg(B) \geqslant \deg(A)\). En effet, il existe un polynôme non nul tel que \(B=AQ\) et en passant au degré
 \begin{equation}
   \deg(B) = \deg(A)+\deg(Q)
 \end{equation}
-donc $\deg(B) \geqslant \deg(A)$, car $\deg(Q)\in \N$.
+donc \(\deg(B) \geqslant \deg(A)\), car \(\deg(Q)\in \N\).
 
 \begin{prop}
-  Pour tous polynômes $A,B,C$ on a
+  Pour tous polynômes \(A,B,C\) on a
   \begin{align}
     A\mid{}A \\
     A\mid{}B \text{~et~} B\mid{}C \implies A\mid{}C
@@ -498,59 +498,59 @@ donc $\deg(B) \geqslant \deg(A)$, car $\deg(Q)\in \N$.
 C'est à dire que la relation de divisibilité est réflexive et transitive.
 \end{prop}
 \begin{proof}
-  Comme $A=1 A$ on a bien $A\mid{}A$. Ensuite si $A\mid{}B \text{~et~} B\mid{}C$ alors il existe deux polynomes $Q_1$ et $Q_2$ tels que $B=AQ_1$ et $C=BQ_2$ alors $C=A(Q_1Q_2)$ donc $A\mid{}C$.
+  Comme \(A=1 A\) on a bien \(A\mid{}A\). Ensuite si \(A\mid{}B \text{~et~} B\mid{}C\) alors il existe deux polynomes \(Q_1\) et \(Q_2\) tels que \(B=AQ_1\) et \(C=BQ_2\) alors \(C=A(Q_1Q_2)\) donc \(A\mid{}C\).
 \end{proof}
 
 \begin{prop}
-  Pour tous polynômes $A,B,C$ et $D$ on a
+  Pour tous polynômes \(A,B,C\) et \(D\) on a
   \begin{gather}
     A\mid{}B \implies A\mid{}BC ;\\
     A\mid{}B \text{~et~} C\mid{}D \implies AC\mid{}BD ;\\
     A\mid{}B \text{~et~} A\mid{}C \implies A\mid{}B+C.
   \end{gather}
 \end{prop}
-\begin{proof} Soient quatres polynômes $A,B,C$ et $D$, alors~:
+\begin{proof} Soient quatres polynômes \(A,B,C\) et \(D\), alors~:
   \begin{enumerate}
-  \item si $A\mid{}B$ alors il existe un polynôme $Q$ tel que $B=AQ$ et alors $BC=A(QC)$ donc $A\mid{}BC$;
-  \item si $A\mid{}B$ et $C\mid{}D$ alors il existe deux polynômes $Q_1$ et $Q_2$ tels que $B=AQ_1$ et $D=CQ_2$ et alors $BD = (AQ_1)(CQ_2)=(AC)(Q_1Q_2$ donc $AC\mid{}BD$.
-  \item si $A\mid{}B$ et $A\mid{}C$ alors il existe deux polynômes $Q_1$ et $Q_2$ tels que $B=AQ_1$ et $C=AQ_2$ et alors $B+C = A(Q_1+Q_2)$ donc $A\mid{}B+C$.
+  \item si \(A\mid{}B\) alors il existe un polynôme \(Q\) tel que \(B=AQ\) et alors \(BC=A(QC)\) donc \(A\mid{}BC\);
+  \item si \(A\mid{}B\) et \(C\mid{}D\) alors il existe deux polynômes \(Q_1\) et \(Q_2\) tels que \(B=AQ_1\) et \(D=CQ_2\) et alors \(BD = (AQ_1)(CQ_2)=(AC)(Q_1Q_2\) donc \(AC\mid{}BD\).
+  \item si \(A\mid{}B\) et \(A\mid{}C\) alors il existe deux polynômes \(Q_1\) et \(Q_2\) tels que \(B=AQ_1\) et \(C=AQ_2\) et alors \(B+C = A(Q_1+Q_2)\) donc \(A\mid{}B+C\).
   \end{enumerate}
 \end{proof}
 
 \begin{prop}
-  Soit un couple de polynômes $(A,B)$ avec $B$ non nul. Alors $B$ divise $A$ dans $\K[X]$ si et seulement si le reste de la division euclidienne de $A$ par $B$ dans $\K[X]$ est nul.
+  Soit un couple de polynômes \((A,B)\) avec \(B\) non nul. Alors \(B\) divise \(A\) dans \(\K[X]\) si et seulement si le reste de la division euclidienne de \(A\) par \(B\) dans \(\K[X]\) est nul.
 \end{prop}
 \begin{proof}
-  Supposons que $B$ divise $A$. Alors il existe un polynôme $Q$ tel que $A=BQ = BQ+0$. Le reste est nul et son degré vaut $-\infty < \deg(B)$. Par unicité de la division euclidienne, $Q$ est le quotient et $0$ le reste.
+  Supposons que \(B\) divise \(A\). Alors il existe un polynôme \(Q\) tel que \(A=BQ = BQ+0\). Le reste est nul et son degré vaut \(-\infty < \deg(B)\). Par unicité de la division euclidienne, \(Q\) est le quotient et \(0\) le reste.
 
-  La divison euclidienne nous indique su'il existe un unique couple de polynômes $(Q,R)$ tels que~:
+  La divison euclidienne nous indique su'il existe un unique couple de polynômes \((Q,R)\) tels que~:
   \begin{equation}
     \begin{cases}
       A=BQ+R \\ \deg(R) \leqslant \deg(B)
     \end{cases}
   \end{equation}
-  Si on fait l'hypothèse que le reste de la division euclidienne de $A$ par $B$ dans $\K[X]$ est nul ($\deg(R)=-\infty<\deg(B)$) alors $A=BQ$ et donc $B$ divise $A$.
+  Si on fait l'hypothèse que le reste de la division euclidienne de \(A\) par \(B\) dans \(\K[X]\) est nul (\(\deg(R)=-\infty<\deg(B)\)) alors \(A=BQ\) et donc \(B\) divise \(A\).
 \end{proof}
 
 \subsection{Polynômes associés}
 
 \begin{prop}
-  Soient deux polynômes $A$ et $B$. Il y a équivalence entre les assertions suivantes~:
+  Soient deux polynômes \(A\) et \(B\). Il y a équivalence entre les assertions suivantes~:
   \begin{enumerate}
-  \item $A\mid{}B$ et $B\mid{}A$
-  \item Il existe un scalaire $\lambda$ non nul tel que $A=\lambda B$.
+  \item \(A\mid{}B\) et \(B\mid{}A\)
+  \item Il existe un scalaire \(\lambda\) non nul tel que \(A=\lambda B\).
   \end{enumerate}
-  On dit alors que les polynômes $a$ et $B$ sont associés.
+  On dit alors que les polynômes \(a\) et \(B\) sont associés.
 \end{prop}
 
 \begin{proof}
-  Supposons que $A$ divise $B$ et que $B$ divise $A$, alors il existe deux polynômes $P$ et $Q$ tels que $B=PA$ et $A=QB$ alors $B=P(QB)$ donc par associativité et distributivité on a $B(1-PQ)=0$. Deux cas se présentent~:
+  Supposons que \(A\) divise \(B\) et que \(B\) divise \(A\), alors il existe deux polynômes \(P\) et \(Q\) tels que \(B=PA\) et \(A=QB\) alors \(B=P(QB)\) donc par associativité et distributivité on a \(B(1-PQ)=0\). Deux cas se présentent~:
   \begin{itemize}
-  \item Si $B$ est nul alors comme $B$ doivise $A$, $A$ est nul aussi. On peut prendre $\lambda=1$ et la relation est vraie;
-  \item Sinon, comme $\K[X]$ est un anneau intègre, on a $1-PQ=0$ et donc $PQ=1$. Le polynôme $Q_2$ es donc inversible dans $\K[X]$ alors il est de degré nul, c'est-à-dire qu'il existe un scalaire non nul $\lambda$ tel que $Q_2=\lambda$. Alors $A=\lambda B$.
+  \item Si \(B\) est nul alors comme \(B\) doivise \(A\), \(A\) est nul aussi. On peut prendre \(\lambda=1\) et la relation est vraie;
+  \item Sinon, comme \(\K[X]\) est un anneau intègre, on a \(1-PQ=0\) et donc \(PQ=1\). Le polynôme \(Q_2\) es donc inversible dans \(\K[X]\) alors il est de degré nul, c'est-à-dire qu'il existe un scalaire non nul \(\lambda\) tel que \(Q_2=\lambda\). Alors \(A=\lambda B\).
   \end{itemize}
 
-  Supposons qu'il existe un scalaire $\lambda$ non nul tel que $A=\lambda B$. Alors $B$ divise $A$. Le scalaire $\lambda$ est inversible donc $B=\lambda^{-1}A$ et donc $A$ divise $B$.
+  Supposons qu'il existe un scalaire \(\lambda\) non nul tel que \(A=\lambda B\). Alors \(B\) divise \(A\). Le scalaire \(\lambda\) est inversible donc \(B=\lambda^{-1}A\) et donc \(A\) divise \(B\).
 \end{proof}
 
 \section{Fonctions polynomiales}
@@ -558,31 +558,31 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
 \subsection{Fonction polynomiale associée à un polynôme}
 
 \begin{defdef}
-  Soit un polynôme $P$ à coefficients dans $\K$ tel que $P=\sum_{n \geqslant 0}a_n X^n$. On définit une application $\widetilde{P} \in \K^\K$ par~:
+  Soit un polynôme \(P\) à coefficients dans \(\K\) tel que \(P=\sum_{n \geqslant 0}a_n X^n\). On définit une application \(\widetilde{P} \in \K^\K\) par~:
   \begin{equation}
     \forall x \in \K \quad \widetilde{P}(x) = \sum_{n \geqslant 0} a_n x^n=\sum_{n=0}^N a_n x^n \quad (\forall N \geqslant \deg(P)).
   \end{equation}
-  $\widetilde{P}$ est appelée fonction polynomiale associée au polynôme $P$.
+  \(\widetilde{P}\) est appelée fonction polynomiale associée au polynôme \(P\).
 \end{defdef}
 
 \subsection{Valeur d'un polynôme en un point}
 
 \begin{defdef}
-  Soit un polynôme $P$ à coefficients dans $\K$ et un scalaire $\alpha$. On appelle valeur du polynôme $P$ en $\alpha$ et on note $P(\alpha)$, la valeur prise en $\alpha$ par la fonction polynomiale $\widetilde{P}$ associée à $P$ : $\widetilde{P}(\alpha)$.
+  Soit un polynôme \(P\) à coefficients dans \(\K\) et un scalaire \(\alpha\). On appelle valeur du polynôme \(P\) en \(\alpha\) et on note \(P(\alpha)\), la valeur prise en \(\alpha\) par la fonction polynomiale \(\widetilde{P}\) associée à \(P\) : \(\widetilde{P}(\alpha)\).
 \end{defdef}
 
 \begin{prop}
-  Pour tous polynômes $P$ et $Q$ et tous scalaire $\lambda$ et $\alpha$ on a~:
+  Pour tous polynômes \(P\) et \(Q\) et tous scalaire \(\lambda\) et \(\alpha\) on a~:
   \begin{enumerate}
-  \item $(P+\lambda Q)(\alpha)=P(\alpha) + \lambda Q(\alpha)$;
-  \item $(PQ(\alpha))=P(\alpha) \cdot Q(\alpha)$;
-  \item $(P \circ Q)(\alpha) = P(Q(\alpha))$.
+  \item \((P+\lambda Q)(\alpha)=P(\alpha) + \lambda Q(\alpha)\);
+  \item \((PQ(\alpha))=P(\alpha) \cdot Q(\alpha)\);
+  \item \((P \circ Q)(\alpha) = P(Q(\alpha))\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
   \item La linéarité est claire;
-  \item On note $P=\sum_{n \geqslant 0}a_n X^n$, $Q=\sum_{n \geqslant 0}b_n X^n$ et $QP=\sum_{n \geqslant 0}c_n X^n$ avec pour tout naturel $n$ $c_n = \sum_{k=0}^n a_kb_{n-k}$. Alors
+  \item On note \(P=\sum_{n \geqslant 0}a_n X^n\), \(Q=\sum_{n \geqslant 0}b_n X^n\) et \(QP=\sum_{n \geqslant 0}c_n X^n\) avec pour tout naturel \(n\) \(c_n = \sum_{k=0}^n a_kb_{n-k}\). Alors
     \begin{align}
       (PQ)(\alpha)&=\sum_{n \geqslant 0}c_n \alpha^n \\
       &=\sum_{n \geqslant 0} \sum_{k=0}^n a_k b_{n-k} \alpha^n\\
@@ -590,7 +590,7 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
       &=\sum_{k \geqslant 0}  a_k  \alpha^k \sum_{j \geqslant 0} b_j \alpha^j \quad (j=n-k)\\
       &=P(\alpha) Q(\alpha)
     \end{align}
-  \item On note $P=\sum_{n \geqslant 0}a_n X^n$ et on a
+  \item On note \(P=\sum_{n \geqslant 0}a_n X^n\) et on a
     \begin{align}
       (P \circ Q)(\alpha) &= \left(\sum_{n \geqslant 0} a_n Q^n \right)(\alpha)\\
       &= \sum_{n \geqslant 0} a_n Q^n(\alpha) \quad \text{~d'après} (1)\\
@@ -603,83 +603,83 @@ C'est à dire que la relation de divisibilité est réflexive et transitive.
 \subsection{Racines d'un polynôme}
 
 \begin{defdef}
-  Soit un polynôme $P$ à coefficients dans $\K$ et un scalaire $\alpha$. On dit que $\alpha$ est racine du polynôme  $P$ (c'est un zéro de $P$) si la valeur en $\alpha$ de $P$ est nulle. C'est-à-dire $P(\alpha)=0$.
+  Soit un polynôme \(P\) à coefficients dans \(\K\) et un scalaire \(\alpha\). On dit que \(\alpha\) est racine du polynôme  \(P\) (c'est un zéro de \(P\)) si la valeur en \(\alpha\) de \(P\) est nulle. C'est-à-dire \(P(\alpha)=0\).
 \end{defdef}
 
 \begin{prop}
-  Soit un polynôme $P$ à coefficients dans $\K$ et un scalaire $\alpha$. Le scalaire $\alpha$ est racine de $P$ si et seulement si $X-\alpha$ divise $P$.
+  Soit un polynôme \(P\) à coefficients dans \(\K\) et un scalaire \(\alpha\). Le scalaire \(\alpha\) est racine de \(P\) si et seulement si \(X-\alpha\) divise \(P\).
 \end{prop}
 \begin{proof}
-  Si $X-\alpha$ divise $P$, alors il existe un polynôme $Q$ tel que $P=(X-\alpha)Q$ et donc $P(\alpha)=(\alpha-\alpha)Q(\alpha)=0$.
+  Si \(X-\alpha\) divise \(P\), alors il existe un polynôme \(Q\) tel que \(P=(X-\alpha)Q\) et donc \(P(\alpha)=(\alpha-\alpha)Q(\alpha)=0\).
 
-  On effectue la division euclidienne de $P$ par $X-\alpha$. Il existe un unique couple de polynômes $(Q,R)$ tel que $P=(X-\alpha)Q+R$ avec $\deg(R) < \deg(X-\alpha)=1$. Alors le degré du reste vaut $0$ ou $-\infty$. Ainsi $R$ est un polynôme constant. Il existe alors un scalaire $\lambda$ tel que $R=\lambda$ et $P=(X-\alpha)Q+\lambda$. Si on prend comme hypothèse que $\alpha$ est racine de $P$ alors
+  On effectue la division euclidienne de \(P\) par \(X-\alpha\). Il existe un unique couple de polynômes \((Q,R)\) tel que \(P=(X-\alpha)Q+R\) avec \(\deg(R) < \deg(X-\alpha)=1\). Alors le degré du reste vaut \(0\) ou \(-\infty\). Ainsi \(R\) est un polynôme constant. Il existe alors un scalaire \(\lambda\) tel que \(R=\lambda\) et \(P=(X-\alpha)Q+\lambda\). Si on prend comme hypothèse que \(\alpha\) est racine de \(P\) alors
   \begin{equation}
     0 = P(\alpha) = (\alpha-\alpha)Q(\alpha)+ \lambda
   \end{equation}
-  alors $\lambda=0$. Le reste est nul par conséquent $X-\alpha$ divise $P$.
+  alors \(\lambda=0\). Le reste est nul par conséquent \(X-\alpha\) divise \(P\).
 \end{proof}
 
 \begin{prop}
-  Soient un polynôme $P$ à coefficients dans $\K$, $n$ un naturel $n>1$ et $n$ racines distinctes $\alpha_1, \ldots, \alpha_n$ du polynôme $P$. Alors $\prod_{i=1}^n (X-\alpha_i)$ divise $P$.
+  Soient un polynôme \(P\) à coefficients dans \(\K\), \(n\) un naturel \(n>1\) et \(n\) racines distinctes \(\alpha_1, \ldots, \alpha_n\) du polynôme \(P\). Alors \(\prod_{i=1}^n (X-\alpha_i)\) divise \(P\).
 \end{prop}
 \begin{proof}
-  On prouve par récurrence sur $n \in \N^*$ l'assertion suivante : $\P(n)$ ``$\forall P \in \K[X] \ \forall (\alpha_1, \ldots, \alpha_n)$ racines de $P$, $\prod_{i=1}^n (X-\alpha_i)$ divise $P$.''
+  On prouve par récurrence sur \(n \in \N^*\) l'assertion suivante : \(\P(n)\) ``\(\forall P \in \K[X] \ \forall (\alpha_1, \ldots, \alpha_n)\) racines de \(P\), \(\prod_{i=1}^n (X-\alpha_i)\) divise \(P\).''
 
-  \emph{Initialisation}: $n=1$, déjà faite avec la proposition précédente.
+  \emph{Initialisation}: \(n=1\), déjà faite avec la proposition précédente.
 
-  \emph{Hérédité}: Soit $n>1$ et supposons $\P(n)$, montrons $\P(n+1)$. Soient un polynôme $P$ à coefficients dans $\K$ et $n+1$ racines distinctes $\alpha_1, \ldots, \alpha_{n+1}$ du polynôme $P$. L'hypothèse de récurrence nous dit donc que $\prod_{i=1}^n (X-\alpha_i)$ divise $P$. Il existe donc un polynôme $Q$ à coefficients dans $\K$ tel que $P = \prod_{i=1}^n (X-\alpha_i) Q$.
+  \emph{Hérédité}: Soit \(n>1\) et supposons \(\P(n)\), montrons \(\P(n+1)\). Soient un polynôme \(P\) à coefficients dans \(\K\) et \(n+1\) racines distinctes \(\alpha_1, \ldots, \alpha_{n+1}\) du polynôme \(P\). L'hypothèse de récurrence nous dit donc que \(\prod_{i=1}^n (X-\alpha_i)\) divise \(P\). Il existe donc un polynôme \(Q\) à coefficients dans \(\K\) tel que \(P = \prod_{i=1}^n (X-\alpha_i) Q\).
 
-  Comme $\alpha_{n+1}$ est une racine on a
+  Comme \(\alpha_{n+1}\) est une racine on a
   \begin{equation}
     0 = P(\alpha_{n+1}) = \prod_{i=1}^n (\alpha_{n+1}-\alpha_i) Q(\alpha_{n+1})
   \end{equation}
-  Comme les racines sont distinctes on a $\prod_{i=1}^n (\alpha_{n+1}-\alpha_i) \neq 0$ d'où $Q(\alpha_{n+1})=0$. On en déduit d'après la proposition précédente que $X-\alpha_{n+1}$ divise $Q$. Alors il existe un autre polynôme $Q_1$ tel que $Q=(X-\alpha_{n+1})Q_1$.
+  Comme les racines sont distinctes on a \(\prod_{i=1}^n (\alpha_{n+1}-\alpha_i) \neq 0\) d'où \(Q(\alpha_{n+1})=0\). On en déduit d'après la proposition précédente que \(X-\alpha_{n+1}\) divise \(Q\). Alors il existe un autre polynôme \(Q_1\) tel que \(Q=(X-\alpha_{n+1})Q_1\).
 
   Finalement
   \begin{equation}
     P = \prod_{i=1}^n (X-\alpha_i) Q =  \prod_{i=1}^{n+1} (X-\alpha_i) Q_1
   \end{equation}
-  Donc $\prod_{i=1}^{n+1} (X-\alpha_i)$ divise $P$. $\P(n+1)$ est vraie.
+  Donc \(\prod_{i=1}^{n+1} (X-\alpha_i)\) divise \(P\). \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion}~: On a montré $\P(1)$ et $\forall n >1 \P(n) \implies \P(n+1)$ donc par théorème de récurrence pour tout naturel $n$ $\P(n)$ est vraie.
+  \emph{Conclusion}~: On a montré \(\P(1)\) et \(\forall n >1 \P(n) \implies \P(n+1)\) donc par théorème de récurrence pour tout naturel \(n\) \(\P(n)\) est vraie.
 \end{proof}
 
 \begin{cor}[Important]\label{cor:tresImportant}
-  Pour tout naturel $n$, tout polynôme non nul de degré inférieur ou égal à $n$ admet au plus $n$ racines distinctes.
+  Pour tout naturel \(n\), tout polynôme non nul de degré inférieur ou égal à \(n\) admet au plus \(n\) racines distinctes.
 \end{cor}
 \begin{proof}
-  Soit un un polynôme $P$ non nul à coefficients dans $\K$. On prouve cette propriété par contraposée. Si $P$ admet au moins $n+1$ racines distinctes $\alpha_1, \ldots, \alpha_{n+1}$. Alors $\prod_{i=1}^{n+1} (X-\alpha_i)$ divise $P$. Comme $P$ est non nul en passant au degré on a
+  Soit un un polynôme \(P\) non nul à coefficients dans \(\K\). On prouve cette propriété par contraposée. Si \(P\) admet au moins \(n+1\) racines distinctes \(\alpha_1, \ldots, \alpha_{n+1}\). Alors \(\prod_{i=1}^{n+1} (X-\alpha_i)\) divise \(P\). Comme \(P\) est non nul en passant au degré on a
   \begin{equation}
     \deg(P) \geqslant \deg\left(\prod_{i=1}^{n+1} (X-\alpha_i)\right) = n+1
   \end{equation}
   et donc on a le résultat en passant par la contraposée.
 \end{proof}
 
-\emph{Intérêt}~: Si on veut montrer qu'un polynôme $P$ est nul, il suffit de montrer qu'il a un nombre de racines strictement supérieur à son degré, voire même à prouver qu'il admet une infinité de racines.
+\emph{Intérêt}~: Si on veut montrer qu'un polynôme \(P\) est nul, il suffit de montrer qu'il a un nombre de racines strictement supérieur à son degré, voire même à prouver qu'il admet une infinité de racines.
 
 \subsection{Ordre de multiplicité d'un racine}
 
 \begin{defdef}
-  Soient un un polynôme $P$ à coefficients dans $\K$, un scalaire $\alpha$ et un naturel non nul $n$.
+  Soient un un polynôme \(P\) à coefficients dans \(\K\), un scalaire \(\alpha\) et un naturel non nul \(n\).
   \begin{enumerate}
-  \item On dit que $\alpha$ est une racine de $P$ d'ordre au moins égal à $n$ si $(X-\alpha)^n$ divise $P$.
-  \item On dit que $\alpha$ est une racine de $P$ d'ordre strictement égal à $n$ si $(X-\alpha)^n$ divise $P$ mais $(X-\alpha)^{n+1}$ ne divise pas $P$.
+  \item On dit que \(\alpha\) est une racine de \(P\) d'ordre au moins égal à \(n\) si \((X-\alpha)^n\) divise \(P\).
+  \item On dit que \(\alpha\) est une racine de \(P\) d'ordre strictement égal à \(n\) si \((X-\alpha)^n\) divise \(P\) mais \((X-\alpha)^{n+1}\) ne divise pas \(P\).
   \end{enumerate}
 \end{defdef}
 
-Si $\alpha \in \K$ est racine du polynôme $P$, alors $X-\alpha$ divise $P$ et donc $\alpha$ est racine d'ordre au moins égal à $1$. Soit la partie
+Si \(\alpha \in \K\) est racine du polynôme \(P\), alors \(X-\alpha\) divise \(P\) et donc \(\alpha\) est racine d'ordre au moins égal à \(1\). Soit la partie
 \begin{equation}
   \courbe = \{n \in \N^*, (X-\alpha)^n \mid{} P\}
 \end{equation}
-alors c'est une partie de $\N^*$ non vide (puisque $1 \in \courbe$) et majorée par le degré de $P$. En effet si $n \in \courbe$ alors $(X-\alpha)^n \mid{} P$ et en passant au degré on a $\deg(X-\alpha)^n \leqslant \deg P$ et donc $n \leqslant \deg(P)$. Ainsi $\courbe$ admet un plus grand élément. D'où la définition
+alors c'est une partie de \(\N^*\) non vide (puisque \(1 \in \courbe\)) et majorée par le degré de \(P\). En effet si \(n \in \courbe\) alors \((X-\alpha)^n \mid{} P\) et en passant au degré on a \(\deg(X-\alpha)^n \leqslant \deg P\) et donc \(n \leqslant \deg(P)\). Ainsi \(\courbe\) admet un plus grand élément. D'où la définition
 
 \begin{defdef}
-  Soient un un polynôme $P$ à coefficients dans $\K$ et un scalaire $\alpha$. On suppose que $\alpha$ est racine de $P$. Alors il existe un unique naturel $r \neq 0$ tel que $\alpha$ soit racine de $P$ d'ordre strictement égal à $r$, ($r=\max \courbe$).
+  Soient un un polynôme \(P\) à coefficients dans \(\K\) et un scalaire \(\alpha\). On suppose que \(\alpha\) est racine de \(P\). Alors il existe un unique naturel \(r \neq 0\) tel que \(\alpha\) soit racine de \(P\) d'ordre strictement égal à \(r\), (\(r=\max \courbe\)).
 
-  L'entier $r$ est appelé l'ordre de multiplicité de la racine $\alpha$ du polynôme $P$. 
+  L'entier \(r\) est appelé l'ordre de multiplicité de la racine \(\alpha\) du polynôme \(P\). 
 \end{defdef}
 
-Ainsi pour tout naturel non nul $r$, $\alpha$ est racine d'ordre $r$ de $P$ si et seulement si $(X-\alpha)^r \mid{} P$ et $(X-\alpha)^{r+1} \not\mid{} P$. Par extension
+Ainsi pour tout naturel non nul \(r\), \(\alpha\) est racine d'ordre \(r\) de \(P\) si et seulement si \((X-\alpha)^r \mid{} P\) et \((X-\alpha)^{r+1} \not\mid{} P\). Par extension
 \begin{align}
   \alpha \text{~est racine d'ordre zéro de~} P &\iff 1\mid{}P \text{~et~} (X-\alpha) \not\mid{} P \\
   &\iff (X-\alpha) \not\mid{} P\\
@@ -687,35 +687,35 @@ Ainsi pour tout naturel non nul $r$, $\alpha$ est racine d'ordre $r$ de $P$ si e
 \end{align}
 
 \begin{prop}
-  Soient $P \in \K[X]$, $\alpha \in \K$ et $n \in \N^*$. On suppose qu'il existe un polynôme $Q \in \K[X]$ tel que $P=(X-\alpha)^n Q$. Alors $\alpha$ est racine de $P$ d'ordre de multiplicité égal à $n$ si et seulement si $Q(\alpha)\neq 0$.
+  Soient \(P \in \K[X]\), \(\alpha \in \K\) et \(n \in \N^*\). On suppose qu'il existe un polynôme \(Q \in \K[X]\) tel que \(P=(X-\alpha)^n Q\). Alors \(\alpha\) est racine de \(P\) d'ordre de multiplicité égal à \(n\) si et seulement si \(Q(\alpha)\neq 0\).
 \end{prop}
 \begin{proof}
-  Montrons la contraposée, c'est-à-dire que $\alpha$ admet un ordre de multiplmicité plus grand que $n+1$ si et seulement si $Q(\alpha)=0$.
+  Montrons la contraposée, c'est-à-dire que \(\alpha\) admet un ordre de multiplmicité plus grand que \(n+1\) si et seulement si \(Q(\alpha)=0\).
 
-  Si $Q(\alpha)=0$ alors $X-\alpha$ divise $Q$ donc il existe $Q_1 \in \K[X]$ tel que $Q=(X-\alpha)Q_1$. Alors $P=(X-\alpha)^{n+1} Q_1$. Ainsi l'ordre de multiplicité de $\alpha$ est supérieur ou égal à $n+1$.
+  Si \(Q(\alpha)=0\) alors \(X-\alpha\) divise \(Q\) donc il existe \(Q_1 \in \K[X]\) tel que \(Q=(X-\alpha)Q_1\). Alors \(P=(X-\alpha)^{n+1} Q_1\). Ainsi l'ordre de multiplicité de \(\alpha\) est supérieur ou égal à \(n+1\).
 
-  Si l'ordre de multiplicité de $\alpha$ est supérieur ou égal à $n+1$, alors $(X-\alpha)^{n+1}$ divise $P$. Il existe $Q_2 \in \K[X]$ tel que $P=(X-\alpha)^{n+1} Q_2$. Or $P=(X-\alpha)^n Q$. Donc
+  Si l'ordre de multiplicité de \(\alpha\) est supérieur ou égal à \(n+1\), alors \((X-\alpha)^{n+1}\) divise \(P\). Il existe \(Q_2 \in \K[X]\) tel que \(P=(X-\alpha)^{n+1} Q_2\). Or \(P=(X-\alpha)^n Q\). Donc
   \begin{align}
     (X-\alpha)^{n+1} Q_2 &=(X-\alpha)^n Q \\
     (X-\alpha)^n [(X-\alpha)Q_2 - Q]&=0\\
   \end{align}
-  Comme l'anneau $\K[X]$ est intègre on a $(X-\alpha)Q_2 - Q=0$ et donc $Q=(X-\alpha)Q_2$. Finalement $\alpha$ est racine de $Q$, $Q(\alpha)=0$.
+  Comme l'anneau \(\K[X]\) est intègre on a \((X-\alpha)Q_2 - Q=0\) et donc \(Q=(X-\alpha)Q_2\). Finalement \(\alpha\) est racine de \(Q\), \(Q(\alpha)=0\).
 \end{proof}
 
 \begin{prop}
-  Soient $n \in \N^*$, alors l'assertion suivante est vraie : $\P(n)$ ``Soient $P \in \K[X]$ et $\alpha_1, \ldots, \alpha_n \in \K$ $n$ racines distinctes de $P$ d'ordres de multiplicité respectif $r_1, \ldots, r_n$. Alors $\prod_{i=1}^n (X-\alpha_i)^{r_i}$ divise $P$.''
+  Soient \(n \in \N^*\), alors l'assertion suivante est vraie : \(\P(n)\) ``Soient \(P \in \K[X]\) et \(\alpha_1, \ldots, \alpha_n \in \K\) \(n\) racines distinctes de \(P\) d'ordres de multiplicité respectif \(r_1, \ldots, r_n\). Alors \(\prod_{i=1}^n (X-\alpha_i)^{r_i}\) divise \(P\).''
 \end{prop}
 
 \begin{proof}[Démonstration par récurrencence]
-  \emph{Initialisation}~: Pour $n=1$, c'est la définition de l'ordre de multiplicité.
+  \emph{Initialisation}~: Pour \(n=1\), c'est la définition de l'ordre de multiplicité.
 
-  \emph{Hérédité}~: Soit $n \in \N^*$ et on suppose $\P(n)$. Montrons $\P(n+1)$. Soient $P \in \K[X]$ et $\alpha_1, \ldots, \alpha_{n+1} \in \K$ $n$ racines distinctes de $P$ d'ordres de multiplicité respectif $r_1, \ldots, r_{n+1}$.
+  \emph{Hérédité}~: Soit \(n \in \N^*\) et on suppose \(\P(n)\). Montrons \(\P(n+1)\). Soient \(P \in \K[X]\) et \(\alpha_1, \ldots, \alpha_{n+1} \in \K\) \(n\) racines distinctes de \(P\) d'ordres de multiplicité respectif \(r_1, \ldots, r_{n+1}\).
 
-  Les $n$ premières racines de $P$ sont distinctes donc l'hypothèse de récurrence nous dit que $\prod_{i=1}^n (X-\alpha_i)^{r_i}$ divise $P$. Il existe donc $Q \in \K[X]$ tel que $P = \prod_{i=1}^n (X-\alpha_i)^{r_i} Q$.
+  Les \(n\) premières racines de \(P\) sont distinctes donc l'hypothèse de récurrence nous dit que \(\prod_{i=1}^n (X-\alpha_i)^{r_i}\) divise \(P\). Il existe donc \(Q \in \K[X]\) tel que \(P = \prod_{i=1}^n (X-\alpha_i)^{r_i} Q\).
 
-  On calcule $P(\alpha_{n+1})$. D'une part $P(\alpha_{n+1})=0$ puisque c'est une racine. D'autre part $P(\alpha_{n+1}) = \prod_{i=1}^n (\alpha_{n+1}-\alpha_i)^{r_i} Q (\alpha_{n+1})$. Les racines sont distinctes donc le produit est non nul et donc $Q(\alpha_{n+1})=0$. Ainsi $\alpha_{n+1}$ est racine de $Q$.
+  On calcule \(P(\alpha_{n+1})\). D'une part \(P(\alpha_{n+1})=0\) puisque c'est une racine. D'autre part \(P(\alpha_{n+1}) = \prod_{i=1}^n (\alpha_{n+1}-\alpha_i)^{r_i} Q (\alpha_{n+1})\). Les racines sont distinctes donc le produit est non nul et donc \(Q(\alpha_{n+1})=0\). Ainsi \(\alpha_{n+1}\) est racine de \(Q\).
 
-  Soit $r$ l'ordre de multiplicité de $\alpha_{n+1}$ (en tant que racine de $Q$). Montrons que $r=r_{n+1}$ ($r_{n+1}$ multiplicité pour $P$). Il existe $Q_1 \in \K[X]$ tel que $Q=(X-\alpha_{n+1})^r Q_1$ et $Q_1(\alpha_{n+1}) \neq 0$.
+  Soit \(r\) l'ordre de multiplicité de \(\alpha_{n+1}\) (en tant que racine de \(Q\)). Montrons que \(r=r_{n+1}\) (\(r_{n+1}\) multiplicité pour \(P\)). Il existe \(Q_1 \in \K[X]\) tel que \(Q=(X-\alpha_{n+1})^r Q_1\) et \(Q_1(\alpha_{n+1}) \neq 0\).
 
   On sait que
   \begin{align}
@@ -723,41 +723,41 @@ Ainsi pour tout naturel non nul $r$, $\alpha$ est racine d'ordre $r$ de $P$ si e
     &=\prod_{i=1}^{n} (X-\alpha_i)^{r_i}(X-\alpha_{n+1})^r Q_1\\
     &=(X-\alpha_{n+1})^r Q_2
   \end{align}
-  avec $Q_2=\prod_{i=1}^{n} (X-\alpha_i)^{r_i} Q_1$. Ainsi
+  avec \(Q_2=\prod_{i=1}^{n} (X-\alpha_i)^{r_i} Q_1\). Ainsi
   \begin{equation}
     Q_2(\alpha_{n+1}) = \prod_{i=1}^{n} (\alpha_{n+1}-\alpha_i)^{r_i} Q_1(\alpha_{n+1}) \neq 0
   \end{equation}
-  Donc $r$ est aussi l'ordre de la racine $\alpha_{n+1}$ pour le polynôme $P$. Alors par définition de $r_{n+1}$~: $r=r_{n+1}$. Finalement
+  Donc \(r\) est aussi l'ordre de la racine \(\alpha_{n+1}\) pour le polynôme \(P\). Alors par définition de \(r_{n+1}\)~: \(r=r_{n+1}\). Finalement
   \begin{equation}
     P =\prod_{i=1}^{n+1} (X-\alpha_i)^{r_i} Q_1
   \end{equation}
-  L'assertion $\P(n+1)$ est vraie.
+  L'assertion \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion}~: On a montré que $\P(1)$ est vraie et que pour tout naturel $n>1$ on a $\P(n) \implies \P(n+1)$. Alors par thèorème de récurrence $\P$ est vraie.
+  \emph{Conclusion}~: On a montré que \(\P(1)\) est vraie et que pour tout naturel \(n>1\) on a \(\P(n) \implies \P(n+1)\). Alors par thèorème de récurrence \(\P\) est vraie.
 \end{proof}
 
 Il y a deux manière de compter les racines d'un polynôme~:
 \begin{itemize}
 \item Soit on compte les racines distinctes;
-\item Soit on compte les racines avec leurs oordres de multiplicité, c'est-à-dire qu'une racine $\alpha$ d'ordre $r$ comptera comme $r$ racines.
+\item Soit on compte les racines avec leurs oordres de multiplicité, c'est-à-dire qu'une racine \(\alpha\) d'ordre \(r\) comptera comme \(r\) racines.
 \end{itemize}
 
-\emph{Exemple}~: $P=(X-1)^2(X-3)^3$. Alors $P$ à deux racines distinctes, $1$ et $3$. En tenant compte des ordres de multiplicité, $P$ a ``5'' racines comptées avec leur ordre de multiplicité.
+\emph{Exemple}~: \(P=(X-1)^2(X-3)^3\). Alors \(P\) à deux racines distinctes, \(1\) et \(3\). En tenant compte des ordres de multiplicité, \(P\) a ``5'' racines comptées avec leur ordre de multiplicité.
 
 \begin{cor}
-  Soit un naturel $n$. Un polynôme de degré $n$ admet au plus $n$ racines comptées avec leurs ordres de multiplicité.
+  Soit un naturel \(n\). Un polynôme de degré \(n\) admet au plus \(n\) racines comptées avec leurs ordres de multiplicité.
 \end{cor}
 \begin{proof}
-  S'il y a $n+1$ racines de $P$ comptées avec leur ordres de multiplicité, on note~:
+  S'il y a \(n+1\) racines de \(P\) comptées avec leur ordres de multiplicité, on note~:
   \begin{itemize}
-  \item $\alpha_1, \ldots, \alpha_p$ les $p$ racines distinctes;
-  \item $r_1, \ldots, r_p$ leurs ordres de multiplicité.
+  \item \(\alpha_1, \ldots, \alpha_p\) les \(p\) racines distinctes;
+  \item \(r_1, \ldots, r_p\) leurs ordres de multiplicité.
   \end{itemize}
   D'après le corollaire~\ref{cor:tresImportant}, en comptant les racines avec leurs ordres de multiplicité
   \begin{equation}
     \sum_{i=1}^p r_i \geqslant n+1
   \end{equation}
-  On a montré que $\prod_{i=1}^p (X-\alpha_i)^{r_i}$ divise $P$ donc en passant au degré
+  On a montré que \(\prod_{i=1}^p (X-\alpha_i)^{r_i}\) divise \(P\) donc en passant au degré
   \begin{equation}
     \deg(P) \geqslant \deg\left(\prod_{i=1}^p (X-\alpha_i)^{r_i}\right) = \sum_{i=1}^p r_i \geqslant n+1
   \end{equation}
@@ -765,27 +765,27 @@ Il y a deux manière de compter les racines d'un polynôme~:
 
 \subsection{Isomorphisme entre polynômes et fonctions polynomiales}
 
-Soit $\K$ un corps infini. Soit aussi l'application $\fonction{\varphi}{\K[X]}{\K^{\K}}{P}{\widetilde{P}}$.
+Soit \(\K\) un corps infini. Soit aussi l'application \(\fonction{\varphi}{\K[X]}{\K^{\K}}{P}{\widetilde{P}}\).
 
 \begin{prop}
-  L'application $\varphi$ est une application linéaire et injective. Son image est l'ensemble des fonctions polynomiales de $\K$ dans lui-même, noté $\P(\K,\K)$.
+  L'application \(\varphi\) est une application linéaire et injective. Son image est l'ensemble des fonctions polynomiales de \(\K\) dans lui-même, noté \(\P(\K,\K)\).
 
-  L'application $\psi = \varphi^{|\P(\K,\K)}$ est un isomorphisme de $\K$-espaces vectoriels, qui permettra d'identifier $P$ et $\widetilde{P}$.
+  L'application \(\psi = \varphi^{|\P(\K,\K)}\) est un isomorphisme de \(\K\)-espaces vectoriels, qui permettra d'identifier \(P\) et \(\widetilde{P}\).
 \end{prop}
 \begin{proof}
-  L'application $\varphi$ est linéaire clairement. Déterminons son noyau. Soit $P \in \Ker(\varphi)$, c'est à dire que $\varphi(P)=0_{\K^\K}$, c'est-à-dire que pour tout scalaire $x$, $\widetilde{P}(x) = 0_{\K}$. Comme le corps $\K$ est infini, cela signifie que le polynôme $P$ admet une infinité de racines. On a vu qu'un polynôme admettant une infinité de racines est nul. Ainsi $\Ker(\varphi) \subset \{0\}$. Comme le noyau est un sous-espace vectoriel, l'autre inclusion est vraie aussi. Donc le noyau est nul et ainsi l'application $\varphi$ est injective.
+  L'application \(\varphi\) est linéaire clairement. Déterminons son noyau. Soit \(P \in \Ker(\varphi)\), c'est à dire que \(\varphi(P)=0_{\K^\K}\), c'est-à-dire que pour tout scalaire \(x\), \(\widetilde{P}(x) = 0_{\K}\). Comme le corps \(\K\) est infini, cela signifie que le polynôme \(P\) admet une infinité de racines. On a vu qu'un polynôme admettant une infinité de racines est nul. Ainsi \(\Ker(\varphi) \subset \{0\}\). Comme le noyau est un sous-espace vectoriel, l'autre inclusion est vraie aussi. Donc le noyau est nul et ainsi l'application \(\varphi\) est injective.
 
-  Comme $\P(\K,\K) = \Image(\varphi)$, $\psi=\varphi^{|\Image(\varphi)}$ est surjective. Comme elle est aussi injective et linéaire (grâce à l'injectivité et la linéarité de $\varphi$), c'est un isomorphisme.
+  Comme \(\P(\K,\K) = \Image(\varphi)\), \(\psi=\varphi^{|\Image(\varphi)}\) est surjective. Comme elle est aussi injective et linéaire (grâce à l'injectivité et la linéarité de \(\varphi\)), c'est un isomorphisme.
 \end{proof}
 
 \section{Polynôme dérivé}
 
-Dans cette section $\K=\R$ ou $\C$.
+Dans cette section \(\K=\R\) ou \(\C\).
 
 \subsection{Notion de polynôme dérivé}
 
 \begin{defdef}
-  Soit $P = \sum_{n \geqslant 0}a_n X^n$ un polynôme à coefficients dans $\K$. On définit le polynôme dérivée, noté $P'$, par
+  Soit \(P = \sum_{n \geqslant 0}a_n X^n\) un polynôme à coefficients dans \(\K\). On définit le polynôme dérivée, noté \(P'\), par
   \begin{align}
     P' &= \sum_{n \geqslant 1} na_n X^{n-1} \\
     &=\sum_{n=1}^N na_n X^{n-1} && \forall N \geqslant \deg(P) \\
@@ -793,12 +793,12 @@ Dans cette section $\K=\R$ ou $\C$.
   \end{align}
 \end{defdef}
 
-\emph{Remarque}~: Si $\K=\R$, l'identification entre $P$ et sa fonction polynomiale $\widetilde{P}$ permet de transposer à la dérivation des polynômes réels les propriétés vues sur la dérivations des fonctions de $\R$ vers $\R$.
+\emph{Remarque}~: Si \(\K=\R\), l'identification entre \(P\) et sa fonction polynomiale \(\widetilde{P}\) permet de transposer à la dérivation des polynômes réels les propriétés vues sur la dérivations des fonctions de \(\R\) vers \(\R\).
 
-Cependant si $\K=\C$, on ne sait rien faire.
+Cependant si \(\K=\C\), on ne sait rien faire.
 
 \begin{prop}
-  Soit $P \in \K[X]$, alors
+  Soit \(P \in \K[X]\), alors
   \begin{equation}
     \begin{cases}
       \deg(P') = \deg(P)-1 & \deg(P)>0 \\
@@ -807,19 +807,19 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si $\deg(P)>0$ on écrit $P$ sous la forme $P=\sum_{n=0}^N a_n X^n$ avec $N=\deg(P) \in \N^*$ et tel que $a_N \neq 0$. Alors $P'=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p}$ et de plus $\deg(P') \leqslant N-1$ $(N-1+1)a_{N-1+1}=Na_N \neq 0$. Le degré vaut donc $\deg(P') = N-1=\deg(P)-1$.
+  Si \(\deg(P)>0\) on écrit \(P\) sous la forme \(P=\sum_{n=0}^N a_n X^n\) avec \(N=\deg(P) \in \N^*\) et tel que \(a_N \neq 0\). Alors \(P'=\sum_{p=0}^{N-1} (p+1)a_{p+1} X^{p}\) et de plus \(\deg(P') \leqslant N-1\) \((N-1+1)a_{N-1+1}=Na_N \neq 0\). Le degré vaut donc \(\deg(P') = N-1=\deg(P)-1\).
 
-  Si $\deg(P) \leqslant 0$, alors $P$ est un polynôme constant et son polynôme dérivée est nul. Alors son degré vaut $\deg(P')=-\infty$.
+  Si \(\deg(P) \leqslant 0\), alors \(P\) est un polynôme constant et son polynôme dérivée est nul. Alors son degré vaut \(\deg(P')=-\infty\).
 \end{proof}
 
 \begin{prop}[Linéarité]
-  Pour tous $(P,Q) \in \K[X]^2$ et tout $\lambda \in \K$, on a~:
+  Pour tous \((P,Q) \in \K[X]^2\) et tout \(\lambda \in \K\), on a~:
   \begin{equation}
     (\lambda P+Q) = \lambda P'+Q'.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{n \geqslant 0} b_n X^n$. Alors $\lambda P+Q = \sum_{n \geqslant 0} (\lambda a_n+b_n) X^n$. Par définition du polynôme dérivé, on a
+  On note \(P=\sum_{n \geqslant 0} a_n X^n\) et \(Q=\sum_{n \geqslant 0} b_n X^n\). Alors \(\lambda P+Q = \sum_{n \geqslant 0} (\lambda a_n+b_n) X^n\). Par définition du polynôme dérivé, on a
   \begin{equation}
     (\lambda P+Q)' = \sum_{n \geqslant 1} n(\lambda a_n+b_n) X^{n-1}
   \end{equation}
@@ -831,13 +831,13 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \end{proof}
 
 \begin{prop}
-  Soient $P$ et $Q$ dans $\K[X]$ alors
+  Soient \(P\) et \(Q\) dans \(\K[X]\) alors
   \begin{equation}
     (PQ)' = P'Q +PQ'.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $P=\sum_{n \geqslant 0} a_n X^n$ et $Q=\sum_{k \geqslant 0} b_k X^k$. Alors
+  On note \(P=\sum_{n \geqslant 0} a_n X^n\) et \(Q=\sum_{k \geqslant 0} b_k X^k\). Alors
   \begin{equation}
     PQ = \left(\sum_{n \geqslant 0} a_n X^n\right) \left(\sum_{k \geqslant 0} b_k X^k\right) = \sum_{n \geqslant 0} \sum_{k \geqslant 0} a_nb_k X^{n+k}
   \end{equation}
@@ -845,7 +845,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \begin{equation}
     (PQ)' = \sum_{n \geqslant 0} \sum_{k \geqslant 0} a_nb_k (X^{n+k})'
   \end{equation}
-  avec pour tous naturel $k$ et $n$
+  avec pour tous naturel \(k\) et \(n\)
   \begin{align}
     (X^{n+k})' =(n+k)X^{n+k-1} &=nX^{n-1}X^k +kX^{k-1}X^n\\
     &=(X^n)'X^k +(X^k)'X^n
@@ -862,7 +862,7 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \subsection{Polynômes dérivées successifs et formule de Leibniz}
 
 \begin{defdef}
-  Soit $P \in \K[X]$. On définit par récurrence les polynômes dérivés de $P$ d'ordre $k$, $P^{(k)}$, par
+  Soit \(P \in \K[X]\). On définit par récurrence les polynômes dérivés de \(P\) d'ordre \(k\), \(P^{(k)}\), par
   \begin{align}
     P^{(0)}=P\\
     P^{(1)}=P'\\
@@ -871,24 +871,24 @@ Cependant si $\K=\C$, on ne sait rien faire.
 \end{defdef}
 
 \begin{prop}
-  Soient $P \in \K[X]$ et $n \in \N$, alors
+  Soient \(P \in \K[X]\) et \(n \in \N\), alors
   \begin{equation}
     \deg(P) \leqslant n \iff P^{(n+1)} = 0
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si $\deg(P)=k \in \N^*$, on montre par récurrence ``immédiate'' que
+  Si \(\deg(P)=k \in \N^*\), on montre par récurrence ``immédiate'' que
   \begin{equation}
     \deg(P^{(k)}) = \deg(P)-k = 0
   \end{equation}
-  Ainsi $P^{(k+1)}$ est le polynôme nul. Alors si on dérivent encore plus, c'est-à-dire si $\deg(P) \leqslant n$ alors $P^{(n+1)}=0$.
+  Ainsi \(P^{(k+1)}\) est le polynôme nul. Alors si on dérivent encore plus, c'est-à-dire si \(\deg(P) \leqslant n\) alors \(P^{(n+1)}=0\).
 
-  Montrons la deuxième implication par contraposée~: si maintenant $\deg(P) \geqslant n+1$ alors par récurrence ``immédiate''
+  Montrons la deuxième implication par contraposée~: si maintenant \(\deg(P) \geqslant n+1\) alors par récurrence ``immédiate''
   \begin{align}
     \deg(P^{(n)}) &\geqslant n+1-n = 1 \\
     \deg(P^{(n+1)}) &\geqslant 0
   \end{align}
-  Alors $P^{(n+1)}$ n'est pas le polynôme nul. 
+  Alors \(P^{(n+1)}\) n'est pas le polynôme nul. 
 \end{proof}
 
 \begin{theo}[Théorème de Leibniz]
@@ -897,15 +897,15 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{theo}
 \begin{proof}
-  On montre par récurrence sur $n \in \N$ l'assertion suivante : $\P(n)$ ``$\forall (P,Q) \in \K[X]^2 \ \forall n \in \N$ $(PQ)^{(n)} = \sum_{k=0}^n \binom{n}{k} P^{(k)}Q^{(n-k)}$''.
+  On montre par récurrence sur \(n \in \N\) l'assertion suivante : \(\P(n)\) ``\(\forall (P,Q) \in \K[X]^2 \ \forall n \in \N\) \((PQ)^{(n)} = \sum_{k=0}^n \binom{n}{k} P^{(k)}Q^{(n-k)}\)''.
 
-  \emph{Initialisation}~: $n=0$ Par définition $(PQ)^{(0)} = PQ$. Ensuite
+  \emph{Initialisation}~: \(n=0\) Par définition \((PQ)^{(0)} = PQ\). Ensuite
   \begin{equation}
     \sum_{k=0}^0 \binom{0}{k} P^{(k)}Q^{(0-k)} = P^{(0)} Q^{(0)} = PQ
   \end{equation}
-  Alors $\P(0)$ est  vraie.
+  Alors \(\P(0)\) est  vraie.
 
-  \emph{Hérédité}~: Soit un nturel $n$ et supposons $\P(n)$. Alors par définition
+  \emph{Hérédité}~: Soit un nturel \(n\) et supposons \(\P(n)\). Alors par définition
   
   \begin{align}
     (PQ)^{(n+1)} &= \left((PQ)^{(n)}\right)' \\
@@ -914,16 +914,16 @@ Cependant si $\K=\C$, on ne sait rien faire.
     &=\sum_{k=0}^n \binom{n}{k} (P^{(k+1)}Q^{(n-k)} + P^{(k)} Q^{(n-k+1)})\\
     &=\sum_{k=0}^n \binom{n}{k} P^{(k+1)}Q^{(n-k)} + \sum_{k=0}^n \binom{n}{k} P^{(k)} Q^{(n-k+1)}
     \end{align}
-    en faisant le changement de variable $j=k+1$, on a
+    en faisant le changement de variable \(j=k+1\), on a
     \begin{align}
     (PQ)^{(n+1)} &=\sum_{j=1}^{n+1} \binom{n}{j-1} P^{(j)}Q^{(n+1-j)} + \sum_{k=0}^n \binom{n}{k} P^{(k)} Q^{(n-k+1)}\\
     &=\binom{n}{n} P^{(n+1)}Q^{(0)} \sum_{j=1}^{n} \left[\binom{n}{j-1} + \binom{n}{j} \right] P^{(j)}Q^{(n+1-j)} + \binom{n}{0} P^{(0)}Q^{(n+1)} \\
     &=\binom{n+1}{n+1} P^{(n+1)}Q^{(0)} \sum_{j=1}^{n} \binom{n+1}{j} P^{(j)}Q^{(n+1-j)} + \binom{n+1}{0} P^{(0)}Q^{(n+1)} \\
     &=\sum_{j=0}^{n+1} \binom{n+1}{j} P^{(j)}Q^{(n+1-j)}
   \end{align}
-  Alors $\P(n+1)$ est vraie.
+  Alors \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion}~: On a montré $\P(0)$ et que pour tout naturel $n$, $\P(n) \implies \P(n+1)$. Le théorème de récurrence nous dit que que pour tout naturel $n$ l'assertion $\P(n)$ est vraie.
+  \emph{Conclusion}~: On a montré \(\P(0)\) et que pour tout naturel \(n\), \(\P(n) \implies \P(n+1)\). Le théorème de récurrence nous dit que que pour tout naturel \(n\) l'assertion \(\P(n)\) est vraie.
 \end{proof}
 
 \subsection{Formule de Taylor}
@@ -938,84 +938,84 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{align}
 \end{lemme}
 \begin{proof}
-  Pour un nturel $n$ fixé, on prouve pour tout $k \in \K$ l'assertion $\P_n(k)$ ``$(X^n)^{(k)} = n(n-1) \ldots (n-k+1) X^{n-k}=
+  Pour un naturel \(n\) fixé, on prouve pour tout \(k \in \K\) l'assertion \(\P_n(k)\) ``\((X^n)^{(k)} = n(n-1) \ldots (n-k+1) X^{n-k}=
     \begin{cases}
       \frac{n!}{(n-k)!} X^{n-k} & k \leqslant n \\
       0 & k > n
-    \end{cases}$~''
+    \end{cases}\)''
 
-    \emph{Initialisation}~: $\P_n(0)$ est vraie puisque $(X^n)^{(0)} = X^n$.
+    \emph{Initialisation}~: \(\P_n(0)\) est vraie puisque \((X^n)^{(0)} = X^n\).
 
-    \emph{Hérédité}~: Soit un naturel $k$, supposons $\P_n(k)$. Si $k \leqslant n$ alors
+    \emph{Hérédité}~: Soit un naturel \(k\), supposons \(\P_n(k)\). Si \(k \leqslant n\) alors
     \begin{align}
       (X^n)^{(k)} &= \frac{n!}{(n-k)!} X^{n-k} \\
       (X^n)^{(k+1)} &= \frac{n!}{(n-k)!} (n-k) X^{n-k-1} \\
       &=\begin{cases} 0 & n=k \\ \frac{n!}{(n-k-1)!} X^{n-k-1} & k \leqslant n-1 \end{cases}
     \end{align}
-    Si $k > n$ alors $(X^n)^{(k)}$ donc $(X^n)^{(k+1)}=0$
+    Si \(k > n\) alors \((X^n)^{(k)}\) donc \((X^n)^{(k+1)}=0\)
 
-    Finalement $\P_n(k+1)$ est vraie.
+    Finalement \(\P_n(k+1)\) est vraie.
 
-    \emph{Conclusion}~: Pour tout naturel $n$, on a montré que $\P_n(0)$ est vraie et que pour tout naturel $k$, $\P_n(k) \implies \P_n(k+1)$. Alors par théorème de récurrence pour tous naturels $n$ et $k$, l'assertion $\P_n(k)$ est vraie.
+    \emph{Conclusion}~: Pour tout naturel \(n\), on a montré que \(\P_n(0)\) est vraie et que pour tout naturel \(k\), \(\P_n(k) \implies \P_n(k+1)\). Alors par théorème de récurrence pour tous naturels \(n\) et \(k\), l'assertion \(\P_n(k)\) est vraie.
 \end{proof}
 
 \begin{theo}[Formule de Taylor pour les polynômes]
-  Soit $P \in \K[X]$ et $a \in \K$, alors
+  Soit \(P \in \K[X]\) et \(a \in \K\), alors
   \begin{equation}
     P = \sum_{n=0}^N \frac{P^{(n)}(a)}{n!} (X-a)^n \quad \forall N \geqslant \deg(P)
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit l'application $\fonction{\varphi}{\K[X]}{\K[X]}{P}{\sum_{n=0}^N \frac{P^{(n)}(a)}{n!} (X-a)^n}$.
+  Soit l'application \(\fonction{\varphi}{\K[X]}{\K[X]}{P}{\sum_{n=0}^N \frac{P^{(n)}(a)}{n!} (X-a)^n}\).
 
-  L'application $\varphi$ est linéaire~: Soient $(P,Q) \in \K[X]^2$ et $\lambda \in \K$ alors
+  L'application \(\varphi\) est linéaire~: Soient \((P,Q) \in \K[X]^2\) et \(\lambda \in \K\) alors
   \begin{align}
     \varphi(\lambda P +Q) &= \sum_{n \geqslant 0} \frac{(\lambda P+Q)^{(n)}(a)}{n!}(X-a)^n\\
  &= \sum_{n \geqslant 0} \frac{\lambda P^{(n)}(a) +Q^{(n)}(a)}{n!}(X-a)^n\\
  &= \lambda \sum_{n \geqslant 0} \frac{P^{(n)}(a)}{n!}(X-a)^n + \sum_{n \geqslant 0} \frac{Q^{(n)}(a)}{n!}(X-a)^n \\
  &= \lambda\varphi(P) +\varphi(Q)
   \end{align}
-  Calculons pour tout $n \in \N$, $\varphi(X^n)$. D'après le lemme
+  Calculons pour tout \(n \in \N\), \(\varphi(X^n)\). D'après le lemme
   \begin{align}
     \forall n \in \N^* \quad \varphi(X^n) &= \sum_{k=0}^n \frac{n!}{(n-k)!} a^{n-k} \frac{1}{k!}(X-a)^k\\
     &= \sum_{k=0}^n \binom{n}{k} (X-a)^k a^{n-k}
   \end{align}
-  en appliquant la formule du binôme de Newton (puisque $\K[X]$ est un anneau commutatif) on obtient que pour tout naturel $n$
+  en appliquant la formule du binôme de Newton (puisque \(\K[X]\) est un anneau commutatif) on obtient que pour tout naturel \(n\)
   \begin{equation}
     \varphi(X^n) = (a+X-a)^n = X^n
   \end{equation}
   
-  Comme l'application $\varphi$ est linéaire, on en déduit que pour tout polynôme $P$, $\varphi(P)=P$.
+  Comme l'application \(\varphi\) est linéaire, on en déduit que pour tout polynôme \(P\), \(\varphi(P)=P\).
 \end{proof}
 
 \subsection{Application de la formule de Taylor à la détermination de l'ordre de multiplicité  d'une racine}
 
 \begin{prop}
-  Soient $P \in \K[X]$, $\alpha \in \K$ et $r \in \N\setminus\{0,1\}$. On suppose que $\alpha$ est racine de $P$ d'ordre de multiplicité égal à $r$. Alors $\alpha$ est racine de $P'$ d'ordre de multiplicité égal à $r-1$.
+  Soient \(P \in \K[X]\), \(\alpha \in \K\) et \(r \in \N\setminus\{0,1\}\). On suppose que \(\alpha\) est racine de \(P\) d'ordre de multiplicité égal à \(r\). Alors \(\alpha\) est racine de \(P'\) d'ordre de multiplicité égal à \(r-1\).
 
-  Si $\alpha$ est racine de $P$ d'ordre $1$ alors ce n'est pas une racine de $P'$.
+  Si \(\alpha\) est racine de \(P\) d'ordre \(1\) alors ce n'est pas une racine de \(P'\).
 \end{prop}
 \begin{proof}
-  Soit $r \in \N^*$. On suppose que $\alpha$ est racine d'ordre $r$. Il existe $Q \in \K[X]$ tel que $P=(X-\alpha)^r Q$ et $Q(\alpha) \neq 0$. Alors
+  Soit \(r \in \N^*\). On suppose que \(\alpha\) est racine d'ordre \(r\). Il existe \(Q \in \K[X]\) tel que \(P=(X-\alpha)^r Q\) et \(Q(\alpha) \neq 0\). Alors
   \begin{align}
     P' &= r(X-\alpha)^{r-1}Q + (X-\alpha)Q'\\
     P'(\alpha) &= r(\alpha-\alpha)^{r-1}Q(\alpha) + (\alpha-\alpha)Q'(\alpha)\\
   \end{align}
   \begin{itemize}
-  \item Si $r=1$, alors $P'(\alpha)=Q(\alpha) \neq 0$ donc $\alpha$ n'est pas racine de $P'$;
-  \item Si $r \geqslant 2$ alors $P'(\alpha) = 0$ et donc $\alpha$ est racine de $P'$. De plus
+  \item Si \(r=1\), alors \(P'(\alpha)=Q(\alpha) \neq 0\) donc \(\alpha\) n'est pas racine de \(P'\);
+  \item Si \(r \geqslant 2\) alors \(P'(\alpha) = 0\) et donc \(\alpha\) est racine de \(P'\). De plus
     \begin{align}
       P' &= (X-\alpha)^{r-1} (rQ + (X-\alpha)Q') \\
       &= (X-\alpha)^{r-1} Q_2
     \end{align}
-    avec $Q_2(\alpha) = rQ(\alpha) + (\alpha-\alpha)Q'(\alpha) = rQ(\alpha) \neq 0$.
+    avec \(Q_2(\alpha) = rQ(\alpha) + (\alpha-\alpha)Q'(\alpha) = rQ(\alpha) \neq 0\).
 
-    Donc $\alpha$ est racine de $P'$ d'ordre égal à $r-1$.
+    Donc \(\alpha\) est racine de \(P'\) d'ordre égal à \(r-1\).
   \end{itemize}
 \end{proof}
 
 \begin{prop}
-  Soient $P \in \K[X]$, $\alpha \in \K$ et $r \in \N^*$. $\alpha$ est racine de $P$ d'ordre de multiplicité $r$ si et seulement si
+  Soient \(P \in \K[X]\), \(\alpha \in \K\) et \(r \in \N^*\). \(\alpha\) est racine de \(P\) d'ordre de multiplicité \(r\) si et seulement si
   \begin{equation}
     \begin{cases}
       P(\alpha) = \ldots = P^{(r-1)}(\alpha)=0 \\
@@ -1024,28 +1024,28 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si $\alpha$ est racine de $P$ d'ordre de multiplicité $r$, alors pour tout $k \in k \in \intervalleentier{0}{r-1}$, $\alpha$ est racine de $P^{(k)}$ d'ordre $r-k$ (Il suffit de le montrer par récurrence à partir de la proposition précédente). En particulier $\alpha$ est racine d'ordre $r-(r-1)=1$ de $P^{(r-1)}$ donc n'est pas racine de $P^{(r)}$ $P^{(r)}(\alpha) \neq 0$.
+  Si \(\alpha\) est racine de \(P\) d'ordre de multiplicité \(r\), alors pour tout \(k \in k \in \intervalleentier{0}{r-1}\), \(\alpha\) est racine de \(P^{(k)}\) d'ordre \(r-k\) (Il suffit de le montrer par récurrence à partir de la proposition précédente). En particulier \(\alpha\) est racine d'ordre \(r-(r-1)=1\) de \(P^{(r-1)}\) donc n'est pas racine de \(P^{(r)}\) \(P^{(r)}(\alpha) \neq 0\).
   
-  Supposons que $\begin{cases}
+  Supposons que \(\begin{cases}
       P(\alpha) = \ldots = P^{(r-1)}(\alpha)=0 \\
       P^{(r)}(\alpha) \neq 0
-    \end{cases}$
-    alors la formule de Taylor pour $P$ en $\alpha$ nous donne pour tout naturel $N \geqslant \deg(P)$~:
+    \end{cases}\)
+    alors la formule de Taylor pour \(P\) en \(\alpha\) nous donne pour tout naturel \(N \geqslant \deg(P)\)~:
     \begin{align}
       P &= \sum_{n=0}^N \frac{P^{(n)}}{n!} (X-\alpha)^n \\
       &= \sum_{n=r}^N \frac{P^{(n)}}{n!} (X-\alpha)^n \\
       &= (X-\alpha)^r \sum_{n=r}^N \frac{P^{(n)}}{n!} (X-\alpha)^{n-r}\\
       &= (X-\alpha)^r Q
     \end{align}
-    avec $Q = \frac{P^{(r)}(\alpha)}{r!} \sum_{n=r+1}^N \frac{P^{(n)}}{n!} (X-\alpha)^{n-r}$. Alors $Q(\alpha) \neq 0$. $\alpha$ est racine de $P$ d'ordre égal $r$.
+    avec \(Q = \frac{P^{(r)}(\alpha)}{r!} \sum_{n=r+1}^N \frac{P^{(n)}}{n!} (X-\alpha)^{n-r}\). Alors \(Q(\alpha) \neq 0\). \(\alpha\) est racine de \(P\) d'ordre égal \(r\).
 \end{proof}
 
 \section{Polynôme scindé}
 
-\subsection{Notion de polynôme scindé sur un corps $\K$}
+\subsection{Notion de polynôme scindé sur un corps \(\K\)}
 
 \begin{defdef}
-  Soit $P \in \K[X]$ non nul. On dit que $P$ est scindé sur le corps $\K$ s'il existe $\lambda \in \K\setminus\{0\}$, $n \in \N^*$, $(x_1, \ldots, x_n) \in \K^n$ tel que
+  Soit \(P \in \K[X]\) non nul. On dit que \(P\) est scindé sur le corps \(\K\) s'il existe \(\lambda \in \K\setminus\{0\}\), \(n \in \N^*\), \((x_1, \ldots, x_n) \in \K^n\) tel que
   \begin{equation}
     P = \lambda \prod_{i=1}^n (X-x_i)
   \end{equation}
@@ -1053,17 +1053,17 @@ Cependant si $\K=\C$, on ne sait rien faire.
 
 \emph{Remarques}~:
 \begin{enumerate}
-\item Si $n$ est non nul, $P$ est de de degré $n$. Si $P$ admet $n$ racines distinctes $x_1, \ldots, x_n$ dans $\K$ alors $P$ est scindé sur $\K$.
+\item Si \(n\) est non nul, \(P\) est de de degré \(n\). Si \(P\) admet \(n\) racines distinctes \(x_1, \ldots, x_n\) dans \(\K\) alors \(P\) est scindé sur \(\K\).
 
-  En effet, on a vu qu'alors $\prod_{i=1}^n(X-x_i)$ divise $P$. Il existe alors un polynôme $Q$ tel que $P=Q\prod_{i=1}^n(X-x_i)$ et par argumlent de degré $Q$ est constant non nul ($\deg(Q)=0$).
-\item Si $P$ est scindé avec $\lambda$ non nul et $(x_1, \ldots, x_n) \in \K^n$ tel que $P = \lambda \prod_{i=1}^n (X-x_i)$. Les $x_i$ sont les racines du polynôme $P$ mais elles ne sont pas forcèment distinctes. Si on compte les racines avec leurs ordres de multiplicité, $P$ admet $n$ racines.
-\item Il faut préciser sur quel corps le polynôme $P$ est scindé (ou pas) car un polynôme peut être scindé sur $\C$ mais pas sur $\R$. Comme par exemple $X^2+1=(X-\ii)(X+\ii)$.
+  En effet, on a vu qu'alors \(\prod_{i=1}^n(X-x_i)\) divise \(P\). Il existe alors un polynôme \(Q\) tel que \(P=Q\prod_{i=1}^n(X-x_i)\) et par argumlent de degré \(Q\) est constant non nul (\(\deg(Q)=0\)).
+\item Si \(P\) est scindé avec \(\lambda\) non nul et \((x_1, \ldots, x_n) \in \K^n\) tel que \(P = \lambda \prod_{i=1}^n (X-x_i)\). Les \(x_i\) sont les racines du polynôme \(P\) mais elles ne sont pas forcèment distinctes. Si on compte les racines avec leurs ordres de multiplicité, \(P\) admet \(n\) racines.
+\item Il faut préciser sur quel corps le polynôme \(P\) est scindé (ou pas) car un polynôme peut être scindé sur \(\C\) mais pas sur \(\R\). Comme par exemple \(X^2+1=(X-\ii)(X+\ii)\).
 \end{enumerate}
 
 \subsection{Fonctions symétriques élémentaires}
 
 \begin{defdef}
-  Soient $n \in \N^*$, $(x_1, \ldots, x_n) \in \K^n$. On définit les fonctions symétriques élémentaires de $x_1, \ldots, x_n$ notées $\sigma_1, \ldots, \sigma_n$ par~:
+  Soient \(n \in \N^*\), \((x_1, \ldots, x_n) \in \K^n\). On définit les fonctions symétriques élémentaires de \(x_1, \ldots, x_n\) notées \(\sigma_1, \ldots, \sigma_n\) par~:
   \begin{align}
     \sigma_1 &=\sum_{1\leqslant i_1 \leqslant n} x_{i_1} \\
     \sigma_2 &=\sum_{1\leqslant i_1 \leqslant i_2 \leqslant n} x_{i_1} x_{i_2} \\
@@ -1073,37 +1073,37 @@ Cependant si $\K=\C$, on ne sait rien faire.
   \end{align}
 \end{defdef}
 
-\emph{Exemples}~: Pour $n=2$, on a
+\emph{Exemples}~: Pour \(n=2\), on a
 \begin{align}
   \sigma_1 &=x_1+x_2 \\
   \sigma_2 &=x_1x_2
 \end{align}
 
-pour $n=3$, 
+pour \(n=3\), 
 \begin{align}
   \sigma_1 &=x_1+x_2+x_3 \\
   \sigma_2 &=x_1x_2+x_1x_3 + x_2x_3 \\
   \sigma_3 &= x_1x_2x_3 
 \end{align}
 
-pour $n=4$, 
+pour \(n=4\), 
 \begin{align}
   \sigma_1 &=x_1+x_2+x_3 \\
   \sigma_2 &=x_1x_2+x_1x_3 + x_2x_3 \\
   \sigma_3 &= x_1x_2x_3 +x_1x_2x_4 + x_1x_3x_3 + x_2x_3x_4\\
   \sigma_4 &= x_1x_2x_3x_4
 \end{align}
-et ainsi de suite pour les $n> 4$.
+et ainsi de suite pour les \(n> 4\).
 
 \subsection[Relation coefficients/racines]{Relations entre les coefficients et les racines d'un polynôme scindé}
 
 \begin{prop}
-  Soient $n \in \N^*$, $(a_0, \ldots, a_n) \in \K^{n+1}$ et $P=\sum_{k=0}^n a_k X^k$ ($n=\deg(P)$). On suppose que $P$ est scindé sur $\K$~: il existe un scalaire non nul $\lambda$ et un $n$-uplet de scalaire $(x_1, \ldots, x_n)$ tels que
+  Soient \(n \in \N^*\), \((a_0, \ldots, a_n) \in \K^{n+1}\) et \(P=\sum_{k=0}^n a_k X^k\) (\(n=\deg(P)\)). On suppose que \(P\) est scindé sur \(\K\)~: il existe un scalaire non nul \(\lambda\) et un \(n\)-uplet de scalaire \((x_1, \ldots, x_n)\) tels que
   \begin{equation}
     P = \lambda \prod_{i=1}^n (X-x_i).
   \end{equation}
 
-  Alors on peut écrire les fonctions symétriques élémentaires $\sigma_1, \ldots, \sigma_n$ des racines $x_1, \ldots, x_n$ du polynôme $P$ en fonction des coefficients du polynôme $P$~:
+  Alors on peut écrire les fonctions symétriques élémentaires \(\sigma_1, \ldots, \sigma_n\) des racines \(x_1, \ldots, x_n\) du polynôme \(P\) en fonction des coefficients du polynôme \(P\)~:
   \begin{align}
     \sigma_1 &= - \frac{a_{n-1}}{a_n} \\
     \ldots\\
@@ -1122,7 +1122,7 @@ et ainsi de suite pour les $n> 4$.
   \begin{equation}
     P = \lambda X^n + \lambda \left[ \sum_{k=0}^{n-1} X^k (-1)^{n-k} \sigma_{n-k} \right]
   \end{equation}
-  Comme $(1,X, \ldots, X^n)$ est une base de $\K[X]$, on peut identifier les coefficients et donc
+  Comme \((1,X, \ldots, X^n)\) est une base de \(\K[X]\), on peut identifier les coefficients et donc
   \begin{align}
     \lambda &= a_n \\
     \forall k \in \intervalleentier{0}{n-1} & \lambda (-1)^{n-k} \sigma_{n-k} = a_k 
@@ -1133,11 +1133,11 @@ et ainsi de suite pour les $n> 4$.
   \end{equation}
 \end{proof}
 
-Par exemple avec les polynômes de degré $2$ : $P=aX^2+bX+c=\lambda(X-x_1)(X-x_2)$ alors $\lambda=a$, $-\lambda(x_1+x_2)=b$ et $c=\lambda x_1x_2$.
+Par exemple avec les polynômes de degré \(2\) : \(P=aX^2+bX+c=\lambda(X-x_1)(X-x_2)\) alors \(\lambda=a\), \(-\lambda(x_1+x_2)=b\) et \(c=\lambda x_1x_2\).
 
-\emph{Conséquence importante}~: Toute expression symétrique e, les racines d'un polynôme peut s'écrire à l'aide des fonctions symétriques élémentaires des racines de $P$ et par conséquent des coefficients de $P$.
+\emph{Conséquence importante}~: Toute expression symétrique e, les racines d'un polynôme peut s'écrire à l'aide des fonctions symétriques élémentaires des racines de \(P\) et par conséquent des coefficients de \(P\).
 
-\emph{Exemple}~: Soit $P=X^3+rX^2+pX +q$ et soit $(x,y,z)$ un système de racines de $P$. On peut exprimer $x+y+z$, $x^2+y^2+z^2$ et $x^3+y^3+z^3$ en fonction de $r, p$ et $q$. En effet, la proposition précédente permet d'écrire que
+\emph{Exemple}~: Soit \(P=X^3+rX^2+pX +q\) et soit \((x,y,z)\) un système de racines de \(P\). On peut exprimer \(x+y+z\), \(x^2+y^2+z^2\) et \(x^3+y^3+z^3\) en fonction de \(r, p\) et \(q\). En effet, la proposition précédente permet d'écrire que
 \begin{align}
   \sigma_1 &=x+y+z =-r\\
   \sigma_2 &=xy+xz+yz =p\\
@@ -1150,57 +1150,57 @@ C'est-à-dire
   x^3+y^3+z^3 &=\sigma_1^3 -3\sigma_1\sigma_2 + 3 \sigma_3 = -r^3+3rp-3q
 \end{align}
 
-\subsection{Factorisation sur $\C$ d'un polynôme de $\C[X]$}
+\subsection{Factorisation sur \(\C\) d'un polynôme de \(\C[X]\)}
 
 \begin{theo}[Théorème d'Alembert-Gau\ss]
-  Tout polynôme non constant de $\C[X]$ admet au moins une racine dans $\C$
+  Tout polynôme non constant de \(\C[X]\) admet au moins une racine dans \(\C\)
 \end{theo}
 \begin{proof}[Théorème admis]
 \end{proof}
 
 \begin{cor}
-  Tout polynôme non constant de $\C[X]$ est scindé sur $\C$.
+  Tout polynôme non constant de \(\C[X]\) est scindé sur \(\C\).
 \end{cor}
 \begin{proof}
-  Soit $P \in \C[X]$ non constant. Alors $P$ admet au moins une racine, d'après le théorème. Soit $n \in \N^*$ et $x_1, \ldots, x_n$ les racines distinctes de $P$ et $r_1, \ldots, r_n$ leurs ordres de multiplicité respectifs.
+  Soit \(P \in \C[X]\) non constant. Alors \(P\) admet au moins une racine, d'après le théorème. Soit \(n \in \N^*\) et \(x_1, \ldots, x_n\) les racines distinctes de \(P\) et \(r_1, \ldots, r_n\) leurs ordres de multiplicité respectifs.
 
-  Alors $\prod_{i=1}^n (X-x_i)^{r_i}$ divise $P$. Il existe alors $Q \in \C[X]$ tel que
+  Alors \(\prod_{i=1}^n (X-x_i)^{r_i}\) divise \(P\). Il existe alors \(Q \in \C[X]\) tel que
   \begin{equation}
     P = Q \prod_{i=1}^n (X-x_i)^{r_i}
   \end{equation}
   
-Si on fait l'hypothèse que le polynôme $Q$ n'est pas constant, alors il admet une racine $\alpha \in \C$ (d'après le théorème). C'est aussi une racine de $P$ (puisque $Q$ divise $P$) alors il existe un entier $i_0 \in \intervalleentier{1}{n}$ tel que $\alpha=x_{i_0}$.
-  Le polynôme $X-x_{i_0}$ divise $Q$ donc il existe $R \in \C[X]$ tel que $Q=R(X-x_{i_0})$ et ainsi
+Si on fait l'hypothèse que le polynôme \(Q\) n'est pas constant, alors il admet une racine \(\alpha \in \C\) (d'après le théorème). C'est aussi une racine de \(P\) (puisque \(Q\) divise \(P\)) alors il existe un entier \(i_0 \in \intervalleentier{1}{n}\) tel que \(\alpha=x_{i_0}\).
+  Le polynôme \(X-x_{i_0}\) divise \(Q\) donc il existe \(R \in \C[X]\) tel que \(Q=R(X-x_{i_0})\) et ainsi
   \begin{equation}
     P = \prod_{i=1}^n (X-x_i)^{r_i} (X-x_{i_0}) R
   \end{equation}
-  et donc $(X-x_{i_0})^{r_{i_0}+1}$ divise $P$. Ce qui contredit la définition de $r_{i_0}$ comme l'ordre de multiplicité de $x_{i_0}$ dans $P$. Ainsi l'hypothèse qu'on avait fait sur $Q$ est fausse, il est donc constant.
+  et donc \((X-x_{i_0})^{r_{i_0}+1}\) divise \(P\). Ce qui contredit la définition de \(r_{i_0}\) comme l'ordre de multiplicité de \(x_{i_0}\) dans \(P\). Ainsi l'hypothèse qu'on avait fait sur \(Q\) est fausse, il est donc constant.
 
-  Il existe donc un scalaire $\lambda$ non nul tel que $P=\lambda \prod_{i=1}^n (X-x_i)^{r_i}$. Alors $P$ est scindé.
+  Il existe donc un scalaire \(\lambda\) non nul tel que \(P=\lambda \prod_{i=1}^n (X-x_i)^{r_i}\). Alors \(P\) est scindé.
 \end{proof}
 
-\danger \danger Ces résultats sont faux dans $\R$, comme par exemple $X^2+3$.
+\danger \danger Ces résultats sont faux dans \(\R\), comme par exemple \(X^2+3\).
 
 \subsection{Polynôme conjugué}
 
 \begin{defdef}
-  Soit $P \in \C[X]$, tel que $P = \sum_{n=0}^N a_n X^n$. On définit un polynôme de $\C[X]$, noté $\bar{P}$, appelé polynôme conjugué de $P$ par
+  Soit \(P \in \C[X]\), tel que \(P = \sum_{n=0}^N a_n X^n\). On définit un polynôme de \(\C[X]\), noté \(\bar{P}\), appelé polynôme conjugué de \(P\) par
   \begin{equation}
     \bar{P} = \sum_{n=0}^N \bar{a_n} X^n
   \end{equation}
 \end{defdef}
 
 \begin{prop}
-  Pour tout couple $(P,Q) \in \C[X]$ et tout complexe $\alpha$ on a
+  Pour tout couple \((P,Q) \in \C[X]\) et tout complexe \(\alpha\) on a
   \begin{equation}
     \overline{P+Q}=\bar{P}+\bar{Q} \quad \overline{PQ}=\bar{P}\bar{Q} \quad \overline{P(\alpha)} = \bar{P}(\bar{\alpha}) \quad \bar{P'}=\bar{P}'
   \end{equation}
 \end{prop}
-\begin{proof}[Démonstration évidente à partir de la conjugaison sur $\C$]
+\begin{proof}[Démonstration évidente à partir de la conjugaison sur \(\C\)]
 \end{proof}
 
 \begin{prop}
-  Soient $P \in \C[X]$, $ \alpha \in \C$ et $r \in \N^*$. $\alpha$ est racine de $P$ d'ordre de multiplicité $r$ si et seulement si $\bar{\alpha}$ est racine de $\bar{P}$ d'ordre de multiplicité $r$
+  Soient \(P \in \C[X]\), \( \alpha \in \C\) et \(r \in \N^*\). \(\alpha\) est racine de \(P\) d'ordre de multiplicité \(r\) si et seulement si \(\bar{\alpha}\) est racine de \(\bar{P}\) d'ordre de multiplicité \(r\)
 \end{prop}
 \begin{proof}
   \begin{align}
@@ -1224,29 +1224,29 @@ Si on fait l'hypothèse que le polynôme $Q$ n'est pas constant, alors il admet 
 \end{proof}
 
 \begin{prop}
-  Soit $P \in \R[X]$, $\alpha \in \C$ et $r \in \N^*$, alors $\alpha$ est racine de $P$ d'ordre $r$ siu et seulement si $\bar{\alpha}$ est racine de $P$ d'ordre $r$.
+  Soit \(P \in \R[X]\), \(\alpha \in \C\) et \(r \in \N^*\), alors \(\alpha\) est racine de \(P\) d'ordre \(r\) siu et seulement si \(\bar{\alpha}\) est racine de \(P\) d'ordre \(r\).
 \end{prop}
 \begin{proof}
   C'est une conséquence immédiate de la proposition précédente.
 \end{proof}
 
-\subsection{Factorisation sur $\R$ d'un polynôme de $\R[X]$}
+\subsection{Factorisation sur \(\R\) d'un polynôme de \(\R[X]\)}
 
 \begin{theo}
-  Soit $P \in \R[X]$ non nul. Alors il existe $\lambda \in \R^*$, $(p,q) \in \N^2$, $(\alpha_1, \ldots, \alpha_p) \in \R^p$, $(r_1, \ldots, r_p) \in (\N^*)^p$, $(\delta_1, \ldots, \delta_q) \in (\N^*)^q$, $(\beta_1, \ldots, \beta_q) \in \R^q$, $(\gamma_1, \ldots, \gamma_q) \in \R^q$ tels que
+  Soit \(P \in \R[X]\) non nul. Alors il existe \(\lambda \in \R^*\), \((p,q) \in \N^2\), \((\alpha_1, \ldots, \alpha_p) \in \R^p\), \((r_1, \ldots, r_p) \in (\N^*)^p\), \((\delta_1, \ldots, \delta_q) \in (\N^*)^q\), \((\beta_1, \ldots, \beta_q) \in \R^q\), \((\gamma_1, \ldots, \gamma_q) \in \R^q\) tels que
   \begin{align}
     \forall k \in \intervalleentier{1}{q} \quad \beta_k^2 - 4\gamma_k <0\\
     P = \lambda \prod_{k=1}^p (X-\alpha_k)^{r_k} \prod_{i=1}^q(X^2+\beta_i X+\gamma_i)^{\delta_i}.
   \end{align}
 \end{theo}
 \begin{proof}
-  On sait que $P$ est scindé sur $\C$. Soient $\alpha_1, \ldots, \alpha_p$ les racines réelles de $P$ et $r_1, \ldots, r_p$ leurs ordres respectifs. On sait que si $\omega \in \C\setminus\R$ est racine de $P$ d'ordre $r$ alors $\bar{\omega}$ est racine de $\bar{P}$ du même ordre $r$.
-  Soient $\omega_1, \bar{\omega_1}, \ldots, \omega_q, \bar{\omega_q}$ les racines complexes non réelles de $P$. 
-  Notons $s_1, \ldots, s_q$ les ordres respectifs de $\omega_1, \ldots, \omega_q$et aussi de $\bar{\omega_1}, \ldots, \bar{\omega_q}$. Dans $\C[X]$, on peut écrire que
+  On sait que \(P\) est scindé sur \(\C\). Soient \(\alpha_1, \ldots, \alpha_p\) les racines réelles de \(P\) et \(r_1, \ldots, r_p\) leurs ordres respectifs. On sait que si \(\omega \in \C\setminus\R\) est racine de \(P\) d'ordre \(r\) alors \(\bar{\omega}\) est racine de \(\bar{P}\) du même ordre \(r\).
+  Soient \(\omega_1, \bar{\omega_1}, \ldots, \omega_q, \bar{\omega_q}\) les racines complexes non réelles de \(P\). 
+  Notons \(s_1, \ldots, s_q\) les ordres respectifs de \(\omega_1, \ldots, \omega_q\)et aussi de \(\bar{\omega_1}, \ldots, \bar{\omega_q}\). Dans \(\C[X]\), on peut écrire que
   \begin{equation}
     P=\lambda \prod_{k=1}^p (X-\alpha_k)^{r_k} \prod_{l=1}^q (X-\omega_l)^{s_l} \prod_{m=1}^q (X-\bar{\omega_m})^{s_m}
   \end{equation}
-  $\lambda$ est le coefficient dominant de $P$ donc $\lambda \in \R$ et
+  \(\lambda\) est le coefficient dominant de \(P\) donc \(\lambda \in \R\) et
   \begin{equation}
     P = \lambda \prod_{k=1}^p (X-\alpha_k)^{r_k} \prod_{l=1}^q [(X-\omega_l)(X-\bar{\omega_l})]^{s_l}
   \end{equation}
@@ -1254,7 +1254,7 @@ Si on fait l'hypothèse que le polynôme $Q$ n'est pas constant, alors il admet 
   \begin{equation}
     \forall l \in \intervalleentier{1}{q} \quad (X-\omega_l)(X-\bar{\omega_l}) = X^2 -2\Re(\omega_l)X + \abs{\omega_l}^2.
   \end{equation}
-  En posant $\forall l \in \intervalleentier{1}{q}$ $\beta_l = 2\Re(\omega_l)$ et $\gamma_l = \abs{\omega_l}^2$. Alors
+  En posant \(\forall l \in \intervalleentier{1}{q}\) \(\beta_l = 2\Re(\omega_l)\) et \(\gamma_l = \abs{\omega_l}^2\). Alors
   \begin{equation}
     \forall l \in \intervalleentier{1}{q} \quad \beta_l^2 -4\gamma_l = -4\Im(\omega_l)^2 < 0.
   \end{equation}
@@ -1264,15 +1264,15 @@ Si on fait l'hypothèse que le polynôme $Q$ n'est pas constant, alors il admet 
   \end{equation}
 \end{proof}
 
-\subsection{Exemples de factorisation sur $\R$ et sur $\C$}
+\subsection{Exemples de factorisation sur \(\R\) et sur \(\C\)}
 
-\subsubsection{Factoriser $P=X^n-1$, $n \in \N\setminus\{0,1\}$ sur $\C$ et sur $\R$}
+\subsubsection{Factoriser \(P=X^n-1\), \(n \in \N\setminus\{0,1\}\) sur \(\C\) et sur \(\R\)}
 
-Soit pour tout $k \in \intervalleentier{0}{n-1}$, $\omega_k = \e^{\ii\left(\frac{2\ii \pi k}{n}\right)}$. Ce sont les racines distinctes de $P$ (cf.\ chapitre~\ref{chap:complexes}) dans $\C$ : $P = \prod_{k=0}^{n-1}(X-\omega_k)$.
+Soit pour tout \(k \in \intervalleentier{0}{n-1}\), \(\omega_k = \e^{\ii\left(\frac{2\ii \pi k}{n}\right)}\). Ce sont les racines distinctes de \(P\) (cf.\ chapitre~\ref{chap:complexes}) dans \(\C\) : \(P = \prod_{k=0}^{n-1}(X-\omega_k)\).
 
-Sur $\R$, on doit déterminer parmi les racines complexes de $P$ celles qui sont réelles, ce qui oblige à différencier le cas $n$ pair et le cas $n$ impair.
+Sur \(\R\), on doit déterminer parmi les racines complexes de \(P\) celles qui sont réelles, ce qui oblige à différencier le cas \(n\) pair et le cas \(n\) impair.
 
-Si $n$ est pair, il existe un naturel $p$ non nul tel que $n=2p$. $P$ admet deux racines réelles $\omega_0=1$ et $\omega_p=-1$.
+Si \(n\) est pair, il existe un naturel \(p\) non nul tel que \(n=2p\). \(P\) admet deux racines réelles \(\omega_0=1\) et \(\omega_p=-1\).
 \begin{equation}
   \forall k \in \intervalleentier{1}{p-1} \quad \bar{\omega_k}=\omega_{2p-k}
 \end{equation}
@@ -1286,7 +1286,7 @@ Donc
   &=(X-1)(X+1) \prod_{k=1}^{p-1} \left(X^2-2\cos\left(\frac{2k\pi}{n}\right)X+1\right)
 \end{align}
 
-Si $n$ est impair, il existe un naturel $p$ non nul tel que $n=2p+1$. $P$ admet une racines réelles $\omega_0=1$.
+Si \(n\) est impair, il existe un naturel \(p\) non nul tel que \(n=2p+1\). \(P\) admet une racines réelles \(\omega_0=1\).
 \begin{equation}
   \forall k \in \intervalleentier{1}{p-1} \quad \bar{\omega_k}=\omega_{2p+1-k}
 \end{equation}
@@ -1295,146 +1295,146 @@ et de la même manière on trouve que
   P=(X-1) \prod_{k=1}^{p} \left(X^2-2\cos\left(\frac{2k\pi}{n}\right)X+1\right)
 \end{equation}
 
-\subsubsection{Factoriser $P=X^4+X^2+1$}
+\subsubsection{Factoriser \(P=X^4+X^2+1\)}
 
-On cherche les racines complexes. Soit $z \in \C$. Alors
+On cherche les racines complexes. Soit \(z \in \C\). Alors
 \begin{align}
   z^4+z^2+1=0 &\iff z^2 \text{~est racine de~} X^2+X+1 \\
   &\iff z^" \in \{\jmath ; \jmath^2\}
 \end{align}
-avec $\jmath=\e^{2\ii\pi/3} = \frac{-1+\ii\sqrt{3}}{2}$ et donc $\jmath^2=\bar{\jmath} = \e^{-2\ii\pi/3} = \frac{-1-\ii\sqrt{3}}{2}$. 
+avec \(\jmath=\e^{2\ii\pi/3} = \frac{-1+\ii\sqrt{3}}{2}\) et donc \(\jmath^2=\bar{\jmath} = \e^{-2\ii\pi/3} = \frac{-1-\ii\sqrt{3}}{2}\). 
 
 Alors
 \begin{equation}
   z^4+z^2+1=0 \iff z \in \{\jmath, -\jmath, \e^{\ii\pi/3}, \e^{-\ii\pi/3}\}
 \end{equation}
 
-$P$ posséde donc quatre racines complexes distinbctes et donc dans $\C$ il s'écrit:
+\(P\) posséde donc quatre racines complexes distinbctes et donc dans \(\C\) il s'écrit:
 \begin{equation}
   X^4+X^2+1 = (X-\jmath)(X+\jmath)\left(X-\e^{\ii\pi/3}\right)\left(X-\e^{-\ii\pi/3}\right)
 \end{equation}
 
-Dans $\R$, il faut remarque que $\bar{\jmath}=-\e^{\ii\pi/3}$ et $-\bar{\jmath}=\e^{\ii\pi/3}$, donc
+Dans \(\R\), il faut remarque que \(\bar{\jmath}=-\e^{\ii\pi/3}\) et \(-\bar{\jmath}=\e^{\ii\pi/3}\), donc
 \begin{align}
   X^4+X^2+1 &= (X^2-2\Re(\jmath)X+\abs{\jmath}^2)(X^2-2\Re(-\jmath)X+\abs{-\jmath}^2)\\
   &=(X^2+X+1)(X^2-X+1)
 \end{align}
 
-\section{Arithmétique dans $\K[X]$}
+\section{Arithmétique dans \(\K[X]\)}
 
 \subsection{Diviseurs communs de deux polynômes}
 
 \begin{defdef}
-  Soient $A$, $B$ et $C$ trois polynômes à coefficients dans $\K$. On dit que $C$ est un diviseur commun à $A$ et $B$ lorsque $C\mid{}A$ et $C\mid{}B$.
+  Soient \(A\), \(B\) et \(C\) trois polynômes à coefficients dans \(\K\). On dit que \(C\) est un diviseur commun à \(A\) et \(B\) lorsque \(C\mid{}A\) et \(C\mid{}B\).
 \end{defdef}
 
 \begin{prop}
-  Soient $(A,B)\in\K[X]^2$ avec $B \neq 0$ et $R$ le reste de la division euclidienne de $A$ par $B$. Les diviseurs communs de $A$ et $B$ sont exactements les diviseurs communs de $B$ et $R$.
+  Soient \((A,B)\in\K[X]^2\) avec \(B \neq 0\) et \(R\) le reste de la division euclidienne de \(A\) par \(B\). Les diviseurs communs de \(A\) et \(B\) sont exactements les diviseurs communs de \(B\) et \(R\).
 \end{prop}
 \begin{proof}
-  Il existe un unique couple $(Q,R) \in \K[X]^2$ tel que 
+  Il existe un unique couple \((Q,R) \in \K[X]^2\) tel que 
   \begin{equation}
     \begin{cases} 
       A=BQ+R \\ \deg(R) < \deg(B) 
     \end{cases}.
   \end{equation}
-  Pour tout $C \in \K[X]$, si  $C\mid{}B$ alors $C\mid{}BQ$, et si en plus $C\mid{}A$ alors on a $C\mid{}R$.
+  Pour tout \(C \in \K[X]\), si  \(C\mid{}B\) alors \(C\mid{}BQ\), et si en plus \(C\mid{}A\) alors on a \(C\mid{}R\).
   
-  Si $C\mid{}B$ alors $C\mid{}BQ$ et si en plus $C\mid{}R$ alors $C\mid{}A=BQ+R$.
+  Si \(C\mid{}B\) alors \(C\mid{}BQ\) et si en plus \(C\mid{}R\) alors \(C\mid{}A=BQ+R\).
 \end{proof}
 
 \subsection{PGCD de deux polynômes}
 
 \begin{prop}
-  Soient $A$ et $B$ deux polynômes de $\K[X]$. Il existe un unique polynôme $D \in \K[X]$, nul ou unitiaire, dont les diviseurs sont exactement les diviseurs communs de $A$ et de $B$, c'est-à-dire~:
+  Soient \(A\) et \(B\) deux polynômes de \(\K[X]\). Il existe un unique polynôme \(D \in \K[X]\), nul ou unitiaire, dont les diviseurs sont exactement les diviseurs communs de \(A\) et de \(B\), c'est-à-dire~:
   \begin{equation}
     \forall C \in \K[X] \quad C\mid{}D \iff C\mid{}A \text{~et~} C\mid{}B.
   \end{equation}
-  De plus, il existe un couple $(U,V) \in \K[X]^2$ tel que $AU+BV=D$.
+  De plus, il existe un couple \((U,V) \in \K[X]^2\) tel que \(AU+BV=D\).
 
-  $D$ est appelé le PGCD (plus grand commun diviseur) de $A$ et de $B$ noté $A \wedge B$. Le couple $(U,V)$ est un couple de coefficients de Bezouy de $A$ et $B$.
+  \(D\) est appelé le PGCD (plus grand commun diviseur) de \(A\) et de \(B\) noté \(A \wedge B\). Le couple \((U,V)\) est un couple de coefficients de Bezouy de \(A\) et \(B\).
 \end{prop}
 \begin{proof}[Unicité]
-  Soit $D_1$ et $D_2 \in \K[X]$ tous les deux nuls ou unitaires tels que
+  Soit \(D_1\) et \(D_2 \in \K[X]\) tous les deux nuls ou unitaires tels que
 \begin{align}
     \forall C \in \K[X] \quad C\mid{}D_1 &\iff C\mid{}A \text{~et~} C\mid{}B; \\
     \forall C \in \K[X] \quad C\mid{}D_2 &\iff C\mid{}A \text{~et~} C\mid{}B.
   \end{align}
-  Comme $D_1\mid{}D_1$, la première équivalence implique que $D_1\mid{}A$ et $D_2\mid{}B$. La deuxième équivalence implique que $D_1\mid{}D_2$. Par symétrie des rôles, on a aussi $D_2\mid{}D_1$. Alors les polynômes $D_1$ et $D_2$ sont associés. Il existe alors un sclaire $\lambda$ non nul tel que $D_1=\lambda D_2$. Comme ils sont nuls ou unitaires ($\lambda=1$ si non nul) alors ils sont égaux.
+  Comme \(D_1\mid{}D_1\), la première équivalence implique que \(D_1\mid{}A\) et \(D_2\mid{}B\). La deuxième équivalence implique que \(D_1\mid{}D_2\). Par symétrie des rôles, on a aussi \(D_2\mid{}D_1\). Alors les polynômes \(D_1\) et \(D_2\) sont associés. Il existe alors un sclaire \(\lambda\) non nul tel que \(D_1=\lambda D_2\). Comme ils sont nuls ou unitaires (\(\lambda=1\) si non nul) alors ils sont égaux.
 \end{proof}
 \begin{proof}[Existence]
-  Démontrons par récurrence sur $\N$ l'assertion $\P(n)$ ``Pour tous polynômes $A$ et $B$ à coefficients dans $\K$ tels que $\deg(B)<n$, il existe un polynôme $D \in \K[X]$  nul ou unitiaire, dont les diviseurs sont exactement les diviseurs communs de $A$ et de $B$, c'est-à-dire~:
+  Démontrons par récurrence sur \(\N\) l'assertion \(\P(n)\) ``Pour tous polynômes \(A\) et \(B\) à coefficients dans \(\K\) tels que \(\deg(B)<n\), il existe un polynôme \(D \in \K[X]\)  nul ou unitiaire, dont les diviseurs sont exactement les diviseurs communs de \(A\) et de \(B\), c'est-à-dire~:
   \begin{equation}
     \forall C \in \K[X] \quad C\mid{}D \iff C\mid{}A \text{~et~} C\mid{}B
   \end{equation}
-  De plus, il existe un couple $(U,V) \in \K[X]^2$ tel que $AU+BV=D$.''
+  De plus, il existe un couple \((U,V) \in \K[X]^2\) tel que \(AU+BV=D\).''
 
-  \emph{Initialisation}~: Pour $n=0$, soient deux polynômes $A$ et $B$ à coefficients dans $\K$ tels que $\deg(B)<n=0$, alors $\deg(B)=-\infty$ et $B=0$. Tous les polynômes divisent le polynôme nul donc les diviseurs communs de $A$ et de $B$ sont les diviseurs de $A$. On pose $D=A$ et on prend $U=1$ et $V=0$ $AU+BV=A=D$. L'assertion $\P(0)$ est vraie.
+  \emph{Initialisation}~: Pour \(n=0\), soient deux polynômes \(A\) et \(B\) à coefficients dans \(\K\) tels que \(\deg(B)<n=0\), alors \(\deg(B)=-\infty\) et \(B=0\). Tous les polynômes divisent le polynôme nul donc les diviseurs communs de \(A\) et de \(B\) sont les diviseurs de \(A\). On pose \(D=A\) et on prend \(U=1\) et \(V=0\) \(AU+BV=A=D\). L'assertion \(\P(0)\) est vraie.
 
-  \emph{Hérédité}~: Soit $n \in \N$ et on suppose $\P(n)$. Montrons que cela implique $\P(n+1)$. Soient deux polynômes $A$ et $B$ à coefficients dans $\K$ tels que $\deg(B)<n+1$. Deux cas sont possibles~:
+  \emph{Hérédité}~: Soit \(n \in \N\) et on suppose \(\P(n)\). Montrons que cela implique \(\P(n+1)\). Soient deux polynômes \(A\) et \(B\) à coefficients dans \(\K\) tels que \(\deg(B)<n+1\). Deux cas sont possibles~:
   \begin{enumerate}
-  \item Si $\deg(B)<n$ alors on applmique l'hypothèse de récurrence au couple $(A,B)$;
-  \item si $\deg(B)=n$, alors $B$ est non nul et on peut effectuer la division euclidienne de $A$ par $B$, alors il existe un unique couple de polynôme $(Q,R) \in \K[X]^2$ tel que $A=BQ+R$ et $\deg(R)\leqslant\deg(B)=n$.
+  \item Si \(\deg(B)<n\) alors on applmique l'hypothèse de récurrence au couple \((A,B)\);
+  \item si \(\deg(B)=n\), alors \(B\) est non nul et on peut effectuer la division euclidienne de \(A\) par \(B\), alors il existe un unique couple de polynôme \((Q,R) \in \K[X]^2\) tel que \(A=BQ+R\) et \(\deg(R)\leqslant\deg(B)=n\).
 
-    On applique l'hypothèse de récurrence au couple $(B,R)$ et il existe un polynôme $D$ à coefficients dans $\K$ dont les diviseurs sont exactement les divisurs communs de $B$ et $R$ (c'est-à-dire les diviseurs communs de $A$ et $B$). Il existe un couple $(U_1,V_1) \in \K[X]^2$ tel que
+    On applique l'hypothèse de récurrence au couple \((B,R)\) et il existe un polynôme \(D\) à coefficients dans \(\K\) dont les diviseurs sont exactement les divisurs communs de \(B\) et \(R\) (c'est-à-dire les diviseurs communs de \(A\) et \(B\)). Il existe un couple \((U_1,V_1) \in \K[X]^2\) tel que
     \begin{equation}
       D=BU_1+RV_1=BU_1+(A-BQ)V_1=B(U_1-QV_1)+AV_1
     \end{equation}
-    On pose $U=V_1$ et $V=U_1-V_1Q$ et on a montré $\P(n+1)$.
+    On pose \(U=V_1\) et \(V=U_1-V_1Q\) et on a montré \(\P(n+1)\).
   \end{enumerate}
   
-  \emph{Conclusion}~: On a montré que $\P(0)$ était vrai et que pour tout naturel $n$, $\P(n)\implies\P(n+1)$ donc l'assertion $\P(n)$ est vraie pour tout $n$.
+  \emph{Conclusion}~: On a montré que \(\P(0)\) était vrai et que pour tout naturel \(n\), \(\P(n)\implies\P(n+1)\) donc l'assertion \(\P(n)\) est vraie pour tout \(n\).
   
-  On en déduit le théorème en divisant $D$, $U$ et $V$ par le coefficient dominant de $D$ si $D$ n'est pas nul.Ainsi on remarque que  $QPD_1 \mid{}PA_1$ et $QPD_1\mid{}PB_1$ et comme $P$ est non nul et que $\K[X]$ est intègre on a $QD_1 \mid{}A_1$ et $QD_1\mid{}B_1$. $QD_1$ est un divisseur de $A_1$ et de $B_1$ alors $QD_1\mid{}D_1$. Comme $D_1$ est non nul, $Q\mid{}1$ et donc $Q$ est constant non nul, c'est-à-dire qu'il existe un scalaire $\lambda$ non nul tel que $Q=\lambda$. 
+  On en déduit le théorème en divisant \(D\), \(U\) et \(V\) par le coefficient dominant de \(D\) si \(D\) n'est pas nul.Ainsi on remarque que  \(QPD_1 \mid{}PA_1\) et \(QPD_1\mid{}PB_1\) et comme \(P\) est non nul et que \(\K[X]\) est intègre on a \(QD_1 \mid{}A_1\) et \(QD_1\mid{}B_1\). \(QD_1\) est un divisseur de \(A_1\) et de \(B_1\) alors \(QD_1\mid{}D_1\). Comme \(D_1\) est non nul, \(Q\mid{}1\) et donc \(Q\) est constant non nul, c'est-à-dire qu'il existe un scalaire \(\lambda\) non nul tel que \(Q=\lambda\). 
 
-  Alors $D=\lambda(PD_1)$, les polynômes $D$ et $PD_1$ sont associés et commes ils sont tous les deux nuls ou unitaires ils sont égaux.
+  Alors \(D=\lambda(PD_1)\), les polynômes \(D\) et \(PD_1\) sont associés et commes ils sont tous les deux nuls ou unitaires ils sont égaux.
 \end{proof}
 
 \begin{prop}[Associativité]
-  Pour tous polynômes $A,B$ et $C$ de $\K[X]$, on a
+  Pour tous polynômes \(A,B\) et \(C\) de \(\K[X]\), on a
   \begin{equation}
     A \wedge (B\wedge C) = (A\wedge B) \wedge C.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $D=A \wedge (B\wedge C)$ et $E=(A\wedge B) \wedge C$. Alors~:
+  On note \(D=A \wedge (B\wedge C)\) et \(E=(A\wedge B) \wedge C\). Alors~:
   \begin{itemize}
-  \item $D\mid{}A$ et $D\mid{}B \wedge C$ donc $D\mid{}A$ et $D\mid{}B$ et $D\mid{} C$. Ainsi $D\mid{}A \wedge B$ et $D\mid{}C$. Finalement $D\mid{}(A\wedge B) \wedge C=E$
-  \item De la même manière on montre que $E\mid{}D$
+  \item \(D\mid{}A\) et \(D\mid{}B \wedge C\) donc \(D\mid{}A\) et \(D\mid{}B\) et \(D\mid{} C\). Ainsi \(D\mid{}A \wedge B\) et \(D\mid{}C\). Finalement \(D\mid{}(A\wedge B) \wedge C=E\)
+  \item De la même manière on montre que \(E\mid{}D\)
   \end{itemize}
-  Les polynômes $E$ et $D$ sont associés, nuls ou unitaires, donc égaux.
+  Les polynômes \(E\) et \(D\) sont associés, nuls ou unitaires, donc égaux.
 \end{proof}
 
 \subsection{Algorithme d'Euclide}
 
-Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui permet de calculer le PGCD de deux polynômes $A$ et $B$. On pose $R_0=A$, $R_1=B$ et pour tout $n\geqslant 2$
- si $R_n \neq 0$ on définit $R_{n+1}$ comme le reste de la division euclidienne de $R_{n-1}$ par $R_n$. Le PGCD de $A$ et de $B$ est égal au dernier reste non nul, normalisé.
+Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui permet de calculer le PGCD de deux polynômes \(A\) et \(B\). On pose \(R_0=A\), \(R_1=B\) et pour tout \(n\geqslant 2\)
+ si \(R_n \neq 0\) on définit \(R_{n+1}\) comme le reste de la division euclidienne de \(R_{n-1}\) par \(R_n\). Le PGCD de \(A\) et de \(B\) est égal au dernier reste non nul, normalisé.
 
 \subsection{PPCM de deux polynômes}
 
 \begin{prop}
-  Soient deux polynômes $A$ et $B$ de $\K[X]$. Il existe un unique $M \in \K[X]$, nul ou unitaire, dont les multiples sont exactement les multiples de $A$ et de $B$
+  Soient deux polynômes \(A\) et \(B\) de \(\K[X]\). Il existe un unique \(M \in \K[X]\), nul ou unitaire, dont les multiples sont exactement les multiples de \(A\) et de \(B\)
   \begin{equation}
     \forall C \in \K[X] \quad M\mid{}C \iff (A\mid{}C \text{~et~} B\mid{}C).
   \end{equation}
-  $M$ est appelé le PPCM (plus petit commun multiple) de $A$ et de $B$, noté $M=A \vee B$
+  \(M\) est appelé le PPCM (plus petit commun multiple) de \(A\) et de \(B\), noté \(M=A \vee B\)
 \end{prop}
 \begin{proof}[Unicité]
-  Soient $M_1$ et $M_2$ deux PPCM éventuels de $A$ et de $B$. Comme $M_1$ est un PPCM de $A$ et de $B$, on a que $A\mid{}M_1$ et $B\mid{}M_1$ et comme $M_2$ est aussi un pPPCM on a $M_2\mid{}M_1$. Par symétrie on a aussi $M_1\mid{}M_2$, alors $M_1$ sont associées, nuls ou unitaires, donc ils sont égaux.
+  Soient \(M_1\) et \(M_2\) deux PPCM éventuels de \(A\) et de \(B\). Comme \(M_1\) est un PPCM de \(A\) et de \(B\), on a que \(A\mid{}M_1\) et \(B\mid{}M_1\) et comme \(M_2\) est aussi un pPPCM on a \(M_2\mid{}M_1\). Par symétrie on a aussi \(M_1\mid{}M_2\), alors \(M_1\) sont associées, nuls ou unitaires, donc ils sont égaux.
 \end{proof}
 \begin{proof}[Existence]
-  Si $A$ est nul ou $B$ est nul, le seul multiple commun de $A$ et $B$ est le polynôme nul, donc $M=0$.
+  Si \(A\) est nul ou \(B\) est nul, le seul multiple commun de \(A\) et \(B\) est le polynôme nul, donc \(M=0\).
 
-  Si $A$ et $B$ sont tous les deux non nuls on pose
+  Si \(A\) et \(B\) sont tous les deux non nuls on pose
   \begin{equation}
     \E=\enstq{k \in \N}{\exists C \in \K[X] \ \deg(C)=k \ A\mid{}C \text{~et~} B\mid{}C},
   \end{equation}
-  alors $\E$ est une partie de $\N$. Puisque $A\mid{}AB$ et $B\mid{}AB$ et que $AB \neq 0$ on a $\deg(AB) \in \E$, alors $\E\neq \emptyset$. Ainsi $\E$ admet un plut petit élément $k_0 \in \E$. Il existe un polynôme $M \in \K[X]$ tel que $\deg(M)=k_0$, $A\mid{}M$ et $B\mid{}M$.
+  alors \(\E\) est une partie de \(\N\). Puisque \(A\mid{}AB\) et \(B\mid{}AB\) et que \(AB \neq 0\) on a \(\deg(AB) \in \E\), alors \(\E\neq \emptyset\). Ainsi \(\E\) admet un plut petit élément \(k_0 \in \E\). Il existe un polynôme \(M \in \K[X]\) tel que \(\deg(M)=k_0\), \(A\mid{}M\) et \(B\mid{}M\).
 
-  Soit un polynôme $C \in \K[X]$. Deux cas se présentent~:
+  Soit un polynôme \(C \in \K[X]\). Deux cas se présentent~:
   \begin{itemize}
-  \item Si $C$ est un multiple de $M$, $M\mid{}C$ et par transitivité de la distributivité, $A\mid{}C$ et $B\mid{}C$;
-  \item si $C$ est un multiple commun de $A$ et $B$. Comme $M \neq 0$ (puisque $\deg(M)=k_0 \in \N$) on effectue la division euclidienne de $C$ par $M$~:
+  \item Si \(C\) est un multiple de \(M\), \(M\mid{}C\) et par transitivité de la distributivité, \(A\mid{}C\) et \(B\mid{}C\);
+  \item si \(C\) est un multiple commun de \(A\) et \(B\). Comme \(M \neq 0\) (puisque \(\deg(M)=k_0 \in \N\)) on effectue la division euclidienne de \(C\) par \(M\)~:
     \begin{equation}
       \exists! (Q,R) \in \K[X]^2 \quad \begin{cases} C=MQ+R \\ \deg(R) < \deg(M)=k_0 \end{cases}
     \end{equation}
@@ -1442,36 +1442,36 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
     \begin{equation}
       (A\mid{}C \text{~et~} A\mid{}M) \text{~et~} (B\mid{}C \text{~et~} B\mid{}M) \implies A\mid{}R \text{~et~} B\mid{}R.
     \end{equation}
-    Si le reste était non nul, son degré serait un élément de $\E$, or $\deg(R) < k_0 = \min(\E)$, c'est absurde. Donc le reste est nul. Ce qui signifie que $M\mid{}C$. Ensuite on divise $M$ par son coefficient dominant pour avec le PPCM.
+    Si le reste était non nul, son degré serait un élément de \(\E\), or \(\deg(R) < k_0 = \min(\E)\), c'est absurde. Donc le reste est nul. Ce qui signifie que \(M\mid{}C\). Ensuite on divise \(M\) par son coefficient dominant pour avec le PPCM.
   \end{itemize}
 \end{proof}
 
 \emph{Remarque}~: Pour tous polynômes, leur PPCM est nul si et seulement si l'un des deux polynômes est nul.
 
 \begin{prop}
-  Soient $A$ et $B$ dans $\K[X]$. Supposons qu'il existe trois polynômes $A_1,B_1$ et $P$ tels que $P$ soit unitaire et que $A=PA_1$ et $B=PB_1$. Alors $A\vee B = P(A_1 \vee B_1)$.
+  Soient \(A\) et \(B\) dans \(\K[X]\). Supposons qu'il existe trois polynômes \(A_1,B_1\) et \(P\) tels que \(P\) soit unitaire et que \(A=PA_1\) et \(B=PB_1\). Alors \(A\vee B = P(A_1 \vee B_1)\).
 \end{prop}
 \begin{proof}
-  On note $M=A \vee B$ et $M_1=A_1 \vee B_1$. Par définition, $A_1\mid{}M_1$ et $B_1\mid{}M_1$. Alors $A\mid{}PM_1$ et $B\mid{}PM_1$ et $Pm_1$ est donc un multiple de $A$ et de $B$ et par défintion de $M$, on a $M\mid{}MP_1$.
+  On note \(M=A \vee B\) et \(M_1=A_1 \vee B_1\). Par définition, \(A_1\mid{}M_1\) et \(B_1\mid{}M_1\). Alors \(A\mid{}PM_1\) et \(B\mid{}PM_1\) et \(Pm_1\) est donc un multiple de \(A\) et de \(B\) et par défintion de \(M\), on a \(M\mid{}MP_1\).
 
-  On sait que $A\mid{}M$ donc il existe un polynôme $Q$ tel que $M=AQ=PA_1Q$. On sait qussi que $B\mid{}M$, c'est-à-dire que $PB_1\mid{}PA_1Q$ et comme $P$ est non nul on a $B_1\mid{}A_1Q$. On sait alors que $A_1\mid{}A_1Q$ et que $B_1\mid{}A_1Q$ alors $M_1\mid{}A_1Q$ et en multipliant $PM_1\mid{}M$.
+  On sait que \(A\mid{}M\) donc il existe un polynôme \(Q\) tel que \(M=AQ=PA_1Q\). On sait qussi que \(B\mid{}M\), c'est-à-dire que \(PB_1\mid{}PA_1Q\) et comme \(P\) est non nul on a \(B_1\mid{}A_1Q\). On sait alors que \(A_1\mid{}A_1Q\) et que \(B_1\mid{}A_1Q\) alors \(M_1\mid{}A_1Q\) et en multipliant \(PM_1\mid{}M\).
 
-  Au final $M\mid{}MP_1$ et $PM_1\mid{}M$ donc $PM_1$ et $M$ sont associées, de plus ils sont nuls ou unitaires, donc $M=M_1P$.
+  Au final \(M\mid{}MP_1\) et \(PM_1\mid{}M\) donc \(PM_1\) et \(M\) sont associées, de plus ils sont nuls ou unitaires, donc \(M=M_1P\).
 \end{proof}
 
 \begin{prop}[Associativité]
-  Pour tous polynômes $A,B$ et $C$ de $\K[X]$, on a
+  Pour tous polynômes \(A,B\) et \(C\) de \(\K[X]\), on a
   \begin{equation}
     A \vee (B\vee C) = (A\vee B) \vee C.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On note $D=A \wedge (B\vee C)$ et $E=(A\vee B) \vee C$. Alors~:
+  On note \(D=A \wedge (B\vee C)\) et \(E=(A\vee B) \vee C\). Alors~:
   \begin{itemize}
-  \item $A\mid{}D$ et $B \vee C\mid{}D$ donc $A\mid{}D$ et $B\mid{}D$ et $C\mid{} D$. Ainsi $A \vee B\mid{}D$ et $C\mid{}D$. Finalement $E=(A\vee B) \vee C\mid{}D$
-  \item De la même manière on montre que $D\mid{}E$
+  \item \(A\mid{}D\) et \(B \vee C\mid{}D\) donc \(A\mid{}D\) et \(B\mid{}D\) et \(C\mid{} D\). Ainsi \(A \vee B\mid{}D\) et \(C\mid{}D\). Finalement \(E=(A\vee B) \vee C\mid{}D\)
+  \item De la même manière on montre que \(D\mid{}E\)
   \end{itemize}
-  Les polynômes $E$ et $D$ sont associés, nuls ou unitaires, donc égaux.
+  Les polynômes \(E\) et \(D\) sont associés, nuls ou unitaires, donc égaux.
 \end{proof}
 
 \subsection{Polynômes premiers entre eux, théorème de Bezout \ldots}
@@ -1479,13 +1479,13 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
 \subsubsection{Polynômes premiers entre eux}
 
 \begin{defdef}
-  Soient $A$ et $B$ deux polynômes de $\K[X]$. On dit que $A$ et $B$ sont premiers entre eux si et seulement si $A \wedge B=1$.
+  Soient \(A\) et \(B\) deux polynômes de \(\K[X]\). On dit que \(A\) et \(B\) sont premiers entre eux si et seulement si \(A \wedge B=1\).
 
-  Cela signifie que les divisuers communs de $A$ et $B$ sont exactements les polynômes de degré $0$.
+  Cela signifie que les divisuers communs de \(A\) et \(B\) sont exactements les polynômes de degré \(0\).
 \end{defdef}
 
 \begin{prop}
-  Soient $A$ et $B$ dans $\K[X]$ et $D=A \wedge B$. Alors il existe deux polynômes $A_1, B_1$ de $\K[X]$ tels que
+  Soient \(A\) et \(B\) dans \(\K[X]\) et \(D=A \wedge B\). Alors il existe deux polynômes \(A_1, B_1\) de \(\K[X]\) tels que
   \begin{equation}
     A=A_1D, \text{~et~} B=B_1D, \text{~et~} A_1 \wedge B_1 =1.
   \end{equation}
@@ -1493,55 +1493,55 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
 \begin{proof}
   Deux case se présentent~:
   \begin{enumerate}
-  \item Si $A=B=0$ alors $D=0$ et on peut choisir $A_1=B_1=1$;
-  \item Si $A\neq 0$ et $B \neq 0$ alors $D\neq 0$. Comme par définition $D\mid{}A$ et $D\mid{}B$ alors il existe deux polynômes $A_1$ et $B_1$ dans $\K[X]$ tels que $A=A_1D$ et $B=B_1D$. Alors
+  \item Si \(A=B=0\) alors \(D=0\) et on peut choisir \(A_1=B_1=1\);
+  \item Si \(A\neq 0\) et \(B \neq 0\) alors \(D\neq 0\). Comme par définition \(D\mid{}A\) et \(D\mid{}B\) alors il existe deux polynômes \(A_1\) et \(B_1\) dans \(\K[X]\) tels que \(A=A_1D\) et \(B=B_1D\). Alors
     \begin{equation}
       A \wedge B = (A_1D) \wedge (B_1D) = D (A_1 \wedge B_1)
     \end{equation}
-    (puisque $D$ est unitaire), alors
+    (puisque \(D\) est unitaire), alors
     \begin{equation}
       D(1-A_1 \wedge B_1)=0,
     \end{equation}
-    et comme $D$ est non nul donc $A_1 \wedge B_1=1$.
+    et comme \(D\) est non nul donc \(A_1 \wedge B_1=1\).
   \end{enumerate}
 \end{proof}
 
 \subsubsection{Théorème de Bezout}
 
 \begin{theo}
-  Soient deux polynômes $A$ et $B$ de $\K[X]$, alors ils sont premier entre eux si et seulement s'il existe deux polynômes $U$ et $V$ tels que $AU+BV=1$.
+  Soient deux polynômes \(A\) et \(B\) de \(\K[X]\), alors ils sont premier entre eux si et seulement s'il existe deux polynômes \(U\) et \(V\) tels que \(AU+BV=1\).
 \end{theo}
 \begin{proof}
-  $\implies$ Déjà vu dans la définition du PGCD.
+  \(\implies\) Déjà vu dans la définition du PGCD.
 
-  $\impliedby$ S'il existe deux polynômes $U$ et $V$ tels que $AU+BV=1$. Soit un polynôme $C$ tel que $C\mid{}A$ et $C\mid{}B$ alors $C\mid{}AU+BV=1$ donc $C$ est de degré zéro et donc $A \wedge B =1$.
+  \(\impliedby\) S'il existe deux polynômes \(U\) et \(V\) tels que \(AU+BV=1\). Soit un polynôme \(C\) tel que \(C\mid{}A\) et \(C\mid{}B\) alors \(C\mid{}AU+BV=1\) donc \(C\) est de degré zéro et donc \(A \wedge B =1\).
 \end{proof}
 
 \begin{proof}
-  Pour tous polynômes $A$, $B$ et $C$ de $\K[X]$,
+  Pour tous polynômes \(A\), \(B\) et \(C\) de \(\K[X]\),
   \begin{equation}
     A \wedge B =1 \text{~et~} A \wedge C=1 \iff A \wedge (BC) =1.
   \end{equation}
 \end{proof}
 \begin{proof}
-  $\implies$ D'après le théorème de Bezout, il existe quatres polynômes $U_1,V_1,U_2$ et $V_2$ tels que $AU_1+BV_1=1$et $AU_2+CV_2=1$. D'où
+  \(\implies\) D'après le théorème de Bezout, il existe quatres polynômes \(U_1,V_1,U_2\) et \(V_2\) tels que \(AU_1+BV_1=1\)et \(AU_2+CV_2=1\). D'où
   \begin{align}
     (AU_1+BV_1)(AU_2+BV_2)&=1\\
     A(U_1U_2A+U_1CV_2+U_2BV_1)+BC(V_1V_2)&=1.
   \end{align}
-  Si on pose $U=U_1U_2A+U_1CV_2+U_2BV_1$ et $V=V_1V_2$ alors c'est bon. On a montré qu'il existe deux polynômes $U$ et $V$ tels que $AU+(BC)V=1$. Alors $A \wedge BC=1$.
+  Si on pose \(U=U_1U_2A+U_1CV_2+U_2BV_1\) et \(V=V_1V_2\) alors c'est bon. On a montré qu'il existe deux polynômes \(U\) et \(V\) tels que \(AU+(BC)V=1\). Alors \(A \wedge BC=1\).
 
-  $\impliedby$ Il existe deux polynômes $U$ et $V$ tels que $AU+(BC)V=1$. Donc $AU+B(CV)=1$ et $AU+C(BV)=1$ alors $A \wedge B=1$ et $A \wedge C=1$.
+  \(\impliedby\) Il existe deux polynômes \(U\) et \(V\) tels que \(AU+(BC)V=1\). Donc \(AU+B(CV)=1\) et \(AU+C(BV)=1\) alors \(A \wedge B=1\) et \(A \wedge C=1\).
 \end{proof}
 
 \begin{prop}
-  Pour tous polynômes $A$, $B$ et $C$ de $\K[X]$ et pour tous naturels non nuls $k$ et $l$, on a
+  Pour tous polynômes \(A\), \(B\) et \(C\) de \(\K[X]\) et pour tous naturels non nuls \(k\) et \(l\), on a
   \begin{equation}
     A \wedge B =1 \iff A^k \wedge B^l = 1.
   \end{equation}
 \end{prop}
 \begin{proof}
-  $\implies$ On montre par récurrence immédiate à partir de la dernière proposition que
+  \(\implies\) On montre par récurrence immédiate à partir de la dernière proposition que
   \begin{equation}
     \forall l \in \N^* \quad A \wedge B^l = 1,
   \end{equation}
@@ -1549,59 +1549,59 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
   \begin{equation}
     \forall l \in \N^* \forall k \in \N^* \quad A^k \wedge B^l = 1.
   \end{equation}
-  $\impliedby$  De même, se déduit de la proposition précédente par récurrence descendante.
+  \(\impliedby\)  De même, se déduit de la proposition précédente par récurrence descendante.
 \end{proof}
 
 \subsubsection{Théorème de Gau\ss}
 
 \begin{theo}
-  Pour tous polynômes $A$, $B$ et $C$ de $\K[X]$,
+  Pour tous polynômes \(A\), \(B\) et \(C\) de \(\K[X]\),
   \begin{equation}
     A\mid{}BC \text{~et~} A\wedge B=1 \implies A\mid{}C.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Comme $A \wedge B=1$, il existe deux polynômes $U$ et $V$ de $\K[X]$ tels que $AU+BV=1$ et donc $AUC+BVC=C$. Or $A\mid{}BC$, donc $A\mid{}BVC$. Ainsi $A\mid{}BVC+AUC$ et finalement $A\mid{}C$.
+  Comme \(A \wedge B=1\), il existe deux polynômes \(U\) et \(V\) de \(\K[X]\) tels que \(AU+BV=1\) et donc \(AUC+BVC=C\). Or \(A\mid{}BC\), donc \(A\mid{}BVC\). Ainsi \(A\mid{}BVC+AUC\) et finalement \(A\mid{}C\).
 \end{proof}
 
 \begin{prop}
-  Étant donnés trois polynômes$ A$, $B$ et $C$ à coefficients dans $\K$,
+  Étant donnés trois polynômes\( A\), \(B\) et \(C\) à coefficients dans \(\K\),
   \begin{equation}
     A\mid{}C \text{~et~} B\mid{}C \text{~et~} A\wedge B=1 \implies AB\mid{}C
   \end{equation}
 \end{prop}
 \begin{proof}
-  Comme $B\mid{}C$, il existe un polynôme $Q \in \K[X]$ tel que $C=BQ$. Comme $A\mid{}BQ$ et que $A\wedge B=1$ le théorème de Gau\ss donne donc que $A\mid{}Q$. Il existe donc un polynôme $R \in \K[X]$ tel que $Q=AR$. Ainsi $C=BQ=BAR$ et donc $AB\mid{}C$.
+  Comme \(B\mid{}C\), il existe un polynôme \(Q \in \K[X]\) tel que \(C=BQ\). Comme \(A\mid{}BQ\) et que \(A\wedge B=1\) le théorème de Gau\ss donne donc que \(A\mid{}Q\). Il existe donc un polynôme \(R \in \K[X]\) tel que \(Q=AR\). Ainsi \(C=BQ=BAR\) et donc \(AB\mid{}C\).
 \end{proof}
 
 \begin{prop}
-  Soient $A$ et $B$ dans $\K[X]$ premiers entre eux. Les polynômes $AB$ et $A \vee B$ sont associées.
+  Soient \(A\) et \(B\) dans \(\K[X]\) premiers entre eux. Les polynômes \(AB\) et \(A \vee B\) sont associées.
 \end{prop}
 \begin{proof}
-  Le polynôme $AB$ est un multiple commun à $A$ et $B$ donc $A\vee B \mid{} AB$. On sait que $A\mid{}A \vee B$ et $B\mid{} A\vee B$ et que $A \wedge B=1$, alors la proposition précédente nous donne que $AB\mid{}A \vee B$. Alors les polynômes $AB$ et $A \vee B$ sont associées.
+  Le polynôme \(AB\) est un multiple commun à \(A\) et \(B\) donc \(A\vee B \mid{} AB\). On sait que \(A\mid{}A \vee B\) et \(B\mid{} A\vee B\) et que \(A \wedge B=1\), alors la proposition précédente nous donne que \(AB\mid{}A \vee B\). Alors les polynômes \(AB\) et \(A \vee B\) sont associées.
 \end{proof}
 
 \begin{prop}
-  Soient $A$ et $B$ dans $\K[X]$. Les polynômes $AB$ et $(A\wedge B)(A \vee B)$ sont associés.
+  Soient \(A\) et \(B\) dans \(\K[X]\). Les polynômes \(AB\) et \((A\wedge B)(A \vee B)\) sont associés.
 \end{prop}
 \begin{proof}
-  Si $A=B=0$ alors $AB=0=(A\wedge B)(A \vee B)$.
+  Si \(A=B=0\) alors \(AB=0=(A\wedge B)(A \vee B)\).
 
-  Si $A\neq 0$ ou $B\neq 0$, alors $D=A \wedge B \neq 0$. Il existe deux polynômes $A_1$ et $B_1$ de $\K[X]$ tels que $A=DA_1$ et $B=DB_1$ avec $A_1 \wedge B_1 =1$.
+  Si \(A\neq 0\) ou \(B\neq 0\), alors \(D=A \wedge B \neq 0\). Il existe deux polynômes \(A_1\) et \(B_1\) de \(\K[X]\) tels que \(A=DA_1\) et \(B=DB_1\) avec \(A_1 \wedge B_1 =1\).
 
-  Les polynômes $A_1B_1$ et $A_1 \vee B_1$ sont donc associés (prop précédente). Il existe un scalaire $\lambda$ non nul tel que$ A_1B_1= \lambda A_1 \vee B_1$. Ainsi
+  Les polynômes \(A_1B_1\) et \(A_1 \vee B_1\) sont donc associés (prop précédente). Il existe un scalaire \(\lambda\) non nul tel que\( A_1B_1= \lambda A_1 \vee B_1\). Ainsi
   \begin{align}
     AB&=(DA_1)(DB_1) = D^2 \lambda A_1 \vee B_2 \\
     &=\lambda (A \wedge B) [(DA_1) \vee (DB_1)]\\
     &=\lambda (A \wedge B)(A \vee B).
   \end{align}
-  alors $AB$ et $(A\wedge B)(A \vee B)$ sont associés.
+  alors \(AB\) et \((A\wedge B)(A \vee B)\) sont associés.
 \end{proof}
 
 \subsubsection{Coefficients de Bezout}
 
 \begin{prop}
-  Soient $A$ et $B$ dans $\K[X]$ non constants tels que $A\wedge B=1$. Alors il existe un unique couple $(U_0,V_0) \in \K[X]^2$ tel que
+  Soient \(A\) et \(B\) dans \(\K[X]\) non constants tels que \(A\wedge B=1\). Alors il existe un unique couple \((U_0,V_0) \in \K[X]^2\) tel que
   \begin{equation}
     AU_0+BV_0 = 1 \quad \deg(U_0) \leqslant \deg(B) \quad \deg(V_0) \leqslant \deg(A).
   \end{equation}
@@ -1610,15 +1610,15 @@ Dans la démonstration de l'éexistence du PGCD apparaît un algorithme qui perm
   En TD, fiche 30 exercice 6.
 \end{proof}
 
-Présentation sur un exemple de la méthode de recherche d'un couple de Bezout. On pose $A=X^3+X+1=R_0$ et $B=X^2+X+1=R_1$. Alors
+Présentation sur un exemple de la méthode de recherche d'un couple de Bezout. On pose \(A=X^3+X+1=R_0\) et \(B=X^2+X+1=R_1\). Alors
 \begin{equation}
   A=B(X-1)+X+2
 \end{equation}
-en notant $R_2=X+2$, on a
+en notant \(R_2=X+2\), on a
 \begin{equation}
   B=R_2(X-1)+3
 \end{equation}
-en notant $R_3=3$, on sait que $_3$ est le dernier reste non nul donc $A\wedge B=1$. Ainsi on peut trouver les coefficients en ``remontant'' l'algorithme~:
+en notant \(R_3=3\), on sait que \(_3\) est le dernier reste non nul donc \(A\wedge B=1\). Ainsi on peut trouver les coefficients en ``remontant'' l'algorithme~:
 \begin{equation}
   1 = \frac{R_3}{3} = \frac{1}{3}(B-R_2(X-1)) = \frac{1}{3}(B-(A-B(X-1))(X-1))
 \end{equation}
@@ -1626,86 +1626,86 @@ c'est-à-dire
 \begin{equation}
   1 = -\frac{1}{3} A(X-1) + \frac{1}{3}(1-(X-1)^2)B
 \end{equation}
-On pose alors $U=-\frac{1}{3}(X-1)$ et $B=\frac{1}{3}(1-(X-1)^2)$ avec $\deg(U)=1 < \deg(B)=2$ et $\deg(V)=2 < \deg(A)=3$.
+On pose alors \(U=-\frac{1}{3}(X-1)\) et \(B=\frac{1}{3}(1-(X-1)^2)\) avec \(\deg(U)=1 < \deg(B)=2\) et \(\deg(V)=2 < \deg(A)=3\).
 
 \subsection{Polynômes irréductibles et théorème de factorisation}
 
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soit $P \in \K[X]$. Le polynôme $P$ est dit irréductible sur le corps $\K$ si~:
+  Soit \(P \in \K[X]\). Le polynôme \(P\) est dit irréductible sur le corps \(\K\) si~:
   \begin{itemize}
-  \item $\deg(P) \geqslant 1$
-  \item les diviseurs de $P$ sont exactements les polynômes constants non nul et les associés de $P$.
+  \item \(\deg(P) \geqslant 1\)
+  \item les diviseurs de \(P\) sont exactements les polynômes constants non nul et les associés de \(P\).
   \end{itemize}
-  Autrement dit, $P$ est dit irréductible sur le corps $\K$ si et seulement si
+  Autrement dit, \(P\) est dit irréductible sur le corps \(\K\) si et seulement si
   \begin{itemize}
-  \item $\deg(P) \geqslant 1$
-  \item $\forall A,B \in \K[X] \quad P=AB \implies \deg(A)=0 \text{~ou~} \deg(B)=0$
+  \item \(\deg(P) \geqslant 1\)
+  \item \(\forall A,B \in \K[X] \quad P=AB \implies \deg(A)=0 \text{~ou~} \deg(B)=0\)
   \end{itemize}
 \end{defdef}
 
 \emph{Remarque}~:
 \begin{enumerate}
-\item Les polynômes de degré $1$ sont toujours irréductibles, quelque soit le corps $\K$.
-\item Il est important de préciser sur quel corps on travaile : un polynôme peut être irréductible dans un corps mais pas dans un autre. Comme par exemple $X^2+1$ est irréductible dans $\R$ mais pas dans $\C$ $X-\ii\mid{}X^2+1$.
+\item Les polynômes de degré \(1\) sont toujours irréductibles, quelque soit le corps \(\K\).
+\item Il est important de préciser sur quel corps on travaile : un polynôme peut être irréductible dans un corps mais pas dans un autre. Comme par exemple \(X^2+1\) est irréductible dans \(\R\) mais pas dans \(\C\) \(X-\ii\mid{}X^2+1\).
 \end{enumerate}
 
-\subsubsection{Irréductibles de $\C[X]$et de $\R[X]$}
+\subsubsection{Irréductibles de \(\C[X]\)et de \(\R[X]\)}
 
 \begin{prop}
-  Les polynômes irréductibles de $\C[X]$ sont les polynômes de degré $1$.
+  Les polynômes irréductibles de \(\C[X]\) sont les polynômes de degré \(1\).
 \end{prop}
 \begin{proof}
-  Les polynômes de degré $1$ sont irréductibles. Si $P\in \C[X]$ admet un degré supérieur à $2$, on sait que $P$ peut être factorisé en produit de polynômes de degré $1$ (théorème de factorisation dans $\C$). Il admet donc des diviseurs non constants et non associés à lui-même : il n'est pas irréductible.
+  Les polynômes de degré \(1\) sont irréductibles. Si \(P\in \C[X]\) admet un degré supérieur à \(2\), on sait que \(P\) peut être factorisé en produit de polynômes de degré \(1\) (théorème de factorisation dans \(\C\)). Il admet donc des diviseurs non constants et non associés à lui-même : il n'est pas irréductible.
 \end{proof}
 
 \begin{prop}
-  Les polynômes irréductibles de $\R[X]$ sont~:
+  Les polynômes irréductibles de \(\R[X]\) sont~:
   \begin{itemize}
-  \item les polynômes de degré $1$;
-  \item les polynômes de degré $2$ dont le discriminant est négatif.
+  \item les polynômes de degré \(1\);
+  \item les polynômes de degré \(2\) dont le discriminant est négatif.
   \end{itemize}
 \end{prop}
 \begin{proof}
-  Les polynômes de degré $1$ sont irréductibles. Soit $P$ un polynôme de degré $2$ et soit $\Delta$ son discriminant.
+  Les polynômes de degré \(1\) sont irréductibles. Soit \(P\) un polynôme de degré \(2\) et soit \(\Delta\) son discriminant.
   \begin{itemize}
-  \item Si $\Delta>0$ alors $P$ admet deux racines réelles $x_1$ et $x_2$ et $X-x_1\mid{}P$, $P$ n'est pas irréductible.
-  \item Si $\Delta=0$ alors $P$ admet une racine double $x_0$ et $X-x_0\mid{}P$, $P$ n'est pas irréductible.
-  \item Si $\Delta <0$ alors $P$ n'admet pas de racines réelles. S'il existait deux polynômes $A$ et $B$ de $\R[X]$ tels que $P=AB$ avec $\deg(A) = \deg(B)=1$, alors $A$ admettrait une racine réelle et donc $P$ aussi (Absurde), donc $P$ est irréductible.
+  \item Si \(\Delta>0\) alors \(P\) admet deux racines réelles \(x_1\) et \(x_2\) et \(X-x_1\mid{}P\), \(P\) n'est pas irréductible.
+  \item Si \(\Delta=0\) alors \(P\) admet une racine double \(x_0\) et \(X-x_0\mid{}P\), \(P\) n'est pas irréductible.
+  \item Si \(\Delta <0\) alors \(P\) n'admet pas de racines réelles. S'il existait deux polynômes \(A\) et \(B\) de \(\R[X]\) tels que \(P=AB\) avec \(\deg(A) = \deg(B)=1\), alors \(A\) admettrait une racine réelle et donc \(P\) aussi (Absurde), donc \(P\) est irréductible.
   \end{itemize}
-  Si $P \i n \R[X]$ tel que $deg(P)\geqslant 3$ alors d'après le théorème de factorisation, on pourrait écrire $P$ comme un produit de polynômes de degré $1$ ou $2$~: $P$ admet des diviseurs non constants et non associés à lui-même. Alors $P$ n'est pas irréductible.
+  Si \(P \i n \R[X]\) tel que \(deg(P)\geqslant 3\) alors d'après le théorème de factorisation, on pourrait écrire \(P\) comme un produit de polynômes de degré \(1\) ou \(2\)~: \(P\) admet des diviseurs non constants et non associés à lui-même. Alors \(P\) n'est pas irréductible.
 \end{proof}
 
 \subsubsection{Propriétés des polynômes irréductibles}
 
 \begin{prop}
-  Soient $A$ et $P$ dans $\K[X]$. On suppose que $P$ est irréductible dans $\K$. Alors $P\mid{}A$ ou $P \wedge A=1$.
+  Soient \(A\) et \(P\) dans \(\K[X]\). On suppose que \(P\) est irréductible dans \(\K\). Alors \(P\mid{}A\) ou \(P \wedge A=1\).
 \end{prop}
 \begin{proof}
-  Soit $C \in \K[X]$ un diviseur commun de $A$ et de $P$. Alors $C$ est soit constant, soit associé à $P$.
+  Soit \(C \in \K[X]\) un diviseur commun de \(A\) et de \(P\). Alors \(C\) est soit constant, soit associé à \(P\).
   \begin{itemize}
-  \item Si $P\mid{}A$ alors $A\wedge P$ est associé à $P$.
-  \item Sinon, $C$ est constant non nul donc $A \wedge P=1$.
+  \item Si \(P\mid{}A\) alors \(A\wedge P\) est associé à \(P\).
+  \item Sinon, \(C\) est constant non nul donc \(A \wedge P=1\).
   \end{itemize}
 \end{proof}
 
 \begin{prop}
-  Soient trois polynômes $A,B$ et $P$ de $\K[X]$ avec $P$ irréductible. Alors
+  Soient trois polynômes \(A,B\) et \(P\) de \(\K[X]\) avec \(P\) irréductible. Alors
   \begin{equation}
     P\mid{}AB \iff P\mid{}A \text{~ou~} P\mid{}B
   \end{equation}
 \end{prop}
 \begin{proof}
-  $\impliedby$ C'est clair
+  \(\impliedby\) C'est clair
 
-  $\implies$ Si $P\mid{}A$, c'est ok et sinon alors $P \wedge A=1$ et donc le théorème de Gau\ss donne donc que $P\mid{}B$.
+  \(\implies\) Si \(P\mid{}A\), c'est ok et sinon alors \(P \wedge A=1\) et donc le théorème de Gau\ss donne donc que \(P\mid{}B\).
 \end{proof}
 
 \subsubsection{Décomposition d'un polynôme en produits de facteurs irréductibles}
 
 \begin{theo}
-  Soit $P \in \K[X]$ un polynôme non constant. Alors il existe un scalaire $\lambda$ non nul, un nturel $n \in \N^*$, des polynômes $P_1, \ldots, P_n$ irréductibles unitaires de $\K[X]$ deux à deux distincts et des entiers tous non nuls $\alpha_1, \ldots, \alpha_n$ tels que
+  Soit \(P \in \K[X]\) un polynôme non constant. Alors il existe un scalaire \(\lambda\) non nul, un nturel \(n \in \N^*\), des polynômes \(P_1, \ldots, P_n\) irréductibles unitaires de \(\K[X]\) deux à deux distincts et des entiers tous non nuls \(\alpha_1, \ldots, \alpha_n\) tels que
   \begin{equation}
     P = \lambda \prod_{i=1}^n P_i^{\alpha_i}
   \end{equation}
@@ -1715,7 +1715,7 @@ On pose alors $U=-\frac{1}{3}(X-1)$ et $B=\frac{1}{3}(1-(X-1)^2)$ avec $\deg(U)=
 \end{proof}
 
 \begin{cor}
-  Soient $A$ et $B$ deux polynômes de $\K[X]$ tels que $A=\lambda \prod_{i=1}^n P_i^{\alpha_i}$ et $B=\mu \prod_{i=1}^n P_i^{\beta_i}$ où $n \in \N^*$ et $P_1, \ldots, P_n$ sont irréductibles, unitaires et deux à deux distincts ; $(\lambda, \mu)\in\K$ et $\alpha_1, \ldots, \alpha_n$, $\beta_1,\ldots \beta_n \in \N$. Alors
+  Soient \(A\) et \(B\) deux polynômes de \(\K[X]\) tels que \(A=\lambda \prod_{i=1}^n P_i^{\alpha_i}\) et \(B=\mu \prod_{i=1}^n P_i^{\beta_i}\) où \(n \in \N^*\) et \(P_1, \ldots, P_n\) sont irréductibles, unitaires et deux à deux distincts ; \((\lambda, \mu)\in\K\) et \(\alpha_1, \ldots, \alpha_n\), \(\beta_1,\ldots \beta_n \in \N\). Alors
   \begin{align}
     A\mid{}B \iff \forall i \in \intervalleentier{1}{n} \quad \alpha_i \leqslant \beta_i \\
     A \wedge B = \prod_{i=1}^n P_i^{\min(\alpha_i,\beta_i)}\\

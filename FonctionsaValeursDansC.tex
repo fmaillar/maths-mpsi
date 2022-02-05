@@ -1,54 +1,51 @@
-\chapter{Fonctions à valeurs dans $\C$ ou dans $\R^2$}
-
+\chapter{Fonctions à valeurs dans \(\C\) ou dans \(\R^2\)}
 Les propositions énoncées ci-dessous peuvent être pour l'instant considérées comme des définitions.
-
-\section{Fonctions d'un intervalle réel dans $\C$}
-
-Soit $I$ un intervalle réel contenant au moins deux points et $f : I \longmapsto \C$ une application. Se donner une fonction $f$ revient à se donner les deux applications ``partie réelle'' $x$  et ``partie imaginaire'' $y$ telles que $f=x+\ii y$. Ces applications sont définies telles que
+\section{Fonctions d'un intervalle réel dans \(\C\)}
+Soit \(I\) un intervalle réel contenant au moins deux points et \(f : I \longmapsto \C\) une application. Se donner une fonction \(f\) revient à se donner les deux applications ``partie réelle'' \(x\)  et ``partie imaginaire'' \(y\) telles que \(f=x+\ii y\). Ces applications sont définies telles que
 \begin{equation}
-  \fonction{x}{I}{\R}{t}{\Re(f(t))} \quad   \fonction{y}{I}{\R}{t}{\Im(f(t))}
+  \fonction{x}{I}{\R}{t}{\Re(f(t))} \quad   \fonction{y}{I}{\R}{t}{\Im(f(t))}.
 \end{equation}
 \begin{prop}
-  Soit $a$ un point ou une borne de $I$. L'application $f$ admet une limite au point $a$ si et seulement si les applications $x$ et $y$ admettent des limites au point $a$, auquel cas
+  Soit \(a\) un point ou une borne de \(I\). L'application \(f\) admet une limite au point \(a\) si et seulement si les applications \(x\) et \(y\) admettent des limites au point \(a\), auquel cas
   \begin{equation}
-    \lim\limits_{t \to a} f(t) = \lim\limits_{t \to a} x(t) +\ii \lim\limits_{t \to a} y(t)
+    \lim\limits_{t \to a} f(t) = \lim\limits_{t \to a} x(t) +\ii \lim\limits_{t \to a} y(t).
   \end{equation}
 \end{prop}
 \begin{prop}
-  L'application $f$ est continue sur $I$ si et seulement si $x$ et $y$ sont continues sur $I$.
+  L'application \(f\) est continue sur \(I\) si et seulement si \(x\) et \(y\) sont continues sur \(I\).
 \end{prop}
 \begin{prop}
-  Soit $t$ un point de $I$. L'application $f$ est dérivable au point $t$ si et seulement si les applications $x$ et $y$ sont dérivables en $t$ et auquel cas
+  Soit \(t\) un point de \(I\). L'application \(f\) est dérivable au point \(t\) si et seulement si les applications \(x\) et \(y\) sont dérivables en \(t\) et auquel cas
   \begin{equation}
-    f'(t) = x'(t) + \ii y'(t)
+    f'(t) = x'(t) + \ii y'(t).
   \end{equation}
 \end{prop}
-
+%
 On montre que les théorèmes usuels sur la dérivation (respectivement la continuité et les limites) d'une somme ou d'un produit de fonctions dérivables (respectivement continues et admettant des limites), ou d'un quotient de fonctions dérivables (respectivement continues et admettant des limites) dont le dénominateur ne s'annule pas, se prolongent aux fonctions à valeurs complexes.
-
+%
 \begin{theo}
-  Toute application continue $f : I \longmapsto \C$ admet des primitives sur $I$. Si $F : I \longmapsto \C$ est une primitive de $f$ sur $I$, alors les autres primitives sur $I$ sont les applications $F+c$ où $c$ est une application constante sur $I$.
+Toute application continue \(f : I \longmapsto \C\) admet des primitives sur \(I\). Si \(F : I \longmapsto \C\) est une primitive de \(f\) sur \(I\), alors les autres primitives sur \(I\) sont les applications \(F+\tilde{c}\) où \(\tilde{c}\) est une application constante sur \(I\).
 \end{theo}
 
-\section{Fonctions d'un intervalle réel dans $\R^2$}
+\section{Fonctions d'un intervalle réel dans \(\R^2\)}
 
-On rappelle que l'ensemble $\R^2$ est l'ensemble des couples $(x,y)$ de réels. Il est muni d'une addition définie par $(x,y)+(x'+y') = (x+x',y+y')$ et d'une multiplication scalaire définie par $\lambda(x,y) = (\lambda x, \lambda y)$.
+On rappelle que l'ensemble \(\R^2\) est l'ensemble des couples \((x,y)\) de réels. Il est muni d'une addition définie par \((x,y)+(x'+y') = (x+x',y+y')\) et d'une multiplication scalaire définie par \(\lambda(x,y) = (\lambda x, \lambda y)\).
 
-Soient $I$ un intervalle réel contenant au moins deux points et $f : I \longmapsto \R^2$ une application. Se donner une application $f$ revient à se donner les deux applications ``coordonnées'' $x : I \longmapsto \R$ et $y : I \longmapsto \R$ telles que pour tout $t \in I \ f(t)=(x(t),y(t))$.
+Soient \(I\) un intervalle réel contenant au moins deux points et \(f : I \longmapsto \R^2\) une application. Se donner une application \(f\) revient à se donner les deux applications ``coordonnées'' \(x : I \longmapsto \R\) et \(y : I \longmapsto \R\) telles que pour tout \(t \in I \ f(t)=(x(t),y(t))\).
 
 \begin{prop}
-  Soit $a$ un point ou une borne de $I$. L'application $f$ admet une limite au point $a$ si et seulement si les applications $x$ et $y$ admettent des limites au point $a$, auquel cas
+  Soit \(a\) un point ou une borne de \(I\). L'application \(f\) admet une limite au point \(a\) si et seulement si les applications \(x\) et \(y\) admettent des limites au point \(a\), auquel cas
   \begin{equation}
     \lim\limits_{t \to a} f(t) = \left(\lim\limits_{t \to a} x(t) ,\lim\limits_{t \to a} y(t)\right)
   \end{equation}
 \end{prop}
 \begin{prop}
-  L'application $f$ est continue sur $I$ si et seulement si les applications $x$ et $y$ sont continues sur $I$.
+  L'application \(f\) est continue sur \(I\) si et seulement si les applications \(x\) et \(y\) sont continues sur \(I\).
 \end{prop}
 \begin{prop}
-  Soit $t$ un point de $I$. L'application $f$ est dérivable au point $t$ si et seulement si les applications $x$ et $y$ sont dérivables en $t$ et auquel cas
+  Soit \(t\) un point de \(I\). L'application \(f\) est dérivable au point \(t\) si et seulement si les applications \(x\) et \(y\) sont dérivables en \(t\) et auquel cas
   \begin{equation}
-    f'(t) = (x'(t),y'(t))
+    f'(t) = (x'(t),y'(t)).
   \end{equation}
 \end{prop}
-On montre que les théorèmes usuels sur la dérivation (respectivement la continuité et les limites) d'une somme ou d'un produit de fonctions dérivables (respectivement continues et admettant des limites), ou d'un quotient de fonctions dérivables (respectivement continues et admettant des limites) dont le dénominateur ne s'annule pas, se prolongent aux fonctions à valeurs dans $\R^2$.
+On montre que les théorèmes usuels sur la dérivation (respectivement la continuité et les limites) d'une somme ou d'un produit de fonctions dérivables (respectivement continues et admettant des limites), ou d'un quotient de fonctions dérivables (respectivement continues et admettant des limites) dont le dénominateur ne s'annule pas, se prolongent aux fonctions à valeurs dans \(\R^2\).

@@ -1,93 +1,90 @@
 \chapter{Espace géométrique euclidien -- Pré-requis}
 
-L'objet de cette annexe est de rappeler des résultats et notions supposés connus à l'issue de la classe de terminale, mais avec une formalisation nouvelle.
-L'espace géométrique euclidien $\E$ est un ensemble dont les éléments sont appelés points et notés en lettre majuscules.
-On lui associe un ensemble noté $\vect{\E}$ appelé espace vectoriel euclidien. Ses éléments sont appelés vecteurs et notés en minuscules surmontés d'une flèche.
-On appelle scalaire les éléments de l'ensemble $\R$, plus généralement les éléments d'un corps.
+L'objet de cette annexe est de rappeler des résultats et notions supposés connus à l'issue de la classe de terminale, mais avec une formalisation nouvelle. L'espace géométrique euclidien \(\E\) est un ensemble dont les éléments sont appelés points et notés en lettre majuscules. On lui associe un ensemble noté \(\vect{\E}\) appelé espace vectoriel euclidien. Ses éléments sont appelés vecteurs et notés en minuscules surmontés d'une flèche. On appelle scalaire les éléments de l'ensemble \(\R\), plus généralement les éléments d'un corps.
 
-\section{Espace vectoriel $\protect\vect{\E}$}
+\section{Espace vectoriel \(\protect\vect{\E}\)}
 
-L'espace vectoriel $\vect{\E}$ est muni de deux lois
+L'espace vectoriel \(\vect{\E}\) est muni de deux lois
 \begin{itemize}
-\item l'addition vectorielle, qui fait correspondre aux vecteurs $\vu$ et $\vv$ le vecteur noté $\vu + \vv$;
-\item la multiplication scalaire, qui au scalaire $\lambda$ et au vecteur $\vu$ le vecteur noté $\lambda \vu$.
+\item l'addition vectorielle, qui fait correspondre aux vecteurs \(\vu\) et \(\vv\) le vecteur noté \(\vu + \vv\);
+\item la multiplication scalaire, qui au scalaire \(\lambda\) et au vecteur \(\vu\) le vecteur noté \(\lambda \vu\).
 \end{itemize}
  
-Il possède de plus un élément appelé vecteur nul noté $\vec{0}$.
+Il possède de plus un élément appelé vecteur nul noté \(\vec{0}\).
 
 \begin{prop}
-  $(\vect{\E}, +, \cdot)$ est un $\R-$espace vectoriel, c'est à dire
+  \((\vect{\E}, +, \cdot)\) est un \(\R-\)espace vectoriel, c'est à dire
   \begin{enumerate}
-  \item $(\vect{\E}, +)$ est un groupe abélien;
-  \item $\cdot$ admet un élément neutre noté $1$;
-  \item $\cdot$ est associative;
-  \item $\cdot$ est distributive sur $+$;
-  \item $0 \cdot \vu = \lambda \vec{0} = \vec{0}$
+  \item \((\vect{\E}, +)\) est un groupe abélien;
+  \item \(\cdot\) admet un élément neutre noté \(1\);
+  \item \(\cdot\) est associative;
+  \item \(\cdot\) est distributive sur \(+\);
+  \item \(0 \cdot \vu = \lambda \vec{0} = \vec{0}\)
   \end{enumerate}
 \end{prop}
 \begin{defdef}
-  Soient $\vu, \vv$ et $\vw$ trois vecteurs de $\vect{\E}$.
+  Soient \(\vu, \vv\) et \(\vw\) trois vecteurs de \(\vect{\E}\).
   \begin{enumerate}
-  \item On dit que $\vu$ et $\vv$ sont colinéaires ou liés si
+  \item On dit que \(\vu\) et \(\vv\) sont colinéaires ou liés si
     \begin{equation}
       \vu = \vec{0} \text{ ou } \exists \lambda \in \R \ \vv = \lambda \vu
     \end{equation}
-  \item On dit que $\vu, \vv$ et $\vw$ sont coplanaires ou liés si
+  \item On dit que \(\vu, \vv\) et \(\vw\) sont coplanaires ou liés si
     \begin{equation}
       \vu \text{ et } \vv \text{ sont liés } \text{ ou } \exists \lambda, \mu \in \R \ \vw = \lambda \vu + \mu \vv
     \end{equation}
   \end{enumerate}
 \end{defdef}
 \begin{prop}
-  Il existe dans $\vect{\E}$ des triplets $(\vi,\vj,\vk)$ de vecteurs non coplanaires. De plus si $(\vi,\vj,\vk)$ est un tel triplet alors c'est une base de $\vect{\E}$, c'est à dire que pour tout vecteur $\vu$ de $\vect{\E}$, il existe un unique triplet $(x,y,z)$ de réels tel que
+  Il existe dans \(\vect{\E}\) des triplets \((\vi,\vj,\vk)\) de vecteurs non coplanaires. De plus si \((\vi,\vj,\vk)\) est un tel triplet alors c'est une base de \(\vect{\E}\), c'est à dire que pour tout vecteur \(\vu\) de \(\vect{\E}\), il existe un unique triplet \((x,y,z)\) de réels tel que
   \begin{equation}
     \vu = x\vi + y\vj + z\vk
   \end{equation}
 \end{prop}
 \begin{defdef}
-  Le triplet $(x,y,z)$ est alors appelé coordonnées du vecteur $\vu$ dans la base $(\vi,\vj,\vk)$.
+  Le triplet \((x,y,z)\) est alors appelé coordonnées du vecteur \(\vu\) dans la base \((\vi,\vj,\vk)\).
 \end{defdef}
 
-Ce résultat caractérise le fait que $\vect{\E}$ est un espace vectoriel de dimension trois, c'est à dire un espace.
+Ce résultat caractérise le fait que \(\vect{\E}\) est un espace vectoriel de dimension trois, c'est à dire un espace.
 
-\section{Espace affine $\E$}
+\section{Espace affine \(\E\)}
 
-L'espace affine $\E$ est muni d'une loi qui aux points $A$ et $B$ fait correspondre le vecteur $\vect{AB}$.
+L'espace affine \(\E\) est muni d'une loi qui aux points \(A\) et \(B\) fait correspondre le vecteur \(\vect{AB}\).
 
 \begin{prop}
-  Soient $A$, $B$ et $C$ des points de $\E$, alors
+  Soient \(A\), \(B\) et \(C\) des points de \(\E\), alors
   \begin{enumerate}
-  \item $\vect{AB}+\vect{BC} = \vect{AC}$;
-  \item $\vect{AA}=\vec{0}$;
-  \item $\vect{AB} = -\vect{BA}$;
-  \item Pour tout vecteur $\vu$ de $\E$ il existe une unique point $A' \in \E$ tel que $\vect{AA'}=\vu$. On note alors $A'=A+\vu$.
+  \item \(\vect{AB}+\vect{BC} = \vect{AC}\);
+  \item \(\vect{AA}=\vec{0}\);
+  \item \(\vect{AB} = -\vect{BA}\);
+  \item Pour tout vecteur \(\vu\) de \(\E\) il existe une unique point \(A' \in \E\) tel que \(\vect{AA'}=\vu\). On note alors \(A'=A+\vu\).
   \end{enumerate}
 \end{prop}
 \begin{defdef}
   \begin{enumerate}
-  \item On dit que trois points $A$, $B$ et $C$ sont alignés si les vecteurs $\vect{AB}$ et $\vect{BC}$ sont colinéaires.
-  \item On dit que quatre points $A, B, C$ et $D$ sont coplanaires si les vecteurs $\vect{AB}$, $\vect{AC}$ et $\vect{AD}$ sont coplanaires.
+  \item On dit que trois points \(A\), \(B\) et \(C\) sont alignés si les vecteurs \(\vect{AB}\) et \(\vect{BC}\) sont colinéaires.
+  \item On dit que quatre points \(A, B, C\) et \(D\) sont coplanaires si les vecteurs \(\vect{AB}\), \(\vect{AC}\) et \(\vect{AD}\) sont coplanaires.
   \end{enumerate}
 \end{defdef}
 \begin{defdef}
-  On appelle points pondéré tout couple $(A,\lambda)$ où $A$ est point de $\E$ et $\lambda$ un réel.
+  On appelle points pondéré tout couple \((A,\lambda)\) où \(A\) est point de \(\E\) et \(\lambda\) un réel.
 \end{defdef}
 \begin{prop}
-Soit un naturel $n \geq 2$ et $\{(A_1,\lambda_1), \ldots, (A_n,\lambda_n)\}$ une famille de $n$ points pondérés telle que $\sum_i^n\lambda_i \neq 0$. Alors il existe un unique point $G \in \E$ tel que
+Soit un naturel \(n \geq 2\) et \(\{(A_1,\lambda_1), \ldots, (A_n,\lambda_n)\}\) une famille de \(n\) points pondérés telle que \(\sum_i^n\lambda_i \neq 0\). Alors il existe un unique point \(G \in \E\) tel que
 \begin{equation}
   \sum_{i=1}^n \lambda_i \vect{GA_i}=0
 \end{equation}
-Il est appelé barycentre du système de points pondérés $\{(A_1,\lambda_1), \ldots, (A_n,\lambda_n)\}$ et on note
+Il est appelé barycentre du système de points pondérés \(\{(A_1,\lambda_1), \ldots, (A_n,\lambda_n)\}\) et on note
 \begin{equation}
   G = \Bary\{(A_1,\lambda_1), \ldots, (A_n,\lambda_n)\}
 \end{equation}
-On a alors pour tout point $M \in \E$
+On a alors pour tout point \(M \in \E\)
 \begin{equation}
   \sum_{i=1}^n \lambda_i \vect{MA_i} = \sum_{i=1}^n \lambda_i \vect{MG}
 \end{equation}
 \end{prop}
 \begin{prop}
-  Soient $A,B, A_1, \ldots, A_p,B_1, \ldots, B_q$ des points de $\E$ et $\lambda, \mu, \lambda_1, \ldots, \lambda_p, \mu_1, \ldots, \mu_q$ des réels. En notant $G = \Bary\{(A_1,\lambda_1), \ldots, (A_p,\lambda_p)\}$, $\alpha=\sum_{i=1}^p \lambda_i$, $H = \Bary\{(B_1,\mu_1), \ldots, (B_q,\mu_q)\}$, $\beta=\sum_{i=1}^q \mu_i$ on a
+  Soient \(A,B, A_1, \ldots, A_p,B_1, \ldots, B_q\) des points de \(\E\) et \(\lambda, \mu, \lambda_1, \ldots, \lambda_p, \mu_1, \ldots, \mu_q\) des réels. En notant \(G = \Bary\{(A_1,\lambda_1), \ldots, (A_p,\lambda_p)\}\), \(\alpha=\sum_{i=1}^p \lambda_i\), \(H = \Bary\{(B_1,\mu_1), \ldots, (B_q,\mu_q)\}\), \(\beta=\sum_{i=1}^q \mu_i\) on a
   \begin{enumerate}
   \item L'associativité du barycentre, c'est à dire que
     \begin{equation}
@@ -106,9 +103,9 @@ On a alors pour tout point $M \in \E$
 
 \section{Distances et normes}
 
-L'espace vectoriel $\vect{\E}$ est muni d'une loi qui au vecteur $\vu$ associe le réel noté $||\vu||$ appelé sa norme ou norme euclidienne.
+L'espace vectoriel \(\vect{\E}\) est muni d'une loi qui au vecteur \(\vu\) associe le réel noté \(||\vu||\) appelé sa norme ou norme euclidienne.
 \begin{prop}
-  Soient $\vu$ et $\vv$ deux vecteurs de $\vect{\E}$ et $\lambda \in \R$, on a les propriétés suivantes
+  Soient \(\vu\) et \(\vv\) deux vecteurs de \(\vect{\E}\) et \(\lambda \in \R\), on a les propriétés suivantes
   \begin{enumerate}
   \item positivité
     \begin{equation}
@@ -129,9 +126,9 @@ L'espace vectoriel $\vect{\E}$ est muni d'une loi qui au vecteur $\vu$ associe l
     égalité si et seulement s'ils sont colinéaires et de même sens
   \end{enumerate}
 \end{prop}
-L'espace affine $\E$ est muni d'une loi qui aux points $A$ et $B$ fait correspondre le réel $||\vect{AB}||$, noté $AB$ et appelé distance de $A$ à $B$.
+L'espace affine \(\E\) est muni d'une loi qui aux points \(A\) et \(B\) fait correspondre le réel \(||\vect{AB}||\), noté \(AB\) et appelé distance de \(A\) à \(B\).
 \begin{prop}
-  Soient $A$, $B$ et $C$ trois points de $\E$ on a les propriétés suivantes
+  Soient \(A\), \(B\) et \(C\) trois points de \(\E\) on a les propriétés suivantes
   \begin{enumerate}
   \item positivité
     \begin{equation}
@@ -149,59 +146,59 @@ L'espace affine $\E$ est muni d'une loi qui aux points $A$ et $B$ fait correspon
     \begin{equation}
       AC \leq AB + BC
     \end{equation}
-    égalité si et seulement si $A$ $B$ et $C$ sont alignés dans cet ordre
+    égalité si et seulement si \(A\) \(B\) et \(C\) sont alignés dans cet ordre
   \end{enumerate}
 \end{prop}
 
 \section{Angles non orientés, orthogonalité}
 
-L'espace vectoriel $\vect{\E}$ est muni d'une loi qui aux vecteurs non nuls $\vu$ et $\vv$ associe le réel noté $\widehat{(\vu,\vv)}$, appartenant à $[0, \pi]$, appelé mesure de l'angle non orienté entre les vecteurs $\vu$ et $\vv$.
+L'espace vectoriel \(\vect{\E}\) est muni d'une loi qui aux vecteurs non nuls \(\vu\) et \(\vv\) associe le réel noté \(\widehat{(\vu,\vv)}\), appartenant à \([0, \pi]\), appelé mesure de l'angle non orienté entre les vecteurs \(\vu\) et \(\vv\).
 \begin{prop}
-  Soient $\vu$, $\vv$ et $\vw$ des vecteurs non nuls de $\vect{\E}$ et un réel non nul $\lambda$, on a
+  Soient \(\vu\), \(\vv\) et \(\vw\) des vecteurs non nuls de \(\vect{\E}\) et un réel non nul \(\lambda\), on a
   \begin{enumerate}
-  \item $\widehat{(\vu,\vw)} \leq \widehat{(\vu,\vv)} + \widehat{(\vv,\vw)}$
-  \item $\widehat{(\vu,\vu)} = 0$
-  \item $\widehat{(\vu,\vv)} = \widehat{(\vv,\vu)}$
-  \item Si $\lambda>0$ $\widehat{(\vu,\lambda \vv)}= \widehat{(\vu,\vv)}$ et si $\lambda < 0$ alors $\widehat{(\vu,\lambda \vv)}= -\widehat{(\vu,\vv)}$
+  \item \(\widehat{(\vu,\vw)} \leq \widehat{(\vu,\vv)} + \widehat{(\vv,\vw)}\)
+  \item \(\widehat{(\vu,\vu)} = 0\)
+  \item \(\widehat{(\vu,\vv)} = \widehat{(\vv,\vu)}\)
+  \item Si \(\lambda>0\) \(\widehat{(\vu,\lambda \vv)}= \widehat{(\vu,\vv)}\) et si \(\lambda < 0\) alors \(\widehat{(\vu,\lambda \vv)}= -\widehat{(\vu,\vv)}\)
   \end{enumerate}
 \end{prop}
 
-Deux vecteurs $\vu$ et $\vv$ sont donc colinéaires si et seulement si $\vu$ ou $\vv$ est nul ou si $\widehat{(\vu,\vv)}=0$ ou $\pi$.
+Deux vecteurs \(\vu\) et \(\vv\) sont donc colinéaires si et seulement si \(\vu\) ou \(\vv\) est nul ou si \(\widehat{(\vu,\vv)}=0\) ou \(\pi\).
 \begin{defdef}
-  On dit que deux vecteurs $\vu$ et $\vv$ sont orthogonaux si et seulement si $\vu$ est nul ou si $\vv$ est nul ou encore si $\widehat{(\vu,\vv)} = \frac{\pi}{2}$.
+  On dit que deux vecteurs \(\vu\) et \(\vv\) sont orthogonaux si et seulement si \(\vu\) est nul ou si \(\vv\) est nul ou encore si \(\widehat{(\vu,\vv)} = \frac{\pi}{2}\).
 \end{defdef}
 
-Étant donné trois points $A$, $B$ et $C$ de $\E$ tels que $A \neq B$ et $C \neq B$, on appelle mesure de l'angle non orienté $\widehat{ABC}$ la mesure de l'angle non orienté $\widehat{(\vect{BA},\vect{BC})}$.
+Étant donné trois points \(A\), \(B\) et \(C\) de \(\E\) tels que \(A \neq B\) et \(C \neq B\), on appelle mesure de l'angle non orienté \(\widehat{ABC}\) la mesure de l'angle non orienté \(\widehat{(\vect{BA},\vect{BC})}\).
 
 \begin{prop}
-  Pour tout triangle $ABC$ rectangle en $B$, on a
+  Pour tout triangle \(ABC\) rectangle en \(B\), on a
   \begin{enumerate}
-  \item Le théorème de Pythagore : $AB^2+BC^2=AC^2$;
-  \item $AB=AC\cos(\widehat{ABC})$;
-  \item $BC=AC\sin(\widehat{ABC})$;
-  \item $BC=AB\tan(\widehat{ABC})$.
+  \item Le théorème de Pythagore : \(AB^2+BC^2=AC^2\);
+  \item \(AB=AC\cos(\widehat{ABC})\);
+  \item \(BC=AC\sin(\widehat{ABC})\);
+  \item \(BC=AB\tan(\widehat{ABC})\).
   \end{enumerate}
 \end{prop}
 
 \section{Bases et repères}
 
-Un triplet $(\vi,\vj,\vk)$ de vecteurs de $\vect{E}$ est une base de $\vect{\E}$ si et seulement si $\vi$, $\vj$ et $\vk$ sont non coplanaires. 
+Un triplet \((\vi,\vj,\vk)\) de vecteurs de \(\vect{E}\) est une base de \(\vect{\E}\) si et seulement si \(\vi\), \(\vj\) et \(\vk\) sont non coplanaires. 
 
 \begin{defdef}
-  On appelle repère de l'espace $\E$ tout quadruplet $(O,\vi,\vj,\vk)$ où $O$ est un point quelconque de l'espace $\E$ et $(\vi,\vj,\vk)$ une base de $\vect{\E}$.
+  On appelle repère de l'espace \(\E\) tout quadruplet \((O,\vi,\vj,\vk)\) où \(O\) est un point quelconque de l'espace \(\E\) et \((\vi,\vj,\vk)\) une base de \(\vect{\E}\).
 
-Si $M$ est un point de $\E$, on appelle coordonnées du point $M$ dans le repère $(O,\vi,\vj,\vk)$ l'unique triplet de réels $(x,y,z)$ tel que
+Si \(M\) est un point de \(\E\), on appelle coordonnées du point \(M\) dans le repère \((O,\vi,\vj,\vk)\) l'unique triplet de réels \((x,y,z)\) tel que
 \begin{equation}
   \vect{OM}=x\vi+y\vj+z\vk
 \end{equation}
 \end{defdef}
 
 \begin{defdef}
-  On dit que $(\vi,\vj,\vk)$ est une base orthonormée si les vecteurs $\vi$, $\vj$ et $\vk$ sont des vecteurs orthogonaux et de norme 1. Le repère $(O,\vi,\vj,\vk)$ est orthonormé si la base $(\vi,\vj,\vk)$ est orthonormée.
+  On dit que \((\vi,\vj,\vk)\) est une base orthonormée si les vecteurs \(\vi\), \(\vj\) et \(\vk\) sont des vecteurs orthogonaux et de norme 1. Le repère \((O,\vi,\vj,\vk)\) est orthonormé si la base \((\vi,\vj,\vk)\) est orthonormée.
 \end{defdef}
 
 On définira plus tard, à l'aide du déterminant, les notions de base directe et de base indirecte. Dans ce chapitre, on se contentera d'en donner une définition géométrique à l'aide de la ``règle des trois doigts''. 
 
-On retiendra que si $\B=(\vu,\vv,\vw)$ est une base directe de l'espace alors les bases $(\vv,\vw,vu)$ et $(\vw,\vu,\vv)$, obtenues par permutation circulaires, sont également directes. Alors que les bases $(\vv,\vu,\vw)$, $(\vw,\vv,\vu)$ et $(\vu,\vw,\vv)$ obtenues en échangeant à chaque fois deux vecteurs et les bases $(-\vu,\vv,\vw)$ $(\vu,-\vv,\vw)$ et $(\vu,\vv,-\vw)$, obtenues en remplaçant à chaque fois un des vecteurs par son opposé, sont indirectes.
+On retiendra que si \(\B=(\vu,\vv,\vw)\) est une base directe de l'espace alors les bases \((\vv,\vw,vu)\) et \((\vw,\vu,\vv)\), obtenues par permutation circulaires, sont également directes. Alors que les bases \((\vv,\vu,\vw)\), \((\vw,\vv,\vu)\) et \((\vu,\vw,\vv)\) obtenues en échangeant à chaque fois deux vecteurs et les bases \((-\vu,\vv,\vw)\) \((\vu,-\vv,\vw)\) et \((\vu,\vv,-\vw)\), obtenues en remplaçant à chaque fois un des vecteurs par son opposé, sont indirectes.
 
-On dira que le repère $(O,\vi,\vj,\vk)$ est orthonormée direct (respectivement indirect) si la base $(\vi,\vj,\vk)$ est orthonormée directe (respectivement indirecte).
+On dira que le repère \((O,\vi,\vj,\vk)\) est orthonormée direct (respectivement indirect) si la base \((\vi,\vj,\vk)\) est orthonormée directe (respectivement indirecte).

@@ -1,86 +1,86 @@
 \chapter{Ensembles finis -- Quelques démonstrations}
 \label{chap:ensemblesFinis}
 \begin{theo}
-  Soient $p$ et $q$ deux naturels non nuls. S'il existe une bijection $\varphi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q}$ alors $p=q$.
+  Soient \(p\) et \(q\) deux naturels non nuls. S'il existe une bijection \(\varphi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q}\) alors \(p=q\).
 \end{theo}
 \begin{proof}
-  On démontre par récurrence sur $p \in \N^*$ la propriété $\P(p)$ ``pour tout $q \in \N^*$ s'il existe une bijection $\varphi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q}$ alors $p=q$''.
+  On démontre par récurrence sur \(p \in \N^*\) la propriété \(\P(p)\) ``pour tout \(q \in \N^*\) s'il existe une bijection \(\varphi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q}\) alors \(p=q\)''.
 
-\emph{Initialisation}. Soit $q \in \N^*$. On suppose qu'il existe une bijection $\varphi : \{1\} \longmapsto \intervalleentier{1}{q}$. Si on a $q \geq 2$, comme $\varphi$ est surjective, il existe $x \in \{1\}$ (donc $x=1$) tel que $\varphi(x)=1$. Il existe aussi $y \in \{1\}$ (donc $y=1$) tel que $\varphi(y) = 2$. C'est impossible donc $q=1$. $\P(1)$ est vraie
+\emph{Initialisation}. Soit \(q \in \N^*\). On suppose qu'il existe une bijection \(\varphi : \{1\} \longmapsto \intervalleentier{1}{q}\). Si on a \(q \geq 2\), comme \(\varphi\) est surjective, il existe \(x \in \{1\}\) (donc \(x=1\)) tel que \(\varphi(x)=1\). Il existe aussi \(y \in \{1\}\) (donc \(y=1\)) tel que \(\varphi(y) = 2\). C'est impossible donc \(q=1\). \(\P(1)\) est vraie
 
-\emph{Hérédité}. Soit $p \in \N^*$. Supposons que $\P(p)$ soit vraie et montrons $\P(p+1)$. Soit un naturel $q$ non nul. On suppose l'existence d'une bijection $\varphi : \intervalleentier{1}{p+1} \longmapsto \intervalleentier{1}{q}$.
+\emph{Hérédité}. Soit \(p \in \N^*\). Supposons que \(\P(p)\) soit vraie et montrons \(\P(p+1)\). Soit un naturel \(q\) non nul. On suppose l'existence d'une bijection \(\varphi : \intervalleentier{1}{p+1} \longmapsto \intervalleentier{1}{q}\).
 
-Notons déjà que $q$ est nécessairement supérieur ou égal à 2~\footnote{car sinon $q=1$ or $p \geq 1$ donc $p+1 \geq 2$} d'où $\varphi(1)=1=\varphi(2)$ ce qui est impossible puisque $\varphi$ est injective. L'astuce consiste à construire une bijection $\psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}$ afin d'utiliser l'hypothèse de récurrence.
+Notons déjà que \(q\) est nécessairement supérieur ou égal à 2~\footnote{car sinon \(q=1\) or \(p \geq 1\) donc \(p+1 \geq 2\)} d'où \(\varphi(1)=1=\varphi(2)\) ce qui est impossible puisque \(\varphi\) est injective. L'astuce consiste à construire une bijection \(\psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}\) afin d'utiliser l'hypothèse de récurrence.
 
 On distingue deux cas :
 \begin{itemize}
-\item Cas 1. $\varphi(p+1)=q$. L'application $\varphi$ est injective, donc pour tout $i \in \intervalleentier{1}{p}$ on a $\varphi(i) \neq q$. Ainsi
+\item Cas 1. \(\varphi(p+1)=q\). L'application \(\varphi\) est injective, donc pour tout \(i \in \intervalleentier{1}{p}\) on a \(\varphi(i) \neq q\). Ainsi
   \begin{equation}
     \varphi(\intervalleentier{1}{p}) \subset \intervalleentier{1}{q-1}.
   \end{equation}
-  On définit donc $\psi$ comme l'application induite par $\varphi$ de $\intervalleentier{1}{p}$ sur $\intervalleentier{1}{q-1}$. Alors
+  On définit donc \(\psi\) comme l'application induite par \(\varphi\) de \(\intervalleentier{1}{p}\) sur \(\intervalleentier{1}{q-1}\). Alors
   \begin{itemize}
-  \item $\psi$ est injective : Puisque $\varphi$ est injective
+  \item \(\psi\) est injective : Puisque \(\varphi\) est injective
     \begin{equation}
       \forall (i, j) \in \intervalleentier{1}{p}^2 \quad i \neq j \implies \varphi(i) \neq \varphi(j),
     \end{equation}
-    et comme $\psi$ et $\varphi$ sont égales sur $\intervalleentier{1}{p}$ alors $\psi$ est injective.
-  \item $\psi$ est surjective : Puisque $\varphi$ est surjective,
+    et comme \(\psi\) et \(\varphi\) sont égales sur \(\intervalleentier{1}{p}\) alors \(\psi\) est injective.
+  \item \(\psi\) est surjective : Puisque \(\varphi\) est surjective,
     \begin{equation}
       \forall i \in \intervalleentier{1}{q-1} \ \exists \alpha \in \intervalleentier{1}{p+1} \quad i=\varphi(\alpha).
     \end{equation}
-    On a $\alpha \neq p+1$~\footnote{car $\varphi(p+1)=q \neq i$} donc $\alpha \in \intervalleentier{1}{p}$ et $i= \varphi(\alpha)=\psi(\alpha)$. L'application $\psi$ est surjective.
+    On a \(\alpha \neq p+1\)~\footnote{car \(\varphi(p+1)=q \neq i\)} donc \(\alpha \in \intervalleentier{1}{p}\) et \(i= \varphi(\alpha)=\psi(\alpha)\). L'application \(\psi\) est surjective.
   \end{itemize}
-  Finalement $\psi$ est bijective.
-\item Cas 2. $\varphi(p+1) \neq q$. On pose $a=\varphi(p+1)$ et $b=\varphi^{-1}(q)$~\footnote{c'est possible puisque $\varphi$ est bijective}. On définit $    \psi :\intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}$
+  Finalement \(\psi\) est bijective.
+\item Cas 2. \(\varphi(p+1) \neq q\). On pose \(a=\varphi(p+1)\) et \(b=\varphi^{-1}(q)\)~\footnote{c'est possible puisque \(\varphi\) est bijective}. On définit \(    \psi :\intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}\)
   par
   \begin{equation}
     \forall i \in \intervalleentier{1}{p} \setminus \{b\} \quad \psi(i)=\varphi(i) \ \psi(b)=a.
   \end{equation}
   
-  Cette application est bien à valeurs dans $\intervalleentier{1}{q-1}$, car $\varphi$ est injective et $\varphi(b)=q$. Donc
+  Cette application est bien à valeurs dans \(\intervalleentier{1}{q-1}\), car \(\varphi\) est injective et \(\varphi(b)=q\). Donc
   \begin{equation}
     \forall i \in \intervalleentier{1}{p} \setminus \{b\} \quad \varphi(i) \in \intervalleentier{1}{q-1} \text{~et~} a=\varphi(p+1) \neq q.
   \end{equation}
   Alors
   \begin{itemize}
-  \item $\psi$ est injective~: Soient $(i,j) \in \intervalleentier{1}{p}^2$ et $i \neq j$. Deux sous-cas se présentent~:
+  \item \(\psi\) est injective~: Soient \((i,j) \in \intervalleentier{1}{p}^2\) et \(i \neq j\). Deux sous-cas se présentent~:
     \begin{itemize}
-    \item si $i \neq b$ et $j \neq b$ alors comme $\varphi$ est injective $\psi(i)=\varphi(i) \neq \varphi(j) \neq \psi(j)$;
-    \item si $i = b$ et $j \neq b$ ou si $j=b$ et $i \neq b$ alors $\psi(i)=a=\varphi(p+1)$ et $\psi(j)=\varphi(j)$ et comme $j \neq p+1$ et que $\varphi$ est injective donc $\varphi(j) \neq \varphi(p+1)$ donc $\psi(j) \neq \psi(i)$;
+    \item si \(i \neq b\) et \(j \neq b\) alors comme \(\varphi\) est injective \(\psi(i)=\varphi(i) \neq \varphi(j) \neq \psi(j)\);
+    \item si \(i = b\) et \(j \neq b\) ou si \(j=b\) et \(i \neq b\) alors \(\psi(i)=a=\varphi(p+1)\) et \(\psi(j)=\varphi(j)\) et comme \(j \neq p+1\) et que \(\varphi\) est injective donc \(\varphi(j) \neq \varphi(p+1)\) donc \(\psi(j) \neq \psi(i)\);
     \end{itemize}
-  \item $\psi$ est surjective~: Soit $i \in \intervalleentier{1}{q-1}$, si $i=a$ alors $i=\psi(b)$ et sinon, il existe $j \in \intervalleentier{1}{p+1}$ tel que $i=\psi(j)$; puisque $\varphi(p+1)=a \neq i$ alors $j \in \intervalleentier{1}{p}$ et $\varphi(b)=q \neq i$, donc $j \in \intervalleentier{1}{p} \setminus \{b\}$ et alors $i=\varphi(j)=\psi(j)$.
+  \item \(\psi\) est surjective~: Soit \(i \in \intervalleentier{1}{q-1}\), si \(i=a\) alors \(i=\psi(b)\) et sinon, il existe \(j \in \intervalleentier{1}{p+1}\) tel que \(i=\psi(j)\); puisque \(\varphi(p+1)=a \neq i\) alors \(j \in \intervalleentier{1}{p}\) et \(\varphi(b)=q \neq i\), donc \(j \in \intervalleentier{1}{p} \setminus \{b\}\) et alors \(i=\varphi(j)=\psi(j)\).
   \end{itemize}
-  Au final $\psi$ est bijective.
+  Au final \(\psi\) est bijective.
 \end{itemize}
 
-Dans les deux cas, il a été possible de construire une bijection $\psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}$. Par hypothèse de récurrence, on en déduit que $p=q-1$ et donc que $q=p+1$. L'assertion $\P(p+1)$ est vérifiée.
+Dans les deux cas, il a été possible de construire une bijection \(\psi : \intervalleentier{1}{p} \longmapsto \intervalleentier{1}{q-1}\). Par hypothèse de récurrence, on en déduit que \(p=q-1\) et donc que \(q=p+1\). L'assertion \(\P(p+1)\) est vérifiée.
 
-\emph{Conclusion} Le théorème de récurrence nous permet donc d'affirmer que, pour tout naturel $p$ non nul, l'assertion $\P(p)$ est vraie.
+\emph{Conclusion} Le théorème de récurrence nous permet donc d'affirmer que, pour tout naturel \(p\) non nul, l'assertion \(\P(p)\) est vraie.
 \end{proof}
 
 \begin{theo}
-  Soit $P$ une partie finie non vide et majorée de $\N$. Alors $P$ est un ensemble fini et il existe un naturel $n$ non nul et une application bijective croissante (donc strictement croissante) $\varphi : \intervalleentier{1}{n} \longmapsto P$. De plus un tel couple $(n,  \varphi)$ vérifiant ces hypothèse est unique.
+  Soit \(P\) une partie finie non vide et majorée de \(\N\). Alors \(P\) est un ensemble fini et il existe un naturel \(n\) non nul et une application bijective croissante (donc strictement croissante) \(\varphi : \intervalleentier{1}{n} \longmapsto P\). De plus un tel couple \((n,  \varphi)\) vérifiant ces hypothèse est unique.
 \end{theo}
 
 \begin{proof}
-  On démontre par récurrence sur $M \in \N$ la propriété $\P(M)$ ``Le théorème est vérifié pour toute partie $P$ majorée par $M$, c'est-à-dire telle que $\forall x \in P \ x \leq M$''.
+  On démontre par récurrence sur \(M \in \N\) la propriété \(\P(M)\) ``Le théorème est vérifié pour toute partie \(P\) majorée par \(M\), c'est-à-dire telle que \(\forall x \in P \ x \leq M\)''.
 
-\emph{Initialisation}. Si $M=0$, la seule partie majorée par $0$ de $\N$ est $P=\{0\}$. $P$ est donc finie de cardinal égal à $1$. Il existe une seule application de $\{1\}$ dans $\{0\}$ qui se trouve être bijective et croissante. $\P(0)$ est vraie.
+\emph{Initialisation}. Si \(M=0\), la seule partie majorée par \(0\) de \(\N\) est \(P=\{0\}\). \(P\) est donc finie de cardinal égal à \(1\). Il existe une seule application de \(\{1\}\) dans \(\{0\}\) qui se trouve être bijective et croissante. \(\P(0)\) est vraie.
 
-\emph{Hérédité}. Soit $M \in \N$. On suppose que $\P(M)$ est vérifiée. Soit $P$ une partie de $\N$ non vide et majorée par $M+1$. On sait alors que $P$ possède un plus grand élément noté $a$. Alors $a \in P$ et $a \leq M+1$. Deux cas se présentent :
+\emph{Hérédité}. Soit \(M \in \N\). On suppose que \(\P(M)\) est vérifiée. Soit \(P\) une partie de \(\N\) non vide et majorée par \(M+1\). On sait alors que \(P\) possède un plus grand élément noté \(a\). Alors \(a \in P\) et \(a \leq M+1\). Deux cas se présentent :
 \begin{itemize}
-\item Cas 1. Si $P=\{a\}$, alors $P$ est de cardinal fini égal à 1. Comme pour l'initialisation, l'existence et l'unicité du couple $(n, \varphi)$ sont immédiates.
-\item Cas 2. Si $P \neq \{a\}$ on pose $P'=P\setminus\{a\}$. $P'$ est non vide. Pour tout $x \in P'$, $x \in P$ donc $x \leq a$ et $x \neq a$ alors $x \leq a-1 \leq M$. $P'$ est donc une partie non vide de $\N$ majorée par $M$. L'hypothèse de récurrence nous dit alors que $P'$ est finie et donc que $P=P' \cup \{a\}$ est finie aussi. Si on note $n = \Card(P)$ alors $\Card(P')=n-1$. L'hypothèse de récurrence nous assure l'existence d'une unique bijection croissante $\psi : \intervalleentier{1}{n-1}\longmapsto P'$. Montrons alors l'existence et l'unicité de la bijection croissante $\varphi : \intervalleentier{1}{n} \longmapsto P$.
+\item Cas 1. Si \(P=\{a\}\), alors \(P\) est de cardinal fini égal à 1. Comme pour l'initialisation, l'existence et l'unicité du couple \((n, \varphi)\) sont immédiates.
+\item Cas 2. Si \(P \neq \{a\}\) on pose \(P'=P\setminus\{a\}\). \(P'\) est non vide. Pour tout \(x \in P'\), \(x \in P\) donc \(x \leq a\) et \(x \neq a\) alors \(x \leq a-1 \leq M\). \(P'\) est donc une partie non vide de \(\N\) majorée par \(M\). L'hypothèse de récurrence nous dit alors que \(P'\) est finie et donc que \(P=P' \cup \{a\}\) est finie aussi. Si on note \(n = \Card(P)\) alors \(\Card(P')=n-1\). L'hypothèse de récurrence nous assure l'existence d'une unique bijection croissante \(\psi : \intervalleentier{1}{n-1}\longmapsto P'\). Montrons alors l'existence et l'unicité de la bijection croissante \(\varphi : \intervalleentier{1}{n} \longmapsto P\).
 \end{itemize}
 
-Unicité. Soit $\varphi : \intervalleentier{1}{n} \longmapsto P$ une bijection croissante. Alors pour tout $k \in \intervalleentier{1}{n}$, $k \leq n$. Ainsi $\varphi(k) \leq \varphi(n)$. Alors $\varphi(n)$ est un majorant de $P=\varphi(\intervalleentier{1}{n})$ et $\varphi(n) \in P$ : $\varphi(n)$ est le plus grand élément de $P$. Par unicité du plus grand élément $a=\varphi(n)$. L'application $\varphi$ étant injective, on  $\varphi(\intervalleentier{1}{n}) \subset P'$ et on peut définir la restriction $\tilde{\varphi}$ de $\varphi$ à $\intervalleentier{1}{n-1}$ au départ et à $P'$ à l'arrivée. Comme $\varphi$ est croissante et bijective, sa restriction $\tilde{\varphi}$ est aussi croissante et bijective. Alors par hypothèse de récurrence, on a donc nécessairement $\psi = \tilde{\varphi}$. On a donc
+Unicité. Soit \(\varphi : \intervalleentier{1}{n} \longmapsto P\) une bijection croissante. Alors pour tout \(k \in \intervalleentier{1}{n}\), \(k \leq n\). Ainsi \(\varphi(k) \leq \varphi(n)\). Alors \(\varphi(n)\) est un majorant de \(P=\varphi(\intervalleentier{1}{n})\) et \(\varphi(n) \in P\) : \(\varphi(n)\) est le plus grand élément de \(P\). Par unicité du plus grand élément \(a=\varphi(n)\). L'application \(\varphi\) étant injective, on  \(\varphi(\intervalleentier{1}{n}) \subset P'\) et on peut définir la restriction \(\tilde{\varphi}\) de \(\varphi\) à \(\intervalleentier{1}{n-1}\) au départ et à \(P'\) à l'arrivée. Comme \(\varphi\) est croissante et bijective, sa restriction \(\tilde{\varphi}\) est aussi croissante et bijective. Alors par hypothèse de récurrence, on a donc nécessairement \(\psi = \tilde{\varphi}\). On a donc
 \begin{equation}
   \forall k \in \intervalleentier{1}{n-1}\ \varphi(k)=\psi(k) \quad \varphi(n)=a
 \end{equation}
-L'application $\varphi$ est unique.
+L'application \(\varphi\) est unique.
 
-Existence. L'application $\varphi$ ainsi définie est une bijection croissante de $\intervalleentier{1}{n}$ sur $P$.
+Existence. L'application \(\varphi\) ainsi définie est une bijection croissante de \(\intervalleentier{1}{n}\) sur \(P\).
 
-\emph{Conclusion}. Par théorème de récurrence, on a l'existence et l'unicité du couple $(n, \varphi)$ pour toute partie non vide et majorée de $\N$.
+\emph{Conclusion}. Par théorème de récurrence, on a l'existence et l'unicité du couple \((n, \varphi)\) pour toute partie non vide et majorée de \(\N\).
 \end{proof}

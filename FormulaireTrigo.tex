@@ -1,85 +1,67 @@
 \chapter{Formulaire de trigonométrie}
-
 \section{Trigonométrie circulaire}
-
 \begin{equation}
   \cos^2x+\sin^2x = 1, \quad \cos^2x=\frac{1}{1+\tan^2x}, \quad \sin^2x=\frac{1}{1+\cotan^2x}
 \end{equation}
-
 \subsection{Formules d'addition}
-
 \begin{align}
   \cos(a+b)&=\cos a \cos b -\sin a \sin b, \\   \cos(a-b)&=\cos a \cos b +\sin a \sin b, \\
   \sin(a+b)&=\sin a \cos b -\cos a \sin b, \\  \sin(a-b)&=\sin a \cos b -\cos a \sin b, \\
   \tan(a+b)&=\frac{\tan a+ \tan b}{1-\tan a \tan b}, \\   \tan(a-b)&=\frac{\tan a - \tan b}{1+\tan a \tan b}
 \end{align}
-
 \subsection{Formules de linéarisation}
-
 \begin{align}
   \sin a \sin b = \frac{\cos(a-b)-\cos(a+b)}{2} \\
   \sin a \cos b = \frac{\sin(a+b)+\sin(a-b)}{2} \\
   \cos a \cos b = \frac{\cos(a+b)+\cos(a-b)}{2} 
 \end{align}
-
 \subsection{Transformation de sommes en produits}
-
 \begin{align}
   \cos p + \cos q &= 2 \cos \frac{p+q}{2} \cos \frac{p-q}{2}, \\ \cos p - \cos q &= -2 \sin \frac{p+q}{2} \sin \frac{p-q}{2},\\
   \sin p + \sin q &= 2 \sin \frac{p+q}{2} \cos \frac{p-q}{2}, \\ \sin p - \sin q &= 2 \sin \frac{p-q}{2} \cos \frac{p+q}{2}
 \end{align}
-
 \subsection{Arc double et arc moitié}
-
+\paragraph{Arc double}
 \begin{align}
   \cos(2x)=\cos^2 x - \sin^2 x &= 2\cos^2 x -1 = 1-2\sin^2 x \\
   \sin(2x)&=2\sin x \cos x \\
   \cos^2 x = \frac{1+\cos(2x)}{2}, & \sin^2 x = \frac{1-\cos(2x)}{2}
 \end{align}
-
-En notant $t = \tan \left(\frac{x}{2}\right)$, on a :
+\paragraph{Arc moitié}
+En notant \(t = \tan \left(\frac{x}{2}\right)\), on a :
 \begin{equation}
   \sin x = \frac{2t}{1+t^2}, \cos x = \frac{1-t^2}{1+t^2}, \tan x = \frac{2t}{1-t^2}
 \end{equation}
-
 \section{Trigonométrie hyperbolique}
-
 \begin{equation}
   \hcos^2x-\hsin^2x = 1, \quad \hcos^2x=\frac{1}{1-\htan^2x}, \quad \hsin^2x=\frac{1}{\hcotan^2x-1}
 \end{equation}
-
 \subsection{Formules d'addition}
-
 \begin{align}
   \hcos(a+b)=\hcos a \hcos b +\hsin a \hsin b, &   \hcos(a-b)=\hcos a \hcos b -\hsin a \hsin b \\
   \hsin(a+b)=\hsin a \cos b +\hcos a \hsin b, &   \hsin(a-b)=\hsin a \hcos b -\hcos a \hsin b \\
   \htan(a+b)=\frac{\htan a+ \htan b}{1+\htan a \htan b}, &   \htan(a-b)=\frac{\htan a - \htan b}{1-\htan a \htan b}
 \end{align}
-
 \subsection{Formules de linéarisation}
-
 \begin{align}
   \hsin a \hsin b = \frac{\hcos(a+b)-\hcos(a-b)}{2} \\
   \hsin a \hcos b = \frac{\hsin(a+b)+\hsin(a-b)}{2} \\
   \hcos a \hcos b = \frac{\hcos(a+b)+\hcos(a-b)}{2} 
 \end{align}
-
 \subsection{Transformation de sommes en produits}
-
 \begin{align}
   \hcos p + \hcos q &= 2 \hcos \frac{p+q}{2} \hcos \frac{p-q}{2}, \\ \hcos p - \hcos q &= 2 \hsin \frac{p+q}{2} \hsin \frac{p-q}{2},\\
   \hsin p + \hsin q &= 2 \hsin \frac{p+q}{2} \hcos \frac{p-q}{2}, \\ \hsin p - \hsin q &= 2 \hsin \frac{p-q}{2} \hcos \frac{p+q}{2},
 \end{align}
-
 \subsection{Arc double et arc moitié}
-
+\paragraph{Arc double}
 \begin{align}
   \hcos(2x)=\hcos^2 x + \hsin^2 x &= 2\hcos^2 x -1 = 1+2\hsin^2 x \\
   \hsin(2x)&=2\hsin x \hcos x \\
   \hcos^2 x = \frac{1+\hcos(2x)}{2}, & \hsin^2 x = \frac{\hcos(2x)-1}{2}
 \end{align}
-
-% En notant $t = \tan \left(\frac{x}{2}\right)$, on a :
-% \begin{equation}
-%   \hsin x = \frac{2t}{1+t^2}, \hcos x = \frac{1-t^2}{1+t^2}, \tan x = \frac{2t}{1-t^2}
-% \end{equation}
+\paragraph{Arc moitié}
+En notant \(t = \htan \left(\frac{x}{2}\right)\), on a :
+\begin{equation}
+  \hsin x = \frac{2t}{1-t^2}, \hcos x = \frac{1+t^2}{1-t^2}, \tan x = \frac{2t}{1+t^2}
+\end{equation}
