@@ -809,3 +809,50 @@ On suppose que \(I=(i_k)_{k \in  \intervalleentier{1}{n}}\). On note
   \prod_{i \in I} u_i &= u_{i_1} \times u_{i_2} \times u_{i_3} \times \dotsm \times u_{i_n}. 
 \end{align}
 Si \(I=\emptyset\) alors \(\sum_{i \in I} u_i=0\) et \(\prod_{i \in I} u_i=1\) par convention.
+\section{Exercices --- Ensembles, applications et relations binaires}
+\begin{exercice}
+    Pour chacun des ensembles \(E\) suivants, déterminer les éléments de l'ensemble \(\Part(E)\) des parties de \(E\), puis les éléments de l'ensemble \(\Part(\Part(E))\).
+    \begin{enumerate}
+        \item \(E=\emptyset\);
+        \item \(E\) est un singleton \(\{a\}\);
+        \item \(E\) est une paire \(\{a, b\}\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(E\) un ensemble quelconque et \(A\) et \(B\) deux parties de \(E\). Démontrer les équivalences suivantes~:
+    \begin{enumerate}
+        \item \(A \cap B = A \iff A \subset B \);
+        \item \(A \cup B = A \iff B \subset A \);
+        \item \(A \cup B = A \cap B \iff A = B \).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Résolution dans \(\Part(E)\) des équations \(X \cup Y=A\) et \(X \cap Y=A\)]
+    Soient \(E\) un ensemble et \(A\) une partie de \(E\).
+    \begin{enumerate}
+        \item Montrer que \((X,Y)\in\Part(E)^2\) est solution de \(X \cup Y=A\) si et seulement s'il existe \((U, V) \in \Part(E)^2\) tel que \[X=A\cup(U\cap \complement V) \ Y=A\cup(\complement U \cap V)\].
+        \item Résoudre dans \(\Part(E)^2\) l'équation \(X \cup Y = A\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Caractérisation des injections]
+    Soient \(E\) et \(F\) deux ensembles et une application \(f \in F^E\).
+    \begin{enumerate}
+        \item Montrer que si \(f\) est injective alors pour tout couple \((A,B) \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\). Prouver que cette égalité peut avoir lieu pour une application \(f\) non injective.
+        \item Établir que \(f\) est injective si et seulement si \(\forall (A,B) \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item Soit \(f : \C^* \longrightarrow \C\) définie par \(f(z)=z+1/z\). L'application \(f\) est-elle surjective ? Est-elle injective ?
+        \item Soit \(g : \R^* \longrightarrow \R\) définie par \(g(x)=x+1/x\). L'application \(g\) est-elle surjective ? Est-elle injective ?
+        \item Peut on trouver des sous-ensembles \(A\) et \(B\) de \(\R^*\) et \(\R\) tels que la restriction \(h\) de \(g\) à \(A\) au départ et à \(B\) à l'arrivée soit bijective ?
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(\fonctionL{f}{\R}{\R}{x}{-x^2+3x+1}\). Déterminer \(f(\R)\), \(f(\intervalleff{0}{5})\), \(f^{-1}(\intervalleff{0}{1})\), \(f^{-1}(\intervalleff{1}{4})\) et \(f(f^{-1}(\intervalleff{1}{4}))\).
+\end{exercice}
+\begin{exercice}
+    Soit \(E\) un ensemble. Démontrer qu'il n'existe pas de surjection \(\varphi\) de \(E\) sur \(\Part(E)\). On pourra raisonner par l'absurde et introduire l'ensemble \(A=\enstq{a \in E}{a \not\in \varphi(a)}\).
+\end{exercice}
+\begin{exercice}
+    Soient \(f : E \longrightarrow F, g : F \longrightarrow G, h : G \longrightarrow E\) trois applications telles que \(h \circ g \circ f\) et \(g \circ f \circ h\) sont injectives et \(f \circ h \circ g\) est surjective. Montrer que \(f, g, h\) sont bijectives.
+\end{exercice}

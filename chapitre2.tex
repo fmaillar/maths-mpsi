@@ -701,7 +701,7 @@ On dit que \(F\) est représentée par l'application \(f\). Soient deux complexe
 %
 \subsection{Similitudes directes}
 \label{subsec:simdirecte}
-Soient \(\omega \in \C\), \(k\in \R^*\) et \(\theta \in \R^*\). La rotation \(\mathcal{R}\) de centre \(\omega\) et d'angle \(\theta\) est représentée par \(\fonction{r}{\C}{\C}{z}{\expc{}{\theta}(z-\omega)+\omega}\) et l'homothétie \(\mathcal{H}\) de rapport \(k \in \R^*\) est représentée par \(\fonction{h}{\C}{\C}{z}{k(z-\omega)+\omega}\).
+Soient \(\omega \in \C\), \(k\in \R^*\) et \(\theta \in \R^*\). La rotation \(\mathcal{R}\) de centre \(\omega\) et d'angle \(\theta\) est représentée par \[\fonction{r}{\C}{\C}{z}{\expc{}{\theta}(z-\omega)+\omega},\] et l'homothétie \(\mathcal{H}\) de rapport \(k \in \R^*\) est représentée par \[\fonction{h}{\C}{\C}{z}{k(z-\omega)+\omega}.\]
 %
 \begin{defdef}
   On appelle similitude directe de centre \(\Omega(\omega)\), d'angle \(\theta\) et de rapport \(k \in \R^*\), la transformation \(\Psi\) du plan dans le plan représentée par l'application de \(\C\) dans \(\C\)~: \(\fonction{\psi}{\C}{\C}{z}{\expc{k}{\theta}(z-\omega)+\omega}\).
@@ -741,9 +741,107 @@ Si le réel \(k\) est strictement positif non égal à 1 alors \(\frac{MA}{MB}=k
 
 Si \(z \in \{a,b\}\) alors \(E_\lambda=\emptyset\) et sinon \(E_\lambda\) est la droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
 \section{Exercices}
+\begin{exercice}[Identité du parallèlogramme]
+    Démontrer que pour tous nombres complexes \(z\) et \(z'\) on a~:\(\abs{z+z'}^2 + \abs{z-z'}^2 = 2\abs{z}^2 + 2\abs{z'}^2\).
+\end{exercice}
 \begin{exercice}
-Résoudre sur \(\R\) l'équation~:
-\begin{equation}
-    \frac{\sin x + \sin 2x + \sin 3x}{\cos x + \cos 2x + \cos 3x} = 1
-\end{equation}
+    Soient un naturel \(n\) et un réel \(a\) tel que \(0 \leqslant a < 2\pi\). Calculer le module et l'argument (s'il existe) de \(z = (1+\ii\e^{\ii a})^n\)
+\end{exercice}
+\begin{exercice}
+    Mettre les nombres complexes suivants sous forme algébrique~: \(\alpha = \frac{9-4\ii}{3+2\ii}\), \(\beta=(1-\ii\sqrt{3})^{2007}\), \(\gamma = \frac{(1+j)^3+(1-j)^3}{(1+j)(1+j^2)}\) et \( \delta = \e^{1+i}\).
+\end{exercice}
+\begin{exercice}
+    Soient \(a\) et \(b\) des réels de \(\intervallefo{0}{2\pi}\). On pose \(u=\e^{a\ii}\) et \(v=\e^{b\ii}\). Déterminer le module et un argument, si possible, de chacun des complexes~: \(1+u\) et \(\frac{u+v}{1+uv}\).
+\end{exercice}
+\begin{exercice}[Théorème de l'angle inscrit]
+    Soient \((a, b, c) \in \C^3\) tels que \(\abs{a}=\abs{b}=\abs{c}=1\) et \(a \neq c\) et \(b \neq c\). Montrer que~:\(\Arg \frac{c-b}{c-a} \equiv \frac{1}{2} \Arg \frac{b}{a} \pmod \pi\). En donner une interprétation géométrique.
+\end{exercice}
+\begin{exercice}
+    Résoudre sur \(\C\), de deux façons, l'équation \(z^4+z^3+z^2+z+1=0\). L'une des deux méthodes consistera à se ramener à une équation du deuxième degré obtenue en faisant le changement de variable \(y = z+1/z\). Déterminer des expressions de \(\cos 2\pi/5\) et \(\sin 2\pi/5\).
+\end{exercice}
+\begin{exercice}
+    Soient \(A\), \(B\), et \(C\) trois points non alignés du plan complexe d'affixes respectives \(a\), \(b\) et \(c\). Montrer l'équivalence entre les trois propriétés suivantes~:
+    \begin{enumerate}
+        \item Le triangle \(ABC\) est équilatéral;
+        \item \(a+bj+cj^2=0\) ou \(a+bj^2+cj=0\);
+        \item \(a^2+b^2+c^2=ab+ac+bc\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Déterminez les nombres complexes \(z\) tels que \(z, 1/z\) et \(z-1\) aient le même module.
+\end{exercice}
+\begin{exercice}
+    On pose \(a=\e^{2\ii\pi/7}\). Déterminer une expression de chacun des complexes \(A = a+a^2+a^4 \qquad B = a^3+a^5+a^6\).
+\end{exercice}
+\begin{exercice}
+    Soient \(n \in \N^{*}\) et \((z_1, \ldots, z_n) \in (\C^{*})^n\).
+    \begin{enumerate}
+        \item Montrer que \( \abs{\sum_{k=1}^n z_k} \leqslant \sum_{k=1}^n \abs{z_k}\).
+        \item Montrer qu'il y a égalité dans cette inégalité si et seulement si~: \(\Arg(z_1) \equiv \Arg(z_2) \equiv \cdots \equiv \arg(z_n) \pmod{2\pi}\)
+        \item Montrer qu'il y a égalité dans cette inégalité si et seulement si, pour tout couple \((a,b) \in \intervalleentier{1}{n}^2 \ z_a \bar{z_b} \in \Rpluss\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient un réel \(\alpha\) et un naturel non nul \(n\) fixés. Résoudre dans \(\C\) les équations suivantes~:
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item \(z^2 = 46-14\ii\sqrt{3}\)
+            \item \(z^2-2\cos(\alpha)z+1=0\)
+            \item \(z+\bar{z}=\abs{z}\)
+            \item \((1+\ii)z^2+3(1-\ii)z-2(2+\ii)=0\)
+            \item \(z^4-(3+i)z^2+4+3\ii=0\)
+            \item \(z^{2n}+z^n+1=0\)
+            \item \(\left(1+\frac{\ii z}{n}\right)^n = \left(1-\frac{\ii z}{n}\right)^n\)
+        \end{enumerate}
+    \end{multicols}
+\end{exercice}
+\begin{exercice}
+    Déterminer l'ensemble des points \(M\) du plan complexe d'affixe \(z\) tels que~:
+    \begin{enumerate}
+        \item le nombre \(\frac{z+2}{z+3\ii}\) soit réel
+        \item Le nombre \(\left(\frac{z+1}{z-1}\right)^2\) soit imaginaire pur
+        \item \(\abs{\frac{z-1}{z+1}}=2\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(a\) et \(h\) deux nombre réels et \(n\) un naturel non nul. Donner une expression simple des sommes suivantes~: \( C_n = \sum_{k=0}^{n-1} \cos(a+kh), S_n = \sum_{k=0}^{n-1} \sin(a+kh)\)
+\end{exercice}
+\begin{exercice}
+    Soient \(a\) un réel et \(n\) un naturel non nul. Donner une expression simple de la somme~: \(T_n = \sum_{p=1}^n \cos^p a \sin(pa)\).
+\end{exercice}
+\begin{exercice}
+    Soient \(n \in \N\setminus\{0,1\}\) et \(\omega = \e^{2\ii\pi/n}\), \(a\) et \(b\) deux complexes. Montrer que~:
+\(\abs{a+b} \leqslant \frac{2}{n} \sum_{k=0}^{n-1} \abs{a+\omega^k b}\).
+\end{exercice}
+\begin{exercice}
+    Résoudre dans \(\C\) les systèmes suivants
+    \begin{equation}
+        (1) \begin{cases} x+y+z=1 \\ xyz=1 \\ \abs{x}=\abs{y}=\abs{z}=1 \end{cases}
+        (2) \begin{cases} 5x-\ii{}y=2 \\ (1+\ii)x+3y=5 \end{cases}
+        (3) \begin{cases} (1+\ii)x+\bar{y} = 3+7\ii \\\bar{x}+y=2+\ii\end{cases}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer toutes les applications \(f \in \C^{\C}\) telles que \(\forall z \in \C, f(z)+\ii f(\bar{z}) = 1+z\)
+\end{exercice}
+\begin{exercice}[Méthode de Cardan]
+    Soient \(a, b, c\) des réels. On considère l'équation du troisième degré
+    \begin{equation}
+        X^3+aX^2+bX+c=0
+    \end{equation}
+    \begin{enumerate}
+        \item à l'aide du changement de variable \(Y = X+a/3\), montrer qu'on peut se ramener à la résolution d'une équation de la forme~:
+            \begin{equation}
+                \label{eq:cardan1}
+                Y^3+pY+q = 0,
+            \end{equation}
+            avec \(p\) et \(q\) deux réels.
+        \item Soit \(y\) une racine de l'équation~\eqref{eq:cardan1}. Montrer qu'il existe un couple \((u,v)\) de complexes tel que \(u+v=y\) et \(uv=-p/3\), et que \(u^3\) et \(v^3\) sont racines de l'équation~\eqref{eq:cardan2}
+            \begin{equation}
+                \label{eq:cardan2}
+                Z^2+qZ-p^3/27 = 0.
+            \end{equation}
+         \item Résoudre l'équation~\eqref{eq:cardan2} en discutant selon la valeur de \(\Delta_3 = 4p^3+27q^2\).
+         \item En déduire les racine de l'équation~\eqref{eq:cardan1}. En particulier, on discutera le nombre de racines réelles.
+    \end{enumerate}
 \end{exercice}

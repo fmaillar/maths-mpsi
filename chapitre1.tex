@@ -1090,7 +1090,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
   \label{fig:tracetanhargth}
 \end{figure}
 \cleardoublepage
-\section{Exercices}
+\section{Exercices --- Fonctions logarithme, exponentielle et puissances}
 \begin{exercice}
     Soit \(a > 1\) et \(\alpha \in \R\).
     \begin{itemize}
@@ -1101,7 +1101,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
             \end{equation}
         \item Démontrer que l'équation~:
             \begin{equation}
-                a^(a^x) = x
+                a^{a^x} = x
             \end{equation}
             a les mêmes racines que l'équation~:
             \begin{equation}
@@ -1109,4 +1109,110 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
             \end{equation}
             En déduire le nombre de racines de l'équation \eqref{eq:fiche1-1}.
     \end{itemize}
+\end{exercice}
+\begin{exercice}
+    Résoudre sur \(\intervalleoo{0}{+\infty}\) le système d'équations aux inconnues \(x\) et \(y\) suivant~:
+    \begin{equation}
+       \begin{cases} 7(\log_y x +\log_x y) = 50 \\ xy = 256 \end{cases} 
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Comparer \(\e^\pi\) et \(\pi^e\).
+\end{exercice}
+\begin{exercice}
+    Soit, pour tout réel \(\alpha\) et tout naturel \(n\) non nul la fonction \(f_{alpha, n}\), notée par la suite $f$, définie pour tout \(x>0\), \(f_{\alpha, n}(x) = x^\alpha (\ln x)^n \).
+    \begin{enumerate}
+        \item Étudier la fonction \(f\) au voisinage de ses bornes
+        \item Étudier les variations de \(f\)
+        \item Représenter graphiquement \(f\). \emph{Attention, on devra trouver 15 représentations graphiques distinctes, en fonction de la valeur de \(n\) et de \(\alpha\).}
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Résoudre dans \(\R\) les équations suivantes~:
+    \begin{align}
+        (\sqrt{x})^x &= x^{\sqrt{x}} \\
+        2\ln x + \ln(2x-1) &= \ln(2x+8) + 2\ln(x-1) \\
+        \e^{2x} -2\e^x-3 &=0 \\
+        \sqrt{x+4-4\sqrt{x}} + \sqrt{x+9-6\sqrt{x}} &= 1
+    \end{align}
+\end{exercice}
+\section{Exercice --- Fonctions circulaires, hyperboliques et leurs réciproques}
+\begin{exercice}
+    Résoudre sur \(\R\) l'équation~:
+    \begin{equation}
+        \frac{\sin x + \sin 2x + \sin 3x}{\cos x + \cos 2x + \cos 3x} = 1
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Soit la fonction \(f\) telle que~:
+    \begin{equation}
+        f(x) = (\sqrt{1-\sin 2x}+\sqrt{1+\sin 2x})^{\frac{1}{\ln(\cos 2x)}}
+    \end{equation}
+    \begin{enumerate}
+        \item Quel est le domaine de définition de \(f\) ?
+        \item Démontrer que quelque soit le réel \(x\), \(\sqrt{1-\sin 2x}=\abs{\sin x - \cos x}\).
+        \item Étudier la parité et la périodicité de \(f\)
+        \item Trouver une expression de \(f\) plus simple sur \(\intervallefo{0}{\pi/2}\setminus\{\pi/3\}\).
+        \item Étudier les variations de \(f\) et la représenter graphiquement.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Résoudre sur \(\R\) l'équation
+    \begin{equation}
+        2\arcsin x = \arcsin(2x\sqrt{1-x^2})
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer pour tout réel \(a\) et tout naturel \(n\) une expression simple de la somme~:
+    \begin{equation}
+        S_n = \sum_{k=1}^n 2^k \tanh(2^k a
+    \end{equation}
+    \emph{Indication :} On pourra essayer de simplifier l'expression~:
+    \[\frac{2}{\tanh 2x} - \frac{1}{\tanh x}\]
+\end{exercice}
+\begin{exercice}
+    Déterminer, pour tout réel \(x\) de l'intervalle \(\intervallefo{0}{\pi/2}\) et tout naturel \(n\), une expression simple du réel~:
+    \begin{equation}
+        \sum_{k=0}^{n-1} \frac{\cos kx}{\cos^k x}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer si elles existent les limites~:
+    \begin{align}
+        \lim\limits_{x \to +\infty} 2\cosh^2x-\sinh 2x \\
+        \lim\limits_{x \to +\infty} \e^{2x}(2\cosh^2x-\sinh 2x)
+    \end{align}
+\end{exercice}
+\begin{exercice}
+    Soient \(y \in \intervalleoo{0}{\pi/2}\) et \(x = \ln\tan(\pi/4+y/2)\). Exprimer en focntion de \(y\) chacun des réels \(\tanh(x/2), \sinh x, \cosh x\) et \(\tanh x\).
+\end{exercice}
+\begin{exercice}
+    Démontrer que pour tout réels \(a\) et \(b\) strictement compris entre \(-1\) et \(1\),
+    \begin{equation}
+        \argth a + \argth b = \argth \frac{a+b}{1+ab}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Soient \(a\) et \(b\) deux réels. Résoudre sur \(\R\) le système suivant~:
+    \begin{equation}
+        \begin{cases} \cosh x \cosh y = a \\ \sinh x \sinh y = b \end{cases}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Étudier et représenter graphiquement les fonctions \(f\) suivantes~:
+    \begin{align}
+        f(x) &= \arcsin \sin x \\
+        f(x) &= \argch \sqrt{\frac{1+\cosh x}{2}} \\
+        f(x) &= \arccos(4x^3-3x) \\
+        f(x) &= \argth\sqrt{\frac{\cosh x - 1}{\cosh x + 1}}
+    \end{align}
+\end{exercice}
+\begin{exercice}
+    Soit un réel \(x\), simplifier l'expression~:
+    \begin{equation}
+        \arccos \cos x + 1/2 \arccos\cos 2x + 1/6\arccos\cos 3x
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Soit un réel \(x\), comparer \(\cos\sin x\) et \(\sin\cos x\).
 \end{exercice}
