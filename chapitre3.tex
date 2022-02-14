@@ -856,3 +856,73 @@ Si \(I=\emptyset\) alors \(\sum_{i \in I} u_i=0\) et \(\prod_{i \in I} u_i=1\) p
 \begin{exercice}
     Soient \(f : E \longrightarrow F, g : F \longrightarrow G, h : G \longrightarrow E\) trois applications telles que \(h \circ g \circ f\) et \(g \circ f \circ h\) sont injectives et \(f \circ h \circ g\) est surjective. Montrer que \(f, g, h\) sont bijectives.
 \end{exercice}
+\begin{exercice}[Conjugaison]
+    Soient \(E\) un ensemble et \(f : E \longmapsto E\) bijective. La conjugaison par \(f\) est l'application \(\Phi_f : E^E \longmapsto E^E\) définie par
+    \begin{equation}
+        \forall \varphi \in E^E \quad \Phi_f(\varphi) = f \circ \varphi \circ f^{-1}.
+    \end{equation}
+    \begin{enumerate}
+        \item Montrer que \(\Phi_f\) est une bijection de \(E^E\).
+        \item Si \(g : E \longmapsto E\) est une autre application bijective, simplifier \(\Phi_f \circ \Phi_g\).
+        \item Pour toutes \(\varphi, \psi \in E^E\), simplifier  \(\Phi_f(\varphi) \circ \Phi_g(\psi)\).
+        \item Montrer que l'image par \(\Phi_f\) d'une application injective (respectivement surjective) est une application injective (respectivement surjective).
+        \item Si \(\varphi\) est bijective, expliciter \((\Phi_f(\varphi))^{-1}\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Factorisation d'une application]
+    \begin{enumerate}
+        \item Soient \(f : F \longmapsto E\) et \(g : G \longmapsto E\) deux applications. Montrer qu'il existe une application \(h : G \longmapsto F\) telle que \(g = f \circ h\) si et seulement si \(g(G) \subset f(F)\). A quelle condition \(h\) est-elle unique ?
+        \item Soient \(f : E \longmapsto F\) et \(g : E \longmapsto F\) deux applications. Montrer qu'il existe une application \(h : F \longmapsto G\) telle que \(g = f \circ h\) si et seulement si 
+            \begin{equation}
+                \forall x,y \in E \qquad f(x)=f(y) \implies g(x)=g(y).
+            \end{equation}
+        A quelle condition \(h\) est elle unique ?
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(E\) et \(F\) deux ensembles, \(f : E \longmapsto F\) une application et \(G\) un ensemble ayant au moins deux éléments. On construit deux nouvelles applications~:
+    \begin{equation}
+        \fonction{f_{*}}{E^G}{F^G}{\varphi}{f \circ \varphi} \quad \fonction{f^{*}}{G^F}{G^E}{\varphi}{\varphi \circ f}
+    \end{equation}
+    Montrer que~:
+    \begin{enumerate}
+        \item \(f\) est injective si et seulement si \(f_{*}\) est injective si et seulement si \(f^{*}\) est surjective ;
+        \item \(f\) est surjective si et seulement si \(f_{*}\) est surjective si et seulement si \(f^{*}\) est injective.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Caractérisation des bijections]
+    Soient \(E\) et \(F\) deux ensembles.
+    \begin{enumerate}
+        \item Montrer que pour tout \(B \in \Part(F)\),
+            \begin{equation}
+                f^{-1}(F\setminus B) = E \setminus f^{-1}(B)
+            \end{equation}
+        \item Montrer que \(f\) est bijective si et seulement si~:
+            \begin{equation}
+                \forall A \in \Part(E) \quad f(E\setminus A) = F\setminus f(A)
+            \end{equation}
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(f : E \longmapsto F\). Pour tout entier naturel non nul \(n\), on note \(f^n = \underbrace{f \circ f \circ \cdots \circ f}_{n \textrm{ fois}}\) et on pose \(f^0=\Id_E\). Soient \(A\) une partie de \(E\), \(A_n=f^{n}(A)\) et \(B = \bigcup_{n\in \N} A_n\).
+    \begin{enumerate}
+        \item Montrer que \(f(B) \subset B\).
+        \item Montrer que \(B\) est la plus petite partie de \(E\) stable par \(f\) contenant \(A\) (c'est-à-dire la plus petite partie \(C\) de \(E\) telle que \(f(C) \subset C\) et \(A \subset C\)).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(\RelBin\) une relation binaire transitive et symétrique. Est-elle nécessairement réflexive ?
+\end{exercice}
+\begin{exercice}
+    Soit un ensemble quelconque \(E\).
+    \begin{enumerate}
+        \item Démontrer que la relation d'inclusion est une relation d'ordre dans l'ensemble \(\Part(E)\).
+        \item Soient \(A, B \in \Part(E)\), déterminer si elles existent, la borne inférieure et la borne supérieure de \(\{A, B\}\) dans \((\Part(E), \subset)\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item La relation binaire \(\RelBin\) définie sur \(\N^2\), pour tout couples d'entiers naturels \((x,y), (x',y')\) par~: \[(x,y)\RelBin{}(x',y') \iff (x \leqslant x' \land y \leqslant y')\] est une relation d'ordre ?
+        \item La relation binaire \(\mathcal{L}\) définie sur \(\N^2\), pour tout couples d'entiers naturels \((x,y), (x',y')\) par~: \[(x,y)\mathcal{L}(x',y') \iff (x < x' \lor (x=x' \land y \leqslant y')\] est une relation d'ordre ?
+    \end{enumerate}
+\end{exercice}
