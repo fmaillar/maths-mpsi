@@ -26,7 +26,7 @@ ax = fig.add_subplot(111)
 ax.set_aspect('equal', adjustable='box')
 ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
-plt.plot(x1,y1, label='$arctan~x$')
+plt.plot(x1,y1, label='$\\textrm{arctan}~x$')
 plt.plot(x2,y2, label='$tan~x$')
 plt.plot(x3,x3, label='$x$')
 #asymptotes

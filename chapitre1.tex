@@ -555,22 +555,28 @@ On présente un tableau récapitulatif~\ref{tab:fonctiontrigo} des différentes 
   \label{tab:fonctiontrigo}
 \end{table}
 
+%\begin{figure}
+%\centering
+%\begin{tikzpicture}
+%\draw (0,0) circle (4);
+%\draw (180:4) -- (0:4);
+%\draw (-90:4) -- (90:4);
+%\draw (1,0) arc(0:35:1) node[right, below]{\(\theta\)};
+%\draw (0,0) -- (35:4) node[midway, above, sloped]{\(1\)};
+%\draw[color=blue] (35:4) -- (0,2.29) node[midway, above, sloped]{\(\cos \theta\)};
+%\draw[color=red] (35:4) -- (3.276,0) node[midway, below, sloped]{\(\sin \theta\)};
+%%\draw (4,-4) --++ (0,8);
+%\draw[color=yellow](35:4) -- (4,2.8);%Pour compléter la tangente
+%\draw[color=orange](4,2.8) -- (5.71,4);
+%\draw[color=green] (4,0) -- (4,2.8) node[midway, below, sloped]{\(\tan \theta\)};
+%\draw[color=pink] (0,4) -- (5.71,4) node[midway, above, sloped]{\(\cot \theta\)};
+%\end{tikzpicture}
+%\caption{Cercle trigonométrique}
+%\label{fig:cercletrigo}
+%\end{figure}
 \begin{figure}
 \centering
-\begin{tikzpicture}
-\draw (0,0) circle (4);
-\draw (180:4) -- (0:4);
-\draw (-90:4) -- (90:4);
-\draw (1,0) arc(0:35:1) node[right, below]{\(\theta\)};
-\draw (0,0) -- (35:4) node[midway, above, sloped]{\(1\)};
-\draw[color=blue] (35:4) -- (0,2.29) node[midway, above, sloped]{\(\cos \theta\)};
-\draw[color=red] (35:4) -- (3.276,0) node[midway, below, sloped]{\(\sin \theta\)};
-%\draw (4,-4) --++ (0,8);
-\draw[color=yellow](35:4) -- (4,2.8);%Pour compléter la tangente
-\draw[color=orange](4,2.8) -- (5.71,4);
-\draw[color=green] (4,0) -- (4,2.8) node[midway, below, sloped]{\(\tan \theta\)};
-\draw[color=pink] (0,4) -- (5.71,4) node[midway, above, sloped]{\(\cot \theta\)};
-\end{tikzpicture}
+\includegraphics[scale=0.7]{./CercleTrigo.png}
 \caption{Cercle trigonométrique}
 \label{fig:cercletrigo}
 \end{figure}
@@ -670,7 +676,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{proof}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{arcsin.png}
+  \includegraphics[scale=0.7]{arcsin.png}
   \caption{Tracé de arcsinus}
   \label{fig:tracearcsinus}
 \end{figure}
@@ -718,7 +724,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{arccos.png}
+  \includegraphics[scale=0.7]{arccos.png}
   \caption{Tracé de arccosinus}
   \label{fig:tracearccosinus}
 \end{figure}
@@ -785,8 +791,8 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{arctan.png}
-  \caption{Tracé de arctangente}
+  \includegraphics[scale=0.7]{arctan.png}
+  \caption{Tracé de arctangente et de ses asymptotes}
   \label{fig:tracearctangente}
 \end{figure}
 %
@@ -846,7 +852,7 @@ On a bien montré l'existence d'un réel \(\theta \in \intervalleof{-\pi}{\pi}\)
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{trigh.png}
+  \includegraphics[scale=0.7]{trigh.png}
   \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\hcos\)}
   \label{fig:tracesinhcosh}
 \end{figure}
@@ -893,7 +899,7 @@ La fonction tangente hyperbolique est strictement croissante et la cotangente d�
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{tanh.png}
+  \includegraphics[scale=0.7]{tanh.png}
   \caption{Tracé de fonctions hyperbolique \(\htan\) et \(\hcotan\)}
   \label{fig:tracetanhcoth}
 \end{figure}
@@ -975,7 +981,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{argsinh.png}
+  \includegraphics[scale=0.7]{argsinh.png}
   \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\argsh\)}
   \label{fig:tracesinhargsh}
 \end{figure}
@@ -1028,7 +1034,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{argcosh.png}
+  \includegraphics[scale=0.7]{argcosh.png}
   \caption{Tracé de fonctions hyperbolique \(\hcos\) et \(\argch\)}
   \label{fig:tracecoshargcosh}
 \end{figure}
@@ -1085,8 +1091,8 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{argtanh.png}
-  \caption{Tracé de fonctions hyperbolique \(\htan\) et \(\argth\)}
+  \includegraphics[scale=0.7]{argtanh.png}
+  \caption{Tracé des fonctions hyperbolique \(\htan\) et \(\argth\) et de leurs asymptotes}
   \label{fig:tracetanhargth}
 \end{figure}
 \cleardoublepage

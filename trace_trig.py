@@ -13,6 +13,8 @@ import matplotlib.pyplot as plt
 
 
 x = np.arange(-np.pi,np.pi,0.01)
+x3 = np.arange(-2,2,0.001)
+
 y1 = np.sin(x)
 y2 = np.cos(x)
 y3 = np.tan(x)
@@ -25,10 +27,19 @@ ax = fig.add_subplot(111)
 #ax.set_aspect('equal', adjustable='box')
 ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
-plt.plot(x,y1, label='$sin~x$')
-plt.plot(x,y2, label='$cos~x$')
-plt.plot(x,y3, label='$tan~x$')
-plt.plot(x,y4, label='$cotan~x$')
+plt.plot(x,y1, label='$\sin~x$')
+plt.plot(x,y2, label='$\cos~x$')
+plt.plot(x,y3, label='$\\textrm{tan}~x$')
+plt.plot(x,y4, label='$\\textrm{cotan}~x$')
+#Trace des asymptotes
+#asymptotes
+#tangente
+plt.plot(-np.pi/2*x3/x3, x3 , ls = (0, (5, 10)), lw=0.5, color='green')
+plt.plot(np.pi/2*x3/x3, x3 , ls = (0, (5, 10)), lw=0.5, color='green')
+#cotangente
+plt.plot(-np.pi*x3/x3 , x3, ls = (0, (5, 10)), lw=0.5, color='red')
+plt.plot(np.pi*x3/x3 , x3, ls = (0, (5, 10)), lw=0.5, color='red')
+
 plt.grid()
 #plt.xlim(0,4)
 plt.ylim(-2,2)
