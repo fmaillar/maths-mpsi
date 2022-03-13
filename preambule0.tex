@@ -36,6 +36,7 @@
 %Pour dessiner avec Tikz
 \usepackage{tikz, pgf}
 \usetikzlibrary{arrows,calc,backgrounds}
+\usepackage{tkz-tab}
 %
 % pour le symbole \danger
 \usepackage{fourier-orns}
@@ -171,6 +172,7 @@ breaklinks = true%
 \right.
 }
 \newcommand{\fonctionL}[5]{#1:#2 \longrightarrow #3, #4 \longmapsto #5}
+\newcommand{\fonctionR}[3]{#1:#2 \longrightarrow #3}
 %nouveau raccourcis
 \newcommand{\ensemblenombre}[1]{\mathbb{#1}}
 \newcommand{\intervalle}[4]{\mathopen{#1}#2\mathclose{}\mathpunct{};#3\mathclose{#4}}
@@ -401,3 +403,6 @@ breaklinks = true%
 \numberwithin{equation}{section}
 %
 \usepackage{multicol}
+%
+\usepackage{caption}
+\usepackage{subcaption}

@@ -69,7 +69,7 @@ La construction de ce corps est hors programme. On le définit tel quel.
 \emph{Interprétation géométrique~:} L'application $\varphi$ peut être vue comme une ``correspondance'' entre $\C$ et le plan $\R^2$, voir la figure~\ref{fig:complexe}.
 \begin{figure}
     \centering
-    \includegraphics[scale=0.4]{./Complexes.png}
+    \includegraphics[scale=0.7]{./Complexes.png}
     \label{fig:complexe}
     \caption{Représentation géométrique des complexes}
 \end{figure}
@@ -110,6 +110,14 @@ On appelle le réel \(x\) la partie réelle du complexe \(z\), \(x=\Re(z)\) et o
 \begin{defdef}
   Soit \(z=x+\ii y \in \C\) avec \((x,y)\in \R\), on définit son conjugué de \(z\) noté \(\bar{z}\) par \(\bar{z}=x- \ii y\).
 \end{defdef}
+Les conjugués de deux complexes sont représentés dans le plan complexe sur la figure \ref{fig:conjugueComplexe}.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{conjugue.png}
+    \caption{Représentation dans le plan complexe du conjugué de deux complexes $z_1$ et $z_2$}
+    \label{fig:conjugueComplexe}
+\end{figure}
+%
 \begin{prop}
   Soient des complexes \(z\) et \(z'\), alors
   \begin{gather}
@@ -147,6 +155,14 @@ On appelle le réel \(x\) la partie réelle du complexe \(z\), \(x=\Re(z)\) et o
 \begin{defdef}
   Pour tout complexe \(z\), on définit le module de \(z\) par \(\abs{z}=\sqrt{z \bar{z}}\).
 \end{defdef}
+%
+On peut représenter le module dans le plan complexe par la figure \ref{fig:moduleComplexe}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{module_complexe.png}
+    \caption{Représentation dans le plan complexe du module}
+    \label{fig:moduleComplexe}
+\end{figure}
 %
 \begin{prop}
   Soient \(z\) et \(z'\) deux complexes, alors
@@ -514,11 +530,96 @@ L'écriture \(z=\expc{\abs{z}}{\theta}\) avec \(\theta \in \R\) est appelée for
     Alors on a démontré que \(\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}\), on déduit l'autre inclusion en vérifiant que tous les éléments de \(\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}\) élevés à la puissance \(n\) font 1.
 \end{proof}
 
-\emph{Interprétation géométrique}~: Les points d'affixes \(z \in \U_n\) forment les sommets d'un polygone régulier à \(n\) cotés centré en O dont l'un des sommet est \(1\). La représentation géométrique de l'ensemble \(\U_5\) est donnée par le figure~\ref{fig:racinesnieme}.
+\emph{Interprétation géométrique}~: Les points d'affixes \(z \in \U_n\) forment les sommets d'un polygone régulier à \(n\) cotés centré en O dont l'un des sommet est \(1\). Les représentations géométriques des ensembles \(\U_3\) jusqu'à \(\U_{14}\) sont données par le figure~\ref{fig:racinesnieme}.
 \begin{figure}
-  \centering
-  \includegraphics[scale=2.5]{racines-nieme.png}
-  \caption{Représentation dans le plan complexe de \(U_5\)}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.33]{U_3.png}  
+      \caption{$\U_3$}
+      \label{fig:U3}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_4.png}  
+      \caption{$\U_4$}
+      \label{fig:U4}      
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_5.png}  
+      \caption{$\U_5$}
+      \label{fig:U5}      
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_6.png}  
+      \caption{$\U_6$}
+      \label{fig:U6}      
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.33]{U_7.png}  
+      \caption{$\U_7$}
+      \label{fig:U7}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_8.png}  
+      \caption{$\U_8$}
+      \label{fig:U8}      
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_9.png}  
+      \caption{$\U_9$}
+      \label{fig:U9}      
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_10.png}  
+      \caption{$\U_{10}$}
+      \label{fig:U10}
+    \end{subfigure}  
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.33]{U_11.png}  
+      \caption{$\U_{11}$}
+      \label{fig:U11}
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_12.png}  
+      \caption{$\U_{12}$}
+      \label{fig:U12}      
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_13.png}  
+      \caption{$\U_{13}$}
+      \label{fig:U13}      
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+      \centering
+      % include second image
+      \includegraphics[scale=.33]{U_14.png}  
+      \caption{$\U_{14}$}
+      \label{fig:U14}
+    \end{subfigure}
+ \caption{Représentations graphique de $\U_3$, \ldots, $\U_{14}$}
   \label{fig:racinesnieme}
 \end{figure}
 
@@ -747,6 +848,7 @@ Si le réel \(k<0\) alors \(E_k=\emptyset\), s'il est nul alors \(E_0=\{A(a)\}\)
 Si le réel \(k\) est strictement positif non égal à 1 alors \(\frac{MA}{MB}=k\) et donc \((\vect{MA}+k\vect{MB}) \cdot (\vect{MA}-k\vect{MB})=0\). Soit \(I\) le barycentre de \((A,1)(B,k)\) et \(J\) le barycentre de \((A,1)(B,-k)\) alors \((1+k)(1-k) \vect{MI} \cdot \vect{MJ} =0\) comme \(k \neq \pm 1\) on a que M est sur le cercle de diamètre \([IJ]\).
 
 Si \(z \in \{a,b\}\) alors \(E_\lambda=\emptyset\) et sinon \(E_\lambda\) est la droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
+\cleardoublepage
 \section{Exercices}
 \begin{exercice}[Identité du parallèlogramme]
     Démontrer que pour tous nombres complexes \(z\) et \(z'\) on a~:\(\abs{z+z'}^2 + \abs{z-z'}^2 = 2\abs{z}^2 + 2\abs{z'}^2\).

@@ -560,3 +560,102 @@ Dans le cas du discriminant nul, on pose \(r\) sa racine double. Si la fonction 
     &\iff \begin{cases}\lambda \e^{rt_0}=y'_0 -f'_0(t_0)-r(y_0-f_0(t_0)) \\ \mu=\e^{-rt_0}(y_0-f_0(t_0))-\lambda t_0\end{cases}.
   \end{align}
 \end{proof}
+\cleardoublepage
+\section{Exercices}
+\begin{exercice}
+    Résoudre l'équation différentielle~:
+    \begin{equation}
+        y'-xy = x\sin(x^2).
+    \end{equation}
+    On pourra rechercher une solution particulière de la forme \(x \longmapsto \alpha\cos(x^2)+\beta\sin(x^2)\)
+\end{exercice}
+\begin{exercice}
+    Résoudre l'équation différentielle suivante
+    \begin{equation}
+        y'\cos x + y \sin x = x \sin 2x + x^2
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer toutes les fonctions dérivables de \(\R\) dans \(\R\), \(x\) et \(y\) tels que \(x(0)=y(0)=0\) et pour tout réel \(t\)~:
+    \begin{align}
+        x'(t) & = x(t) + y(t) + \sin t \\
+        y'(t) & = -x(t) + 3y(t)
+    \end{align}
+\end{exercice}
+\begin{exercice}
+    Résoudre sur \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\) l'équation différentielle~:
+    \begin{equation}
+        y'-y\tan x = -\cos^2 x
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer les fonctions dérivables sur \(\intervalleoo{0}{+\infty}\) qui vérifie pour tout réel \(x\) strictement positif~:
+    \begin{equation}
+        f'(x) = f\left(\frac{1}{4x}\right)
+    \end{equation}
+    Si $f$ est une solution, on pourra montrer que la fonction \(\fonction{g}{\R}{\R}{t}{f(\e^t)}\) est une solution d'une équation différentielle linéaire à coefficients constants que l'on résoudra.
+\end{exercice}
+\begin{exercice}
+    Résoudre l'équation différentielle~:
+    \begin{equation}
+        y' = \abs{y-x}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Montrer que, pour tout \(m \in \intervalleoo{0}{2}\), l'équation différentielle~:
+    \begin{equation}
+        y'' + (1-2m)y' - 2my = \e^{2x}
+    \end{equation}
+    admet une et une seule solution \(f_m\) telle que \(f_m(0)=f_m'(0)=0\). Montrer que pour tout réel \(x\) \(\lim\limits_{m \to 1} f_m(x) = f_1(x)\).
+\end{exercice}
+\begin{exercice}
+    Résoudre sur \(\R\) l'équation différentielle~:
+    \begin{equation}
+        y'' - 4y' + 3y = x^2\e^x + x\e^{2x}\cos x
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) dérivables telles que~:
+    \begin{equation}
+        \forall x \in \R \quad f'(x) = f(-x)
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) deux fois dérivables telles que~:
+    \begin{equation}
+        \forall x \in \R \quad f''(x) + f(-x) = x\e^{-x}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    On considère l'équation différentielle non linéaire 
+    \begin{equation}
+        \label{eq:nonlin}
+        y' = 1 + y^2.
+    \end{equation}
+    \begin{enumerate}
+        \item Trouver une solution particulière de cette équation sur l'intervalle \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\).
+        \item Soient \(a<b\) deux réels, \(I = \intervalleoo{a}{b}\) et \(f : I \longmapsto \R\) une fonction solution de l'équation~\eqref{eq:nonlin}. On définit une fonction \(g\) de \(I\) dans \(\R\) définit pour tout réel \(x\) de \(I\) par~: \(g(x) = \arctan f(x) \). Montrer que \(g\) est dérivable et que c'est une solution d'une équation différentielle linéaire du premier ordre notée \(\mathcal{H}\).
+        \item Résoudre \(\mathcal{H}\).
+        \item En déduire que l'équation~\eqref{eq:nonlin} possède une unique solution sur l'intervalle \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}    
+    On cherche des solutions sur \(\intervalleoo{0}{+\infty}\) de l'équation~:
+    \begin{equation}
+        \label{eq:eqH}
+        x^2y'' + 2xy' + y = \frac{1}{x}
+    \end{equation}
+    \begin{enumerate}
+        \item Soit \(y\) une solution de \eqref{eq:eqH}. On définit la fonction \(Y \in \R^{\R}\) en posant pour tout réel \(t\), \(Y(t) = y(\e^t)\). Montrer que la fonction \(Y\) vérifie une équation différentielle linéaire à coefficients constants que l'on notera \(\mathcal{E}'\).
+        \item Résoudre \(\mathcal{E}'\). 
+        \item En déduire l'ensemble des solutions de l'équation~\eqref{eq:eqH}.
+        \item Montrer qu'il existe une unique solution \(y\) de \eqref{eq:eqH} telle que \(y(1)=y'(1)=0\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item Soient un intervalle réel \(I\), \(a \in \R^I\) et \(b \in \C^I\) deux fonctions continues. On suppose que la fonction \(f \in \C^I\) est une solution de l'équation différentielle \(y' + a(x)y = b(x)\). Notons \(c = \Re(b)\) et \(d = \Im(b)\). Montrer que la fonction \(g = \Re(f)\) est une solution de l'équation différentielle \(y' + a(x)y = c(x)\) et que la fonction \(h = \Im(f)\) est une solution de l'équation différentielle \(y' + a(x)y = d(x)\).
+        \item Déterminer les fonctions de \(\R\) dans \(\C\) solutions de l'équation différentielle \(2y'-y = x\e^{(3\ii-1)x}\).
+        \item En déduire les fonctions de \(\R\) dans \(\R\) solutions de l'équation différentielle \(2y'-y = x\e^{-x}\sin(3x)\).
+    \end{enumerate}
+\end{exercice}

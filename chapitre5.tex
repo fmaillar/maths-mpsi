@@ -587,7 +587,7 @@ Réciproquement, Soit \(X\) la partie du plan d'équation cartésienne \(x^2+y^2
 \item si \(c+a^2+b^2=0\) alors \(x=a\), \(y=b\) et donc \(X=\{A\}\);
 \item si \(c+a^2+b^2>0\) alors soit \(R=\sqrt{a^2+b^2+c}\) et \(A=(a,b)\) et donc \(X=\cercle{A}{R}\).
 \end{itemize}
-\begin{prop}
+\begin{prop}[Théorème de l'angle au centre]
   \label{prop:cocy}
   Soit \(\mathcal{C}\) un cercle de centre \(\Omega\), \(M\) \(A\) et \(B\) trois points de \(\mathcal{C}\) tels que \(M \neq A\) et \(M \neq B\). Alors 
   \begin{equation}
@@ -612,7 +612,7 @@ Réciproquement, Soit \(X\) la partie du plan d'équation cartésienne \(x^2+y^2
     \congru{(\vect{\Omega A}, \vect{\Omega B})}{2 (\vect{MB}, \vect{MA})}{2\pi}.
 \end{equation}
 \end{proof}
-\begin{theo}
+\begin{theo}[Théorème de l'angle inscrit]
   Soient \(A,B,C\) et \(D\) quatre points distincts du plan.
   \begin{equation}
     \text{A,B,C et D sont alignés ou cocycliques} \iff \congru{(\vect{CA}, \vect{CB})}{(\vect{DA}, \vect{DB})}{\pi}.
@@ -657,7 +657,7 @@ D'après l'hypothèse on a
 \end{equation}
 Les points \(E\), \(A\) et \(F\) sont sur \(\Dr\) donc \(\vect{EA}\) et \(\vect{FA}\) sont colinéaires, ainsi \(\vect{EB}\) et \(\vect{FB}\) sont aussi colinéaires. Si \(E \neq F\) alors la droite \((EF)\) est la droite \(\Dr\), et donc \(B \in \Dr\) qui est une contradiction avec la définition de \(\Dr\). Donc \(E=F\) et ainsi les cercles \(\mathcal{C}\) et \(\mathcal{C}'\) sont confondus. Les points \(A\), \(B\), \(C\) et \(D\) sont donc cocycliques.
 \end{proof}
-\begin{defdef}
+\begin{defdef}[Birapport]
   Si \(A\), \(B\), \(C\) et \(D\) sont quatre points distincts d'affixes respectives \(a\), \(b\), \(c\) et \(d\) on définit le complexe noté \(B(a,b,c,d)\) appelé le birapport des points \(A\), \(B\), \(C\) et \(D\) par
   \begin{equation}
     B(a,b,c,d)=\frac{a-c}{a-d} \times \frac{b-d}{b-c}.
@@ -811,8 +811,8 @@ Alors \(X_{\alpha}^{3}\) est l'arc de cercle d'extrémité \(A\) et \(B\) qui co
 \end{defdef}
  \begin{figure}
    \centering
-   \includegraphics[width=\textwidth]{homothetie.png}
-   \caption{Représentation graphique d'une homothétie de centre O}
+   \includegraphics[scale=0.7]{homothetie.png}
+   \caption{Représentation graphique d'une homothétie de centre \(C\)}
    \label{fig:homothetie}
  \end{figure}
 
@@ -906,3 +906,49 @@ et aussi
 \begin{prop}
   Soient \([AB]\) et \([A'B']\) deux segments de longueur non nulle. Il existe une unique similitude directe \(s\) telle que \(s(A)=A'\) et \(s(B)=B'\).
 \end{prop}
+\cleardoublepage
+\section{Exercice}
+\begin{exercice}
+    Dans le plan muni d'un repère orthonormal \((O, \vi, \vj)\), on considère un point \(\Omega\), \(a, \varphi\) un système de coordonnées polaires de \(\Omega\), avec \(a\) strictement positif et un réel \(R\)  strictement positif et différent de \(a\). Donner une équation polaire du cercle \(\mathcal{C}\) de centre \(\Omega\) et de rayon \(R\).
+\end{exercice}
+\begin{exercice}
+    Soit \((O, \vi, \vj)\) un repère orthonormal du plan. On note \(\P\) la partie du plan d'équation polaire \(\rho(1+\cos\theta)=1\). Donner une équation cartésienne de la partie \(\P\).
+\end{exercice}
+\begin{exercice}
+    Soit \(ABC\) un triangle non aplati. On note \(\hat{A}\) \(\hat{B}\), \(\hat{C}\) des mesures des angles \(\widehat{CAB}\), \(\widehat{ABC}\) et \(\widehat{BCA}\) et \(a\), \(b\) et \(c\) les longueurs \(BC\), \(AC\) et \(BA\). On appelle \(p = \frac{a+b+c}{2} \) le demi périmètre et \(\S\) l'aire du triangle.
+    \begin{enumerate}
+        \item Montrer que \(c^2=a^2+b^2-2bc\cos \hat{A}\)
+        \item En déduire la formule de Héron~:
+            \begin{equation}
+                S = \sqrt{p(p-a)(p-b)(p-c)}
+            \end{equation}
+        \item Montrer la loi des sinus~:
+            \begin{equation}
+                \frac{a}{\sin \hat{A}} = \frac{b}{\sin \hat{B}} = \frac{c}{\sin \hat{C}}
+            \end{equation}
+        \item On suppose en outre que le triangle n'est pas rectangle, montrer que~:
+            \begin{equation}
+                \tan \hat{A} + \tan \hat{B} + \tan \hat{C} = \tan \hat{A} \tan \hat{B} \tan\hat{C}
+            \end{equation}
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(A\) et \(B\) deux points distincts du plan \(\P\). Étudier les lignes de niveaux de l'application \(\fonctionR{\psi}{\P\setminus\{A, B\}}{\R}\) définie par~:
+    \begin{equation}
+        \psi(M) = \frac{\vect{AM}\cdot\vect{BM}}{AM \cdot BM}
+    \end{equation}
+\end{exercice}
+\begin{exercice}
+    Soient \(\vu\) et \(vv\) deux vecteurs du plan. Montrer que~:
+    \begin{align}
+        \vu \cdot \vv &= \frac{1}{2}{\norme{\vu+\vv}^2 - \norme{u}^2-\norme{v}^2} \\
+        \vu \cdot \vv &= \frac{1}{4}{\norme{\vu+\vv}^2 - \norme{\vu-\vv}^2} \\
+        \norme{\vu+\vv}^2 + \norme{\vu-\vv}^2 &= 2(\norme{\vu}^2+\norme{\vv}^2)
+    \end{align}
+\end{exercice}
+\begin{exercice}
+    Soient \(ABC\) un triangle, \(A'\), \(B'\) et \(C'\) des points situés respectivement sur les droites \((BC)\), \((AC)\) et \((AB)\) et distincts des points \(A\) \(B\) et \(C\).
+    \begin{enumerate}
+        \item Montrer que les points \(A'\), \(B'\) et \(C'\) sont alignés si et seulement si
+    \end{enumerate}
+\end{exercice}

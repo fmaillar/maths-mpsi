@@ -94,12 +94,71 @@ Réciproquement, si \(p\) est un réel strictement positif, l'ensemble des point
   \end{equation}
 \end{theo}
 
-Une parabole est représentée sur la figure~\ref{fig:parabole}.
+Plusieurs paraboles sont représentées sur la figure~\ref{fig:parabole}.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=\textwidth, scale=1]{parabole.png}
-  \caption{Représentation graphique d'une parabole}
+\begin{figure}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=0.5.png}  
+      \caption{$p=0.5$}
+      \label{fig:parabole1}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=0.75.png}  
+      \caption{$p=0.75$}
+      \label{fig:parabole2}
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=1.png}  
+      \caption{$p=1$}
+      \label{fig:parabole3}
+    \end{subfigure}    
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=1.5.png}  
+      \caption{$p=1.5$}
+      \label{fig:parabole4}
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=1.75.png}  
+      \caption{$p=1.75$}
+      \label{fig:parabole5}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=2.png}  
+      \caption{$p=2$}
+      \label{fig:parabole6}
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=2.5.png}  
+      \caption{$p=2.5$}
+      \label{fig:parabole7}
+    \end{subfigure}    
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_parabole_p=3.png}  
+      \caption{$p=3$}
+      \label{fig:parabole8}
+    \end{subfigure}
+%  \centering
+%  \includegraphics[width=\textwidth, scale=1]{parabole.png}
+  \caption{Représentations graphiques de plusieurs paraboles}
   \label{fig:parabole}
 \end{figure}
 
@@ -169,6 +228,7 @@ Finalement \(\H=\Gamma_1 \cup \Gamma_2\).
   Étudions la courbe paramétrée \(\Gamma_1\)~: lorsque \(t \to +\infty\) alors \(x\) et \(y\) deviennent infinis, il y a donc une branche infinie. Le rapport \(\frac{y(t)}{x(t)}=\frac{b}{a} \tanh(t)\) tend vers \(\frac{b}{a}\). Ainsi la courbe admet une direction asymptotique de pente \(\frac{b}{a}\) et la différence \(y(t) -\frac{b}{a}x(t)=b(\sinh t -\cosh t)=-b\e^{-t}\) tend vers 0. Alors la courbe admet bien la droite d'équation \(y=\frac{b}{a}x\) pour asymptote. On raisonne de la même manière en \(t\to -\infty\) et pour la courbe \(\Gamma_2\).
 \end{proof}
 Si \(a=b\), on dit que l'hyperbole est équilatère et les asymptotes sont les bissectrices.
+
 
 
 \subsubsection{Cas des ellipses (\(e<1\))}
@@ -290,12 +350,42 @@ Soit l'application \(\fonction{g}{\P}{\R}{M}{\abs{MF+MF'}}\) alors d'après l'in
 \item si \(\lambda<0\) alors \(Y_{\lambda}=\emptyset\) puisqu'une valeur absolue ne peut pas être négative.
 \end{itemize}
 
-On a représenté une hyperbole sur la figure~\ref{fig:hyperbole}.
+On a représenté quatre hyperboles sur la figure~\ref{fig:hyperbole}.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=\textwidth]{./hyperbole.png}
-  \caption{Représentation d'une hyperbole}
+\begin{figure}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_hyperbole_e=1.5_p=1.png}  
+      \caption{$e=1.5, p=1$}
+      \label{fig:hyperbole1}
+    \end{subfigure}
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_hyperbole_e=1.5_p=3.png}  
+      \caption{$e=1.5, p=3$}
+      \label{fig:hyperbole2}
+    \end{subfigure}
+    \newline
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_hyperbole_e=1.12_p=0.5.png}  
+      \caption{$e=\frac{\sqrt{5}}{2}, p=\frac{1}{2}$}
+      \label{fig:hyperbole3}
+    \end{subfigure}    
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      % include first image
+      \includegraphics[scale=.45]{Tracé_hyperbole_e=1.73_p=1.png}  
+      \caption{$e=\sqrt{3}, p=1$}
+      \label{fig:hyperbole4}
+    \end{subfigure}
+
+%  \centering
+%  \includegraphics[width=\textwidth]{./hyperbole.png}
+  \caption{Représentation de quatre hyperboles}
   \label{fig:hyperbole}
 \end{figure}
 
