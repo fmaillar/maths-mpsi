@@ -51,4 +51,4 @@ def Trace_Un(n):
 
 for i in np.arange(3,15):
     Trace_Un(i)
-    
+plt.close('all')

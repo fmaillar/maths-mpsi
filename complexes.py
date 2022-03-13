@@ -51,7 +51,4 @@ for i, label in enumerate(annotations):
     ax.annotate(label, (x[i], y[i]))
 plt.grid('True', which='both')
 plt.savefig('conjugue.png')
-plt.close()
-
-
-
+plt.close('all')

@@ -66,5 +66,5 @@ ax.text(1+2*eps,y0, r'$\tan \theta$', ha='center', rotation='vertical', usetex=T
 ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
 plt.grid('on')
-plt.show()
 plt.savefig('CercleTrigo')
+plt.close('all')

@@ -209,7 +209,7 @@ def Trace_Hyperbole(p, e, t, frac=0.422, fact=1.2):
     plt.title(f"Tracé d'une parabole, $MF = e MH$, avec $p = {p}$ et $e = {e1}$")       
     plt.grid(True)
     plt.savefig(f"Tracé_hyperbole_e={e1}_p={p}.png", format='png')
-#    plt.close('all')
+    plt.close('all')
     
 #Fonctionne
 t = np.linspace(-5, 5, 1000) 

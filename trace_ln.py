@@ -33,4 +33,4 @@ plt.legend()
 
 plt.savefig('lognep.png', dpi=200)
 plt.show()
-#plt.close()
+plt.close()
