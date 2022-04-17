@@ -10,7 +10,7 @@ Soit \(\E\) l'espace géométrique euclidien. On munit \(\E\) d'un repère cart�
 \begin{defdef}
   Soit M un point de l'espace \(\E\). Il existe un unique triplet \((x,y,z)\in\R^3\) tel que \(\vect{OM}=x\vi+y\vj+z\vk\), ce sont les coordonnées cartésiennes du point M dans le repère \(\rondtrois\). Réciproquement pour tout triplet \((x,y,z)\) de \(\R^3\) il existe un unique point M de l'espace tel que \(\vect{OM}=x\vi+y\vj+z\vk\)
 \end{defdef}
-Ainsi la donnée d'un repère cartésien de l'espace permet de définir une bijection entre \(\R^3\) et \(\E\).
+Ainsi la donnée d'un repère cartésien de l'espace permet de définir une bijection entre \(\R^3\) et \(\E\). La représentation du repère cartésien est donné par la figure \ref{fig:repcart}.
 
 \emph{Changement de repère en coordonnées cartésiennes}
 Soient \(\Rep=\rondtrois\) et \(\Rep'=\rondtroisu\) deux repères cartésiens. Dans \(\Rep\) \(\Omega(x_0,y_0,z_0)\) et les vecteurs \(\vu(a,b,c)\) \(\vv(a',b',c')\) et \(\vw(a'',b'',c'')\). Soit M un point de l'espace. On note \((x_0,y_0,z_0)\) ses coordonnées dans \(\Rep\) et \((X,Y,Z)\) ses coordonnées dans \(\Rep'\). D'une part~:
@@ -32,9 +32,16 @@ Alors par unicité des coordonnées dans \(\Rep\) on a~:
 
 \danger Ces formules donnent les \og{}anciennes\fg{} coordonnées en fonction des \og{}nouvelles\fg{}.
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{coord-cartesiennes.png}
+    \caption{Représentation des coordonnées cartésiennes}
+    \label{fig:repcart}
+\end{figure}
+
 \subsection{Coordonnées cylindriques}
 \label{subsec:coordcyl}
-Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\vi+\sin\varphi\vj\\ \vv_\varphi=-\sin\varphi\vi+\cos\varphi\vj\end{cases}\). Soit un point \(M\) de l'espace de coordonnées \((x,y,z)\) et \(P\) le projeté orthogonal de \(M\) sur le plan \(\rond\), \(P(x,y,0)\). Soit \((r,\varphi)\) un système de coordonnées polaires de \(P\), alors \(\vect{OP}=r\vu_\varphi\) et donc \(\vect{OM}=r\vu_\varphi+z\vk\).
+Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\vi+\sin\varphi\vj\\ \vv_\varphi=-\sin\varphi\vi+\cos\varphi\vj\end{cases}\). Soit un point \(M\) de l'espace de coordonnées \((x,y,z)\) et \(P\) le projeté orthogonal de \(M\) sur le plan \(\rond\), \(P(x,y,0)\). Soit \((r,\varphi)\) un système de coordonnées polaires de \(P\), alors \(\vect{OP}=r\vu_\varphi\) et donc \(\vect{OM}=r\vu_\varphi+z\vk\). Une représentation graphique des du repère cylindrique est donné par la figure \ref{fig:repcyl}.
 \begin{defdef}
   Soit \(M\) un point de l'espace \(\E\), on appelle système de coordonnées cylindriques de \(M\) dans \(\Rep\) tout triplet de réels \((r,\varphi,z)\) avec \(r>0\) tel que \(\vect{OM}=r\vu_\varphi+z\vk\). Alors \(\vect{OM}=r\cos\varphi\vi+r\sin\varphi\vj+z\vk\), on peut retrouver les coordonnées cartésiennes. On a \(r=OP\), l'unicité de \(z\) est claire car c'est la conséquence de l'unicité des coordonnées cartésiennes. 
 \begin{itemize}
@@ -43,10 +50,19 @@ Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\v
 \end{itemize}
 \end{defdef}
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{coord-cylindriques.png}
+    \caption{Représentation des coordonnées cylindriques}
+    \label{fig:repcyl}
+\end{figure}
+
+
 \emph{Remarque}~: Soit \(r_0>0\), l'ensemble des points \(M\) de l'espace dont un système de coordonnées cylindriques est \((r_0,\varphi,z)\) lorsque \((\varphi,z)\) varie dans \(\R^2\) est un cylindre de rayon \(r_0\) d'axe \((Oz)\) d'où le nom de coordonnées cylindriques.
 
+
 \subsection{Coordonnées sphériques}
-On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que \(\vect{OM}=r\vu_\varphi+z\vk\), donc si on note \(\rho=OM\) on a \(\rho=\sqrt{r^2+z^2}\). 
+On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que \(\vect{OM}=r\vu_\varphi+z\vk\), donc si on note \(\rho=OM\) on a \(\rho=\sqrt{r^2+z^2}\). Un représentation des coordonnées sphériques est donnée par la figure \ref{fig:repsphere}
 \begin{itemize}
 \item Si le point \(M\) est différent de l'origine alors \(\rho>0\) et \(\frac{r^2}{\rho^2}+\frac{z^2}{\rho^2}=1\); alors il existe \(\theta\in \intervalleff{0}{2\pi}\) tel que \(\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}\) on a \(r\geqslant 0\) et \(z\geqslant 0\) donc on peut choisir \(\theta\in \intervalleff{0}{\pi}\) et on a \(\vect{OM}=\rho\vu_{\varphi,\theta}\) où \(\vu_{\varphi,\theta}=\sin\theta\vu_\varphi+\cos\theta\vk\).
 \item Si le point \(M\) est l'origine alors \(\rho=r=z=0\), on peut prendre n'importe quel \(\theta \in \intervalleff{0}{\pi}\) et on a encore \(\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}\).
@@ -71,6 +87,14 @@ On a \(\rho=OM\) et si \(M\) est différent de l'origine alors \(\theta\) est la
 \end{itemize}
 
 \emph{Remarque}~: Soit \(\rho_0>0\), l'ensemble des points \(M\) de l'espace \(\E\) dont un système de coordonnées sphérique est \((\rho_0,\varphi,\theta)\) avec \(\varphi\in\R\) et \(\theta\in \intervalleff{0}{\pi}\) est la sphère de centre \(O\) et de rayon \(r_0\) (d'où le nom de coordonnées sphériques).
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{coord-spheriques.png}
+    \caption{Représentation des coordonnées sphériques}
+    \label{fig:repsphere}
+\end{figure}
+
 
 \section{Produit scalaire}
 \subsection{Définition géométrique}
@@ -391,7 +415,7 @@ Soit \(\P\) le plan passant par \(A(x_0,y_0,z_0)\) dirigé par les vecteurs non 
   &\Det(\vect{AM},\vu,\vv)=\begin{vmatrix} x-x_0 & a_1 & a_2 \\ y-y_0 & b_1 & b_2 \\ z-z_0 & c_1 & c_2\end{vmatrix}=0.
 \end{align}
 
-\paragraph{Plan déini par trois points non alignés}
+\paragraph{Plan défini par trois points non alignés}
 
 Soit \(\P\) le plan passant par \(A\), \(B\) et \(C\), alors \(\P\) est le plan passant par \(A\) et dirigé par \(\vect{AB}\) et \(\vect{BC}\),
 \begin{equation}
@@ -836,3 +860,66 @@ Soit alors
 On vient de trouver \(X\) quelque soit \(\theta\).
 \end{enumerate}
 Dans tous les cas, l'ensemble \(X\) est trouvé.
+\section{Exercices}
+\begin{exercice}
+    Soient \(\Dr_1 = \begin{cases} y = x+1 \\z = -1 \end{cases}\), \(\Dr_2 = \begin{cases} y = -x+1 \\z = 0 \end{cases}\) et \(\Dr_3 = \begin{cases} y = x-1 \\z = 1 \end{cases}\). On note \(\vu\) le vecteur de coordonnées \((1,2,3)\). Déterminer l'ensemble des droites \(\Dr\) de l'espace rencontrant les trois droites \(\Dr_1, \Dr_2, \Dr_3\) et orthogonales à \(\vu\).
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item Étudier la position relative d'une droite et d'une sphère en fonction du rayon \(R\) de la sphère et de la distance \(d\) du centre de la sphère à cette droite.
+        \item Soit \(ABC\) un triangle non aplati. Déterminer l'ensemble \(\mathcal{E}\) des points \(M\) de l'espace tels que \(\vect{MA}, \vect{MB}\) et  \(\vect{MC}\) soient deux à deux orthogonaux.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    On se place dans l'espace muni d'un repère orthonormal \((O, \vi, \vj, \vk)\).
+    \begin{enumerate}
+        \item Donner une équation cartésienne du plan \(\P\) passant par \(A(1,3,0)\) et orthogonal au vecteur \(\vu(-2,3,1)\).
+        \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant par le point \(B(5,1,-2)\) et contenant les vecteurs \(\vv(4,4,4)\) et \(\vw(1, -1, 0)\).
+        \item Soit \(\Dr\) la droite d'intersection des plans \(\P\) et \(\mathcal{Q}\). Donner un point et un vecteur directeur de \(\Dr\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(ABCD\) un tétraèdre. On suppose que les quatre face on la même aire. Montrer que les arêtes opposées ont la même longueur.
+\end{exercice}
+\begin{exercice}
+    On se place dans l'espace muni d'un repère orthonormal direct \((O, \vi, \vj, \vk)\). Soient \(A(1,2,0), B(-1,0,3), C(0,2,-1)\) trois points.
+    \begin{enumerate}
+        \item Donner une équation cartésienne du plan \(\P\) contenant les points \(A, B, C\).
+        \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant par \(A\) et orthogonal à \((BC)\) ; du plan \(\mathcal{R}\) passant par \(B\) et orthogonal à la droite \((AC)\).
+        \item Déterminer les coordonnées cartésiennes de l'orthocentre du triangle \(ABC\).
+        \item Déterminer l'ensemble des points équidistants de \(A, B, C\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(\mathcal{R} = (O, \vi, \vj, \vk)\) un repère orthonormal direct de l'espace. On définit le point \(\Omega\) de coordonnées \((-1,2,4)\) dans \(\mathcal{R}\) et les vecteurs \(\vect{I} = \vi+\vj, \vect{J} = \vi - \vj, \vect{K} = \vi - \vk\).
+    \begin{enumerate}
+        \item Montrer que \(\mathcal{R}' = (\Omega, \vect{I}, \vect{J}, \vect{K})\) est un repère de l'espace. Est-il direct ou indirect ? Est-il orthogonal, orthonormal ?
+        \item Soit \(A\) le point de coordonnées \((1, 2, 3)\) dans \(\mathcal{R}\). Déterminer ses coordonnées dans \(\mathcal{R}'\).
+        \item Donner une équation du plan passant par \(A\) orthogonal à \(\vn = \vi + \vj\) dans \(\mathcal{R}'\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(\va, \vb\) deux vecteur de l'espace. Résoudre l'équation \(\va \wedge \vect{x} = \vb\) d'inconnue un vecteur \(\vect{x}\) de l'espace.
+\end{exercice}
+\begin{exercice}
+    Calculer le volume du parallélépipède construit sur les vecteurs \(\vu(-1,1,1), \vv(1,2,-1), \vw(2,0,3)\).
+\end{exercice}
+\begin{exercice}
+    Déterminer les coordonnées du projeté orthogonal du point \(A(1,1,4)\) sur le plan \(\P\) d'équation cartésienne \(x-2y+2z = 2\) puis calculer \(d(A,\P)\).
+\end{exercice}
+\begin{exercice}
+    Soient \(\Dr\) et \(\Dr'\) deux droites passant respectivement par \(A(1,2,3)\) et \(A'(0,4,-1)\) et dirigées respectivement par \(\vu(4,2,1)\) et \(\vu'(1,1,0)\).
+    \begin{enumerate}
+        \item Calculer \(d(\Dr,\Dr')\).
+        \item Déterminer une équation cartésienne de la perpendiculaire commune à \(\Dr\) et à \(\Dr'\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    On considère un cube \(ABCDEFGH\) tel que l'arête \(AB\) est égale à \(1\) et tel que les points \(E, F, G, H\) sont les images dans cet ordre des points \(D, A, B, C\) par la translation de vecteur \(\vect{DE}\). On se propose de déterminer la perpendiculaire commune \(\Delta\) des droites \((AC)\) et \((DF)\). On se place dans le repère \((A, \vect{AF}, \vect{AD}, \vect{AB})\).
+    \begin{enumerate}
+        \item Faire un dessin et préciser les coordonnées des sommets \(B, C, D\) et \(F\)
+        \item Soient \(P\) et \(Q\) les points d'intersection respectifs de \(\Delta\) avec \((CA)\), et \((DF)\). On définit \(u\) et \(v\) tels que \(\vect{AP} = u \vect{AC}\) et \(\vect{DQ} = v \vect{DF}\). Démontrer les deux égalités suivantes~: \[u \norme{\vect{AC}}^2 -v \vect{DF}\cdot\vect{AC} = \vect{AD}\cdot\vect{AC}\] et \[u \vect{AC}\cdot\vect{DF} - v\norme{\vect{DF}}^2= \vect{AD}\cdot\vect{DF}\]
+        \item Déterminer les coordonnées de \(P\) et \(Q\).
+        \item Soient \(I\) le point d'intersection des droites \((DP)\) et \((AB)\), \(J\) le point d'intersections des droites \((AQ)\) et \((ED)\). Déterminer les coordonnées de \(I\) et \(J\) et donner une construction simple de \(\Delta\).
+    \end{enumerate}
+\end{exercice}

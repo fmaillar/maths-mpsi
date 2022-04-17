@@ -461,3 +461,10 @@ La conséquence est que ces deux ensembles sont infinis.
 \begin{proof}
   D'après la définition de la densité, il faut montrer que pour tout couple de réels \((x,y)\) avec \(x<y\) il existe un rationnel \(a\) qui soit dans \(\intervalleff{x}{y}\) et un irrationnel \(b\) qui soit aussi dans \(\intervalleff{x}{y}\). Montrons d'abord la densité de \(\Q\). Soit le rationnel \(q=E\left(\frac{1}{y-x}\right)+1\), donc \(0<\frac{1}{q}<y-x\). Soit \(p=E(qx)\), alors \(p\leqslant qx<p+1\) et donc \(\frac{p}{q}\leqslant x <\frac{p+1}{q}\). Donc \(x<\frac{p}{q}+\frac{1}{q}<x+y-x\). Finalement \(x<\frac{p+1}{q}<y\), donc \(\frac{p+1}{q}\) est le rationnel recherché, ce qui prouve que \(\Q\) est dense dans \(\R\). Montrons la densité de \(\R\setminus\Q\). Comme \(\Q\) est dense dans \(\R\), il existe un rationnel \(r\) tel que \(x+\sqrt{2}<r<y+\sqrt{2}\) et \(r-\sqrt{2}\in\R\setminus\Q\) avec \(x<r-\sqrt{2}<y\), on montre que  \(\R\setminus\Q\) est dense dans \(\R\).
 \end{proof}
+
+\section{Exercices}
+\begin{exercice}
+    Soient \(A\) et \(B\) deux parties bornées et non vides de \(\R\). On suppose que leur intersection est non vide. Montrer que l'intersection est bornées et que~:
+    \[ \max(\inf A, \inf B) \leqslant \inf(A \cap B) \leqslant \sup(A \cap B) \leqslant \min(\sup A, \sup B)\]
+\end{exercice}
+

@@ -281,9 +281,13 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
 \begin{prop}
   \begin{gather}
     \forall (n,p)\in\N^2 \quad 0\leqslant p \leqslant n \quad \binom{n}{p}=\binom{n}{n-p};\\
-    \forall (n,p)\in\N\times\N^* \quad \binom{n}{p}=\frac{n}{p}\binom{n-1}{p-1} \quad \binom{n}{p}=\frac{n-p+1}{p}\binom{n}{p-1};\\
-    \forall (n,p)\in{\N^*}^2 \ \binom{n}{p}=\binom{n-1}{p-1}+\binom{n-1}{p}.
+    \forall (n,p)\in\N\times\N^* \quad \binom{n}{p}=\frac{n}{p}\binom{n-1}{p-1} \quad \binom{n}{p}=\frac{n-p+1}{p}\binom{n}{p-1};
   \end{gather}
+  \begin{equation}
+      \label{eq:TrianglePascal}
+    \forall (n,p)\in{\N^*}^2 \ \binom{n}{p}=\binom{n-1}{p-1}+\binom{n-1}{p}.
+  \end{equation}
+  Une représentation graphique est donnée en figure \ref{fig:TrianglePascal}\footnote{Crédit : https://www.logamaths.fr/} pour illustrer cette dernière formule.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
@@ -320,6 +324,11 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
     \end{itemize}
   \end{enumerate}
 \end{proof}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{./Triangle-de-Pascal-01-3.png}
+    \caption{Représentation --- Triangle de Pascale --- de la formule \eqref{eq:TrianglePascal}}
+    \label{fig:TrianglePascal}
 \begin{prop}
   Soient deux entiers naturels \(n\) et \(p\), alors \(\binom{n}{p}\) est un entier naturel.
 \end{prop}
@@ -695,3 +704,80 @@ Soit \(E\) un ensemble fini. On note pour tout entier naturel \(p\), \(\Part_p(E
     \Card(\Part(E))=\sum_{k=0}^n \Card(\Part_k(E))=\sum_{k=0}^n \binom{n}{k}=2^n.
   \end{equation}
 \end{proof}
+\section{Exercices}
+\subsection{Raisonnement par récurrence}
+\begin{exercice}
+    Montrer, par récurrence (sans le binôme de Newton) que pour tout réel \(x \geqslant 0\) et tout entier naturel \(n\), \((1+x)^n \geqslant 1 + nx\).
+\end{exercice}
+\begin{exercice}
+    Soit un naturel \(n\) non nul. Démontrer par récurrence les égalités suivantes (qui seront à connaître)~:
+    \begin{flalign*}
+        \sum_{k=1}^{n} k   & = \frac{n(n+1)}{2} \\
+        \sum_{k=1}^{n} k^2 & = \frac{n(n+1)(2n+1)}{6}\\
+        \sum_{k=1}^{n} k^3 & = \left(\frac{n(n+1)}{2}\right)^2
+    \end{flalign*}
+\end{exercice}
+\begin{exercice}
+    Montrer par récurrence les inégalités suivantes~:
+    \begin{flalign*}
+        \forall n \in \N^{*} \quad 2^{n-1} \leqslant n! \leqslant n^n \\
+        \forall n \in \N^{*} \quad (n+1)! \geqslant \sum_{k=1}^{n} k!
+    \end{flalign*}
+\end{exercice}
+\begin{exercice}
+    Démontrer que pour tout naturel \(n\) et tout réel \(x\) \[\sin^{(n)}(x) = \sin\left(x + n\frac{\pi}{2}\right) \qquad \cos^{(n)}(x) = \cos\left(x + n\frac{\pi}{2}\right)\]
+\end{exercice}
+\begin{exercice}
+    Soient les nombres \(C(n,p)\) définis par~:\[\begin{cases} C(0,0)=1 \\ \forall n \in \N^* C(n,0)=1 \\ \forall p \in \N^* C(0,p) = 0 \\ \forall (n,p) \in (\N^*)^2 C(n,p) = C(n-1,p) = C(n-1,p-1) \end{cases}\]
+    Démontrer que pour tout naturels \(n\) et \(p\), \(C(n,p) = \binom{n}{p}\).
+\end{exercice}
+\begin{exercice}
+    Trouver les applications \(f : \N \longmapsto \N\) strictement croissantes telles que~:
+    \[\begin{cases} f(2) &= 2 \\\forall p, q \in \N, \qquad f(pq) &= f(p)f(q) \end{cases}\]
+\end{exercice}
+\begin{exercice}
+    Soit une application \(f : I \longmapsto \R\) solution de l'équation différentielle \(y' = \cos^2(y)\). Démontrer que \(f\) est indéfiniment dérivable sur \(I\) et que pour tout \(x \in I\) et tout naturel \(n\) non nul~: \[f^{(n)}(x) = (n-1)! \cos^n(f(x)) \sin\left(nf(x) + n\frac{\pi}{2}\right)\]
+\end{exercice}
+\subsection{Sommation, ensembles finis}
+\begin{exercice}
+    Soit un naturel non nul \(n\). On pose \(p = E(n/2)\) et \(q = E((n-1)/2)\), où \(E\) désigne la partie entière. Déterminer une expression simple de chacune des sommes suivantes.
+    \begin{align*}
+        A_n &= \sum_{k=0}^n \binom{n}{k}, & B_n&=\sum_{k=0}^n (-1)^k\binom{n}{k}, & C_n&=\sum_{k=0}^p \binom{n}{2k}, \\
+        D_n &= \sum_{k=0}^q \binom{n}{2k+1}, & E_n&=\sum_{k=0}^p (-1)^k\binom{n}{2k}, & F_n&=\sum_{k=0}^q (-1)^k\binom{n}{2k+1}, \\
+        G_n &= \sum_{k=0}^n k\binom{n}{k}, & H_n&=\sum_{k=0}^n k(k-1)\binom{n}{k}, & I_n&=\sum_{k=0}^n k^2\binom{n}{k}
+    \end{align*}
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item Soient \(p, q, n\) des entiers naturels. Déterminer une expression simple de la somme \[\sum_{k=0}^n \binom{p}{k}\binom{q}{n-k}.\] Indication~: \((1+x)^{p+q} = (1+x)^p (1+x)^q\).
+        \item En déduire une expression simple de \[\sum_{k=0}^n \binom{n}{k}^2\]
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Pour tous naturels \(n\) et \(p\) tels que \(n \leqslant p\), on pose \(S(n,p) = \sum_{k=n}^p \binom{k}{n}\).
+    \begin{enumerate}
+        \item Démontrer que \(S(n,p) = \binom{p+1}{n+1}\)
+        \item Soit \(p \geqslant 1\). En utilisant cette expression, retrouver les expressions bien connues de~:\[\sum_{k=1}^p k ; \sum_{k=1}^p k^2 ; \sum_{k=1}{p} k^3\]
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(A, B, C\) trois parties d'un ensemble \(E\). Exprimer le cardinal de \(A \cup B \cup C\) en fonction des cardinaux de \(A, B, C\) et de leurs intersections.
+\end{exercice}
+\begin{exercice}
+    Soient deux naturels non nuls \(n\geqslant p\). Quel est le nombre d'applications strictement croissantes de \(\intervalleentier{1}{p}\) dans \(\intervalleentier{1}{n}\) ?
+\end{exercice}
+\begin{exercice}
+    Soient \(E\) un ensemble fini de cardinal \(n\) et \(A\) une partie de \(E\) de cardinal \(p\).
+    \begin{enumerate}
+        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant un et un seul élément de \(A\) ?
+        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant au moins un  élément de \(A\) ?
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(E\) un ensemble fini non vide, \(n\) son cardinal, \(A\) une partie quelconque de \(E\) et \(p\) son cardinal.
+    \begin{enumerate}
+        \item Déterminer, en fonction de \(n\) et de \(p\), le cardinal de l'ensemble \(\mathcal{X} = \enstq{B \in \Part(E)}{B \cap A = \emptyset}\)
+        \item Déterminer, en fonction de \(n\) et de \(p\), le cardinal de l'ensemble \(\mathcal{Y} = \enstq{B \in \Part(E)}{A \subset B}\)
+        \item Déterminer, en fonction de \(n\) et de \(p\), le cardinal de l'ensemble \(\mathcal{Z} = \enstq{(B,C) \in \Part(E)^2}{B \cap C = A}\)
+    \end{enumerate}
+\end{exercice}
