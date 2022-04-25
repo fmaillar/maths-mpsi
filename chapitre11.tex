@@ -186,13 +186,13 @@ Si on sait qu'une suite réelle n'est pas bornée, on peut en conclure directeme
 \begin{defdef}
   Soit une suite réelle \(u\), on dit que \(u\) tend vers \(+\infty\) si et seulement si
   \begin{equation}
-    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geqslant n_0 \implies u_n \geqslant A,
+    \forall A \in \R \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n \geqslant A,
   \end{equation}
   et on note \(\lim\limits_{n\to\infty}u_n=+\infty\). 
 
   On dit aussi que \(u\) tend vers \(-\infty\) si et seulement si
   \begin{equation}
-    \forall A \in \R \exists n_0 \in \N \forall n \in \N \quad n \geqslant n_0 \implies u_n \leqslant A
+    \forall A \in \R \ \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n \leqslant A
   \end{equation}
   et on note \(\lim\limits_{n\to\infty}u_n=-\infty\).
 \end{defdef}
@@ -231,9 +231,9 @@ La suite réelle \(\abs{u}\) peut tendre vers \(+\infty\) sans que \(u\) tende v
 \begin{proof}
   On montre par récurrence sur \(n \in \N\) la propriété \(\P(n)\) \(\varphi(n) \geqslant n\).
   \begin{itemize}
-  \item[I] \(n=0\), puisque \(\varphi(0) \in \N\) alors \(\varphi(0) \geqslant 0\).
-  \item[H] soit \(n \in \N\), supposons \(\P(n)\) alors puisque \(\varphi\) est strictement croissante \(\varphi(n+1) > \varphi(n)\) et par hypothèse de récurrence \(\varphi(n+1) > n\) et comme \(\varphi(n+1) \in \N\) on a \(\varphi(n+1) \geqslant n+1\). Alors \(\P(n+1)\) est vraie.
-  \item[C] par théorème de récurrence, la propriété \(\P\) est vraie pour tout naturel \(n\).
+      \item[\emph{Initialisation}] \(n=0\), puisque \(\varphi(0) \in \N\) alors \(\varphi(0) \geqslant 0\).
+      \item[\emph{Hérédité}] soit \(n \in \N\), supposons \(\P(n)\) alors puisque \(\varphi\) est strictement croissante \(\varphi(n+1) > \varphi(n)\) et par hypothèse de récurrence \(\varphi(n+1) > n\) et comme \(\varphi(n+1) \in \N\) on a \(\varphi(n+1) \geqslant n+1\). Alors \(\P(n+1)\) est vraie.
+      \item[\emph{Conclusion}] par théorème de récurrence, la propriété \(\P\) est vraie pour tout naturel \(n\).
   \end{itemize}
 \end{proof}
 \begin{prop}
@@ -483,7 +483,7 @@ Dans ce paragraphe bien faire la différence entre~:
   \end{itemize}
 \end{theo}
 \begin{proof}
-  Supposons, dans un premier temps, que \(u\) soit majorée. Il existe alors un réel \(M\) tel que pour tout naturel \(n\) \(u_n \leqslant M\). Soit \(A=\{u_n, n \in \R\}\) A est une partie non vide et majorée de \(\R\), donc elle admet une borne supérieure qu'on note \(l\). Par caractérisation de la borne supérieure
+  Supposons, dans un premier temps, que \(u\) soit majorée. Il existe alors un réel \(M\) tel que pour tout naturel \(n\) \(u_n \leqslant M\). Soit \(A=\{u_n, n \in \N\}\) A est une partie non vide et majorée de \(\R\), donc elle admet une borne supérieure qu'on note \(l\). Par caractérisation de la borne supérieure
   \begin{align}
       \forall \epsilon > 0 & \ \exists a \in A \quad l-\epsilon < a \leqslant l \\
       \forall \epsilon > 0 & \ \exists n_0 \in \N \quad l-\epsilon < u_{n_0} \leqslant l \\
@@ -603,7 +603,11 @@ Alors il existe un réel \(l\) tel que \(\bigcap_{n \in \N} I_n = \{l\}\).
   \end{equation}
 La suite réelle \(a\) est croissante et la suite réelle \(b\) est décroissante. Les suites réelles \(a\) et \(b\) sont donc adjacentes. Elle convergent donc toutes les deux vers une limite \(l\) et pour tout naturel \(n\), \(a_n \leqslant l \leqslant b_n\). On a donc montré que les suites réelles sont convergentes de même limite \(l\). Prouvons maintenant que \(\bigcap_{n \in \N} I_n = \{l\}\)
 
-D'une part, pour tout naturel \(n\) on a \(l \in I_n\) alors \(l \in \bigcap_{n \in \N} I_n\). D'autre part soit \(x \in \bigcap_{n \in \N} I_n\) alors pour tout naturel \(n\) \(x \in I_n\) donc \(a_n \leqslant x \leqslant b_n\). Puisque \(a\) et \(b\) sont convergentes de limite \(l\), en passant à la limite dans l'inégalité il vient que \(x=l\). Donc \(\bigcap_{n \in \N} I_n \subset \{l\}\). Par conséquent, par double inclusion, \(\bigcap_{n \in \N} I_n = \{l\}\).
+D'une part, pour tout naturel \(n\) on a \(l \in I_n\) alors \(l \in \bigcap_{n \in \N} I_n\).
+
+D'autre part soit \(x \in \bigcap_{n \in \N} I_n\) alors pour tout naturel \(n\), \(x \in I_n\) donc \(a_n \leqslant x \leqslant b_n\). Puisque \(a\) et \(b\) sont convergentes de limite \(l\), en passant à la limite dans l'inégalité il vient que \(x=l\). Donc \(\bigcap_{n \in \N} I_n \subset \{l\}\).
+
+Par conséquent, par double inclusion, \(\bigcap_{n \in \N} I_n = \{l\}\).
 \end{proof}
 
 \subsection{Théorème de Bolzano-Weiertrass}
@@ -621,35 +625,31 @@ D'une part, pour tout naturel \(n\) on a \(l \in I_n\) alors \(l \in \bigcap_{n 
 Construisons par récurrence une suite réelle de segments emboîtés \((\intervalleff{a_n}{b_n})_{n \in \N}\) telle que
 \begin{itemize}
 \item \(\lim b-a =0\)
-\item pour tout naturel \(n\) l'ensemble \(\enstq{k \in \N}{u_k \in \intervalleff{a_n}{b_n}}\) soit infini.
+\item pour tout naturel \(n\) l'ensemble \(I_n = \enstq{k \in \N}{u_k \in \intervalleff{a_n}{b_n}}\) soit infini.
 \end{itemize}
 
-Attention, cela signifie que \(u_k \in \intervalleff{a_n}{b_n}\) pour une infinité d'indices \(k\), mais surtout pas que \(\intervalleff{a_n}{b_n}\) contient une infinité de termes de la suites réelles \(u\). Un contre exemple est une suite réelle constante.
+\emph{Attention}, cela signifie que \(u_k \in \intervalleff{a_n}{b_n}\) pour une infinité d'indices \(k\), mais surtout pas que \(\intervalleff{a_n}{b_n}\) contient une infinité de termes de la suites réelles \(u\). Un contre exemple est une suite réelle constante.
 
-\emph{Initialisation}~: Soit \(a_0=m\) et \(b_0=M\) alors pour tout naturel \(k\) \(a_0 \leqslant u_k \leqslant b_0\). Du coup \(\enstq{k \in \N}{a_0 \leqslant u_k \leqslant b_0}=\N\) est infini.
+Construction par récurrence~:
+\emph{Initialisation}~: Soit \(a_0=m\) et \(b_0=M\) alors pour tout naturel \(k\) \(a_0 \leqslant u_k \leqslant b_0\), alors \(I_0 = \enstq{k \in \N}{a_0 \leqslant u_k \leqslant b_0}=\N\) est infini.
 
 \emph{Hérédité}~: Supposons avoir construit les segments vérifiant les hypothèses. C'est-à-dire que
 \begin{itemize}
 \item \(\lim b-a =0\)
-\item pour tout naturel \(n\) l'ensemble \(\enstq{k \in \N}{u_k \in \intervalleff{a_n}{b_n}}\) soit infini.
+\item pour tout naturel \(n\) l'ensemble \(I_n = \enstq{k \in \N}{u_k \in \intervalleff{a_n}{b_n}}\) soit infini.
 \end{itemize}
 
-Soit deux ensembles \(\enstq{k \in \N}{u_k \in \intervalleff{a_n}{\frac{a_n+b_n}{2}}}\) et \(\enstq{k \in \N}{u_k \in \intervalleff{\frac{a_n+b_n}{2}}{b_n}}\). Alors l'un des deux au moins est forcément infini. Puisque s'ils étaient finis, on pourrait écrire que
-
-\(\enstq{k \in \N}{u_k \in \intervalleff{a_n}{b_n}}= \enstq{k \in \N}{u_k \in \intervalleff{a_n}{\frac{a_n+b_n}{2}}} \cup \enstq{k \in \N}{u_k \in \intervalleff{\frac{a_n+b_n}{2}}{b_n}}\)
-Ce serait donc l'union de deux ensembles finis, donc il serait fini (Contradiction). On choisit alors comme segment suivant \(\intervalleff{a_{n+1}}{b_{n+1}}\) l'un des deux segments \(\intervalleff{a_n}{\frac{a_n+b_n}{2}}\) ou \(\intervalleff{\frac{a_n+b_n}{2}}{b_n}\) qui vérifie
-\begin{equation}
-  \enstq{k \in \N}{u_k \in \intervalleff{a_{n+1}}{b_{n+1}}} \text{~est infini}.
-\end{equation}
+Soit deux ensembles \(J_n = \enstq{k \in \N}{u_k \in \intervalleff{a_n}{\frac{a_n+b_n}{2}}}\) et \(K_n = \enstq{k \in \N}{u_k \in \intervalleff{\frac{a_n+b_n}{2}}{b_n}}\). Alors comme \(I_n = J_n \cup K_n\) l'un des deux au moins est forcément infini. Puisque s'ils étaient finis, \(I_n\) serait donc l'union de deux ensembles finis, donc \(I_n\) serait fini (Contradiction avec l'hypothèse de récurrence). On choisit alors comme segment suivant \(I_{n+1}\) l'un des deux segments \(J_n\) ou \(K_n\) qui est infini.
 
 \emph{Conclusion}~: On dispose donc d'une suite de segments réels \((\intervalleff{a_n}{b_n})_{n \in \N}\) telle que pour tout naturel \(n\)
 \begin{itemize}
-\item \(\intervalleff{a_{n+1}}{b_{n+1}} \subset \intervalleff{a_{n}}{b_{n}}\);
-\item \(\enstq{k \in \N}{u_k \in \intervalleff{a_{n+1}}{b_{n+1}}}\) est infini;
-\item \(b_{n+1}-a_{n+1}=\frac{1}{2}(b_n-a_n)\).
+    \item la suite de segments \(I\) est décroissante par inclusion \(I_{n+1} \subset I_n\), \(\intervalleff{a_{n+1}}{b_{n+1}} \subset \intervalleff{a_{n}}{b_{n}}\);
+    \item \(I_{n+1} = \enstq{k \in \N}{u_k \in \intervalleff{a_{n+1}}{b_{n+1}}}\) est infini;
+    \item \(b_{n+1}-a_{n+1}=\frac{1}{2}(b_n-a_n)\).
 \end{itemize}
 
 La suite réelle \(b-a\) est géométrique de raison \(\frac{1}{2}\) de premier terme \(b_0-a_0=M-m\). Alors pour tout naturel \(n\), \(b_n-a_n=(M-m) \left(\frac{1}{2}\right)^n\) d'où \(\lim b-a=0\). Par théorème des segments emboîtés, il existe un réel \(l\) tel que \(\bigcap_{n \in \N} \intervalleff{a_{n}}{b_{n}}=\{l\}\) et \(l=\lim a = \lim b\).
+
 
 \emph{Deuxième mouvement}~: On construit une sous-suite réelle de \(u\) qui converge vers \(l\). On définit par récurrence une application \(\varphi : \N \longmapsto \N\) strictement croissante telle que
 \begin{equation}
@@ -686,17 +686,25 @@ Le procédé utilisé ici s'appelle la dichotomie. Il permet de prouver l'existe
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si \(u=\grandO{v}\) il existe une suite réelle bornée \(w\) telle qu'à partir d'un certain rang \(n_0\) pour tout naturel \(n\) on a \(u_n=v_n w_n\) alors il existe un réel \(M\) positif tel que pour tout entier \(n\) \(\abs{w_n} \leqslant M\). Alors pour tout entier \(n > n_0\), \(\abs{u_n}\leqslant M \abs{v_n}\).
-
-Si \(n \in \intervalleentier{0}{n_0-1}\) on pose \(w_n=0\). Si \(n \geqslant n_0\) et si \(v_n \neq 0\) on pose \(w_n = \frac{u_n}{v_n}\) ainsi \(u_n = v_n w_n\); si \(v_n = 0\) alors \(\abs{u_n} \leqslant M \abs{v_n}\) donc \(u_n=0\) on pose \(w_n=0\) ainsi \(u_n=v_n w_n\).
-
-On a construit une suite réelle \(w\) telle que pour tout naturel \(n\) si \(n \geqslant n_0\) alors \(u_n = v_n w_n\). De plus \(w\) est bornée puisque pour tout naturel \(n\) si \(n \leqslant n_0 -1\) alors \(w_n=0\) sinon si \(n \geqslant n_0\) et \(v_n=0\) alors \(w_n=0\) mais si \(v_n \neq 0\) alors \(\abs{w_n}=\abs{\frac{u_n}{v_n}} \leqslant M\). La suite réelle \(w\) est donc bornée donc \(u=\grandO{v}\).
+  Si \(u=\grandO{v}\) il existe une suite réelle bornée \(w\) telle qu'à partir d'un certain rang \(n_0\) pour tout naturel \(n\geqslant n_0\) on a \(u_n=v_n w_n\). Alors il existe un réel \(M\) positif tel que pour tout entier \(n\) \(\abs{w_n} \leqslant M\). Alors pour tout entier \(n \geqslant n_0\), \(\abs{u_n}\leqslant M \abs{v_n}\). Construisons la suite \(w\)~:
+  \begin{itemize}
+      \item Si \(n < n_0\) on pose \(w_n=0\). 
+      \item Si \(n \geqslant n_0\) et si \(v_n \neq 0\) on pose \(w_n = \frac{u_n}{v_n}\) ainsi \(u_n = v_n w_n\).
+      \item Si \(n \geqslant n_0\) et si \(v_n = 0\) alors \(\abs{u_n} \leqslant M \abs{v_n}\) équivaut à \(u_n=0\), donc on pose \(w_n=0\) ainsi \(u_n=v_n w_n\).
+  \end{itemize}
+On a construit une suite réelle \(w\) telle que pour tout \(n \in \N\) si \(n \geqslant n_0\) alors \(u_n = v_n w_n\). De plus \(w\) est bornée puisque pour tout naturel \(n\)~:
+\begin{itemize}
+    \item si \(n < n_0\) alors \(w_n=0\) 
+    \item si \(n \geqslant n_0\) et \(v_n=0\) alors \(w_n=0\) 
+    \item si \(n \geqslant n_0\) et \(v_n \neq 0\) alors \(\abs{w_n}=\abs{\frac{u_n}{v_n}} \leqslant M\).
+\end{itemize}
+Dans tous les cas, la suite réelle \(w\) est bornée, donc \(u=\grandO{v}\).
 \end{proof}
 \begin{prop}
   Soient \(u\) et \(v\) deux suites réelles. On suppose que \(v\) ne s'annule pas, alors \(u\) est dominée par \(v\) si et seulement si \(\frac{u}{v}\) est bornée.
 \end{prop}
 \begin{proof}
-  La suite réelle \(v\) ne s'annule pas donc \(u\) est dominée par \(v\) si et seulement s'il existe un réel positif \(M\) et un entier \(n_0\) tel que pour tout entier \(n\) si \(n \geqslant n_0\) alors \(\abs{\frac{u_n}{v_n}} \leqslant M\). Ce qui est équivalent à la suite réelle \(\frac{u}{v}\) est bornée à partir d'un certain rang ce qui équivaut à  ce que la suite réelle \(\frac{u}{v}\) est bornée.
+    La suite réelle \(v\) ne s'annule pas donc \(u\) est dominée par \(v\) si et seulement s'il existe un réel positif \(M\) et un entier \(n_0\) tel que pour tout entier \(n\) si \(n \geqslant n_0\) alors \(\abs{u_n} \leqslant M \abs{vn}\), et comme \(v\) ne s'annule pas, c'est équivalent à \(\abs{\frac{u_n}{v_n}} \leqslant M\). Ce qui veut dire que la suite réelle \(\frac{u}{v}\) est bornée à partir d'un certain rang \(n_0\) ce qui équivaut à dire que la suite réelle \(\frac{u}{v}\) est bornée pour tous les rangs.
 \end{proof}
 
 En particulier \(u=\grandO{1} \iff u\) est bornée.
@@ -788,7 +796,7 @@ En particulier \(u=\petito{1} \iff \lim u =0\).
   Soient \(u\) et \(v\) deux suites réelles, si \(u=\petito{v}\) alors \(u=\grandO{v}\).
 \end{prop}
 \begin{proof}
-  cela découle des deux définitions, puisqu'une suite de limite nulle est a fortiori bornée.
+  Cela découle des deux définitions, puisqu'une suite de limite nulle est a fortiori bornée.
 \end{proof}
 \begin{prop}
   Soient quatre suites réelles \(u_1, u_2, v_1\) et \(v_2\). Alors
@@ -805,7 +813,7 @@ En particulier \(u=\petito{1} \iff \lim u =0\).
 \begin{proof}
   La preuve est presque identique à la preuve pour la relation de domination.
   \begin{itemize}
-  \item idem. La somme de deux suites de limites nulle est une somme de limite nulle.
+  \item idem. La somme de deux suites de limites nulle est une suite de limite nulle.
   \item Il existe une suite \(w_1\) de limite nulle et un naturel \(n_1\) tel que si \(n \geqslant n_1\) alors \(u_{1,n}=v_{1,n} w_{1,n}\). Il existe une suite \(w_2\) bornée et un naturel \(n_2\) tel que si \(n \geqslant n_2\) alors \(u_{2,n}=v_{2,n} w_{2,n}\). Pour tout naturel \(n \geqslant \max(n_1,n_2)\) on a \(u_{1,n}u_{2,n} = (w_{1,n}w_{2,n}) v_{1,n}v_{2,n}\) Or \(w_{1,n}w_{2,n}\) est une suite de limite nulle (puisque c'est le produit d'une suite bornée par une suite de limite nulle), donc \(u_1u_2=\petito{v_1 v_2}\).
   \item idem pour les autres points.
   \end{itemize}
@@ -824,7 +832,7 @@ En particulier \(u=\petito{1} \iff \lim u =0\).
   \end{itemize}
 \end{proof}
 
-\danger Les notations \(u=\grandO{0}\) et \(u=\petito{0}\) signifient toutes les deux que \(u\) est nulle à partir d'un certain rang. Ce qui ne se produit que très rarement. Il ne sera pas autorisé d'écrire cette équivalence.
+\emph{Attention}, les notations \(u=\grandO{0}\) et \(u=\petito{0}\) signifient toutes les deux que \(u\) est nulle à partir d'un certain rang. Ce qui ne se produit que très rarement. Il ne sera pas autorisé d'écrire cette équivalence.
 
 \subsection{Relation d'équivalence}
 
@@ -832,7 +840,7 @@ En particulier \(u=\petito{1} \iff \lim u =0\).
   Soient \(u\) et \(v\) deux suites réelles. On dit que \(u\) est équivalente à \(v\) et on note \(u \sim v\) en l'infini s'il existe une suite \(w\) qui tend vers \(1\) et un naturel \(n_0\) tel que pour tout naturel \(n\), si \(n \geqslant n_0\) alors \(u_n =w_n v_n\).
 \end{defdef}
 
-Si \(u\) est équivalente à \(v\), alors \(v\) est équivalente à \(u\). En effet \(w\) tend vers \(1\), alors il existe un naturel \(n_1\) tel que pour tout naturel \(n\), si \(n \geqslant n_1\) \(w_n >0\). Donc pour tout naturel \(n \geqslant \max(n_0,n_1)\), \(v_n = \frac{1}{w_n} u_n\) et la suite \(\frac{1}{w}\) tend vers 1. On dira que \(u\) et \(v\) sont équivalentes.
+Il s'agit d'une relation reflexive. Si \(u\) est équivalente à \(v\), alors \(v\) est équivalente à \(u\). En effet \(w\) tend vers \(1\), alors il existe un naturel \(n_1\) tel que pour tout naturel \(n\), \(n \geqslant n_1\) implique \(w_n >0\). Donc pour tout naturel \(n \geqslant \max(n_0,n_1)\), \(v_n = \frac{1}{w_n} u_n\) et la suite \(\frac{1}{w}\) tend vers 1. On dira que \(u\) et \(v\) sont équivalentes.
 
 \begin{prop}
   Soient \(u\) et \(v\) deux suite réelles. Alors
@@ -864,12 +872,12 @@ Si \(u\) est équivalente à \(v\), alors \(v\) est équivalente à \(u\). En ef
 \end{proof}
 En particulier pour tout réel \(l\) non nul, \(u \sim l\) signifie que \(\lim u =l\). Cependant \(u \sim 0\) signifie que \(u\) est nulle à partir d'un certain rang, ce qui n'arrive que très rarement. En bref, on n'écrit jamais \(\sim 0\).
 \begin{prop}
-  Soient quatre suites réelles \(u_1, u_2, v_1 v_2\).
+  Soient quatre suites réelles \(u_1, u_2, v_1, v_2\).
   \begin{enumerate}
-  \item si \(u_1 \sim u_2\) et \(u_2 \sim v_1\) alors \(u_1 \sim v_1\);  
-  \item si \(u_1 \sim u_2\) et \(v_1 \sim v_2\) alors \(u_1 v_1 \sim u_2 v_2\);
-  \item si \(u_1 \sim u_2\) et \(v_1 \sim v_2\) et si \(v_1\) et \(v_2\) ne s'annulent pas (au moins à partir d'un certain rang) alors \(\frac{u_1}{v_1} \sim \frac{u_2}{v_2}\);
-  \item si \(u_1 \sim u_2\) et si elles sont strictement positives (au moins à partir d'un certain rang) alors pour tout réel \(\alpha\) \(u_1^\alpha \sim u_2^\alpha\).
+  \item La relation d'équivalence est transitive~: si \(u_1 \sim u_2\) et \(u_2 \sim v_1\) alors \(u_1 \sim v_1\);  
+  \item La relation d'équivalence conserve le produit~: si \(u_1 \sim u_2\) et \(v_1 \sim v_2\) alors \(u_1 v_1 \sim u_2 v_2\);
+  \item La relation d'équivalence conserve le quotient~: si \(u_1 \sim u_2\) et \(v_1 \sim v_2\) et si \(v_1\) et \(v_2\) ne s'annulent pas (au moins à partir d'un certain rang) alors \(\frac{u_1}{v_1} \sim \frac{u_2}{v_2}\);
+  \item La relation d'équivalence conserve les puissance~: si \(u_1 \sim u_2\) et si elles sont strictement positives (au moins à partir d'un certain rang) alors pour tout réel \(\alpha\) \(u_1^\alpha \sim u_2^\alpha\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -927,22 +935,23 @@ La relation d'équivalence est symétrique et transitive. Pour toute suite réel
 \end{defdef}
 \begin{prop}
   Soit une suite géométrique \(u\) de raison \(r\). Alors pour tout naturel \(n\)
-  \begin{equation}
-    u_n = u_0 r^n \quad S_n=\sum_{k=0}^n u_k = \begin{cases} (n+1) u_0 & r=1 \\ u_0 \frac{1-r^{n+1}}{1-r} & r \neq 1 \end{cases}.
-  \end{equation}
+  \begin{align}
+      u_n &= u_0 r^n \\ 
+      S_n &=\sum_{k=0}^n u_k = \begin{cases} (n+1) u_0 & r=1 \\ u_0 \frac{1-r^{n+1}}{1-r} & r \neq 1 \end{cases}.
+  \end{align}
 \end{prop}
-\begin{prop}{Convergence d'une suite géométrique}
+\begin{prop}[Convergence d'une suite géométrique]
   Soit une suite réelle \(u\) géométrique de raison \(r\).
   \begin{enumerate}
   \item si \(\abs{r} < 1\) alors \(u\) est de limite nulle;
   \item si \(r=1\), alors \(u\) est constante égale à \(u_0\);
-  \item si \(r=-1\) et \(u_0 \neq 0\) \(u\) est divergente de deuxième espèce;
-  \item si \(\abs{r}>1\) et \(u_0 \neq 0\) alors \(\abs{u}\) est divergente de première espèce.
+  \item si \(r=-1\) et \(u_0 \neq 0\) alors \(u\) est divergente de deuxième espèce (limite indéterminée) et \(\abs{u}\) est constante égale à \(u_0\);
+  \item si \(\abs{r}>1\) et \(u_0 \neq 0\) alors \(\abs{u}\) est divergente de première espèce \(\lim \abs{u} = +\infty\).
   \end{enumerate}
 \end{prop}
 
 Pour le quatrième cas, la suite \(u\) n'admet pas forcément de limite.
-\begin{prop}{Convergence d'une série géométrique}
+\begin{prop}[Convergence d'une série géométrique]
   Soit une suite \(u\) géométrique de raison \(r\) et \(S\) la suite définie comme étant la somme partielle de \(u\). Alors
   \begin{enumerate}
   \item si \(\abs{r} < 1\) la série converge et \(\lim S = \frac{u_0}{1-r}\);
@@ -951,12 +960,12 @@ Pour le quatrième cas, la suite \(u\) n'admet pas forcément de limite.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item \(S\) converge puisque \(\lim\limits_{n \to \infty} r^{n+1}=0\);
+  \item \((S_n)\) converge puisque \(\lim\limits_{n \to \infty} r^{n+1}=0\);
   \item 
     \begin{itemize} 
-    \item si \(\abs{r}>1\) alors \(\lim_{n \to \infty} \abs{r}^{n+1}=+\infty\) donc \(S\) diverge;
-    \item si \(r=1\) alors \(\forall n \in \N \ S_n=(n+1)u_0\) donc \(S\) diverge;
-    \item si \(r=-1\) \((-1)^n\) diverge alors \(S\) diverge.
+    \item si \(\abs{r}>1\) alors \(\lim_{n \to \infty} \abs{r}^{n+1}=+\infty\) donc \((S_n)\) diverge;
+    \item si \(r=1\) alors \(\forall n \in \N \ S_n=(n+1)u_0\) donc \((S_n)\) diverge;
+    \item si \(r=-1\), comme \((-1)^{n+1}\) diverge, alors \((S_n)\) diverge.
     \end{itemize}
   \end{enumerate}
 \end{proof}
@@ -968,11 +977,12 @@ Pour le quatrième cas, la suite \(u\) n'admet pas forcément de limite.
 \end{defdef}
 \begin{prop}
   Soit une suite \(u\) arithmétique de raison \(r\). Alors pour tout entier naturel \(n\)
-  \begin{equation}
-    u_n=u_0+nr \quad S_n=\sum_{k=0}^n u_k = (n+1)u_0 + \frac{n(n+1)}{2}r.
-  \end{equation}
+  \begin{align}
+      u_n &= u_0+nr \\
+      S_n &=\sum_{k=0}^n u_k = (n+1)u_0 + \frac{n(n+1)}{2}r.
+  \end{align}
 \end{prop}
-\begin{prop}{Convergence d'une suite arithmétique}
+\begin{prop}[Convergence d'une suite arithmétique]
   Soit une suite \(u\) arithmétique de raison \(r\). Alors
   \begin{enumerate}
   \item si \(r=0\) alors \(u\) est constante égale à \(u_0\);
@@ -980,6 +990,8 @@ Pour le quatrième cas, la suite \(u\) n'admet pas forcément de limite.
   \item si \(r<0\) alors \(\lim u =-\infty\).
   \end{enumerate}
 \end{prop}
+
+Les séries arithmétiques ne convergent pas.
 
 \subsubsection{Suites arithmético-géométriques}
 
@@ -1008,12 +1020,10 @@ Si \(a=1\), alors \(u\) est arithmétique de raison \(b\). Si \(b=0\) alors \(u\
     \forall n \in \N \quad v_n = u_n -\alpha.
   \end{equation}
 Alors
-\begin{align}
-  \forall n \in \N \quad v_{n+1}&=u_{n+1}-\alpha \\
-  &= a u_n +b - a\alpha -b \\
-  &= a(u_n-\alpha)=a v_n.
-\end{align}
-Donc \(v\) est géométrique de raison \(a\), ainsi pour tout naturel \(n\) on a \(u_n=\alpha + (u_0-\alpha)a^n\).
+\begin{equation}
+  \forall n \in \N \quad v_{n+1}=u_{n+1}-\alpha = a u_n +b - a\alpha -b = a(u_n-\alpha)=a v_n.
+\end{equation}
+Donc \(v\) est géométrique de raison \(a\), ainsi pour tout naturel \(n\), on a \(u_n=\alpha + (u_0-\alpha)a^n\).
 \end{proof}
 
 \subsubsection{Suites récurrentes}
@@ -1027,7 +1037,7 @@ Elles sont définies par une relation de récurrence de la forme \(u_{n+1}=f(u_n
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall n \geqslant 1 \ n^\beta \neq 0 \quad \frac{n^\alpha}{n^\beta}=\frac{1}{n^{\beta-\alpha}} \rightarrow 0
+      \forall n \geqslant 1, \ n^\beta \neq 0, \quad \frac{n^\alpha}{n^\beta}=\frac{1}{n^{\beta-\alpha}} \underset{n\to \infty}{\longrightarrow} 0
   \end{equation}
 \end{proof}
 
@@ -1036,13 +1046,13 @@ Elles sont définies par une relation de récurrence de la forme \(u_{n+1}=f(u_n
 \end{prop}
 \begin{proof}
   \begin{equation}
-    \forall n \geqslant 1 \ (n^\alpha \neq 0) \quad \frac{\ln^\beta n}{n^\alpha} \rightarrow 0.
+    \forall n \geqslant 1, \ n^\alpha \neq 0, \quad \frac{\ln^\beta n}{n^\alpha} \underset{n\to \infty}{\longrightarrow} 0.
   \end{equation}
 En effet
 \begin{equation}
   \begin{cases}
-    \beta \neq 0 & \frac{\ln^\beta n}{n^\alpha}=\frac{1}{\ln^{-\beta} n n^\alpha} \rightarrow 0 \\
-    \beta > 0 & \frac{\ln^\beta n}{n^\alpha} = \left(\frac{\ln n}{n^{\frac{\alpha}{\beta}}}\right)^\beta = \left(\frac{\frac{\beta}{\alpha}\ln n^{\alpha/\beta}}{n^{\frac{\alpha}{\beta}}}\right)^\beta \rightarrow 0
+    \beta \neq 0 & \frac{\ln^\beta n}{n^\alpha}=\frac{1}{\ln^{-\beta} n n^\alpha} \underset{n\to \infty}{\longrightarrow} 0 \\
+    \beta > 0 & \frac{\ln^\beta n}{n^\alpha} = \left(\frac{\ln n}{n^{\frac{\alpha}{\beta}}}\right)^\beta = \left(\frac{\frac{\beta}{\alpha}\ln n^{\alpha/\beta}}{n^{\frac{\alpha}{\beta}}}\right)^\beta \underset{n\to \infty}{\longrightarrow} 0
   \end{cases}.
 \end{equation}
 \end{proof}
@@ -1072,7 +1082,12 @@ En effet
 
 \subsection{Exemples d'équivalents}
 
-Soit une suite réelle \(u\) telle que \(\lim u \neq 0\). On suppose que \(u\) n'est pas stationnaire à zéro. Alors \(\ln(1+u_n) \sim_\infty u_n\). En effet, puisque \(\frac{\ln(1+u_n)}{u_n}= \frac{\ln(1+u_n) - \ln(1+0)}{u_n-0} \to \frac{1}{1+0} =1\) par taux d'accroissement. On sait aussi que \(\lim\limits_{x \to 0} \frac{\e^{x}-1}{x}=1\) donc \(\e^{u_n}-1 \sim_\infty u_n\). Soit \(\fonction{f}{\intervalleoo{-1}{1}}{\R}{x}{(1+x)^\alpha}\) \(f\) est dérivable et pour tout réel \(x\) de \(\intervalleoo{-1}{1}\), \(f'(x)=\alpha(1+x)^{\alpha -1}\). On a \(f'(0)=\alpha = \lim\limits_{x \to 0}\frac{(1+x)^\alpha-1}{x}\) si \(\alpha \neq 0\) \((1+u_n)^\alpha \sim \alpha u_n\).
+Soit une suite réelle \(u\) telle que \(\lim u = 0\). On suppose que \(u\) n'est pas stationnaire à zéro. Alors~:
+\begin{itemize}
+    \item \(\ln(1+u_n) \sim_\infty u_n\). En effet, puisque \(\frac{\ln(1+u_n)}{u_n}= \frac{\ln(1+u_n) - \ln(1+0)}{u_n-0} \to \frac{1}{1+0} =1\) par taux d'accroissement. 
+    \item \(\e^{u_n}-1 \sim_\infty u_n\), puisqu'on sait aussi que \(\lim\limits_{x \to 0} \frac{\e^{x}-1}{x}=1\).
+    \item Soit \(\alpha \neq 0\), alors \((1+u_n)^\alpha \sim \alpha u_n\). Si on pose \(\fonction{f}{\intervalleoo{-1}{1}}{\R}{x}{(1+x)^\alpha}\), alors \(f\) est dérivable et pour tout réel \(x\) de \(\intervalleoo{-1}{1}\), \(f'(x)=\alpha(1+x)^{\alpha -1}\). Et on a \(f'(0)=\alpha = \lim\limits_{x \to 0}\frac{(1+x)^\alpha-1}{x}\).
+\end{itemize}
 
 \section{Brève extension aux suites complexes}
 
@@ -1123,12 +1138,16 @@ Par théorème des gendarmes comme les deux suites tendent vers zéro, alors \(\
   Soit une suite complexe \(u\), elle converge si et seulement si \(\Re(u)\) et \(\Im(u)\) convergents. Auquel cas \(\lim u = \lim \Re(u) + i \lim \Im(u)\).
 \end{prop}
 \begin{proof}
-  Si \(u\) converge vers \(\lambda=\alpha+ i \beta\) on sait que pour tout naturel \(n\), \(\abs{u_n-\lambda}=\abs{\Re(u_n)-\alpha + i(\Im(u_n)-\beta)}\). Alors
+  Si \(u\) converge vers \(\lambda=\alpha+ i \beta\) on sait que pour tout naturel \(n\), 
+  \begin{equation}
+  \abs{u_n-\lambda}=\abs{\Re(u_n)-\alpha + i(\Im(u_n)-\beta)}. 
+  \end{equation}
+  Alors
   \begin{align}
     0 \leqslant \abs{\Re(u_n) -\alpha} \leqslant \abs{u_n-\lambda}, \\ 
     0 \leqslant \abs{\Im(u_n) -\beta} \leqslant \abs{u_n-\lambda}.
   \end{align}
-  Par théorème des gendarmes, on en déduit que les deux suites réelles \(\Re u\) et \(\Im u\) tendent respectivement vers \(\alpha\) et \(\beta\).
+  Par théorème des gendarmes, on en déduit que les deux suites réelles \(\Re(u)\) et \(\Im(u)\) tendent respectivement vers \(\alpha\) et \(\beta\).
 
   Supposons désormais que deux suites réelles \(\Re u\) et \(\Im u\) tendent respectivement vers deux réels \(\alpha\) et \(\beta\). Posons \(\lambda = \alpha + i \beta\), alors pour tout naturel \(n\) on a par inégalité triangulaire
 \begin{equation}
@@ -1205,3 +1224,171 @@ La suite réelle \(\frac{1}{\abs{u_n}^2}\) tend vers \(\frac{1}{\abs{\lambda}^2}
 \end{proof}
 
 Ne pas étendre aux suites complexes les propositions, vues sur les suites réelles, relatives à la notion d'ordre. Puisqu'il n'y a pas d'ordre sur \(\C\).
+
+\section{Exercice}
+\subsection{Convergence d'une suite numérique}
+\begin{exercice}
+    \begin{enumerate}
+        \item Donner des exemples de suites qui divergent telles que la somme converge.
+        \item Donner des exemples de suites qui divergent telles que le produit converge.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(u\) et \(v\) deux suites réelles telles que \(\forall n \in \N \ u_n \leqslant v_n\). On suppose que la suite \(v\) converge dans \(\R\) de limite \(\ell\). Les assertions suivantes sont elles nécessairement vraies ? Justifier les réponses.
+    \begin{enumerate}
+        \item \(\forall n \in \N \quad u_n \leqslant \ell\)
+        \item \(u\) est majorée.
+        \item \(u\) est convergente.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soient \(u\) une suite numérique (réelle ou complexe) et \(f \in \N^{\N}\).
+    \begin{enumerate}
+        \item On suppose que \(u\) est convergente et \(f\) injective. Montrer que la suite extraite \((u_{f(n)})_{n \in \N}\) converge
+        \item On suppose que \((u_{f(n)})_{n \in \N}\) est convergente et \(f\) surjective. Montrer que la suite \(u_n\) converge
+        \item Si \(f\) est bijective, montrer que \(u\) converge si et seulement si \((u_{f(n)})_{n \in \N}\) converge.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(u\) une suite réelle à valeurs strictement positives. On suppose que pour tout naturel \(n\) \(\frac{u_{n+1}}{u_n}\) tend vers \(\ell\) finie ou infinie.
+    \begin{enumerate}
+        \item On suppose que \(\ell \in \intervallefo{0}{1}\). Montrer que \(u\) tend vers zéro.
+        \item On suppose \(\ell > 1\) ou \(\ell = +\infty\). Montrer que \(u\) tend vers \(+\infty\).
+        \item On suppose que \(\ell = 1\). Montrer que tous les cas sont possible~: \(u\) converge de limite nulle ou non, ou est divergente de première ou seconde espèce.
+    \end{enumerate}
+\end{exercice}
+\paragraph{Cesaro, variantes et applications}
+~~
+
+\begin{exercice}[Lemme de Cesar\`o]
+    Soient \(u\) une suite réelle ou complexe et \(v\) la suite des moyennes des valeurs de \(u\) définie par~:
+    \[ \forall n \in \N \quad v_n = \frac{1}{n+1}\sum_{k=0}^n u_k \]
+    \begin{enumerate}
+        \item Démontrer que si \(u\) converge de limite \(\ell\) finie alors \(v\) converge aussi vers \(\ell\).
+        \item La réciproque est elle vraie ?
+        \item Démontrer que si la suite \(u\) diverge et tend vers \(+\infty\) alors \(v\) diverge aussi et tend vers \(+\infty\)
+    \end{enumerate}    
+\end{exercice}
+\begin{exercice}
+    Soient une suite \(u\), réelle ou complexe, et une suite \(a\) à termes strictement positifs telle que \(\lim_{n \to \infty} \sum_{k=0}^n a_n = +\infty\) et soit la suite \(v\) définie par~:
+    \[\forall n \in \N \quad v_n = \frac{\sum_{k=0}^n a_k u_k}{\sum_{i=0}^n a_i}.\]
+    Démontrer que si la suite \(u\) a pour limite \(\ell\) alors la suite \(v\) a aussi pour limite \(\ell\).
+\end{exercice}
+\begin{exercice}
+    Soient un réel \(a\) et une suite \(u\) à valeurs réelles ou complexes. On suppose que \(\lim_{n\to\infty} (u_{n+1}-u_n) = a\), montrer que \(\lim_{n\to\infty} \frac{u_n}{n} = a\).
+\end{exercice}
+\paragraph{Suites extraites}
+~~
+
+\begin{exercice}
+    Soit \(u\) une suite, réelle ou complexe, telle que les suites extraites \((u_{2n})_{n \in \N}\), \((u_{2n+1)})_{n \in \N}\), \((u_{3n})_{n \in \N}\) soient convergentes. Montrer que \(u\) converge.
+\end{exercice}
+\begin{exercice}
+    Soit une suite réelle \(u\) non majorée. Montrer que \(u\) admet une suite extraite qui tend vers \(+\infty\).
+\end{exercice}
+\begin{exercice}
+    Soit \(u\) une suite, réelle ou complexe, telle que les suites extraites \((u_{3n})_{n \in \N}\), \((u_{3n+1)})_{n \in \N}\), \((u_{3n+2})_{n \in \N}\) admettent une même limite \(\ell\) finie ou infinie. Montrer que \(u\) possède la même limite \(\ell\).
+\end{exercice}
+\begin{exercice}
+    Soit une suite \((u_n)_{n \in \N^*}\) une suite réelle telle que~:
+    \[\forall (m,n) \in (\N^*)^2 \quad 0 \leqslant u_{m+n} \leqslant \frac{m+n}{mn}\]
+    Montrer que \((u_n)_{n\geqslant 1}\) tend vers zéro.
+\end{exercice}
+\begin{exercice}[Diverses études de suites]
+    Étudier la convergence de chacune des suites suivantes et dans le cas où elles convergent préciser leurs limites. \(x\) est un réel.
+    \begin{align*}
+        a_n &= \frac{n+1}{n+\cos n} \qquad & e_n &=\frac{3n^2+\cos n}{4(n+1)^2+\sin(3n)} \\
+        b_n &= \frac{\sum_{k=1}^n \Ent(kx)}{n^2} \ (n \geqslant 1) \qquad & f_n &= \sum_{k=1}^n \frac{n}{\sqrt{n^4+k}} (n \geqslant 1) \\
+        c_n &= \frac{n+1}{n} - \frac{n}{n+\ii} \ (n \geqslant 1) \quad & g_n &= \frac{1-n}{\ii^n n \ln n} (n\geqslant 2) \\
+        d_n &= (\ln n)^{1/n} \ (n \geqslant 1) \quad & h_n &= \cos\left(2\pi\sqrt{n^2+1}+\frac{2\pi}{3}\right)
+    \end{align*}
+\end{exercice}
+\subsection{Suites monotones}
+\begin{exercice}
+    Soient \(u\) et \(v\) des suites réelles telles que \(\forall n \in \N \ u_n \leqslant v_n\). On suppose que la suite \(u\) et que la suite \(v\) est convergente dans \(\R\) de limite \(\ell\). Les assertions suivantes sont elles nécessairement vraies ? Justifier les réponses.
+    \begin{enumerate}
+        \item \(\forall n \in \N \ u_n \leqslant \ell\)
+        \item \(u\) est majorée.
+        \item \(u\) est convergente.
+    \end{enumerate}    
+\end{exercice}
+\begin{exercice}
+    Soit la suite \(u\) telle que \(u_0 = 0\) et pour tout \(n \geqslant 1\)~:
+    \[ u_n = \sqrt{1 + \sqrt{ 1 + \sqrt{ 1 + \ldots +\sqrt{1 + \sqrt{1}}}}} \]
+    où l'on a écrit \(n\) fois le nombre \(1\). Prouver que la suite converge et calculer sa limite.
+\end{exercice}
+\begin{exercice}[Moyenne arithmético-harmonique]
+    Soient deux réels \(a, b\) tels que \(0 < a < b\) et soient des suites \(u, v\) telles que~:
+    \[ \begin{cases} u_0 = a \, v_0 = b \\ \forall n \in \N \quad u_{n+1} = \frac{2 u_n v_n}{u_n + v_n} \, v_{n+1} = \frac{u_n+v_n}{2} \end{cases}\]
+    Démontrer que ces suites convergent et trouver leurs limites en fonction de \(a\) et \(b\).
+\end{exercice}
+\begin{exercice}[Moyenne arithmético-géométrique]
+    Soient deux réels \(a, b\) tels que \(0 < a < b \) et soient des suites \(u, v\) telles que~:
+    \[ \begin{cases} u_0 = a \, v_0 = b \\ \forall n \in \N \quad u_{n+1} = \sqrt{u_n v_n} \, v_{n+1} = \frac{u_n+v_n}{2} \end{cases}\]
+    Démontrer que ces suites sont adjacentes et que leur limite commune notée \(\ell(a,b)\) vérifie~:
+    \[ \sqrt{ab} \leqslant \ell(a,b) \leqslant \frac{a+b}{2}\]
+\end{exercice}
+\begin{exercice}
+    Soit un naturel \(k \geqslant 2\). Montrer que la suite de terme général~:
+    \[ \forall n \in \N^* \quad u_n = \sum_{i=1}^{(k-1)n} \frac{1}{n+i} \]
+    est convergente.
+\end{exercice}
+\begin{exercice}
+    Soit \((u_n)_{n \in \N}\) une suite de réels strictement positifs, décroissante et convergente de limite nulle. Montrer que la suite alternée des somme partielles \((S_n)_{n\in\N}\) définie pour tout naturel \(n\) par \(S_n = \sum_{k=0} (-1)^k u_k\) converge.
+\end{exercice}
+\begin{exercice}
+    Soit \(u\) une suite réelle bornée telle que pour tout naturel non nul~: \(2u_n \leqslant u_{n+1} + u_{n-1} \). Montrer que \(u\) converge.
+\end{exercice}
+\begin{exercice}[Suites de Cauchy]
+    Soit une suite réelle \(u\) qui vérifie la propriété (elle est dite de Cauchy)~:
+    \[ \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall (p,q) \in \N^2 \quad p \geqslant q \geqslant n_0 \implies \abs{u_p-u_q} < \epsilon \]
+    Les termes de la suite se rapprochent uniformément les uns des autres.
+    \begin{enumerate}
+        \item Montrer que la suite est bornée
+        \item Pour tout naturel \(n\) on pose \(E_n = \enstq{u_p}{p\geqslant n}\). Montrer que \(E_n\) admet une borne supérieure et une borne inférieure notée respectivement \(a_n\) et \(b_n\).
+        \item Montrer que les suites \(a\) et \(b\) sont adjacentes.
+        \item Prouver que la suite \(u\) est convergente.
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Étudier, selon la valeur de l'entier \(p\), la convergence de la suite \(u\) définie par~: \[\forall n \in \N \quad u_n = \frac{\sum_{k=1}^n k!}{(n+p)!}.\]
+\end{exercice}
+\begin{exercice}
+    Deux parties \(A, B\) de \(\R\) sont dites adjacentes si et seulement si~:
+    \begin{align}
+        \forall (a,b) \in A \times B \quad a & \leqslant b \\       
+        \forall \epsilon >0 \ \exists (a,b) \in A \times B \quad b-a & < \epsilon
+    \end{align}
+    \begin{enumerate}
+        \item Montrer que deux parties \(A, B\) de \(\R\) sont adjacentes si et seulement si \(\sup A\) et \(\inf B\) existent et sont égaux.
+        \item Montrer que si \(u\) et \(v\) sont deux suites adjacentes alors leurs ensemble de valeurs (\(A=\enstq{u_n}{n\in\N}, B=\enstq{v_n}{n\in\N}\)) sont adjacents. La réciproque est telle vraie ?
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit une naturel \(k\). Étudier la monotonie et la convergence de la suite définie pour tout naturel \(n \geqslant k\) par~: \(u_n =\frac{\binom{n}{k}}{n^k}\).
+\end{exercice}
+\begin{exercice}[Densité]
+    Soit \(A\) une partie de \(\R\). Montrer l'équivalence entre les deux assertions suivantes~:
+    \begin{enumerate}
+        \item Entre deux éléments distincts de \(\R\), il existe au moins un élément de \(A\);
+        \item Tout élément de \(\R\) est limite d'une suite d'éléments de \(A\).
+    \end{enumerate}
+    Si l'une ou l'autre des propositions est vérifiée, on dit que la partie \(A\) est dense dans \(\R\).
+\end{exercice}
+\subsection{Comparaison des suites réelles}
+\begin{exercice}
+    Soit une suite réelle \(u\).
+    \begin{enumerate}
+        \item On suppose que \(u_{n+1} \sim_{\infty} u_n\), est-ce que \(u_{2n} \sim_{\infty} u_n\) ?
+        \item Soit \(\ell \in \R\). On suppose que \(u_n \sim_{\infty} \ell\), est-ce que \(u_n^n \sim_{\infty} \ell^n\) ?
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Déterminer des équivalents simples des suites de terme général~:
+    \begin{align*}
+        u_n & = \fra{1}{n-1} - \frac{1}{n+1} \qquad & u_n & = (1+\frac{x}{n})^n (x \in \R) \\
+        u_n & = (n+1)^{\alpha} - (n-1)^{\alpha} \qquad & u_n & = 2^{n^2+2} -2^{n^2} \\
+        u_n & = \frac{4^n+7}{2^n-n^18} \qquad & u_n & = (n+3\ln n)\e^{-(n+1)}
+    \end{align*}
+\end{exercice}
+

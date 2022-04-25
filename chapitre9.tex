@@ -254,8 +254,19 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
   \end{equation}
 \end{prop}
 \begin{proof}
-  L'unicité est assurée par le théorème de récurrence.
+  L'unicité est assurée par le théorème de récurrence. 
 \end{proof}
+Quelques valeurs de la factorielle sont données par le tableau \ref{tab:factorielle}. Cette suite croît très vite, plus vite que l'exponentielle.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        0 & 1 & 2 & 3 & 4  & 5   & 6   & 7    & 8     & 9 \\ \hline
+        1 & 1 & 2 & 6 & 24 & 120 & 720 & 5040 & 40320 & 362880 \\ \hline
+    \end{tabular}
+    \caption{Premières valeurs de la factorielle}
+    \label{tab:factorielle}
+\end{table}
 
 \subsection{Coefficients binomiaux -- formule de Pascal}
 
@@ -287,7 +298,7 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
       \label{eq:TrianglePascal}
     \forall (n,p)\in{\N^*}^2 \ \binom{n}{p}=\binom{n-1}{p-1}+\binom{n-1}{p}.
   \end{equation}
-  Une représentation graphique est donnée en figure \ref{fig:TrianglePascal}%\footnote{Crédit : https://www.logamaths.fr/} pour illustrer cette dernière formule.
+  Une représentation graphique est donnée en figure \ref{fig:TrianglePascal}\footnote{Crédit : https://www.logamaths.fr/} pour illustrer cette dernière formule.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
@@ -327,7 +338,7 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
 \begin{figure}
     \centering
     \includegraphics[scale=0.7]{./Triangle-de-Pascal-01-3.png}
-    \caption{Représentation --- Triangle de Pascale --- de la formule \eqref{eq:TrianglePascal}}
+    \caption{Représentation --- Triangle de Pascal --- de la formule \eqref{eq:TrianglePascal}}
     \label{fig:TrianglePascal}
 \end{figure}
 \begin{prop}
@@ -348,6 +359,7 @@ Le théorème de récurrence nous permet de conclure et de dire que la propositi
   \begin{equation}
     (a+b)^n=\sum_{k=0}^n \binom{n}{k}a^kb^{n-k}.
   \end{equation}
+  On peut aussi voir que les coefficients de la décomposition du binôme de Newton peuvent être visualisés sur les lignes du triangle de Pascal, voir la figure \ref{fig:TrianglePascal}.
 \end{prop}
 \begin{proof}
   Soient \(a\),\(b\) deux complexes et \(n\) un entier naturel, alors on définit la propriété \(\P(n)\) ``\((a+b)^n=\sum_{k=0}^n \binom{n}{k}a^kb^{n-k}\)''. Vérifions l'étape initiale~:
@@ -734,7 +746,7 @@ Soit \(E\) un ensemble fini. On note pour tout entier naturel \(p\), \(\Part_p(E
 \end{exercice}
 \begin{exercice}
     Trouver les applications \(f : \N \longmapsto \N\) strictement croissantes telles que~:
-    \[\begin{cases} f(2) &= 2 \\\forall p, q \in \N, \qquad f(pq) &= f(p)f(q) \end{cases}\]
+    \[\begin{cases} f(2) &= 2 \\\forall p, q \in \N, \ f(pq) &= f(p)f(q) \end{cases}\]
 \end{exercice}
 \begin{exercice}
     Soit une application \(f : I \longmapsto \R\) solution de l'équation différentielle \(y' = \cos^2(y)\). Démontrer que \(f\) est indéfiniment dérivable sur \(I\) et que pour tout \(x \in I\) et tout naturel \(n\) non nul~: \[f^{(n)}(x) = (n-1)! \cos^n(f(x)) \sin\left(nf(x) + n\frac{\pi}{2}\right)\]

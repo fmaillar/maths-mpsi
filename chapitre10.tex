@@ -66,6 +66,13 @@ Soit \(A\) une partie de \(\R\).
   \item [\(\impliedby\)] Déjà \(a\) est un majorant de \(A\). Supposons qu'il existe un majorant \(b\) qui soit plus petit que \(a\). Soit \(\epsilon=a-b>0\), par hypothèse il existe \(x_0\in A\) tel que \(x_0>a-\epsilon=b\), alors \(b\) n'est pas un majorant de \(A\). On arrive donc à une contradiction. Il n'existe donc pas de majorant de \(A\) qui soit strictement inférieur à \(a\). Le réel \(a\) est donc la borne supérieure de la partie \(A\).
   \end{itemize}
 \end{proof}
+On peut voir une représentation illustrant un ensemble réel majoré, ses majorant et sa borne supérieure sur la figure~\ref{fig:BorneSup}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{./BorneSup.png}
+    \caption{Illustration de la borne supérieure d'un ensemble réel}
+    \label{fig:BorneSup}
+\end{figure}
 \begin{theo}
   Soient \(A\) une partie de \(\R\) et \(a\) un réel, alors
   \begin{equation}
@@ -360,7 +367,7 @@ On note que l'ensemble vide est aussi un intervalle \(\emptyset=\intervalleoo{a}
   Toute partie non vide et minorée de \(\R\) admet une borne inférieure.
 \end{theo}
 \begin{proof}
-  Soit \(A\) une partie non vide et minorée de \(\R\). Soit \(B=-A=\enstq{x\in \R}{-x \in A}\). \(B\) est donc non vide et majorée, alors en appliquant le théorème~\ref{theo:bornesup} \(B\) admet une borne supérieure. D'après la caractérisation de la borne inférieure, on en déduit que \(A\) admet une borne inférieure et de plus \(\inf A=-\sup B\).
+  Soit \(A\) une partie non vide et minorée de \(\R\). Soit \(B=-A=\enstq{x\in \R}{-x \in A}\). \(B\) est donc non vide et majorée, alors en appliquant l'axiome de la borne supérieure, \(B\) admet une borne supérieure. D'après la caractérisation de la borne inférieure, on en déduit que \(A\) admet une borne inférieure et de plus \(\inf A=-\sup B\).
 \end{proof}
 
 \subsection{Intervalles et parties convexes}
@@ -389,9 +396,9 @@ On note que l'ensemble vide est aussi un intervalle \(\emptyset=\intervalleoo{a}
   Donc comme \(I=G_a\cup D_a\), c'est un intervalle de \(\R\).
 \end{proof}
 
-\subsection{Propriété d'Archiméde}
+\subsection{Propriété d'Archimède}
 \begin{prop}
-  Le corps des réels \(\R\) est archimédien, c'est-à-dire
+  Le corps des réels \(\R\) est archimèdien, c'est-à-dire
   \begin{equation}
     \forall x>0 \ \forall y\in \R \ \exists n\in \N \quad nx\geqslant y.
   \end{equation}
@@ -466,5 +473,42 @@ La conséquence est que ces deux ensembles sont infinis.
 \begin{exercice}
     Soient \(A\) et \(B\) deux parties bornées et non vides de \(\R\). On suppose que leur intersection est non vide. Montrer que l'intersection est bornées et que~:
     \[ \max(\inf A, \inf B) \leqslant \inf(A \cap B) \leqslant \sup(A \cap B) \leqslant \min(\sup A, \sup B)\]
+\end{exercice}
+\begin{exercice}
+    Les parties de \(\R\) suivantes sont-elles majorées, minorées ? Si oui, déterminer leur bornes supérieures, inférieures, et dire s'il s'agit d'un maximum, d'un minimum.
+    \begin{align*}
+        E &= \enstq{\frac{1}{2^n}+\frac{(-1)^n}{n}}{n \in \N^*} \\
+        F &= \enstq{\frac{1+(-1)^n}{n}-n^2}{n \in \N^*}
+    \end{align*}
+\end{exercice}
+\begin{exercice}
+    Soit \(A\) une partie non vide de \(\R+\) et \(B = \enstq{x \in \R}{\exists a \in A \ ax=1}\). On suppose que \(A\) est majorée et non réduite au singleton nul. Montrer que \(B\) admet une borne inférieure telle que \(\inf B = \frac{1}{\sup A}\).
+\end{exercice}
+\begin{exercice}
+    Soit \(A = \enstq{r \in \Q}{r^2 \leqslant 2}\). Montrer que \(A\) n'admet pas de borne supérieure dans \(\Q\).
+\end{exercice}
+\begin{exercice}
+    Calculer les bornes supérieures et inférieures de \(\mathcal{E} = \enstq{\frac{3p-q}{2p+q+1}}{(p,q) \in \N^2 \ 0 <q<p}\).
+\end{exercice}
+\begin{exercice}
+    Déterminer \(\inf \enstq{\Ent(x) + \Ent(1/x)}{x \in \R^*+}\).
+\end{exercice}
+\begin{exercice}
+    Soient \(a\) et \(b\) deux réels tels que \(b-a>3\). Démontrer qu'entre \(a\) et \(b\) il existe au moins trois entiers relatifs distincts.
+\end{exercice}
+\begin{exercice}
+    Soit \(f\) une application croissante de \(I = \intervalleff{0}{1}\) vers lui-même. Démontrer qu'il existe au moins un réel \(a \in I\) tel que \(f(a)=a\).
+    \emph{Indication}: on pourra utiliser la partie \(A = \enstq{x \in I}{f(x) \geqslant x}\).
+\end{exercice}
+\begin{exercice}
+    Soient \(I\) et \(J\) des intervalles de \(\R\) non vides. Démontrer qu'une condition suffisante pour que \(I \cup J\) soit un intervalle est \(I \cap J \neq \emptyset\). Est-ce une condition nécessaire ?
+\end{exercice}
+\begin{exercice}
+    Soient un réel \(x\) et un naturel non nul \(p\).
+    \begin{enumerate}
+        \item Démontrer qu'il existe un seul naturel \(k\) avec \(0 \leqslant k \leqslant p-1\) tel que \(\Ent(px) = p\Ent(x)+k\).
+        \item Soit un naturel \(q\) tel que \(0 \leqslant q \leqslant p-1\). Prouver que \(\Ent(x+q/p)\) est égal à \(\Ent(x)\) lorsque \(0 \leqslant q \leqslant p-k-1\) et à \(\Ent(x)+1\) lorsque \(p-k\leqslant q \leqslant p-1\).
+        \item En déduire que \(\sum_{q=0}^{p-1} \Ent(x+q/p) = \Ent(px)\).
+    \end{enumerate}
 \end{exercice}
 
