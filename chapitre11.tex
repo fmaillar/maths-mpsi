@@ -1241,6 +1241,9 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
         \item \(u\) est convergente.
     \end{enumerate}
 \end{exercice}
+\emph{Résolution~:}
+Le point 2 est vrai. En effet, la suite \(v\) converge, donc \(v\) est majorée par un réel \(M\). Alors comme \(u\) est majorée par \(v\), alors \(u\) est aussi majoré par ce réel \(M\). Néanmoins les points 1 et 3 sont faux. Prenons un contre-exemple : la suite \(v\) définie pour tout naturel \(n\) par \(v_n = (-2)^{-n}\) est convergente en \(\ell = 0\), et la suite \(u\) définie pour \(n<2\) par \(u_n = v_n - 1/100\) et pour \(n\geqslant 2\) par \(u_n = -10n\). Alors on a \(u_0 = v_0 - 1/100 = 1 - 1/100 > \ell\) (qui contredit le point 1) et on voit aussi que \(u\) est divergente de première espèce (qui contredit le point 3).
+
 \begin{exercice}
     Soient \(u\) une suite numérique (réelle ou complexe) et \(f \in \N^{\N}\).
     \begin{enumerate}
@@ -1270,7 +1273,7 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
     \end{enumerate}    
 \end{exercice}
 \begin{exercice}
-    Soient une suite \(u\), réelle ou complexe, et une suite \(a\) à termes strictement positifs telle que \(\lim_{n \to \infty} \sum_{k=0}^n a_n = +\infty\) et soit la suite \(v\) définie par~:
+    Soient une suite \(u\), réelle ou complexe, et une suite \(a\) à termes strictement positifs telle que \[\lim_{n \to \infty} \sum_{k=0}^n a_n = +\infty\] et soit la suite \(v\) définie par~:
     \[\forall n \in \N \quad v_n = \frac{\sum_{k=0}^n a_k u_k}{\sum_{i=0}^n a_i}.\]
     Démontrer que si la suite \(u\) a pour limite \(\ell\) alors la suite \(v\) a aussi pour limite \(\ell\).
 \end{exercice}
@@ -1305,13 +1308,14 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
 \end{exercice}
 \subsection{Suites monotones}
 \begin{exercice}
-    Soient \(u\) et \(v\) des suites réelles telles que \(\forall n \in \N \ u_n \leqslant v_n\). On suppose que la suite \(u\) et que la suite \(v\) est convergente dans \(\R\) de limite \(\ell\). Les assertions suivantes sont elles nécessairement vraies ? Justifier les réponses.
+    Soient \(u\) et \(v\) des suites réelles telles que \(\forall n \in \N \ u_n \leqslant v_n\). On suppose que la suite \(v\) est convergente dans \(\R\) de limite \(\ell\) et que \(u\) est croissante. Les assertions suivantes sont elles nécessairement vraies ? Justifier les réponses.
     \begin{enumerate}
         \item \(\forall n \in \N \ u_n \leqslant \ell\)
         \item \(u\) est majorée.
         \item \(u\) est convergente.
     \end{enumerate}    
 \end{exercice}
+\emph{Résolution~:} Tous les points sont vrais. En effet, la suite \(v\) converge, donc elle est bornée, particulièrement majorée par un réel \(M\). Ensuite, d'après l'inégalité de l'hypothèse pour tout \(n \ u_n \leqslant v_n \leqslant M\). Donc \(u\) est majorée. Le point 2 est vrai. La suite \(u\) est aussi croissante, donc elle converge vers \(\ell' = \sup\enstq{u_n}{n\in \N}\). Le point 3 est vrai. En passant à la limite dans l'inégalité de l'hypothèse, on obtient \(\ell' \leqslant \ell\). Et on a aussi par définition de la borne supérieure, pour tout \(n\), \(u_n \leqslant \ell' \leqslant \ell\). Le point 1 est vrai.
 \begin{exercice}
     Soit la suite \(u\) telle que \(u_0 = 0\) et pour tout \(n \geqslant 1\)~:
     \[ u_n = \sqrt{1 + \sqrt{ 1 + \sqrt{ 1 + \ldots +\sqrt{1 + \sqrt{1}}}}} \]
@@ -1337,8 +1341,10 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
     Soit \((u_n)_{n \in \N}\) une suite de réels strictement positifs, décroissante et convergente de limite nulle. Montrer que la suite alternée des somme partielles \((S_n)_{n\in\N}\) définie pour tout naturel \(n\) par \(S_n = \sum_{k=0} (-1)^k u_k\) converge.
 \end{exercice}
 \begin{exercice}
-    Soit \(u\) une suite réelle bornée telle que pour tout naturel non nul~: \(2u_n \leqslant u_{n+1} + u_{n-1} \). Montrer que \(u\) converge.
+    Soit \(u\) une suite réelle bornée telle que pour tout naturel \(n\) non nul~: \(2u_n \leqslant u_{n+1} + u_{n-1} \). Montrer que \(u\) converge.
 \end{exercice}
+\emph{Résolution~:}
+En appliquant la relation au rang suivant, on obtient~: \(u_{n+2} - u_{n+1} \geqslant u_{n+1} - u_n\). Soient les sous-suites \(v\) et \(w\) des rangs pairs et impairs définies par~: \(v_n = u_{2n+1} \ w_n = u_{2n}\).
 \begin{exercice}[Suites de Cauchy]
     Soit une suite réelle \(u\) qui vérifie la propriété (elle est dite de Cauchy)~:
     \[ \forall \epsilon > 0 \ \exists n_0 \in \N \ \forall (p,q) \in \N^2 \quad p \geqslant q \geqslant n_0 \implies \abs{u_p-u_q} < \epsilon \]
@@ -1350,9 +1356,25 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
         \item Prouver que la suite \(u\) est convergente.
     \end{enumerate}
 \end{exercice}
+\emph{Résolution~:}
+\begin{enumerate}
+    \item Pour \(\epsilon = 1 \ q = n_0\), on a par inégalité triangulaire~:
+        \[ \forall p \geqslant n_0 \quad \abs{u_p} \leqslant \abs{u_p - u_{n_0}} + \abs{u_{n_0}} \leqslant 1 + \abs{u_{n_0}}\]
+        Donc \(u\) est bornée.
+    \item La suite \(u\) est bornée, donc \(E_n\) est une partie non vide et bornée de \(\R\), donc \(E_n\) admet une borne supérieure (notée \(a_n\)) et une borne inférieure (notée \(b_n\)). La suite d'ensemble \(E_n\) est décroissante par inclusion. En effet, soit un naturel \(p\). Si \(u_p \in E_{n+1}\) alors \(p \geqslant n+1\), donc \(p > n\), et donc \(u_p \in E_n\). Alors pour tout naturel \(n\), \(E_{n+1} \subset E_n\). Donc par les propriétés des bornes, on a bien : \(b_n \leqslant b_{n+1} \leqslant a_{n+1} \leqslant a_n\). De plus, par caractérisation, on peut écrire~:
+        \begin{align*}
+            \forall \epsilon_1 >0 \ \exists p_1 \geqslant n & \quad 0 \leqslant a_n - u_{p_1} \leqslant \epsilon_1 \\
+            \forall \epsilon_2 >0 \ \exists p_2 \geqslant n & \quad 0 \leqslant u_{p_2} - b_n \leqslant \epsilon_2
+        \end{align*}
+Si on pose \(p = \max(p_1,p_2)\) alors pour tout \(\epsilon>0\), on a \(0 \leqslant a_n-u_p \leqslant \epsilon/2\) et \(0 \leqslant u_p-b_n \leqslant \epsilon/2\), donc par inégalité triangulaire~:
+\[ \abs{a_n - b_n} = \abs{(a_n-u_p) - (b_n-u_p)} \leqslant \abs{a_n-u_p} + \abs{u_p-b_n} = \epsilon. \]
+Donc la suite \((a-b)\) tend vers zéro. Ainsi les suites \(a\) et \(b\) sont adjacentes.
+\item Les suites \(a\) et \(b\) sont adjacentes, donc elles convergent vers une même limite notée \(\ell\). Pour tout naturel \(n\), on a \(b_n \leqslant u_n \leqslant a_n\). En appliquant le théorème des gendarmes, il vient que la suite \(u\) tend aussi vers \(\ell\).
+\end{enumerate}
 \begin{exercice}
     Étudier, selon la valeur de l'entier \(p\), la convergence de la suite \(u\) définie par~: \[\forall n \in \N \quad u_n = \frac{\sum_{k=1}^n k!}{(n+p)!}.\]
 \end{exercice}
+
 \begin{exercice}
     Deux parties \(A, B\) de \(\R\) sont dites adjacentes si et seulement si~:
     \begin{align}
@@ -1367,6 +1389,15 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
 \begin{exercice}
     Soit une naturel \(k\). Étudier la monotonie et la convergence de la suite définie pour tout naturel \(n \geqslant k\) par~: \(u_n =\frac{\binom{n}{k}}{n^k}\).
 \end{exercice}
+\emph{Résolution~:}
+Montrons que \(u\) est croissante~: pour tout naturel \(n\geqslant k\), on a~:
+\begin{align*}
+    \frac{u_{n+1}}{u_n} &= \frac{(n+1)!}{(n+1-k)!}\frac{(n-k)!}{n!} \left(\frac{n+1}{n}\right)^k \\
+                        &= \frac{n+1}{n+1-k}\left(\frac{n+1}{n}\right)^k \geqslant 1
+\end{align*}
+Donc \(u_{n+1} \geqslant u_n\), la suite \(u\) est croissante. De plus~:
+\[u_n = \frac{1}{k!} \prod_{i=1}^k \frac{n-(i-1)}{n}\]
+si on note \(v_{n,i} = \frac{n-(i-1)}{n}\), alors lorsque \(n\) tend vers l'infini, \(v_{n,i} \sim 1\). Alors par produit (fini) d'équivalent, \(u_n \sim \frac{1}{k!} \times 1^k\). Donc \(\lim u = \frac{1}{k!}\).
 \begin{exercice}[Densité]
     Soit \(A\) une partie de \(\R\). Montrer l'équivalence entre les deux assertions suivantes~:
     \begin{enumerate}
@@ -1386,9 +1417,65 @@ Ne pas étendre aux suites complexes les propositions, vues sur les suites réel
 \begin{exercice}
     Déterminer des équivalents simples des suites de terme général~:
     \begin{align*}
-        u_n & = \fra{1}{n-1} - \frac{1}{n+1} \qquad & u_n & = (1+\frac{x}{n})^n (x \in \R) \\
+        u_n & = \frac{1}{n-1} - \frac{1}{n+1} \qquad & u_n & = (1+\frac{x}{n})^n (x \in \R) \\
         u_n & = (n+1)^{\alpha} - (n-1)^{\alpha} \qquad & u_n & = 2^{n^2+2} -2^{n^2} \\
         u_n & = \frac{4^n+7}{2^n-n^18} \qquad & u_n & = (n+3\ln n)\e^{-(n+1)}
     \end{align*}
 \end{exercice}
-
+\begin{exercice}
+    Démontrer que, lorsque \(n\) tend vers l'infini, \[\sum_{k=1}^n k! \sim n!\]
+\end{exercice}
+\begin{exercice}
+    \begin{enumerate}
+        \item Soient deux suites de limite nulle \(u, v\). Montrer que, lorsque \(n\) tend vers l'infini, \[\e^{u_n}-\e^{v_n} \sim u_n - v_n\]
+        \item Que peut on dire si \(\lim u = \lim v = \ell \neq 0\) ?
+        \item Déterminer la limite de la suite \(u\) définie par~:
+            \[ \forall n \in \N^* \quad u_n = n^2 (\e^{1/n} - \e^{1/(n+1)})\]
+    \end{enumerate}
+\end{exercice}
+\emph{Résolution~:}
+\begin{enumerate}
+    \item On sait d'après le cours que lorsque \(n\) tend vers l'infini, \(\e^{u_n-v_n}-1 \sim u_n-v_n\). Alors en en multipliant par \(e^{v_n}\), on obtient \(\e^{u_n}-\e^{v_n} = \e^{v_n} (u_n - v_n)\). Donc par définition de l'équivalence~: \(\lim\limits_{n\to \infty} \frac{\e^{u_n}-\e^{v_n} }{u_n-v_n} = \lim\limits_{n\to \infty} \e^{v_n}\). Comme la fonction exponentielle est continue \(\lim\limits_{n\to \infty} \e^{v_n} = \e^{\lim v_n} = \e^{0} = 1\). Alors \(\lim\limits_{n\to \infty} \frac{\e^{u_n}-\e^{v_n} }{u_n-v_n} = 1\), ce qui veut dire que \(\e^{u_n}-\e^{v_n} \sim u_n - v_n\) lorsque \(n\) tend à l'infini.
+    \item Si \(\lim u = \lim v = \ell \neq 0\), alors les suites \((u-\ell)\) et \((v-\ell)\) tendent vers zéro et en appliquant la relation précédente, lorsque \(n\) tend à l'infini~: \(\e^{(u_n-\ell)} - \e^{(v_n-\ell)} \sim (u_n-\ell) - (v_n-\ell)\), et lorsqu'on multiplie par \(\e^{\ell}\), il vient~: \(\e^{u_n}-\e^{v_n} \sim \e^{\ell}(u_n - v_n)\).
+    \item Si on pose pour tout naturel non nul, \(n\), \(a_n = 1/n\) et \(b_n = 1/(n+1)\), avec \(\lim a = \lim b = 0\) alors \(\frac{u_n}{n^2} = \e^{a_n} -\e^{b_n}\), d'après le premier point, lorsque \(n\) tend à l'infini, \(\frac{u_n}{n^2} \sim a_n - b_n = \frac{1}{n(n+1)}\). En multipliant par \(n^2\), il vient lorsque \(n\) tend à l'infini, \(u_n \sim \frac{n^2}{n(n+1)} = \frac{n}{n+1}\). Le deuxième terme de l'équivalent tend vers \(1\), donc \(\lim u = 1\).
+\end{enumerate}
+\begin{exercice}
+    Soit le suite réelle \(u\) définie par~: \(u_0 \in \intervalleoo{0}{1}\) et \(\forall n \in \N \ u_{n+1} = u_n - u_n^2\).
+    \begin{enumerate}
+        \item Montrer que \(u\) converge et déterminer sa limite.
+        \item Prouver que la suite \(\left(\frac{1}{u_{n+1}} - \frac{1}{u_n}\right)_{n \in \N}\) converge et déterminer sa limite.
+        \item Démontrer que \(u_n \sim \frac{1}{n}\).
+    \end{enumerate}
+\end{exercice}
+\emph{Résolution~:}
+\begin{enumerate}
+    \item La suite \(u\) est bornée. Montrons par récurrence \(\P_n \forall n \in \N \ 0<u_n<1\). L'initialisation est vraie puisque \(0<u_0<1\) par hypothèse donc \(\P_0\). Soit un naturel \(n\) et supposons \(\P_n\), alors comme \(0<u_n<1\), on a aussi \(0<1-u_n<1\), donc par produit (\(u_{n+1} = u_n(1-u_n)\)), \(0<u_{n+1}<1\). Donc \(\P_{n+1}\) est vraie. Le théorème de récurrence affirme que la la proposition est vraie pour tout naturel \(n\). La suite \(u\) est bornée. On a aussi \(u_{n+1}-u_n = -u_n^2 < 0\) donc la suite \(u\) décroît strictement. Finalement la suite \(u\) décroît et est minorée, donc elle converge. Sa limite \(\ell\) est telle qu'en passant à la limite dans l'équation de récurrence~: \(\ell = \ell(1-\ell)\), donc \(\ell^2=0\), donc \(\ell = 0\). La suite \(u\) converge de limite nulle.
+    \item Soit la suite \(v\) définie pour tout naturel \(n\), par \(v_n =\frac{1}{u_{n+1}} - \frac{1}{u_n}\), alors grâce à l'équation qui définit \(u\), on trouve \(v_n = \frac{1}{1-u_n}\). Soit un réel \(a<1\) et \(\fonction{f}{\intervalleff{0}{a}}{\R}{x}{\frac{1}{1-x}}\). \(f\) est continue, particulièrement en \(0=\lim u\), et \(v_n=f(u_n)\), donc \(\lim v_n = f(\lim u_n) = f(0) = 1\). 
+    \item On a aussi, pour tout naturel \(n\),  \(v_n = \frac{1 - \frac{u_{n+1}}{u_n}}{u_{n+1}} = \frac{1-(1-u_n)}{u_{n+1}} = \frac{u_n}{u_{n+1}}\). Comme la suite \(v\) tend vers \(1\), on peut dire que lorsque \(n\) tend vers l'infini, \(u_{n+1} \sim u_n\), et \(n+1 \sim n\). En multipliant ces deux équivalents, on a \((n+1)u_{n+1} \sim n u_n\). En divisant cet équivalent par \(n u_{n+1}\), on obtient lorsque \(n\) tend vers l'infini~: \(\frac{u_n}{u_{n+1}} \sim \frac{n+1}{n}\). Le premier terme de l'équivalent vaut \(v_n = \frac{1}{1-u_n}\). Comme \(\lim u = 0\), on peut écrire que lorsque \(n\) tend vers l'infini, \(\frac{1}{1-u_n} \sim u_n+1\). Donc en reprenant l'équation~: \(u_n+1 \sim 1+\frac{1}{n}\). Ce qui peut s'écrire aussi~: \(u_n+1 -(1/n+1) = o(1+1/n) = o(1/n)\) et finalement \(u_n-1/n = o(1/n)\). Ce qui est équivalent de dire que \(u_n \sim \frac{1}{n}\).
+\end{enumerate}
+\begin{exercice}
+    Soient \(a\) et \(b\) deux suites réelles à valeurs strictement positives telles que \(\lim\limits_{n\to\infty} a_n^n = a > 0\) et \(\lim\limits_{n\to\infty} b_n^n = b > 0\). Soient deux réels strictement positifs, \(p, q\) tels que \(p+q=1\). Déterminer~:
+    \[\lim\limits_{n\to\infty} (pa_n+qb_n)^n\]
+\end{exercice}
+\begin{exercice}
+    Démontrer que \[\lim\limits_{n\to \infty} (\cosh n)^{1/n} = e\] puis déterminer un équivalent simple, lorsque \(n\) tend à l'infini, de \((\cosh n)^{1/n} - e\).
+\end{exercice}
+\begin{exercice}
+    Démontrer, lorsque \(n\) tend à l'infini,
+    \[ \frac{1}{n-1} = \frac{1}{n} + o\left(\frac{1}{n}\right); \quad \frac{1}{n-1} = \frac{1}{n} + \frac{1}{n^2} + o\left(\frac{1}{n^2}\right); \quad \frac{1}{n-1} = \frac{1}{n} + \frac{1}{n^2}+ \frac{1}{n^3} + o\left(\frac{1}{n^3}\right)\]
+\end{exercice}
+\begin{exercice}[Développement asymptotique]
+    \begin{enumerate}
+        \item Démontrer que, pour tout naturel \(n \geqslant 2\), l'équation \(x^n-x-1=0\) a une seule solution dans l'intervalle \(\intervalleff{1}{2}\), qu'on notera \(x_n\).
+        \item Démontrer que la suite \(x = (x_n)_{n \in \N\setminus\{0,1\}}\) est convergente et que sa limite vaut \(1\).
+        \item On associe à la suite \(x\) la suite \(u\) telle que pour tout \(n \geqslant 2\), \(u_n=x_n-1\).
+            \begin{enumerate}
+                \item Démontrer que 
+                    \[\forall n \geqslant 2 \quad u_n = \exp\left(\frac{1}{n}\ln(2+u_n)\right)-1\]
+                \item Déterminer un équivalent de \(u_n\) lorsque \(n\) tend à l'infini, du type \(\frac{a}{n}\) où \(a\) est une constante réelle qu'on précisera.
+                \item Déterminer le réel \(b\) tel que, lorsque \(n\) tend à l'infini,
+                    \[u_n = \frac{a}{n} + \frac{b}{n^2} +o\left(\frac{1}{n^2}\right).\]
+                    Une telle écriture est appelée un \emph{développement asymptotique} de \(u_n\).
+            \end{enumerate}
+    \end{enumerate}
+\end{exercice}

@@ -1,0 +1,90 @@
+\chapter{Devoir surveillé n°1}
+\label{chap:DS1}
+\begin{exercice}
+    Résoudre dans \(\R\) les équations suivantes~:
+    \begin{align}
+        \sqrt{x-4\sqrt{x-4}} + \sqrt{x+5-6\sqrt({x-4}} & = 1 \\
+                                                \cos x & = \sqrt{3} \sin x \\
+                       2 \ln(x+1) + \ln(3x+5) + \ln(2) & = \ln(6x+1)+\ln(x-2)+\ln(x+2) \\
+                              5^x - 5^{x+1} + 2^{3x-1} & = 0 \\
+                                   \argch x + \argsh x & = 1
+    \end{align}
+\end{exercice}
+\begin{exercice}
+    Pour tout naturel \(n\) non nul et tout réel \(x\), on définit la quantité~:
+    \begin{align}
+        S_n(x) &= \sum_{k=1}^n \ln\left(1+ \tanh^2\left(\frac{x}{2^k}\right)\right) \\
+               &= \ln\left(1+ \tanh^2\left(\frac{x}{2}\right)\right) + \ln\left(1+ \tanh^2\left(\frac{x}{2^2}\right)\right) + \ldots + \ln\left(1+ \tanh^2\left(\frac{x}{2^n}\right)\right) 
+    \end{align}
+    \begin{enumerate}
+        \item Rappeler (en justifiant rapidement) la valeur de la limite suivante~: \(\lim\limits_{x\to 0} \frac{e^x-1}{x}\). En déduire la valeur de \(\lim\limits_{x\to 0} \frac{\tanh x}{x}\).
+        \item Démontrer les deux formules suivantes~: pour tout réel \(t\),
+            \begin{equation}
+                \cosh(2t) = \cosh^2(t) + \sinh^2(t) \quad \sinh(2t) = 2\sinh(t)\cosh(t).
+            \end{equation}
+            En déduire une expression de \(\tanh(2t)\) en fonction de \(\tanh(t)\), puis une expression de \(1+\tanh^2(t)\) en fonction de \(\tanh(2t)\) et \(\tanh(t)\).
+        \item Calculer \(S_n(0)\).
+        \item Soit \(x >0\). Montrer que~:
+            \begin{equation}
+                S_n(x) = \ln\left(2^n \tanh\left(\frac{x}{2^n}\right)\right) - \ln \tanh x.
+            \end{equation}
+        \item \begin{enumerate}
+                \item Étudier la parité de \(\fonctionL{S_n}{\R}{\R}{x}{S_n(x)}\) En déduire une expression de \(S_n(x)\) pour \(x<0\).
+                \item Soit une naturel \(n\) non nul. Déterminer \(\lim_{x\to 0} S_n(x)\)
+            \end{enumerate}
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Problème]
+    On considère la fonction \(f\) définie sur \(I = \intervalleff{0}{\pi}\) par~:
+    \begin{equation}
+        \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
+    \end{equation}
+    \begin{enumerate}
+        \item 
+            \begin{enumerate}
+                \item Vérifier que \(f\) est bien définie sur \(I\)
+                \item Montrer que pour tous réels \(a, b\) strictement positifs, \(\sqrt{a} - \sqrt{b} = \frac{a-b}{\sqrt{a}+\sqrt{b}}\), puis étudier le signe de \(f(x) - \sin x\) sur l'intervalle \(I\).
+                \item Montrer que pour tout \(x \in \intervalleof{0}{\pi}\), \(\sin x < x\).
+                \item En déduire les solutions de l'équation \(f(x) = x\) sur l'intervalle \(I\).
+            \end{enumerate}
+        \item Étudier les variations de \(f\) sur l'intervalle \(I\) et tracer son graphe. On calculera en particulier \(f(0), f(\pi/3), f(\pi), f'(0), f'(\pi)\).
+        \item On considère maintenant la fonction \(g\) définie sur \(I\) par~:
+            \begin{equation}
+                \forall x \in I \quad g(x) = \arccos\left(\frac{4-5\cos x}{5-4\cos x}\right)
+            \end{equation}
+            et la fonction \(\Phi\) définie sur \(\intervalleff{-1}{1}\) par~:
+            \begin{equation}
+                \forall x \in \intervalleff{-1}{1} \quad \Phi(t) = \frac{4-5t}{5-4t}
+            \end{equation}
+            \begin{enumerate}
+                \item Étudier les variations de la fonction \(\Phi\)
+                \item Soit la fonction \(\psi\) définie sur \(I\) par~:
+                    \begin{equation}
+                        \forall x \in I \quad \psi(x) = \Phi(\cos x) = \frac{4-5\cos x}{5-4\cos x}
+                    \end{equation}
+                    Étudier la dérivabilité de \(\psi\) et calculer sa dérivée. Donner son tableau de variations.
+                \item En remarquant que, pour tout \(x \in I\), \(g(x) = \arccos(\psi(x))\), montrer que \(g\) est dérivable sur \(\intervalleoo{0}{\pi}\) et calculer sa dérivée.
+                \item Tracer le graphe de \(g\). On admettra que \(g\) est dérivable en \(0\) et \(\pi\) avec \(g'(0) = -3\) et \(g'(\pi) = -1/3\).
+            \end{enumerate}
+        \item Soit \(x \in \intervalleff{0}{\pi/3}\)
+            \begin{enumerate}
+                \item Montrer qu'il existe un unique \(z \in \intervalleff{\pi/3}{\pi}\) tel que \(f(x) = f(z)\). On utilisera l'étude de \(f\) réalisée à la question 2.
+                \item Calculer \(\cos(g(x))\) et \(\sin(g(x))\).
+                \item Calculer \(f(g(x))\) et en déduire que \(z = g(x)\).
+            \end{enumerate}
+        \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(z = g(x)\)
+            \begin{enumerate}
+                \item Exprimer \(\cos(x+z), \cos(x-z)\) en fonction de \(cos x\).
+                \item Étudier les variations des fonctions~:
+                    \[ \fonction{\varphi_1}{\intervalleff{0}{\pi/3}}{\R}{t}{t+g(t)} \qquad \fonction{\varphi_2}{\intervalleff{0}{\pi/3}}{\R}{t}{t-g(t)} \]
+                    En déduire le signe de \(\cos\left(\frac{x+z}{2}\right)\) et \(\cos\left(\frac{x-z}{2}\right)\)
+                \item Exprimer\(\cos\left(\frac{x+z}{2}\right)\) et \(\cos\left(\frac{x-z}{2}\right)\) en fonction de \(\cos(x+z\) et \(\cos(x-z)\), puis en fonction de \(\cos x\) et enfin en fonction de \(f(x)\).
+            \end{enumerate}
+        \item 
+            \begin{enumerate}
+                \item En utilisant l'étude réalisée à la question 2, prouver que la restriction de \(f\) à l'intervalle \(\intervalleff{0}{\pi/3}\) est bijective à valeurs dans un intervalle \(J\) à préciser. On notera \(\fonctionR{h}{J}{\intervalleff{0}{\pi/3}}\) sa bijection réciproque.
+                    \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(y=f(x)\). En utilisant la question 5, exprimer \(\frac{x+g(x)}{2}\) et \(\frac{x-g(x)}{2}\), puis \(x\) en fonction de \(y\) et en déduire la fonction \(h\).
+            \end{enumerate}
+    \end{enumerate}
+\end{exercice}
+
