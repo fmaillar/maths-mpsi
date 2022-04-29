@@ -406,3 +406,8 @@ breaklinks = true%
 %
 \usepackage{caption}
 \usepackage{subcaption}
+% La compteur de chapitre est resetter quand on change de partie
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
