@@ -296,12 +296,6 @@ Dans le cas où on sait déjà que \(E=E'\) et \(F=F'\), on a
   f=g \iff \forall x \in E \quad f(x)=g(x).
 \end{equation}
 %
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.7]{application.png}
-  \caption{Représentation de la notion d'application}
-  \label{chap3-fig:application}
-\end{figure}
 %
 \subsection{Restriction et prolongement}
 \label{chap3-restrictionetprolongement}
@@ -503,15 +497,80 @@ Ces deux égalités signifient que \(f^{-1}(\complement_F A) = \complement_E f^{
   \end{enumerate}
 \end{proof}
 %
+\begin{figure}
+  \centering
+%  \includegraphics[scale=0.7]{application.png}
+  \begin{tikzpicture}[label distance=1mm]
+    % draw the sets
+    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
+    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
+    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+
+    % the texts
+    \node at (3,0) {\LARGE$f(X)$};
+    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
+    \node at (-5.5,0) {\huge$X$};
+    \node at (5.5,0) {\huge$Y$};
+    \node at (0,-3) {\huge$f: X \to Y$};
+
+    % the points in the sets (here I just create nodes to use them later on to position
+    % the circles and the arrows
+    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
+    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
+    \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    %
+    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
+    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
+    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
+    \node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+    \node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+    \node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+
+    % position the elements in the sets (at the nodes we just created)
+    \fill[blue] (x1) circle (2pt);
+    \fill[blue] (x2) circle (2pt);
+    \fill[blue] (x3) circle (2pt);
+    \fill[blue] (x4) circle (2pt);
+    \fill[blue] (x5) circle (2pt);
+    \fill[blue] (x6) circle (2pt);
+    \fill[blue] (x7) circle (2pt);
+    %
+    \fill[red] (y1) circle (2pt);
+    \fill[red] (y2) circle (2pt);
+    \fill[red] (y3) circle (2pt);
+    \fill[red] (y4) circle (2pt);
+    \fill[red] (y5) circle (2pt);
+    \fill[red] (y6) circle (2pt);
+
+    % draw the arrows
+    \draw[->] (x1) --  (y1);
+    \node[fill=white] at (0,0) {$f$};    
+    \draw[->] (x2) -- (y2);    
+    \node[fill=white] at (0,1) {$f$};
+    \draw[->] (x3) -- (y3);
+    \node[fill=white] at (0,-0.75) {$f$};
+    \draw[->] (x7) -- (y1);
+    \node[fill=white] at (-1,-0.4) {$f$};
+\end{tikzpicture}
+\caption{Représentation de la notion d'application, d'image directe et d'image réciproque}
+\label{chap3-fig:application}
+\end{figure}
+
 \section{Injection, surjection, bijection}
 \label{chap3-sec:injsurbij}
 %
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.7, width=\textwidth]{Surjection_Injection_Bijection.png}
-  \caption[Surjection, injection et bijection]{Représentation graphique des notions de surjection, injection et bijection}
-  \label{chap3-fig:surjinjbij}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[scale=0.7, width=\textwidth]{Surjection_Injection_Bijection.png}
+%  \caption[Surjection, injection et bijection]{Représentation graphique des notions de surjection, injection et bijection}
+%  \label{chap3-fig:surjinjbij}
+%\end{figure}
 %
 \subsection{Équation}
 \label{chap3-subsec:equation}
@@ -549,7 +608,7 @@ Soient \(E\) et \(F\) des ensembles et \(f: E \longrightarrow F\) une applicatio
   \begin{equation}
     \exists (x,x') \in E^2 \quad x \neq x' \text{~et~} f(x) = f(x').
   \end{equation}
-  La figure~\ref{chap3-fig:surjinjbij} donne une représentation graphique de la notion d'injection.
+  La figure~\ref{chap3-fig:inj} donne une représentation graphique de la notion d'injection.
 \end{defdef}
 \begin{theo}
   La composée de deux applications injectives est injective.
@@ -559,7 +618,69 @@ Soient \(E\) et \(F\) des ensembles et \(f: E \longrightarrow F\) une applicatio
 
 Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \circ f(x')\). Comme \(g\) est injective alors \(f(x)=f(x')\). Comme \(f\) est injective alors \(x=x'\). Finalement \(g \circ f\) est injective.
 \end{proof}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[label distance=1mm]
+    % draw the sets
+    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
+    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
+    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
 
+    % the texts
+    \node at (3,0) {\LARGE$f(X)$};
+    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
+    \node at (-5.5,0) {\huge$X$};
+    \node at (5.5,0) {\huge$Y$};
+    \node at (0,-3) {\huge$f: X \to Y$};
+
+    % the points in the sets (here I just create nodes to use them later on to position
+    % the circles and the arrows
+    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
+    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
+    %\node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    %\node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    %\node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    %\node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    %
+    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
+    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
+    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
+    \node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+    \node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+    \node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+
+    % position the elements in the sets (at the nodes we just created)
+    \fill[blue] (x1) circle (2pt);
+    \fill[blue] (x2) circle (2pt);
+    \fill[blue] (x3) circle (2pt);
+    %\fill[blue] (x4) circle (2pt);
+    %\fill[blue] (x5) circle (2pt);
+    %\fill[blue] (x6) circle (2pt);
+    %\fill[blue] (x7) circle (2pt);
+    %
+    \fill[red] (y1) circle (2pt);
+    \fill[red] (y2) circle (2pt);
+    \fill[red] (y3) circle (2pt);
+    \fill[red] (y4) circle (2pt);
+    \fill[red] (y5) circle (2pt);
+    \fill[red] (y6) circle (2pt);
+
+    % draw the arrows
+    \draw[->] (x1) --  (y1);
+    \node[fill=white] at (0,0) {$f$};    
+    \draw[->] (x2) -- (y2);    
+    \node[fill=white] at (0,1) {$f$};
+    \draw[->] (x3) -- (y3);
+    \node[fill=white] at (0,-0.75) {$f$};
+    %\draw[->] (x7) -- (y1);
+    %\node[fill=white] at (-1,-0.4) {$f$};
+\end{tikzpicture}
+    \caption[Injection]{Représentation graphique d'une injection}
+    \label{chap3-fig:inj}
+\end{figure}
 \subsubsection{Surjection}
 \label{chap3-subsubsec:surjection}
 \begin{defdef}
@@ -573,7 +694,7 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
   \begin{equation}
     \exists y \in F \ \forall x \in E \quad y \neq f(x).
   \end{equation}
-  La figure~\ref{chap3-fig:surjinjbij} donne une représentation graphique de la notion de surjection.
+  La figure~\ref{chap3-fig:surj} donne une représentation graphique de la notion de surjection.
 \end{defdef}
 \begin{prop}
   Une application \(f:E \longrightarrow F\) est surjective si et seulement si \(f(E)=F\).
@@ -589,7 +710,69 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
 
   Soit \(z \in G\), puisque \(g\) est surjective alors il existe \(y \in F\) tel que \(z=g(y)\). Puisque \(y \in F\) et que \(f\) est surjective alors il existe \(x\) tel que \(y=f(x)\). Finalement, on a montré qu'il existe \(x \in E\) tel que \(z=g(y)=g(f(x))= g \circ f(x)\).
 \end{proof}
-%
+\begin{figure}
+    \centering
+   \begin{tikzpicture}[label distance=1mm]
+    % draw the sets
+    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
+    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
+    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+
+    % the texts
+    \node at (3,0) {\LARGE$f(X)$};
+    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
+    \node at (-5.5,0) {\huge$X$};
+    \node at (5.5,0) {\huge$Y$};
+    \node at (0,-3) {\huge$f: X \to Y$};
+
+    % the points in the sets (here I just create nodes to use them later on to position
+    % the circles and the arrows
+    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
+    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
+    \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    %
+    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
+    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
+    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
+    %\node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+    %\node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+    %\node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+
+    % position the elements in the sets (at the nodes we just created)
+    \fill[blue] (x1) circle (2pt);
+    \fill[blue] (x2) circle (2pt);
+    \fill[blue] (x3) circle (2pt);
+    \fill[blue] (x4) circle (2pt);
+    \fill[blue] (x5) circle (2pt);
+    \fill[blue] (x6) circle (2pt);
+    \fill[blue] (x7) circle (2pt);
+    %
+    \fill[red] (y1) circle (2pt);
+    \fill[red] (y2) circle (2pt);
+    \fill[red] (y3) circle (2pt);
+    %\fill[red] (y4) circle (2pt);
+    %\fill[red] (y5) circle (2pt);
+    %\fill[red] (y6) circle (2pt);
+
+    % draw the arrows
+    \draw[->] (x1) --  (y1);
+    \node[fill=white] at (0,0) {$f$};    
+    \draw[->] (x2) -- (y2);    
+    \node[fill=white] at (0,1) {$f$};
+    \draw[->] (x3) -- (y3);
+    \node[fill=white] at (0,-0.75) {$f$};
+    \draw[->] (x7) -- (y1);
+    \node[fill=white] at (-1,-0.4) {$f$};
+    \end{tikzpicture} 
+\caption[Surjection]{Représentation graphique d'une surjection}
+\label{chap3-fig:surj}
+\end{figure}
 \subsection{Bijection}
 \label{chap3-subsubsec:bijection}
 Soient \(E\) et \(F\) deux ensemble et \(f:E \longrightarrow F\) une application.
@@ -601,7 +784,7 @@ Soient \(E\) et \(F\) deux ensemble et \(f:E \longrightarrow F\) une application
   \item \(\forall y \in F \ \exists! x \in E \quad f(x)=y\);
   \item \(f\) est injective et surjective.
   \end{itemize}
-La figure~\ref{chap3-fig:surjinjbij} donne une représentation graphique de la notion de bijection.
+La figure~\ref{chap3-fig:bij} donne une représentation graphique de la notion de bijection.
 \end{defdef}
 %
 Soit \(f=(E,F,\Gamma)\) une bijection, on pose 
@@ -624,7 +807,70 @@ Pour tout \(y \in F\) il existe un unique \(x \in E\) tel que \(y=f(x)\) ---~dé
 \begin{proof}
 Soit \((x,y) \in E \times F\) tels que \(x=f^{-1}(y) \iff y=f(x)\). Pour tous élément \(x\) de \(E\), il existe un unique \(y\) dans \(F\) tel que \(x=f^{-1}(y)\). Donc \(f^{-1}\) est une bijection.
 \end{proof}
-%
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[label distance=1mm]
+    % draw the sets
+    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
+    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
+    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+
+    % the texts
+    \node at (3,0) {\LARGE$f(X)$};
+    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
+    \node at (-5.5,0) {\huge$X$};
+    \node at (5.5,0) {\huge$Y$};
+    \node at (0,-3) {\huge$f: X \to Y$};
+
+    % the points in the sets (here I just create nodes to use them later on to position
+    % the circles and the arrows
+    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
+    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
+    %\node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    %\node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    %\node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    %\node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    %
+    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
+    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
+    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
+    %\node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+    %\node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+    %\node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+
+    % position the elements in the sets (at the nodes we just created)
+    \fill[blue] (x1) circle (2pt);
+    \fill[blue] (x2) circle (2pt);
+    \fill[blue] (x3) circle (2pt);
+    %\fill[blue] (x4) circle (2pt);
+    %\fill[blue] (x5) circle (2pt);
+    %\fill[blue] (x6) circle (2pt);
+    %\fill[blue] (x7) circle (2pt);
+    %
+    \fill[red] (y1) circle (2pt);
+    \fill[red] (y2) circle (2pt);
+    \fill[red] (y3) circle (2pt);
+    %\fill[red] (y4) circle (2pt);
+    %\fill[red] (y5) circle (2pt);
+    %\fill[red] (y6) circle (2pt);
+
+    % draw the arrows
+    \draw[->] (x1) --  (y1);
+    \node[fill=white] at (0,0) {$f$};    
+    \draw[->] (x2) -- (y2);    
+    \node[fill=white] at (0,1) {$f$};
+    \draw[->] (x3) -- (y3);
+    \node[fill=white] at (0,-0.75) {$f$};
+    %\draw[->] (x7) -- (y1);
+    %\node[fill=white] at (-1,-0.4) {$f$};
+    \end{tikzpicture}
+    \caption[Bijection]{Représentation graphique d'une bijection}
+    \label{chap3-fig:bij}
+\end{figure}
+
 \begin{theo}[Caractérisation des bijections]
 Soient \(E\) et \(F\) des ensembles et \(f:E \longrightarrow F\) une application. L'application \(f\) est une bijection si et seulement s'il existe une application \(g:F \longrightarrow E\) telle que \(g \circ f = \Id_E\) et \(f \circ g = \Id_F\). Auquel cas \(g\) est unique et \(g=f^{-1}\).
 \end{theo}

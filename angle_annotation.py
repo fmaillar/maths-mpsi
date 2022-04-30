@@ -65,13 +65,12 @@ from matplotlib.transforms import IdentityTransform, TransformedBbox, Bbox
 
 
 class AngleAnnotation(Arc):
-    """
-    Draws an arc between two vectors which appears circular in display space.
-    """
+    """Draws arc between two vectors which appears circular."""
+
     def __init__(self, xy, p1, p2, size=75, unit="points", ax=None,
                  text="", textposition="inside", text_kw=None, **kwargs):
         """
-        Parameters
+        Parameters.
         ----------
         xy, p1, p2 : tuple or array of two floats
             Center position and two points. Angle annotation is drawn between
@@ -192,12 +191,11 @@ class AngleAnnotation(Arc):
             def R90(a, r, w, h):
                 if a < np.arctan(h/2/(r+w/2)):
                     return np.sqrt((r+w/2)**2 + (np.tan(a)*(r+w/2))**2)
-                else:
-                    c = np.sqrt((w/2)**2+(h/2)**2)
-                    T = np.arcsin(c * np.cos(np.pi/2 - a + np.arcsin(h/2/c))/r)
-                    xy = r * np.array([np.cos(a + T), np.sin(a + T)])
-                    xy += np.array([w/2, h/2])
-                    return np.sqrt(np.sum(xy**2))
+                c = np.sqrt((w/2)**2+(h/2)**2)
+                T = np.arcsin(c * np.cos(np.pi/2 - a + np.arcsin(h/2/c))/r)
+                xy = r * np.array([np.cos(a + T), np.sin(a + T)])
+                xy += np.array([w/2, h/2])
+                return np.sqrt(np.sum(xy**2))
 
             def R(a, r, w, h):
                 aa = (a % (np.pi/4))*((a % (np.pi/2)) <= np.pi/4) + \

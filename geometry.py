@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 """
 Created on Sat Mar 12 22:30:36 2022
 
@@ -8,146 +9,189 @@ Created on Sat Mar 12 22:30:36 2022
 import math
 import matplotlib.pyplot as plt
 
+
 class Point:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
+    """The class Point defines a point."""
+
+    def __init__(self, xabs, yord):
+        self.xabs = xabs
+        self.yord = yord
+
+    def coord(self):
+        """Permet de definir les coordonnées."""
+        return (self.xabs, self.yord)
+
+    # def str_coord(self):
+    #     """Renvoie une STR avec les coord."""
+    #     return str(self.xabs)
 
     def affichage(self):
-        return '('+str(self.x)+';'+str(self.y)+')'
+        """Permet d'afficher le point."""
+        return '('+str(self.xabs)+';'+str(self.yord)+')'
 
-    def milieu(self,p):
-        return Point((self.x+p.x)/2,(self.y+p.y)/2)
+    def milieu(self, point):
+        """Defini le milieu de deux points."""
+        return Point((self.xabs+point.xabs)/2, (self.yord+point.yord)/2)
 
-    def vecteur(self,p):
-        return Vecteur(p.x-self.x,p.y-self.y)
+    def vecteur(self, point):
+        """Renvoie le vecteur directeur entre deux points."""
+        return Vecteur(point.xabs-self.xabs, point.yord-self.yord)
 
-    def distance(self,p):
-        return self.vecteur(p).norme()
+    def distance(self, point):
+        """Renvoie la distance entre deux points."""
+        return self.vecteur(point).norme()
+
 
 class Vecteur:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
+    """Cette classe défini un vecteur."""
+
+    def __init__(self, xabs, yord):
+        self.xabs = xabs
+        self.yord = yord
 
     def affichage(self):
-        return '('+str(self.x)+';'+str(self.y)+')'
+        """Idem que pour la classe Point."""
+        return '('+str(self.xabs)+';'+str(self.yord)+')'
 
     def norme(self):
-        return math.hypot(self.x,self.y)
+        """Renvoie la norme d'un vecteur."""
+        return math.hypot(self.xabs, self.yord)
 
-    def __add__(self,v):
-        return Vecteur(self.x+v.x,self.y+v.y)
+    def __add__(self, vec):
+        """C'est l'addition de vecteurs."""
+        return Vecteur(self.xabs+vec.xabs, self.yord+vec.yord)
 
-    def __rmul__(self,r):
-        return Vecteur(self.x*r,self.y*r)
+    def __rmul__(self, facteur):
+        """C'est la multiplication par un scalaire."""
+        return Vecteur(self.xabs*facteur, self.yord*facteur)
 
-    def __mul__(self,v):
-        return self.x*v.x+self.y*v.y
+    def __mul__(self, vec):
+        """C'est la multiplication entre vecteurs."""
+        return self.xabs*vec.xabs+self.yord*vec.yord
 
-    def colin(self,v):
-        return self.x*v.y==self.y*v.x
+    def colin(self, vec):
+        """Renvoie Vrai si deux vecteurs sont colinéaires."""
+        return self.xabs*vec.yord == self.yord*vec.xabs
 
-    def ortho(self,v):
-        return self*v==0
+    def ortho(self, vec):
+        """Renvoie Vrai si deux vecteurs sont orthogonaux."""
+        return self*vec == 0
 
 
 class Droite:
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
+    """Cette classe définit les droites."""
+
+    def __init__(self, a_abs, b_ord):
+        self.a_abs = a_abs
+        self.b_ord = b_ord
 
     def directeur(self):
-        return self.a.vecteur(self.b)
+        """Renvoie le vecteur directeur de la droite."""
+        return self.a_abs.vecteur(self.b_ord)
 
     def normal(self):
-        return Vecteur(-self.directeur().y,self.directeur().x)
+        """Renvoie le vecteur normal de la droite."""
+        return Vecteur(-self.directeur().yord, self.directeur().xabs)
 
     def cartesienne(self):
-        return '('+str(self.normal().x)+')x+('+str(self.normal().y)+')y='+str(self.normal().x*self.a.x+self.normal().y*self.a.y)
+        """Renvoie l'équation cartésienne de la droite."""
+        return '(' + str(self.normal().xabs) + ')x + (' + str(self.normal().yord) + \
+            ')y = ' + str(self.normal().xabs * self.a_abs.xabs +
+                          self.normal().yord * self.a_abs.yord)
 
-    def cd(self):
-        return self.directeur().y/self.directeur().x
+    def coefdir(self):
+        """Renvoie le coefficient directeur de la droite."""
+        return self.directeur().yord/self.directeur().abs
 
     def oalo(self):
-        return self.a.y-self.cd()*self.a.x
+        """Renvoie l'ordonnée à l'origine de la droite."""
+        return self.a_abs.yord-self.coefdir()*self.a_abs.xabs
 
     def reduite(self):
-        return 'y='+str(self.cd())+'x+('+str(self.oalo())+')'
+        """Renvoie l'équation réduite de la droite."""
+        return 'y='+str(self.coefdir())+'x+('+str(self.oalo())+')'
 
-    def parallele(self,d):
-        return self.directeur().colin(d.directeur())
+    def parallele(self, droite):
+        """Renvoie Vrai si les droites sont parallèles."""
+        return self.directeur().colin(droite.directeur())
 
-    def perpendiculaire(self,d):
-        return self.normal().ortho(d.normal())
+    def perpendiculaire(self, droite):
+        """Renvoie Vrai si les droites sont perpendiculaires."""
+        return self.normal().ortho(droite.normal())
 
-a=Point(-1,3.0)
-b=Point(5,1)
-c=Point(1,5)
 
-u=c.vecteur(a)
-v=c.vecteur(b)
+def homothety(coeff, centre, point):
+    """Cette methode definit une homot de rapport coeff et de centre Centre."""
+    temp = Vecteur(point.xabs-centre.xabs, point.yord-centre.yord)
+    outx = centre.xabs + coeff*temp.xabs
+    outy = centre.yord + coeff*temp.yord
+    return Point(outx, outy)
 
-print(u*v)
-print(u.ortho(v))
 
-d1=Droite(c,a)
-d2=Droite(c,b)
+A = Point(-1, 3.0)
+B = Point(5, 1)
+C = Point(1, 5)
 
-print(d1.perpendiculaire(d2))
+u = C.vecteur(A)
+vb = C.vecteur(B)
 
-def Homothety(mu, S, M):
-    Temp = Vecteur(M.x-S.x, M.y-S.y)
-    Outx = S.x + mu*Temp.x
-    Outy = S.y + mu*Temp.y
-    return Point(Outx, Outy)
-    
-C = Point(-4,0)
+# print(u*vb)
+# print(u.ortho(vb))
+
+d1 = Droite(C, A)
+d2 = Droite(C, B)
+
+# print(d1.perpendiculaire(d2))
+
+C1 = Point(-4, 0)
 L = 2
-M1 = Point(-1,2)
-M2 = Point(1,2)
-M3 = Point(1,-2)
-M4 = Point(-1,-2)
+M1 = Point(-1, 2)
+M2 = Point(1, 2)
+M3 = Point(1, -2)
+M4 = Point(-1, -2)
 
-N1 = Homothety(L, C, M1)
-N2 = Homothety(L, C, M2)
-N3 = Homothety(L, C, M3)
-N4 = Homothety(L, C, M4)
+N1 = homothety(L, C1, M1)
+N2 = homothety(L, C1, M2)
+N3 = homothety(L, C1, M3)
+N4 = homothety(L, C1, M4)
 
-M_X = [M1.x, M2.x, M3.x, M4.x]
-M_Y = [M1.y, M2.y, M3.y, M4.y]
-N_X = [N1.x, N2.x, N3.x, N4.x]
-N_Y = [N1.y, N2.y, N3.y, N4.y]
+M_X = [M1.xabs, M2.xabs, M3.xabs, M4.xabs]
+M_Y = [M1.yord, M2.yord, M3.yord, M4.yord]
+N_X = [N1.xabs, N2.xabs, N3.xabs, N4.xabs]
+N_Y = [N1.yord, N2.yord, N3.yord, N4.yord]
 
 
-p1 = [(M1.x, M1.y), (N1.x, N1.y)]
-p2 = [(M2.x, M2.y), (N2.x, N2.y)]
-p3 = [(M3.x, M3.y), (N3.x, N3.y)]
-p4 = [(M4.x, M4.y), (N4.x, N4.y)]
+p1 = [(M1.xabs, M1.yord), (N1.xabs, N1.yord)]
+p2 = [(M2.xabs, M2.yord), (N2.xabs, N2.yord)]
+p3 = [(M3.xabs, M3.yord), (N3.xabs, N3.yord)]
+p4 = [(M4.xabs, M4.yord), (N4.xabs, N4.yord)]
 
-p = [(N1.x, N1.y), (N2.x, N2.y), (N3.x, N3.y), (N4.x, N4.y), (N1.x, N1.y)]
+pZ = [(N1.xabs, N1.yord), (N2.xabs, N2.yord), (N3.xabs, N3.yord),
+      (N4.xabs, N4.yord), (N1.xabs, N1.yord)]
 
-pt1 = [(C.x, C.y), (M1.x, M1.y)]
-pt2 = [(C.x, C.y), (M2.x, M2.y)]
-pt3 = [(C.x, C.y), (M3.x, M3.y)]
-pt4 = [(C.x, C.y), (M4.x, M4.y)]
+pt1 = [(C1.xabs, C1.yord), (M1.xabs, M1.yord)]
+pt2 = [(C1.xabs, C1.yord), (M2.xabs, M2.yord)]
+pt3 = [(C1.xabs, C1.yord), (M3.xabs, M3.yord)]
+pt4 = [(C1.xabs, C1.yord), (M4.xabs, M4.yord)]
 
-pt = [(M1.x, M1.y), (M2.x, M2.y), (M3.x, M3.y), (M4.x, M4.y), (M1.x, M1.y)]
+pt = [(M1.xabs, M1.yord), (M2.xabs, M2.yord), (M3.xabs, M3.yord),
+      (M4.xabs, M4.yord), (M1.xabs, M1.yord)]
 
 fig, ax = plt.subplots()
 fig.canvas.draw()
 ax.set_aspect(1)
 ax.scatter(M_X, M_Y)
-ax.scatter(N_X, N_Y, color = 'red')
-ax.plot(C.x, C.y, marker='+')
-ax.annotate('C', (C.x, C.y+0.1))
-ax.plot(*zip(*p), color = 'green')
-ax.plot(*zip(*p1), *zip(*p2), *zip(*p3), *zip(*p4), color = 'green')
-ax.plot(*zip(*pt), ls='--', color = 'orange')
-ax.plot(*zip(*pt1),*zip(*pt2), *zip(*pt3), *zip(*pt4), ls='--', color = 'orange')
-plt.xlim((-6,7))
-plt.ylim((-6,6))
+ax.scatter(N_X, N_Y, color='red')
+ax.plot(C1.xabs, C1.yord, marker='+')
+ax.annotate('C', (C1.xabs, C1.yord+0.1))
+ax.plot(*zip(*pZ), color='green')
+ax.plot(*zip(*p1), *zip(*p2), *zip(*p3), *zip(*p4), color='green')
+ax.plot(*zip(*pt), ls='--', color='orange')
+ax.plot(*zip(*pt1), *zip(*pt2), *zip(*pt3), *zip(*pt4), ls='--',
+        color='orange')
+plt.xlim((-6, 7))
+plt.ylim((-6, 6))
 ax.grid('True')
-plt.title("Homothétie de rapport {l} et de centre C({x}, {y})".format(l=L, x=C.x, y=C.y))
+plt.title(f'Homothétie de rapport {L} et de centre C({C1.xabs}, {C1.yord})')
 plt.savefig('homothetie.png')
 plt.close('all')

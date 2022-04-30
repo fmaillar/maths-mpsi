@@ -7,21 +7,22 @@ Created on Thu Apr 21 12:58:45 2022
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
-mpl.rcParams['text.usetex'] = True
-
+from numpy.random import seed, random_sample
 # from mpl_toolkits.mplot3d import Axes3D
-
+mpl.rcParams['text.usetex'] = True
 
 NewGreen = '#2ca02c'
 NewBlue = '#1f77b4'
 NewOrange = '#ff7f0e'
+
+seed(29078)
 
 N = 25
 a = 1
 Sup = 2
 c = 3
 y = np.zeros(N)
-x = (c-a)*np.random.random_sample(N) + a
+x = (c-a)*random_sample(N) + a
 
 Majorant = x > Sup
 
