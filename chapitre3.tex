@@ -499,30 +499,29 @@ Ces deux égalités signifient que \(f^{-1}(\complement_F A) = \complement_E f^{
 %
 \begin{figure}
   \centering
-%  \includegraphics[scale=0.7]{application.png}
-  \begin{tikzpicture}[label distance=1mm]
+\begin{tikzpicture}[label distance=1mm]
     % draw the sets
     \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
     \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
-    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
-    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
 
     % the texts
-    \node at (3,0) {\LARGE$f(X)$};
-    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
-    \node at (-5.5,0) {\huge$X$};
-    \node at (5.5,0) {\huge$Y$};
-    \node at (0,-3) {\huge$f: X \to Y$};
+%    \node at (3,0) {\LARGE$f(E)$};
+%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
+    \node at (-5.5,0) {\huge$E$};
+    \node at (5.5,0) {\huge$F$};
+    \node at (0,-3) {\huge$f: E \longrightarrow F$};
 
     % the points in the sets (here I just create nodes to use them later on to position
     % the circles and the arrows
     % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
-    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
     \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
     \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
-    \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
-    \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
-    \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
     \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
     %
     \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
@@ -536,9 +535,9 @@ Ces deux égalités signifient que \(f^{-1}(\complement_F A) = \complement_E f^{
     \fill[blue] (x1) circle (2pt);
     \fill[blue] (x2) circle (2pt);
     \fill[blue] (x3) circle (2pt);
-    \fill[blue] (x4) circle (2pt);
-    \fill[blue] (x5) circle (2pt);
-    \fill[blue] (x6) circle (2pt);
+    %\fill[blue] (x4) circle (2pt);
+    %\fill[blue] (x5) circle (2pt);
+    %\fill[blue] (x6) circle (2pt);
     \fill[blue] (x7) circle (2pt);
     %
     \fill[red] (y1) circle (2pt);
@@ -550,15 +549,15 @@ Ces deux égalités signifient que \(f^{-1}(\complement_F A) = \complement_E f^{
 
     % draw the arrows
     \draw[->] (x1) --  (y1);
-    \node[fill=white] at (0,0) {$f$};    
+    \node[fill=white] at (0,0.5) {$f$};    
     \draw[->] (x2) -- (y2);    
     \node[fill=white] at (0,1) {$f$};
     \draw[->] (x3) -- (y3);
-    \node[fill=white] at (0,-0.75) {$f$};
+    \node[fill=white] at (0,-0.8) {$f$};
     \draw[->] (x7) -- (y1);
     \node[fill=white] at (-1,-0.4) {$f$};
 \end{tikzpicture}
-\caption{Représentation de la notion d'application, d'image directe et d'image réciproque}
+\caption{Représentation de la notion d'application}
 \label{chap3-fig:application}
 \end{figure}
 
@@ -619,31 +618,32 @@ Soient \(E\) et \(F\) des ensembles et \(f: E \longrightarrow F\) une applicatio
 Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \circ f(x')\). Comme \(g\) est injective alors \(f(x)=f(x')\). Comme \(f\) est injective alors \(x=x'\). Finalement \(g \circ f\) est injective.
 \end{proof}
 \begin{figure}
-    \centering
     \begin{tikzpicture}[label distance=1mm]
     % draw the sets
     \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
     \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
-    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
-    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
 
     % the texts
-    \node at (3,0) {\LARGE$f(X)$};
-    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
-    \node at (-5.5,0) {\huge$X$};
-    \node at (5.5,0) {\huge$Y$};
-    \node at (0,-3) {\huge$f: X \to Y$};
+%    \node at (3,0) {\LARGE$f(E)$};
+%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
+    \node at (-5.5,0) {\huge$E$};
+    \node at (5.5,0) {\huge$F$};
+    \node at (0,-3) {\huge$f: E \longrightarrow F$};
+    %\node at (0,-4) {\huge$\forall X \subset E \ f^{-1}(f(X)) = X$};
+    \node at (0,-4) {\huge Injection};
 
     % the points in the sets (here I just create nodes to use them later on to position
     % the circles and the arrows
     % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
-    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
     \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
     \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
-    %\node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
-    %\node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
-    %\node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
-    %\node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    % \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
     %
     \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
     \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
@@ -659,7 +659,7 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
     %\fill[blue] (x4) circle (2pt);
     %\fill[blue] (x5) circle (2pt);
     %\fill[blue] (x6) circle (2pt);
-    %\fill[blue] (x7) circle (2pt);
+    % \fill[blue] (x7) circle (2pt);
     %
     \fill[red] (y1) circle (2pt);
     \fill[red] (y2) circle (2pt);
@@ -670,11 +670,11 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
 
     % draw the arrows
     \draw[->] (x1) --  (y1);
-    \node[fill=white] at (0,0) {$f$};    
+    \node[fill=white] at (0,0.5) {$f$};    
     \draw[->] (x2) -- (y2);    
     \node[fill=white] at (0,1) {$f$};
     \draw[->] (x3) -- (y3);
-    \node[fill=white] at (0,-0.75) {$f$};
+    \node[fill=white] at (0,-0.8) {$f$};
     %\draw[->] (x7) -- (y1);
     %\node[fill=white] at (-1,-0.4) {$f$};
 \end{tikzpicture}
@@ -712,45 +712,47 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
 \end{proof}
 \begin{figure}
     \centering
-   \begin{tikzpicture}[label distance=1mm]
+    \begin{tikzpicture}[label distance=1mm]
     % draw the sets
     \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
     \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
-    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
-    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
 
     % the texts
-    \node at (3,0) {\LARGE$f(X)$};
-    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
-    \node at (-5.5,0) {\huge$X$};
-    \node at (5.5,0) {\huge$Y$};
-    \node at (0,-3) {\huge$f: X \to Y$};
+%    \node at (3,0) {\LARGE$f(E)$};
+%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
+    \node at (-5.5,0) {\huge$E$};
+    \node at (5.5,0) {\huge$F$};
+    \node at (0,-3) {\huge$f: E \longrightarrow F$};
+    %\node at (0,-4) {\huge$\forall Y \subset F \ f(f^{-1}(Y)) = Y$};
+    \node at (0,-4) {\huge Surjection};
 
     % the points in the sets (here I just create nodes to use them later on to position
     % the circles and the arrows
     % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
-    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
     \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
     \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
-    \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
-    \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
-    \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
     \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
     %
     \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
     \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
     \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
-    %\node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
-    %\node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
-    %\node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+%    \node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+%    \node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+%    \node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
 
     % position the elements in the sets (at the nodes we just created)
     \fill[blue] (x1) circle (2pt);
     \fill[blue] (x2) circle (2pt);
     \fill[blue] (x3) circle (2pt);
-    \fill[blue] (x4) circle (2pt);
-    \fill[blue] (x5) circle (2pt);
-    \fill[blue] (x6) circle (2pt);
+    %\fill[blue] (x4) circle (2pt);
+    %\fill[blue] (x5) circle (2pt);
+    %\fill[blue] (x6) circle (2pt);
     \fill[blue] (x7) circle (2pt);
     %
     \fill[red] (y1) circle (2pt);
@@ -762,14 +764,14 @@ Soient \(x\) et \(x'\) deux éléments de \(E\) tels que \(g \circ f(x) = g \cir
 
     % draw the arrows
     \draw[->] (x1) --  (y1);
-    \node[fill=white] at (0,0) {$f$};    
+    \node[fill=white] at (0,0.5) {$f$};    
     \draw[->] (x2) -- (y2);    
     \node[fill=white] at (0,1) {$f$};
     \draw[->] (x3) -- (y3);
-    \node[fill=white] at (0,-0.75) {$f$};
+    \node[fill=white] at (0,-0.8) {$f$};
     \draw[->] (x7) -- (y1);
     \node[fill=white] at (-1,-0.4) {$f$};
-    \end{tikzpicture} 
+\end{tikzpicture}
 \caption[Surjection]{Représentation graphique d'une surjection}
 \label{chap3-fig:surj}
 \end{figure}
@@ -808,31 +810,32 @@ Pour tout \(y \in F\) il existe un unique \(x \in E\) tel que \(y=f(x)\) ---~dé
 Soit \((x,y) \in E \times F\) tels que \(x=f^{-1}(y) \iff y=f(x)\). Pour tous élément \(x\) de \(E\), il existe un unique \(y\) dans \(F\) tel que \(x=f^{-1}(y)\). Donc \(f^{-1}\) est une bijection.
 \end{proof}
 \begin{figure}
-    \centering
-    \begin{tikzpicture}[label distance=1mm]
+\begin{tikzpicture}[label distance=1mm]
     % draw the sets
     \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
     \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
-    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
-    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
 
     % the texts
-    \node at (3,0) {\LARGE$f(X)$};
-    \node at (-3.5,0) {\LARGE$f^{-1}(Y)$};
-    \node at (-5.5,0) {\huge$X$};
-    \node at (5.5,0) {\huge$Y$};
-    \node at (0,-3) {\huge$f: X \to Y$};
+%    \node at (3,0) {\LARGE$f(E)$};
+%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
+    \node at (-5.5,0) {\huge$E$};
+    \node at (5.5,0) {\huge$F$};
+    \node at (0,-3) {\huge$f: E \longrightarrow F$};
+    %\node at (0,-4) {\huge$\forall X \subset E \ f^{-1}(f(X)) = X$};
+    \node at (0,-4) {\huge Bijection};
 
     % the points in the sets (here I just create nodes to use them later on to position
     % the circles and the arrows
     % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
-    \node[label=below:{\large$x_1$}] (x1) at (-2.5,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
     \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
     \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
-    %\node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
-    %\node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
-    %\node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
-    %\node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    % \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
     %
     \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
     \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
@@ -848,7 +851,7 @@ Soit \((x,y) \in E \times F\) tels que \(x=f^{-1}(y) \iff y=f(x)\). Pour tous é
     %\fill[blue] (x4) circle (2pt);
     %\fill[blue] (x5) circle (2pt);
     %\fill[blue] (x6) circle (2pt);
-    %\fill[blue] (x7) circle (2pt);
+    % \fill[blue] (x7) circle (2pt);
     %
     \fill[red] (y1) circle (2pt);
     \fill[red] (y2) circle (2pt);
@@ -859,14 +862,14 @@ Soit \((x,y) \in E \times F\) tels que \(x=f^{-1}(y) \iff y=f(x)\). Pour tous é
 
     % draw the arrows
     \draw[->] (x1) --  (y1);
-    \node[fill=white] at (0,0) {$f$};    
+    \node[fill=white] at (0,0.5) {$f$};    
     \draw[->] (x2) -- (y2);    
     \node[fill=white] at (0,1) {$f$};
     \draw[->] (x3) -- (y3);
-    \node[fill=white] at (0,-0.75) {$f$};
+    \node[fill=white] at (0,-0.8) {$f$};
     %\draw[->] (x7) -- (y1);
     %\node[fill=white] at (-1,-0.4) {$f$};
-    \end{tikzpicture}
+\end{tikzpicture}
     \caption[Bijection]{Représentation graphique d'une bijection}
     \label{chap3-fig:bij}
 \end{figure}
