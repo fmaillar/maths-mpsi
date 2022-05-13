@@ -37,6 +37,7 @@ y'+ay=0.
 \label{theo:1}
 Soit une application \(f \in \K^{\R}\). \(f\) est solution de l'équation \eqref{eq:Hdiff} si et seulement s'il existe un scalaire \(\lambda \in \K\) tel que pour tous réel \(t\), \(f(t)=\lambda \e^{-at}\).
 \end{theo}
+On illustre ce théorème par la figure \ref{fig:eqdiff1}.
 \begin{proof}
 Soit \(\lambda \in \K\) tel que , \(\fonction{f}{\R}{\K}{t}{\lambda \e^{-at}}\). \(f\) est dérivable et
 \begin{equation}
@@ -50,7 +51,12 @@ Soit maintenant une fonction \(f\) solution de l'équation \eqref{eq:Hdiff} sur 
 \end{equation}
 la fonction \(g\) est donc constante sur \(\R\). Il existe donc un réel \(\lambda\) tel que \(\forall t \in \R \quad g(t)=\lambda\). Par conséquent \(f(t)=g(t)\e^{-at}=\lambda \e^{-at}\).
 \end{proof}
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{Equa-diff.png}
+    \caption{Exemple de représentation graphique de solution de l'équation différentielle \(y' = -y/4\)}
+    \label{fig:eqdiff1}
+\end{figure}
 \subsection[Solution équation homogène coefficients non constants]{Solution d'une équation différentielle linéaire homogène du premier ordre à coefficients non constants}
 Soient maintenant \(I\) un intervalle réel, \(a\) une fonction de \(I\) vers \(\K\) au moins continue sur \(I\). On considère l'équation
 \begin{equation}

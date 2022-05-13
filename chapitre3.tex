@@ -296,6 +296,70 @@ Dans le cas où on sait déjà que \(E=E'\) et \(F=F'\), on a
   f=g \iff \forall x \in E \quad f(x)=g(x).
 \end{equation}
 %
+\begin{figure}
+  \centering
+\begin{tikzpicture}[label distance=1mm]
+    % draw the sets
+    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
+    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
+%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
+%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
+
+    % the texts
+%    \node at (3,0) {\LARGE$f(E)$};
+%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
+    \node at (-5.5,0) {\huge$E$};
+    \node at (5.5,0) {\huge$F$};
+    \node at (0,-3) {\huge$f: E \longrightarrow F$};
+
+    % the points in the sets (here I just create nodes to use them later on to position
+    % the circles and the arrows
+    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
+    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
+    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
+    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
+    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
+    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
+    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
+    \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
+    %
+    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
+    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
+    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
+    \node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
+    \node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
+    \node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
+
+    % position the elements in the sets (at the nodes we just created)
+    \fill[blue] (x1) circle (2pt);
+    \fill[blue] (x2) circle (2pt);
+    \fill[blue] (x3) circle (2pt);
+    %\fill[blue] (x4) circle (2pt);
+    %\fill[blue] (x5) circle (2pt);
+    %\fill[blue] (x6) circle (2pt);
+    \fill[blue] (x7) circle (2pt);
+    %
+    \fill[red] (y1) circle (2pt);
+    \fill[red] (y2) circle (2pt);
+    \fill[red] (y3) circle (2pt);
+    \fill[red] (y4) circle (2pt);
+    \fill[red] (y5) circle (2pt);
+    \fill[red] (y6) circle (2pt);
+
+    % draw the arrows
+    \draw[->] (x1) --  (y1);
+    \node[fill=white] at (0,0.5) {$f$};    
+    \draw[->] (x2) -- (y2);    
+    \node[fill=white] at (0,1) {$f$};
+    \draw[->] (x3) -- (y3);
+    \node[fill=white] at (0,-0.8) {$f$};
+    \draw[->] (x7) -- (y1);
+    \node[fill=white] at (-1,-0.4) {$f$};
+\end{tikzpicture}
+\caption{Représentation de la notion d'application}
+\label{chap3-fig:application}
+\end{figure}
+
 %
 \subsection{Restriction et prolongement}
 \label{chap3-restrictionetprolongement}
@@ -346,7 +410,15 @@ Une représentation graphique de la composition est donnée par la figure~\ref{c
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.4]{compose.png}
+  \begin{tikzpicture}[roundnode/.style={circle},]
+    \node[roundnode,fill=blue!20, draw=blue!60] at (-2cm,0) (ensembleE) {E};
+    \node[roundnode,fill=red!20, draw=red!60] at (0,0) (ensembleF) {F};
+    \node[roundnode,fill=green!20, draw=green!60] at (2cm,0)  (ensembleG) {G};    
+    \path[->] (ensembleE.east) edge[bend left=25] node[pos=0.5,above] {\(f\)} (ensembleF.west);
+    \path[->] (ensembleF.east) edge[bend right=25] node[pos=0.5,below] {\(g\)} (ensembleG.west);    
+    \node at (0,-1cm) {$h = g \circ f \in G^E$};
+\end{tikzpicture}
+%  \includegraphics[scale=0.4]{compose.png}
   \caption{Représentation graphique de la composition}
   \label{chap3-fig:compose}
 \end{figure}
@@ -497,70 +569,6 @@ Ces deux égalités signifient que \(f^{-1}(\complement_F A) = \complement_E f^{
   \end{enumerate}
 \end{proof}
 %
-\begin{figure}
-  \centering
-\begin{tikzpicture}[label distance=1mm]
-    % draw the sets
-    \filldraw[fill=blue!20, draw=blue!60] (-4.5,0) circle (3cm);
-    \filldraw[fill=red!20, draw=red!60] (4.5,0) circle (3cm);
-%    \filldraw[fill=green!20, draw=green!60] (3.2,0) circle (1.5cm);
-%    \filldraw[fill=yellow!20, draw=yellow!60] (-3.2,0) circle (1.5cm);
-
-    % the texts
-%    \node at (3,0) {\LARGE$f(E)$};
-%    \node at (-3.35,0) {\LARGE$f^{-1}(f(E))$};
-    \node at (-5.5,0) {\huge$E$};
-    \node at (5.5,0) {\huge$F$};
-    \node at (0,-3) {\huge$f: E \longrightarrow F$};
-
-    % the points in the sets (here I just create nodes to use them later on to position
-    % the circles and the arrows
-    % \node[mycirc, label=right:{$x-1$}] at (0,0) {};
-    \node[label=below:{\large$x_1$}] (x1) at (-3.7,1) {};
-    \node[label=below:{\large$x_2$}] (x2) at (-3,1) {};
-    \node[label=below:{\large$x_3$}] (x3) at (-2.75,-0.75) {};
-    % \node[label=below:{\large$x_4$}] (x4) at (-7,-0.5) {};
-    % \node[label=below:{\large$x_5$}] (x5) at (-5,-1.5) {};
-    % \node[label=below:{\large$x_6$}] (x6) at (-4.8,1.5) {};
-    \node[label=below:{\large$x_7$}] (x7) at (-3.5,-0.75) {};
-    %
-    \node[label=below:{\large$y_1$}] (y1) at (2,0) {};
-    \node[label=below:{\large$y_2$}] (y2) at (3,1) {};
-    \node[label=below:{\large$y_3$}] (y3) at (3,-1) {};
-    \node[label=below:{\large$y_4$}] (y4) at (5,-1.3) {};
-    \node[label=below:{\large$y_5$}] (y5) at (5.5,1.5) {};
-    \node[label=below:{\large$y_6$}] (y6) at (6.5,1) {};
-
-    % position the elements in the sets (at the nodes we just created)
-    \fill[blue] (x1) circle (2pt);
-    \fill[blue] (x2) circle (2pt);
-    \fill[blue] (x3) circle (2pt);
-    %\fill[blue] (x4) circle (2pt);
-    %\fill[blue] (x5) circle (2pt);
-    %\fill[blue] (x6) circle (2pt);
-    \fill[blue] (x7) circle (2pt);
-    %
-    \fill[red] (y1) circle (2pt);
-    \fill[red] (y2) circle (2pt);
-    \fill[red] (y3) circle (2pt);
-    \fill[red] (y4) circle (2pt);
-    \fill[red] (y5) circle (2pt);
-    \fill[red] (y6) circle (2pt);
-
-    % draw the arrows
-    \draw[->] (x1) --  (y1);
-    \node[fill=white] at (0,0.5) {$f$};    
-    \draw[->] (x2) -- (y2);    
-    \node[fill=white] at (0,1) {$f$};
-    \draw[->] (x3) -- (y3);
-    \node[fill=white] at (0,-0.8) {$f$};
-    \draw[->] (x7) -- (y1);
-    \node[fill=white] at (-1,-0.4) {$f$};
-\end{tikzpicture}
-\caption{Représentation de la notion d'application}
-\label{chap3-fig:application}
-\end{figure}
-
 \section{Injection, surjection, bijection}
 \label{chap3-sec:injsurbij}
 %
