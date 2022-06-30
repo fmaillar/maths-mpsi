@@ -8,3 +8,8 @@ mathematiques.mtc*
 mathematiques.toc
 mathematiques.maf
 mathematiques.out
+*.png
+!Triangle-de-Pascal-01-3.png
+.pylint.d/
+__pycache__/
+auto/
