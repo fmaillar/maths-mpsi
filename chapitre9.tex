@@ -402,10 +402,10 @@ Cas particulier :
 \end{prop}
 Par convention, l'ensemble vide est fini et son cardinal vaut \(0\).
 \begin{proof}
-  Soient deux bijections \(\varphi:\intervalleentier{1}{n} \longmapsto E\) et \(\psi:\intervalleentier{1}{p} \longmapsto E\) (on note \(\psi^-1:E \longmapsto \intervalleentier{1}{p}\)). Par composé de deux bijections, l'application \(\psi^-1\circ \varphi: \intervalleentier{1}{n} \longmapsto \intervalleentier{1}{p}\) est une bijection. Si on applique le théorème~\ref{theo:ensemblefini} on en déduit donc que \(n=p\).
+    Soient deux bijections \(\varphi:\intervalleentier{1}{n} \longmapsto E\) et \(\psi:\intervalleentier{1}{p} \longmapsto E\) (on note \(\psi^{-1}:E \longmapsto \intervalleentier{1}{p}\)). Par composé de deux bijections, l'application \(\psi^{-1}\circ \varphi: \intervalleentier{1}{n} \longmapsto \intervalleentier{1}{p}\) est une bijection. Si on applique le théorème~\ref{theo:ensemblefini} on en déduit donc que \(n=p\).
 \end{proof}
 \begin{prop}
-  Soit \(E\) un ensemble fini et \(F\) un ensemble tel qu'il existe une bijection \(\varphi:E\longmapsto F\). alors \(F\) est un ensemble fini de même cardinal que \(E\).
+  Soit \(E\) un ensemble fini et \(F\) un ensemble tel qu'il existe une bijection \(\varphi:E\longmapsto F\). Alors \(F\) est un ensemble fini de même cardinal que \(E\).
 \end{prop}
 \begin{proof}
   \(E\) est fini, donc il existe un entier \(n\) et une bijection \(\psi:\intervalleentier{1}{n} \longmapsto E\). Ainsi l'application \(\varphi\circ\psi:\intervalleentier{1}{n} \longmapsto F\) est bijective, puisque c'est la composée de deux applications bijectives. Donc \(F\) est un ensemble fini et \(\Card F=n=\Card E\).
@@ -424,7 +424,7 @@ La notion de cardinal correspond à la notion intuitive du nombre d'éléments d
   Soit \(\P\) une partie non vide et majorée de \(\N\). Alors il existe un entier non nul \(n\) et une bijection croissante \(\varphi:\intervalleentier{1}{n} \longmapsto \P\). \(\P\) est donc fini et de plus le couple \((n,\varphi)\) est unique.
 \end{theo}
 \begin{proof}
-  La démonstration est hors programme, elle se fait par récurrence sur \(M\in\N^*\) et la propriété est \(\P(M)\) Pour toute partie non vide \(\P\) de \(\N\) et majorée par M, il existe un unique couple \((n,\varphi)\) avec \(n\neq 0\) et \(\varphi:\intervalleentier{1}{n} \longmapsto \P\) bijective et croissante. 
+  La démonstration est hors programme, elle se fait par récurrence sur \(M\in\N^*\) et la propriété est \(\P(M)\) Pour toute partie non vide \(\P\) de \(\N\) et majorée par \(M\), il existe un unique couple \((n,\varphi)\) avec \(n\neq 0\) et \(\varphi:\intervalleentier{1}{n} \longmapsto \P\) bijective et croissante. 
 \end{proof}
 
 \begin{enumerate}
@@ -481,7 +481,7 @@ Grâce au théorème de récurrence, on peut affirmer que la propriété \(\P(p)
   \end{enumerate}
 \end{proof}
 
-Si \(E\) est un ensemble infini, \(E\) peut par exemple être en bijection avec une de ces parties strictes. Comme par exemple \(\N\) et l'ensemble des entiers pairs sont en bijection.
+Si \(E\) est un ensemble infini, \(E\) peut par exemple être en bijection avec une de ses parties strictes. Comme par exemple \(\N\) et l'ensemble des entiers pairs sont en bijection.
 
 \subsection{Opérations sur les ensembles finis}
 
@@ -527,7 +527,7 @@ Si \(E\) est un ensemble infini, \(E\) peut par exemple être en bijection avec 
   \begin{equation}
     \Card(E)=\Card(E\cap F)+\Card(E\cap \bar{F}).
   \end{equation}
-  Montrons que \(E\cup F =(E\cap \bar{F}) \cup F\). D'une part \(E \cap \bar{F} \subset E\) donc \((E\cap \bar{F}) \cup F \subset E\cup F\). D'autre part, soit un élément \(x\), alors si \(x \in \)E\( \cup F\) trois cas de figure se présentent~:
+  Montrons que \(E\cup F =(E\cap \bar{F}) \cup F\). D'une part \(E \cap \bar{F} \subset E\) donc \((E\cap \bar{F}) \cup F \subset E\cup F\). D'autre part, soit un élément \(x\), alors si \(x \in E \cup F\) trois cas de figure se présentent~:
   \begin{itemize}
   \item si \(x\in F\) alors \(x \in (E\cap \bar{F}) \cup F\);
   \item si \(x \in E\) et \(x \in F\) alors \(x \in (E\cap \bar{F}) \cup F\);
@@ -741,7 +741,7 @@ Soit \(E\) un ensemble fini. On note pour tout entier naturel \(p\), \(\Part_p(E
     Démontrer que pour tout naturel \(n\) et tout réel \(x\) \[\sin^{(n)}(x) = \sin\left(x + n\frac{\pi}{2}\right) \qquad \cos^{(n)}(x) = \cos\left(x + n\frac{\pi}{2}\right)\]
 \end{exercice}
 \begin{exercice}
-    Soient les nombres \(C(n,p)\) définis par~:\[\begin{cases} C(0,0)=1 \\ \forall n \in \N^* C(n,0)=1 \\ \forall p \in \N^* C(0,p) = 0 \\ \forall (n,p) \in (\N^*)^2 C(n,p) = C(n-1,p) = C(n-1,p-1) \end{cases}\]
+    Soient les nombres \(C(n,p)\) définis par~:\[\begin{cases} C(0,0)=1 \\ \forall n \in \N^* \ C(n,0)=1 \\ \forall p \in \N^* \ C(0,p) = 0 \\ \forall (n,p) \in (\N^*)^2 \ C(n,p) = C(n-1,p) = C(n-1,p-1) \end{cases}\]
     Démontrer que pour tout naturels \(n\) et \(p\), \(C(n,p) = \binom{n}{p}\).
 \end{exercice}
 \begin{exercice}
