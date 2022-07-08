@@ -4,3 +4,8 @@ Pour générer les figures, il est nécessaire d'utiliser Python (3.10 ici) et s
 Pour les tracer, il suffit de lancer cette comande dans un interpréteur positionné dans le dossier racine (cd /home/.../maths-mpsi/) :
 
 import *
+
+Pour générer le cours en pdf, on peut lancer (autant de fois que nécesasire, 2 3 fois initialement pour générer les lof
+lot ...) la commande:
+
+pdflatex mathematiques
