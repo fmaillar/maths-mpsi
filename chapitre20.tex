@@ -6,7 +6,7 @@
 %
 \section{Fonctions en escalier, continues par morceaux}
 
-Soient deux réels \(a\) et \(b\) tel que \(a<b\) et deux naturels \(n\) et \(m\) tous les deux non nuls. On travaille dans cette section sur le segment \(\intervalleff{a}{b}\).
+Soient deux réels \(a\) et \(b\) tels que \(a<b\) et deux naturels \(n\) et \(m\) tous les deux non nuls. On travaille dans cette section sur le segment \(\intervalleff{a}{b}\).
 
 \subsection{Subdivision d'un segment}
 
@@ -14,7 +14,7 @@ Soient deux réels \(a\) et \(b\) tel que \(a<b\) et deux naturels \(n\) et \(m\
   On appelle subdivision du segment \(\intervalleff{a}{b}\) toute famille finie \((a_i)_{i \in \intervalleentier{0}{n}}\) de \(n+1\) points de \(\intervalleff{a}{b}\) telle que~:
   \begin{equation}
     \begin{cases}
-      a_0=1 \\
+      a_0=a \\
       a_n=b \\
       \forall i \in \intervalleentier{0}{n} \quad a_i<a_{i+1}
     \end{cases}.
@@ -74,7 +74,7 @@ Supposons qu'on ait \(\sigma=(0,1/2,1)\) et \(\sigma'=(0,1/3,2/3,1)\) alors \(\d
 
 On peut avoir besoin de construire une subdivision adaptée à la fois à deux fonctions \(f\) et \(g\).
 
-Soient \(\sigma=(a_i)_{i \in \intervalleentier{0}{n}}\) et \(\sigma'=(b_i)_{i \in \intervalleentier{0}{m}}\) deux subdivisions de \(\intervalleff{a}{b}\). On note \(A(\sigma)\) (resp. \(A(\sigma')\)) l'ensemble des points de \(\sigma\) (resp. \(\sigma'\)). Il existe une unique subdivision \(s\) de \(\intervalleff{a}{b}\) telle que \(A(s)=A(\sigma) \cup A(\sigma')\). La subdivision \(s\) est appelée la réunion de \(\sigma\) et \(\sigma'\). Elle st plus fine que \(\sigma\) et \(\sigma'\). Si \((f,g) \in \E(\intervalleff{a}{b})^2\) sont telles que~:
+Soient \(\sigma=(a_i)_{i \in \intervalleentier{0}{n}}\) et \(\sigma'=(b_i)_{i \in \intervalleentier{0}{m}}\) deux subdivisions de \(\intervalleff{a}{b}\). On note \(A(\sigma)\) (resp. \(A(\sigma')\)) l'ensemble des points de \(\sigma\) (resp. \(\sigma'\)). Il existe une unique subdivision \(s\) de \(\intervalleff{a}{b}\) telle que \(A(s)=A(\sigma) \cup A(\sigma')\). La subdivision \(s\) est appelée la réunion de \(\sigma\) et \(\sigma'\). Elle est plus fine que \(\sigma\) et \(\sigma'\). Si \((f,g) \in \E(\intervalleff{a}{b})^2\) sont telles que~:
 \begin{itemize}
 \item \(\sigma\) est adpatée à \(f\);
 \item \(\sigma'\) est adpatée à \(g\);
@@ -85,7 +85,7 @@ alors \(s\) est adaptée à \(f\) et à \(g\).
   L'ensemble \(\E(\intervalleff{a}{b})\) est un sous espace vectoriel du \(\R\)-espace vectoriel \(\R^{\intervalleff{a}{b}}\).
 \end{prop}
 \begin{proof}
-  Par définition, \(\E(\intervalleff{a}{b}) \subset \R^{\intervalleff{a}{b}}\). Ensuite il est non vide puisqu'il contient les fonctions constantes. Soient \(f\) et \(g\) dans \(\E(\intervalleff{a}{b})\) et un réel \(\lambda\). Soient \(\sigma\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\) et \(\sigma'\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(g\). Notons \(s\) la réunion de ces dex subdivisions. On pose \(s=(a_i)_{i \in \intervalleentier{0}{n}}\), elle est adaptée à \(f\) et à \(g\) donc \(f\) et \(g\) sont constantes sur tous les intervalles \(\intervalleoo{a_i}{a_{i+1}}\). Par conséquent, \(\lambda f +g\) est constante sur tous les intervalles \(\intervalleoo{a_i}{a_{i+1}}\). Donc \(\lambda f +g\) est une fonction en escalier et \(s\) est une subdivision adaptée à \(\lambda f+g\).
+  Par définition, \(\E(\intervalleff{a}{b}) \subset \R^{\intervalleff{a}{b}}\). Ensuite il est non vide puisqu'il contient les fonctions constantes. Soient \(f\) et \(g\) dans \(\E(\intervalleff{a}{b})\) et un réel \(\lambda\). Soient \(\sigma\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\) et \(\sigma'\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(g\). Notons \(s\) la réunion de ces deux subdivisions. On pose \(s=(a_i)_{i \in \intervalleentier{0}{n}}\), elle est adaptée à \(f\) et à \(g\) donc \(f\) et \(g\) sont constantes sur tous les intervalles \(\intervalleoo{a_i}{a_{i+1}}\). Par conséquent, \(\lambda f +g\) est constante sur tous les intervalles \(\intervalleoo{a_i}{a_{i+1}}\). Donc \(\lambda f +g\) est une fonction en escalier et \(s\) est une subdivision adaptée à \(\lambda f+g\).
 \end{proof}
 
 \begin{prop}
@@ -125,7 +125,7 @@ Les fonctions continues sur \(\intervalleff{a}{b}\) sont continues par morceaux 
   Les fonctions continues par morceaux sur \(\intervalleff{a}{b}\) sont bornées sur \(\intervalleff{a}{b}\). C'est-à-dire \(\CM(\intervalleff{a}{b}) \subset \Born(\intervalleff{a}{b})\).
 \end{prop}
 \begin{proof}
-  Soit une fonction \(f \in \CM(\intervalleff{a}{b})\) et \(\sigma=(a_i)_{0 \leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). Alors pour tout \(i \in \intervalleentier{1}{n}\), \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) est continue et admet des limites finies à droite en \(a_{i}\) et à gauche en \(a_{i+1}\). On définit le prolongement par contniuité \(g_i\) de \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) à l'intervalle fermé \(\intervalleff{a_i}{a_{i+1}}\). Alors \(g_i\) est continue sur le segment \(\intervalleff{a_i}{a_{i+1}}\) donc bornée (d'après le théorème des bornes). Il existe alors \(M_i \in \R_+\) tel que pour tout \(x \in \intervalleff{a_i}{a_{i+1}} \) on ait \(\abs{g_i(x)} \leqslant M_i\). D'où
+  Soit une fonction \(f \in \CM(\intervalleff{a}{b})\) et \(\sigma=(a_i)_{0 \leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). Alors pour tout \(i \in \intervalleentier{1}{n}\), \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) est continue et admet des limites finies à droite en \(a_{i}\) et à gauche en \(a_{i+1}\). On définit le prolongement par continuité \(g_i\) de \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) à l'intervalle fermé \(\intervalleff{a_i}{a_{i+1}}\). Alors \(g_i\) est continue sur le segment \(\intervalleff{a_i}{a_{i+1}}\) donc bornée (d'après le théorème des bornes, Théorème \ref{theo:bornes}). Il existe alors \(M_i \in \R_+\) tel que pour tout \(x \in \intervalleff{a_i}{a_{i+1}} \) on ait \(\abs{g_i(x)} \leqslant M_i\). D'où
   \begin{equation}
     \forall x \in \intervalleoo{a_i}{a_{i+1}} \quad \abs{f(x)}=\abs{g_i(x)} \leqslant M_i.
   \end{equation}
@@ -271,7 +271,7 @@ Soient \(\sigma\) et \(\sigma'\) deux subdivisions quelconque adaptées à \(f\)
     \int_a^b f = \int_a^b g.
   \end{equation}
 \end{prop}
-En particulier, une fonction constante égale à \(k \in \R\) sur \(\intervalleff{a}{b}\) suauf en un nombre fini de points est en escalier sur \(\intervalleff{a}{b}\) et
+En particulier, une fonction constante égale à \(k \in \R\) sur \(\intervalleff{a}{b}\) sauf en un nombre fini de points est en escalier sur \(\intervalleff{a}{b}\) et
 \begin{equation}
   \int_a^b f =k(b-a).
 \end{equation}
@@ -300,7 +300,7 @@ En particulier, une fonction constante égale à \(k \in \R\) sur \(\intervallef
   \end{equation}
 \end{prop}
 \begin{proof}
-  Supposons que \(f \in \E(\intervalleff{a}{b})\). Soit \(\sigma=(a_i)_{0\leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). soit \(\sigma'\) la subdivision obtenue en ajoutant \(c\) à \(\sigma\). Soit \((\lambda_i)_{0 \leqslant i \leqslant n}\in\R^{n+1}\) la famille des valeurs constantes de \(f\) sur \(\sigma'\). On note \(\sigma_1'\) (resp. \(\sigma_2'\)) les restrictions de \(\sigma'\) à \(\intervalleff{a}{c}\) (resp. \(\intervalleff{c}{b}\)). La fonction \(f_{|\intervalleff{a}{c}}\) (resp. \(f_{|intervalleff{c}{b}}\)) est constante sur les intervalles ouverts de \(\sigma_1'\) (resp. \(\sigma_2'\)). Alors ces deux fonctions sont en escaliers.
+  Supposons que \(f \in \E(\intervalleff{a}{b})\). Soit \(\sigma=(a_i)_{0\leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). Soit \(\sigma'\) la subdivision obtenue en ajoutant \(c\) à \(\sigma\). Soit \((\lambda_i)_{0 \leqslant i \leqslant n}\in\R^{n+1}\) la famille des valeurs constantes de \(f\) sur \(\sigma'\). On note \(\sigma_1'\) (resp. \(\sigma_2'\)) les restrictions de \(\sigma'\) à \(\intervalleff{a}{c}\) (resp. \(\intervalleff{c}{b}\)). La fonction \(f_{|\intervalleff{a}{c}}\) (resp. \(f_{|\intervalleff{c}{b}}\)) est constante sur les intervalles ouverts de \(\sigma_1'\) (resp. \(\sigma_2'\)). Alors ces deux fonctions sont en escaliers.
   \begin{align}
     \int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} &= I(f_{|\intervalleff{a}{c}},\sigma_1')+I(f_{|\intervalleff{c}{b}},\sigma_2') \\
 &=\sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + (c-a_{i_0-1})\lambda_{i_0} + (a_{i_0}-c)\lambda_{i_0} + \sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i \\
@@ -394,7 +394,7 @@ Cependant on peut avoir \(\int_a^b f \geqslant 0\) sans que \(f \geqslant \tilde
 
 \subsection{Définition de l'intégrale}
 
-Soit une fonction \(f\) continue par morceaux sur \(\intervalleff{a}{b}\). On définitles ensembles \(\E^{-}(f)=\{\varphi \in \E(\intervalleff{a}{b}), \varphi \leqslant f\}\) et \(\E^{+}(f)=\{\psi \in \E(\intervalleff{a}{b}), \psi \geqslant f\}\). La fonction \(f\) est bornée, donc il existe deux réels \(m\) et \(M\) tels que 
+Soit une fonction \(f\) continue par morceaux sur \(\intervalleff{a}{b}\). On définit les ensembles \(\E^{-}(f)=\{\varphi \in \E(\intervalleff{a}{b}), \varphi \leqslant f\}\) et \(\E^{+}(f)=\{\psi \in \E(\intervalleff{a}{b}), \psi \geqslant f\}\). La fonction \(f\) est bornée, donc il existe deux réels \(m\) et \(M\) tels que 
 \begin{equation}
   \tilde{m} \leqslant f \leqslant \tilde{M},
 \end{equation}
@@ -452,7 +452,7 @@ Si \(f \in \E(\intervalleff{a}{b})\), alors \(f \in \E^{-}(\intervalleff{a}{b})\
 
 Ce qu'on a appelé \(\int_a^b f\) au sens des fonctions continues par morceaux est donc la même intégrale.
 
-\emph{Interprétation graphique}~: Si \(f\) est continue par morceaux sur \(\intervalleff{a}{b}\), et si elle est positive, alors \(\int_a^b f\) représente l'aire entre l'axe des abcisses et la courbe représentative de \(f\).
+\emph{Interprétation graphique}~: Si \(f\) est continue par morceaux sur \(\intervalleff{a}{b}\), et si elle est positive, alors \(\int_a^b f\) représente l'aire entre l'axe des abscisses et la courbe représentative de \(f\).
 
 \subsection{Linéarité de l'intégrale}
 

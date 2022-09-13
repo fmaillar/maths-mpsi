@@ -636,9 +636,9 @@ Finalement c'est une base de \(E \times F\) et elle est de cardinal \(n+p\) donc
   On sait déjà que \(E^*\) est de dimension finie égale à \(p\). Il suffit de montrer que \(\B^*\) est génératrice ou qu'elle est libre. Soit \(\varphi \in E^*\). Pour tout \(k \in \llbracket 1,p \rrbracket\) on a~:
   \begin{align}
     \varphi(e_k)&= \varphi(e_k) \sum_{i=1}^p \delta_{ik} \\
-    &=\sum_{i=1}^p e_i^*(e_k) \varphi(e_k) \\
-    &=\sum_{i=1}^p \varphi(e_i) e_i^*(e_k)  \\
-    &=\left(\sum_{i=1}^p \varphi(e_i) e_i^* \right)(e_k)
+                &= \sum_{i=1}^p \varphi(e_i) \delta_{ik} \\ 
+                &=\sum_{i=1}^p \varphi(e_i) e_i^*(e_k)  \\
+                &=\left(\sum_{i=1}^p \varphi(e_i) e_i^* \right)(e_k)
   \end{align}
   donc \(\varphi = \sum_{i=1}^p \varphi(e_i) e_i^*\) et alors \(\B^*\) est génératrice. Alors c'est une base.
 \end{proof}
@@ -752,9 +752,16 @@ d'où l'égalité \(\rg(\X) = p= \max \courbe\).
   \end{equation}
 \end{theo}
 \begin{proof}
-  \(E_1\) et \(E_2\) sont des sous-espace vectoriel de \(E\) donc \(E_1+E_2\) est un sous-espace vectoriel de \(E\). Soit \(x \in E\). Comme \(\E\) est une base de \(E\) il existe \((x_i)_{i \in I} \in \K^I\) telle que \(x= \sum_{i \in I} x_i e_i\). Comme \((I_1,I_2)\) est une partition de \(I\), on a aussi \(x = \sum_{i \in I_1} x_i e_i + \sum_{i \in I_2} x_i e_i\) donc \(x \in E_1+E_2\). On a montré \(E \subset E_1+E_2\). Comme l'autre inclusion est établie, on a l'égalité \(E=E_1+E_2\).
+  \(E_1\) et \(E_2\) sont des sous-espace vectoriel de \(E\) donc \(E_1+E_2\) est un sous-espace vectoriel de \(E\). Soit \(x \in E\). Comme \(\E\) est une base de \(E\) il existe \((x_i)_{i \in I} \in \K^I\) telle que \(x= \sum_{i \in I} x_i e_i\). 
 
-Il reste à démontrer que la somme est directe. Montrons que le vecteur nul s'écrit de manière unique sous la forme \(0=x_1+x_2\) avec \((x_1,x_2) \in E_1 \times E_2\). Soit \((x_1,x_2) \in E_1 \times E_2\) tel que \(0=x_1+x_2\). Il existe alors deux familles \((\alpha_i)_{i \in I_1} \in \K^{I_1}\) et \((\alpha_i)_{i \in I_1} \in \K^{I_2}\) telles que \(x_1 = \sum_{i \in I_1} x_i e_i\) et  \(x_2 = \sum_{i \in I_2} x_i e_i\). Comme \((I_1,I_2)\) est une partition de \(I\), leur somme vaut \(0 = \sum_{i \in I} x_i e_i\). Comme \(\E\) est une base de \(E\), elle est libre et donc la famille \((\alpha_i)_{i \in I}\) est nulle. Donc \(x_1\) et \(x_2\) sont tous les deux nuls.
+  Comme \((I_1,I_2)\) est une partition de \(I\), on a aussi \(x = \sum_{i \in I_1} x_i e_i + \sum_{i \in I_2} x_i e_i\) donc \(x \in E_1+E_2\). 
+
+  On a montré \(E \subset E_1+E_2\). Comme l'autre inclusion est établie, on a l'égalité \(E=E_1+E_2\).
+
+\medskip
+Il reste à démontrer que la somme est directe. Montrons que le vecteur nul s'écrit de manière unique sous la forme \(0=x_1+x_2\) avec \((x_1,x_2) \in E_1 \times E_2\). 
+
+Soit \((x_1,x_2) \in E_1 \times E_2\) tel que \(0=x_1+x_2\). Il existe alors deux familles \((\alpha_i)_{i \in I_1} \in \K^{I_1}\) et \((\alpha_i)_{i \in I_1} \in \K^{I_2}\) telles que \(x_1 = \sum_{i \in I_1} \alpha_i e_i\) et  \(x_2 = \sum_{i \in I_2} \alpha_i e_i\). Comme \((I_1,I_2)\) est une partition de \(I\), leur somme vaut \(0 = \sum_{i \in I} \alpha_i e_i\). Comme \(\E\) est une base de \(E\), elle est libre et donc la famille \((\alpha_i)_{i \in I}\) est nulle. Donc \(x_1\) et \(x_2\) sont tous les deux nuls.
 
 La somme est donc directe \(E = E_1 \oplus E_2\).
 \end{proof}
@@ -849,6 +856,7 @@ Soit \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i e_i =
 \subsection{Théorème du rang}
 
 \begin{theo}
+    \label{theo:rang}
   Soient \(E\) un \(\K\)-espaces vectoriel de dimension finie, \(F\) un \(\K\)-espace vectoriel de dimension quelconque et \(u \in \Lin{E}{F}\). Alors le sous-espace vectoriel \(\Image(u)\) de \(F\) est de dimension finie et on a
   \begin{equation}
     \Dim_\K E = \Dim_\K \Ker(u) + \Dim_\K \Image(u).
@@ -859,7 +867,7 @@ Soit \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i e_i =
 \begin{proof}
   \(E\) est de dimension finie, le noyau \(\Ker(u)\) est un sous-espace vectoriel de \(E\) donc il existe un supplémentaire \(S\) du noyau dans \(E\) : \(E= S \oplus \Ker(u)\).
   
-  D'après le théorème de préparation au théorème du rang (chapitre précédent)~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\) est de dimension finie, \(S\) est aussi de dimension finie comme étant un sous-espace vectoriel de \(E\). Alors \(\Image(u)\) est aussi de dimension finie et 
+  D'après le théorème de préparation au théorème du rang (Théorème~\ref{theo:preptheorang})~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\) est de dimension finie, \(S\) est aussi de dimension finie comme étant un sous-espace vectoriel de \(E\). Alors \(\Image(u)\) est aussi de dimension finie et 
   \begin{equation}
     \Dim_\K \Image(u) = \Dim_\K S = \Dim_\K E - \Dim_\K \Ker(u).
   \end{equation}
@@ -1168,8 +1176,8 @@ Vérifions que ces définitions sont équivalentes.
 
 \(1 \implies 3\) : \(H=\Ker(f)\) avec \(f \in E^* \setminus\{0\}\). \(f\) est non nulle donc son rang vaut \(1\) et \(E\) est de dimension finie alors en appliquant le théorème du rang on a
 \begin{align}
-  \Dim E &= \Dim \Ker(f) +\rg(f)
-  n= \Dim H +1
+  \Dim E &= \Dim \Ker(f) +\rg(f) \\
+       n &= \Dim H +1
 \end{align}
 alors \(\Dim H = n-1\).
 
