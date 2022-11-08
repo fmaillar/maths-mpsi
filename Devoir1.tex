@@ -3,11 +3,11 @@
 \begin{exercice}
     Résoudre dans \(\R\) les équations suivantes~:
     \begin{align}
-        \sqrt{x-4\sqrt{x-4}} + \sqrt{x+5-6\sqrt{x-4}} & = 1 \\
-                                                \cos x & = \sqrt{3} \sin x \\
-                       2 \ln(x+1) + \ln(3x+5) + \ln(2) & = \ln(6x+1)+\ln(x-2)+\ln(x+2) \\
-                              5^x - 5^{x+1} + 2^{3x-1} & = 0 \\
-                                   \argch x + \argsh x & = 1
+        \sqrt{x-4\sqrt{x-4}} + \sqrt{x+5-6\sqrt{x-4}}  & = 1 \label{eq:DS1eq1}\\
+                                                \cos x & = \sqrt{3} \sin x \label{eq:DS1eq2}\\
+                       2 \ln(x+1) + \ln(3x+5) + \ln(2) & = \ln(6x+1)+\ln(x-2)+\ln(x+2) \label{eq:DS1eq3}\\
+                              5^x - 5^{x+1} + 2^{3x-1} & = 0 \label{eq:DS1eq4}\\
+                                   \argch x + \argsh x & = 1 \label{eq:DS1eq5}
     \end{align}
 \end{exercice}
 \begin{exercice}
@@ -87,4 +87,26 @@
             \end{enumerate}
     \end{enumerate}
 \end{exercice}
+\chapter{Corrigé du devoir surveillé n°1}
+\begin{exercice}
+    Les deux membres de l'équation~\eqref{eq:DS1eq1} ont un sens si et seulement si \(x \geq 4\), \(x-4\sqrt{x-4} \geq 0\) et \(x-6\sqrt{x-4}+5\geq 0\). Pour \(x \geq 4\),
+    \[x - 4\sqrt{x-4} = (\sqrt{x-4}-2)^2 \text{~et~} x-6\sqrt{x-4}+5 = (\sqrt{x-4}-3)^2.\]
+    On cherche donc les solutions éventuelles dans l'intervalle \(\intervallefo{4}{+\infty}\). Pour tout réel \(x\) de cet intervalle, on pose \(t = \sqrt{x-4}\). Ainsi, \(x = t^2+4\) et l'équation~\eqref{eq:DS1eq1} devient~:
+    \[\abs{t-2} + \abs{t-3} = 1.\] Le réel \(t\) varie dans \(\R+\), donc trois cas de figure se présentent~:
+    \begin{itemize}
+        \item \(0 \leq t < 2\), c'est-à-dire \(4\leq x \leq 8\),  alors l'équation s'écrit \(2-t+3-t=1\), soit \(t=2\), il n'y a pas de solutions dans cet intervalle;
+        \item \(2 \leq t \leq 3\), c'est-à-dire \(8\leq x \leq 13\), alors l'équation s'écrit \(t-2+3-t=1\), et l'égalité est toujours vraie ;
+        \item \(t > 3\), c'est-à-dire \(x > 13\), alors l'équation s'écrit \(t-2+t-3=1\), soit \(t=3\), il n'y a donc pas de solutions dans cet intervalle.
+    \end{itemize}
+    L'ensemble des solutions de~\eqref{eq:DS1eq1} est \(\S_1 = \intervalleff{8}{13}\).
 
+    On cherche une solution de l'équation~\eqref{eq:DS1eq2} sur \(\R\). Pour tout réel \(x\),
+    \begin{align*}
+        \cos x = \sqrt{3}\sin x &\iff \cos x = \tan\frac{\pi}{3} \sin x \\
+                                &\iff \cos x \cos \frac{\pi}{3} = \sin x \sin\frac{\pi}{3} \\
+                                &\iff \cos\left(x+\frac{\pi}{3}\right) = 0 \\
+                                &\iff \exists k \in \Z x +\frac{\pi}{3} = \frac{\pi}{2}+k\pi.
+    \end{align*}
+    L'ensemble des solution de l'équation~\eqref{eq:DS1eq2} est \(\S_2 = \frac{\pi}{6}+\pi\Z = \enstq{\frac{\pi}{6}+k\pi}{k \in \Z}\).
+    On commence par déterminer l'ensemble des réels \(x\) pour lesquels les deux membres de l'équation~\eqref{eq:DS1eq3} son définis. Le premier membre est défini si et seulement si \(x>-1\) et \(x>-5/3\) ; le second si et seulement si \(x>-1/6\), \(x>2\) et \(x>-2\).
+\end{exercice}

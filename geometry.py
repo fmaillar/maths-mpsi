@@ -119,6 +119,14 @@ class Droite:
         return self.normal().ortho(droite.normal())
 
 
+class Cercle:
+    """Cette classe définit les cercles"""
+
+    def __init__(self, Center, Radius):
+        self.Center = Center
+        self.Raddius = Radius
+
+
 def homothety(coeff, centre, point):
     """Cette methode definit une homot de rapport coeff et de centre Centre."""
     temp = Vecteur(point.xabs-centre.xabs, point.yord-centre.yord)
