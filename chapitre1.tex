@@ -15,9 +15,11 @@ Vous connaissez depuis la classe de Terminale les fonctions trigonométriques, l
 \begin{defdef}
 \label{def:chap1-deflognep}
 On appelle la fonction logarithme népérien l'unique primitive de la fonction inverse \footnote{qui est continue sur \(\Rplusetoile\)} qui s'annule en \(1\). On a donc pour tout \(x\) strictement positif
-\begin{equation}
+%\begin{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
   \ln x=\int_{1}^{x} \frac{\diff t}{t}.
-\end{equation}
+\end{empheq}
+%\end{equation}
 \end{defdef}
 %
 Ainsi, par définition, on a~:
@@ -31,9 +33,9 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 \begin{theo}
 \label{theo:lognep1}
   Pour tout \(x, y \in \Rplusetoile\), on a
-  \begin{equation}
-    \ln(xy)=\ln x + \ln y.
-  \end{equation}
+  \begin{empheq}[box=\shadowbox*]{equation}
+      \ln(xy)=\ln x + \ln y.
+  \end{empheq}      
 \end{theo}
 \begin{proof}
   Soit \(y \in \Rplusetoile\) fixé. On définit la fonction
@@ -53,11 +55,11 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 %
 \begin{prop}
   Soient \(x, y \in \Rplusetoile\) et \(n \in \Z\), alors les égalités suivantes sont vraies~:
-  \begin{gather}
-    \ln \left(\frac{1}{x}\right)=-\ln x;\\
-    \ln \left(\frac{x}{y}\right)=\ln x - \ln y; \\
-    \ln x^n=n\ln x.
-  \end{gather}
+  \begin{align}
+      \ln \left(\frac{1}{x}\right)&=-\ln x;\\
+      \ln \left(\frac{x}{y}\right)&=\ln x - \ln y; \\
+      \ln x^n&=n\ln x.
+  \end{align}
 \end{prop}
 \begin{proof}
   \begin{itemize}
@@ -98,7 +100,7 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{lognep.png}
+  \includegraphics[scale=0.8]{lognep.png}
   \caption{Tracé du logarithme népérien}
   \label{fig:traceln}
 \end{figure}
@@ -169,14 +171,14 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{logbase.png}
+  \includegraphics[scale=0.8]{logbase.png}
   \caption{Tracé des logarithmes de bases quelconque}
   \label{fig:traceloga}
 \end{figure}
 \subsection{Exponentielle}
 \label{subsec:chap1-exp}
 \begin{defdef}
-  L'application logarithme népérien est continue sur \(\Rplusetoile\) et strictement croissante, telle que \(\lim\limits_{0^+} \ln =-\infty\) et \(\lim\limits_{+\infty} \ln = +\infty\). Alors le logarithme népérien induit une bijection de \(\Rplusetoile\) sur \(\R\). L'application réciproque du logarithme népérien est la fonction exponentielle notée \(\exp\) telle que
+  L'application logarithme népérien est continue sur \(\Rplusetoile\) et strictement croissante, telle que \(\lim\limits_{0^+} \ln =-\infty\) et \(\lim\limits_{+\infty} \ln = +\infty\). Alors le logarithme népérien induit une bijection de \(\Rplusetoile\) sur \(\R\). L'application réciproque du logarithme népérien est la fonction exponentielle notée \(\exp\) ou \(\e\) telle que
   \begin{equation}
     \fonction{\exp}{\R}{\Rplusetoile}{x}{\exp(x)}.
   \end{equation}
@@ -192,10 +194,10 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \end{proof}
 %
 \begin{prop}
-  La fonction exponentielle est dérivable sur \(\R\) et
-  \begin{equation}
-    \forall x \in \R \quad \exp'(x)=\exp(x).
-  \end{equation}
+  La fonction exponentielle est dérivable sur \(\R\) telle que pour tout réel \(x\)
+    \begin{empheq}[box=\shadowbox*]{equation}
+        \exp'(x)=\exp(x).
+    \end{empheq}
 \end{prop}
 \begin{proof}
   La fonction \(\ln\) est dérivable sur \(\Rplusetoile\) et pour tout réel \(y\), \(\exp(y)>0\). Alors d'après les théorèmes généraux~\footnote{cf.\ annexe~\ref{chap:theogen}}, on a
@@ -205,10 +207,10 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \end{proof}
 %
 \begin{prop} \label{prop-chap1:addexp}
-  \begin{equation}
-    \forall x, y \in \R \quad \exp(x+y)=\exp(x) \cdot \exp(y).
-  \end{equation}
-On dira plus tard que c'est un morphisme de groupes du  groupe additif \((\R,+)\) sur le groupe multiplicatif \((\R^*,\times)\)~\footnote{cf.\ chapitre~\ref{chap:groupes}}.
+La fonction exponentielle est un morphisme de groupes du groupe additif \((\R,+)\) sur le groupe multiplicatif \((\R^*,\times)\)~\footnote{cf.\ chapitre~\ref{chap:groupes}}. C'est-à-dire que pour tous réels \(x\) et \(y\) on a
+\begin{empheq}[box=\shadowbox*]{equation}
+    \exp(x+y)=\exp(x) \cdot \exp(y).
+\end{empheq}
 
 \end{prop}
 \begin{proof}
@@ -221,11 +223,11 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif \((\R,+)\
 %
 \begin{prop}
   Soient \(x\) et \(y\) deux réels et un entier relatif \(n\), alors
-  \begin{gather}
-    \exp(-x)=\frac{1}{\exp(x)}; \\
-    \exp(x-y)=\frac{\exp(x)}{\exp(y)}; \\
-    \exp(nx)=\exp(x)^n.
-  \end{gather}
+  \begin{align}
+      \exp(-x)&=\frac{1}{\exp(x)}; \\
+      \exp(x-y)&=\frac{\exp(x)}{\exp(y)}; \\
+      \exp(nx)&=\exp(x)^n.
+  \end{align}
 \end{prop}
 \begin{proof}
   \begin{itemize}
@@ -237,11 +239,11 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif \((\R,+)\
 %
 \begin{prop}
   La fonction exponentielle admet les limites suivantes~:
-  \begin{gather}
-    \lim\limits_{x \to \infty} \exp(x)=+\infty;\\
-    \lim\limits_{x \to -\infty} \exp(x)=0;\\
-    \lim\limits_{x \to 0} \frac{\exp(x)-1}{x}=1.
-  \end{gather}
+  \begin{align}
+      \lim\limits_{x \to \infty} \exp(x)&=+\infty;\\
+      \lim\limits_{x \to -\infty} \exp(x)&=0;\\
+      \lim\limits_{x \to 0} \frac{\exp(x)-1}{x}&=1.
+  \end{align}
 \end{prop}
 \begin{proof}
   Les deux premières propositions sont des conséquences de la définition et la dernière est la limite du taux d'accroissement en zéro, soit la dérivée en 0 de l'exponentielle.
@@ -249,16 +251,16 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif \((\R,+)\
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{exp.png}
+  \includegraphics[scale=0.8]{exp.png}
   \caption{Tracé de l'exponentielle}
   \label{fig:traceexp}
 \end{figure}
 %
 \begin{theo}
-  L'ensemble \(E\) des fonctions de \(\R^{\R}\) dérivables qui vérifient l'équation
+  L'ensemble \(E\) des fonctions de \(\R^{\R}\) dérivables qui vérifient l'équation pour tous réels \(x\) et \(y\)
   \begin{equation}
     \label{eq:foncexp}
-    \forall x, y \in \R \quad f(x+y)=f(x) \cdot f(y)
+    f(x+y)=f(x) \cdot f(y)
   \end{equation}
   est
   \begin{equation}
@@ -333,27 +335,27 @@ On dira plus tard que c'est un morphisme de groupes du  groupe additif \((\R,+)\
     \forall x \in \R \quad \exp_a'(x)=\ln a \exp_a(x).
   \end{equation}
  De plus~:
-  \begin{gather}
-    \exp_a(x+y)=\exp_a(x) \exp_a(y); \\
-    \exp_a(-x)=\frac{1}{\exp_a(x)}; \\
-    \exp_a(x-y)=\frac{\exp_a(x)}{\exp_a(y)}; \\
-    \exp_a(nx)=\exp_a(x)^n;\\
-    \exp_{\frac{1}{a}}(x)=\exp(-x \ln a)=\exp_a(-x).
-  \end{gather}
+  \begin{align}
+      \exp_a(x+y)&=\exp_a(x) \exp_a(y); \\
+      \exp_a(-x)&=\frac{1}{\exp_a(x)}; \\
+      \exp_a(x-y)&=\frac{\exp_a(x)}{\exp_a(y)}; \\
+      \exp_a(nx)&=\exp_a(x)^n;\\
+      \exp_{\frac{1}{a}}(x)&=\exp(-x \ln a)=\exp_a(-x).
+  \end{align}
 \end{prop}
 \begin{proof}
   Ce sont des conséquences immédiates des propriétés de l'exponentielle.
 \end{proof}
 %
-En appliquant la formule précédente en \(x=1\), et on a~: \(\exp_a(n)=\exp_a(1)^n=a^n\). Alors on pose
+En appliquant la formule précédente en \(x=1\), et on a~: \(\exp_a(n)=\exp_a(1)^n=a^n\). Alors on pose, pour tout réel \(x\)
 \begin{equation}
-  \forall x \in \R \quad a^x=\exp_a(x)=\exp(x \ln a)
+  a^x=\exp_a(x)=\exp(x \ln a)
 \end{equation}
 En particulier pour l'exponentielle~: \(\e^x=\exp(x)\). On pose aussi que pour tout réel \(x\), \(1^x=1\). Donc \(\forall a>0 \ \forall x>0 \quad a^x=\exp(x \ln a)\).
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{expa.png}
+  \includegraphics[scale=0.8]{expa.png}
   \caption{Tracé des exponentielles de base quelconque}
   \label{fig:traceexpa}
 \end{figure}
@@ -371,11 +373,11 @@ En particulier pour l'exponentielle~: \(\e^x=\exp(x)\). On pose aussi que pour t
 %
 \begin{prop}
   Soient deux réels \(\alpha\) et \(x\), alors les formules suivantes sont vraies~:
-  \begin{gather}
-    1^{\alpha}=1; \\
-    x^0=1; \\
-    \ln x^{\alpha} = \alpha \ln x.
-  \end{gather}
+  \begin{align}
+      1^{\alpha}&=1; \\
+      x^0&=1; \\
+      \ln x^{\alpha} &= \alpha \ln x.
+  \end{align}
 \end{prop}
 \begin{proof}
   Ce sont des conséquences immédiates de la définition.
@@ -383,19 +385,19 @@ En particulier pour l'exponentielle~: \(\e^x=\exp(x)\). On pose aussi que pour t
 %
 \begin{prop}
   Soient deux réels \(\alpha\) et \(\beta\), puis deux réels strictement positifs \(x\) et \(y\). Les formules suivantes sont vraies
-  \begin{gather}
-    x^{\alpha+\beta}=x^\alpha x^\beta;\\
-    (xy)^\alpha = x^\alpha y^\alpha;\\
-    (x^\alpha)^\beta=x^{\alpha\beta}.
-  \end{gather}
+  \begin{align}
+      x^{\alpha+\beta} &= x^\alpha x^\beta;\\
+      (xy)^\alpha &= x^\alpha y^\alpha;\\
+      (x^\alpha)^\beta &= x^{\alpha\beta}.
+  \end{align}
 \end{prop}
 \begin{proof}
   Soient deux réels \(\alpha\) et \(\beta\), puis deux réels strictement positifs \(x\) et \(y\). Alors
-  \begin{gather}
-  x^{\alpha+\beta}=\e^{(\alpha+\beta)\ln x}=\e^{\alpha \ln x} \e^{\beta \ln x}=x^\alpha x^\beta;\\
-  (xy)^\alpha=\e^{\alpha \ln (xy)}=\e^{\alpha \ln x +\alpha \ln y}=\e^{\alpha \ln x} \e^{\alpha \ln y}=x^\alpha x^\beta ;\\
-  (x^\alpha)^\beta=(\e^{\alpha \ln x})^\beta=\e^{\beta \ln(\e^{\alpha \ln x})}=\e^{\beta \alpha \ln x}=x^{\alpha \beta}.
-  \end{gather}
+  \begin{align}
+      x^{\alpha+\beta}&=\e^{(\alpha+\beta)\ln x}=\e^{\alpha \ln x} \e^{\beta \ln x}=x^\alpha x^\beta;\\
+      (xy)^\alpha&=\e^{\alpha \ln (xy)}=\e^{\alpha \ln x +\alpha \ln y}=\e^{\alpha \ln x} \e^{\alpha \ln y}=x^\alpha x^\beta ;\\
+      (x^\alpha)^\beta&=(\e^{\alpha \ln x})^\beta=\e^{\beta \ln(\e^{\alpha \ln x})}=\e^{\beta \alpha \ln x}=x^{\alpha \beta}.
+  \end{align}
 \end{proof}
 
 Les fonctions puissances admettent les limites suivantes~:
@@ -407,15 +409,15 @@ Les fonctions puissances admettent les limites suivantes~:
   \end{cases}
 \end{equation}
 \begin{prop}
-  Pour tout \(\alpha \in \R\), la fonction \(f_\alpha\) est dérivable sur \(\Rplusetoile\) telle que
-  \begin{equation}
-    \forall x \in \Rplusetoile \quad f'_\alpha(x)=\alpha x^{\alpha -1}.
-  \end{equation}
+  Pour tout \(\alpha \in \R\), la fonction \(f_\alpha\) est dérivable sur \(\Rplusetoile\) telle que pour tout \(x>0\)
+  \begin{empheq}[box=\shadowbox*]{equation}
+    f'_\alpha(x)=\alpha x^{\alpha -1}.
+  \end{empheq}
 \end{prop}
 \begin{proof}
   La fonction \(f_\alpha\) est dérivable par composition de fonctions qui le sont et pour tout \(x > 0\) on a
   \begin{equation}
-    f_\alpha'(x)=\frac{\alpha}{x} \e^{\alpha \ln x}=\frac{\alpha}{x} x^\alpha=\alpha x^{\alpha-1}.
+      f_\alpha'(x)=(\alpha \ln' x) \e^{\alpha \ln x} = \frac{\alpha}{x} \e^{\alpha \ln x}=\frac{\alpha}{x} x^\alpha=\alpha x^{\alpha-1}.
   \end{equation}
 \end{proof}
 
@@ -434,7 +436,7 @@ Le prolongement en zéro des fonction puissances s'effectue de cette manière~:
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{puiss.png}
+  \includegraphics[scale=0.8]{puiss.png}
   \caption{Tracé de quelques fonctions puissance}
   \label{figtracepuissance}
 \end{figure}
@@ -457,17 +459,19 @@ Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et \(f_\alpha\) son
 \section{Croissances comparées}
 \label{sec:chap1-croissancescomparees}
 \begin{theo}
-  \begin{equation}
+    On dit que le logarithme est négligeable devant l'identité en l'infini, c'est-à-dire qu'il croît plus lentement, ce qui se traduit par
+\begin{empheq}[box=\shadowbox*]{equation}
     \lim\limits_{x \to +\infty} \frac{\ln x}{x}=0^+.
-  \end{equation}
-  Ce qui traduit la \og lenteur \fg{} de croissance du logarithme népérien par rapport à l'identité. On écrira par la suite \(\ln x=o_{+\infty}(x)\).
+\end{empheq}
+  On écrira par la suite \(\ln x=o_{+\infty}(x)\).
 \end{theo}
 \begin{proof}
   Soient deux réels \(x\) et \(t\) supérieurs à 1, alors
   \begin{align}
     \sqrt{t} & \leqslant t \\
     \frac{1}{t} &\leqslant \frac{1}{\sqrt{t}}\\
-    0 \leqslant \ln x = \int_{1}^{x} \frac{\diff t}{t} &\leqslant \int_1^x\frac{\diff t}{\sqrt{t}}=2\sqrt{x}-2\\
+    0 \leqslant \int_{1}^{x} \frac{\diff t}{t} &\leqslant \int_1^x\frac{\diff t}{\sqrt{t}}\\
+    0 \leqslant \ln x &\leqslant 2(\sqrt{x}-1) \\
     0 \leqslant \frac{\ln x}{x} &\leqslant \frac{2}{\sqrt{x}} - \frac{2}{x}.
   \end{align}
   En passant à la limite, et d'après le théorème des gendarmes on obtient la limite en zéro.
@@ -476,27 +480,32 @@ Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et \(f_\alpha\) son
 \begin{prop}
   \label{prop-chap1:croissancecomparelnpuissance}
   Soient \(\alpha\) et \(\beta\) deux réels strictement positifs, alors
-  \begin{equation}
-    \lim\limits_{x \to +\infty} \frac{(\ln x)^\alpha}{x^\beta} = 0^+ \quad \lim\limits_{x \to 0^+} x^\beta \abs{\ln x}^\alpha=0^+.
-  \end{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
+    \lim\limits_{x \to +\infty} \frac{(\ln x)^\alpha}{x^\beta} = 0^+  
+\end{empheq}
+ce qui veut dire que \(\ln^\alpha x = o_{+\infty}(x^\beta)\), et en faisant un changement de variable \(x \to 1/x\) on obtient
+\begin{equation}
+    \lim\limits_{x \to 0^+} x^\beta \abs{\ln x}^\alpha=0^+.
+\end{equation}
   Ce qui veut dire que les puissances \og l'emportent \fg{} toujours devant les logarithmes.
 \end{prop}
 \begin{proof}
   Soit un réel \(x \geqslant 1\) alors
   \begin{equation}
-    \frac{\ln x^\alpha}{x^\beta}=\left(\frac{\alpha}{\beta} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}} \right)^\alpha.
+      \frac{\ln^\alpha x}{x^\beta}=\left(\frac{\alpha}{\beta} \frac{\ln\left(x^{\frac{\beta}{\alpha}}\right)}{x^{\frac{\beta}{\alpha}}} \right)^\alpha = X^\alpha = \e^{\alpha \ln(X)},
   \end{equation}
+  avec \(X = \frac{\alpha}{\beta} \frac{\ln\left(x^{\frac{\beta}{\alpha}}\right)}{x^{\frac{\beta}{\alpha}}} = \frac{\alpha}{\beta} \frac{\ln y}{y}\) et avec \(y = x^{\frac{\alpha}{\beta}}\).
   On a
   \begin{equation}
-    x^{\frac{\beta}{\alpha}}\underset{x \to +\infty}{\longrightarrow}+\infty,
+    y = x^{\frac{\beta}{\alpha}}\underset{x \to +\infty}{\longrightarrow}+\infty,
   \end{equation}
   donc par composition de limites
   \begin{equation}
-    \lim\limits_{x \to \infty} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}}=0^{+}.
+      \lim\limits_{x \to +\infty} X = \lim\limits_{y \to +\infty} \frac{\ln y }{y}=0^{+}.
   \end{equation}
-  Ainsi
+  Ainsi, lorsque \(x\) tend vers l'infini, \(X\) tend vers \(0\), donc la limite se réécris~:
   \begin{equation}
-    \frac{\ln x ^\alpha}{x^\beta}=\e^{\alpha \ln \left(\frac{\alpha}{\beta} \frac{\ln x^{\frac{\beta}{\alpha}}}{x^{\frac{\beta}{\alpha}}} \right)} \underset{x \to +\infty}{\longrightarrow}0.
+      \frac{\ln^\alpha x}{x^\beta}=\e^{\alpha \ln(X)} \underset{X \to 0^{+}}{\longrightarrow}0.
   \end{equation}
   La deuxième limite peut s'obtenir en faisant apparaître \(\frac{1}{x}\)~: soit un réel \(x\) tel que \(0<x<1\), alors
   \begin{equation}
@@ -507,10 +516,13 @@ Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et \(f_\alpha\) son
 %
 \begin{prop}
   Soient \(\alpha\) et \(\beta\) deux réels strictement positifs, alors
+\begin{empheq}[box=\shadowbox*]{equation}
+    \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty  
+\end{empheq}
+Ce qui traduit la prépondérance des fonctions exponentielles face aux fonctions puissances, on écrira \(x^\beta = o_{+\infty}(\e^{\alpha x})\). Par changement de variable, et en inversant la fraction on peut aussi écrire
   \begin{equation}
-    \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty \quad \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+.
+    \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta=0^+.
   \end{equation}
-  Ce qui traduit la prépondérance des fonctions exponentielles face aux fonctions puissances.
 \end{prop}
 %
 \begin{proof}
@@ -518,9 +530,9 @@ Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et \(f_\alpha\) son
   \begin{equation}
     \frac{\e^{\alpha x}}{x^\beta}=\frac{y^\alpha}{\ln(y)^\beta},
   \end{equation}
-  puisque \(\e^{x} \underset{x \to \infty}{\longrightarrow}+\infty\) la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie
+  puisque \(y = \e^{x} \underset{x \to \infty}{\longrightarrow}+\infty\) la proposition~\ref{prop-chap1:croissancecomparelnpuissance} nous permet d'écrire que par composition de limites, la première limite est vraie
   \begin{equation}
-    \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}=+\infty.
+      \lim\limits_{x \to + \infty} \frac{\e^{\alpha x}}{x^\beta}= \lim\limits_{y \to +\infty} \frac{y^\alpha}{\ln(y)^\beta}=+\infty.
   \end{equation}
   Soit un réel \(x\) strictement négatif, alors
   \begin{equation}
@@ -538,96 +550,99 @@ Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et \(f_\alpha\) son
 %
 \section{Trigonométrie circulaire}
 \label{sec:chap1-trigocirc}
+Les fonctions trigonométriques sinus et cosinus sont définies grâce à la formule d'Euler, pour tout réel \(x\)
+\begin{equation}
+    \cos x +\ii \sin x = \e^{\ii x}.
+\end{equation}
+Ce qui veut dire que
+\begin{defdef}
+    Les fonctions cosinus et sinus sont définies respectivement comme la partie réelle et imaginaire de l'exponentielle complexe, pour tout réel \(x\)
+    \begin{empheq}[box=\shadowbox*]{align}
+        \cos x &= \Re(\e^{\ii x}) = \frac{\e^{\ii x}+\e^{-\ii x}}{2} \\
+        \sin x & = \Im(\e^{\ii x}) = \frac{\e^{\ii x}-\e^{\ii x}}{2\ii}
+    \end{empheq}
+\end{defdef}
+\begin{defdef}
+Les fonctions tangente et cotangente sont définies respectivement comme le rapport de sinus et de cosinus et par le rapport de cosinus par sinus, c'est à dire pour pout \(x \in \R\setminus\left\{\frac{\pi}{2}+\pi\Z\right\}\) et \(z \in \R\setminus\left\{\pi\Z \right\}\) par~: 
+\begin{empheq}[box=\shadowbox*]{align}
+    \tan x &= \frac{\sin x}{\cos x} \\
+    \cotan z &= \frac{1}{\tan z} = \frac{\cos z}{\sin z}
+\end{empheq}
+\end{defdef}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}      
+    \hline
+    \(x\)      & \(0\) &\(\frac{\pi}{6}\) & \(\frac{\pi}{5}\)& \(\frac{\pi}{4}\)      & \(\frac{\pi}{3}\)      & \(\frac{\pi}{2}\)\\ \hline
+    \(\cos x\) & \(1\) &\(\frac{\sqrt{3}}{2}\)  &\(\frac{1+\sqrt{5}}{4}\) & \(\frac{\sqrt{2}}{2}\) & \(\frac{1}{2}\) & \(0\)\\ \hline    
+  \end{tabular}
+  \caption{Valeurs particulières de cosinus}
+  \label{tab:valeurpart}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
 On présente un tableau récapitulatif~\ref{tab:fonctiontrigo} des différentes fonctions trigonométriques de base et leurs propriétés. On a tracé les mêmes fonctions sur le cercle trigonométrique de la figure~\ref{fig:cercletrigo}.
-\begin{table}[!h]
+\begin{table}
   \centering
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    Nom & définie sur & parité & T & propriétés \\ \hline
-    sinus & \(\R\) & impaire & \(2\pi\) & \(\sin(\pi+x)=-\sin x\) \\
-    & & & & \(\sin(\pi-x)=\sin x\) \\ \hline
-    cosinus & \(\R\) & paire & \(2\pi\) & \(\cos(\pi+x)=-\cos x\)\\
-    & & & & \( \sin(\pi-x)=-\cos x\) \\ \hline
-    tangente & \(D_1=\R\setminus\{\frac{\pi}{2}+\pi \Z\}\) & impaire & \(\pi\) & \(\tan x =\frac{\sin x}{\cos x}\) \\ \hline
-    cotangente & \(D_2=\R\setminus\{\pi \Z\}\) & paire & \(\pi\) & \(\cot x =\frac{\cos x}{\sin x}\) \\ \hline
+    Nom & Ensemble de définition & Parité & Période \(T\) \\ \hline
+    sinus & \(\R\) & impaire & \(2\pi\) \\
+    cosinus & \(\R\) & paire & \(2\pi\) \\
+    tangente & \(D_1=\R\setminus\{\frac{\pi}{2}+\pi \Z\}\) & impaire & \(\pi\) \\
+    cotangente & \(D_2=\R\setminus\{\pi \Z\}\) & impaire & \(\pi\) \\ \hline
   \end{tabular}
   \caption{Fonctions trigonométriques de base}
   \label{tab:fonctiontrigo}
 \end{table}
 
-%\begin{figure}
-%\centering
-%\begin{tikzpicture}
-%\draw (0,0) circle (4);
-%\draw (180:4) -- (0:4);
-%\draw (-90:4) -- (90:4);
-%\draw (1,0) arc(0:35:1) node[right, below]{\(\theta\)};
-%\draw (0,0) -- (35:4) node[midway, above, sloped]{\(1\)};
-%\draw[color=blue] (35:4) -- (0,2.29) node[midway, above, sloped]{\(\cos \theta\)};
-%\draw[color=red] (35:4) -- (3.276,0) node[midway, below, sloped]{\(\sin \theta\)};
-%%\draw (4,-4) --++ (0,8);
-%\draw[color=yellow](35:4) -- (4,2.8);%Pour compléter la tangente
-%\draw[color=orange](4,2.8) -- (5.71,4);
-%\draw[color=green] (4,0) -- (4,2.8) node[midway, below, sloped]{\(\tan \theta\)};
-%\draw[color=pink] (0,4) -- (5.71,4) node[midway, above, sloped]{\(\cot \theta\)};
-%\end{tikzpicture}
-%\caption{Cercle trigonométrique}
-%\label{fig:cercletrigo}
-%\end{figure}
 \begin{figure}
 \centering
-\includegraphics[scale=0.7]{./CercleTrigo.png}
+\includegraphics[scale=0.8]{./CercleTrigo.png}
 \caption{Cercle trigonométrique}
 \label{fig:cercletrigo}
 \end{figure}
-%
-Soit un réel \(x\) et un réel \(y \in D_2\), alors
-\begin{gather}
-  \cos^2 x+\sin^2 x=1;\\
-  \sin \left(\frac{\pi}{2}-x\right)=\cos x=\sin \left(\frac{\pi}{2}+x\right); \\
-  \cos \left(\frac{\pi}{2}-x\right)=\sin x=-\cos\left(\frac{\pi}{2}+x\right);\\
-  \tan \left(\frac{\pi}{2}-y \right)=\cot y=-\cot \left(\frac{\pi}{2}+y\right).
-\end{gather}
+
+Soit un réel \(x\), un réel \(y \in D_2\) et un réel \(z \in D_1\), alors
+\begin{empheq}[box=\shadowbox*]{align}
+    \cos^2 x+\sin^2 x &=1;\\
+    \sin \left(\frac{\pi}{2}-x\right)=\cos x&=\sin \left(\frac{\pi}{2}+x\right) & \sin(\pi+x) &= -\sin x \\    
+    \cos \left(\frac{\pi}{2}-x\right)=\sin x&=-\cos\left(\frac{\pi}{2}+x\right) & \sin(\pi-x) &= \sin x\\
+    \tan \left(\frac{\pi}{2}-y\right)=\cot y&=-\tan \left(\frac{\pi}{2}+y\right)& \cos(\pi+x) &= -\cos x \\
+    \cot \left(\frac{\pi}{2}-z\right)=\tan z&=-\cot \left(\frac{\pi}{2}+z\right)& \cos(\pi-x) &= \cos x
+\end{empheq}
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{trig.png}
+  \includegraphics[scale=0.8]{trig.png}
   \caption[Tracé de quelques fonctions trigonométriques]{Tracé de quelques fonctions trigonométriques. En rouge sinus, en bleu cosinus, en vert tangente et en rose cotangente}
   \label{fig:tracetrigo}
 \end{figure}
 %
-\renewcommand{\arraystretch}{2.2}
-\begin{table}
-  \centering
-  \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \(\displaystyle x\)& \(\displaystyle 0\)&\(\displaystyle \frac{\pi}{6}\)&\(\displaystyle \frac{\pi}{4}\)&\(\displaystyle \frac{\pi}{3}\)&\(\displaystyle \frac{\pi}{2}\)\\ \hline
-    \(\displaystyle \sin x\) &\(\displaystyle  0\) &\(\displaystyle  \frac{1}{2}\) &\(\displaystyle  \frac{\sqrt{2}}{2}\) & \(\displaystyle \frac{\sqrt{3}}{2}\) &\(\displaystyle  1 \)\\ \hline
-    \(\displaystyle \cos x\) &\(\displaystyle  1 \)&\(\displaystyle \frac{\sqrt{3}}{2}\) & \(\displaystyle \frac{\sqrt{2}}{2}\) & \(\displaystyle \frac{1}{2}\) & \(\displaystyle 0\) \\ \hline
-    \(\displaystyle \tan x\) & \(\displaystyle  0 \)&\(\displaystyle \frac{1}{\sqrt{3}}\) & \(\displaystyle 1\) & \(\displaystyle \sqrt{3}\) & \(\displaystyle \infty\) \\ \hline
-    \(\displaystyle \cot x\) & \(\displaystyle \infty\) & \(\displaystyle \sqrt{3}\) &\(\displaystyle  1\) & \(\displaystyle \frac{1}{\sqrt{3}}\) &\(\displaystyle  0\)\\ \hline
-  \end{tabular}
-  \caption{Valeurs particulières des fonctions trigonométriques}
-  \label{tab:valeurpart}
-\end{table}
-\renewcommand{\arraystretch}{1}
 \paragraph{Dérivées}
 Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs ensembles de définition, et on a:
-\begin{gather}
-\forall x \in \R \quad \sin'x=\cos x \ \cos'x=-\sin x; \\
-\forall x \in D_1 \quad \tan'x=\frac{1}{\cos^2 x}=1+\tan^2 x; \\
-\forall x \in D_2 \quad \cot'x=\frac{-1}{\sin^2 x}=-1-\cot^2 x.
-\end{gather}
+\begin{align}
+    \forall x \in \R \quad \sin'x &=\cos x \ \cos'x=-\sin x; \\
+    \forall x \in D_1 \quad \tan'x &=\frac{1}{\cos^2 x}=1+\tan^2 x; \\
+    \forall x \in D_2 \quad \cot'x &=\frac{-1}{\sin^2 x}=-1-\cot^2 x.
+\end{align}
 \begin{prop}
-  Les fonctions trigonométriques vérifient les égalités suivantes~:
-  \begin{gather}
-    \forall x, y \in \R \quad \cos x = \cos y \iff \exists k \in \Z \ x=\pm y + 2k\pi;\\
-    \forall x, y \in \R \quad \sin x = \sin y \iff \begin{cases} \exists k \in \Z & x = y + 2 k \pi \\ \exists k \in \Z & x = \pi - y + 2 k \pi\end{cases}; \\
-    \forall x, y \in D_1 \quad \tan x = \tan y \iff \exists k \in \Z \ x = y + k \pi;\\
-    \forall x, y \in D_2 \quad \cot x = \cot y \iff \exists k \in \Z \ x = y + k \pi.
-  \end{gather}
+  Les fonctions trigonométriques vérifient les équivalences suivantes~:
+  \begin{align}
+      \forall x, y \in \R \quad \cos x = \cos y &\iff \congru{x}{\pm y}{2\pi} ;\\
+      \forall x, y \in \R \quad \sin x = \sin y &\iff \begin{cases} \congru{x}{y}{2\pi} \\ \text{~ou~} \\ \congru{x}{\pi-y}{2\pi}\end{cases} ; \\
+      \forall x, y \in D_1 \quad \tan x = \tan y &\iff \congru{x}{y}{\pi} ;\\
+      \forall x, y \in D_2 \quad \cot x = \cot y &\iff \congru{x}{y}{\pi} .
+  \end{align}
 \end{prop}
-
+\begin{defdef}[Congruence]
+Pour tout réels, \(x, y, z\), on dit que \(x\) est congru à \(y\) modulo \(z\) et on écris~:
+\begin{equation}
+    \congru{x}{y}{z} \iff \exists k \in \Z \ x = y + kz.
+\end{equation}
+Il s'agit bien entendu d'une relation d'équivalence.
+\end{defdef}
 \section{Fonctions circulaires réciproque}
 \label{sec:chap1-fonctionscircréciproques}
 \subsection{Fonction arcsinus}
@@ -641,10 +656,10 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
     \forall x \in \intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}} \forall y \in \intervalleff{-1}{1} \quad y = \sin x \iff x = \arcsin y;
   \end{equation}
   et
-  \begin{gather}
-    \sin(\arcsin y)) = y, \\
-    \arcsin(\sin x) = x.
-  \end{gather}
+  \begin{align}
+      \sin(\arcsin y)) &= y, \\
+      \arcsin(\sin x) &= x.
+  \end{align}
 \end{prop}
 \begin{proof}
   C'est une conséquence de la définition de \(\arcsin\).
@@ -663,10 +678,10 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{proof}
 %
 \begin{prop}
-  La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et
-  \begin{equation}
-    \forall y \in \intervalleoo{-1}{1} \quad \arcsin'y = \frac{1}{\sqrt{1-y^2}}.
-  \end{equation}
+  La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et pour tout \(y \in \intervalleoo{-1}{1}\)
+\begin{empheq}[box=\shadowbox*]{align}
+    \arcsin'y = \frac{1}{\sqrt{1-y^2}}.
+\end{empheq}
 \end{prop}
 \begin{proof}
   La fonction sinus est dérivable sur \(\intervalleff{-\frac{\pi}{2}}{\frac{\pi}{2}}\) telle que \(\sin'=\cos\). Si \(y=\pm 1\) alors \(\cos(\arcsin y)=0\) et donc arcsinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en \(-1\) et \(1\). Si \(y \in \intervalleoo{-1}{1}\), alors \(\cos(\arcsin y) \neq 0\), arcsinus et donc dérivable en \(y\) et
@@ -676,7 +691,7 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{proof}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{arcsin.png}
+  \includegraphics[scale=0.8]{arcsin.png}
   \caption{Tracé de arcsinus}
   \label{fig:tracearcsinus}
 \end{figure}
@@ -692,10 +707,10 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
     \forall x \in \intervalleff{0}{\pi} \forall y \in \intervalleff{-1}{1} \quad y = \cos x \iff x = \arccos y;
   \end{equation}
   et
-  \begin{gather}
-    \cos(\arccos y) = y, \\
-    \arccos(\cos x) = x.
-  \end{gather}
+  \begin{align}
+      \cos(\arccos y) &= y, \\
+      \arccos(\cos x) &= x.
+  \end{align}
 \end{prop}
 \begin{proof}
   C'est une conséquence de la définition de la fonction \(\arccos\).
@@ -710,10 +725,10 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{proof}
 %
 \begin{prop}
-  La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et
-  \begin{equation}
-    \forall y \in \intervalleoo{-1}{1} \quad \arccos'y = -\frac{1}{\sqrt{1-y^2}}.
-  \end{equation}
+  La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et \(\forall y \in \intervalleoo{-1}{1}\)
+\begin{empheq}[box=\shadowbox*]{align}
+    \arccos'y = -\frac{1}{\sqrt{1-y^2}}.
+\end{empheq}
 \end{prop}
 \begin{proof}
   La fonction cosinus est dérivable sur l'intervalle \(\intervalleff{0}{\pi}\) telle que \(\cos'=-\sin\). Si \(y=\pm 1\) alors \(-\sin(\arccos(y))=0\)  et donc arccosinus n'est pas dérivable. De plus la courbe représentative admet des tangentes verticales en \(-1\) et \(1\). Si \(y \in \intervalleoo{-1}{1}\), alors \(-\sin(\arccos y) \neq 0\), arccosinus et donc dérivable en \(y\) et
@@ -724,18 +739,18 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{arccos.png}
+  \includegraphics[scale=0.8]{arccos.png}
   \caption{Tracé de arccosinus}
   \label{fig:tracearccosinus}
 \end{figure}
 %
 \begin{prop}
   Soit un réel \(x\) de \(\intervalleff{-1}{1}\), alors on a
-  \begin{gather}
-    \cos( \arcsin x)=\sin( \arccos x)=\sqrt{1-x^2}; \\
-    \arccos x + \arcsin x = \frac{\pi}{2};\\
-    \arccos(-x) = \pi - \arccos x.
-  \end{gather}
+\begin{empheq}[box=\shadowbox*]{align}
+    \cos(\arcsin x)=\sin(\arccos x)&=\sqrt{1-x^2}; \\
+    \arccos x + \arcsin x &= \frac{\pi}{2};\\
+    \arccos(-x) = \pi &- \arccos x.
+  \end{empheq}
 \end{prop}
 \begin{proof}
   \begin{itemize}
@@ -764,11 +779,11 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 \end{defdef}
 \begin{prop}
   Soit un réel \(x\) quelconque et un réel \(y\) non nul. Alors
-  \begin{gather}
-    \cos(\arctan x)=\frac{1}{\sqrt{1+x^2}};\\
-    \sin(\arctan x)=\frac{x}{\sqrt{1+x^2}};\\
-    \arctan y + \arctan \frac{1}{y} = \sgn(y) \frac{\pi}{2}.
-  \end{gather}
+\begin{empheq}[box=\shadowbox*]{align}
+      \cos(\arctan x)&=\frac{1}{\sqrt{1+x^2}};\\
+      \sin(\arctan x)&=\frac{x}{\sqrt{1+x^2}};\\
+      \arctan y + \arctan \frac{1}{y} &= \sgn(y) \frac{\pi}{2}.
+\end{empheq}
 \end{prop}
 \begin{proof}
   Soit un réel \(x\) quelconque et un réel \(y\) non nul, alors
@@ -791,11 +806,11 @@ Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{arctan.png}
+  \includegraphics[scale=0.8]{arctan.png}
   \caption{Tracé de arctangente et de ses asymptotes}
   \label{fig:tracearctangente}
 \end{figure}
-%
+\newpage
 \begin{theo}
   \label{chap1-theo:thetasin}
   Soient des réels \(x\) et \(y\) tels que \(x^2+y^2=1\), alors il existe un unique réel \(\theta\) dans \(\intervalleof{-\pi}{\pi}\) tel que \(x=\cos \theta\) et \(y=\sin \theta\).
@@ -825,11 +840,11 @@ On a bien montré l'existence d'un réel \(\theta \in \intervalleof{-\pi}{\pi}\)
 \subsection{Fonctions sinus et cosinus hyperbolique}
 \label{subsec:chap1-sinushetcosh}
 \begin{defdef}
-  On définit les applications de \(\R\) dans \(\R\), appelées respectivement sinus et cosinus hyperbolique, notée \(\hsin\) et \(\hcos\), par
-  \begin{gather}
-    \forall x \in \R \quad \hsin x = \frac{\e^x - \e^{-x}}{2}, \\
-    \forall x \in \R \quad \hcos x = \frac{\e^x + \e^{-x}}{2}.
-  \end{gather}
+  On définit les applications de \(\R\) dans \(\R\), appelées respectivement sinus et cosinus hyperbolique, notée \(\hsin\) et \(\hcos\), pour tout réel \(x\)
+\begin{empheq}[box=\shadowbox*]{align}
+      \hsin x &= \frac{\e^x - \e^{-x}}{2}, \\
+      \hcos x &= \frac{\e^x + \e^{-x}}{2}.
+  \end{empheq}
 \end{defdef}
 %
 \begin{prop}
@@ -840,19 +855,19 @@ On a bien montré l'existence d'un réel \(\theta \in \intervalleof{-\pi}{\pi}\)
 \end{proof}
 %
 \begin{prop} Soit un réel \(x\), alors
-\begin{gather}
-  \hcos x + \hsin x = \e^x, \\
-  \hcos x - \hsin x = \e^{-x}, \\
-  \hcos^2 x - \hsin^2 x = 1.
-\end{gather}
+\begin{empheq}[box=\shadowbox*]{align}
+    \hcos x + \hsin x &= \e^x, \\
+    \hcos x - \hsin x &= \e^{-x}, \\
+    \hcos^2 x - \hsin^2 x &= 1.
+\end{empheq}
 \end{prop}
 \begin{proof}
   Ces formules sont des conséquences de la définition.
 \end{proof}
 %
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{trigh.png}
+  \includegraphics[scale=0.8]{trigh.png}
   \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\hcos\)}
   \label{fig:tracesinhcosh}
 \end{figure}
@@ -862,36 +877,33 @@ Les fonctions \(\hsin\) et \(\hcos\) permettent de paramétrer l'hyperbole \(\ma
 \subsection{Fonctions tangente et cotangente hyperbolique}
 \label{subsec:chap1-tanhetcotanh}
 \begin{defdef}
-  On définit la tangente hyperbolique, noté \(\htan\), et la cotangente hyperbolique, notée \(\hcotan\), comme
-  \begin{gather}
-    \forall x \in \R \quad \htan(x)=\frac{\hsin x}{\hcos x}=\frac{\e^x - \e^{-x}}{\e^x+\e^{-x}}, \\
-    \forall x \in \R^* \quad \hcotan(x)=\frac{\hcos x}{\hsin x}=\frac{\e^x + \e^{-x}}{\e^x-\e^{-x}}.
-  \end{gather}
+  On définit la tangente hyperbolique, noté \(\htan\), et la cotangente hyperbolique, notée \(\hcotan\), pour tout réel \(x\) et tout réel non nul \(y\) par
+\begin{empheq}[box=\shadowbox*]{align}
+      \htan(x)&=\frac{\hsin x}{\hcos x}=\frac{\e^x - \e^{-x}}{\e^x+\e^{-x}}, \\
+      \hcotan(y)&=\frac{\hcos y}{\hsin y}=\frac{\e^y + \e^{-y}}{\e^y-\e^{-y}}.
+\end{empheq}
 \end{defdef}
-%
+\newpage
 \begin{prop}
-  Les fonctions tangente et cotangente hyperbolique sont impaires. Elles sont dérivables sur leurs ensembles de définition respectifs et on a
-  \begin{equation}
-    \forall x \in \R \quad \htan' x = 1-\htan^2 x = \frac{1}{\hcos^2 x}
-  \end{equation}
-  et
-  \begin{equation}
-    \forall y \in \Rplusetoile \quad \hcotan' x=1-\hcotan^2 x=-\frac{1}{\hsin^2 x}.
-  \end{equation}
+  Les fonctions tangente et cotangente hyperbolique sont impaires. Elles sont dérivables sur leurs ensembles de définition respectifs et on a pour tout réel \(x\) et tout réel non nul \(y\)
+\begin{empheq}[box=\shadowbox*]{align}
+    \htan' x &= 1-\htan^2 x = \frac{1}{\hcos^2 x}; \\
+    \hcotan' y&=1-\hcotan^2 y=-\frac{1}{\hsin^2 y}.
+\end{empheq}
 \end{prop}
 \begin{proof}
-  \(\R\) est centré en zéro et on vérifie que
-  \begin{gather}
-    \htan(-x)=-\htan x, \\
-    \hcotan(-x) = -\hcotan x.
-  \end{gather}
+  \(\R\) est centré en zéro et on vérifie que pour tout réel \(x\) et tout réel non nul \(y\)
+  \begin{align}
+      \htan(-x)&=-\htan x, \\
+      \hcotan(-y)&=-\hcotan y.
+  \end{align}
   Ensuite puisque \(\hsin\) et \(\hcos\) sont dérivables sur \(\R\) et puisque \(\hcos\) ne s'annule pas sur \(\R\), on a pour tout réel \(x\)
   \begin{equation}
     \htan' x = \frac{\hcos^2 x - \hsin^2 x}{\hcos^2 x},
   \end{equation}
-  qui nous donne la formule. De la même manière \(\sinh\) ne s'annule qu'en \(x=0\) donc pour \(x\) non nul, on a la formule
+  qui nous donne la formule. De la même manière \(\sinh\) ne s'annule qu'en \(0\) donc pour \(y\) non nul, on a la formule
   \begin{equation}
-    \hcotan' x = \frac{\hsin^2 x - \hcos^2 x}{\hsin^2 x},
+    \hcotan' y = \frac{\hsin^2 y - \hcos^2 y}{\hsin^2 y},
   \end{equation}
   qui nous donne aussi la formule.
 \end{proof}
@@ -899,7 +911,7 @@ La fonction tangente hyperbolique est strictement croissante et la cotangente d�
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{tanh.png}
+  \includegraphics[scale=0.8]{tanh.png}
   \caption{Tracé de fonctions hyperbolique \(\htan\) et \(\hcotan\)}
   \label{fig:tracetanhcoth}
 \end{figure}
@@ -943,14 +955,14 @@ La fonction \(\argsh\) est impaire et strictement croissante.
 %
 \begin{prop}
   La fonction argument sinus hyperbolique est dérivable sur \(\R\) et pour tout réel \(x\), on a
-  \begin{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
     \argsh' x= \frac{1}{\sqrt{1+x^2}}.
-  \end{equation}
+\end{empheq}
 \end{prop}
 \begin{proof}
-  La fonction sinus hyperbolique est dérivable sur \(\R\) et
+  La fonction sinus hyperbolique est dérivable sur \(\R\) et telle que pour tout réel \(y\)
   \begin{equation}
-    \forall y \in \R \quad \hsin' (\argsh y)=\hcos(\argsh y)>0,
+    \hsin' (\argsh y)=\hcos(\argsh y)>0,
   \end{equation}
   donc la fonction argument sinus hyperbolique est dérivable en \(y\) et
   \begin{equation}
@@ -959,10 +971,10 @@ La fonction \(\argsh\) est impaire et strictement croissante.
 \end{proof}
 %
 \begin{prop}[Expression logarithmique]
-La fonction argument sinus hyperbolique peut s'exprimer ainsi
- \begin{equation}
-   \forall x \in \R \quad \argsh x = \ln(x+\sqrt{1+x^2}).
- \end{equation}
+La fonction argument sinus hyperbolique peut s'exprimer pour tout réel \(x\) ainsi
+\begin{empheq}[box=\shadowbox*]{equation}
+   \argsh x = \ln(x+\sqrt{1+x^2}).
+\end{empheq}
 \end{prop}
 \begin{proof}
   Soient deux réels \(x\) et \(y\) tels que \(y=\argsh x\) alors \(x=\frac{\e^y - \e^{-y}}{2}\). C'est-à-dire
@@ -981,7 +993,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{argsinh.png}
+  \includegraphics[scale=0.8]{argsinh.png}
   \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\argsh\)}
   \label{fig:tracesinhargsh}
 \end{figure}
@@ -996,18 +1008,18 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
   \begin{equation}
     \forall x \in \Rplus \ \forall y \in \intervallefo{1}{+\infty} \quad y=\hcos x \iff x = \argch y ;
   \end{equation}
-  et on a
-  \begin{gather}
-    \forall y \in \intervallefo{1}{+\infty} \quad \hcos(\argch y) = y, \\
-    \forall x \in \Rplus \quad \argch(\hcos x) = x.
-  \end{gather}
+  et on a pour tout \(y\geqslant 1\) et tout \(x\geqslant 0\)
+  \begin{align}
+    \hcos(\argch y) &= y, \\
+    \argch(\hcos x) &= x.
+  \end{align}
 \end{prop}
 %
 \begin{prop}
-  La fonction argument cosinus hyperbolique est strictement croissante et est dérivable sur son domaine de définition telle que
-  \begin{equation}
-    \forall x\geqslant{}1 \quad \argch' x =\frac{1}{\sqrt{x^2-1}}.
-  \end{equation}
+  La fonction argument cosinus hyperbolique est strictement croissante et est dérivable sur son domaine de définition telle que pour tout \(x \geqslant 1\)
+\begin{empheq}[box=\shadowbox*]{equation}
+     \argch' x =\frac{1}{\sqrt{x^2-1}}.
+\end{empheq}
 \end{prop}
 \begin{proof}
   Puisque la fonction cosinus hyperbolique est dérivable sur \(\Rplus\) et que \(\hsin(\argch y) \neq 0\) On tire que \(\argch\) n'est pas dérivable en un~: \(\hcos'(\argch 1)=0\) la courbe admet une tangente verticale. Si \(y>1\), alors \(\argch\) est dérivable en \(y\) et
@@ -1016,10 +1028,10 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
   \end{equation}
 \end{proof}
 %
-\begin{prop}[Expression logarithmique] La fonction argument cosinus hyperbolique peut s'exprimer telle que
-  \begin{equation}
-    \forall x>1 \quad \argch x = \ln \left(x +\sqrt{x^2-1}\right).
-  \end{equation}
+\begin{prop}[Expression logarithmique] La fonction argument cosinus hyperbolique peut s'exprimer pour tout \(x>1\) par
+\begin{empheq}[box=\shadowbox*]{equation}
+    \argch x = \ln \left(x +\sqrt{x^2-1}\right).
+\end{empheq}
 \end{prop}
 \begin{proof}
   \begin{equation}
@@ -1034,7 +1046,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{argcosh.png}
+  \includegraphics[scale=0.8]{argcosh.png}
   \caption{Tracé de fonctions hyperbolique \(\hcos\) et \(\argch\)}
   \label{fig:tracecoshargcosh}
 \end{figure}
@@ -1047,11 +1059,11 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{prop}
   Pour tous réel \(x\) et \(y\) de \(\intervalleoo{-1}{1}\), on a
-  \begin{gather}
-    y=\htan x \iff x= \argth x, \\
-    \argth(\htan x)=x, \\
-    \htan(\argth y)=y.
-  \end{gather}
+\begin{empheq}[box=\shadowbox*]{align}
+    y=\htan x \iff x&= \argth x, \\
+    \argth(\htan x)&=x, \\
+    \htan(\argth y)&=y.
+\end{empheq}
 \end{prop}
 %
 \begin{prop}
@@ -1059,10 +1071,10 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \end{prop}
 %
 \begin{prop}
-  La fonction argument tangente hyperbolique est dérivable sur son ensemble de définition telle que
-  \begin{equation}
-    \forall x \in \intervalleoo{-1}{1} \quad \argth'(x)=\frac{1}{1-x^2}.
-  \end{equation}
+    La fonction argument tangente hyperbolique est dérivable sur son ensemble de définition telle que pour tout \(x \in \intervalleoo{-1}{1}\)
+\begin{empheq}[box=\shadowbox*]{equation}
+ \argth'(x)=\frac{1}{1-x^2}.
+\end{empheq}
 \end{prop}
 \begin{proof}
   Puisque tangente hyperbolique est dérivable sur \(\R\) et que
@@ -1073,10 +1085,10 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \end{proof}
 %
 \begin{prop}[Expression logarithmique]
-  La fonction argument tangente hyperbolique peut s'écrire telle que
-  \begin{equation}
-    \forall y \in \intervalleoo{-1}{1} \quad \argth y =\frac{1}{2} \ln \left( \frac{1+y}{1-y} \right).
-  \end{equation}
+    La fonction argument tangente hyperbolique peut s'écrire pour tout \(y \in \intervalleoo{-1}{1}\) telle que
+\begin{empheq}[box=\shadowbox*]{equation}
+    \argth y =\frac{1}{2} \ln \left( \frac{1+y}{1-y} \right).
+\end{empheq}
 \end{prop}
 \begin{proof}
   \begin{equation}
@@ -1091,7 +1103,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 %
 \begin{figure}
   \centering
-  \includegraphics[scale=0.7]{argtanh.png}
+  \includegraphics[scale=0.8]{argtanh.png}
   \caption{Tracé des fonctions hyperbolique \(\htan\) et \(\argth\) et de leurs asymptotes}
   \label{fig:tracetanhargth}
 \end{figure}
@@ -1172,10 +1184,9 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
 \begin{exercice}
     Déterminer pour tout réel \(a\) et tout naturel \(n\) une expression simple de la somme~:
     \begin{equation}
-        S_n = \sum_{k=1}^n 2^k \tanh(2^k a
+        S_n = \sum_{k=1}^n 2^k \tanh(2^k a)
     \end{equation}
-    \emph{Indication :} On pourra essayer de simplifier l'expression~:
-    \[\frac{2}{\tanh 2x} - \frac{1}{\tanh x}\]
+    \emph{Indication :} On pourra essayer de simplifier l'expression~:\(\frac{2}{\tanh 2x} - \frac{1}{\tanh x}\)
 \end{exercice}
 \begin{exercice}
     Déterminer, pour tout réel \(x\) de l'intervalle \(\intervallefo{0}{\pi/2}\) et tout naturel \(n\), une expression simple du réel~:
@@ -1191,7 +1202,7 @@ La fonction argument sinus hyperbolique peut s'exprimer ainsi
     \end{align}
 \end{exercice}
 \begin{exercice}
-    Soient \(y \in \intervalleoo{0}{\pi/2}\) et \(x = \ln\tan(\pi/4+y/2)\). Exprimer en focntion de \(y\) chacun des réels \(\tanh(x/2), \sinh x, \cosh x\) et \(\tanh x\).
+    Soient \(y \in \intervalleoo{0}{\pi/2}\) et \(x = \ln\tan(\pi/4+y/2)\). Exprimer en fonction de \(y\) chacun des réels \(\tanh(x/2)\), \(\sinh x\), \(\cosh x\) et \(\tanh x\).
 \end{exercice}
 \begin{exercice}
     Démontrer que pour tout réels \(a\) et \(b\) strictement compris entre \(-1\) et \(1\),

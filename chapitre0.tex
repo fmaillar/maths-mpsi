@@ -53,9 +53,11 @@ Les tables de vérités de ces connecteurs logiques sont données dans la table~
 \end{table}
 
 Dans l'assertion \(P \implies Q\) l'assertion \(P\) est l'hypothèse et l'assertion \(Q\) est la conclusion. On a l'équivalence logique
-\begin{equation}
+%\begin{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
   (P \implies Q) \iff (\neg P \text{~ou~} Q).
-\end{equation}
+\end{empheq}
+%\end{equation}
 L'assertion \(Q \implies P\) est l'assertion réciproque de \(P \implies Q\). Attention, il ne faut pas confondre les deux.
 %
 \section{Assertions logiquement équivalentes}
@@ -67,24 +69,30 @@ Deux assertions sont dites logiquement équivalentes lorsqu'elles ont la même t
   \neg(P \text{~ou~} Q) & \iff \neg P \text {~et~} \neg Q; \\
   \neg(P \implies Q) & \iff P \text {~et~} \neg Q.
 \end{align}
-Le raisonnement par contraposée repose sur l'équivalence logique
-\begin{equation}
+Le raisonnement par \emph{contraposée} repose sur l'équivalence logique
+%\begin{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
   (P \implies Q) \iff (\neg Q \implies \neg P).
-\end{equation}
-Le raisonnement par l'absurde est le suivant~: pour montrer que \(P \implies Q\), on suppose que \(P\) est vraie et que \(Q\) est fausse puis on montre que cela aboutit à une contradiction. Cela repose sur l'équivalence logique
-\begin{equation}
+\end{empheq}
+%\end{equation}
+Le raisonnement par l'absurde est le suivant~: pour montrer que \(P \implies Q\), on suppose que \(P\) est vraie et que \(Q\) est fausse puis on montre que cela aboutit à une contradiction. Ainsi, le \emph{raisonnement par l'absurde} repose sur l'équivalence logique
+%\begin{equation}
+\begin{empheq}[box=\shadowbox*]{equation}
   (P \implies Q) \iff \neg(P \text {~et~} \neg Q).
-\end{equation}
+\end{empheq}
+%\end{equation}
 %
 \section{Quantificateurs et leurs négations}
 \label{chap0sec:quantificateursetnegation}
 L'expression mathématique ``\(\forall x \in E\)'' se lit ``quelque soit l'élément \(x\) de E'' ou encore ``pour tout élément \(x\) de E''. L'expression mathématique ``\(\exists x \in E\)'' se lit ``il existe un élément \(x\) de E'', au moins un. ``\(\forall x \in E \ P(x)\)'' signifie que pour tout élément pris dans E, la propriété P est vraie. ``\(\exists x \in E \ P(x)\)'' signifie qu'il existe au moins un élément de E pour lequel P est vérifiée.
 
 Les négations des quantificateurs sont les suivantes~:
-\begin{align}
+%\begin{align}
+\begin{empheq}[box=\shadowbox*]{align}
   \neg(\forall x \in E \quad P(x)) &\iff \exists x \in E \quad \neg P(x); \\
   \neg(\exists x \in E \quad P(x)) &\iff \forall x \in E \quad \neg P(x).
-\end{align}
+\end{empheq}
+%\end{align}
 La variable \(x\) est dite muette.
 \section{Exercices}
 \begin{exercice}

@@ -139,6 +139,9 @@
 %\usepackage{makeidx}
 %\makeindex
 %
+%pour les boites autour des equations
+\usepackage{empheq}
+%
 %paquet pour les liens hypertextes
 \usepackage[colorlinks=true,%
 linkcolor=black,%
@@ -330,8 +333,8 @@ breaklinks = true%
 \DeclareMathOperator{\rot}{\vect{\mathbf{rot}}}%rotationnel
 %
 \newcommand{\cercle}[2]{\mathcal{C}(#1,#2)}% cercle
-\newcommand{\congru}[3]{#1 \equiv #2 \pmod {#3}} %congru
-\newcommand{\noncongru}[3]{#1 \not\equiv #2 \pmod {#3}} %non-congru
+\newcommand{\congru}[3]{#1 \equiv #2\!\pmod {#3}} %congru
+\newcommand{\noncongru}[3]{#1 \not\equiv #2\!\pmod {#3}} %non-congru
 \newcommand{\expc}[2]{#1 \e^{\ii #2}}% exp complexe
 \renewcommand{\bar}{\overline}
 \newcommand{\Uv}{\vect{u}}

@@ -13,9 +13,11 @@ La première section se focalise sur leur définition et leurs propriétés. On 
 La construction de ce corps est hors programme. On le définit tel quel.
 \begin{defdef}
   L'ensemble des complexes est défini par
-  \begin{equation}
+\begin{empheq}[box=\shadowbox*]{align}
+%  \begin{equation}
     \C = \enstq{x+ \ii y}{(x,y)\in \R},
-  \end{equation}
+%  \end{equation}
+\end{empheq}
   tel que \(\ii^2=-1\).
 \end{defdef}
 \emph{Remarque} L'unité imaginaire \(\ii\) est souvent notée \(j\) en physique (pour ne pas confondre avec l'intensité). L'ensemble des complexes est muni de deux lois :
@@ -25,14 +27,16 @@ La construction de ce corps est hors programme. On le définit tel quel.
 \end{itemize}
 %
 \begin{prop} Tous les réels sont complexes, c'est-à-dire~:
-  \begin{equation}
+\begin{empheq}[box=\shadowbox*]{align}
+%  \begin{equation}
     \R \subset \C.
-  \end{equation}
+%  \end{equation}
+\end{empheq}
   Les lois de \(\R\) coïncident avec les lois sur \(\C\).
 \end{prop}
 %
 \begin{prop}
-  \((\C,+)\) est un groupe commutatif. C'est-à-dire que~:
+    \emph{\((\C,+)\) est un groupe commutatif}. C'est-à-dire que~:
   \begin{itemize}
   \item la loi \(+\) est associative,
     \begin{equation}
@@ -48,7 +52,7 @@ La construction de ce corps est hors programme. On le définit tel quel.
 \end{prop}
 %
 \begin{prop}
-  \((\C,+,\times)\) est un anneau commutatif. C'est-à-dire que \((\C,+)\) est un groupe commutatif et que
+    \emph{\((\C,+,\times)\) est un anneau commutatif}. C'est-à-dire que \((\C,+)\) est un groupe commutatif et que
   \begin{itemize}
   \item \(\times\) est associative;
   \item \(\times\) admet un élément neutre noté \(1\);
@@ -60,18 +64,14 @@ La construction de ce corps est hors programme. On le définit tel quel.
 \end{prop}
 %
 \begin{prop}
-  Pour tout complexe \(z \in \C\), il existe un unique couple de réels \((x,y) \in \R^2\) tel que \(z=x+\ii y\). C'est-à-dire que l'application
-  \begin{equation}
-    \fonction{\varphi}{\R^2}{\C}{(x,y)}{x+\ii y}
-  \end{equation}
-  est bijective.
+  Pour tout complexe \(z \in \C\), il existe un unique couple de réels \((x,y) \in \R^2\) tel que \(z=x+\ii y\). C'est-à-dire que l'application \(\fonctionL{\varphi}{\R^2}{\C}{(x,y)}{x+\ii y}\) est bijective.
 \end{prop}
 \emph{Interprétation géométrique~:} L'application $\varphi$ peut être vue comme une ``correspondance'' entre $\C$ et le plan $\R^2$, voir la figure~\ref{fig:complexe}.
 \begin{figure}
     \centering
     \includegraphics[scale=0.7]{./Complexes.png}
-    \label{fig:complexe}
     \caption{Représentation géométrique des complexes}
+    \label{fig:complexe}
 \end{figure}
 \begin{proof}[Unicité]
   S'il existe deux couples de réels \((x,y),(x',y')\) tels que
@@ -95,12 +95,9 @@ On appelle le réel \(x\) la partie réelle du complexe \(z\), \(x=\Re(z)\) et o
 %
 \begin{prop}
   Soient des complexes \(z\) et \(z'\) puis un réel \(\lambda\), alors
-  \begin{gather}
-    \Re(z+z')=\Re(z)+\Re(z'), \\
-    \Im(z+z')=\Im(z)+\Im(z'),\\
-    \Re(\lambda z)=\lambda \Re(z),\\
-    \Im(\lambda z)=\lambda \Im(z).
-  \end{gather}
+  \begin{equation}
+      \Re(z+z')=\Re(z)+\Re(z'), \quad \Im(z+z')=\Im(z)+\Im(z'), \quad \Re(\lambda z)=\lambda \Re(z), \quad \Im(\lambda z)=\lambda \Im(z).
+  \end{equation}
 \end{prop}
 %
 \emph{Un complexe n'a pas de signe}. On note \(\C^*=\C \setminus \{0\}\)
@@ -120,20 +117,16 @@ Les conjugués de deux complexes sont représentés dans le plan complexe sur la
 %
 \begin{prop}
   Soient des complexes \(z\) et \(z'\), alors
-  \begin{gather}
-    \bar{z+z'}=\bar{z} + \bar{z'}; \\
-    \bar{z \cdot z'}=\bar{z} \cdot \bar{z'}; \\
-    \bar{\bar{z}}=z.
-  \end{gather}
+  \begin{equation}
+      \bar{z+z'}=\bar{z} + \bar{z'}; \quad \bar{z \cdot z'}=\bar{z} \cdot \bar{z'}; \quad \bar{\bar{z}}=z.      
+  \end{equation}
 \end{prop}
 \begin{prop}
-  pour tout complexe \(z\) on a
-  \begin{gather}
-    \Re(z)=\frac{z+\bar{z}}{2};\\
-    \Im(z)=\frac{z-\bar{z}}{2 \ii};\\
-    z \in \R \iff z=\bar{z};\\
-    z \in \ii\R \iff z=-\bar{z}.
-  \end{gather}
+  Pour tout complexe \(z\), on a
+  \begin{equation}
+      \Re(z)=\frac{z+\bar{z}}{2}; \quad \Im(z)=\frac{z-\bar{z}}{2 \ii}; \quad z \in \R \iff z=\bar{z}; \quad
+      z \in \ii\R \iff z=-\bar{z}.
+  \end{equation}
 \end{prop}
 %
 \subsection{Module d'un complexe}
@@ -166,11 +159,9 @@ On peut représenter le module dans le plan complexe par la figure \ref{fig:modu
 %
 \begin{prop}
   Soient \(z\) et \(z'\) deux complexes, alors
-  \begin{gather}
-    \abs{z}=\abs{\bar{z}}; \\
-    \abs{z \cdot z'}=\abs{z} \cdot \abs{z'}; \\
-    \abs{z+z'}\leqslant\abs{z}+\abs{z'}.
-  \end{gather}
+  \begin{equation}
+      \abs{z}=\abs{\bar{z}}; \quad \abs{z \cdot z'}=\abs{z} \cdot \abs{z'}; \quad \abs{z+z'}\leqslant\abs{z}+\abs{z'}.
+  \end{equation}
   Avec égalité s'il existe un réel \(\lambda\) tel que \(z'=\lambda z\).
 \end{prop}
 \begin{proof}
@@ -197,46 +188,40 @@ On peut représenter le module dans le plan complexe par la figure \ref{fig:modu
 \end{proof}
 %
 \begin{prop}
-  Tout complexe \(z\) non nul admet un unique inverse, c'est \(\frac{\bar{z}}{\abs{z}^2}\).
+    Tout complexe \(z\) non nul admet un unique inverse
+\begin{empheq}[box=\shadowbox*]{align}
+%   \begin{equation}
+        \frac{1}{z} = \frac{\bar{z}}{\abs{z}^2}.
+%   \end{equation}
+\end{empheq}
 \end{prop}
 \begin{proof}
-  D'une part
-  \begin{equation}
-    z \cdot \frac{\bar{z}}{\abs{z}^2}=\frac{z \bar{z}}{\abs{z}^2}=1,
-  \end{equation}
-  et d'autre part si \(z\cdot z'=z'\cdot z=1\) alors \(z'\cdot z\cdot \frac{\bar{z}}{\abs{z}^2}=z'\). Comme \(z\cdot z'=1\), on a \( \frac{\bar{z}}{\abs{z}^2}\cdot z\cdot z'=\frac{\bar{z}}{\abs{z}^2}\) donc \(z'=\frac{\bar{z}}{\abs{z}^2}\).
+  D'une part \(z \cdot \frac{\bar{z}}{\abs{z}^2}=\frac{z \bar{z}}{\abs{z}^2}=1\) et d'autre part si \(z\cdot z'=z'\cdot z=1\) alors \(z'\cdot z\cdot \frac{\bar{z}}{\abs{z}^2}=z'\). Comme \(z\cdot z'=1\), on a \( \frac{\bar{z}}{\abs{z}^2}\cdot z\cdot z'=\frac{\bar{z}}{\abs{z}^2}\) donc \(z'=\frac{\bar{z}}{\abs{z}^2}\).
 \end{proof}
 En pratique, on multiplie par le complexe conjugué : \(\frac{1}{x+\ii y}=\frac{x -\ii y}{x^2+y^2}\).
 %
 \begin{prop}
-  \((\C,+,\times)\) est un anneau commutatif intègre. \((\C^*,+,\times)\) est aussi un corps commutatif.
+  \((\C,+,\times)\) est un anneau commutatif intègre. C'est-à-dire qu'il n'admet pas de diviseurs de 0 : Si \(a, b \in \C\) tels que \(ab=0\) alors soit \(a=0\) ou \(b=0\).
+  \((\C^*,+,\times)\) est aussi un corps commutatif. C'est-à-dire que tout complexe non nul admet un inverse
 \end{prop}
 %
+ 
 \begin{prop}
   Soient un complexe \(z\) non nul et un complexe \(z'\) quelconque, alors on a
-  \begin{gather}
-    \bar{\frac{1}{z}}=\frac{1}{\bar{z}}; \\
-    \abs{\frac{1}{z}}=\frac{1}{\abs{z}}; \\
-    \bar{\frac{z'}{z}} = \frac{\bar{z'}}{\bar{z}};\\
-    \abs{\frac{z'}{z}}=\frac{\abs{z'}}{\abs{z}}.
-  \end{gather}
+  \begin{equation}
+      \bar{\frac{1}{z}}=\frac{1}{\bar{z}}; \quad \abs{\frac{1}{z}}=\frac{1}{\abs{z}}; \quad
+      \bar{\frac{z'}{z}}=\frac{\bar{z'}}{\bar{z}}; \quad \abs{\frac{z'}{z}}=\frac{\abs{z'}}{\abs{z}}
+  \end{equation}
 \end{prop}
 %
 \begin{defdef}
-  Soient un complexe \(a\) et un réel positif \(r\), on définit le disque ouvert de centre \(a\) et de rayon \(r\), noté \(D_o(a,r)\), par~:
-  \begin{equation}
-    D_o(a,r)=\enstq{z\in\C}{\abs{z-a}<r},
-  \end{equation}
-  et on définit le disque fermé, noté \(D_f(a,r)\), par~:
-  \begin{equation}
-    D_f(a,r)=\enstq{z\in\C}{\abs{z-a}\leqslant r}.
-  \end{equation}
+  Soient un complexe \(a\) et un réel positif \(r\), on définit le disque ouvert de centre \(a\) et de rayon \(r\) par \(D_o(a,r)=\enstq{z\in\C}{\abs{z-a}<r}\), et on définit le disque fermé, par \(D_f(a,r)=\enstq{z\in\C}{\abs{z-a}\leqslant r}\).
 \end{defdef}
 %
 \subsection{Plan complexe}
 \label{subsec:plancomplexe}
 %
-Soit \(\P\) le plan euclidien muni d'un repère orthonormé \((O,\vect{u}, \vect{v})\). Si \(M\) est un point du plan \(\mathcal{P}\) de coordonnées \((x,y)\) dans le repère \((O,\vect{u}, \vect{v})\), on appelle l'affixe de \(M\), le complexe \(z=x + \ii y\). Pour tous complexe \(z\), il existe un point du plan \(\mathcal{P}\) d'affixe \(z\), c'est \(M(z)\). L'application \(\fonction{\varphi}{\C}{\P}{z}{M(z)}\) est une bijection. Cette bijection permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
+Soit \(\P\) le plan euclidien muni d'un repère orthonormé \((O,\vect{u}, \vect{v})\). Si \(M\) est un point du plan \(\mathcal{P}\) de coordonnées \((x,y)\) dans le repère \((O,\vect{u}, \vect{v})\), on appelle l'affixe de \(M\), le complexe \(z=x + \ii y\). Pour tous complexe \(z\), il existe un point du plan \(\mathcal{P}\) d'affixe \(z\), c'est \(M(z)\). L'application \(\fonctionL{\varphi}{\C}{\P}{z}{M(z)}\) est une bijection. Cette bijection permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
 \begin{itemize}
 \item \(M(\bar{z})\) est le symétrique de \(M(z)\) par rapport à l'axe \((O,\vect{u})\);
 \item \(M(-z)\) est le symétrique de \(M(z)\) par rapport au point O;
@@ -281,9 +266,11 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point \(
 \label{subsec:groupeU-defetprop}
 \begin{defdef}
   Le groupe des complexes de module 1, noté \(\U\), est~:
-  \begin{equation}
+\begin{empheq}[box=\shadowbox*]{align}
+%  \begin{equation}
     \U=\enstq{z \in \C}{\abs{z}=1}.
-  \end{equation}
+%  \end{equation}
+\end{empheq}
   Géométriquement parlant, \(\U\) est le cercle de centre \(O\) et de rayon \(1\).
 \end{defdef}
 %
@@ -295,7 +282,7 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point \(
 \end{prop}
 %
 \begin{prop}
-  \((\U, \times)\) est un groupe commutatif (ou abélien), c'est-à-dire que~:
+    \emph{\((\U, \times)\) est un groupe commutatif}, c'est-à-dire que~:
   \begin{enumerate}
   \item \(\forall (z,z') \in \U^2 \quad zz' \in \U\);
   \item la loi \(\times\) est associative et commutative;
@@ -812,11 +799,11 @@ On dit que \(F\) est représentée par l'application \(f\). Soient deux complexe
 Soient \(\omega \in \C\), \(k\in \R^*\) et \(\theta \in \R^*\). La rotation \(\mathcal{R}\) de centre \(\omega\) et d'angle \(\theta\) est représentée par \[\fonction{r}{\C}{\C}{z}{\expc{}{\theta}(z-\omega)+\omega},\] et l'homothétie \(\mathcal{H}\) de rapport \(k \in \R^*\) est représentée par \[\fonction{h}{\C}{\C}{z}{k(z-\omega)+\omega}.\]
 %
 \begin{defdef}
-  On appelle similitude directe de centre \(\Omega(\omega)\), d'angle \(\theta\) et de rapport \(k \in \R^*\), la transformation \(\Psi\) du plan dans le plan représentée par l'application de \(\C\) dans \(\C\)~: \(\fonction{\psi}{\C}{\C}{z}{\expc{k}{\theta}(z-\omega)+\omega}\).
+  On appelle similitude directe de centre \(\Omega(\omega)\), d'angle \(\theta\) et de rapport \(k \in \R^*\), la transformation \(\Psi\) du plan dans le plan représentée par l'application \(\fonction{\psi}{\C}{\C}{z}{\expc{k}{\theta}(z-\omega)+\omega}\).
 \end{defdef}
 
 %
-Soient \(a\) et \(b\) deux complexes tels que \(a\neq 0\). On considère l'application bijective \(\fonction{\varphi}{\C}{\C}{z}{az+b}\) qui représente \(\fonction{\Phi}{\P}{\P}{M(z)}{M(az+b)}\).
+Soient \(a\) non nul et \(b\) dans \(\C\), on considère la bijection \(\fonction{\varphi}{\C}{\C}{z}{az+b}\) qui représente \(\fonction{\Phi}{\P}{\P}{M(z)}{M(az+b)}\).
 \begin{itemize}
 \item Si \(a=1\); alors  \(\Phi\) est la translation de vecteur \(\vect{u}(b)\).
 \item Si \(a \neq 1\), alors on montre que \(\Phi\) admet un unique point fixe \(\Omega(\omega) \quad \omega = \frac{b}{1-a}\) et \(\varphi(z)=a(z-\omega)+\omega\).
