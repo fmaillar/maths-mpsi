@@ -68,11 +68,11 @@ else:
                             text=r"$\theta$")
 
 ax.text(x0/2, y0+eps, r'$\cos \theta$', ha='center', usetex=True)
-ax.text(x0/2*np.sign(y0), 1+eps, r'$1/{\tan \theta}$', ha='center',
+ax.text(x0/2*np.sign(y0)*1.5, 1-2*eps, r'$1/{\tan \theta}$', ha='center',
         usetex=True)
 ax.text(x0-eps, y0/2, r'$\sin \theta$', ha='center', rotation='vertical',
         usetex=True)
-ax.text(1+2*eps, y0, r'$\tan \theta$', ha='center', rotation='vertical',
+ax.text(1+2*eps, y0*0.7, r'$\tan \theta$', ha='center', rotation='vertical',
         usetex=True)
 ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
