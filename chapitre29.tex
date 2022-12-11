@@ -403,7 +403,7 @@ Pour tout \(t\) au voisinage de \(0\), \(a+th\) est au voisinage de \(a\) donc \
   \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leqslant r \\
   &\iff \abs{t} \norme{h} \leqslant r.
 \end{align}
-Si \(h=(0, 0)\), alors \(t \longmapsto f(a+th)\) est définie sur \(\R\). Sinon, \(a+th \in B(a, r) \iff \abs{t} \leqslant \frac{r}{\norme{h}}\). L'application \(t \longmapsto f(a+th)\) est définie au moins sur \(\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}\). Dans tous les cas, il existe \(\delta>0\) tel que \(\Psi_h : t \longmapsto f(a+th)\) soit définie au moins sur \(\intervalleoo{-\delta}{\delta}\). 
+Si \(h=(0, 0)\), alors \(t \longmapsto f(a+th)\) est définie sur \(\R\). Sinon, \(a+th \in B(a, r) \iff \abs{t} \leqslant \frac{r}{\norme{h}}\). L'application \(t \longmapsto f(a+th)\) est définie au moins sur \(\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}\). Dans tous les cas, il existe \(\delta>0\) tel que \(\Psi_\fonctionR{h}{t}{f}(a+th)\) soit définie au moins sur \(\intervalleoo{-\delta}{\delta}\). 
 
 Il est légitime de se demander si \(\fonction{\Psi_h}{\intervalleoo{-\delta}{\delta}}{\R}{t}{f(a+th)}\) est dérivable en zéro.
 
@@ -697,7 +697,7 @@ La réciproque est fausse. En effet soit \(\fonction{f}{\R^2}{\R}{(x,y)}{xy}\), 
 \begin{equation}
   \derivep{f}{x} = y \qquad \derivep{f}{y} = x,
 \end{equation}
-donc \((0, 0)\) est un point critique. Cependant, est-ce un extremum ?
+donc \((0, 0)\) est un point critique. Cependant, est-ce un extremum?
 
 \(f\) n'admet pas de maximum en \((0,0)\)~:
 \begin{equation}

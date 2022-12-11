@@ -10,7 +10,7 @@ Soit \(\P\) le plan géométrique euclidien. On suppose que \(\P\) est muni d'un
 \subsection{Coordonnées cartésiennes}
 \label{subsec:coordcart}
 \begin{defdef}
-  Soit \(M\) un point du plan \(\P\). Il existe un unique couple de réels \((x,y)\) tel que \(\vect{OM}=x\vi+y\vj\). On appelle ce couple les coordonnées cartésiennes de \(M\) dans le repère \(\Rep\). Ainsi, la donnée d'un repère cartésien permet de définir une bijection entre \(\R^2\) et \(\P\), ce qui permettra d'identifier ces deux ensembles. La représentation de ce mode de repérage est donnée par la figure \ref{fig:coordcart}.
+  Soit \(M\) un point du plan \(\P\). Il existe un unique couple de réels \((x,y)\) tel que \(\vect{OM}=x\vi+y\vj\). On appelle ce couple les coordonnées cartésiennes de \(M\) dans le repère \(\Rep\). Ainsi, la donnée d'un repère cartésien permet de définir une bijection entre \(\R^2\) et \(\P\), ce qui permettra d'identifier ces deux ensembles. La représentation de ce mode de repérage est donnée par la figure~\ref{fig:coordcart}.
 \end{defdef}
 \begin{figure}
   \centering
@@ -38,7 +38,7 @@ Si le point \(M\) est l'origine du repère \(O\) alors \((\rho,\theta)\) est un 
   \end{equation}
 \end{defdef}
 
-On a aussi pour tout réel \(\theta\), \(\vv_\theta=\vu_{\theta+\frac{\pi}{2}}\). Le repère \(\Rep\) est orthonormal direct \(\norme{\vu_\theta}=\norme{\vv_\theta}=1\) et l'affixe de \(\vu_\theta\) est \(\e^{i \theta}\) et celle de \(\vv_\theta\) est \(i \e^{i \theta}\). %La représentation de ce mode de repérage est donnée par la figure \ref{fig:coordpol}.
+On a aussi pour tout réel \(\theta\), \(\vv_\theta=\vu_{\theta+\frac{\pi}{2}}\). Le repère \(\Rep\) est orthonormal direct \(\norme{\vu_\theta}=\norme{\vv_\theta}=1\) et l'affixe de \(\vu_\theta\) est \(\e^{i \theta}\) et celle de \(\vv_\theta\) est \(i \e^{i \theta}\). %La représentation de ce mode de repérage est donnée par la figure~\ref{fig:coordpol}.
 % \begin{figure}
 %   \centering
 %   \includegraphics[scale=1, width=\textwidth]{coordpolaires.eps}
@@ -492,7 +492,7 @@ Si \(\Dr\) admet pour équation cartésienne \(ax+by+c=0\) avec \((a,b) \neq (0,
 
 \subsection{Distance d'un point à une droite}
 
-Soient \(\Dr\) une droite et \(A\) un point. On cherche à déterminer la plus courte distance de \(A\) a un point de la droite et à montrer qu'elle est atteinte en un seul point. Soit \(H\) le projeté orthogonal de \(A\) sur la droite \(\Dr\). Pour tout point \(M\) du plan, on peut appliquer le théorème de Pythagore sur le triangle rectangle \(AHM\) : \(AM^2=AH^2+HM^2 \geqslant AH^2\). Donc \(AM \geqslant AH\) et on a \(AM=AH \iff H=M\). Ainsi \(d(A,\Dr)=AH\) et elle n'est atteinte qu'en un seul point : le projeté orthogonal de \(A\) sur la droite \(\Dr\).% On représente le problème par la figure \ref{fig:dist}
+Soient \(\Dr\) une droite et \(A\) un point. On cherche à déterminer la plus courte distance de \(A\) a un point de la droite et à montrer qu'elle est atteinte en un seul point. Soit \(H\) le projeté orthogonal de \(A\) sur la droite \(\Dr\). Pour tout point \(M\) du plan, on peut appliquer le théorème de Pythagore sur le triangle rectangle \(AHM\) : \(AM^2=AH^2+HM^2 \geqslant AH^2\). Donc \(AM \geqslant AH\) et on a \(AM=AH \iff H=M\). Ainsi \(d(A,\Dr)=AH\) et elle n'est atteinte qu'en un seul point : le projeté orthogonal de \(A\) sur la droite \(\Dr\).% On représente le problème par la figure~\ref{fig:dist}
 % \begin{figure}[!h]
 %   \centering
 %   \includegraphics[scale=0.5]{distance-point-droite.eps}
@@ -899,7 +899,7 @@ En particulier, si \(\abs{a}=1\) c'est une rotation, si \(a \in \R\), c'est une 
   Une similitude directe conserve les angles et les rapports de distances.
 \end{prop}
 \begin{proof}
-  Soient une similitude \(s : z \longmapsto az+b\) avec \(a \neq 0\), les points \(A_1,A_2,A_3,A_4\) tels que \(A_1 \neq A_3\) et \(A_2 \neq A_4\), on note avec des primes leurs images par \(s\). Alors
+  Soient une similitude \(\fonctionR{s}{z}{a}z+b\) avec \(a \neq 0\), les points \(A_1,A_2,A_3,A_4\) tels que \(A_1 \neq A_3\) et \(A_2 \neq A_4\), on note avec des primes leurs images par \(s\). Alors
   \begin{equation}
     \congru{(\vect{A_1 A_3};\vect{A_2 A_4})}{\Arg\left(\frac{z_4-z_2}{z_3-z_1}\right)}{2\pi},
   \end{equation}
@@ -1008,6 +1008,6 @@ et aussi
     Soient \(A, B, C\) et \(D\) quatre points tels que \(ABC\) et \(ABD\) soient des triangles non aplatis. On note \(\A(ABC)\) et \(\A(ABD)\) leurs aires.
     \begin{enumerate}
         \item On suppose dans cette question que les droites \((AB)\) et \((CD)\) sont sécantes en un point \(I\). Montrer que \(\frac{\A(ABC)}{\A(ABD)} = \frac{CI}{DI}\);
-        \item Que peut on dire si les droites \((AB)\) et \((CD)\) sont parallèles ?
+        \item Que peut on dire si les droites \((AB)\) et \((CD)\) sont parallèles?
     \end{enumerate}
 \end{exercice}

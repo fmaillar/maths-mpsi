@@ -10,7 +10,7 @@ Soit \(\E\) l'espace géométrique euclidien. On munit \(\E\) d'un repère cart�
 \begin{defdef}
   Soit M un point de l'espace \(\E\). Il existe un unique triplet \((x,y,z)\in\R^3\) tel que \(\vect{OM}=x\vi+y\vj+z\vk\), ce sont les coordonnées cartésiennes du point M dans le repère \(\rondtrois\). Réciproquement pour tout triplet \((x,y,z)\) de \(\R^3\) il existe un unique point M de l'espace tel que \(\vect{OM}=x\vi+y\vj+z\vk\)
 \end{defdef}
-Ainsi la donnée d'un repère cartésien de l'espace permet de définir une bijection entre \(\R^3\) et \(\E\). La représentation du repère cartésien est donné par la figure \ref{fig:repcart}.
+Ainsi la donnée d'un repère cartésien de l'espace permet de définir une bijection entre \(\R^3\) et \(\E\). La représentation du repère cartésien est donné par la figure~\ref{fig:repcart}.
 
 \emph{Changement de repère en coordonnées cartésiennes}
 Soient \(\Rep=\rondtrois\) et \(\Rep'=\rondtroisu\) deux repères cartésiens. Dans \(\Rep\) \(\Omega(x_0,y_0,z_0)\) et les vecteurs \(\vu(a,b,c)\) \(\vv(a',b',c')\) et \(\vw(a'',b'',c'')\). Soit M un point de l'espace. On note \((x_0,y_0,z_0)\) ses coordonnées dans \(\Rep\) et \((X,Y,Z)\) ses coordonnées dans \(\Rep'\). D'une part~:
@@ -41,7 +41,7 @@ Alors par unicité des coordonnées dans \(\Rep\) on a~:
 
 \subsection{Coordonnées cylindriques}
 \label{subsec:coordcyl}
-Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\vi+\sin\varphi\vj\\ \vv_\varphi=-\sin\varphi\vi+\cos\varphi\vj\end{cases}\). Soit un point \(M\) de l'espace de coordonnées \((x,y,z)\) et \(P\) le projeté orthogonal de \(M\) sur le plan \(\rond\), \(P(x,y,0)\). Soit \((r,\varphi)\) un système de coordonnées polaires de \(P\), alors \(\vect{OP}=r\vu_\varphi\) et donc \(\vect{OM}=r\vu_\varphi+z\vk\). Une représentation graphique des du repère cylindrique est donné par la figure \ref{fig:repcyl}.
+Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\vi+\sin\varphi\vj\\ \vv_\varphi=-\sin\varphi\vi+\cos\varphi\vj\end{cases}\). Soit un point \(M\) de l'espace de coordonnées \((x,y,z)\) et \(P\) le projeté orthogonal de \(M\) sur le plan \(\rond\), \(P(x,y,0)\). Soit \((r,\varphi)\) un système de coordonnées polaires de \(P\), alors \(\vect{OP}=r\vu_\varphi\) et donc \(\vect{OM}=r\vu_\varphi+z\vk\). Une représentation graphique des du repère cylindrique est donné par la figure~\ref{fig:repcyl}.
 \begin{defdef}
   Soit \(M\) un point de l'espace \(\E\), on appelle système de coordonnées cylindriques de \(M\) dans \(\Rep\) tout triplet de réels \((r,\varphi,z)\) avec \(r>0\) tel que \(\vect{OM}=r\vu_\varphi+z\vk\). Alors \(\vect{OM}=r\cos\varphi\vi+r\sin\varphi\vj+z\vk\), on peut retrouver les coordonnées cartésiennes. On a \(r=OP\), l'unicité de \(z\) est claire car c'est la conséquence de l'unicité des coordonnées cartésiennes. 
 \begin{itemize}
@@ -62,7 +62,7 @@ Pour tout réel \(\varphi\) on définit \(\begin{cases}\vu_\varphi=\cos\varphi\v
 
 
 \subsection{Coordonnées sphériques}
-On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que \(\vect{OM}=r\vu_\varphi+z\vk\), donc si on note \(\rho=OM\) on a \(\rho=\sqrt{r^2+z^2}\). Un représentation des coordonnées sphériques est donnée par la figure \ref{fig:repsphere}
+On conserve les notations de la sous-section~\ref{subsec:coordcyl}. On sait que \(\vect{OM}=r\vu_\varphi+z\vk\), donc si on note \(\rho=OM\) on a \(\rho=\sqrt{r^2+z^2}\). Un représentation des coordonnées sphériques est donnée par la figure~\ref{fig:repsphere}
 \begin{itemize}
 \item Si le point \(M\) est différent de l'origine alors \(\rho>0\) et \(\frac{r^2}{\rho^2}+\frac{z^2}{\rho^2}=1\); alors il existe \(\theta\in \intervalleff{0}{2\pi}\) tel que \(\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}\) on a \(r\geqslant 0\) et \(z\geqslant 0\) donc on peut choisir \(\theta\in \intervalleff{0}{\pi}\) et on a \(\vect{OM}=\rho\vu_{\varphi,\theta}\) où \(\vu_{\varphi,\theta}=\sin\theta\vu_\varphi+\cos\theta\vk\).
 \item Si le point \(M\) est l'origine alors \(\rho=r=z=0\), on peut prendre n'importe quel \(\theta \in \intervalleff{0}{\pi}\) et on a encore \(\begin{cases}r=\rho\sin\theta\\ z=\rho\cos\theta\end{cases}\).
@@ -894,7 +894,7 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
 \begin{exercice}
     Soit \(\mathcal{R} = (O, \vi, \vj, \vk)\) un repère orthonormal direct de l'espace. On définit le point \(\Omega\) de coordonnées \((-1,2,4)\) dans \(\mathcal{R}\) et les vecteurs \(\vect{I} = \vi+\vj, \vect{J} = \vi - \vj, \vect{K} = \vi - \vk\).
     \begin{enumerate}
-        \item Montrer que \(\mathcal{R}' = (\Omega, \vect{I}, \vect{J}, \vect{K})\) est un repère de l'espace. Est-il direct ou indirect ? Est-il orthogonal, orthonormal ?
+        \item Montrer que \(\mathcal{R}' = (\Omega, \vect{I}, \vect{J}, \vect{K})\) est un repère de l'espace. Est-il direct ou indirect? Est-il orthogonal, orthonormal?
         \item Soit \(A\) le point de coordonnées \((1, 2, 3)\) dans \(\mathcal{R}\). Déterminer ses coordonnées dans \(\mathcal{R}'\).
         \item Donner une équation du plan passant par \(A\) orthogonal à \(\vn = \vi + \vj\) dans \(\mathcal{R}'\).
     \end{enumerate}

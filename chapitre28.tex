@@ -180,7 +180,7 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   Pour toute fonction \(h \in E^E\) et tout \(\alpha \in \R\setminus\{0, 1\}\), \(h\) est une homothétie de rapport \(\alpha\) si et seulement si pour tout couple de points \((A, B) \in E^2\) on a \(\vect{h(A)h(B)}=\alpha \vect{AB}\).
 \end{prop}
 \begin{proof}
-  L'application \(h\) admet elle un point fixe ? Vérifions le~:
+  L'application \(h\) admet elle un point fixe? Vérifions le~:
   \begin{align}
     \forall M \in \quad h(M) = M &\iff \vect{h(O)h(M)} = \vect{h(O)M} \\
     &\iff \alpha \vect{OM} =\vect{h(O)O} +\vect{OM} \\
@@ -338,23 +338,23 @@ Soit \(E\) un espace vectoriel euclidien.
   Les isométries sont des transformations affines.
 \end{prop}
 \begin{proof}
-  Soit \(f\) une isométrie. On a vu que \(f\) est affine et qu'en plus \(\vect{f} \in \Orth{E} \subset \GL{E}\). Alors d'après la proposition \ref{prop:isom-orth}, \(f\) est une isométrie.
+  Soit \(f\) une isométrie. On a vu que \(f\) est affine et qu'en plus \(\vect{f} \in \Orth{E} \subset \GL{E}\). Alors d'après la proposition~\ref{prop:isom-orth}, \(f\) est une isométrie.
 \end{proof}
 
 \begin{prop}
   Les automorphismes orthogonaux sont des isométries vectorielles.
 \end{prop}
 \begin{proof}
-  Soit \(f \in \Orth{E}\). \(f\) est linéaire donc affine et \(\vect{f}=f \in \Orth{E}\). Donc \(f\) est une isométrie d'après la proposition \ref{prop:isom-orth}.
+  Soit \(f \in \Orth{E}\). \(f\) est linéaire donc affine et \(\vect{f}=f \in \Orth{E}\). Donc \(f\) est une isométrie d'après la proposition~\ref{prop:isom-orth}.
 \end{proof}
 
 \begin{prop}
   La composée de deux isométries est une isométrie. La bijection réciproque d'une isométrie est aussi une isométrie. \((\Is{E}, \circ)\) est un sous-groupe de \((\Ga{E}, \circ)\).
 \end{prop}
 \begin{proof}
-  Soient \(f\) et \(g\) deux isométries. Comme \(f\) et \(g\) sont aussi affines, alors \(g \circ f\) est affine avec \(\vect{g \circ f}=\vect{g} \circ \vect{f}\). Les applications \(\vect{f}\) et \(\vect{g}\) sont dans \(\Orth{E}\) d'après la proposition \ref{prop:isom-orth}. Alors \(\vect{g \circ f}=\vect{g} \circ \vect{f} \in \Orth{E}\), ainsi (toujours d'après la proposition \ref{prop:isom-orth}, \(g \circ f \in \Is{E}\).
+  Soient \(f\) et \(g\) deux isométries. Comme \(f\) et \(g\) sont aussi affines, alors \(g \circ f\) est affine avec \(\vect{g \circ f}=\vect{g} \circ \vect{f}\). Les applications \(\vect{f}\) et \(\vect{g}\) sont dans \(\Orth{E}\) d'après la proposition~\ref{prop:isom-orth}. Alors \(\vect{g \circ f}=\vect{g} \circ \vect{f} \in \Orth{E}\), ainsi (toujours d'après la proposition~\ref{prop:isom-orth}, \(g \circ f \in \Is{E}\).
 
-  Soit \(f \in \Is{E}\). \(f\) est inversible donc \(f^{-1}\) existe. De plus \(f^{-1} \in \Ga{E}\) et \(\vect{f^{-1}}=\vect{f}^{-1}\). Or \(\vect{f} \in \Orth{E}\), donc \(\vect{f}^{-1} \in \Orth{E}\) et ainsi \(f^{-1} \in \Is{E}\) (proposition \ref{prop:isom-orth}).
+  Soit \(f \in \Is{E}\). \(f\) est inversible donc \(f^{-1}\) existe. De plus \(f^{-1} \in \Ga{E}\) et \(\vect{f^{-1}}=\vect{f}^{-1}\). Or \(\vect{f} \in \Orth{E}\), donc \(\vect{f}^{-1} \in \Orth{E}\) et ainsi \(f^{-1} \in \Is{E}\) (proposition~\ref{prop:isom-orth}).
 
   \((\Is{E}, \circ)\) est un sous-groupe de \((\Ga{E}, \circ),\) en effet~:
   \begin{itemize}
@@ -430,7 +430,7 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
   \begin{equation}
     \vect{s}(\vect{IM}) = \vect{s(I)s(M)} = \vect{Is(M)}.
   \end{equation}
-  En particulier \(\vect{s}(\vect{IA})=\vect{IB}\) et \(\vect{s}(\vect{IB})=\vect{IA}\). Donc \(\vect{s}\) est l'unique réflexion vectorielle qui échange \(\vect{IA}\) et \(\vect{IB}\) (\emph{cf} chapitre \ref{chap:automorphismesorthogonaux}. La réflexion \(\vect{s}\) est l'unique réflexion par rapport à l'hyperplan vectoriel \(H = \VectEngendre{\vect{AB}}^\perp\).
+  En particulier \(\vect{s}(\vect{IA})=\vect{IB}\) et \(\vect{s}(\vect{IB})=\vect{IA}\). Donc \(\vect{s}\) est l'unique réflexion vectorielle qui échange \(\vect{IA}\) et \(\vect{IB}\) (\emph{cf} chapitre~\ref{chap:automorphismesorthogonaux}. La réflexion \(\vect{s}\) est l'unique réflexion par rapport à l'hyperplan vectoriel \(H = \VectEngendre{\vect{AB}}^\perp\).
 
   Pour tout vecteur \(\vx \in E\), on a
   \begin{equation}
@@ -504,7 +504,7 @@ Soit \(E_2\) le plan euclidien. Si \(f\) est un déplacement du plan alors \(\ve
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  C'est la conséquence des résultats obtenus sur les produits de deux réflexions vectorielles. Avec les notations du chapitre \ref{chap:automorphismesorthogonaux} on avait \(S_\varphi S_{\varphi'}=R_{\varphi-\varphi'}\).
+  C'est la conséquence des résultats obtenus sur les produits de deux réflexions vectorielles. Avec les notations du chapitre~\ref{chap:automorphismesorthogonaux} on avait \(S_\varphi S_{\varphi'}=R_{\varphi-\varphi'}\).
 \end{proof}
 
 \emph{Application~:} Tout déplacement du plan peut s'écrire comme un produit de deux réflexions.
@@ -677,7 +677,7 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
   Toute isométrie \(f\) de l'espace est un produit de réflexions.
 \end{cor}
 \begin{proof}
-  Soit \(f\) une isométrie. On a vu qu'elle se décompose de manière unique en produit d'une translation \(t\) et d'une application orthogonale \(g\) (théorème \ref{theo:isometrietransorth}). Une translation est un produit de réflexions et \(g\) est aussi un produit de réflexions (théorème \ref{theo:orthreflexions}).
+  Soit \(f\) une isométrie. On a vu qu'elle se décompose de manière unique en produit d'une translation \(t\) et d'une application orthogonale \(g\) (théorème~\ref{theo:isometrietransorth}). Une translation est un produit de réflexions et \(g\) est aussi un produit de réflexions (théorème~\ref{theo:orthreflexions}).
 \end{proof}
 
 \begin{table}

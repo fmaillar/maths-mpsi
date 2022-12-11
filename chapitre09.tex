@@ -256,7 +256,7 @@ On peut aussi le démontrer directement en utilisant les sommes télescopiques c
 \begin{proof}
   L'unicité est assurée par le théorème de récurrence. 
 \end{proof}
-Quelques valeurs de la factorielle sont données par le tableau \ref{tab:factorielle}. Cette suite croît très vite, plus vite que l'exponentielle.
+Quelques valeurs de la factorielle sont données par le tableau~\ref{tab:factorielle}. Cette suite croît très vite, plus vite que l'exponentielle.
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
@@ -298,7 +298,7 @@ Quelques valeurs de la factorielle sont données par le tableau \ref{tab:factori
       \label{eq:TrianglePascal}
     \forall (n,p)\in{\N^*}^2 \ \binom{n}{p}=\binom{n-1}{p-1}+\binom{n-1}{p}.
   \end{equation}
-  Une représentation graphique est donnée en figure \ref{fig:TrianglePascal}\footnote{Crédit : https://www.logamaths.fr/} pour illustrer cette dernière formule.
+  Une représentation graphique est donnée en figure~\ref{fig:TrianglePascal}\footnote{Crédit : https://www.logamaths.fr/} pour illustrer cette dernière formule.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
@@ -359,7 +359,7 @@ Le théorème de récurrence nous permet de conclure et de dire que la propositi
   \begin{equation}
     (a+b)^n=\sum_{k=0}^n \binom{n}{k}a^kb^{n-k}.
   \end{equation}
-  On peut aussi voir que les coefficients de la décomposition du binôme de Newton peuvent être visualisés sur les lignes du triangle de Pascal, voir la figure \ref{fig:TrianglePascal}.
+  On peut aussi voir que les coefficients de la décomposition du binôme de Newton peuvent être visualisés sur les lignes du triangle de Pascal, voir la figure~\ref{fig:TrianglePascal}.
 \end{prop}
 \begin{proof}
   Soient \(a\),\(b\) deux complexes et \(n\) un entier naturel, alors on définit la propriété \(\P(n)\) ``\((a+b)^n=\sum_{k=0}^n \binom{n}{k}a^kb^{n-k}\)''. Vérifions l'étape initiale~:
@@ -405,7 +405,7 @@ Par convention, l'ensemble vide est fini et son cardinal vaut \(0\).
     Soient deux bijections \(\varphi:\intervalleentier{1}{n} \longmapsto E\) et \(\psi:\intervalleentier{1}{p} \longmapsto E\) (on note \(\psi^{-1}:E \longmapsto \intervalleentier{1}{p}\)). Par composé de deux bijections, l'application \(\psi^{-1}\circ \varphi: \intervalleentier{1}{n} \longmapsto \intervalleentier{1}{p}\) est une bijection. Si on applique le théorème~\ref{theo:ensemblefini} on en déduit donc que \(n=p\).
 \end{proof}
 \begin{prop}
-  Soit \(E\) un ensemble fini et \(F\) un ensemble tel qu'il existe une bijection \(\varphi:E\longmapsto F\). Alors \(F\) est un ensemble fini de même cardinal que \(E\).
+  Soit \(E\) un ensemble fini et \(F\) un ensemble tel qu'il existe une bijection \(\varph\fonctionR{i}{E}{F}\). Alors \(F\) est un ensemble fini de même cardinal que \(E\).
 \end{prop}
 \begin{proof}
   \(E\) est fini, donc il existe un entier \(n\) et une bijection \(\psi:\intervalleentier{1}{n} \longmapsto E\). Ainsi l'application \(\varphi\circ\psi:\intervalleentier{1}{n} \longmapsto F\) est bijective, puisque c'est la composée de deux applications bijectives. Donc \(F\) est un ensemble fini et \(\Card F=n=\Card E\).
@@ -610,8 +610,8 @@ Soient \(E\) et \(F\) deux ensembles finis. On s'intéresse à l'ensemble des ap
   \end{itemize}
 \end{proof}
 \begin{itemize}
-\item Si \(E\) et F sont finis de même cardinal, il existe une bijection \(\varphi:E\longmapsto F\). En effet il existe un entier naturel non nul \(n\) et une fonction \(f_1:\intervalleentier{1}{n} \longmapsto E\) bijective (puisque \(E\) est fini) et une fonction \(f_2:\intervalleentier{1}{n} \longmapsto F\) bijective (puisque \(F\) est fini), donc il faut et il suffit de prendre \(\varphi=f_2\circ f_1^{-1}\).
-\item Si \(E\) et \(F\) sont finis et une application \(f:E\longmapsto F\), alors
+\item Si \(E\) et F sont finis de même cardinal, il existe une bijection \(\varph\fonctionR{i}{E}{F}\). En effet il existe un entier naturel non nul \(n\) et une fonction \(f_1:\intervalleentier{1}{n} \longmapsto E\) bijective (puisque \(E\) est fini) et une fonction \(f_2:\intervalleentier{1}{n} \longmapsto F\) bijective (puisque \(F\) est fini), donc il faut et il suffit de prendre \(\varphi=f_2\circ f_1^{-1}\).
+\item Si \(E\) et \(F\) sont finis et une application \(\fonctionR{f}{E}{F}\), alors
   \begin{gather}
     f \text{~est injective} \implies \Card(E)\leqslant\Card(F); \\
     f \text{~est surjective}\implies \Card(E)\geqslant\Card(F);\\
@@ -629,7 +629,7 @@ Soient \(E\) et \(F\) deux ensembles finis. On s'intéresse à l'ensemble des ap
   \begin{equation}
     \fonction{f}{F^E}{F^p}{u}{(u(\varphi(1)), \ldots, u(\varphi(p)))}.
   \end{equation}
-  Alors \(f\) est bien définie : puisque pour toute fonction \(u\) de \(F^E\) et tout entier \(i\) de \(\intervalleentier{1}{p}\), \(\varphi(i) \in E\) et \(u(\varphi(i))\in F\). La fonction \(f\) est bijective, puisque pour tout \((b_1, \ldots, b_p) \in F^P\) il existe une unique application \(u:E\longmapsto F\) telle que \(u(\varphi(1))=b_1\), \ldots, \(u(\varphi(p))=b_p\). Alors \(F^E\) est fini et \(\Card\left(F^E\right)=\Card(F^p)=\Card(F)^p=\Card(F)^{\Card(E)}\).
+  Alors \(f\) est bien définie : puisque pour toute fonction \(u\) de \(F^E\) et tout entier \(i\) de \(\intervalleentier{1}{p}\), \(\varphi(i) \in E\) et \(u(\varphi(i))\in F\). La fonction \(f\) est bijective, puisque pour tout \((b_1, \ldots, b_p) \in F^P\) il existe une unique application \(\fonctionR{u}{E}{F}\) telle que \(u(\varphi(1))=b_1\), \ldots, \(u(\varphi(p))=b_p\). Alors \(F^E\) est fini et \(\Card\left(F^E\right)=\Card(F^p)=\Card(F)^p=\Card(F)^{\Card(E)}\).
 \end{proof}
 \begin{prop}\label{prop:nbinj}
   Soient \(E\) et F des ensembles finis non vide de cardinaux respectifs \(p\) et \(n\). Soit \(I(E,F)\) l'ensemble des injections de \(E\) dans F. Alors \(I(E,F)\) est fini et
@@ -777,13 +777,13 @@ Soit \(E\) un ensemble fini. On note pour tout entier naturel \(p\), \(\Part_p(E
     Soient \(A, B, C\) trois parties d'un ensemble \(E\). Exprimer le cardinal de \(A \cup B \cup C\) en fonction des cardinaux de \(A, B, C\) et de leurs intersections.
 \end{exercice}
 \begin{exercice}
-    Soient deux naturels non nuls \(n\geqslant p\). Quel est le nombre d'applications strictement croissantes de \(\intervalleentier{1}{p}\) dans \(\intervalleentier{1}{n}\) ?
+    Soient deux naturels non nuls \(n\geqslant p\). Quel est le nombre d'applications strictement croissantes de \(\intervalleentier{1}{p}\) dans \(\intervalleentier{1}{n}\)?
 \end{exercice}
 \begin{exercice}
     Soient \(E\) un ensemble fini de cardinal \(n\) et \(A\) une partie de \(E\) de cardinal \(p\).
     \begin{enumerate}
-        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant un et un seul élément de \(A\) ?
-        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant au moins un  élément de \(A\) ?
+        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant un et un seul élément de \(A\)?
+        \item Quel est le nombre de parties à \(k\) éléments de \(E\) contenant au moins un  élément de \(A\)?
     \end{enumerate}
 \end{exercice}
 \begin{exercice}
