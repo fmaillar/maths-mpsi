@@ -1,0 +1,210 @@
+\add to counter{chapter}{-1}
+\chapter{Éléments de logique et quantificateurs}
+\minitoc
+\minilof
+\minilot
+
+Nous présentons dans ce très court chapitre les notions de base de logiques, les
+tables de vérités et l'utilisation des quantificateurs. On définit aussi ce
+qu'est une assertion et un théorème.
+\section{Assertion et théorème}
+\label{chap0sec:assertionettheoremes}
+Nous allons préciser à un premier niveau quelques notions mathématiques qui sont
+relativement intuitives mais nécessitent quand même des définitions rigoureuses.
+L’idée étant de préciser schématiquement comment se présente une théorie
+mathématique ainsi que la notion essentielle de démonstration. La première
+notion est celle d’assertion.
+
+Une assertion est un énoncé mathématiques \(P\) aussi rigoureux que possible qui
+ne prend qu'une valeur de vérité qui est soit vraie (V) soit fausse (F). On
+consigne ces valeurs dans une table de vérité. En mathématique, on appelle
+\emph{tautologie} une assertion qui est toujours vraie.
+
+Par exemple, l'assertion \(1+1=2\) est une tautologie. Par contre l'assertion
+\(1+1=3\) est une assertion dont la valeur de vérité est F. \(3=2 \times\) n'est
+pas une assertion. \(3=1+x\) est une assertion dont la valeur de vérité dépend
+de la valeur de \(x\).
+
+Un théorème est une assertion vraie déduite grâce à d'autres assertions, en
+général les théorèmes sont des résultats importants à retenir. Un lemme est un
+résultat préliminaire qui permet de démontrer un théorème. Un corollaire est une
+conséquence directe d'un théorème.
+
+Pour écrire un énoncé mathématique on utilise le langage courant mais aussi
+quelques symboles et très souvent on manipule des lettres dans l'alphabet grec.
+On présente cet alphabet et ces symboles dans l'annexe~\ref{chap:qqsymboles}.
+
+\section{Négation et connecteurs logiques}
+\label{chap0sec:negationetconnecteurs}
+À partir d'une assertion \(P\), on construit une assertion appelée (non \(P\)),
+qui peut être noté \(\neg P\) dont la table de vérité est donnée par la
+table~\ref{tab:tabveriteP}.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|}\hline
+        \(P\) & \(\neg P\) \\ \hline
+        V & F \\ F & V \\ \hline
+    \end{tabular}
+    \caption{Table de vérité de P}
+    \label{tab:tabveriteP}
+\end{table}
+
+À partir de deux assertions \(P\) et \(Q\), on peut en fabriquer de nouvelles à
+l'aide des connecteurs logiques suivants~:
+\begin{itemize}
+    \item la conjonction notée ``et'' ou \(\wedge\);
+    \item la disjonction notée ``ou'' ou \(\vee\);
+    \item l'implication notée \(\implies\);
+    \item l'équivalence notée \(\iff\).
+\end{itemize}
+Les tables de vérités de ces connecteurs logiques sont données dans la
+table~\ref{tab:tabverconn}.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}\hline
+        P & Q & \(P \text{~et~} Q\) & \(P \text{~ou~} Q\) & \(P \implies Q\) &
+        \(P \iff Q\) \\ \hline
+        V & V & V & V & V & V \\
+        V & F & F & V & F & F \\
+        F & V & F & V & V & F \\
+        F & F & F & F & V & V \\ \hline
+    \end{tabular}
+    \caption{Table de vérité des connecteurs logiques}
+    \label{tab:tabverconn}
+\end{table}
+
+Dans l'assertion \(P \implies Q\) l'assertion \(P\) est l'hypothèse et
+l'assertion \(Q\) est la conclusion. On a l'équivalence logique
+\begin{empheq}[box=\shadowbox*]{equation}
+    (P \implies Q) \iff (\neg P \text{~ou~} Q).
+\end{empheq}
+L'assertion \(Q \implies P\) est l'assertion réciproque de \(P \implies Q\).
+Attention, il ne faut pas confondre les deux.
+\section{Assertions logiquement équivalentes}
+\label{chap0sec:assertionslogiquementequiv}
+Deux assertions sont dites logiquement équivalentes lorsqu'elles ont la même
+table de vérité. On écrit par exemple les équivalences suivantes~:
+\begin{align}
+    \neg(\neg P) &\iff P; \\
+    \neg(P \text {~et~} Q) & \iff \neg P \text{~ou~} \neg Q; \\
+    \neg(P \text{~ou~} Q) & \iff \neg P \text {~et~} \neg Q; \\
+    \neg(P \implies Q) & \iff P \text {~et~} \neg Q.
+\end{align}
+Le raisonnement par \emph{contraposée} repose sur l'équivalence logique
+\begin{empheq}[box=\shadowbox*]{equation}
+    (P \implies Q) \iff (\neg Q \implies \neg P).
+\end{empheq}
+Le raisonnement par l'absurde est le suivant~: pour montrer que \(P \implies
+Q\), on suppose que \(P\) est vraie et que \(Q\) est fausse puis on montre que
+cela aboutit à une contradiction. Ainsi, le \emph{raisonnement par l'absurde}
+repose sur l'équivalence logique
+\begin{empheq}[box=\shadowbox*]{equation}
+    (P \implies Q) \iff \neg(P \text {~et~} \neg Q).
+\end{empheq}
+\section{Quantificateurs et leurs négations}
+\label{chap0sec:quantificateursetnegation}
+L'expression mathématique ``\(\forall x \in E\)'' se lit ``quelque soit
+l'élément \(x\) de E'' ou encore ``pour tout élément \(x\) de E''. L'expression
+mathématique ``\(\exists x \in E\)'' se lit ``il existe un élément \(x\) de E'',
+au moins un. ``\(\forall x \in E \ P(x)\)'' signifie que pour tout élément pris
+dans E, la propriété P est vraie. ``\(\exists x \in E \ P(x)\)'' signifie qu'il
+existe au moins un élément de E pour lequel P est vérifiée.
+
+Les négations des quantificateurs sont les suivantes~:
+\begin{empheq}[box=\shadowbox*]{align}
+    \neg(\forall x \in E \quad P(x)) &\iff \exists x \in E \quad \neg P(x); \\
+    \neg(\exists x \in E \quad P(x)) &\iff \forall x \in E \quad \neg P(x).
+\end{empheq}
+La variable \(x\) est dite muette.
+\section{Exercices}
+\begin{exercice}
+    Soit \((a, b, c) \in \R^3\). Écrire les négations des propositions suivantes~:
+    \begin{enumerate}
+        \item \(a=b=c\);
+        \item \(ab=0\);
+        \item \(-3 \leqslant a < 3 < c\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Soit \(x\) un réel quelconque. Que signifient les propositions suivantes et que
+    peut on en conclure ?
+    \begin{enumerate}
+        \item \(\forall \epsilon>0 \quad x<\epsilon\);
+        \item \(\forall \epsilon>0 \quad \abs{x}<\epsilon\);
+        \item \(\exists \epsilon>0 \quad x<\epsilon\);
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Fonctions monotones et strictement monotones]
+    \begin{enumerate}
+        \item Rappeler la définition d'une fonction croissante, d'une fonction
+            strictement croissante.
+        \item Soit \(f\) une fonction définie sur un intervalle \(I\) contenant au
+            moins deux points. Écrire avec des quantificateurs que \(f\) n'est pas
+            croissante, puis que \(f\) n'est pas strictement croissante, que \(f\)
+            n'est pas monotone et enfin que \(f\) n'est pas strictement monotone.
+        \item Une fonction peut-elle être à la fois croissante et décroissante ?
+            Strictement croissante et strictement décroissante ?
+        \item Soient \(a\) et \(b\) des éléments de \(I\). On suppose que \(f\) est
+            croissante sur \(I\).
+            \begin{enumerate}
+                \item On suppose que \(f(a) \leqslant f(b)\). Que peut on dire de \(a\)
+                    et \(b\) ?
+                \item On suppose que \(f(a) < f(b)\). Que peut on dire de \(a\) et \(b\)
+                    ?
+            \end{enumerate}
+        \item Reprendre la question précédente avec \(f\) strictement croissante sur
+            \(I\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Fonction nulle, fonction qui s'annule]
+
+    Soient \(I\) un intervalle contenant au moins deux points et \(f\) une fonction de \(I\) vers \(\R\). Exprimer les
+    propositions suivantes ainsi que leurs négations à l'aide des quantificateurs~:
+    \begin{enumerate}
+        \item \(f\) est l'application nulle ;
+        \item \(f\) s'annule ;
+        \item \(f\) est à valeurs positive.
+    \end{enumerate}
+    Quel(s) sens peut on donner à l'assertion \(f>0\) ?
+\end{exercice}
+\begin{exercice}
+    Soit \(E\) un ensemble de nombres. Écrire en langage courant la signification des propositions suivantes~:
+    \begin{enumerate}
+        \item \(\forall x \in E \ \exists y \in E \quad x \neq y\);
+        \item \(\forall x \in E \ \exists y \in E \quad x = y\);
+        \item \(\exists x \in E \ \forall y \in E \quad x = y\);
+        \item \(\forall x \in E \ \forall \ \forall z \in E \quad (x=y \textrm{~ou~}
+            y=z \textrm{~ou~} z=x)\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}[Fonctions paires et impaires]
+
+    \begin{enumerate}
+        \item Donner la définition d'une fonction paire, d'une fonction impaire,
+            d'une fonction non paire et d'une fonction non impaire.
+        \item Toute fonction est-elle soit paire soit impaire ?
+        \item Existe t il des fonctions de \(\R\) vers \(\R\) qui sont à la fois
+            paires  et impaires ? Si oui les expliciter.
+        \item Soit \(f\) de \(\R\) vers \(\R\). Prouver qu'il existe un unique
+            couple \((\varphi, \psi)\) de fonctions de \(\R\) vers \(\R\) tel que
+            \(f=\varphi+\psi\) avec \(\varphi\) paire et \(\psi\) impaire.
+        \item Peut on généraliser ce résultat aux fonctions de \(\R\) vers \(\C\) ?
+            Si c'est possible, l'appliquer à la fonction
+            \(\fonction{f}{\R}{\C}{x}{\exp(\ii x)}\).
+    \end{enumerate}
+\end{exercice}
+\begin{exercice}
+    Donner la valeur de vérité (Vrai ou Faux) des propositions suivantes~:
+    \begin{enumerate}
+        \item \(2+2=4\) et \(1=0\);
+        \item \(2+2=4\) ou \(1=0\);
+        \item \(\forall x \in \R \quad x=1\);
+        \item \(\exists x \in \R \quad x\neq 1\);
+        \item \(\forall x \in \R \ \exists y \in \R \quad xy=1\);
+        \item \(\exists x \in \R \ \exists y \in \R \quad xy=1\);
+        \item \(\forall n \in \N \quad (n^2 \textrm{~est pair}) \implies n
+            \textrm{~est pair})\);
+        \item \(\forall x \in \R \quad (8=7 \implies x=1)\);
+        \item \(\forall x \in \R \quad (x \geqslant 7 \implies x^2 \geqslant 49)\);       
+    \end{enumerate}
+\end{exercice}
