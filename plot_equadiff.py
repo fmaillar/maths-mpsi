@@ -9,6 +9,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 # import math
+from num2words import num2words as n2w
+ 
 
 mpl.rcParams['text.usetex'] = True
 
@@ -28,6 +30,7 @@ a = -0.25
 # Conditions initiales et les couleurs
 C = np.array([1, 2, 0.5, 3/2])
 color = ['orange', 'green', 'red', 'purple']
+lenCw = n2w(len(C),lang="fr")
 # Produit un a un
 y = np.outer(C, f(a, x))
 # Definition de la map
@@ -48,7 +51,7 @@ ax.axis([-5, 5, 0, 4])
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
-plt.title(f"Deux solutions de $y'=ay, a={a}$")
+plt.title(f"{lenCw} solutions de $y'=ay, a={a}$")
 plt.tight_layout()
 # ax.Axes
 # plt.show()
