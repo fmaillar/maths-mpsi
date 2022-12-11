@@ -17,8 +17,8 @@ Quelques théorèmes sont donnés dans l'annexe~\ref{chap:theogen}.
 \begin{defdef}
     \label{def:chap1-deflognep}
     On appelle la fonction logarithme népérien l'unique primitive de la fonction 
-    inverse \footnote{qui est continue sur \(\Rplusetoile\)} qui s'annule en 
-    \(1\).  On a donc pour tout \(x\) strictement positif
+    inverse~\footnote{qui est continue sur \(\Rplusetoile\)} qui s'annule en 
+    \(1\). On a donc pour tout \(x\) strictement positif
     \begin{empheq}[box=\shadowbox*]{equation}
         \ln x=\int_{1}^{x} \frac{\diff t}{t}.
     \end{empheq}
@@ -749,16 +749,15 @@ ensembles de définition, et on a:
 \end{align}
 \begin{prop}
     Les fonctions trigonométriques vérifient les équivalences suivantes~:
-    \begin{align}
-        \forall x, y \in \R \quad \cos x = \cos y &\iff \congru{x}{\pm y}{2\pi} 
-        ;\\
-        \forall x, y \in \R \quad \sin x = \sin y &\iff \begin{cases} 
-        \congru{x}{y}{2\pi} \\ \text{~ou~} \\ \congru{x}{\pi-y}{2\pi}\end{cases} 
-        ; \\
-            \forall x, y \in D_1 \quad \tan x = \tan y &\iff \congru{x}{y}{\pi} 
-            ;\\
-            \forall x, y \in D_2 \quad \cot x = \cot y &\iff \congru{x}{y}{\pi} 
-            .
+    \begin{align}        
+        \forall x, y \in \R \quad \cos x = \cos y &\iff \congru{x}{\pm 
+        y}{2\pi};\\
+        \forall x, y \in \R \quad \sin x = \sin y &\iff
+        \begin{cases}
+            \congru{x}{y}{2\pi} \\ \text{~ou~} \\ \congru{x}{\pi-y}{2\pi}
+        \end{cases}; \\
+        \forall x, y \in D_1 \quad \tan x = \tan y &\iff \congru{x}{y}{\pi};\\
+        \forall x, y \in D_2 \quad \cot x = \cot y &\iff \congru{x}{y}{\pi}.
     \end{align}
 \end{prop}
 \begin{defdef}[Congruence]
@@ -1380,9 +1379,9 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
         f(x) = (\sqrt{1-\sin 2x}+\sqrt{1+\sin 2x})^{\frac{1}{\ln(\cos 2x)}}
     \end{equation}
     \begin{enumerate}
-        \item Quel est le domaine de définition de \(f\) ?
-        \item Démontrer que quelque soit le réel \(x\), \(\sqrt{1-\sin 
-            2x}=\abs{\sin x - \cos x}\).
+        \item Quel est le domaine de définition de \(f\)?
+        \item Démontrer que quelque soit le réel \(x\), \(\sqrt{1-\sin(2x)} = 
+            \abs{\sin x - \cos x}\).
         \item Étudier la parité et la périodicité de \(f\)
         \item Trouver une expression de \(f\) plus simple sur 
             \(\intervallefo{0}{\pi/2}\setminus\{\pi/3\}\).
