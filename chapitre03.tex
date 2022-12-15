@@ -3,6 +3,7 @@
 \minitoc
 \minilof
 \minilot
+
 La théorie des ensembles comprend l'étude des ensembles, l'étude de leurs 
 parties et l'étude de leurs interactions grâce aux applications. On s'intéresse 
 particulièrement aux injections, aux surjections et aux bijections. La troisième 
@@ -11,13 +12,17 @@ d'équivalence. La quatrième et dernière section se focalise sur les familles
 d'éléments comme par exemple des suites.
 Ce chapitre est primordial dans le programme de MPSI, il décrit le langage 
 nécessaire pour travailler de manière sérieuse en mathématiques.
+
 \section{Vocabulaire relatif aux ensembles}
 \label{chap3-sec:vocabensemble}
+
 Nous prenons comme notion primitive les notions d'ensemble, d'élément et 
 d'appartenance. On ne cherchera pas à les définir, \og\(x \in E\)\fg{} sera 
 lu \og \emph{l'élément \(x\) appartient à l'ensemble \(E\)} \fg{}.
+
 \subsection{Égalité de deux ensembles}
 \label{chap3-subsec:egalitededeuxensembles}
+
 \begin{defdef}
     On dira que deux ensembles \(E\) et \(F\) sont égaux si ils ont les mêmes 
     éléments. On notera \(E=F\).
@@ -25,26 +30,32 @@ lu \og \emph{l'élément \(x\) appartient à l'ensemble \(E\)} \fg{}.
         E=F \iff \forall x \ \left(x \in E \iff x \in F \right).
     \end{empheq}
 \end{defdef}
+
 \subsection{Inclusion}
 \label{chap3-subsec:inclusion}
+
 \begin{defdef}
     Soient \(E\) et \(F\) deux ensembles. On dira que \(E\) est inclus dans 
     \(F\) ou que \(E\) est un sous-ensemble de \(F\) si et seulement si tous les 
     éléments de \(E\) sont des éléments de F. On notera \(E \subset F\).
 \end{defdef}
+
 \begin{prop} 
     \begin{empheq}[box=\shadowbox*]{align}
         E=F \iff E \subset F \textrm{~et~} F \subset E.
     \end{empheq}
 \end{prop}
+
 Pour dire que \(E\) est strictement inclus dans \(F\) c'est à dire \(E \subset F 
 \textrm{~et~} F \not\subset E\), on notera \(E \subsetneq F\).
 \begin{equation}
     E \subsetneq F \iff \left[\forall x \ \left(x \in E \iff x \in F \right) \right] 
     \textrm{~et~} \left[\exists x \in F x \not\in E \right].
 \end{equation}
+
 \subsection{Ensemble des parties d'un ensemble}
 \label{chap3-subsec:ensembledesparties}
+
 \begin{axiome}[Axiome de l'ensemble des parties]
     Soit un ensemble \(E\). Il existe un ensemble dont les éléments sont les parties 
     de \(E\). On l'appelle ensemble des partie de \(E\) et il est noté \(\Part(E)\) 
@@ -53,6 +64,7 @@ Pour dire que \(E\) est strictement inclus dans \(F\) c'est à dire \(E \subset 
         A \in \Part(E) \iff A \subset E.
     \end{empheq}
 \end{axiome}
+
 Il n'y a que deux autres façons de définir un ensemble~:
 \begin{itemize}
     \item en extension, c'est-à-dire qu'on énumère les éléments de l'ensemble, par 
@@ -62,52 +74,25 @@ Il n'y a que deux autres façons de définir un ensemble~:
         \(F\) qui vérifie une certaine propriété, par exemple l'ensemble des entiers 
         pairs de \(\Z\), \(E_1=\enstq{n\in\Z}{\exists k \in \Z \quad n=2k}\).
 \end{itemize}
+
 \subsection{Opérations sur les parties d'un ensemble}
 \label{chap3-subsec:operationparties}
+
 Soient \(E\) un ensemble, \(A\) et \(B\) des parties de \(E\). On définit les 
 opérations sur les ensembles \(A\) et \(B\) suivantes décrites dans les 
 paragraphes suivants.
+
 \subsubsection{Complémentaire de \(A\) dans \(E\)} 
 \label{chap3-subsubsec:complementaire}
+
 C'est l'ensemble de \(E\) qui ne sont pas des éléments de \(A\), noté 
 \(\complement_E A\) ou \(\bar{A}\)~\footnote{ne pas confondre avec l'adhérence, 
 cf programme de MP} ou \(E \setminus A\).
 \begin{empheq}[box=\shadowbox*]{equation}
     \forall x \in E \quad x \in \complement_E A \iff x \not\in A.
 \end{empheq}
-Le diagramme de Venn correspondant est donné par la figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:comp}.
+Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:comp}.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -121,6 +106,7 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation du complémentaire}
     \label{chap3-fig:comp}
 \end{figure}
+
 \begin{prop}
     Soient \(A\) et \(B\) deux parties de \(E\)
     \begin{gather}
@@ -140,47 +126,19 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \complement_E A\), \(x\) ne peut pas être dans \(\complement_E B\), \(x \not\in 
     \complement_E B\), donc par définition du complémentaire, \(x \in B\).
 \end{proof}
+
 \subsubsection{Intersection des parties \(A\) et \(B\)}
 \label{chap3-subsubsec:intersection}
+
 C'est l'ensemble des éléments qui sont à la fois dans \(A\) et dans \(B\), on le 
 note \(A \cap B\),
 \begin{empheq}[box=\shadowbox*]{align}
     \forall x \in E \quad x \in A \cap B \iff x \in A \text{~et~} x \in B.
 \end{empheq}
+
 Le diagramme de Venn correspondant est donné par la 
-figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:inter}.
+figure~\ref{chap3-fig:inter}.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -196,47 +154,18 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation de l'intersection}
     \label{chap3-fig:inter}
 \end{figure}
+
 \subsubsection{Réunion des parties \(A\) et \(B\)}
 \label{chap3-subsubsec:reunion}
+
 C'est l'ensemble des éléments qui appartiennent au moins à l'une des parties 
 \(A\) et \(B\), on le note \(A \cup B\).
 \begin{empheq}[box=\shadowbox*]{align}
     \forall x \in E \quad x \in A \cup B \iff x \in A \text{~ou~} x \in B
 \end{empheq}
+
 Le diagramme de Venn correspondant est donné par la 
-figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:reunion}.
+figure~\ref{chap3-fig:reunion}.
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -252,47 +181,18 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation de la réunion}
     \label{chap3-fig:reunion}
 \end{figure}
+
 \subsubsection{Différence de A et B}
 \label{chap3-subsubsec:difference}
+
 C'est l'ensemble des éléments de \(E\) qui appartiennent à \(A\) mais pas à 
 \(B\), noté \(A \setminus B\).
 \begin{gather}
     \forall x \in E \quad x \in A \setminus B \iff x \in A \text{~et~} x \not\in B; \\
     A \setminus B=A \cap \complement_E B.
 \end{gather}
-Le diagramme de Venn correspondant est donné par la figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:diff}.
+Le diagramme de Venn correspondant est donné par la figure~\ref{chap3-fig:diff}.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -308,48 +208,20 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation de la différence \(A \setminus B\)}
     \label{chap3-fig:diff}
 \end{figure}
+
 \subsubsection{Différence symétrique de \(A\) et \(B\)}
 \label{chap3-subsubsec:differencesymetrique}
+
 C'est l'ensemble des éléments de \(E\) qui appartiennent à exactement une des 
 parties \(A\) et \(B\), on le note $A \Delta B$~:
 \begin{equation}
-    \forall x \in E \quad x \in A \Delta B \iff x \in A \cup B \text{~et~} x \not\in 
-    A \cap B.
+    \forall x \in E \quad x \in A \Delta B \iff x \in A \cup B \text{~et~} x 
+    \not \in A \cap B.
 \end{equation}
+
 Le diagramme de Venn correspondant est donné par la 
-figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:diffsym}.
+figure~\ref{chap3-fig:diffsym}.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
@@ -366,17 +238,20 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation de la différence symétrique \(A \Delta B\)}
     \label{chap3-fig:diffsym}
 \end{figure}
+
 \begin{prop}
     Soient \(A\) et \(B\) des parties de \(E\), on a 
-    \begin{gather}
-        A \Delta B = (A\setminus B) \cup (B \setminus A) = (A \cap \bar{B}) \cup (B \cap 
+    \begin{align}
+        A \Delta B &= (A\setminus B) \cup (B \setminus A) = (A \cap \bar{B}) \cup (B \cap 
         \bar{A}); \\
-        A \Delta B =(A \cup B) \setminus (B \cap A) = (A \cup B) \cap \bar{A \cap B} =(A 
+        A \Delta B &= (A \cup B) \setminus (B \cap A) = (A \cup B) \cap \bar{A \cap B} =(A 
         \cup B) \cap (\bar{A} \cup \bar{B}).
-    \end{gather}
+    \end{align}
 \end{prop}
+
 \subsubsection{Propriétés}
 \label{chap3-subsubsec:prop}
+
 \begin{axiome}
     Soient \(A, B\) et \(C\) trois parties de \(E\), on a les axiomes suivants 
     respectivement~:
@@ -413,8 +288,10 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
             \end{gather}
     \end{itemize}
 \end{axiome}
+
 \subsection{Ensemble vide}
 \label{chap3-subsec:ensemblevide}
+
 Si \(E\) est un ensemble, \(\complement_E E\) est la seule partie de \(E\) sans 
 élément. On l'appelle la partie vide de \(E\). Si \(F\) est un autre ensemble, 
 on a \(\complement_E E = \complement_F F\). On parlera de l'ensemble vide de 
@@ -422,13 +299,16 @@ on a \(\complement_E E = \complement_F F\). On parlera de l'ensemble vide de
 soit l'ensemble \(E\), \(\complement_E E =\emptyset\).
 Faire attention à ne pas confondre \(\emptyset = \{\}\) qui ne contient rien 
 avec \(\{\emptyset\}\) qui contient l'ensemble vide.
+
 \subsection{Produit cartésien de deux ensembles}
 \label{chap3-subsec:prodcart}
+
 \begin{defdef}
     Pour deux éléments \(x\) et \(y\) de \(E\), on appelle couple \((x,y)\) la 
     partie \(\{\{x\},\{x;y\}\}\). C'est un artifice pour se donner les éléments dans 
     un certain ordre.
 \end{defdef}
+
 \begin{prop}
     Soient quatre éléments de \(E\), \(x\) ,\(y\), \(x'\) et \(y'\) alors 
     \begin{equation} 
@@ -448,18 +328,23 @@ avec \(\{\emptyset\}\) qui contient l'ensemble vide.
     donc \(x'=y'=x\) et \(y=x'=x\) donc on aboutit à la contradiction \(x=x'\). 
     Nécessairement \(x'=x\) et donc \(y=y'\).
 \end{proof}
+
 \begin{defdef}
     Soient \(E\) et \(F\) deux ensembles, on appelle produit cartésien de \(E\) et 
     \(F\), qu'on note \(E \times F\) l'ensemble $E \times F = \enstq{(x,y)}{x \in E 
     \ y \in F}$.
 \end{defdef}
+
 Si \(E=F\) alors on note \(E \times E=E^2\). Si on dispose de \(n\) ensemble 
 \(E_k\), on définit par récurrence le produit \(\prod_{k=1}^n E_k\) et les 
 n-uplets \((x_k)\).
+
 \section{Application}
 \label{chap3-sec:applications}
+
 \subsection{Notion d'application}
 \label{chap3-subsec:notiondapplication}
+
 \begin{defdef}
     On appelle application tout triplet \((E, F, \Gamma)\) où \(E\) et \(F\) sont 
     des ensembles, \(\Gamma\) une partie de \(E \times F\) telle que
@@ -467,40 +352,9 @@ n-uplets \((x_k)\).
         \forall x \in E \ \exists! y \in F \quad (x,y) \in \Gamma.
     \end{equation}
 \end{defdef}
+
 Une représentation graphique de la notion d'application est donné sur la 
-figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:application}. Soit une application \(f=(E,F,\Gamma)\), 
+figure~\ref{chap3-fig:application}. Soit une application \(f=(E,F,\Gamma)\), 
 alors \(E\) est l'ensemble de départ, \(F\) celui d'arrivée et \(\Gamma\) est le 
 graphe de \(f\).
 Pour un élément \(x \in E\), soit \(y\) l'unique élément de \(F\) tel que 
@@ -509,6 +363,7 @@ Pour un élément \(x \in E\), soit \(y\) l'unique élément de \(F\) tel que
 \(\fonctionL{f}{E}{F}{x}{f(x)}\) et on dit que \(f\) est une application de 
 \(E\) dans \(F\). On note \(F^E\) l'ensemble des applications de \(E\) dans 
 \(F\).
+
 \begin{defdef}
     Soient \(f=(E,F,\Gamma)\) et \(g=(E',F',\Gamma')\) deux applications, on dit que 
     \(f=g\) si \(E=E'\), \(F=F'\) et \(\Gamma=\Gamma'\).
@@ -517,6 +372,7 @@ Dans le cas où on sait déjà que \(E=E'\) et \(F=F'\), on a
 \begin{equation}
     f=g \iff \forall x \in E \quad f(x)=g(x).
 \end{equation}
+
 \begin{figure}
     \centering
     \begin{tikzpicture}[label distance=1mm]
@@ -562,10 +418,13 @@ Dans le cas où on sait déjà que \(E=E'\) et \(F=F'\), on a
     \caption{Représentation de la notion d'application}
     \label{chap3-fig:application}
 \end{figure}
+
 \subsection{Restriction et prolongement}
 \label{chap3-restrictionetprolongement}
+
 \subsubsection{Restriction au départ} 
 \label{chap3-subsubsec:restrictiondep}
+
 Soit \(f=(E,F,\Gamma)\) et \(A\) une partie de \(E\), posons 
 \(\Gamma_A=\enstq{(x,f(x))}{x \in A} \subset A \times F\). Pour tout élément 
 \(x\) de \(A\), il existe un unique élément \(y\) de \(F\) tel que \((x,y) \in 
@@ -573,8 +432,10 @@ Soit \(f=(E,F,\Gamma)\) et \(A\) une partie de \(E\), posons
 l'appelle restriction de \(f\) au départ à la partie \(A\), notée \(f_{|A}\), 
 telle que \(\fonctionL{f_{|A}}{A}{F}{x}{f(x)}\). On dira aussi que l'application 
 \(f\) est un prolongement au départ de \(f_{|A}\). Notons que \(f_{|E}=f\).
+
 \subsubsection{Restriction à l'arrivée}
 \label{chap3-subsubsec:restrictionarr}
+
 Soit une application \(f=(E,F,\Gamma)\) et \(B\) une partie de \(F\) telle que 
 \(f(E) \subset B\). Alors \(\Gamma \in E \times B\) et le triplet 
 \((E,B,\Gamma)\) est une application. On l'appelle restriction de \(f\) à 
@@ -587,8 +448,10 @@ prolongement de l'application \(f^{|B}\). Remarquons que~:
     \item pour définir la restriction à l'arrivée à \(B\), il faut vérifier 
         l'hypothèse \(f(E) \subset B\) (sinon ça n'a aucun sens).
 \end{enumerate}
+
 \subsubsection{Prolongement au départ}
 \label{chap3-subsubsec:prolongementdep}
+
 Soit une application \(f=(A,F,\Gamma)\) et \(E\) un ensemble tel que \(A \subset 
 E\). Alors l'application \(g=(E,F,\Gamma')\) est un prolongement de \(f\) au 
 départ à la partie \(E\) si et seulement si \(\Gamma \subset \Gamma'\), soit 
@@ -596,62 +459,37 @@ encore si et seulement si pour tous élément \(x\) de \(A\) \(f(x)=g(x)\).
 \begin{equation}\
     \Gamma=\enstq{(x,f(x))}{x \in A} \quad \Gamma'=\enstq{(x,g(x))}{x \in A}.
 \end{equation}
+
 \subsubsection{Prolongement à l'arrivée}
 \label{chap3-subsubsec:prolongementarr}
+
 Soit \(f=(E,B,\Gamma)\) une application et \(F\) tel que \(B \subset F\). Alors 
 \(g=(E,F,\Gamma')\) est un prolongement à l'arrivée à \(F\) si et seulement si 
 \(\Gamma = \Gamma'\), c'est-à-dire \(\forall x \in E \quad f(x)=g(x)\).
+
 \subsection{Compositions d'applications}
 \label{chap3-subsec:compapp}
+
 \begin{defdef}
     Soient \(E,F\) et \(G\) des ensembles, \(f=(E,F,\Gamma_f)\) et \(g=(F,G, 
     \Gamma_g)\) deux applications et \(\Gamma = \enstq{(x,g(f(x)))}{x \in E} \subset 
     E \times G\).
 \end{defdef}
+
 Pour tous élément \(x\) de \(E\), il existe un unique élément \(z\) de \(G\) tel 
 que \((x,z) \in \Gamma\). Donc \((E,G,\Gamma)\) est une application qu'on note 
 \(g \circ f\) qu'on appelle la composée de \(f\) par \(g\),
 \begin{equation}
     \forall x \in E \quad g \circ f(x)=g(f(x)).
 \end{equation}
+
 \emph{Remarque}~: Soit \(B\) une partie de \(F\) telle que \(f(E) \subset B\) et 
 \(g=(B,G,\Gamma_g)\). On a encore le droit de parler de \(g \circ f\), mais il 
 s'agit en fait de l'application \(g \circ f^{|B}\) avec \( f^{|B} 
 =(E,B,\Gamma_f)\).
 Une représentation graphique de la composition est donnée par la 
-figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:compose}.
+figure~\ref{chap3-fig:compose}.
+
 \begin{figure}
     \centering
     \begin{tikzpicture}[roundnode/.style={circle},]
@@ -667,6 +505,7 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption{Représentation graphique de la composition}
     \label{chap3-fig:compose}
 \end{figure}
+
 \begin{prop}
     Soient \(E,F,G\) et \(H\) des ensembles et trois applications \(f:E 
     \longrightarrow F\), \(\fonctionR{g}{F}{G}\) et \(\fonctionR{h}{G}{H}\). 
@@ -695,13 +534,17 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
             donc \(\Id_f \circ f = f\) et \(f \circ \Id_E=f\).
     \end{enumerate}
 \end{proof}
+
 \emph{Remarque}~: L'application \(g \circ f\) peut avoir un sens sans que \(f 
 \circ g\) en ait un et même si on peut définir les deux composées, en général 
 elles ne sont pas égales.
+
 \subsection{Images directes et images réciproques}
 \label{chap3-subsec:imagesdirecteetrec}
+
 \subsubsection{Image directe}
 \label{chap3-subsec:imagedirecte}
+
 Soient \(E\) et \(F\) deux ensembles et \(\fonctionR{f}{E}{F}\) une 
 application.
 \begin{defdef}
@@ -711,6 +554,7 @@ application.
         f(A)=\enstq{f(x)}{x \in A}=\enstq{y \in F}{\exists x \in A \quad y=f(x)}.
     \end{empheq}
 \end{defdef}
+
 \begin{prop}
     Soient \(E\) et \(F\) des ensembles et \(\fonctionR{f}{E}{F}\) une 
     application. Soient aussi \(A\) et \(B\) des parties de \(E\) alors
@@ -746,11 +590,14 @@ application.
             \cap B) \subset f(A) \cap f(B)\). En général, il n'y a pas égalité.
     \end{enumerate}
 \end{proof}
+
 \emph{Exemple}~: Soit \(\fonctionL{f}{\{0,1\}}{\R}{x}{\pi}\) On pose \(A=\{0\}, 
 B=\{1\}, f(A)=f(B)=\{\pi\}\) alors \(f(A \cap B)=f(\emptyset)=\emptyset\) et 
 \(f(A) \cap f(B)=\{\pi\}\). Finalement \(f(A \cap B) \subseteq f(A) \cap f(B)\).
+
 \subsubsection{Image réciproque} 
 \label{chap3-subsubsec:imagereciproque}
+
 \begin{defdef}
     Soient \(E,F\) deux ensembles, \(\fonctionR{f}{E}{F}\) une application. Soit 
     \(B\) une partie de \(F\). On définit l'image réciproque de la partie \(B\) 
@@ -761,6 +608,7 @@ B=\{1\}, f(A)=f(B)=\{\pi\}\) alors \(f(A \cap B)=f(\emptyset)=\emptyset\) et
     Ce n'est pas à confondre avec une application réciproque (qui n'aurai aucun 
     sens ici).
 \end{defdef}
+
 \begin{prop}
     Soient \(E,F\) deux ensembles, \(\fonctionR{f}{E}{F}\) une application et 
     \(A,B\) deux parties de \(F\). Alors
@@ -826,6 +674,7 @@ B=\{1\}, f(A)=f(B)=\{\pi\}\) alors \(f(A \cap B)=f(\emptyset)=\emptyset\) et
             \complement_E f^{-1}(A)\). 
     \end{enumerate}
 \end{proof}
+
 \begin{prop}
     Soient \(E,F\) des ensembles, \(\fonctionR{f}{E}{F}\) une application, \(A\) 
     une partie de \(E\) et \(B\) une partie de \(F\), alors
@@ -843,10 +692,13 @@ B=\{1\}, f(A)=f(B)=\{\pi\}\) alors \(f(A \cap B)=f(\emptyset)=\emptyset\) et
             tel que \(y=f(x)\) donc \(f(x) \in B\) et donc \(y \in B\).
     \end{enumerate}
 \end{proof}
+
 \section{Injection, surjection, bijection}
 \label{chap3-sec:injsurbij}
+
 \subsection{Équation}
 \label{chap3-subsec:equation}
+
 \begin{defdef}
     On appelle équation, toute égalité du type
     \begin{equation}
@@ -869,10 +721,13 @@ B=\{1\}, f(A)=f(B)=\{\pi\}\) alors \(f(A \cap B)=f(\emptyset)=\emptyset\) et
 \emph{Remarque \& Exemples}~: L'équation ci-dessus admet au moins une solution 
 si et seulement si \(b \in \Phi(A)\). Les équations polynomiales de degré \(n\), 
 les équations différentielles, les équations matricielles sont des exemples.
+
 \subsection{Injection et surjection}
 \label{chap3-subsec:injetsurj}
+
 \subsubsection{Injection}
 \label{chap3-subsubsec:injection}
+
 Soient \(E\) et \(F\) des ensembles et \(\fonctionR{f}{E}{F}\) une application.
 \begin{defdef}
     On dit que \(f\) est injective ou que c'est une injection si elle vérifie l'une 
@@ -889,41 +744,10 @@ Soient \(E\) et \(F\) des ensembles et \(\fonctionR{f}{E}{F}\) une application.
         f \text{est non injective} \iff \exists (x,x') \in E^2 \quad x \neq x' 
         \text{~et~} f(x) = f(x').
     \end{empheq}
-    La figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:inj} donne une représentation graphique de la notion 
+    La figure~\ref{chap3-fig:inj} donne une représentation graphique de la notion 
     d'injection.
 \end{defdef}
+
 \begin{theo}
     La composée de deux applications injectives est injective.
 \end{theo}
@@ -935,6 +759,7 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     f(x')\). Comme \(g\) est injective alors \(f(x)=f(x')\). Comme \(f\) est 
     injective alors \(x=x'\). Finalement \(g \circ f\) est injective.
 \end{proof}
+
 \begin{figure}
     \begin{tikzpicture}[label distance=1mm]
         % draw the sets
@@ -979,8 +804,10 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption[Injection]{Représentation graphique d'une injection}
     \label{chap3-fig:inj}
 \end{figure}
+
 \subsubsection{Surjection}
 \label{chap3-subsubsec:surjection}
+
 \begin{defdef}
     On dit que f est une surjection, ou qu'elle est surjective si elle vérifie 
     l'une des propriétés suivantes~:
@@ -996,41 +823,10 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
         f \text{est non surjective} \iff \exists y \in F \ \forall x \in E \quad 
         y \neq f(x).
     \end{empheq}
-    La figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:surj} donne une représentation graphique de la 
+    La figure~\ref{chap3-fig:surj} donne une représentation graphique de la 
     notion de surjection.
 \end{defdef}
+
 \begin{prop}
     Une application \(\fonctionR{f}{E}{F}\) est surjective si et seulement si 
     \(f(E)=F\).
@@ -1040,6 +836,7 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     dans \(E\), ce qui équivaut à \(F \subset f(E)\) et l'autre inclusion est 
     évidente par définition des applications \(f(E) \subset F\).
 \end{proof}
+
 \begin{theo}
     La composée de deux applications surjectives est surjective.
 \end{theo}
@@ -1051,6 +848,7 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     existe \(x\) tel que \(y=f(x)\). Finalement, on a montré qu'il existe \(x 
     \in E\) tel que \(z=g(y)=g(f(x))= g \circ f(x)\).
 \end{proof}
+
 \begin{figure}
     \centering
     \begin{tikzpicture}[label distance=1mm]
@@ -1112,8 +910,10 @@ ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\r
     \caption[Surjection]{Représentation graphique d'une surjection}
     \label{chap3-fig:surj}
 \end{figure}
+
 \subsection{Bijection}
 \label{chap3-subsubsec:bijection}
+
 Soient \(E\) et \(F\) deux ensemble et \(\fonctionR{f}{E}{F}\) une application.
 \begin{defdef}
     On dit que \(f\) est bijective lorsqu'elle vérifie une des propriétés 
@@ -1126,41 +926,10 @@ Soient \(E\) et \(F\) deux ensemble et \(\fonctionR{f}{E}{F}\) une application.
         \item \(\forall y \in F \ \exists! x \in E \quad f(x)=y\);
         \item \(f\) est injective et surjective.
     \end{itemize}
-    La figure~
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef
-ef\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref\ref{chap3-fig:bij} donne une représentation graphique de la 
+    La figure~\ref{chap3-fig:bij} donne une représentation graphique de la 
     notion de bijection.
 \end{defdef}
+
 Soit \(f=(E,F,\Gamma)\) une bijection, on pose 
 \begin{equation}
     \Gamma^{-1}=\enstq{(y,x) \in F \times E}{(x,y) \in \Gamma}
@@ -1173,6 +942,7 @@ Pour tout \(y \in F\) il existe un unique \(x \in E\) tel que \(y=f(x)\)
 ---~définition de la bijection~--- c'est-à-dire un unique \(x \in E\) tel que 
 \((y,x) \in \Gamma^{-1}\). L'application \((F,E,\Gamma^{-1})\) est l'application 
 réciproque de \(f\) et on la note \(f^{-1}\).
+
 \begin{prop} Soit une bijection \(\fonctionR{f}{E}{F}\). Alors 
     \(\fonctionR{f^{-1}}{F}{E}\) est une bijection et
     \begin{gather}
@@ -1185,6 +955,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
     tous élément \(x\) de \(E\), il existe un unique \(y\) dans \(F\) tel que 
     \(x=f^{-1}(y)\). Donc \(f^{-1}\) est une bijection.
 \end{proof}
+
 \begin{figure}
     \begin{tikzpicture}[label distance=1mm]
         % draw the sets
@@ -1244,6 +1015,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
     \caption[Bijection]{Représentation graphique d'une bijection}
     \label{chap3-fig:bij}
 \end{figure}
+
 \begin{theo}[Caractérisation des bijections]
     Soient \(E\) et \(F\) des ensembles et \(\fonctionR{f}{E}{F}\) une 
     application. L'application \(f\) est une bijection si et seulement s'il 
@@ -1265,6 +1037,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
     \end{itemize}
     On en conclus que \(f\) est bijective.
 \end{proof}
+
 \begin{prop}
     Soient \(E,F,G\) trois ensembles et deux applications \(\fonctionR{f}{E}{F}\) et 
     \(\fonctionR{g}{F}{G}\) alors si \(g \circ f\) est injective (respectivement 
@@ -1280,6 +1053,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
             surjective.
     \end{itemize}
 \end{proof}
+
 \begin{prop}
     La composée de deux applications bijectives est bijective.
 \end{prop}
@@ -1288,6 +1062,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
     deux applications injectives est injective donc la composée de deux applications 
     bijectives est bijective.
 \end{proof}
+
 \begin{defdef}
     \begin{enumerate}
         \item On appelle permutation de \(E\) toute bijection de \(E\) dans \(E\);
@@ -1297,6 +1072,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
             \(f=f^{-1}\).
     \end{enumerate}
 \end{defdef}
+
 \emph{Remarques}~:
 \begin{enumerate}
     \item Si \(f\) est une involution alors les courbes représentatives de \(f\) 
@@ -1306,10 +1082,13 @@ réciproque de \(f\) et on la note \(f^{-1}\).
         \(B\) par rapport à \(f\), \(A_2=f^{-1}(B)\) l'image directe de \(B\) 
         par \(f^{-1}\). On a aussi \(A_1=A_2\).
 \end{enumerate}
+
 \section{Relations}
 \label{chap3-sec:relations}
+
 \subsection{Relations binaires}
 \label{chap3-subsec:relationbinaire}
+
 \begin{defdef}
     On appelle correspondance entre éléments d'un ensemble \(E\) et éléments 
     d'un ensemble \(F\) tout triplet \((E,F,G)\) où \(G\) est une partie de \(E 
@@ -1321,6 +1100,7 @@ réciproque de \(f\) et on la note \(f^{-1}\).
 lieu de noter \((x,y) \in G\). On écrira \(x\RelBin{}y\) et on dira que les 
 éléments de \(x\) et \(y\), pris dans cette ordre, vérifient la relation 
 \(\RelBin\).
+
 \begin{defdef}
     On peut définir des qualités éventuelles d'une relation binaire. Soit \(E\) 
     un ensemble et \(\RelBin{}\) une relation binaire sur \(E\), on définit~:
@@ -1335,10 +1115,13 @@ lieu de noter \((x,y) \in G\). On écrira \(x\RelBin{}y\) et on dira que les
             x\RelBin{}y \text{~et~} y\RelBin{}z \implies x\RelBin{}z\).
     \end{enumerate}
 \end{defdef}
+
 \subsection{Relations d'ordre}
 \label{chap3-subsec:relationdordre}
+
 \subsubsection{Définition et exemples}
 \label{chap3-subsubsec:relationordredef}
+
 \begin{defdef}
     On appelle relation d'ordre sur \(E\) toute relation binaire sur \(E\) qui 
     est réflexive, antisymétrique et transitive. Un ensemble muni d'une relation 
@@ -1346,19 +1129,23 @@ lieu de noter \((x,y) \in G\). On écrira \(x\RelBin{}y\) et on dira que les
     relations d'ordre, on réserve la notation \(\leqslant\) à l'ordre usuel, sur 
     les ensembles de nombres.
 \end{defdef}
+
 \emph{Exemples}~: les relations d'ordres usuelles sur \(\R\), \(\Z\), \(\Q\) et 
 \(\N\); La relation d'ordre strict sur \(\R\) n'est pas une relation d'ordre car 
 elle n'est pas réflexive. La relation de divisibilité est une relation d'ordre 
 sur \(\N\). La relation d'inclusion sur l'ensemble \(\mathfrak{P}(E)\) est une 
 relation d'ordre.
+
 \subsubsection{Éléments comparables - Ordre total}
 \label{chap3-subsubsec:ordretotal}
+
 \begin{defdef}
     Soit \((E, \prec)\) un ensemble ordonné. Deux éléments \(x\) et \(y\) de 
     \(E\) sont dits comparables par la relation d'ordre \(\prec\) si et 
     seulement si l'une au moins des relations \(x \prec y\) ou \(y \prec x\) est 
     vérifiée.
 \end{defdef}
+
 \begin{defdef}
     On dit que \((E, \prec)\) est un ensemble totalement ordonné ou encore que 
     l'ordre \(\prec\) est total si et seulement si pour tous les éléments \(x\) 
@@ -1366,8 +1153,10 @@ relation d'ordre.
     Sinon on dit que \((E,\prec)\) est partiellement ordonné ou encore que 
     l'ordre \(\prec\) est partiel.
 \end{defdef}
+
 \subsubsection{Éléments remarquables d'un ensemble ordonné}
 \label{chap3-subsubsec:elementremarquables}
+
 Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
 \begin{defdef}[Partie majorée, minorée, bornée]
     \begin{enumerate}
@@ -1385,6 +1174,7 @@ Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
     Il est important de préciser dans quel ensemble la partie est majorée et 
     minorée.
 \end{defdef}
+
 \begin{defdef}[plus petit et plus grand élément]
     \begin{enumerate}
         \item On appelle un plus petit élément de la partie \(A\) tout élément 
@@ -1397,6 +1187,7 @@ Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
             élément de \(A\).
     \end{enumerate}
 \end{defdef}
+
 \begin{proof}[Unicité]
     \begin{enumerate}
         \item Si \(a\) et \(b\) sont les plus petits éléments de \(A\) alors 
@@ -1406,6 +1197,7 @@ Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
         \item On démontre l'unicité du plus grand élément de la même manière.
     \end{enumerate}
 \end{proof}
+
 \emph{Exemples}~:
 \begin{enumerate}
     \item Dans \((\mathfrak{P}(E), \subset)\) \(\emptyset\) est le plus petit 
@@ -1413,6 +1205,7 @@ Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
     \item Dans \((\N,|)\), avec \(|\) la relation de divisibilité, \(1\) est le 
         plus petit élément et \(0\) est le plus grand.
 \end{enumerate}
+
 \begin{defdef}[Borne supérieure et borne inférieure]
     \begin{enumerate}
         \item La borne supérieure de la partie \(A\) dans \(E\) est le plus 
@@ -1423,103 +1216,157 @@ Soit \((E,\prec)\) un ensemble ordonné et \(A\) une partie de \(E\).
             \(A\) dans \(E\).
     \end{enumerate}
 \end{defdef}
+
 \subsection{Relation d'équivalence}
 \label{chap3-subsec:relationequivalence}
 \begin{defdef}
     On appelle relation d'équivalence sur \(E\) toute relation binaire qui est 
     réflexive, symétrique et transitive.
 \end{defdef}
+
 On note généralement \(\sim\) les relations d'équivalences. Si \(x \sim y\), on 
 dit que \(x\) est équivalent à \(y\), ou encore, compte tenu de la symétrie, que 
 \(x\) et \(y\) sont équivalents. Par exemple, on peut citer l'égalité, la 
 congruence, la similitude de matrice ou l'équivalence de matrices.
+
 \section{Familles}
 \label{chap3-sec:familles}
+
 \subsection{Notion de famille}
 \label{chap3-subsec:notionfamille}
 \begin{defdef}
     Soient \(E\) et \(I\) des ensembles quelconques. On appelle famille 
-    d'éléments de \(E\) indexée par \(I\) toute application \(\mathcal{U} : I 
-    \longrightarrow E\), on notera \(\mathcal{U}=(u_i)_{i \in I}\).
+    d'éléments de \(E\) indexée par \(I\) toute application 
+    \(\fonctionR{\mathcal{U}}{I}{E}\), on notera \(\mathcal{U}=(u_i)_{i \in 
+    I}\).
 \end{defdef}
-On dit que \(I\) est l'ensemble des indices de la famille \(\mathcal{U}\). On notera \(E^I\) l'ensemble des familles de \(E\) indexées par \(I\). Par exemple, si l'ensemble des indices est \(\N\) alors \(E^{\N}\) est l'ensemble des suites à valeur dans \(E\). Si \(I\) est un ensemble fini, on identifie les familles indexées par \(I\) à des listes de longueur Cardinal(\(I\)).
+
+On dit que \(I\) est l'ensemble des indices de la famille \(\mathcal{U}\). On 
+notera \(E^I\) l'ensemble des familles de \(E\) indexées par \(I\). Par exemple, 
+si l'ensemble des indices est \(\N\) alors \(E^{\N}\) est l'ensemble des suites 
+à valeur dans \(E\). Si \(I\) est un ensemble fini, on identifie les familles 
+indexées par \(I\) à des listes de longueur Cardinal(\(I\)).
+
 \subsection{Familles de parties d'un ensemble}
 \label{chap3-subsec:familledeparties}
+
 Soit \(E\) un ensemble.
 \begin{defdef}
     Soit \((A_i)_{i \in I}\) une famille de parties de \(E\), on définit
     \begin{enumerate}
-        \item L'intersection de la famille \((A_i)_{i \in I}\)  \(\bigcap\limits_{i \in I} A_i = \enstq{x \in E}{\forall i \in I \quad x \in A_i}\);
-        \item La réunion de la famille \((A_i)_{i \in I}\)  \(\bigcup\limits_{i \in I} A_i = \enstq{x \in E}{\exists i \in I \quad x \in A_i}\).
+        \item L'intersection de la famille \((A_i)_{i \in I}\)  
+            \(\bigcap\limits_{i \in I} A_i = \enstq{x \in E}{\forall i \in I 
+            \quad x \in A_i}\);
+        \item La réunion de la famille \((A_i)_{i \in I}\)  \(\bigcup\limits_{i 
+            \in I} A_i = \enstq{x \in E}{\exists i \in I \quad x \in A_i}\).
     \end{enumerate}
 \end{defdef}
-Ainsi, l'intersection est l'ensemble des éléments de \(E\) qui appartiennent à chacun des \(A_i\) et la réunion est l'ensemble des éléments de \(E\) qui appartiennent à au moins un des \(A_i\).
+
+Ainsi, l'intersection est l'ensemble des éléments de \(E\) qui appartiennent à 
+chacun des \(A_i\) et la réunion est l'ensemble des éléments de \(E\) qui 
+appartiennent à au moins un des \(A_i\).
+
 \emph{Remarques}~:
 \begin{enumerate}
-    \item Si \(I=\{1,2\}\), on retrouve la définition de l'intersection et de la réunion de deux parties de \(A\).
-    \item Si \(I \neq \emptyset\), il existe \(i_0 \in I\) tel que \(\bigcap\limits_{i \in I} A_i \subset A_{i_0} \subset \bigcup\limits_{i \in I} A_i\).
-    \item Si \(I = \emptyset\) alors \(\bigcap\limits_{i \in I} A_i =E \quad \bigcup\limits_{i \in I} A_i=\emptyset\).
+    \item Si \(I=\{1,2\}\), on retrouve la définition de l'intersection et de la 
+        réunion de deux parties de \(A\).
+    \item Si \(I \neq \emptyset\), il existe \(i_0 \in I\) tel que 
+        \(\bigcap\limits_{i \in I} A_i \subset A_{i_0} \subset \bigcup\limits_{i 
+        \in I} A_i\).
+    \item Si \(I = \emptyset\) alors \(\bigcap\limits_{i \in I} A_i =E \quad 
+        \bigcup\limits_{i \in I} A_i=\emptyset\).
 \end{enumerate}
+
 \subsubsection{Formulaire}
 \label{chap3-subsubsec:formulaireensemble}
+
 \paragraph{Lois de Morgan}
 \label{chap3-par:morgan}
 \begin{align}
-    E \setminus \bigcup\limits_{i \in I} A_i &= \bigcap\limits_{i \in I} E \setminus A_i;\\
-    E \setminus \bigcap\limits_{i \in I} A_i &= \bigcup\limits_{i \in I} E \setminus A_i.
+    E \setminus \bigcup\limits_{i \in I} A_i &= \bigcap\limits_{i \in I} E 
+    \setminus A_i;\\
+    E \setminus \bigcap\limits_{i \in I} A_i &= \bigcup\limits_{i \in I} E 
+    \setminus A_i.
 \end{align}
+
 \paragraph{Images directes}
 \label{chap3-par:imagedir}
-Soit une application \(f \in F^E\) une application si \((A_i)_{i \in I}\) est une famille de parties de \(E\), on dispose de \((f(A_i))_{i \in I}\) familles de parties de \(F\) et on a 
+
+Soit une application \(f \in F^E\) une application si \((A_i)_{i \in I}\) est 
+une famille de parties de \(E\), on dispose de \((f(A_i))_{i \in I}\) familles 
+de parties de \(F\) et on a
 \begin{align}
-    f \left(\bigcap\limits_{i \in I} A_i\right) &\subset \bigcap\limits_{i \in I} f(A_i);\\
-    f \left(\bigcup\limits_{i \in I} A_i\right) &= \bigcap\limits_{i \in I} f(A_i).
+    f \left(\bigcap\limits_{i \in I} A_i\right) &\subset \bigcap\limits_{i \in 
+    I} f(A_i);\\
+    f \left(\bigcup\limits_{i \in I} A_i\right) &= \bigcap\limits_{i \in I} 
+    f(A_i).
 \end{align}
+
 \paragraph{Images réciproques}
 \label{chap3-par:imagerec}
-Si on dispose d'une famille de parties de \(F\) \((B_i)_{i \in I}\) alors on peut utiliser la famille \((f^{-1}(B_i))_{i \in I}\) de parties de \(E\) et on a 
+
+Si on dispose d'une famille de parties de \(F\) \((B_i)_{i \in I}\) alors on 
+peut utiliser la famille \((f^{-1}(B_i))_{i \in I}\) de parties de \(E\) et on a
 \begin{align}
-    f^{-1} \left(\bigcap\limits_{i \in I} B_i\right) &= \bigcap\limits_{i \in I} f^{-1}(B_i);\\
-    f^{-1} \left(\bigcup\limits_{i \in I} B_i\right) &= \bigcap\limits_{i \in I} f^{-1}(B_i).
+    f^{-1} \left(\bigcap\limits_{i \in I} B_i\right) &= \bigcap\limits_{i \in I} 
+    f^{-1}(B_i);\\
+    f^{-1} \left(\bigcup\limits_{i \in I} B_i\right) &= \bigcap\limits_{i \in I} 
+    f^{-1}(B_i).
 \end{align}
-\subsection{Opérations sur des familles de complexes indexées par un ensemble fini}
+
+\subsection{Opérations sur des familles de complexes indexées par un ensemble 
+fini}
 \label{chap3-subsec:operationsfamilles}
 On suppose que \(I=(i_k)_{k \in  \intervalleentier{1}{n}}\). On note 
 \begin{align}
-    \sum_{i \in I} u_i &= u_{i_1} +u_{i_2} +u_{i_3} + \dotsb +u_{i_n}; \\
-    \prod_{i \in I} u_i &= u_{i_1} \times u_{i_2} \times u_{i_3} \times \dotsm \times u_{i_n}. 
+    \sum_{i \in I} u_i &= u_{i_1} +u_{i_2} +u_{i_3} + \dotsb +u_{i_n};\\
+    \prod_{i \in I} u_i &= u_{i_1} \times u_{i_2} \times u_{i_3} \times \dotsm 
+    \times u_{i_n}.
 \end{align}
 Si \(I=\emptyset\) alors \(\sum_{i \in I} u_i=0\) et \(\prod_{i \in I} u_i=1\) par convention.
-\cleardoublepage
+
 \section{Exercices --- Ensembles, applications et relations binaires}
+
 \begin{exercice}
-    Pour chacun des ensembles \(E\) suivants, déterminer les éléments de l'ensemble \(\Part(E)\) des parties de \(E\), puis les éléments de l'ensemble \(\Part(\Part(E))\).
+    Pour chacun des ensembles \(E\) suivants, déterminer les éléments de 
+    l'ensemble \(\Part(E)\) des parties de \(E\), puis les éléments de 
+    l'ensemble \(\Part(\Part(E))\).
     \begin{enumerate}
         \item \(E=\emptyset\);
         \item \(E\) est un singleton \(\{a\}\);
         \item \(E\) est une paire \(\{a, b\}\).
     \end{enumerate}
 \end{exercice}
+
 \begin{exercice}
-    Soient \(E\) un ensemble quelconque et \(A\) et \(B\) deux parties de \(E\). Démontrer les équivalences suivantes~:
+    Soient \(E\) un ensemble quelconque et \(A\) et \(B\) deux parties de \(E\). 
+    Démontrer les équivalences suivantes~:
     \begin{enumerate}
         \item \(A \cap B = A \iff A \subset B \);
         \item \(A \cup B = A \iff B \subset A \);
         \item \(A \cup B = A \cap B \iff A = B \).
     \end{enumerate}
 \end{exercice}
-\begin{exercice}[Résolution dans \(\Part(E)\) des équations \(X \cup Y=A\) et \(X \cap Y=A\)]
+
+\begin{exercice}[Résolution dans \(\Part(E)\) des équations \(X \cup Y=A\) et 
+    \(X \cap Y=A\)]
     Soient \(E\) un ensemble et \(A\) une partie de \(E\).
     \begin{enumerate}
-        \item Montrer que \((X,Y)\in\Part(E)^2\) est solution de \(X \cup Y=A\) si et seulement s'il existe \((U, V) \in \Part(E)^2\) tel que \[X=A\cup(U\cap \complement V) \ Y=A\cup(\complement U \cap V)\].
+        \item Montrer que \((X,Y)\in\Part(E)^2\) est solution de \(X \cup Y=A\) 
+            si et seulement s'il existe \((U, V) \in \Part(E)^2\) tel que 
+            \[X=A\cup(U\cap \complement V) \ Y=A\cup(\complement U \cap V)\].
         \item Résoudre dans \(\Part(E)^2\) l'équation \(X \cup Y = A\).
     \end{enumerate}
 \end{exercice}
+
 \begin{exercice}[Caractérisation des injections]
     Soient \(E\) et \(F\) deux ensembles et une application \(f \in F^E\).
     \begin{enumerate}
-        \item Montrer que si \(f\) est injective alors pour tout couple \((A,B) \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\). Prouver que cette égalité peut avoir lieu pour une application \(f\) non injective.
-        \item Établir que \(f\) est injective si et seulement si \(\forall (A,B) \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\).
+        \item Montrer que si \(f\) est injective alors pour tout couple \((A,B) 
+            \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\). Prouver que cette 
+            égalité peut avoir lieu pour une application \(f\) non injective.
+        \item Établir que \(f\) est injective si et seulement si \(\forall (A,B) 
+            \in \Part(E)^2, f(A\cap B) = f(A) \cap f(B)\).
     \end{enumerate}
 \end{exercice}
 \begin{exercice}
