@@ -1,5 +1,6 @@
 \chapter{Devoir surveillé n°1}
 \label{chap:DS1}
+
 \begin{exercice}
     Résoudre dans \(\R\) les équations suivantes~:
     \begin{align}
@@ -10,6 +11,7 @@
                                    \argch x + \argsh x & = 1 \label{eq:DS1eq5}
     \end{align}
 \end{exercice}
+
 \begin{exercice}
     Pour tout naturel \(n\) non nul et tout réel \(x\), on définit la quantité~:
     \begin{align}
@@ -36,6 +38,7 @@
             \end{enumerate}
     \end{enumerate}
 \end{exercice}
+
 \begin{exercice}[Problème]
     On considère la fonction \(f\) définie sur \(I = \intervalleff{0}{\pi}\) par~:
     \begin{equation}
@@ -89,8 +92,8 @@
             \end{enumerate}
     \end{enumerate}
 \end{exercice}
-\chapter{Corrigé du devoir surveillé n°1}
-\begin{exercice}
+
+\begin{corrige}
     Les deux membres de l'équation~\eqref{eq:DS1eq1} ont un sens si et seulement si \(x \geq 4\), \(x-4\sqrt{x-4} \geq 0\) et \(x-6\sqrt{x-4}+5\geq 0\). Pour \(x \geq 4\),
     \[x - 4\sqrt{x-4} = (\sqrt{x-4}-2)^2 \text{~et~} x-6\sqrt{x-4}+5 = (\sqrt{x-4}-3)^2.\]
     On cherche donc les solutions éventuelles dans l'intervalle \(\intervallefo{4}{+\infty}\). Pour tout réel \(x\) de cet intervalle, on pose \(t = \sqrt{x-4}\). Ainsi, \(x = t^2+4\) et l'équation~\eqref{eq:DS1eq1} devient~:
@@ -161,8 +164,9 @@ Le déterminant de cette équation du deuxième degré vaut~:\(\Delta = 50^2-4\t
                                                             &= \frac{-(\e^2+2\e-1)(\e^2-2\e-1)}{4\e(\e^2+1)} \leq 0.
     \end{align*}
     Comme on cherche une solution dans \(\intervallefo{1}{+\infty}\), l'équation \eqref{eq:DS1eq5} admet une unique solution et l'ensemble des solutions de cette équation est~: \(\S_5 = \left\{\frac{1+\e^2}{2\sqrt{\e(\e^2-1)}}\right\}\).
-\end{exercice}
-\begin{exercice}
+\end{corrige}
+
+\begin{corrige}
     \begin{enumerate}
         \item La fonction exponentielle est dérivable sur \(\R\), et particulièrement en \(0\) et sa fonction dérivée est elle-même, donc comme \(\frac{\e^x-1}{x} = \frac{\e^x-\e^0}{x-0}\) est le taux d'accroissement de la fonction exponentielle en \(0\), sa limite lorsque l'accroissement \(x\) tend vers \(0\) vaut la valeur de la fonction dérivée de l'exponentielle en zéro, c'est-à-dire \(\e^0 = 1\).
             Pour tout réel \(x\) non nul~:
@@ -248,8 +252,9 @@ Le déterminant de cette équation du deuxième degré vaut~:\(\Delta = 50^2-4\t
                     Donc on peut conclure que \(\lim\limits_{x \to 0} S_n(x) = 0 = S_n(0)\).
             \end{enumerate}
     \end{enumerate}
-\end{exercice}
-\begin{exercice}[Problème]
+\end{corrige}
+
+\begin{corrige}[Problème]
     On considère la fonction \(f\) définie sur l'intervalle \(I = \intervalleff{0}{\pi}\) par~:
     \begin{equation*}
         \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
@@ -279,4 +284,4 @@ Le déterminant de cette équation du deuxième degré vaut~:\(\Delta = 50^2-4\t
             \end{enumerate}
         \item 
     \end{enumerate}    
-\end{exercice}
+\end{corrige}
