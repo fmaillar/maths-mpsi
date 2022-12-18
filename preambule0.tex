@@ -8,6 +8,7 @@
 %
 %pour les symboles mathématiques
 \usepackage{amsmath}
+\setlength{\mathindent}{1.5cm}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -189,12 +190,12 @@ breaklinks = true%
 \newcommand{\intervallefo}[2]{\ensuremath{\left[ #1 \pv #2 \right[}}%{\intervalle{[}{#1}{#2}{[}}
 \newcommand{\intervalleoo}[2]{\ensuremath{\left] #1 \pv #2 \right[}}%{\intervalle{]}{#1}{#2}{[}}
 \newcommand{\intervalleentier}[2]{\intervalle\llbracket{#1}{#2}\rrbracket}
-\newcommand{\Rplus}{\intervallefo{0}{+\infty}}
-\newcommand{\Rmoins}{\intervalleof{-\infty}{0}}
-\newcommand{\Rplusetoile}{\intervalleoo{0}{+\infty}}
-\newcommand{\Rmoinsetoile}{\intervalleoo{-\infty}{0}}
-\newcommand{\N}{\ensemblenombre{N}}
 \newcommand{\R}{\ensemblenombre{R}}
+\newcommand{\Rplus}{\R_{+}}%{\intervallefo{0}{+\infty}}
+\newcommand{\Rmoins}{\R_{-}}%{\intervalleof{-\infty}{0}}
+\newcommand{\Rplusetoile}{\Rplus^{*}}%{\intervalleoo{0}{+\infty}}
+\newcommand{\Rmoinsetoile}{\Rmoins^{*}}%{\intervalleoo{-\infty}{0}}
+\newcommand{\N}{\ensemblenombre{N}}
 \newcommand{\Rbar}{\bar{\R}}
 \newcommand{\Rpluss}{\R_{+}}
 \newcommand{\K}{\ensemblenombre{K}}
@@ -407,6 +408,16 @@ breaklinks = true%
 \hrulefill\par\vspace{10pt}\noindent\rmfamily}%
 {\par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par}
 %
+\newcounter{corrige}
+\counterwithin*{corrige}{chapter}
+\newenvironment{corrige}[1][]{%
+\stepcounter{corrige}%
+\par\vspace{5pt}\noindent
+\fbox{\textbf{Corrigé~\thechapter.\thecorrige~\textit{#1}}}%
+\hrulefill\par\vspace{10pt}\noindent\rmfamily}%
+{\par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par}
+%
+%
 \numberwithin{equation}{section}
 %
 \usepackage{multicol}
@@ -417,4 +428,3 @@ breaklinks = true%
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatother
-
