@@ -212,7 +212,7 @@ En pratique,
 \end{equation}
 
 
-\emph{Exemple}~: Produit de matrices de bases canoniques. Soient \(n\), \(m\) et \(p\) trois naturels non nuls. Notons \((E_{ij})\) la base canonique de \(\Mnp{n}{p}{\K}\), \((E'_{ij})\) la base canonique de \(\Mnp{m}{n}{\K}\) et \((E''_{ij})\) la base canonique de \(\Mnp{m}{p}{\K}\). Pour tous \(i \in \intervalleentier{1}{m}\), \(j \in \intervalleentier{1}{n}\), \(k \in \intervalleentier{1}{n}\) et \(l \in \intervalleentier{1}{p}\) on a
+\emph{Exemple}~: Produit de matrices de bases canoniques. Soient \(n\), \(m\) et \(p\) trois naturels non nuls. Notons \((E_{ij})\) la base canonique de \(\Mnp{n}{p}{\K}\), \((E'_{ij})\) la base canonique de \(\Mnp{m}{n}{\K}\) et \((E''_{ij})\) la base canonique de \(\Mnp{m}{p}{\K}\). pour tout \(i \in \intervalleentier{1}{m}\), \(j \in \intervalleentier{1}{n}\), \(k \in \intervalleentier{1}{n}\) et \(l \in \intervalleentier{1}{p}\) on a
 \begin{equation}
   E'_{ij} E_{kl} =(e_{\alpha \beta}) \in \Mnp{m}{p}{\K}.
 \end{equation}
@@ -374,7 +374,7 @@ On en déduit
   est un isomorphisme de groupes. Particulièrement pour toute isomorphisme \(u \in \GL{\K^n}\) on a \(\tilde{\Phi}(u^{-1})=\tilde{\Phi}(u)^{-1}\).
 \end{theo}
 \begin{proof}
-  L'application \(\tilde{\Phi}\) est bien définie. Elle est injective puisque c'est une restriction de \(\Phi\). Elle est surjective car pour tout \(A \in \GLn{n}{\K}\) l'endomorphisme canoniquement associée à \(A\) est dans \(\GL{\K^n}\). De plus pour tous isomorphismes \(u\) et \(v\) de \(\GL{\K^n}\) on a
+  L'application \(\tilde{\Phi}\) est bien définie. Elle est injective puisque c'est une restriction de \(\Phi\). Elle est surjective car pour tout \(A \in \GLn{n}{\K}\) l'endomorphisme canoniquement associée à \(A\) est dans \(\GL{\K^n}\). De plus pour tout isomorphismes \(u\) et \(v\) de \(\GL{\K^n}\) on a
 \begin{equation}
   \tilde{\Phi}(v \circ u)= \tilde{\Phi}(v) \cdot \tilde{\Phi}(u).
 \end{equation}
@@ -434,7 +434,7 @@ Soient un naturel \(n\) et \(A=(a_{ij}) \in \Mn{n}{\K}\). On dit que~:
 
   Clairement, \(I_n\) est diagonale donc triangulaire supérieure et inférieure. 
 
-  Soient ensuite deux matrices \(A\) et \(B\) diagonales et on note \(C=AB\). Pour tous \(i\) et \(j\) dans \(\intervalleentier{1}{n}\) on a
+  Soient ensuite deux matrices \(A\) et \(B\) diagonales et on note \(C=AB\). pour tout \(i\) et \(j\) dans \(\intervalleentier{1}{n}\) on a
   \begin{equation}
     \begin{cases}
       i \neq j & c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}=a_{ii}b_{ij}=0 \\
@@ -443,7 +443,7 @@ Soient un naturel \(n\) et \(A=(a_{ij}) \in \Mn{n}{\K}\). On dit que~:
   \end{equation}
   Alors \(C\) est diagonale. De plus pour tout \(i \in \intervalleentier{1}{n}\) on a \(c_{ii}=b_{ii}a_{ii}\) donc \(AB=C=BA\). 
   
-  Soient ensuite deux matrices \(A\) et \(B\) triangulaire supérieures et on note \(C=AB\). Pour tous \(i\) et \(j\) dans \(\intervalleentier{1}{n}\) on a si \(i > j\)
+  Soient ensuite deux matrices \(A\) et \(B\) triangulaire supérieures et on note \(C=AB\). pour tout \(i\) et \(j\) dans \(\intervalleentier{1}{n}\) on a si \(i > j\)
   \begin{equation}
     c_{ij}=\sum_{k=1}^n a_{ik} b_{kj} = \sum_{k=1}^{i-1} a_{ik} b_{kj} + \sum_{k=i}^{n} a_{ik} b_{kj}
   \end{equation}

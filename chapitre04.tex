@@ -534,12 +534,12 @@ l'équation caractéristique.
 \begin{proof}
     On cherche des solutions de la première sous-section qui sont à valeurs réelles~:
     \begin{enumerate}
-        \item[Cas 1], si le discriminant est nul alors si \(f\) est à valeurs 
+        \item[Cas 1]Si le discriminant est nul alors si \(f\) est à valeurs 
             réelles alors \(f(0) = \mu \in \R\) et \(f(1) = (\lambda + \mu)\e^r 
             \iff \lambda = f(1)\e^{-r}-f(0) \in \R\). Réciproquement si 
             \(\lambda\) et \(\mu\) sont des réels alors \(f\) est à valeurs 
             réelles;
-        \item[Cas 2], si le discriminant est positif alors si \(f\) est à valeurs 
+        \item[Cas 2]Si le discriminant est positif alors si \(f\) est à valeurs 
             réelles alors on a \(f(0) = \lambda + \mu\) et \(f(1) = \lambda 
             \e^{r_1} + \mu \e^{r_2}\) donc \(\mu = 
             \frac{f(1)-f(0)\e^{r_1}}{\e^{r_2}-\e^{r_1}}\) et \(\lambda = f(0) - 
@@ -547,11 +547,11 @@ l'équation caractéristique.
             \(\e^{r_1} \neq \e^{r_2}\) ainsi \(\lambda, \mu \in \R\), 
             réciproquement si \(\lambda, \mu \in \R\) alors \(f\) est à valeur 
             réelles;
-        \item[Cas 3], si le discriminant est négatif alors l'équation 
+        \item[Cas 3]Si le discriminant est négatif alors l'équation 
             caractéristique admet deux racines complexes conjuguées \(r_1 = 
             \alpha + \ii \omega\) et \(r_2 = \alpha-\ii \omega\) avec \(\alpha = 
             -\frac{b}{2a}\) et \(\omega = \frac{\sqrt{-\Delta}}{2a}\), il existe 
-            un doublet de complexe \((\lambda, \mu)\) tel que pour tous réel 
+            un doublet de complexe \((\lambda, \mu)\) tel que pour tout réel 
             \(t\) on ait \(f(t) = \lambda \e^{r_1 t} + \mu \e^{r_2 t} = \lambda 
             \e^{\alpha t} \e^{\ii \omega t} + \mu \e^{\alpha t} \e^{\ii \omega 
             t}\). Alors
@@ -571,12 +571,12 @@ l'équation caractéristique.
                     &+ \ii\e^{\alpha t} \sin(\omega t)(\lambda_1-\mu_1).
             \end{align}
             Si \(f\) est à valeurs réelles alors \(\Im(f) = \tilde{0}\), ce qui 
-            implique que pour tous réel \(t\) on ait
+            implique que pour tout réel \(t\) on ait
             \begin{equation}
                 \e^{\alpha t} \left[ \cos(\omega t) (\lambda_2 + \mu_2)+ 
                 \sin(\omega t)(\lambda_1-\mu_1)\right] = 0,
             \end{equation}
-            puisque pour tous les réels \(t\) \(\e^{\alpha t} \neq 0\) on a
+            puisque pour tout les réels \(t\) \(\e^{\alpha t} \neq 0\) on a
             \begin{equation}
                 \cos(\omega t) (\lambda_2 + \mu_2)+ \sin(\omega t)(\lambda_1-\mu_1) = 0,
             \end{equation}
@@ -610,7 +610,8 @@ l'équation caractéristique.
                 \varphi \sin \omega t) = C \e^{\alpha t} \cos(\omega t + 
                 \varphi)
             \end{equation}
-            Dans les deux cas, les solutions obtenues sont à valeurs réelles.
+            Dans les deux cas, \((A, B)\) nul ou non nul, les solutions obtenues 
+            sont à valeurs réelles.
     \end{enumerate}
     Dans chacun de ces trois cas, on a trouvé une solution réelle de l'équation 
     différentielle \eqref{eq:Hdiff2}.
@@ -635,12 +636,13 @@ L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on 
 
 \begin{theo}
     Supposons connaître une solution \(f_0\) de l'équation \eqref{eq:Ediff2} 
-    ---~dite solution particulière~--- alors une application 
+    ---~dite \emph{solution particulière}~--- alors une application 
     \(\fonctionR{f}{I}{\K}\) est une solution de \(\E\) si et seulement si la 
-    fonction \(f-f_0\) est une solution de l'équation \eqref{eq:Hdiff2}. On a 
-    donc \(\S_{\E_2} = \S_{\H_2} + f_0\). On dit que la solution générale de 
-    \eqref{eq:Ediff2} est la somme d'une solution particulière et de la solution 
-    générale de l'équation \eqref{eq:Hdiff2}.
+    fonction \(f-f_0\) est une solution de l'équation \eqref{eq:Hdiff2}. 
+
+    On a donc \(\S_{\E_2} = \S_{\H_2} + f_0\). On dit que la solution générale 
+    de \eqref{eq:Ediff2} est la somme d'une solution particulière et de la 
+    solution générale de l'équation \eqref{eq:Hdiff2}.
 \end{theo}
 
 \begin{proof}
@@ -655,12 +657,11 @@ L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on 
     \end{align}
     La fonction \(g\) est donc solution de l'équation \eqref{eq:Hdiff2}.
 
-    Soit une application \(f:I \longmapsto \K\). Supposons que \(g = f-f_0\) 
-    soit solution de l'équation \eqref{eq:Hdiff2}. Puisque \(g\) est solution de 
-    l'équation \eqref{eq:Hdiff2} elle est deux fois dérivable et puisque \(f\) 
-    est solution de l'équation \eqref{eq:Ediff2} alors elle est deux fois 
-    dérivable. Ainsi donc \(f = g + f_0\) est deux fois dérivable et on a pour 
-    tout \(t \in I\)~:
+    Supposons que \(g = f-f_0\) soit solution de l'équation \eqref{eq:Hdiff2}. 
+    Puisque \(g\) est solution de l'équation \eqref{eq:Hdiff2} elle est deux 
+    fois dérivable et puisque \(f_0\) est solution de l'équation 
+    \eqref{eq:Ediff2} alors elle est deux fois dérivable. Ainsi donc \(f = g + 
+    f_0\) est deux fois dérivable et on a pour tout \(t \in I\)~:
     \begin{align}
         af''(t) + bf'(t) + cf(t)& = (ag''(t) + bg'(t) + cg(t))\notag\\ 
                                 & + (af_0''(t) + bf_0'(t) + cf_0(t))\\ 

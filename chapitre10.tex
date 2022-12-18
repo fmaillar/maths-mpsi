@@ -156,11 +156,11 @@ L'ensemble \(\R\) est muni de deux lois de compositions internes, appelées addi
 On dit que \((R,+,\times)\) muni de la relation d'ordre \(\leqslant\) est un corps totalement ordonné. La multiplication d'une inégalité par un nombre négatif change le sens de cette inégalité.
 \end{prop}
 \begin{enumerate}
-\item Pour tous réels \(x\), \(y\), \(z\) et \(t\) on a~:
+\item pour tout réels \(x\), \(y\), \(z\) et \(t\) on a~:
   \begin{equation}
     \begin{cases}x\leqslant y \\ z \leqslant t \end{cases} \implies x+z\leqslant y+t;
   \end{equation}
-\item pour tous réels \(x\), \(y\), \(z\) et \(t\) on a~:
+\item pour tout réels \(x\), \(y\), \(z\) et \(t\) on a~:
   \begin{equation}
     \begin{cases}0\leqslant x\leqslant y \\ 0 \leqslant z \leqslant t \end{cases} \implies 0\leqslant xz \leqslant yt;
   \end{equation}
@@ -168,7 +168,7 @@ On dit que \((R,+,\times)\) muni de la relation d'ordre \(\leqslant\) est un cor
   \begin{equation}
     x>0 \iff \frac{1}{x}>0;
   \end{equation}
-\item pour tous réels \(x\) et \(y\) on a~:
+\item pour tout réels \(x\) et \(y\) on a~:
   \begin{equation}
     0<x\leqslant y \iff 0<\frac{1}{y}\leqslant \frac{1}{x}.
   \end{equation}
@@ -194,7 +194,7 @@ ou encore \(\abs{x}=\max(x,-x)\).
   si \(x\geqslant 0\) alors \(\abs{x}=x\geqslant 0\) et \(\abs{x}=0 \iff x=0\). Sinon si \(x<0\) alors \(\abs{x}=-x>0\) donc \(\abs{x}\geqslant 0\) et \(\abs{x}\neq 0\).
 \end{proof}
 \begin{prop}
-  Pour tous réels \(x\) et \(y\) et tout réel non nul \(z\), on a~:
+  pour tout réels \(x\) et \(y\) et tout réel non nul \(z\), on a~:
   \begin{gather}
     \abs{xy}=\abs{x}\abs{y}, \\ 
     \abs{\frac{1}{z}}=\frac{1}{\abs{z}}.
@@ -238,7 +238,7 @@ Donc \(\abs{x}-\abs{y}\leqslant \abs{x+y}\) et par symétrie des rôles de \(x\)
   Ce sont des conséquences immédiates des propriétés de la valeur absolue.
 \end{proof}
 \begin{prop}
-  Pour tous réels \(x\) et \(y\), on a
+  pour tout réels \(x\) et \(y\), on a
   \begin{equation}
     \max(x,y)=\frac{x+y+\abs{x-y}}{2} \quad \min(x,y)=\frac{x+y-\abs{x-y}}{2}.
   \end{equation}
@@ -260,7 +260,7 @@ Donc \(\abs{x}-\abs{y}\leqslant \abs{x+y}\) et par symétrie des rôles de \(x\)
   \end{equation}
 \end{prop}
 \begin{prop}
-  Pour tous réels \(x\) et \(y\) et tout réel \(h>0\)
+  pour tout réels \(x\) et \(y\) et tout réel \(h>0\)
   \begin{align}
     \abs{x-y}\leqslant h \iff & -h \leqslant x-y \leqslant h\\
     &\iff y-h \leqslant x \leqslant y+h
@@ -351,8 +351,8 @@ On note que l'ensemble vide est aussi un intervalle \(\emptyset=\intervalleoo{a}
   Soient \(a\) et \(b\) deux réels tels que \(a\leqslant b\), alors
   \begin{itemize}
   \item \(\R\) est convexe, puisque pour tout réels \(x\) et \(y\), si \(x\leqslant y\) alors \([x,y]\subset \R\);
-  \item \(\intervalleff{a}{b}\) est convexe puisque pour tous réels \(x\) et \(y\) de \(\intervalleff{a}{b}\) si \(a\leqslant x\leqslant y\leqslant b\) alors \(\intervalleff{x}{y}\subset \intervalleff{a}{b}\). Idem pour les intervalles semi-ouverts et semi-fermés;
-  \item \(\intervallefo{a}{+\infty}\) est convexe, puisque pour tous réels \(x\) et \(y\) de \(\intervallefo{a}{+\infty}\) tels que \(a\leqslant x\leqslant y\) \(\intervalleff{x}{y}\subset \intervallefo{a}{+\infty}\). Idem pour les autres demi-droites.
+  \item \(\intervalleff{a}{b}\) est convexe puisque pour tout réels \(x\) et \(y\) de \(\intervalleff{a}{b}\) si \(a\leqslant x\leqslant y\leqslant b\) alors \(\intervalleff{x}{y}\subset \intervalleff{a}{b}\). Idem pour les intervalles semi-ouverts et semi-fermés;
+  \item \(\intervallefo{a}{+\infty}\) est convexe, puisque pour tout réels \(x\) et \(y\) de \(\intervallefo{a}{+\infty}\) tels que \(a\leqslant x\leqslant y\) \(\intervalleff{x}{y}\subset \intervallefo{a}{+\infty}\). Idem pour les autres demi-droites.
   \end{itemize}
 \end{proof}
 

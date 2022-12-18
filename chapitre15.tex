@@ -412,7 +412,7 @@ Supposons que \(\Ker(f)=\{e_G\}\). Soit \((x,y) \in G^2\) tels que \(f(x)=f(y)\)
 
 La fonction logarithme est un isomorphisme de groupes de \((\R^{*}_+,\times)\) sur \((\R,+)\), c'est-à-dire
 \begin{equation}
-  \forall (x,y) \in \Rplusetoile^2 \quad \ln(xy) = \ln x + \ln y.
+    \forall (x,y) \in {\Rplusetoile}^2 \quad \ln(xy) = \ln x + \ln y.
 \end{equation}
 La fonction exponentielle est un isomorphisme de groupes de \((\R,+)\) sur \((\R^{*}_+,\times)\), c'est-à-dire
 \begin{equation}
@@ -420,7 +420,7 @@ La fonction exponentielle est un isomorphisme de groupes de \((\R,+)\) sur \((\R
 \end{equation}
 La fonction \(\fonction{\psi}{\Rplusetoile \times \R}{\C^{*}}{(r,\theta)}{r\e^{\ii \theta}}\) est un morphisme de groupes du groupe produit des groupes \((\Rplusetoile,\times)\) et \((\R,+)\) sur le groupe \((\C^{*},\times)\)
 \begin{equation}
-  \forall (r,r') \in \Rplusetoile^2 \ \forall \theta \in \R \quad \psi(rr',\theta+\theta')=\psi(r,\theta) \times \psi(r',\theta').
+  \forall (r,r') \in {\Rplusetoile}^2 \ \forall \theta \in \R \quad \psi(rr',\theta+\theta')=\psi(r,\theta) \times \psi(r',\theta').
 \end{equation}
 C'est un morphisme surjectif, \(\Image(f)=\C^{*}\) mais non injectif puisque \(\Ker(f)=\{1\}\times 2\pi \Z\)~\footnote{cf.\ chapitre~
 \ref{chap:complexes}}.
@@ -625,7 +625,7 @@ Ainsi \(\P(p+1)\) est vraie. Alors par théorème de récurrence La propriété 
 Dans un corps, tous les éléments non nuls sont réguliers. Le corollaire sera valable pour tout \(a\) différent de 1.
 
 \begin{theo}[Distributivité généralisée]
-  Soit \((A,+,\cdot)\) un anneau. Pour tous \(I\) et \(J\) des ensembles finis non vides, toutes familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) d'éléments de \(A\) on a
+  Soit \((A,+,\cdot)\) un anneau. pour tout \(I\) et \(J\) des ensembles finis non vides, toutes familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) d'éléments de \(A\) on a
   \begin{equation}
     \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = \sum_{(i,j)\in I\times J} x_iy_j.
   \end{equation}
@@ -1202,7 +1202,7 @@ On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a
 \subsubsection{Algorithme d'Euclide pour la détermination du PGCD}
 
 
-Nous savons que pour tous relatifs \(a\) et \(b\) on a \(a \wedge 0 = \abs{a}\) et \(\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)\). Alors on peut supposer, sans perte de généralité, que \((a,b) \in \left(\N^{*}\right)^{2}\). De plus \(\pgcd(a,b) =\pgcd(b,a)\), alors on peut supposer de plus que \(a \geqslant b\).
+Nous savons que pour tout relatifs \(a\) et \(b\) on a \(a \wedge 0 = \abs{a}\) et \(\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)\). Alors on peut supposer, sans perte de généralité, que \((a,b) \in \left(\N^{*}\right)^{2}\). De plus \(\pgcd(a,b) =\pgcd(b,a)\), alors on peut supposer de plus que \(a \geqslant b\).
 
 \begin{lemme}
   Soit \(r(a,b)\) le reste de la division euclidienne de \(a\) par \(b\), \(b \neq 0\), alors
@@ -1229,13 +1229,13 @@ La suite \((r_k)_{k \in \N}\) est strictement décroissante, à valeurs dans \(\
 
 Soient \(a\) et \(b\) deux entiers relatifs. L'ensemble \(a\Z \cap b\Z\) est l'ensemble des entiers multiples communs de \(a\) et \(b\).
 \begin{theo}
-  Pour tous relatifs \(a\) et \(b\), \(a\Z \cap b\Z\) est un sous-groupe de \((\Z,+)\).
+  pour tout relatifs \(a\) et \(b\), \(a\Z \cap b\Z\) est un sous-groupe de \((\Z,+)\).
 \end{theo}
 \begin{proof}
   On sait que \(a\Z\) et \(b\Z\) sont des sous-groupes de \((\Z,+)\) et comme l'intersection de deux sous-groupes est un sous-groupe alors \(a\Z \cap b\Z\) est un sous-groupe.
 \end{proof}
 \begin{corth}
-  Pour tous relatifs \(a\) et \(b\) il existe un unique naturel \(m\) tel que \(a\Z \cap b\Z= m \Z\). L'entier \(m\) est appelé le PPCM de \(a\) et de \(b\), on le note \(a \vee b = \ppcm(a,b)\).
+  pour tout relatifs \(a\) et \(b\) il existe un unique naturel \(m\) tel que \(a\Z \cap b\Z= m \Z\). L'entier \(m\) est appelé le PPCM de \(a\) et de \(b\), on le note \(a \vee b = \ppcm(a,b)\).
 \end{corth}
 \begin{theo}
   Quelque soient les relatifs \(a\) et \(b\)
@@ -1328,7 +1328,7 @@ Alors
 \end{align}
 
 \begin{theo}[Théorème de Gau\ss{}]
-  Pour tous relatifs \(a,b\) et \(c\), si \(a \mid bc\) et \(\pgcd(a,b)=1\) alors \(a \mid c\).
+  pour tout relatifs \(a,b\) et \(c\), si \(a \mid bc\) et \(\pgcd(a,b)=1\) alors \(a \mid c\).
 \end{theo}
 \begin{proof}[Première démonstration]
   Les entiers \(a\) et \(b\) sont premiers entre eux alors on peut définir un couple de coefficients de Bezout \((u,v)\) tel que \(au+bv=1\) donc \(cau+cbv=c\). Par hypothèse \(a \mid bc\) donc \(a \mid bcv\) et de plus \(a \mid acu\) donc \(a \mid acu+bcv =c\).
@@ -1626,7 +1626,7 @@ Il reste à mettre le produit sous la bonne forme.
 \subsubsection{Corps des nombres rationnels : \(\Q\)}
 
 \begin{defdef}
-  On appelle \(\Q\) le corps des fractions de l'anneau intègre \(\Z\). \(\Q\) est appelé le corps des rationnels, les éléments de \(\Q\) sont les nombres rationnels. Par définition, les éléments de \(\Q\) s'écrivent sous la forme \(\frac{a}{b}\) avec \(a\) et \(b\) des relatifs et \(b\) non nul. Par définition, pour tous relatifs \(a\) et \(a'\) et tous relatifs non nuls \(b\) et \(b'\) on a
+  On appelle \(\Q\) le corps des fractions de l'anneau intègre \(\Z\). \(\Q\) est appelé le corps des rationnels, les éléments de \(\Q\) sont les nombres rationnels. Par définition, les éléments de \(\Q\) s'écrivent sous la forme \(\frac{a}{b}\) avec \(a\) et \(b\) des relatifs et \(b\) non nul. Par définition, pour tout relatifs \(a\) et \(a'\) et tous relatifs non nuls \(b\) et \(b'\) on a
   \begin{equation}
     \frac{a}{b} = \frac{a'}{b'} \iff ab'=ba'.
   \end{equation}
