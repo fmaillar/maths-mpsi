@@ -29,8 +29,7 @@ plt.plot(x, -x/x, 'r', ls = (0, (5, 10)), lw=0.5)
 plt.plot(x/x, x, 'r', ls = (0, (5, 10)), lw=0.5)
 plt.plot(-x/x, x, 'r', ls = (0, (5, 10)), lw=0.5)
 
-
-plt.axis([-2, 2, -2, 2], 'equal')
+#plt.axis([-2, 2, -2, 2], 'equal')
 plt.grid()
 plt.xlim(-2,2)
 plt.ylim(-2,2)
