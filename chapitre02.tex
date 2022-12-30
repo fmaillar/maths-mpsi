@@ -56,28 +56,28 @@ deux lois~:
                 \forall (x,y) \in \C^2 \quad x + y = y + x;
             \end{equation}
         \item \(\C\) admet un neutre pour \(+\)~: c'est \(0\);
-        \item tout élément de \(\C\) est inversible par \(+\) et l'opposé de           
+        \item tout élément de \(\C\) est inversible par \(+\) et l'opposé de 
             tout complexe \(x\) et \(-x\).
     \end{itemize}
 \end{prop}
 
 \begin{prop}
-    \emph{\((\C, + ,\times)\) est un anneau commutatif}. C'est-à-dire que 
-    \((\C, + )\) est un groupe commutatif et que
+    \emph{\((\C, + ,\times)\) est un anneau commutatif}. C'est-à-dire que \((\C, 
+    + )\) est un groupe commutatif et que
     \begin{itemize}
         \item \(\times\) est associative;
         \item \(\times\) admet un élément neutre noté \(1\);
         \item \(\times\) est distributive sur \( + \)~:
             \begin{equation}
-                \forall (a, b, c) \in \C^3 \quad a \times (b + c) = a \times b+ a 
-                \times c.
+                \forall (a, b, c) \in \C^3 \quad a \times (b + c) = a \times b + 
+                a \times c.
             \end{equation}
     \end{itemize}
 \end{prop}
 
 \begin{prop}
-    Pour tout complexe \(z \in \C\), il existe un unique couple de réels \((x, y) 
-    \in \R^2\) tel que \(z = x + \ii y\). C'est-à-dire que l'application 
+    Pour tout complexe \(z \in \C\), il existe un unique couple de réels \((x, 
+    y) \in \R^2\) tel que \(z = x + \ii y\). C'est-à-dire que l'application 
     \(\fonctionL{\varphi}{\R^2}{\C}{(x, y)}{x + \ii y}\) est bijective.
 \end{prop}
 
@@ -93,9 +93,9 @@ figure~\ref{fig:complexe}.
 \end{figure}
 
 \begin{proof}[Unicité]
-    S'il existe deux couples de réels \((x, y),(x', y')\) tels que \(x' + \ii y' = x 
-     + \ii y\), alors \(\underbrace{(x - x')^2}_{\geqslant 0} = 
-     \underbrace{-(y'-y)^2}_{\leqslant 0}\).
+    S'il existe deux couples de réels \((x, y),(x', y')\) tels que \(x' + \ii y' 
+    = x + \ii y\), alors \(\underbrace{(x - x')^2}_{\geqslant 0} = 
+    \underbrace{-(y'-y)^2}_{\leqslant 0}\).
     Finalement \((x - x')^2 = (y' - y)^2 = 0\).
 \end{proof}
 
@@ -103,14 +103,15 @@ figure~\ref{fig:complexe}.
     Par définition de l'ensemble des complexes, pour un complexe \(z\) donné, il 
     existe toujours un couple de réels qui lui est associé.
 \end{proof}
-On appelle le réel \(x\) la partie réelle du complexe \(z\), \(x = \Re(z)\) et on 
-appelle le réel \(y\) la partie imaginaire du complexe \(z\), \(y = \Im(z)\).
+On appelle le réel \(x\) la partie réelle du complexe \(z\), \(x = \Re(z)\) et 
+on appelle le réel \(y\) la partie imaginaire du complexe \(z\), \(y = \Im(z)\).
 
 \begin{prop}
     Soient des complexes \(z\) et \(z'\) puis un réel \(\lambda\), alors
     \begin{equation}
-        \Re(z + z') = \Re(z) + \Re(z'), \quad \Im(z + z') = \Im(z) + \Im(z'), \quad 
-        \Re(\lambda z) = \lambda \Re(z), \quad \Im(\lambda z) = \lambda \Im(z).
+        \Re(z + z') = \Re(z) + \Re(z'), \quad \Im(z + z') = \Im(z) + \Im(z'), 
+        \quad \Re(\lambda z) = \lambda \Re(z), \quad \Im(\lambda z) = \lambda 
+        \Im(z).
     \end{equation}
 \end{prop}
 \emph{Un complexe n'a pas de signe}. On note \(\C^* = \C \setminus \{0\}\)
@@ -119,11 +120,11 @@ appelle le réel \(y\) la partie imaginaire du complexe \(z\), \(y = \Im(z)\).
 \label{subsec:conjugaisoncomplexe}
 
 \begin{defdef}
-    Soit \(z = x + \ii y \in \C\) avec \((x, y)\in \R\), on définit son conjugué de 
-    \(z\) noté \(\bar{z}\) par \(\bar{z} = x- \ii y\).
+    Soit \(z = x + \ii y \in \C\) avec \((x, y)\in \R\), on définit son conjugué 
+    de \(z\) noté \(\bar{z}\) par \(\bar{z} = x- \ii y\).
 \end{defdef}
 Les conjugués de deux complexes sont représentés dans le plan complexe sur la 
-figure \ref{fig:conjugueComplexe}.
+figure~\ref{fig:conjugueComplexe}.
 
 \begin{figure}
     \centering
@@ -136,16 +137,16 @@ figure \ref{fig:conjugueComplexe}.
 \begin{prop}
     Soient des complexes \(z\) et \(z'\), alors
     \begin{equation}
-        \bar{z + z'} = \bar{z} + \bar{z'}; \quad \bar{z \cdot z'} = \bar{z} \cdot 
-        \bar{z'}; \quad \bar{\bar{z}} = z.
+        \bar{z + z'} = \bar{z} + \bar{z'}; \quad \bar{z \cdot z'} = \bar{z} 
+        \cdot \bar{z'}; \quad \bar{\bar{z}} = z.
     \end{equation}
 \end{prop}
 
 \begin{prop}
     Pour tout complexe \(z\), on a
     \begin{equation}
-        \Re(z) = \frac{z + \bar{z}}{2}; \quad \Im(z) = \frac{z-\bar{z}}{2 \ii}; \quad 
-        z \in \R \iff z = \bar{z}; \quad z \in \ii\R \iff z = -\bar{z}.
+        \Re(z) = \frac{z + \bar{z}}{2}; \quad \Im(z) = \frac{z-\bar{z}}{2 \ii}; 
+        \quad z \in \R \iff z = \bar{z}; \quad z \in \ii\R \iff z = -\bar{z}.
     \end{equation}
 \end{prop}
 
@@ -153,14 +154,14 @@ figure \ref{fig:conjugueComplexe}.
 \label{subsec:modulecomplexe}
 
 \begin{prop}
-    Soit un complexe \(z\), alors \(z \bar{z} \in \R\) et \(z \bar{z} = 0 \iff z = 
-    0\).
+    Soit un complexe \(z\), alors \(z \bar{z} \in \R\) et \(z \bar{z} = 0 \iff z 
+    = 0\).
 \end{prop}
 
 \begin{proof}
     Soit un complexe \(z\), notons \(x\) sa partie réelle et \(y\) sa partie 
-    imaginaire, alors \(z \bar{z} = x^2 + y^2 \geqslant 0\), et \(z \bar{z} = 0 \iff 
-    x^2 + y^2 = 0 \iff x = y = 0 \iff z = 0\).
+    imaginaire, alors \(z \bar{z} = x^2 + y^2 \geqslant 0\), et \(z \bar{z} = 0 
+    \iff x^2 + y^2 = 0 \iff x = y = 0 \iff z = 0\).
 \end{proof}
 
 \begin{defdef}
@@ -168,8 +169,8 @@ figure \ref{fig:conjugueComplexe}.
     \sqrt{z \bar{z}}\).
 \end{defdef}
 
-On peut représenter le module dans le plan complexe par la figure 
-\ref{fig:moduleComplexe}.
+On peut représenter le module dans le plan complexe par la 
+figure~\ref{fig:moduleComplexe}.
 
 \begin{figure}
     \centering
@@ -181,37 +182,42 @@ On peut représenter le module dans le plan complexe par la figure
 \begin{prop}
     Soient \(z\) et \(z'\) deux complexes, alors
     \begin{equation}
-        \abs{z} = \abs{\bar{z}}; \quad \abs{z \cdot z'} = \abs{z} \cdot \abs{z'}; 
-        \quad \abs{z + z'}\leqslant\abs{z} + \abs{z'}.
+        \abs{z} = \abs{\bar{z}}; \quad \abs{z \cdot z'} = \abs{z} \cdot 
+        \abs{z'}; \quad \abs{z + z'}\leqslant\abs{z} + \abs{z'}.
     \end{equation}
     Avec égalité s'il existe un réel \(\lambda\) tel que \(z' = \lambda z\).
 \end{prop}
 
 \begin{proof}
-    \[(\abs{z} + \abs{z'})^2-\abs{z + z'}^2 = (\sqrt{z \bar{z}}  + \sqrt{z' 
-        \bar{z'}})^2 - (z + z')(\bar{z + z'}) = 2 \sqrt{z \bar{z} z' \bar{z'}} - 
-    z \bar{z'} - z'\bar{z}\]
+    On a~:
+    \begin{equation*}
+        (\abs{z} + \abs{z'})^2-\abs{z + z'}^2 = (\sqrt{z \bar{z}} + 
+        \sqrt{z'\bar{z'}})^2 - (z + z')(\bar{z + z'}) = 2 \sqrt{z \bar{z} z' 
+        \bar{z'}} - z \bar{z'} - z'\bar{z}
+    \end{equation*}
     On pose \(u = z \bar{z'}\) et on a \[(\abs{z} + \abs{z'})^2-\abs{z + z'}^2 = 
     2 \abs{u}-2 \Re(u) \geqslant 0.\]
-    On a montré que \((\abs{z} + \abs{z'})^2 \geqslant \abs{z + z'}^2\) et comme ce 
-    sont des nombres positifs, en appliquant la racine carré~\footnote{qui est 
-    une fonction croissante}, on obtient l'inégalité triangulaire.
+    On a montré que \((\abs{z} + \abs{z'})^2 \geqslant \abs{z + z'}^2\) et comme 
+    ce sont des nombres positifs, en appliquant la racine carré~\footnote{qui 
+    est une fonction croissante}, on obtient l'inégalité triangulaire.
 
-    \emph{Cas d'égalité}~: Notons ici que \(\frac{z'}{z} = x + \ii y\) avec \(x\) 
-    et \(y\) deux réels. On va montrer que l'égalité est vraie si et seulement 
-    si \(y = 0\) et \(x \geqslant 0\).
+    \emph{Cas d'égalité}~: Notons ici que \(\frac{z'}{z} = x + \ii y\) avec 
+    \(x\) et \(y\) deux réels. On va montrer que l'égalité est vraie si et 
+    seulement si \(y = 0\) et \(x \geqslant 0\).
     \begin{align}
-        \abs{z + z'} = \abs{z} + \abs{z'} &\iff 
-        \abs{1 + \frac{z'}{z}}^2 = \left(1 + \abs{\frac{z'}{z}}\right)^2 \\
-                                    &\iff \abs{1 + x + \ii y}^2 = (1+ \abs{x+ \ii 
-                                    y})^2 \\
-                                    &\iff (1 + x)^2 + y^2 = (1 + \sqrt{x^2 + y^2})^2 \\
-                                    &\iff 1 + 2x + x^2 + y^2 = 1 + 2\sqrt{x^2 + y^2} + 
-                                    x^2 + y^2 \\
-                                    &\iff x = \sqrt{x^2 + y^2}\\
-                                    &\iff y = 0 \text{~et~} x \geqslant 0.
+        \abs{z + z'} = \abs{z} + \abs{z'} &\iff \abs{1 + \frac{z'}{z}}^2 = 
+        \left(1 + \abs{\frac{z'}{z}}\right)^2 \\
+                                          &\iff \abs{1 + x + \ii y}^2 = (1+ 
+                                          \abs{x+ \ii y})^2 \\
+                                          &\iff (1 + x)^2 + y^2 = (1 + \sqrt{x^2 
+                                          + y^2})^2 \\
+                                          &\iff 1 + 2x + x^2 + y^2 = 1 + 
+                                          2\sqrt{x^2 + y^2} + x^2 + y^2 \\
+                                          &\iff x = \sqrt{x^2 + y^2}\\
+                                          &\iff y = 0 \text{~et~} x \geqslant 0.
     \end{align}
 \end{proof}
+
 \begin{prop}
     Tout complexe \(z\) non nul admet un unique inverse
     \begin{empheq}[box = \shadowbox*]{align}
@@ -220,15 +226,15 @@ On peut représenter le module dans le plan complexe par la figure
 \end{prop}
 
 \begin{proof}
-    D'une part \(z \cdot \frac{\bar{z}}{\abs{z}^2} = \frac{z 
-    \bar{z}}{\abs{z}^2} = 1\) et d'autre part si \(z\cdot z' = z'\cdot z = 1\) alors 
-    \(z'\cdot z\cdot \frac{\bar{z}}{\abs{z}^2} = z'\). Comme \(z\cdot z' = 1\), on a 
-    \( \frac{\bar{z}}{\abs{z}^2}\cdot z\cdot z' = \frac{\bar{z}}{\abs{z}^2}\) donc 
+    D'une part \(z \cdot \frac{\bar{z}}{\abs{z}^2} = \frac{z \bar{z}}{\abs{z}^2} 
+    = 1\) et d'autre part si \(z\cdot z' = z'\cdot z = 1\) alors \(z'\cdot 
+    z\cdot \frac{\bar{z}}{\abs{z}^2} = z'\). Comme \(z\cdot z' = 1\), on a \( 
+    \frac{\bar{z}}{\abs{z}^2}\cdot z\cdot z' = \frac{\bar{z}}{\abs{z}^2}\) donc 
     \(z' = \frac{\bar{z}}{\abs{z}^2}\).
 \end{proof}
 
-En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} = \frac{x 
--\ii y}{x^2 + y^2}\).
+En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} = 
+\frac{x -\ii y}{x^2 + y^2}\).
 
 \begin{prop}
     \((\C, + ,\times)\) est un anneau commutatif intègre. C'est-à-dire qu'il 
@@ -242,18 +248,18 @@ En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} = \f
     Soient un complexe \(z\) non nul et un complexe \(z'\) quelconque, alors on 
     a
     \begin{equation}
-        \bar{\frac{1}{z}} = \frac{1}{\bar{z}}; \quad 
-        \abs{\frac{1}{z}} = \frac{1}{\abs{z}}; \quad
-        \bar{\frac{z'}{z}} = \frac{\bar{z'}}{\bar{z}}; \quad 
-        \abs{\frac{z'}{z}} = \frac{\abs{z'}}{\abs{z}}
+        \bar{\frac{1}{z}} = \frac{1}{\bar{z}}; \quad \abs{\frac{1}{z}} = 
+        \frac{1}{\abs{z}}; \quad
+        \bar{\frac{z'}{z}} = \frac{\bar{z'}}{\bar{z}}; \quad \abs{\frac{z'}{z}} 
+        = \frac{\abs{z'}}{\abs{z}}
     \end{equation}
 \end{prop}
 
 \begin{defdef}
     Soient un complexe \(a\) et un réel positif \(r\), on définit le disque 
-    ouvert de centre \(a\) et de rayon \(r\) par 
-    \(D_o(a,r) = \enstq{z\in\C}{\abs{z-a}<r}\), et on définit le disque fermé, par 
-    \(D_f(a,r) = \enstq{z\in\C}{\abs{z-a}\leqslant r}\).
+    ouvert de centre \(a\) et de rayon \(r\) par \(D_o(a,r) = 
+    \enstq{z\in\C}{\abs{z-a}<r}\), et on définit le disque fermé, par \(D_f(a,r) 
+    = \enstq{z\in\C}{\abs{z-a}\leqslant r}\).
 \end{defdef}
 
 \subsection{Plan complexe}
@@ -262,8 +268,8 @@ En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} = \f
 Soit \(\P\) le plan euclidien muni d'un repère orthonormé \((O,\vect{u}, 
 \vect{v})\). Si \(M\) est un point du plan \(\mathcal{P}\) de coordonnées 
 \((x,y)\) dans le repère \((O,\vect{u}, \vect{v})\), on appelle l'affixe de 
-\(M\), le complexe \(z = x + \ii y\). pour tout complexe \(z\), il existe un point 
-du plan \(\mathcal{P}\) d'affixe \(z\), c'est \(M(z)\). L'application 
+\(M\), le complexe \(z = x + \ii y\). pour tout complexe \(z\), il existe un 
+point du plan \(\mathcal{P}\) d'affixe \(z\), c'est \(M(z)\). L'application 
 \(\fonctionL{\varphi}{\C}{\P}{z}{M(z)}\) est une bijection. Cette bijection 
 permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
 
@@ -317,40 +323,40 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
 
 \begin{proof}
     \begin{enumerate}
-        \item Soit deux complexes \(z\) et \(z'\) de \(\U\), alors 
-            \(\abs{zz'} = \abs{z}\abs{z'} = 1\) donc \(zz' \in \U\);
+        \item Soit deux complexes \(z\) et \(z'\) de \(\U\), alors \(\abs{zz'} = 
+            \abs{z}\abs{z'} = 1\) donc \(zz' \in \U\);
         \item puisque la loi \(\times\) est associative et commutative dans 
             \(\C\), elle l'est dans \(\U\);
         \item le module de 1 est égal à 1 donc \(1 \in \U\);
         \item soit un complexe \(z\) de \(\U\), comme son module vaut 1, il est 
-            non nul et il admet un inverse et 
-            \(\abs{\frac{1}{z}} = \frac{1}{\abs{z}} = 1\) donc l'inverse est dans 
-            \(\U\).
+            non nul et il admet un inverse et \(\abs{\frac{1}{z}} = 
+            \frac{1}{\abs{z}} = 1\) donc l'inverse est dans \(\U\).
     \end{enumerate}
 \end{proof}
 
 \begin{prop}
     \label{prop:expsurj}
     Soit un complexe \(z\) de \(\U\), alors il existe un réel \(\theta\) 
-    ---~unique modulo \(2\pi\)~--- tel que \(z = \cos\theta  + \ii\sin\theta\).
+    ---~unique modulo \(2\pi\)~--- tel que \(z = \cos\theta  + 
+    \ii\sin\theta\).
 \end{prop}
 
 \begin{proof}[Existence]
     Soit un complexe \(z\) de \(\U\), notons \(x\) et \(y\) respectivement sa 
-    partie réelle et sa partie imaginaire. Alors \(x^2 + y^2 = \abs{z}^2 = 1\), donc 
-    d'après le théorème~\ref{chap1-theo:thetasin} il existe un unique \(\theta_0 
-    \in \intervalleof{-\pi}{\pi}\) tel que \(x = \cos\theta_0\) et 
+    partie réelle et sa partie imaginaire. Alors \(x^2 + y^2 = \abs{z}^2 = 1\), 
+    donc d'après le théorème~\ref{chap1-theo:thetasin} il existe un unique 
+    \(\theta_0 \in \intervalleof{-\pi}{\pi}\) tel que \(x = \cos\theta_0\) et 
     \(y = \sin\theta_0\).
 \end{proof}
 
 \begin{proof}[Unicité]
     Montrons l'unicité modulo \(2\pi\) : Soit deux réels \(\theta\) et 
-    \(\theta'\) vérifiant  \(x = \cos \theta = \cos \theta'\) et \(y = \sin \theta = 
-    \sin \theta'\). Il existe deux entiers relatifs \(k\) et \(l\) tels que 
-    \(\theta  + 2k \pi \in \intervalleof{-\pi}{\pi}\) et \(\theta'  + 2kl \pi \in 
-    \intervalleof{-\pi}{\pi}\). Donc on a \(\theta_0 = \theta + 2k \pi = \theta' + 2l 
-    \pi\), soit encore \(\theta-\theta' = (l-k) 2\pi\), c'est-à-dire 
-    \(\congru{\theta}{\theta'}{2\pi}\).
+    \(\theta'\) vérifiant  \(x = \cos \theta = \cos \theta'\) et \(y = \sin 
+    \theta = \sin \theta'\). Il existe deux entiers relatifs \(k\) et \(l\) tels 
+    que \(\theta  + 2k \pi \in \intervalleof{-\pi}{\pi}\) et \(\theta'  + 2kl 
+    \pi \in \intervalleof{-\pi}{\pi}\). Donc on a \(\theta_0 = \theta + 2k \pi = 
+    \theta' + 2l \pi\), soit encore \(\theta-\theta' = (l-k) 2\pi\), 
+    c'est-à-dire \(\congru{\theta}{\theta'}{2\pi}\).
 \end{proof}
 
 \begin{defdef}[Exponentielle complexe]
@@ -370,15 +376,18 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
     Pour tout réel \(\theta\), on a bien \(\abs{\expc{}{\theta}} = \sqrt{\cos^2 
     \theta + \sin^2 \theta} = 1\), donc \(\psi(\theta) \in \U\). Ensuite,
     \begin{align*}
-        \psi(\theta  + \theta') = &\cos(\theta  + \theta') + \ii \sin(\theta + \theta')\\
-         = &\cos \theta \cos \theta' - \sin \theta \sin \theta'  + \ii(\cos \theta 
-        \sin \theta' + \sin \theta \cos \theta')\\
-         = &(\cos \theta + \ii \sin \theta)(\cos \theta' + \ii \sin \theta')\\
-         = &\psi(\theta) \psi(\theta')
+        \psi(\theta  + \theta') = &\cos(\theta  + \theta') + \ii \sin(\theta + 
+        \theta')\\
+        = &\cos \theta \cos \theta' - \sin \theta \sin \theta'  + \ii(\cos 
+        \theta \sin \theta' + \sin \theta \cos \theta')\\
+        = &(\cos \theta + \ii \sin \theta)(\cos \theta' + \ii \sin \theta')\\
+        = &\psi(\theta) \psi(\theta')
     \end{align*}
 \end{proof}
 
-\begin{prop} Soient deux réels \(\theta\) et \(\theta'\) et un entier relatif \(n\), alors~:
+\begin{prop}
+    Soient deux réels \(\theta\) et \(\theta'\) et un entier relatif \(n\), 
+    alors~:
     \begin{gather}
         \expc{}{(\theta-\theta')} = \frac{\expc{}{\theta}}{\expc{}{\theta'}};\\
         \expc{}{n \theta} = (\expc{}{\theta})^n;\\
@@ -394,28 +403,31 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
     directement de la définition de l'exponentielle complexe.
 \end{proof}
 
-Soient un entier naturel \(n\) non nul et \(\theta \in \R \setminus 2\pi\Z\). La somme vaut~:
+Soient un entier naturel \(n\) non nul et \(\theta \in \R \setminus 2\pi\Z\). La 
+somme vaut~:
 \begin{align*}
-    \sum_{k = 0}^n \cos(k\theta)  = & \frac{1}{2} \sum_{k = 0}^n (\expc{}{k \theta} + \expc{}{-k \theta})\\
-     = &\frac{1}{2} \left[\frac{1-\expc{}{(n + 1)\theta}}{1-\expc{}{\theta}}\right] 
-    + \frac{1}{2} \left[\frac{1-\expc{}{(-(n + 1) 
-    \theta)}}{1-\expc{}{-\theta}}\right]\\
-     = &\frac{1}{2} \left[\frac{\expc{}{(n + 1) 
-    \frac{\theta}{2}}}{\expc{}{\frac{\theta}{2}}} 
-    \left(\frac{\expc{}{\left(-(n + 1) \frac{\theta}{2}\right)}-\expc{}{(n + 1) 
-    \frac{\theta}{2}}}{\expc{}{\left(-\frac{\theta}{2}\right)} - 
-    \expc{}{\frac{\theta}{2}}} \right)\right] \notag + \frac{1}{2} 
-    \left[\frac{\expc{}{\left(-(n + 1) 
-    \frac{\theta}{2}\right)}}{\expc{}{\left(-\frac{\theta}{2}\right)}} 
-    \left(\frac{\expc{}{(n + 1) \frac{\theta}{2}}-\expc{}{\left(-(n + 1) 
-    \frac{\theta}{2}\right)}}{\expc{}{\frac{\theta}{2}} - 
-    \expc{}{\left(-\frac{\theta}{2}\right)}} \right)\right] \\
-     = & \frac{1}{2} \frac{\sin \left(\frac{(n + 1)\theta}{2} \right)}{\sin \left( 
-    \frac{\theta}{2} \right)} \left[\expc{}{n \frac{\theta}{2}} 
-     + \expc{}{\left(-n \frac{\theta}{2}\right)} \right] \\
-     = & \frac{\sin \left(\frac{(n + 1)\theta}{2} \right)}{\sin \left( 
-    \frac{\theta}{2} \right)} \cos \left( \frac{n\theta}{2} \right).
+    \sum_{k = 0}^n \cos(k\theta)  = & \frac{1}{2} \sum_{k = 0}^n (\expc{}{k 
+    \theta} + \expc{}{-k \theta})\\
+     = &\frac{1}{2} \left[\frac{1-\expc{}{(n + 
+     1) \theta}}{1-\expc{}{\theta}} \right] + \frac{1}{2} 
+     \left[ \frac{1-\expc{}{(-(n + 1)\theta)}}{1-\expc{}{-\theta}} \right]\\
+     = &\frac{1}{2} \left[ \frac{\expc{}{(n + 1) 
+     \frac{\theta}{2}}}{\expc{}{\frac{\theta}{2}}} \left( \frac{\expc{}{\left( 
+    -(n + 1) \frac{\theta}{2} \right)} - \expc{}{(n + 1) 
+    \frac{\theta}{2}}}{\expc{}{\left( -\frac{\theta}{2} \right)} - 
+    \expc{}{\frac{\theta}{2}}} \right) \right] \notag + \frac{1}{2} \left[ 
+    \frac{\expc{}{\left( -(n + 1) \frac{\theta}{2} \right)}}{\expc{}{\left( 
+    -\frac{\theta}{2} \right)}} \left( \frac{\expc{}{(n + 1) 
+    \frac{\theta}{2}}-\expc{}{\left( -(n + 1) \frac{\theta}{2} 
+    \right)}}{\expc{}{\frac{\theta}{2}} - \expc{}{\left( -\frac{\theta}{2} 
+    \right)}} \right) \right] \\
+     = & \frac{1}{2} \frac{\sin \left( \frac{(n + 1)\theta}{2} \right)}{\sin 
+     \left( \frac{\theta}{2} \right)} \left[ \expc{}{n \frac{\theta}{2}} + 
+     \expc{}{\left( -n \frac{\theta}{2} \right)} \right] \\
+     = & \frac{\sin \left( \frac{(n + 1)\theta}{2} \right)}{\sin \left( 
+     \frac{\theta}{2} \right)} \cos \left( \frac{n\theta}{2} \right).
 \end{align*}
+
 Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii 
 \sin\left(\frac{a-b}{2}\right)\expc{}{\frac{(a + b)}{2}}\).
 
@@ -437,17 +449,17 @@ Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii
 \end{proof}
 
 \begin{prop}
-    L'application \(\psi\) est dérivable sur \(\R\) et pour tout réel 
-    \(theta\) \[\psi'(\theta) = \ii \expc{}{\theta}.\]
+    L'application \(\psi\) est dérivable sur \(\R\) et pour tout réel \(theta\) 
+    \[\psi'(\theta) = \ii \expc{}{\theta}.\]
 \end{prop}
 
 \begin{proof}
-    D'après la proposition \ref{prop:derivefcomplexe}, on peut dire qu'une 
-    fonction \(f \in \C^{\R}\) telle que \(f = x + \ii y\) avec \((x, y) \in \R^{\R} 
-    \times \R^{\R}\) est dérivable si et seulement si \(x\) et \(y\) sont 
-    dérivables sur \(\R\) et auquel cas \(f' = x'  + \ii y'\). Ici, \(\psi = \cos  + \ii 
-    \sin\), \(\sin\) et \(\cos\) sont dérivables alors \(\psi' = -\sin + \ii 
-    \cos = \ii (\cos  + \ii \sin) = \ii \psi\).
+    D'après la proposition~\ref{prop:derivefcomplexe}, on peut dire qu'une 
+    fonction \(f \in \C^{\R}\) telle que \(f = x + \ii y\) avec \((x, y) \in 
+    \R^{\R} \times \R^{\R}\) est dérivable si et seulement si \(x\) et \(y\) 
+    sont dérivables sur \(\R\) et auquel cas \(f' = x'  + \ii y'\). Ici, \(\psi 
+    = \cos  + \ii \sin\), \(\sin\) et \(\cos\) sont dérivables alors \(\psi' = 
+    -\sin + \ii \cos = \ii (\cos  + \ii \sin) = \ii \psi\).
 \end{proof}
 
 \subsection{Trigonométrie}
@@ -459,13 +471,15 @@ Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii
 \begin{defdef}
     On définit les polynômes de Chebychev en suivant ce raisonnement~:
     \begin{align*}
-        \cos n \theta + \ii \sin n \theta &= (\cos \theta + \ii \sin 
-        \theta)^n\\
-          &= \sum_{k = 0}^n \binom{n}{k} \ii^k \sin^k \theta \cos^{n-k} \theta\\
-          &= \sum_{2p \leqslant n} \binom{n}{2p} (-1)^p \sin^{2p} \theta 
-          \cos^{n-2p} \theta \\
-          &+ \ii \sin \theta \sum_{2p  + 1\leqslant n} \binom{n}{2p + 1} (-1)^p 
-              \sin^{2p} \theta \cos^{n-2p-1} \theta.
+        \cos n \theta + \ii \sin n \theta &= (\cos \theta + \ii \sin \theta)^n\\
+                                          &= \sum_{k = 0}^n \binom{n}{k} \ii^k 
+                                          \sin^k \theta \cos^{n-k} \theta\\
+                                          &= \sum_{2p \leqslant n} \binom{n}{2p} 
+                                          (-1)^p \sin^{2p} \theta \cos^{n-2p} 
+                                          \theta \\
+                                          &+ \ii \sin \theta \sum_{2p  + 
+                                          1\leqslant n} \binom{n}{2p + 1} (-1)^p 
+                                          \sin^{2p} \theta \cos^{n-2p-1} \theta.
     \end{align*}
     En remplaçant par \(\sin^2 \theta\) par \(1-\cos^2 \theta\), on obtient
     \begin{empheq}[box = \shadowbox*]{align}
@@ -475,25 +489,31 @@ Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii
     \(P_n\) et \(Q_n\) sont respectivement les polynômes de Chebychev de 
     1\iere{} et de 2\ieme{} espèce.
 \end{defdef}
+
 \subsubsection{Arc moitié}
 \label{subsubsec:arcmoitie}
-Pour tout réel \(\theta\) non congru à \(\pi\) modulo--\(2\pi\) on pose \(t = \tan 
-\left( \frac{\theta}{2} \right)\) alors
+
+Pour tout réel \(\theta\) non congru à \(\pi\) modulo--\(2\pi\) on pose \(t = 
+\tan \left( \frac{\theta}{2} \right)\) alors
 \begin{equation}
-    \cos \theta = \dfrac{1-t^2}{1 + t^2}; \quad  \sin \theta = \dfrac{2t}{1 + t^2}; 
-    \quad \tan \theta = \frac{2t}{1-t^2}; \quad \e^{\ii \theta} = \frac{(1 + \ii 
-    \theta)^2}{1 + t^2}.
+    \cos \theta = \dfrac{1-t^2}{1 + t^2}; \quad  \sin \theta = \dfrac{2t}{1 + 
+    t^2}; \quad \tan \theta = \frac{2t}{1-t^2}; \quad \e^{\ii \theta} = \frac{(1 
+    + \ii \theta)^2}{1 + t^2}.
 \end{equation}
+
 La bijection \(\fonctionL{\varphi}{\R}{\U\setminus \{-1\}}{t}{\frac{(1 + \ii 
 \theta)^2}{1 + t^2}}\) fournit un paramétrage du cercle trigonométrique privé du 
 point \((-1,0)\).
+
 \subsubsection{Linéarisation}
 \label{subsubsec:linearisation}
+
 Pour tout réel \(\theta\) on a~:
 \begin{empheq}[box = \shadowbox*]{align}
-    \cos^2 \theta = \frac{1 + \cos 2\theta}{2} \quad \sin^2 \theta = \frac{1-\cos 
-    2\theta}{2}
+    \cos^2 \theta = \frac{1 + \cos 2\theta}{2} \quad \sin^2 \theta = 
+    \frac{1-\cos 2\theta}{2}
 \end{empheq}
+
 Si l'exposant \(p \geqslant 3\), on utilise les formules d'Euler
 \begin{equation}
     \cos^p \theta = \left(\frac{\expc{}{\theta} + \expc{}{\theta}}{2} \right)^p 
@@ -502,18 +522,21 @@ Si l'exposant \(p \geqslant 3\), on utilise les formules d'Euler
 \end{equation}
 puis on développe avec la formule du binôme de Newton et on regroupe 
 judicieusement les termes obtenus.
+
 \subsubsection{Transformations de sommes en produits}
 \label{subsubsec:sommeprod}
+
 La transformation de produit en somme s'effectue en suivant le raisonnement 
 suivant~:
 \begin{align}
-    \expc{}{a} + \expc{}{b} &= \expc{}{\frac{a + b}{2}} \left(\expc{}{\frac{a-b}{2}} 
-    + \expc{}{\frac{b-a}{2}}\right)  =  \expc{}{\frac{a + b}{2}} 2\cos 
-    \left(\frac{a-b}{2} \right).\\
-    \expc{}{a}-\expc{}{b} &= \expc{}{\frac{a + b}{2}} \left( 
-    \expc{}{\frac{a-b}{2}} - \expc{}{\frac{b-a}{2}} \right) =  
-    \expc{}{\frac{a + b}{2}} 2 \ii \sin \left( \frac{a-b}{2} \right).
+    \expc{}{a} + \expc{}{b} &= \expc{}{\frac{a + b}{2}} 
+    \left( \expc{}{\frac{a-b}{2}} + \expc{}{\frac{b-a}{2}} \right)  =  
+    \expc{}{\frac{a + b}{2}} 2\cos \left(\frac{a-b}{2} \right).\\
+    \expc{}{a}-\expc{}{b} &= \expc{}{\frac{a + b}{2}} \left(  
+    \expc{}{\frac{a-b}{2}} - \expc{}{\frac{b-a}{2}} \right) 
+    =  \expc{}{\frac{a + b}{2}} 2 \ii \sin \left( \frac{a-b}{2} \right).
 \end{align}
+
 On identifie la partie réelle et la partie imaginaire pour écrire que
 \begin{align}
     \cos a + \cos b &= 2 \cos \left( \frac{a + b}{2} \right) \cos 
@@ -525,13 +548,17 @@ On identifie la partie réelle et la partie imaginaire pour écrire que
     \sin a - \sin b &= 2 \cos \left( \frac{a + b}{2} \right) \sin 
     \left(\frac{a-b}{2} \right).
 \end{align}
+
 On peut retrouver les formules de transformation de sommes en produits, puis de 
 produits en sommes.
+
 \subsection{Argument d'un complexe}
 \label{subsec:argumentcomplexe}
+
 Soit \(z\) un complexe non nul. Le complexe \(\frac{z}{\abs{z}}\) est de module 
 1, donc il existe un réel \(\theta\) tel que 
 \(\frac{z}{\abs{z}} = \expc{}{\theta}\).
+
 \begin{defdef}
     Si \(z\) est un complexe non nul, on appelle argument de \(z\) tout réel 
     \(\theta\) tel que \(z = \expc{\abs{z}}{\theta}\).  Le réel \(\theta\) est 
@@ -539,23 +566,30 @@ Soit \(z\) un complexe non nul. Le complexe \(\frac{z}{\abs{z}}\) est de module
     réel \(\theta \in \intervalleof{-\pi}{\pi}\), qui est un argument de \(z\), 
     est l'argument principal de \(z\), noté \(\Arg(z)\).
 \end{defdef}
-L'écriture \(z = \expc{\abs{z}}{\theta}\) avec \(\theta \in \R\) est appelée forme 
-trigonométrique du complexe non nul \(z\).
-\emph{Remarque}~: Si on ne sait pas que le complexe est non nul, on ne parle ni d'argument ni de forme trigonométrique.
+
+L'écriture \(z = \expc{\abs{z}}{\theta}\) avec \(\theta \in \R\) est appelée 
+forme trigonométrique du complexe non nul \(z\).
+
+\emph{Remarque}~: Si on ne sait pas que le complexe est non nul, on ne parle ni 
+d'argument ni de forme trigonométrique.
+
 \begin{prop}
     Soit un complexe \(z\) non nul, alors
     \begin{equation}
         \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \Rpluss 
-        \times \Rpluss \quad z = \expc{\rho}{\theta} = \expc{\rho'}{\theta'} \iff
+        \times \Rpluss \quad z = \expc{\rho}{\theta} = \expc{\rho'}{\theta'} 
+        \iff
         \begin{cases}
             \rho = \rho' = \abs{z} \\
             \congru{\theta}{\theta'}{2\pi}
         \end{cases}.
     \end{equation}
 \end{prop}
+
 \begin{proof}
     La preuve de cette proposition découle directement de la définition.
 \end{proof}
+
 \begin{prop}
     Soient deux complexes non nuls \(z\) et \(z'\) et un entier relatif \(n\), 
     alors
@@ -569,18 +603,21 @@ trigonométrique du complexe non nul \(z\).
         \congru{\arg(-z)}{\pi + \arg(z)}{2\pi}.
     \end{align*}
 \end{prop}
+
 \begin{proof}
     La preuve s'articule en cinq parties~:
     \begin{enumerate}
         \item \(\congru{\arg(z)}{0}{\pi} \iff z = \pm \abs{z}\);
         \item \(\congru{\arg(z)}{\frac{\pi}{2}}{\pi} \iff z = \pm \ii \abs{z}\);
-        \item si \(z = \expc{\abs{z}}{\theta}\), alors 
-            \(\bar{z} = \bar{\expc{|z|}{\theta}} = \expc{|z|}{(-\theta)}\) donc 
+        \item si \(z = \expc{\abs{z}}{\theta}\), alors \(\bar{z} = 
+            \bar{\expc{|z|}{\theta}} = \expc{|z|}{(-\theta)}\) donc 
             \(\congru{\arg(\bar{z})}{-\arg(z)}{2\pi}\);
-        \item si on met \(z\) et \(z'\) sous forme trigonométrique, on retrouve les formules 4, 5 et 6 par le calcul;
+        \item si on met \(z\) et \(z'\) sous forme trigonométrique, on retrouve 
+            les formules 4, 5 et 6 par le calcul;
         \item puisque \(-1 = \expc{}{\pi}\), on a bien la dernière formule.
     \end{enumerate}
 \end{proof}
+
 \emph{Interprétation géométrique}~: Dans le plan complexe muni d'un repère 
 \((O,\vect{u}, \vect{v})\), \(\arg(z)\) représente une mesure de l'angle 
 \(\widehat{\vect{u}, \vect{OM}(z)}\). Plus généralement, si \(a\), \(b\), \(c\) 
@@ -590,24 +627,29 @@ mesure de l'angle \((\widehat{\vect{AB},\vect{CD}})\). Particulièrement,
 \(\arg\left(\frac{b-c}{b-a}\right)\) représente la mesure de l'angle 
 \((\widehat{\vect{AB},\vect{CB}})\), donc \(A\), \(B\) et \(C\) sont alignés si 
 et seulement si le complexe \(\frac{b-c}{b-a}\) est un réel non nul.
+
 \subsection{Racines \(n\)-ièmes de l'unité}
 \label{subsec:racineunite}
+
 \begin{defdef}
     Soit un entier naturel non nul \(n\), on appelle racine \(n\)\iemes{} de 
     l'unité tout complexe \(z\) tel que \(z^n = 1\). L'ensemble de ces complexes 
     est noté \(\U_n\).
 \end{defdef}
+
 \begin{prop}
     Soit un entier naturel \(n\) non nul, alors
     \begin{empheq}[box = \shadowbox*]{align}
-        \U_n = \enstq{\expc{}{\frac{2 \pi k}{n}}}{k\in\intervalleentier{0}{n - 1}}.
+        \U_n = \enstq{\expc{}{\frac{2 \pi k}{n}}}{k\in\intervalleentier{0}{n - 
+        1}}.
     \end{empheq}
     Cet ensemble est de cardinal \(n\).
 \end{prop}
+
 \begin{proof}
     Soit un complexe \(z\) de \(\U_n\) noté \(\expc{\rho}{\theta}\), alors comme 
-    \(z^n = 1\) on a \(\rho = 1\) et \(\congru{n\theta}{0}{2\pi}\) c'est à dire que 
-    \(z \in \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}\).
+    \(z^n = 1\) on a \(\rho = 1\) et \(\congru{n\theta}{0}{2\pi}\) c'est à dire 
+    que \(z \in \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}\).
     \begin{itemize}
         \item Soient deux entiers relatifs \(k\) et \(l\) de 
             \(\intervalleentier{0}{n-1}\) alors \(\abs{\frac{2\pi}{n}k - 
@@ -624,9 +666,9 @@ et seulement si le complexe \(\frac{b-c}{b-a}\) est un réel non nul.
             \end{align*}
     \end{itemize}
     Alors on a démontré que \(\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k 
-    \in \intervalleentier{0}{n-1}}\), on déduit l'autre inclusion en vérifiant que tous les éléments de 
-    \(\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \intervalleentier{0}{n - 1}}\) élevés à la puissance \(n\) 
-    font 1.
+    \in \intervalleentier{0}{n-1}}\), on déduit l'autre inclusion en vérifiant 
+    que tous les éléments de \(\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in 
+    \intervalleentier{0}{n - 1}}\) élevés à la puissance \(n\) font 1.
 \end{proof}
 
 \emph{Interprétation géométrique}~: Les points d'affixes \(z \in \U_n\) forment 
@@ -638,21 +680,21 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
     \begin{subfigure}{.3\textwidth}
         \centering
         % include first image
-        \includegraphics[scale = .33]{U_3.png}  
+        \includegraphics[scale = 0.33]{U_3.png}  
         \caption{$\U_3$}
         \label{fig:U3}
     \end{subfigure}
     \begin{subfigure}{.3\textwidth}
         \centering
-        % include second image
-        \includegraphics[scale = .33]{U_4.png}  
+        % include second image.
+        \includegraphics[scale = 0.33]{U_4.png}  
         \caption{$\U_4$}
         \label{fig:U4}      
     \end{subfigure}
     \begin{subfigure}{.3\textwidth}
         \centering
         % include second image
-        \includegraphics[scale = .33]{U_5.png}  
+        \includegraphics[scale = 0.33]{U_5.png}  
         \caption{$\U_5$}
         \label{fig:U5}      
     \end{subfigure}
@@ -660,21 +702,21 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
     \begin{subfigure}{.3\textwidth}
         \centering
         % include second image
-        \includegraphics[scale = .33]{U_6.png}  
+        \includegraphics[scale = 0.33]{U_6.png}  
         \caption{$\U_6$}
         \label{fig:U6}      
     \end{subfigure}
     \begin{subfigure}{.3\textwidth}
         \centering
         % include first image
-        \includegraphics[scale = .33]{U_7.png}  
+        \includegraphics[scale = 0.33]{U_7.png}  
         \caption{$\U_7$}
         \label{fig:U7}
     \end{subfigure}
     \begin{subfigure}{.3\textwidth}
         \centering
         % include second image
-        \includegraphics[scale = .33]{U_8.png}  
+        \includegraphics[scale = 0.33]{U_8.png}  
         \caption{$\U_8$}
         \label{fig:U8}      
     \end{subfigure}
@@ -682,21 +724,21 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include second image
-%        \includegraphics[scale = .33]{U_9.png}  
+%        \includegraphics[scale = 0.33]{U_9.png}  
 %        \caption{$\U_9$}
 %        \label{fig:U9}      
 %    \end{subfigure}
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include second image
-%        \includegraphics[scale = .33]{U_10.png}  
+%        \includegraphics[scale = 0.33]{U_10.png}  
 %        \caption{$\U_{10}$}
 %        \label{fig:U10}
 %    \end{subfigure}  
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include first image
-%        \includegraphics[scale = .33]{U_11.png}  
+%        \includegraphics[scale = 0.33]{U_11.png}  
 %        \caption{$\U_{11}$}
 %        \label{fig:U11}
 %    \end{subfigure}
@@ -704,21 +746,21 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include second image
-%        \includegraphics[scale = .33]{U_12.png}  
+%        \includegraphics[scale = 0.33]{U_12.png}  
 %        \caption{$\U_{12}$}
 %        \label{fig:U12}      
 %    \end{subfigure}
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include second image
-%        \includegraphics[scale = .33]{U_13.png}  
+%        \includegraphics[scale = 0.33]{U_13.png}  
 %        \caption{$\U_{13}$}
 %        \label{fig:U13}      
 %    \end{subfigure}
 %    \begin{subfigure}{.3\textwidth}
 %        \centering
 %        % include second image
-%        \includegraphics[scale = .33]{U_14.png}  
+%        \includegraphics[scale = 0.33]{U_14.png}  
 %        \caption{$\U_{14}$}
 %        \label{fig:U14}
 %    \end{subfigure}
@@ -729,12 +771,13 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
 \begin{theo}
     Soit \(n\) un entier naturel non nul alors
     \begin{empheq}[box = \shadowbox*]{align}
-        \forall z \in \U_n \setminus \{1\} \quad \sum_{k = 0}^{n-1} z^k = 0.
+        \forall z \in \U_n \setminus \{1\} \quad \sum_{k = 0}^{n - 1} z^k = 0.
     \end{empheq}
 \end{theo}
 
 \begin{proof}
-    C'est la somme des termes d'une suite géométrique de raison \(z \neq 1\) donc
+    C'est la somme des termes d'une suite géométrique de raison \(z \neq 1\) 
+    donc
     \begin{equation*}
         \sum_{k = 0}^{n-1} z^k = \frac{1-z^{n-1 + 1}}{1-z} = 0.
     \end{equation*}
@@ -746,19 +789,16 @@ problème en étude de cas~:
     \item si \(a = 0\), la seule solution est zéro;
     \item si \(a \neq 0\), on cherche des solutions dans \(\C^*\) et on peut 
         écrire les formes trigonométriques~: \(z = \expc{\rho}{\theta} \quad a = 
-        \expc{A}{\alpha}\), alors
-        \begin{equation}
-            \rho = \sqrt[n]{A} \quad 
-            \congru{\theta}{\frac{\alpha}{n}}{\frac{2\pi}{n}};
-        \end{equation}
-        soit \(z_0 = \expc{\sqrt[n]{A} }{\frac{\alpha}{n}}\), c'est une solution 
-        de l'équation; une solution \(z\) de l'équation est telle que 
+        \expc{A}{\alpha}\), alors \(\rho = \sqrt[n]{A}\) et 
+        \(\congru{\theta}{\frac{\alpha}{n}}{\frac{2\pi}{n}}\), c'est-à-dire 
+        \(z_0 = \expc{\sqrt[n]{A} }{\frac{\alpha}{n}}\), c'est une solution de 
+        l'équation. Une solution \(z\) de l'équation est telle que 
         \(\frac{z}{z_0} \in \U_n\).
 \end{enumerate}
 
 \begin{prop}
-    Pour un complexe \(a\) non nul, l'ensemble des solutions de l'équation 
-    \(z^n = a\) est
+    Pour un complexe \(a\) non nul, l'ensemble des solutions de l'équation \(z^n 
+    = a\) est
     \begin{equation}
         S_{z^n = a} = \enstq{\expc{\sqrt[n]{A}}{\frac{(\alpha + 2\pi k)}{n}}}{k 
         \intervalleentier{0}{n-1}}.
@@ -771,8 +811,8 @@ problème en étude de cas~:
 \end{prop}
 
 \emph{Cas particulier}
-Si \(n = 2\), on trouve deux racines complexes conjuguées. Par exemple les racines 
-de \(Z = 3 + 4\ii\) sont telles que
+Si \(n = 2\), on trouve deux racines complexes conjuguées. Par exemple les 
+racines de \(Z = 3 + 4\ii\) sont telles que
 
 \begin{align*}
     z^2 = 3 + 4\ii & \iff  \begin{cases} x^2-y^2 = 3 \\ 2xy = 4 \end{cases} \\
@@ -799,17 +839,17 @@ trinôme \(aX^2 + bX + c\).
 \emph{Mise sous forme canonique du trinôme}~: le trinôme peut se factoriser en 
 cherchant les racines
 
-\begin{align}
-    az^2 + bz + c &= a \left(z^2+ 2 \frac{b}{2a}z + \frac{b^2}{4a^2} - 
-    \frac{b^2}{4a^2}  + \frac{c}{a} \right)\\
-              & = a \left( \left(z + \frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} 
-              \right).
-\end{align}
+\begin{align*}
+    az^2 + bz + c & = a \left( z^2+ 2 \frac{b}{2a}z + \frac{b^2}{4a^2} - 
+    \frac{b^2}{4a^2}  + \frac{c}{a} \right) \\
+                  & = a \left( \left( z + \frac{b}{2a} \right)^2 - 
+              \frac{b^2-4ac}{4a^2} \right).
+\end{align*}
 
 Comme \(a\) est non nul, les solution de l'équation \eqref{eq:eq1} sont des 
 solutions de l'équation
 \begin{equation}
-    \left(z + \frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2}  = 0.
+    \left( z + \frac{b}{2a} \right)^2 - \frac{b^2-4ac}{4a^2} = 0.
 \end{equation}
 
 \begin{defdef}
@@ -821,41 +861,41 @@ solutions de l'équation
     \item Soit le discriminant est nul et auquel cas l'ensemble des solutions 
         est
     \begin{equation}
-        \mathcal{S} = \biggl\lbrace-\frac{b}{2a} \biggl\rbrace;
+        \mathcal{S} = \biggl \lbrace-\frac{b}{2a} \biggl \rbrace;
     \end{equation}
-    \item soit le discriminant est non nul et dans ce cas on pose que le 
+    \item Soit le discriminant est non nul et dans ce cas on pose que le 
         complexe \(\delta\) est une de ses racines carrées et l'ensemble des 
         solutions est
     \begin{equation}
-        \mathcal{S} = \biggl\lbrace \frac{-b + \delta}{2a} , \frac{-b-\delta}{2a} 
-            \biggl\rbrace.
+        \mathcal{S} = \biggl \lbrace \frac{-b + \delta}{2a} , 
+            \frac{-b-\delta}{2a} \biggl \rbrace.
     \end{equation}
 \end{enumerate}
 
-\emph{Cas particulier}~: si \(a\), \(b\) et \(c\) sont réels alors le 
+\emph{Cas particulier}~: Si \(a\), \(b\) et \(c\) sont réels alors le 
 discriminant \(\Delta\) de l'équation \eqref{eq:eq1} est réel et admet deux 
 racines (si \(\Delta \neq 0\)) et donc~:
 \begin{itemize}
     \item soit le discriminant est positif et alors
-    \begin{equation}
-        \Delta >0 \quad \delta = \sqrt{\Delta} \quad \mathcal{S} = \biggl\lbrace 
-            \frac{-b + \sqrt{\Delta}}{2a} , \frac{-b-\sqrt{\Delta}}{2a} 
-            \biggl\rbrace;
-        \end{equation}
-    \item soit le discriminant est négatif et alors
-    \begin{equation}
-        \Delta <0 \quad \delta = \ii\sqrt{\Delta} \quad \mathcal{S} = 
-        \biggl\lbrace \frac{-b + \ii\sqrt{-\Delta}}{2a} , 
-            \frac{-b-\ii\sqrt{-\Delta}}{2a} \biggl\rbrace.
-        \end{equation}
-\end{itemize}
+        \begin{equation}
+            \Delta >0 \quad \delta = \sqrt{\Delta} \quad \mathcal{S} = 
+            \biggl\lbrace \frac{-b + \sqrt{\Delta}}{2a} , 
+                \frac{-b-\sqrt{\Delta}}{2a} \biggl\rbrace;
+            \end{equation}
+        \item soit le discriminant est négatif et alors
+            \begin{equation}
+                \Delta <0 \quad \delta = \ii\sqrt{\Delta} \quad \mathcal{S} = 
+                \biggl\lbrace \frac{-b + \ii\sqrt{-\Delta}}{2a} , 
+                    \frac{-b-\ii\sqrt{-\Delta}}{2a} \biggl\rbrace.
+                \end{equation}
+        \end{itemize}
 
 Si le nombre \(2\) apparaît naturellement en facteur dans \(b\), on pose 
-\(b' = \frac{b}{2}\) et on définit le discriminant réduit~: \(\Delta' = b'^2-ac\) et 
-les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
+\(b' = \frac{b}{2}\) et on définit le discriminant réduit~: \(\Delta' = 
+b'^2-ac\) et les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 
 \begin{theo}[Théorème fondamental de l'algèbre (1799 -- Gauss)]
-    Toute équation polynomiale de degré \(n\) admet \(n\) solutions dans \(\C\). 
+    Toute équation polynomiale de degré \(n\) admet \(n\) solutions dans \(\C\).  
     Tout polynôme à coefficients complexes est scindé. On dit aussi que le corps 
     \(\C\) est algébriquement clos.
 \end{theo}
@@ -869,16 +909,14 @@ les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 
 \begin{prop}
     Soient \(s\) et \(p\) deux complexes. Alors deux complexes quelconques \(x\) 
-    et \(y\) sont solutions de \(\begin{cases} x  + y = s \\ xy = p \end{cases}\) si 
-    et seulement si \(x\) et \(y\) sont solutions de l'équation \(z^2 -sz + p = 0\).
+    et \(y\) sont solutions de \(\begin{cases} x  + y = s \\ xy = p 
+    \end{cases}\) si et seulement si \(x\) et \(y\) sont solutions de l'équation 
+    \(z^2 -sz + p = 0\).
 \end{prop}
 
 \begin{proof}
-    Soient \(s\) et \(p\) deux complexes. On considère l'équation
-    \begin{equation*}
-        z^2-sz + p = 0.
-    \end{equation*}
-    Soient \(\alpha\) et \(\beta\) les solutions de cette équation, alors
+    Soient \(s\) et \(p\) deux complexes. On considère l'équation \(z^2-sz + p = 
+    0\). Soient \(\alpha\) et \(\beta\) les solutions de cette équation, alors
     \(\begin{cases} \alpha  + \beta = s \\ \alpha \beta = p \end{cases}\).
     Plus généralement si \(\alpha\) et \(\beta\) sont les deux racines de 
     l'équation \eqref{eq:eq1} alors \(\begin{cases} \alpha + \beta = 
@@ -890,14 +928,14 @@ les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 
 \begin{defdef}
     Soit \(z\) un nombre complexe. On définit l'exponentielle complexe de \(z\) 
-    (notée \(\exp(z)\) ou \(\e^z\)) par \(\exp(z) = \e^{\Re(z)}(\cos \Im(z) + \ii 
-    \sin \Im(z))\).
+    (notée \(\exp(z)\) ou \(\e^z\)) par \(\exp(z) = \e^{\Re(z)}(\cos \Im(z) + 
+    \ii \sin \Im(z))\).
 \end{defdef}
 
 \begin{prop}
     L'application \(\fonctionL{\varphi}{\C}{\C^*}{z}{\e^z}\) est un morphisme du 
-    groupe \((\C, + )\) sur le groupe \((\C^*,\times)\)~\footnote{cf.\ 
-    chapitre~\ref{chap:groupes}}.
+    groupe \((\C, + )\) sur le groupe \((\C^*,\times)\)~\footnote{cf. 
+    Chapitre~\ref{chap:groupes}}.
 \end{prop}
 
 \begin{proof}
@@ -922,27 +960,28 @@ les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 \end{proof}
 
 \begin{prop}
-    Soit un intervalle \(I\) réel et \(\varphi \in \C^{I}\) une application 
+    Soit un intervalle \(I\) réel et \(\fonctionR{\varphi}{I}{\C}\) une application 
     dérivable. Alors \(f = \e^\varphi\) est dérivable telle que \(f' = \varphi' 
     \e^\varphi\). En particulier si \(a\) est complexe, l'application 
-    \(\fonctionL{f_a}{\R}{\C}{x}{\e^{ax}}\) est dérivable sur \(\R\) et 
-    \(f_a' = af_a\).
+    \(\fonctionL{f_a}{\R}{\C}{x}{\e^{ax}}\) est dérivable sur \(\R\) et \(f_a' = 
+    af_a\).
 \end{prop}
 
 \begin{proof}
-    Soient \(\varphi_1\) et \(\varphi_2\), respectivement la partie réelle de 
-    \(\varphi\) et la partie imaginaire de \(\varphi\). Alors
+    Soient \(\varphi_1\) et \(\varphi_2\), la partie réelle et la partie 
+    imaginaire de \(\varphi\) (resp.), alors, pour tout \(x \in I\)
     \begin{align*}
-        \forall x \in I \quad f(x) = e^{\varphi(x)}& = \cos \varphi_2(x) 
-        \e^{\varphi_1(x)}+ \ii \sin \varphi_2(x)\e^{\varphi_1(x)} \\
-                                                 &= \Re[f(x)] + \Im[f(x)].
+         f(x) = e^{\varphi(x)}& = \cos \varphi_2(x) \e^{\varphi_1(x)}+ \ii \sin 
+         \varphi_2(x)\e^{\varphi_1(x)}\\ 
+                              & = \Re[f(x)] + \Im[f(x)]\ii.
     \end{align*}
-    Comme \(\varphi\) est dérivable, \(\varphi_1 = \Re[f]\) et 
-    \(\varphi_2 = \Im[f]\) le sont, ainsi \(f\) est dérivable.
+    Comme \(\varphi\) est dérivable, \(\varphi_1 = \Re[f]\) et \(\varphi_2 = 
+    \Im[f]\) le sont aussi et donc \(f\) est dérivable.
 \end{proof}
 
 \emph{Remarque}~: L'application \(\fonctionL{f}{\C}{\C}{z}{\e^z}\) n'est pas 
-dérivable.
+dérivable. Il faut que l'ensemble de départ de l'application soit réel pour 
+commencer à exprimer une notion de dérivabilité.
 
 \section{Nombres complexes et géométrie plane}
 \label{sec:complexesetgeometrie}
@@ -950,16 +989,18 @@ dérivable.
 \subsection{Écriture complexe de quelques transformations usuelles du plan}
 \label{subsec:ecriturecomplexeettransformations}
 
-À toute transformation \(F\) du plan \(\P\), on peut associer un application \(f 
-\in \C^{\C}\) telle que pour tout points \(M(z)\) et \(M'(z')\) on ait
+À toute transformation \(F\) du plan \(\P\), on peut associer un application 
+\(\fonctionR{f}{\C}{\C}\) telle que pour tout points \(M(z)\) et \(M'(z')\) on 
+ait
 \begin{equation}
     M' = f(M) \iff z' = f(z).
 \end{equation}
+
 On dit que \(F\) est représentée par l'application \(f\). Soient deux complexes 
 \(z_0\) et \(b\) deux complexes correspondant respectivement à un point \(M_0\) 
 et un vecteur \(\vect{u}\) du plan \(\P\).
 
-\emph{exemples}~:
+\emph{Exemples}~:
 \begin{itemize}
     \item La rotation de centre \(M_0\) d'angle \(\theta\) est représentée par 
         \(\fonctionL{f}{\C}{\C}{z}{\expc{}{\theta}(z-z_0)  + z_0}\);
@@ -974,15 +1015,15 @@ et un vecteur \(\vect{u}\) du plan \(\P\).
 \subsection{Similitudes directes}
 \label{subsec:simdirecte}
 
-Soient \(\omega \in \C\), \(k\in \R^*\) et \(\theta \in \R^*\). La rotation 
+Soient un complexe \(\omega\) et deux réels non nuls \(k, \theta \). La rotation 
 \(\mathcal{R}\) de centre \(\omega\) et d'angle \(\theta\) est représentée par 
-\(\fonctionL{r}{\C}{\C}{z}{\expc{}{\theta}(z-\omega) + \omega},\) et l'homothétie 
-\(\mathcal{H}\) de rapport \(k \in \R^*\) est représentée par 
-\(\fonctionL{h}{\C}{\C}{z}{k(z-\omega) + \omega}.\)
+\(\fonctionL{r}{\C}{\C}{z}{\expc{}{\theta}(z-\omega) + \omega},\) et 
+l'homothétie \(h\) de rapport \(k\) est représentée par 
+\(\fonctionL{h}{\C}{\C}{z}{k(z-\omega) + \omega}\).
 
 \begin{defdef}
     On appelle similitude directe de centre \(\Omega(\omega)\), d'angle 
-    \(\theta\) et de rapport \(k \in \R^*\), la transformation \(\Psi\) du plan 
+    \(\theta\) et de rapport \(k\), la transformation \(\Psi\) du plan 
     dans le plan représentée par l'application 
     \(\fonctionL{\psi}{\C}{\C}{z}{\expc{k}{\theta}(z-\omega) + \omega}\).
 \end{defdef}
@@ -991,12 +1032,13 @@ Soient \(a\) non nul et \(b\) dans \(\C\), on considère la bijection
 \(\fonctionL{\Phi}{\P}{\P}{M(z)}{M(az + b)}\).
 
 \begin{itemize}
-    \item Si \(a = 1\); alors  \(\Phi\) est la translation de vecteur \(\vect{u}(b)\).
+    \item Si \(a = 1\); alors  \(\Phi\) est la translation de vecteur 
+        \(\vect{u}(b)\).
     \item Si \(a \neq 1\), alors on montre que \(\Phi\) admet un unique point 
-        fixe \(\Omega(\omega) \quad \omega = \frac{b}{1-a}\) et 
-        \(\varphi(z) = a(z-\omega) + \omega\).
-        \(\Phi\) est la similitude de centre \(\Omega(\omega)\), de rapport 
-        \(k = \abs{a}\) et d'angle \(\congru{\theta}{\arg(a)}{2\pi}\)
+        fixe \(\Omega(\omega) \quad \omega = \frac{b}{1-a}\) et \(\varphi(z) = 
+        a(z-\omega) + \omega\).
+        \(\Phi\) est la similitude de centre \(\Omega(\omega)\), de rapport \(k 
+        = \abs{a}\) et d'angle \(\congru{\theta}{\arg(a)}{2\pi}\)
 \end{itemize}
 
 \subsection{Application inversion}
@@ -1004,24 +1046,25 @@ Soient \(a\) non nul et \(b\) dans \(\C\), on considère la bijection
 
 Soit l'application \(\fonctionL{f}{\C^*}{\C^*}{z}{\frac{1}{z}}\) la 
 transformation du plan associée \(\fonctionL{F}{\P \setminus\{O\}}{\P 
-\setminus\{O\}}{M(z)}{M \left( \frac{1}{z} \right)}\) est une inversion. Si 
-\(M\) appartient au cercle trigonométrique, \(F(M)\) est le symétrique de \(M\) 
-par rapport à l'axe des réels et il est sur le cercle.
+\setminus\{O\}}{M(z)}{M' \left( \frac{1}{z} \right)}\) est une inversion. Si 
+\(M\) appartient au cercle trigonométrique, \(M' = F(M)\) est le symétrique de 
+\(M\) par rapport à l'axe des réels et il est sur le cercle.
 
 \subsection{Barycentre}
 \label{subsec:complexebarycentre}
 
-Soient \(n \in \N^{*} \ , \ (A_1, \ldots A_n) \in \P^n\)  d'affixes respectives 
-\(z_1 \ldots z_n\) et \(\lambda_1 \ldots \lambda_n\) des réels tels que 
-\(\sum_{k = 0}^{n} \lambda_k \neq 0\). Soit \(G\) le barycentre de ces points,n 
-l'affixe de \(G\) est \(z_G = \frac{\sum_{k = 1}^{n}\lambda_k 
-z_k}{\sum_{k = 1}^{n}\lambda_k}\).
+Soient un naturel non nul \(n\), \(n\) points du plan \(\P\) \(A_1, \ldots, 
+A_n\) d'affixes respectives \(z_1, \ldots, z_n\) et \(\lambda_1, \ldots, 
+\lambda_n\) des réels tels que leur somme est non nulle, appelés les 
+pondérations respective de chaque \(A_k\). Soit \(G\) le barycentre de ces 
+points affectés des pondérations \(\lambda\), alors l'affixe de \(G\) est \(z_G 
+= \frac{\sum_{k = 1}^{n}\lambda_k z_k}{\sum_{k = 1}^{n}\lambda_k}\).
 
 \subsection{Orthogonalité}
 \label{subsec:complexeorthogonalite}
 
-Soient \(\vect{v}\) et \(\vect{v'}\) deux vecteurs d'affixes respectives 
-\(z = x + \ii y\) et \(z' = x' + \ii y'\). On sait que \(\vect{v}\) et \(\vect{v'}\) 
+Soient \(\vect{v}\) et \(\vect{v'}\) deux vecteurs d'affixes respectives \(z = x 
++ \ii y\) et \(z' = x' + \ii y'\). On sait que \(\vect{v}\) et \(\vect{v'}\) 
 sont orthogonaux si et seulement si leur produit scalaire est nul. Soit 
 \(\vect{v}\) et \(\vect{v'}\) sont orthogonaux si et seulement si \(\Re(z 
 \bar{z'}) = 0\).
@@ -1036,27 +1079,33 @@ Soient deux réels \(k\) et \(\lambda\).
     \item Quel est l'ensemble des points \(E_\lambda = \enstq{M(z) \in 
         \P}{\congru{\arg \left(\frac{z-a}{z-b} \right)}{\lambda}{2\pi}}\)~?
 \end{enumerate}
-
-Si le réel \(k<0\) alors \(E_k = \emptyset\), s'il est nul alors \(E_0 = \{A(a)\}\), 
-s'il vaut 1 alors \(E_1\) est la médiatrice de \([AB]\).
-
-Si le réel \(k\) est strictement positif non égal à 1 alors \(\frac{MA}{MB} = k\) 
-et donc \((\vect{MA} + k\vect{MB}) \cdot (\vect{MA}-k\vect{MB}) = 0\). Soit \(I\) le 
-barycentre de \((A,1)(B,k)\) et \(J\) le barycentre de \((A,1)(B,-k)\) alors 
-\((1 + k)(1-k) \vect{MI} \cdot \vect{MJ}  = 0\) comme \(k \neq \pm 1\) on a que M 
-est sur le cercle de diamètre \([IJ]\).
-Si \(z \in \{a,b\}\) alors \(E_\lambda = \emptyset\) et sinon \(E_\lambda\) est la 
-droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
+\begin{enumerate}
+    \item 
+        \begin{itemize}
+            \item Si le réel \(k<0\) alors \(E_k = \emptyset\), s'il est nul 
+                alors \(E_0 = \{A(a)\}\), s'il vaut 1 alors \(E_1\) est la 
+                médiatrice de \([AB]\).
+            \item Si le réel \(k\) est strictement positif non égal à 1 alors 
+                \(\frac{MA}{MB} = k\) et donc \((\vect{MA} + k\vect{MB}) \cdot 
+                (\vect{MA}-k\vect{MB}) = 0\). Soit \(I\) le barycentre de 
+                \((A,1)(B,k)\) et \(J\) le barycentre de \((A,1)(B,-k)\) alors 
+                \((1 + k)(1-k) \vect{MI} \cdot \vect{MJ}  = 0\) comme \(k \neq 
+                \pm 1\) on a que M est sur le cercle de diamètre \([IJ]\).
+        \end{itemize}
+    \item Si \(z \in \{a,b\}\) alors \(E_\lambda = \emptyset\) et sinon 
+        \(E_\lambda\) est la droite qui forme l'angle \(\lambda\) avec la droite 
+        \((A(a)B(b))\).
+\end{enumerate}
 
 \section{Exercices}
 
 \begin{exercice}[Identité du parallèlogramme]
-    Démontrer que pour tout nombres complexes \(z\) et \(z'\) on 
-    a~:\(\abs{z + z'}^2 + \abs{z-z'}^2 = 2\abs{z}^2 + 2\abs{z'}^2\).
+    Démontrer que pour tout nombres complexes \(z\) et \(z'\) on a~:\(\abs{z + 
+    z'}^2 + \abs{z-z'}^2 = 2\abs{z}^2 + 2\abs{z'}^2\).
 \end{exercice}
 
 \begin{exercice}
-    Soient un naturel \(n\) et un réel \(a\) tel que \(0 \leqslant a < 2\pi\). 
+    Soient un naturel \(n\) et un réel \(a\) tel que \(0 \leqslant a < 2\pi\).  
     Calculer le module et l'argument (s'il existe) de \(z = (1 + \ii\e^{\ii 
     a})^n\).
 \end{exercice}
@@ -1068,8 +1117,8 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
 \end{exercice}
 
 \begin{exercice}
-    Soient \(a\) et \(b\) des réels de \(\intervallefo{0}{2\pi}\). On pose 
-    \(u = \e^{a\ii}\) et \(v = \e^{b\ii}\). Déterminer le module et un argument, si 
+    Soient \(a\) et \(b\) des réels de \(\intervallefo{0}{2\pi}\). On pose \(u = 
+    \e^{a\ii}\) et \(v = \e^{b\ii}\). Déterminer le module et un argument, si 
     possible, de chacun des complexes~: \(1 + u\) et \(\frac{u + v}{1 + uv}\).
 \end{exercice}
 
@@ -1083,7 +1132,7 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
 \begin{exercice}
     Résoudre sur \(\C\), de deux façons, l'équation \(z^4 + z^3 + z^2 + z + 1 = 
     0\). L'une des deux méthodes consistera à se ramener à une équation du 
-    deuxième degré obtenue en faisant le changement de variable \(y = z + 1/z\). 
+    deuxième degré obtenue en faisant le changement de variable \(y = z + 1/z\).  
     Déterminer des expressions de \(\cos 2\pi/5\) et \(\sin 2\pi/5\).
 \end{exercice}
 
@@ -1133,8 +1182,8 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
             \item \((1 + \ii)z^2 + 3(1-\ii)z-2(2 + \ii) = 0\)
             \item \(z^4-(3 + i)z^2 + 4 + 3\ii = 0\)
             \item \(z^{2n} + z^n + 1 = 0\)
-            \item \(\left(1 + \frac{\ii z}{n}\right)^n = \left(1-\frac{\ii 
-                z}{n}\right)^n\)
+            \item \(\left( 1 + \frac{\ii z}{n} \right)^n = \left( 1-\frac{\ii 
+                z}{n} \right)^n\)
         \end{enumerate}
     \end{multicols}
 \end{exercice}
@@ -1144,7 +1193,8 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
     que~:
     \begin{enumerate}
         \item le nombre \(\frac{z + 2}{z + 3\ii}\) soit réel
-        \item Le nombre \(\left(\frac{z + 1}{z-1}\right)^2\) soit imaginaire pur
+        \item Le nombre \(\left( \frac{z + 1}{z-1} \right)^2\) soit imaginaire 
+            pur
         \item \(\abs{\frac{z-1}{z + 1}} = 2\).
     \end{enumerate}
 \end{exercice}
@@ -1169,9 +1219,11 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
 \begin{exercice}
     Résoudre dans \(\C\) les systèmes suivants
     \begin{equation}
-        \begin{cases} x + y + z = 1 \\ xyz = 1 \\ \abs{x} = \abs{y} = \abs{z} = 1 \end{cases}
+        \begin{cases} x + y + z = 1 \\ xyz = 1 \\ \abs{x} = \abs{y} = \abs{z} = 
+        1 \end{cases}
         \begin{cases} 5x-\ii{}y = 2 \\ (1 + \ii)x + 3y = 5 \end{cases}
-        \begin{cases} (1 + \ii)x + \bar{y} = 3 + 7\ii \\\bar{x} + y = 2 + \ii\end{cases}
+        \begin{cases} (1 + \ii)x + \bar{y} = 3 + 7\ii \\\bar{x} + y = 2 + 
+        \ii\end{cases}
     \end{equation}
 \end{exercice}
 
@@ -1194,8 +1246,8 @@ droite qui forme l'angle \(\lambda\) avec la droite \((A(a)B(b))\).
             \end{equation}
             avec \(p\) et \(q\) deux réels.
         \item Soit \(y\) une racine de l'équation~\eqref{eq:cardan1}. Montrer 
-            qu'il existe un couple \((u,v)\) de complexes tel que \(u + v = y\) et 
-            \(uv = -p/3\), et que \(u^3\) et \(v^3\) sont racines de 
+            qu'il existe un couple \((u,v)\) de complexes tel que \(u + v = y\) 
+            et \(uv = -p/3\), et que \(u^3\) et \(v^3\) sont racines de 
             l'équation~\eqref{eq:cardan2}
             \begin{equation}
                 \label{eq:cardan2}
