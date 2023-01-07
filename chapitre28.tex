@@ -33,9 +33,9 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   avec \(A_1\) un point de \(W_1\) et \(E_1\) un sous-espace vectoriel de \(E\). Ainsi
   \begin{align}
     f(W_1) &= \enstq{f(M)}{M \in W_1} \\
-    &= \enstq{f(A_1+\vect{x_1})}{\vect{x_1} \in E_1} \\
-    &= \enstq{f(A_1)+f(\vect{x_1})}{\vect{x_1} \in E_1} \\
-    &=f(A_1) + \vect{f}(E_1).
+           &= \enstq{f(A_1+\vect{x_1})}{\vect{x_1} \in E_1} \\
+           &= \enstq{f(A_1)+f(\vect{x_1})}{\vect{x_1} \in E_1} \\
+           &=f(A_1) + \vect{f}(E_1).
   \end{align}
   \(E_1\) est un sous-espace vectoriel de \(E\) et \(\vect{f}\) est linéaire donc \(\vect{f}(E_1)\) est un sous-espace vectoriel de \(F\). Par conséquent \(f(W_1)\) est un sous-espace affine de \(F\).
 \end{proof}
@@ -76,8 +76,8 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   pour tout \(A\) et \(B\) de \(E\), on a
   \begin{align}
     \vect{g\circ f(A) g\circ f(B)} &= \vect{g} (\vect{f(A)f(B)} \\
-    &=\vect{g}(\vect{f}(\vect{AB})) \\
-    &=\vect{g}\circ \vect{f} (\vect{AB}).
+                                   &=\vect{g}(\vect{f}(\vect{AB})) \\
+                                   &=\vect{g}\circ \vect{f} (\vect{AB}).
   \end{align}
   Si \(\vect{g}\) et \(\vect{f}\) sont linéaires, alors \(\vect{g}\circ \vect{f}\) est linéaire. On a montré que \(g \circ f\) est affine et que sa partie linéaire vérifie \(\vect{g \circ f}=\vect{g}\circ \vect{f}\).
 \end{proof}
@@ -91,15 +91,15 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   \(\impliedby\). Pour tout couple \((M, N) \in E^2\) on a
   \begin{align}
     \vect{f(M)f(N)} &= A+u(\vect{ON}) - (A+u(\vect{OM})) \\
-    &=u(\vect{MN}).
+                    &=u(\vect{MN}).
   \end{align}
   Donc \(f\) est affine et \(\vect{f}=u\).
 \end{proof}
 
 \emph{Conséquence importante~:}
 \begin{itemize}
-\item Les applications linéaires sont des application affines;
-\item une application affine \(f \in F^E\) est linéaire si et seulement si \(f(0)=0\).
+  \item Les applications linéaires sont des application affines;
+  \item une application affine \(f \in F^E\) est linéaire si et seulement si \(f(0)=0\).
 \end{itemize}
 
 \begin{prop}
@@ -109,8 +109,8 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   Soient \(f \in FE\), \((A_i)_{i \in \intervalleentier{1}{n}}\) \(n\) points de \(E\) et \((\alpha_i)_{i \in \intervalleentier{1}{n}} \in \R^n\) tel que \(\sum_{i=1}^n\alpha_i\neq 0\). On note \(G=\Bary((A_i,\alpha_i)_{i \in \intervalleentier{1}{n}})\). Alors
   \begin{align}
     \sum_{i=1}^n \alpha_i \vect{f(G)f(A_i)} &= \sum_{i=1}^n \alpha_i \vect{f}(\vect{GA_i}) \\
-    &=\vect{f}\left(\sum_{i=1}^n \alpha_i \vect{GA_i}\right) \\
-    &=\vect{f}(0)=0.
+                                            &=\vect{f}\left(\sum_{i=1}^n \alpha_i \vect{GA_i}\right) \\
+                                            &=\vect{f}(0)=0.
   \end{align}
   Donc on a bien \(f(G)=\Bary((f(A_i),\alpha_i)_{i \in \intervalleentier{1}{n}})\).
 \end{proof}
@@ -127,16 +127,16 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   \(\implies\) Pour tout couple \((\vx, \vy)\in E^2\) on a
   \begin{align}
     \vy= \vect{f}(\vx) &\iff f(0)+\vy = f(0)+\vx \\
-    &\iff f(0)+\vy = f(0+\vx)\\
-    &\iff f^{-1}(f(0)+\vy)=0+\vx.
+                       &\iff f(0)+\vy = f(0+\vx)\\
+                       &\iff f^{-1}(f(0)+\vy)=0+\vx.
   \end{align}
   Il existe un unique \(\vx \in E\) tel que \(\vy=\vect{f}(\vx)\), alors \(\vect{f}\) est bijective.
 
   \(\impliedby\) Soit \((M, N) \in E^2\) alors
   \begin{align}
     N = f(M) &\iff \vect{f(O)N} = \vect{f(O)f(M)} \\
-    &\iff \vect{f(O)N} = \vect{f}(\vect{OM}) \\
-    &\iff \vect{f}^{-1}(\vect{f(O)N}) = \vect{OM}. && \vect{f} \in \GL{E}\\
+             &\iff \vect{f(O)N} = \vect{f}(\vect{OM}) \\
+             &\iff \vect{f}^{-1}(\vect{f(O)N}) = \vect{OM}. && \vect{f} \in \GL{E}\\
   \end{align}
   Il existe un unique point \(M \in E\) tel que \(f(M)=N\), donc \(f\) est bijective.
 \end{proof}
@@ -167,9 +167,9 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
 \begin{proof}
   \begin{align}
     f \text{~est une translation} &\iff \forall (A,B) \in E^2 \quad \vect{Af(A)} = \vect{Bf(B)} \\
-    &\iff \forall (A,B) \in E^2 \quad \vect{f(A)f(B)} = \vect{AB} \\
-    &\iff \forall (A,B) \in E^2 \quad \vect{f}(\vect{AB}) = \vect{AB} \\
-    &\iff f=\Id.
+                                  &\iff \forall (A,B) \in E^2 \quad \vect{f(A)f(B)} = \vect{AB} \\
+                                  &\iff \forall (A,B) \in E^2 \quad \vect{f}(\vect{AB}) = \vect{AB} \\
+                                  &\iff f=\Id.
   \end{align}
 \end{proof}
 
@@ -183,9 +183,9 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
   L'application \(h\) admet elle un point fixe ? Vérifions le~:
   \begin{align}
     \forall M \in \quad h(M) = M &\iff \vect{h(O)h(M)} = \vect{h(O)M} \\
-    &\iff \alpha \vect{OM} =\vect{h(O)O} +\vect{OM} \\
-    &\iff (1-\alpha) \vect{OM} = \vect{Oh(O)} \\
-    &\iff \vect{OM} = \frac{\vect{Oh(O)}}{1-\alpha}. && \alpha \neq 1
+                                 &\iff \alpha \vect{OM} =\vect{h(O)O} +\vect{OM} \\
+                                 &\iff (1-\alpha) \vect{OM} = \vect{Oh(O)} \\
+                                 &\iff \vect{OM} = \frac{\vect{Oh(O)}}{1-\alpha}. && \alpha \neq 1
   \end{align}
   L'application \(f\) admet un seul point fixe, c'est le centre de l'homothétie \(h\). Cette application est l'homothétie de centre \(\Omega\) et de rapport \(\alpha\). Et finalement
   \begin{align}
@@ -196,8 +196,8 @@ Soient \(E\) et \(F\) des \(\R\)-espaces vectoriels et \(f\in E^F\). On dit que 
 
 Finalement les transformation affines dont les parties linéaires s'écrivent sous la forme \(\alpha \Id\) (\(\alpha \in \R^*\)) sont~:
 \begin{itemize}
-\item les translations si \(\alpha=1\);
-\item les homothéties sinon.
+  \item les translations si \(\alpha=1\);
+  \item les homothéties sinon.
 \end{itemize}
 
 \subsubsection{Projections affines}
@@ -246,10 +246,10 @@ Soient \(\F\) et \(\G\) deux sous-espaces affines de \(E\), de directions respec
 \begin{defdef}
   Soit \(p\) la projection affine sur le sous-espace affine \(\F\) parallèlement à \(\G\). La symétrie affine \(s\) par rapport à \(\F\) parallèlement à \(\G\) est telle que pour tout point \(M \in E\), \(s(M)\) est l'unique point \(N \in E\) qui vérifie l'une des conditions équivalentes suivantes~:
   \begin{enumerate}
-  \item \(\vect{MN}=2\vect{Mp(M)}\);
-  \item \(N = 2p(M)-M\);
-  \item \(\vect{P(M)N}=-\vect{p(M)M}\);
-  \item \(\vect{MN} \in G\) et \(\frac{1}{2}(M+N) \in \F\).
+    \item \(\vect{MN}=2\vect{Mp(M)}\);
+    \item \(N = 2p(M)-M\);
+    \item \(\vect{P(M)N}=-\vect{p(M)M}\);
+    \item \(\vect{MN} \in G\) et \(\frac{1}{2}(M+N) \in \F\).
   \end{enumerate}
 \end{defdef}
 \begin{proof}[Démonstration des équivalences]
@@ -267,11 +267,11 @@ Soient \(\F\) et \(\G\) deux sous-espaces affines de \(E\), de directions respec
   Soient \(A\) et \(B\) deux points de \(E\). Alors
   \begin{align}
     \vect{s(A)s(B)} &= s(B)-s(A) \\
-     &= 2p(B)-B-2p(A)+A \\
-     &= 2\vect{p}(\vect{AB}) - \vect{AB} \\
-     &= (2\vect{p}-\Id)(\vect{AB}).
+                    &= 2p(B)-B-2p(A)+A \\
+                    &= 2\vect{p}(\vect{AB}) - \vect{AB} \\
+                    &= (2\vect{p}-\Id)(\vect{AB}).
   \end{align}
-   Donc \(s\) est affine, et \(\vect{s}=2\vect{p}-\Id\). Comme \(\vect{p}\) est la projection sur \(F\) parallèlement à \(G\), \(\vect{s}\) est la symétrie par rapport à \(F\) parallèlement à \(G\).
+  Donc \(s\) est affine, et \(\vect{s}=2\vect{p}-\Id\). Comme \(\vect{p}\) est la projection sur \(F\) parallèlement à \(G\), \(\vect{s}\) est la symétrie par rapport à \(F\) parallèlement à \(G\).
 \end{proof}
 
 \emph{Remarque~:} Si l'espace \(E\) est euclidien et si \(G=F^\perp\), on parlera de symétrie affine orthogonale par rapport à \(\F\). Si de plus \(\F\) est un hyperplan, on parle de réflexion affine.
@@ -291,8 +291,8 @@ Soit \(E\) un espace vectoriel euclidien.
 \end{defdef}
 %
 \begin{theo}
-\label{theo:isometrietransorth}
- Toute isométrie \(f\) de \(E\) se décompose de manière unique sous la forme \(f=t \circ g\) où \(t\) est une translation et \(g\) une application orthogonale. De plus \(f\) est affine et \(\vect{f}=g\).
+  \label{theo:isometrietransorth}
+  Toute isométrie \(f\) de \(E\) se décompose de manière unique sous la forme \(f=t \circ g\) où \(t\) est une translation et \(g\) une application orthogonale. De plus \(f\) est affine et \(\vect{f}=g\).
 \end{theo}
 \begin{proof}[Unicité]
   Sous réserve d'existence, si \(f=t \circ g\) avec \(t\) une translation et \(g\) une application orthogonale. Alors \(f(0)=t(g(0))=t(0)\) et l'application \(t\) est une translation de vecteur \(\vect{0t(0)}\). Alors \(g=t^{-1} \circ f\) où \(t^{-1}\) est la translation de vecteur \(\vect{t(0)0}\). Ainsi \(t\) et \(g\) sont uniques.
@@ -301,21 +301,21 @@ Soit \(E\) un espace vectoriel euclidien.
   Soient \(\vu = \vect{0t(0)}\), \(t=t_{\vu}\) et \(g=t^{-1}\circ f\). Il faut montrer que \(g\) est orthogonale. Soient \((x,y) \in E^2\), alors
   \begin{align}
     \norme{g(x)-g(y)} &= \norme{f(x)-f(y)} && t \text{~est une translation} \\
-    &=\norme{x-y}. && f \text{~est une isométrie} \\
+                      &=\norme{x-y}. && f \text{~est une isométrie} \\
   \end{align}
   Avec \(y=0\), on a \(g(0) = t^{-1}(f(0))=0\), donc \(\norme{g(x)}=\norme{x}\). Montrons que \(g\) conserve le produit scalaire~: pour tout \((x,y) \in E^2\) on a
   \begin{align}
     \prodscal{g(x)}{g(y)} &= -\frac{1}{2} \left(\norme{g(x)-g(y)}^2-\norme{g(x)}^2-\norme{g(y)}^2\right)\\
-    &= -\frac{1}{2} \left(\norme{x-y}^2-\norme{x}^2-\norme{y}^2\right)\\
-    &=\prodscal{x}{y}.
+                          &= -\frac{1}{2} \left(\norme{x-y}^2-\norme{x}^2-\norme{y}^2\right)\\
+                          &=\prodscal{x}{y}.
   \end{align}
   C'est donc un automorphisme orthogonal. 
 
   Il reste à montrer que \(f\) est affine~: Soient \(A\) et \(B\) deux points de \(E\), alors
   \begin{align}
     \vect{f(A)f(B)} &= \vect{t(g(A))t(g(B))}\\
-    &=\vect{g(A)g(B)} && t \text{~est une translation} \\
-    &= g(\vect{AB}). && g \in \Endo{E}
+                    &=\vect{g(A)g(B)} && t \text{~est une translation} \\
+                    &= g(\vect{AB}). && g \in \Endo{E}
   \end{align}
   Cela signifie que \(f\) est affine avec \(\vect{f}=g\).
 \end{proof}
@@ -329,7 +329,7 @@ Soit \(E\) un espace vectoriel euclidien.
   \(\impliedby\)~: Si \(f^{-1} \in \Orth{E}\), alors pour tout couple \((A,B) \in E^2\), on a
   \begin{align}
     \norme{\vect{f(A)f(B)}} &= \norme{\vect{f}(\vect{AB})} \\
-    &=\norme{\vect{AB}} && \vect{f} \in \Orth{E}.
+                            &=\norme{\vect{AB}} && \vect{f} \in \Orth{E}.
   \end{align}
   Donc \(f\) est une isométrie.
 \end{proof}
@@ -339,7 +339,7 @@ Soit \(E\) un espace vectoriel euclidien.
 \end{prop}
 \begin{proof}
   Soit \(f\) une isométrie. On a vu que \(f\) est affine et qu'en plus \(\vect{f} \in \Orth{E} \subset \GL{E}\). Alors d'après la proposition
-\ref{prop:isom-orth}, \(f\) est une isométrie.
+  \ref{prop:isom-orth}, \(f\) est une isométrie.
 \end{proof}
 
 \begin{prop}
@@ -347,7 +347,7 @@ Soit \(E\) un espace vectoriel euclidien.
 \end{prop}
 \begin{proof}
   Soit \(f \in \Orth{E}\). \(f\) est linéaire donc affine et \(\vect{f}=f \in \Orth{E}\). Donc \(f\) est une isométrie d'après la proposition
-\ref{prop:isom-orth}.
+  \ref{prop:isom-orth}.
 \end{proof}
 
 \begin{prop}
@@ -355,17 +355,17 @@ Soit \(E\) un espace vectoriel euclidien.
 \end{prop}
 \begin{proof}
   Soient \(f\) et \(g\) deux isométries. Comme \(f\) et \(g\) sont aussi affines, alors \(g \circ f\) est affine avec \(\vect{g \circ f}=\vect{g} \circ \vect{f}\). Les applications \(\vect{f}\) et \(\vect{g}\) sont dans \(\Orth{E}\) d'après la proposition
-\ref{prop:isom-orth}. Alors \(\vect{g \circ f}=\vect{g} \circ \vect{f} \in \Orth{E}\), ainsi (toujours d'après la proposition
-\ref{prop:isom-orth}, \(g \circ f \in \Is{E}\).
+  \ref{prop:isom-orth}. Alors \(\vect{g \circ f}=\vect{g} \circ \vect{f} \in \Orth{E}\), ainsi (toujours d'après la proposition
+  \ref{prop:isom-orth}, \(g \circ f \in \Is{E}\).
 
   Soit \(f \in \Is{E}\). \(f\) est inversible donc \(f^{-1}\) existe. De plus \(f^{-1} \in \Ga{E}\) et \(\vect{f^{-1}}=\vect{f}^{-1}\). Or \(\vect{f} \in \Orth{E}\), donc \(\vect{f}^{-1} \in \Orth{E}\) et ainsi \(f^{-1} \in \Is{E}\) (proposition
-\ref{prop:isom-orth}).
+  \ref{prop:isom-orth}).
 
   \((\Is{E}, \circ)\) est un sous-groupe de \((\Ga{E}, \circ),\) en effet~:
   \begin{itemize}
-  \item \(\Is{E} \subset \Ga{E}\);
-  \item \(\Is{E} \neq \emptyset\);
-  \item pour toutes application \(f\) et \(g\) dans \(\Is{E}\), \(g \circ f^{-1} \in \Is{E}\).
+    \item \(\Is{E} \subset \Ga{E}\);
+    \item \(\Is{E} \neq \emptyset\);
+    \item pour toutes application \(f\) et \(g\) dans \(\Is{E}\), \(g \circ f^{-1} \in \Is{E}\).
   \end{itemize}
 \end{proof}
 
@@ -436,7 +436,7 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
     \vect{s}(\vect{IM}) = \vect{s(I)s(M)} = \vect{Is(M)}.
   \end{equation}
   En particulier \(\vect{s}(\vect{IA})=\vect{IB}\) et \(\vect{s}(\vect{IB})=\vect{IA}\). Donc \(\vect{s}\) est l'unique réflexion vectorielle qui échange \(\vect{IA}\) et \(\vect{IB}\) (\emph{cf} chapitre
-\ref{chap:automorphismesorthogonaux}. La réflexion \(\vect{s}\) est l'unique réflexion par rapport à l'hyperplan vectoriel \(H = \VectEngendre{\vect{AB}}^\perp\).
+  \ref{chap:automorphismesorthogonaux}. La réflexion \(\vect{s}\) est l'unique réflexion par rapport à l'hyperplan vectoriel \(H = \VectEngendre{\vect{AB}}^\perp\).
 
   Pour tout vecteur \(\vx \in E\), on a
   \begin{equation}
@@ -445,7 +445,7 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
   Alors pour tout point \(M \in E\) on a
   \begin{align}
     s(M) &= s(I) + s(\vect{IM}) = I + \vect{IM} -2\prodscal{\vect{IM}}{\frac{\vect{AB}}{\norme{\vect{AB}}}} \frac{\vect{AB}}{\norme{\vect{AB}}} \\
-        &=M -\frac{2}{\norme{\vect{AB}}^2}\prodscal{\vect{IM}}{\vect{AB}} \vect{AB}.
+         &=M -\frac{2}{\norme{\vect{AB}}^2}\prodscal{\vect{IM}}{\vect{AB}} \vect{AB}.
   \end{align}
   Ce qui montre l'unicité de \(s\).
 \end{proof}
@@ -457,18 +457,18 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
   Vérifions que \(s\) est une réflexion affine. En effet, puisque \(-2\vect{IA}=\vect{AB}\), on a bien \(s(A)=B\) et \(s(B)=A\). Et pour tout point \(M \in E\)
   \begin{align}
     s(M)=M &\iff \frac{-2}{\norme{\vect{AB}}^2}\prodscal{\vect{IM}}{\vect{AB}}\vect{AB} = \vect{0} \\
-    &\iff \prodscal{\vect{IM}}{\vect{AB}}=0\\
-    &\iff \vect{IM} \in \VectEngendre{\vect{AB}}^\perp \\
-    &\iff M \in I+\VectEngendre{\vect{AB}}^\perp.
+           &\iff \prodscal{\vect{IM}}{\vect{AB}}=0\\
+           &\iff \vect{IM} \in \VectEngendre{\vect{AB}}^\perp \\
+           &\iff M \in I+\VectEngendre{\vect{AB}}^\perp.
   \end{align}
   \(s\) est la réflexion par rapport à \(\H=I+\VectEngendre{\vect{AB}}^\perp\).
 
   \begin{align}
     \forall M \in E \quad AM=BM &\iff \norme{\vect{AM}}^2=\norme{\vect{BM}}^2 \\
-    &\iff \prodscal{\vect{AM}}{\vect{AM}} = \prodscal{\vect{BM}}{\vect{BM}}\\
-    &\iff \prodscal{\vect{AI}}{\vect{IM}} = \prodscal{\vect{BI}}{\vect{IM}}\\
-    &\iff \prodscal{\vect{AB}}{\vect{IM}} =0\\
-    &\iff M \in \H.
+                                &\iff \prodscal{\vect{AM}}{\vect{AM}} = \prodscal{\vect{BM}}{\vect{BM}}\\
+                                &\iff \prodscal{\vect{AI}}{\vect{IM}} = \prodscal{\vect{BI}}{\vect{IM}}\\
+                                &\iff \prodscal{\vect{AB}}{\vect{IM}} =0\\
+                                &\iff M \in \H.
   \end{align}
   Finalement \(\H=\enstq{M\in E}{AM=BM}\).
 \end{proof}
@@ -477,24 +477,24 @@ Il s'agit des symétries affines orthogonales par rapport à un hyperplan affine
 
 Soit \(E_2\) le plan euclidien. Si \(f\) est un déplacement du plan alors \(\vect{f} \in \SOrth{E_2}\). Deux cas se présentent~:
 \begin{itemize}
-\item si \(\vect{f} = \Id\), alors \(f\) est une translation;
-\item sinon, alors \(f\) est une ``vraie'' rotation avec \(\Inv(\vect{f})=\{0\}\).
+  \item si \(\vect{f} = \Id\), alors \(f\) est une translation;
+  \item sinon, alors \(f\) est une ``vraie'' rotation avec \(\Inv(\vect{f})=\{0\}\).
 \end{itemize}
 %
 \begin{theo}
- Tout déplacement du plan distinct d'une translation admet un unique point invariant. 
+  Tout déplacement du plan distinct d'une translation admet un unique point invariant. 
 \end{theo}
 \begin{proof}
   Soit \(f \in \Is{E_2}\), alors \(\vect{f}\in \SOrth{E_2}\setminus\{\Id\}\). Alors \(\Inv(\vect{f})=\{0\}\). Pour tout point \(M\) du plan, on a
   \begin{align}
     f(M)=M &\iff \vect{f(O)f(M)} = \vect{f(O)M} \\
-    &\iff \vect{f}{\vect{OM}} = \vect{f(O)O} + \vect{OM} \\
-    &\iff (\vect{f}-\Id)(\vect{OM}) = \vect{f(O)O}.
+           &\iff \vect{f}{\vect{OM}} = \vect{f(O)O} + \vect{OM} \\
+           &\iff (\vect{f}-\Id)(\vect{OM}) = \vect{f(O)O}.
   \end{align}
   On pose \(\vect{g}=\vect{f}-\Id\). Alors \(\Inv(\vect{f})=\Ker(\vect{g})\). Du coup \(\vect{g}\) est injective. De plus \(g \in \Endo{E_2}\) avec \(\Dim E_2=2 <\infty\) donc \(\vect{g}\) est bijective. Finalement
   \begin{align}
     f(M)=M &\iff \vect{g}(\vect{OM}) = \vect{f(O)O} \\
-    &\iff \vect{OM} = \vect{g}^{-1}(\vect{f(O)O}).
+           &\iff \vect{OM} = \vect{g}^{-1}(\vect{f(O)O}).
   \end{align}
   L'équation admet une unique solution.
 \end{proof}
@@ -505,19 +505,19 @@ Soit \(E_2\) le plan euclidien. Si \(f\) est un déplacement du plan alors \(\ve
 \begin{prop}[Produit de deux réflexions]
   Soient \(\Dr\) et \(\Dr'\) deux droites affines du plan \(E_2\), \(s\) et \(s'\) les réflexions par rapport à \(\Dr\) et \(\Dr'\) respectivement. Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(\Dr\) et \(\Dr\) sont parallèles, soit \(\vu\) le vecteur tel que \(t_{\vu}(\Dr)=\Dr'\). Alors \(s'\circ s=t_{2\vu}\);
-  \item sinon, elles sont sécantes en \(A\). Soit \(\theta\) l'angle entre les droites\footnote{défini modulo \(\pi\)}, alors \(s'\circ s=r_{A, 2\theta}\).
+    \item Si \(\Dr\) et \(\Dr\) sont parallèles, soit \(\vu\) le vecteur tel que \(t_{\vu}(\Dr)=\Dr'\). Alors \(s'\circ s=t_{2\vu}\);
+    \item sinon, elles sont sécantes en \(A\). Soit \(\theta\) l'angle entre les droites\footnote{défini modulo \(\pi\)}, alors \(s'\circ s=r_{A, 2\theta}\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
   C'est la conséquence des résultats obtenus sur les produits de deux réflexions vectorielles. Avec les notations du chapitre
-\ref{chap:automorphismesorthogonaux} on avait \(S_\varphi S_{\varphi'}=R_{\varphi-\varphi'}\).
+  \ref{chap:automorphismesorthogonaux} on avait \(S_\varphi S_{\varphi'}=R_{\varphi-\varphi'}\).
 \end{proof}
 
 \emph{Application~:} Tout déplacement du plan peut s'écrire comme un produit de deux réflexions.
 \begin{enumerate}
-\item Toute translation peut s'écrire comme le produit de deux réflexions par rapport à des droites orthogonales au vecteur de translation;
-\item Toute rotation peut s'écrire comme le produit de deux réflexions par rapport à des droites concourantes en le centre de rotation.
+  \item Toute translation peut s'écrire comme le produit de deux réflexions par rapport à des droites orthogonales au vecteur de translation;
+  \item Toute rotation peut s'écrire comme le produit de deux réflexions par rapport à des droites concourantes en le centre de rotation.
 \end{enumerate}
 
 Dans le deuxième cas, la première droite est quelconque et la deuxième est imposée par la première.
@@ -551,8 +551,8 @@ Dans le deuxième cas, la première droite est quelconque et la deuxième est im
 
 Soit \(E_3\) l'espace vectoriel euclidien, et soit \(f\) un déplacement de \(E_3\). Alors \(\vect{f} \in \SOrth{E_3}\). Deux cas se présentent~:
 \begin{itemize}
-\item si \(\vect{f}=\Id\) alors \(f\) est une translation;
-\item sinon \(\vect{f}\) est une rotation vectorielle à axe.
+  \item si \(\vect{f}=\Id\) alors \(f\) est une translation;
+  \item sinon \(\vect{f}\) est une rotation vectorielle à axe.
 \end{itemize}
 
 \begin{defdef}
@@ -565,10 +565,10 @@ Soit \(E_3\) l'espace vectoriel euclidien, et soit \(f\) un déplacement de \(E_
   Soit \(r=\vect{f} \in\SOrth{E_3}\), \(\Inv(r)=\Dr\), et \(\theta\) l'angle de la rotation \(r\). Soit \(I \in \Inv(r)\). Pour tout point \(M\) de l'espace on a
   \begin{align}
     M \in \Inv(r) &\iff f(M)=M \\
-    &\iff \vect{f(I)f(M)} = \vect{f(I)M} \\
-    &\iff \vect{f}(\vect{IM}) = \vect{IM} \\
-    &\iff \vect{IM} \in \Inv(r)\\
-    &\iff M \in I+\Dr.
+                  &\iff \vect{f(I)f(M)} = \vect{f(I)M} \\
+                  &\iff \vect{f}(\vect{IM}) = \vect{IM} \\
+                  &\iff \vect{IM} \in \Inv(r)\\
+                  &\iff M \in I+\Dr.
   \end{align}
   Alors \(\Inv(f)\) est la droite affine \(I+\Dr\).
 \end{proof}
@@ -597,22 +597,22 @@ Soit \(E_3\) l'espace vectoriel euclidien, et soit \(f\) un déplacement de \(E_
   Ainsi \(t\circ r\) et \(r \circ t\) on la même partie linéaire et coïncident en un point. Elles sont égales.
 
   Une telle décomposition est unique. Si \(f=t \circ r\) où \(r\) est une rotation d'axe \(\VectEngendre(\vk)\) et \(t\) une translation de vecteur \(\lambda \vk\) alors \(\vect{f}=\vect{r}\). Donc \(\Inv{\vect{r}}=\Inv{\vect{f}}=\VectEngendre{\vk}\). Le vecteur \(\vk\) est connu à la multiplication par un scalaire près. Pour tout point \(M\) de l'espace, on a
-\begin{align}
-  \vect{Mf(M)}&=\vect{Mt(M)}+\vect{t(M)f(M)} \\
-  &=\lambda \vk +\vect{t(M)t(r(M))}.
-\end{align}
-Comme le vecteur \(\vk\) dirige l'axe de la rotation, on a \(\vk \perp \vect{Mr(M)}\). Ainsi \(\prodscal{\vect{Mf(M)}}{\vk}=\lambda \norme{\vk}^2\). 
+  \begin{align}
+    \vect{Mf(M)}&=\vect{Mt(M)}+\vect{t(M)f(M)} \\
+                &=\lambda \vk +\vect{t(M)t(r(M))}.
+  \end{align}
+  Comme le vecteur \(\vk\) dirige l'axe de la rotation, on a \(\vk \perp \vect{Mr(M)}\). Ainsi \(\prodscal{\vect{Mf(M)}}{\vk}=\lambda \norme{\vk}^2\). 
 
-Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vecteur de la translation est imposé par \(f\). La translation est unique et \(r=t^{-1}\circ f\) est aussi déterminée de façon unique.
+  Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vecteur de la translation est imposé par \(f\). La translation est unique et \(r=t^{-1}\circ f\) est aussi déterminée de façon unique.
 \end{prop}
 
 \emph{Vocabulaire~:} L'application \(r \circ t = t \circ r\) est un vissage où~:
 \begin{itemize}
-\item \(r\) est une rotation d'axe \(\Dr\) (dirigée par \(\vk\)) d'angle \(\theta\);
-\item \(t\) est une translation de vecteur \(\lambda \vk\);
-\item l'axe du vissage est \(\Dr\);
-\item le vecteur du vissage est \(\lambda\vk\);
-\item l'angle du vissage est \(\theta\).
+  \item \(r\) est une rotation d'axe \(\Dr\) (dirigée par \(\vk\)) d'angle \(\theta\);
+  \item \(t\) est une translation de vecteur \(\lambda \vk\);
+  \item l'axe du vissage est \(\Dr\);
+  \item le vecteur du vissage est \(\lambda\vk\);
+  \item l'angle du vissage est \(\theta\).
 \end{itemize}
 
 \emph{Cas particuliers~:} Si \(\lambda=0\), le vissage est une rotation; et si \(r=\Id\), le vissage est une translation.
@@ -626,8 +626,8 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
   Trouvons \(\Inv(g)\). Pour tout point \(M \in E_3\),
   \begin{align}
     M = g(M) &\iff \vect{g(I)M} = \vect{g(I)g(M)} \\
-    &\iff \vect{JM} = \vect{g}(\vect{IM}) \\
-    &\iff (\vect{g}-\vect{\Id})(\vect{IM}) = \vect{JI}=-\va.
+             &\iff \vect{JM} = \vect{g}(\vect{IM}) \\
+             &\iff (\vect{g}-\vect{\Id})(\vect{IM}) = \vect{JI}=-\va.
   \end{align}
   Alors \(r\) est la rotation d'axe de \(D\) et \(D\) est invariante par \(r\), donc stable par \(\vect{r}\). \(D^\perp\) est aussi stable par \(\vect{r}\). Soit \(\vect{r_0}\) la restriction de \(\vect{r}\) à \(D^\perp\). Alors \(\vect{r_0}\) est une rotation du plan \(D^\perp\). Alors
   \begin{align}
@@ -639,9 +639,9 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
   \(-\va \in D^\perp\), alors il existe un vecteur \(\vb \in D^\perp\) tel que \((\vect{r_0}-\Id_{D^\perp})(\vb) = -\va\)\footnote{\(\vect{r_0}-\Id_{D^\perp}\) est surjectif}. De plus on a \(\vect{r}=\vect{g}\), alors \((\vect{r}-\Id_{E_3})(\vb)=-\va\). Si on revient à \(\Inv(g)\) alors on a
   \begin{align}
     M = g(M) &\iff (\vect{r}-\vect{\Id})(\vect{IM}) = (\vect{r}-\Id)(\vb) \\
-    &\iff (\vect{r}-\vect{\Id})(\vect{IM}-\vb)=\vect{0} \\
-    &\iff \vect{IM}-\vb \in \Ker(\vect{r}-\vect{\Id})=\Inv(\vect{r})=D\\
-    &\iff M \in I+D+\vb=\Dr.    
+             &\iff (\vect{r}-\vect{\Id})(\vect{IM}-\vb)=\vect{0} \\
+             &\iff \vect{IM}-\vb \in \Ker(\vect{r}-\vect{\Id})=\Inv(\vect{r})=D\\
+             &\iff M \in I+D+\vb=\Dr.    
   \end{align}
   De plus \(\vb \perp \Dr'=\Dr+\vb\)\footnote{droite affine parallèle à \(\Dr\)}, donc \(g\) est une rotation d'axe \(\Dr'\).
 \end{proof}
@@ -655,8 +655,8 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
 
   Soit \(f\) un déplacement de l'espace \(E_3\). Alors \(\vect{f} \in \SOrth{E_3}\).
   \begin{itemize}
-  \item Soit \(\vect{f}=\Id\) et alors \(f\) est une translation donc un vissage particulier;
-  \item soit \(f\) est une vraie rotation et alors \(\vect{f}\) est la rotation vectorielle d'axe \(\Dr\) et d'angle \(\theta\).
+    \item Soit \(\vect{f}=\Id\) et alors \(f\) est une translation donc un vissage particulier;
+    \item soit \(f\) est une vraie rotation et alors \(\vect{f}\) est la rotation vectorielle d'axe \(\Dr\) et d'angle \(\theta\).
   \end{itemize}
   Dans le deuxième cas, pour tout point \(M \in E_3\), on a
   \begin{align}
@@ -667,15 +667,15 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
 
   On sait que \(E_3 = D \oplus D^\perp\), donc il existe un unique couple \((\vu_1, \vu_2) \in D \times D^\perp\) tel que \(t_{\vect{Of(O)}} = t_{\vu_1} \circ t_{\vu_2}\). C'est-à-dire que \(f= t_{\vu_1} \circ (t_{\vu_2} \circ \vect{f})\). Deux cas se présentent~:
   \begin{itemize}
-  \item si \(\vu_2=\vect{0}\) alors \(f= t_{\vu_1} \circ \vect{f}\) avec \(\vu_1\) colinéaire à l'axe de \(\vect{f}\);
-  \item sinon, on applique le lemme à \(t_{\vu_1}\) et \(f\) (\(\vu_2\) est colinéaire à l'axe de \(\vect{f}\)) alors \(g=t_{\vu_2} \circ \vect{f}\) est une rotation d'axe parallèle à \(D\) et \(f=t_{\vu_1} \circ g\) est un vissage.
+    \item si \(\vu_2=\vect{0}\) alors \(f= t_{\vu_1} \circ \vect{f}\) avec \(\vu_1\) colinéaire à l'axe de \(\vect{f}\);
+    \item sinon, on applique le lemme à \(t_{\vu_1}\) et \(f\) (\(\vu_2\) est colinéaire à l'axe de \(\vect{f}\)) alors \(g=t_{\vu_2} \circ \vect{f}\) est une rotation d'axe parallèle à \(D\) et \(f=t_{\vu_1} \circ g\) est un vissage.
   \end{itemize}
 \end{proof}
 
 \emph{Composée de réflexions~:} Soient \(\Pr\) et \(\Pr'\) deux plans affines de l'espace, \(s\) et \(s'\) les réflexions respectives par rapport à \(\Pr\) et \(\Pr'\). Deux cas se présentent à nous~:
 \begin{itemize}
-\item si \(\Pr\) et \(\Pr'\) sont parallèles alors il existe un vecteur \(\vu\) tel que \(t_{\vu}(\Pr)=\Pr'\) et donc \(s'\circ s=t_{2\vu}\);
-\item sinon ils sont sécant selon une droite \(\Dr\) et alors il existe une rotation \(r\) telle que \(\Pr'=r(\Pr)\), c'est la rotation d'angle \(\theta\) et d'axe \(\Dr\) et donc \(s' \circ s\) est la rotation d'axe \(\Dr\) et d'angle \(2\theta\).
+  \item si \(\Pr\) et \(\Pr'\) sont parallèles alors il existe un vecteur \(\vu\) tel que \(t_{\vu}(\Pr)=\Pr'\) et donc \(s'\circ s=t_{2\vu}\);
+  \item sinon ils sont sécant selon une droite \(\Dr\) et alors il existe une rotation \(r\) telle que \(\Pr'=r(\Pr)\), c'est la rotation d'angle \(\theta\) et d'axe \(\Dr\) et donc \(s' \circ s\) est la rotation d'axe \(\Dr\) et d'angle \(2\theta\).
 \end{itemize}
 
 \emph{Application~:} Tout déplacement de l'espace est composé de 0, 2 ou 4 réflexions.
@@ -685,8 +685,8 @@ Le scalaire \(\lambda\) est unique, il est déterminé par \(\vk\), donc le vect
 \end{cor}
 \begin{proof}
   Soit \(f\) une isométrie. On a vu qu'elle se décompose de manière unique en produit d'une translation \(t\) et d'une application orthogonale \(g\) (théorème
-\ref{theo:isometrietransorth}). Une translation est un produit de réflexions et \(g\) est aussi un produit de réflexions (théorème
-\ref{theo:orthreflexions}).
+  \ref{theo:isometrietransorth}). Une translation est un produit de réflexions et \(g\) est aussi un produit de réflexions (théorème
+  \ref{theo:orthreflexions}).
 \end{proof}
 
 \begin{table}
@@ -736,7 +736,7 @@ Les homothéties sont un exemple pertinent de similitude affine du plan.
   Si de plus \(\sigma\) est une similitude directe, alors 
   \begin{align}
     \Det(\vect{f}) &= \Det(h^{-1})\Det(\vect{\sigma}) \\
-    &=\left(\frac{1}{\lambda}\right)^2 \Det(\sigma)>0.
+                   &=\left(\frac{1}{\lambda}\right)^2 \Det(\sigma)>0.
   \end{align}
   Donc \(\vect{f}\in \SOrth{E_2}\) et donc \(f\) est un déplacement. On démontre de la même manière que \(f'\) est aussi un déplacement.
 \end{proof}
@@ -766,28 +766,28 @@ Les homothéties sont un exemple pertinent de similitude affine du plan.
   \end{equation}
   Alors on a \(\Mat(\vect{\sigma}) = \begin{pmatrix} \Re(a) & -\Im(a) \\ \Im(a) & \Re(a) \end{pmatrix}\) et alors \(\Det(\sigma)=\abs{a}^2>0\). Finalement \(\sigma\) est directe.
 
-    \(\implies\)~: Soit \(\sigma\) une homothétie de rapport \(\lambda>0\). On peut écrire \(\sigma\) sous la forme \(\sigma=h \circ f\) avec \(h\) une homothétie de rapport \(\lambda\) et \(f\) un déplacement du plan. Alors \(\vect{\sigma}=\vect{h} \circ \vect{f}\), avec \(\vect{f}\in \SOrth{E_2}\) donc~:
-    \begin{itemize}
+  \(\implies\)~: Soit \(\sigma\) une homothétie de rapport \(\lambda>0\). On peut écrire \(\sigma\) sous la forme \(\sigma=h \circ f\) avec \(h\) une homothétie de rapport \(\lambda\) et \(f\) un déplacement du plan. Alors \(\vect{\sigma}=\vect{h} \circ \vect{f}\), avec \(\vect{f}\in \SOrth{E_2}\) donc~:
+  \begin{itemize}
     \item soit \(\vect{f}=\Id\) et alors \(\vect{\sigma}=\lambda \Id\) et alors \(\sigma\) est représenté par \(az+b\);
     \item soit \(f\) est une vraie rotation et on peut représenter \(\vect{\sigma}\) par \(z \longmapsto z\exp{\ii \theta}\), donc on peut représenter \(\vect{\sigma}\) par \(z \longmapsto az+b\).
-    \end{itemize}
+  \end{itemize}
 
-    Vérifions les invariants~:
-    \begin{align}
-      \forall M(z) \in E_2 \quad \sigma(M) = M &\iff z(1-a)=b \\
-      a=1, b=0 &\quad \Inv(\sigma)=\emptyset\\
-      a=1, b\neq 0 &\quad \Inv(\sigma)=E_2 \\
-      a\neq 1 &\quad \Inv(\sigma) = \Omega\left(\frac{b}{1-a}\right).
-    \end{align}
+  Vérifions les invariants~:
+  \begin{align}
+    \forall M(z) \in E_2 \quad \sigma(M) = M &\iff z(1-a)=b \\
+    a=1, b=0 &\quad \Inv(\sigma)=\emptyset\\
+    a=1, b\neq 0 &\quad \Inv(\sigma)=E_2 \\
+    a\neq 1 &\quad \Inv(\sigma) = \Omega\left(\frac{b}{1-a}\right).
+  \end{align}
 \end{proof}
 Soit \(\sigma\) une similitude directe qui n'est pas une translation. Le point \(\Omega\) est son unique point fixe et \(\lambda\) est son rapport. Soit \(h\) l'homothétie de centre \(\Omega\) de rapport \(\lambda\). Il existe un déplacement \(f\) tel que \(\sigma = h \circ f\). Deux cas se présentent~:
 \begin{itemize}
-\item si \(\vect{f}=\Id\) alors \(f\) est une translation et elle n'a pas de point fixe;
-\item sinon, alors \(f\) est une vraie rotation et admet un point fixe \(\Omega\). En effet
-  \begin{equation}
-    f(\Omega) = h^{-1}\circ \sigma(\Omega) = h^{-1}(\Omega) = \Omega.
-  \end{equation}
-  Notons \(\theta\) l'angle  de \(f\) et \(\Omega\) le centre de \(\sigma\). 
+  \item si \(\vect{f}=\Id\) alors \(f\) est une translation et elle n'a pas de point fixe;
+  \item sinon, alors \(f\) est une vraie rotation et admet un point fixe \(\Omega\). En effet
+    \begin{equation}
+      f(\Omega) = h^{-1}\circ \sigma(\Omega) = h^{-1}(\Omega) = \Omega.
+    \end{equation}
+    Notons \(\theta\) l'angle  de \(f\) et \(\Omega\) le centre de \(\sigma\). 
 \end{itemize}
 
 \begin{prop}
@@ -801,7 +801,7 @@ Soit \(\sigma\) une similitude directe qui n'est pas une translation. Le point \
   Si on note \(a\), \(a'\), \(b\) et \(b'\) les affixes respectives de \(A\), \(A'\), \(B\) et \(B'\) on a
   \begin{align}
     \begin{cases} \sigma(A)=A' \\ \sigma(B)=B'\end{cases}&\iff \begin{cases} \lambda\e^{\ii \theta}a+c=a' \\ \lambda\e^{\ii \theta}b+c=b'\end{cases}\\
-    &\iff \begin{cases} \lambda\e^{\ii\theta}=\frac{a'-b'}{a-b} \\ c=\frac{ba'-ab'}{b-a}\end{cases}.
+                                                         &\iff \begin{cases} \lambda\e^{\ii\theta}=\frac{a'-b'}{a-b} \\ c=\frac{ba'-ab'}{b-a}\end{cases}.
   \end{align}
   Le complexe \(c\) est unique, \(\lambda=\abs{\frac{a'-b'}{a-b}}\) est unique et \(\theta=\arg\left(\frac{a'-b'}{a-b}\right)\) est unique. Donc la similitude est unique.
 \end{proof}

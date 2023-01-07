@@ -16,15 +16,15 @@ Dans tout ce chapitre, \((\K,+,\cdot)\) est un corps, en pratique \(\K=\R\) ou \
 \begin{defdef}
   On appelle espace vectoriel sur le corps \(\K\) tout triplet \((E,+,\perp)\) où
   \begin{enumerate}
-  \item \((E,+)\) est un groupe abélien;
-  \item \(\perp\) est une loi de composition externe sur \(E\) à opérateurs dans \(\K\);
-  \item vérifiant les propriétés suivantes~:
-    \begin{gather}
-      \forall (\lambda,\lambda') \in \K^2 \ \forall x \in E \quad (\lambda+\lambda')x=\lambda x + \lambda' x; \\
-      \forall \lambda \in \K \ \forall (x,x)' \in E^2 \quad \lambda(x+x')=\lambda x + \lambda x';\\
-      \forall (\lambda, \mu) \in \K^2 \ \forall x \in E \quad \lambda(\mu x)=(\lambda \mu) x;\\
-      \forall x \in E \quad 1x=x.
-    \end{gather}
+    \item \((E,+)\) est un groupe abélien;
+    \item \(\perp\) est une loi de composition externe sur \(E\) à opérateurs dans \(\K\);
+    \item vérifiant les propriétés suivantes~:
+      \begin{gather}
+        \forall (\lambda,\lambda') \in \K^2 \ \forall x \in E \quad (\lambda+\lambda')x=\lambda x + \lambda' x; \\
+        \forall \lambda \in \K \ \forall (x,x)' \in E^2 \quad \lambda(x+x')=\lambda x + \lambda x';\\
+        \forall (\lambda, \mu) \in \K^2 \ \forall x \in E \quad \lambda(\mu x)=(\lambda \mu) x;\\
+        \forall x \in E \quad 1x=x.
+      \end{gather}
   \end{enumerate}
 \end{defdef}
 
@@ -33,7 +33,7 @@ Les éléments du corps \(\K\) sont les scalaires et les éléments de \(E\) son
 \subsection{Premiers exemples}
 \subsubsection{Propositions préliminaires}
 \begin{prop}
-Soit \(E\) un \(\K\)-espace vectoriel, soit \(\L\) un sous-corps de \(\K\). Alors \(E\) est un \(\L\)-espace vectoriel. Plus particuliérement, tout \(\C\)-espace vectoriel est un \(\R\)-espace vectoriel.
+  Soit \(E\) un \(\K\)-espace vectoriel, soit \(\L\) un sous-corps de \(\K\). Alors \(E\) est un \(\L\)-espace vectoriel. Plus particuliérement, tout \(\C\)-espace vectoriel est un \(\R\)-espace vectoriel.
 \end{prop}
 \begin{proof}
   \((E,+)\) est un groupe abélien. \(\L\) est un sous-corps de \(\K\). On peut donc considérer comme loi externe à opérateurs dans \(\L\) la loi induite par celle à opérateurs dans \(\K\). Les propriétés de la définition sont respectées dans \(\K\) alors elles le sont dans \(\L\).
@@ -52,14 +52,14 @@ Soit \(E\) un \(\K\)-espace vectoriel, soit \(\L\) un sous-corps de \(\K\). Alor
 
 Soient deux \(\K\)-espace vectoriels \((E_1,+_1,\perp_1)\) et \((E_2,+_2,\perp_2)\). On munit le produit cartésien \(E_1 \times E_2\)
 \begin{itemize}
-\item d'une loi de composition interne noté \(+\) définie par
-\begin{equation}
-  \forall (x_1, y_1)\in E_1^2 \ \forall (x_2, y_2) \in E_2^2 \quad (x_1,x_2) + (y_1,y_2) = (x_1+y_1,x_2+y_2);
-\end{equation}
-\item d'une loi de composition externe \(\perp\) à opérateurs dans \(\K\) définie par
-  \begin{equation}
-    \forall \lambda \in \K \ \forall (x_1,x_2) \in E^2 \quad \lambda(x_1,x_2)=(\lambda x_1, \lambda x_2).
-  \end{equation}
+  \item d'une loi de composition interne noté \(+\) définie par
+    \begin{equation}
+      \forall (x_1, y_1)\in E_1^2 \ \forall (x_2, y_2) \in E_2^2 \quad (x_1,x_2) + (y_1,y_2) = (x_1+y_1,x_2+y_2);
+    \end{equation}
+  \item d'une loi de composition externe \(\perp\) à opérateurs dans \(\K\) définie par
+    \begin{equation}
+      \forall \lambda \in \K \ \forall (x_1,x_2) \in E^2 \quad \lambda(x_1,x_2)=(\lambda x_1, \lambda x_2).
+    \end{equation}
 \end{itemize}
 Ainsi \((E_1 \times E_2,+,\perp)\) est un espace vectoriel appelé espace vectoriel produit.
 
@@ -79,20 +79,20 @@ Ainsi \((E^X,+,\perp)\) obtient une structure de \(\K\)-espace vectoriel.
 Soit \((E,+,\perp)\) un espace vectoriel sur \(\K\).
 \begin{prop}
   Soient un naturel \(n\), \(\lambda, \lambda', \lambda_1, \ldots, \lambda_n\) des scalaires de \(\K\) et \(x,x',x_1, \ldots, x_n\) des vecteurs de \(E\). Alors on a
-\begin{table}[!h]
-  \centering
-  \begin{tabular}{|c|c|} \hline
-    A & B \\ \hline
-    \(0 x = 0\) & \(\lambda 0 = 0\) \\
-    \((-\lambda)x=-(\lambda x)\) & \(\lambda(-x)=-(\lambda x)\)\\
-    \((\lambda-\lambda')x=\lambda x- \lambda' x\) & \(\lambda(x-x')=\lambda x- \lambda x'\)\\
-    \(\left(\sum_{i=1}^n \lambda_i \right)x=\sum_{i=1}^n \lambda_i x\) & \(\lambda\left(\sum_{i=1}^n x_i\right)=\sum_{i=1}^n \lambda x_i\)\\
-    \((k\lambda)x=k(\lambda x)\) & \(\lambda (kx)=k(\lambda x)\) \\
-  \hline\end{tabular}
-\end{table}
+  \begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|} \hline
+      A & B \\ \hline
+      \(0 x = 0\) & \(\lambda 0 = 0\) \\
+      \((-\lambda)x=-(\lambda x)\) & \(\lambda(-x)=-(\lambda x)\)\\
+      \((\lambda-\lambda')x=\lambda x- \lambda' x\) & \(\lambda(x-x')=\lambda x- \lambda x'\)\\
+      \(\left(\sum_{i=1}^n \lambda_i \right)x=\sum_{i=1}^n \lambda_i x\) & \(\lambda\left(\sum_{i=1}^n x_i\right)=\sum_{i=1}^n \lambda x_i\)\\
+      \((k\lambda)x=k(\lambda x)\) & \(\lambda (kx)=k(\lambda x)\) \\
+    \hline\end{tabular}
+  \end{table}
 \end{prop}
 \begin{proof}
-   On définit pour tout vecteur \(x\) de \(E\) l'application \(\fonction{f_x}{\K}{E}{\lambda}{\lambda x}\). C'est un morphisme de groupes de \((\K,+)\) dans \((E,+)\). C'est-à-dire que
+  On définit pour tout vecteur \(x\) de \(E\) l'application \(\fonction{f_x}{\K}{E}{\lambda}{\lambda x}\). C'est un morphisme de groupes de \((\K,+)\) dans \((E,+)\). C'est-à-dire que
   \begin{equation}
     \forall (\lambda,\lambda') \in \K^2 \quad f_x(\lambda+\lambda')=f_x(\lambda)+f_x(\lambda').
   \end{equation}
@@ -148,16 +148,16 @@ Au final c'est un endomorphisme bijectif de \(E\), donc un endomorphisme et un i
   Supposons que \(\lambda x=\lambda x'\) on a les équivalences suivantes
   \begin{align}
     \lambda x=\lambda x' &\iff \lambda x-\lambda x' = 0\\
-    &\iff \lambda(x-x')=0\\
-    &\iff \lambda = 0 \text{~ou~} x-x'=0\\
-    &\iff \lambda = 0 \text{~ou~} x=x'.
+                         &\iff \lambda(x-x')=0\\
+                         &\iff \lambda = 0 \text{~ou~} x-x'=0\\
+                         &\iff \lambda = 0 \text{~ou~} x=x'.
   \end{align}
   Supposons que \(\lambda x=\lambda' x\) on a les équivalences suivantes
   \begin{align}
     \lambda x=\lambda' x &\iff \lambda x-\lambda' x= 0\\
-    &\iff (\lambda-\lambda')x=0\\
-    &\iff x = 0 \text{~ou~} \lambda-\lambda'=0\\
-    &\iff x = 0 \text{~ou~} \lambda=\lambda'.
+                         &\iff (\lambda-\lambda')x=0\\
+                         &\iff x = 0 \text{~ou~} \lambda-\lambda'=0\\
+                         &\iff x = 0 \text{~ou~} \lambda=\lambda'.
   \end{align}
 \end{proof}
 
@@ -171,43 +171,43 @@ Au final c'est un endomorphisme bijectif de \(E\), donc un endomorphisme et un i
 \begin{theo}[Caractérisation des sous-espaces vectoriels]
   Il y a équivalence entre les assertions suivantes
   \begin{enumerate}
-  \item \(E'\) est un sous-espace vectoriel de \(E\);
-  \item \(E'\) est une partie de \(E\) non vide stable pour \(+\) et \(\perp\);
-  \item \(E'\) est une partie de \(E\) non vide telle que
-    \begin{equation}
-      \label{eq:bidul11}
-      \forall (x,y) \in E'^2 \ \forall (\lambda, \mu) \in \K^2 \quad \lambda x+\mu y \in E' ;
-    \end{equation}
-  \item \(E'\) est une partie de \(E\) non vide telle que
-    \begin{equation}
-      \label{eq:bidul12}
-      \forall (x,y) \in E'^2 \ \forall \lambda \in \K \quad \lambda x+ y \in E' ;
-    \end{equation}
-  \item \((E',+,\perp)\) est un sous-groupe de \((E,+)\) et \(E'\) est stable par \(\perp\).
+    \item \(E'\) est un sous-espace vectoriel de \(E\);
+    \item \(E'\) est une partie de \(E\) non vide stable pour \(+\) et \(\perp\);
+    \item \(E'\) est une partie de \(E\) non vide telle que
+      \begin{equation}
+        \label{eq:bidul11}
+        \forall (x,y) \in E'^2 \ \forall (\lambda, \mu) \in \K^2 \quad \lambda x+\mu y \in E' ;
+      \end{equation}
+    \item \(E'\) est une partie de \(E\) non vide telle que
+      \begin{equation}
+        \label{eq:bidul12}
+        \forall (x,y) \in E'^2 \ \forall \lambda \in \K \quad \lambda x+ y \in E' ;
+      \end{equation}
+    \item \((E',+,\perp)\) est un sous-groupe de \((E,+)\) et \(E'\) est stable par \(\perp\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   On montre ces équivalences de manière circulaire~:
   \begin{itemize}
-  \item[\(1 \implies 2\)] C'est la définition d'un sous-espace vectoriel;
-  \item[\(2 \implies 3\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et l'équation~\eqref{eq:bidul11} est la découle de la définition de la stabilité par \(\perp\) et de la stabilité par \(+\);
-  \item[\(3 \implies 4\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et l'équation~\eqref{eq:bidul12} découle de l'équation~\eqref{eq:bidul11} en prenant \(\mu=1\);
-  \item[\(4 \implies 5\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et on prend dans~\eqref{eq:bidul12} \(\lambda=-1\) et on obtient
-    \begin{equation}
-      \forall (x,y) \in E'^2 \quad y-x \in E',
-    \end{equation}
-    alors par caractérisation \(E'\) est un sous-groupe de \(E\); comme \(E'\) est un sous-groupe, \(0 \in E'\) et
-    \begin{equation}
-      \forall x \in E' \ \forall \lambda \in \K \quad \lambda x +0=\lambda x \in E',
-    \end{equation}
-    et donc \(E'\) est stable par \(\perp\).
-  \item[\(5 \implies 1\)] on a déjà \(E' \subset E\) et \(E'\) stable par \(\perp\) et par \(+\) (puisque c'est un sous-groupe de \((E,+)\)). On peut considérer \(E'\) muni des lois induites et on a
-    \begin{itemize}
-    \item \((E',+_{E'})\) est un groupe abélien puisque c'est un sous-groupe du groupe abélien \((E,+_E)\);
-    \item la loi de composition externe est la loi induite par celle de \(E\);
-    \item les propriétés du troisième point de la définition d'un espace vectoriel sont vérifiées sur \(E'\) puisqu'elles le sont sur \(E\) et on considère les lois induites;
-    \end{itemize}
-    donc \((E',+_E,\perp_E)\) est un sous-espace vectoriel de \(E\).
+    \item[\(1 \implies 2\)] C'est la définition d'un sous-espace vectoriel;
+    \item[\(2 \implies 3\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et l'équation~\eqref{eq:bidul11} est la découle de la définition de la stabilité par \(\perp\) et de la stabilité par \(+\);
+    \item[\(3 \implies 4\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et l'équation~\eqref{eq:bidul12} découle de l'équation~\eqref{eq:bidul11} en prenant \(\mu=1\);
+    \item[\(4 \implies 5\)] on a déjà \(E' \neq \emptyset\) et \(E' \subset E\) et on prend dans~\eqref{eq:bidul12} \(\lambda=-1\) et on obtient
+      \begin{equation}
+        \forall (x,y) \in E'^2 \quad y-x \in E',
+      \end{equation}
+      alors par caractérisation \(E'\) est un sous-groupe de \(E\); comme \(E'\) est un sous-groupe, \(0 \in E'\) et
+      \begin{equation}
+        \forall x \in E' \ \forall \lambda \in \K \quad \lambda x +0=\lambda x \in E',
+      \end{equation}
+      et donc \(E'\) est stable par \(\perp\).
+    \item[\(5 \implies 1\)] on a déjà \(E' \subset E\) et \(E'\) stable par \(\perp\) et par \(+\) (puisque c'est un sous-groupe de \((E,+)\)). On peut considérer \(E'\) muni des lois induites et on a
+      \begin{itemize}
+        \item \((E',+_{E'})\) est un groupe abélien puisque c'est un sous-groupe du groupe abélien \((E,+_E)\);
+        \item la loi de composition externe est la loi induite par celle de \(E\);
+        \item les propriétés du troisième point de la définition d'un espace vectoriel sont vérifiées sur \(E'\) puisqu'elles le sont sur \(E\) et on considère les lois induites;
+      \end{itemize}
+      donc \((E',+_E,\perp_E)\) est un sous-espace vectoriel de \(E\).
   \end{itemize}
 \end{proof}
 
@@ -216,9 +216,9 @@ Au final c'est un endomorphisme bijectif de \(E\), donc un endomorphisme et un i
 
 Si \(E\) est un \(\K\)-espace vectoriel, \(\{0\}\) et \(E\) sont les sous-espaces vectoriels triviaux de \(E\). Si \(E_1\) est un sous-espace vectoriel d'un \(\K\)-espace vectoriel \(E\) et si \(E_2\) est un sous-espace vectoriel de \(E_1\) alors \(E_2\) est un sous-espace vectoriel de \(E\). L'ensemble des suites réelles bornées \(B(\R)\) est un sous-espace vectoriel de l'espace vectoriel des suites réelles \(\R^\N\). Soit un intervalle réel \(I\), l'ensemble des fonction dérivables sur \(I\), \(\deriv{I}{\R}\), est un sous-espace vectoriel du \(\R\)-espace vectoriel des fonctions de \(I\) vers \(\R\), \(\R^I\). Idem pour \(\cont{I}{\R}\), pour \(\forall n \in \N^* \ \classe{n}(I,\R)\), et pour \(\classe{\infty}(I,\R)\). \(\R\) est un sous-espace vectoriel du \(\R\)-espace vectoriel \(\C\)~:
 \begin{itemize}
-\item \(\R \subset \C\);
-\item \(\R \neq \emptyset\);
-\item \(\forall (x,y) \in \R^2 \ \forall \lambda \in \R \quad \lambda x +y \in \R\).
+  \item \(\R \subset \C\);
+  \item \(\R \neq \emptyset\);
+  \item \(\forall (x,y) \in \R^2 \ \forall \lambda \in \R \quad \lambda x +y \in \R\).
 \end{itemize}
 
 Mais \(\R\) n'est pas un sous-espace vectoriel du \(\C\)-espace vectoriel \(\C\).
@@ -234,10 +234,10 @@ Mais \(\R\) n'est pas un sous-espace vectoriel du \(\C\)-espace vectoriel \(\C\)
   \begin{equation}
     \forall x \in E \ \forall \lambda \in \K \quad u(\lambda x)=\lambda u(x).
   \end{equation}
-Autrement dit
-\begin{equation}
-  \forall (x,x') \in E^2 \ \forall \lambda \in \K \quad u(\lambda x +x')=\lambda u(x)+u(x').
-\end{equation}
+  Autrement dit
+  \begin{equation}
+    \forall (x,x') \in E^2 \ \forall \lambda \in \K \quad u(\lambda x +x')=\lambda u(x)+u(x').
+  \end{equation}
 \end{defdef}
 
 \subsubsection{Vocabulaire}
@@ -255,10 +255,10 @@ Soient \(E\) et \(F\) deux \(K\)-espaces vectoriels et \(u \in \Lin{E}{F}\).
   \end{equation}
   Alors \(u\) vérifie les égalités suivantes
   \begin{enumerate}
-  \item \(u(0)=0\);
-  \item \(\forall x \in E \quad u(-x)=-u(x)\);
-  \item \(\forall (x,x') \in E^2 \quad u(x-x')=u(x)-u(x')\);
-  \item \(\forall n \in \N^* \forall (x_1, \ldots, x_n) \in E^n \quad u\left(\sum_{i=1}^n x_i \right) = \sum_{i=1}^n u(x_i)\).
+    \item \(u(0)=0\);
+    \item \(\forall x \in E \quad u(-x)=-u(x)\);
+    \item \(\forall (x,x') \in E^2 \quad u(x-x')=u(x)-u(x')\);
+    \item \(\forall n \in \N^* \forall (x_1, \ldots, x_n) \in E^n \quad u\left(\sum_{i=1}^n x_i \right) = \sum_{i=1}^n u(x_i)\).
   \end{enumerate}
   De plus on dispose de l'image et du noyau de \(u\)~:
   \begin{gather}
@@ -311,8 +311,8 @@ Soit \(E\) un \(\K\)-espace vectoriel. Pour tout scalaire \(\lambda\), on défin
   Soit un vecteur \(x\), alors
   \begin{align}
     h_\lambda \circ h_\mu(x)&= \lambda(\mu x)) \\
-    &=(\lambda\mu)(x)\\
-    &= h_{\lambda\mu}(x).
+                            &=(\lambda\mu)(x)\\
+                            &= h_{\lambda\mu}(x).
   \end{align}
   Alors \(h_\lambda \circ h_\mu = h_{\lambda\mu}\). Comme la multiplication est commutative sur \(\K\), on peut faire commuter les deux applications \(h_\mu \circ h_\lambda=h_\lambda \circ h_\mu \).
 \end{proof}
@@ -376,16 +376,16 @@ c'est-à-dire trouver l'ensemble
 \end{equation}
 Deux cas se présentent~:
 \begin{itemize}
-\item soit \(b \not\in \Image(u)\) et alors \(\mathcal{S}\) est vide;
-\item soit \(b \in \Image(u)\) alors il existe \(x_0 \in E\) tel que \(u(x_0)=b\), \(x_0\) est la solution particulière et on dit que l'équation est compatible. Alors pour tout \(x \in E\)
-\begin{align}
-  x \in \mathcal{S} &\iff u(x)=b \\
-&\iff u(x)=u(x_0) \\
-&\iff u(x-x_0)=0_F \\
-&\iff x-x_0 \in \Ker(u) \\
-&\iff \exists y \in \Ker(u) \ x=x_0+y.
-\end{align}
-Donc \(\mathcal{S}=\enstq{x_0 + y}{y \in \Ker(u)} = "x_0+\Ker(u)"\). On dit que c'est le sous-espace affine passant par \(x_0\) de direction le sous-espace vectoriel \(\Ker(u)\).
+  \item soit \(b \not\in \Image(u)\) et alors \(\mathcal{S}\) est vide;
+  \item soit \(b \in \Image(u)\) alors il existe \(x_0 \in E\) tel que \(u(x_0)=b\), \(x_0\) est la solution particulière et on dit que l'équation est compatible. Alors pour tout \(x \in E\)
+    \begin{align}
+      x \in \mathcal{S} &\iff u(x)=b \\
+                        &\iff u(x)=u(x_0) \\
+                        &\iff u(x-x_0)=0_F \\
+                        &\iff x-x_0 \in \Ker(u) \\
+                        &\iff \exists y \in \Ker(u) \ x=x_0+y.
+    \end{align}
+    Donc \(\mathcal{S}=\enstq{x_0 + y}{y \in \Ker(u)} = "x_0+\Ker(u)"\). On dit que c'est le sous-espace affine passant par \(x_0\) de direction le sous-espace vectoriel \(\Ker(u)\).
 \end{itemize}
 
 \emph{Applications}~: On peut par exemple étendre ce résultat aux suites récurrentes linéaires doubles, ou encore aux équations différentielles. Soient par exemples \(a\), \(b\) et \(c\) trois applications au moins continues de \(\R\) dans \(\R\). Soit aussi l'équation différentielle \(y''+ay'+by=c\) et l'application linéaire \(\fonction{u}{\Dr^{2}(\R,\R)}{\R^{\R}}{f}{f''+af'+bf}\). Alors l'équation différentielle peut s'écrire \(u(f)=c\) et résoudre l'équation homogéne associée \(u(f)=0\) consiste à trouver le noyau de \(u\). Si \(c \in \Image{u}\) alors il existe \(f_0 \in \Dr^{2}(\R,\R)\) tel que \(u(f_0)=c\) et \(f_0\) est la solution dite particulière. L'ensemble des solution de l'équation différentielle est donc le sous-espace affine \(\mathcal{S}=f_0 + \Ker(u)\).
@@ -399,18 +399,18 @@ Donc \(\mathcal{S}=\enstq{x_0 + y}{y \in \Ker(u)} = "x_0+\Ker(u)"\). On dit que 
 \begin{proof}
   \(F\) étant un \(\K\)-espace vectoriel, on sait que \((F^E,+,\perp)\) est un \(\K\)-espace vectoriel, de plus
   \begin{itemize}
-  \item \(\Lin{E}{F}\) est inclus dans \(F^E\);
-  \item l'application nulle qui va de \(E\) dans \(F\) est linéaire, donc \(\Lin{E}{F}\) n'est pas vide;
-  \item Soient deux applications \(f,g \in \Lin{E}{F}\) et un scalaire \(\alpha\). Montrons que \(h=\alpha f +g\) est linéaire. Soit alors deux vecteurs \(x,y\) de \(E\) et un scalaire \(\lambda\) et on a
-    \begin{align}
-      h(\lambda x+y)&=(\alpha f+g)(\lambda x+y) \\
-      &=\alpha f(\lambda x+y)  +g(\lambda x+y) \\
-      &=\alpha(\lambda f(x)+f(y)) +\lambda g(x)+g(y) \\
-      &=\lambda(\alpha f(x)) + \lambda g(x) + \alpha f(y) +g(y)\\
-      &=\lambda(\alpha f(x)+g(x))+\alpha f(y) +g(y) \\
-      &=\lambda h(x)+h(y),
-    \end{align}
-    donc \(h=\alpha f+g\) est linéaire, \(h \in \Lin{E}{F}\).
+    \item \(\Lin{E}{F}\) est inclus dans \(F^E\);
+    \item l'application nulle qui va de \(E\) dans \(F\) est linéaire, donc \(\Lin{E}{F}\) n'est pas vide;
+    \item Soient deux applications \(f,g \in \Lin{E}{F}\) et un scalaire \(\alpha\). Montrons que \(h=\alpha f +g\) est linéaire. Soit alors deux vecteurs \(x,y\) de \(E\) et un scalaire \(\lambda\) et on a
+      \begin{align}
+        h(\lambda x+y)&=(\alpha f+g)(\lambda x+y) \\
+                      &=\alpha f(\lambda x+y)  +g(\lambda x+y) \\
+                      &=\alpha(\lambda f(x)+f(y)) +\lambda g(x)+g(y) \\
+                      &=\lambda(\alpha f(x)) + \lambda g(x) + \alpha f(y) +g(y)\\
+                      &=\lambda(\alpha f(x)+g(x))+\alpha f(y) +g(y) \\
+                      &=\lambda h(x)+h(y),
+      \end{align}
+      donc \(h=\alpha f+g\) est linéaire, \(h \in \Lin{E}{F}\).
   \end{itemize}
   Alors par caractérisation, \(\Lin{E}{F}\) est un sous-espace vectoriel de \(F^E\).
 \end{proof}
@@ -423,7 +423,7 @@ On sait que \(\K\) est un espace vectoriel sur lui-même.
 
 Soient, par exemple, deux reéls \(a\) et \(b\) tels que \(a<b\) alors l'application
 \begin{equation}
- \fonction{I}{\mathit{C}(\intervalleff{a}{b},\R)}{\R}{f}{\int_{a}^b f(t)\D t}
+  \fonction{I}{\mathit{C}(\intervalleff{a}{b},\R)}{\R}{f}{\int_{a}^b f(t)\D t}
 \end{equation}
 est une forme linéaire. Puisque pour toutes fonctions \(f\) et \(g\) continues de \(\intervalleff{a}{b}\) vers \(\R\) et tout sclaire \(\alpha\) on a
 \begin{align}
@@ -438,9 +438,9 @@ Soit \(X\) un ensemble quelconque. \(\K\) est un espace vectoriel sur lui-même,
   Soit \((E,+,\perp)\) un \(\K\)-espace vectoriel et soit \(f \in \K^E\) une forme linéaire non nulle. Comme elle est non nulle, il existe \(x_0 \in E\) tel que \(f(x_0)\neq 0\). On pose \(\lambda =f(x_0)\). Comme il est non nul, on dispose de son inverse \(\lambda^{-1}\). Pour tout scalaire \(\mu\), on a
   \begin{align}
     \mu & =1 \mu \\
-    &= \mu (\lambda \lambda^{-1})\\
-    &=(\mu\lambda^{-1})f(x_0)\\
-    &=f(\mu\lambda^{-1}x_0).
+        &= \mu (\lambda \lambda^{-1})\\
+        &=(\mu\lambda^{-1})f(x_0)\\
+        &=f(\mu\lambda^{-1}x_0).
   \end{align}
   Donc \(\mu \in \Image(f)\). Alors \(\K \subset \Image(f)\). L'autre inclusion est évidente donc \(\K=\Image(f)\). Donc l'application \(f\) est surjective.
 \end{proof}
@@ -456,8 +456,8 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
   Déjà, \(v\circ u\) est bien définie puisque \(\Image(u) \subset F\). Soient \(x\) et \(x'\) deux vecteurs de \(E\) et un scalaire \(\lambda\). Alors
   \begin{align}
     v\circ u(\lambda x+x') &=v(u(\lambda x+x')) \\
-    &=v(\lambda u(x)+u(x'))\\
-    &=\lambda v\circ u(x) + v\circ u(x'),
+                           &=v(\lambda u(x)+u(x'))\\
+                           &=\lambda v\circ u(x) + v\circ u(x'),
   \end{align}
   donc \(v\circ u\) est linéaire.
 \end{proof}
@@ -465,7 +465,7 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
 \begin{prop}
   Soient trois \(\K\)-espaces vectoriels \(E\), \(F\) et \(G\) et \(u \in \Lin{E}{F}\). On définit 
   \begin{equation}
-      \fonction{\Phi_u}{\Lin{F}{G}}{\Lin{E}{G}}{v}{v \circ u}. 
+    \fonction{\Phi_u}{\Lin{F}{G}}{\Lin{E}{G}}{v}{v \circ u}. 
   \end{equation}
   Alors \(\Phi_u\) est linéaire.
 \end{prop}
@@ -477,9 +477,9 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
   Alors en appliquant cette fonction à tout vecteur \(x\) de \(E\), on obtient
   \begin{align}
     \Phi_u(\lambda v+v')(x) &= ((\lambda v+v') \circ u)(x) \\
-    &= \lambda v \circ u(x) + v' \circ u (x) \\
-    &=(\lambda v \circ u + v'\circ u)(x) \\
-    &=(\Phi_u(v)+\Phi_u(v'))(x).
+                            &= \lambda v \circ u(x) + v' \circ u (x) \\
+                            &=(\lambda v \circ u + v'\circ u)(x) \\
+                            &=(\Phi_u(v)+\Phi_u(v'))(x).
   \end{align}
   Comme ceci est vrai pour tout \(x \in E\), on a alors \(\Phi_u(\lambda v+v') = \lambda \Phi_u(v)+\Phi_u(v')\). \(\Phi_u\) est donc linéaire.
 \end{proof}
@@ -495,7 +495,7 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
 \begin{prop}
   Soient trois \(\K\)-espaces vectoriels \(E,F,G\) et \(u \in \Lin{F}{G}\). On définit
   \begin{equation}
-  	\fonction{\Psi_v}{\Lin{E}{F}}{\Lin{E}{G}}{v}{v \circ u}.
+    \fonction{\Psi_v}{\Lin{E}{F}}{\Lin{E}{G}}{v}{v \circ u}.
   \end{equation} 
   Alors \(\Psi_v\) est linéaire.
 \end{prop}
@@ -507,9 +507,9 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
   Alors en appliquant cette fonction à tout vecteur \(x\) de \(E\), on obtient
   \begin{align}
     \Psi_v(\lambda u+u')(x)&=v \circ (\lambda u+u')(x) \\
-    &=\lambda v(u(x)) + v(u'(x)) \label{eg:eg2}\\
-    &=\lambda v\circ u(x) +v\circ u'(x) \\
-    &=(\lambda \Psi_v(u)+\Psi_v(u'))(x).
+                           &=\lambda v(u(x)) + v(u'(x)) \label{eg:eg2}\\
+                           &=\lambda v\circ u(x) +v\circ u'(x) \\
+                           &=(\lambda \Psi_v(u)+\Psi_v(u'))(x).
   \end{align}
   Attention, l'égalité~\eqref{eg:eg2} est valable parce que \(v\) est linéaire. Comme ceci est vrai pour tout \(x \in E\), on a alors \(\Psi_v(\lambda u+u')=\lambda \Psi_v(u)+\Psi_v(u')\), et donc \(\Psi_v\) est linéaire.
 \end{proof}
@@ -525,17 +525,17 @@ Si \(E\) est un espace vectoriel, on note \(E^*=\Lin{E}{\K}\) l'ensemble des for
 
 Soit \((E,+,\perp)\) un \(\K\)-espace vectoriel et \(\Endo{E}\) l'ensemble des endomorphismes linéaires de \(E\). Alors
 \begin{itemize}
-\item \((\Endo{E},+,\perp)\) est un \(\K\)-espace vectoriel et son élément nul est l'application nulle;
-\item \((\Endo{E}, +, \circ)\) est un anneau~:
-  \begin{itemize}
-  \item \((\Endo{E},+)\) est un groupe abélien (puisque \((\Endo{E},+,\perp)\) est un \(\K\)-espace vectoriel),
-  \item on a vu que la loi \(\circ\) était associative et distributive par rapport à la loi \(+\),
-  \item l'élément neutre pour \(\circ\) est l'identité \(\Id_{\Endo{E}}\);
-  \end{itemize}
-\item la linéarité des fonctions construites \(\Phi_u\) et \(\Psi_v\) entraînent que
-  \begin{equation}
-    \forall (u,v) \in \Endo{E}^2 \ \forall \lambda \in \K \quad \lambda u \circ v = (\lambda u) \circ v = u \circ (\lambda v).
-  \end{equation}
+  \item \((\Endo{E},+,\perp)\) est un \(\K\)-espace vectoriel et son élément nul est l'application nulle;
+  \item \((\Endo{E}, +, \circ)\) est un anneau~:
+    \begin{itemize}
+      \item \((\Endo{E},+)\) est un groupe abélien (puisque \((\Endo{E},+,\perp)\) est un \(\K\)-espace vectoriel),
+      \item on a vu que la loi \(\circ\) était associative et distributive par rapport à la loi \(+\),
+      \item l'élément neutre pour \(\circ\) est l'identité \(\Id_{\Endo{E}}\);
+    \end{itemize}
+  \item la linéarité des fonctions construites \(\Phi_u\) et \(\Psi_v\) entraînent que
+    \begin{equation}
+      \forall (u,v) \in \Endo{E}^2 \ \forall \lambda \in \K \quad \lambda u \circ v = (\lambda u) \circ v = u \circ (\lambda v).
+    \end{equation}
 \end{itemize}
 
 Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une \(\K\)-algébre.
@@ -552,8 +552,8 @@ Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une
   Soit un isomorphisme \(u\) de \(E\) dans \(F\). Comme \(u\) est bijective, son inverse \(u^{-1}\) est bien définie de \(F\) dans \(E\) et elle est aussi bijective. Montrons qu'elle est linéaire. Soient deux vecteurs \(x\) et \(x'\) de \(E\) et un scalaire \(\lambda\). Alors
   \begin{align}
     u^{-1}(\lambda x+x') &= u^{-1}(\lambda u\circ u^{-1} (x) + u \circ u^{-1}(x')) \\
-    &=u^{-1}(u(\lambda u^{-1} x +u^{-1}(x'))) \\
-    &=\lambda u^{-1} x +u^{-1}(x').
+                         &=u^{-1}(u(\lambda u^{-1} x +u^{-1}(x'))) \\
+                         &=\lambda u^{-1} x +u^{-1}(x').
   \end{align}
   Donc \(u^{-1}\) est linéaire et comme elle est aussi bijective on a \(u^{-1} \in \Isom{F}{E}\).
 \end{proof}
@@ -566,8 +566,8 @@ Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une
 \end{corth}
 Étant donné un \(\K\)-espace vectoriel \(E\), on dispose de
 \begin{itemize}
-\item \(\GL{E} = \enstq{u \in \Endo{E}}{u\text{~est bijective}}\) ;
-\item \(\uinv{\Endo{E}}=\enstq{u \in \Endo{E}}{\exists v \in \Endo{E} \quad v \circ u = u \circ v = Id_E}\) est le groupe des inversible de l'anneau \((\Endo{E}, +, \circ)\).
+  \item \(\GL{E} = \enstq{u \in \Endo{E}}{u\text{~est bijective}}\) ;
+  \item \(\uinv{\Endo{E}}=\enstq{u \in \Endo{E}}{\exists v \in \Endo{E} \quad v \circ u = u \circ v = Id_E}\) est le groupe des inversible de l'anneau \((\Endo{E}, +, \circ)\).
 \end{itemize}
 %
 \begin{prop}
@@ -580,9 +580,9 @@ Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une
   Soit \(u \in E^E\), alors
   \begin{align}
     u \in \GL{E} &\iff u \in \Endo{E} \text{~et u bijective} \\
-    &\iff u \in \Endo{E} \quad \exists v \in E^E \ v \circ u=u \circ v=\Id_E \\
-    &\iff u \in \Endo{E} \quad \exists v \in \Endo{E} \ v \circ u=u \circ v=\Id_E \\
-    &\iff u \in \uinv{\Endo{E}}.
+                 &\iff u \in \Endo{E} \quad \exists v \in E^E \ v \circ u=u \circ v=\Id_E \\
+                 &\iff u \in \Endo{E} \quad \exists v \in \Endo{E} \ v \circ u=u \circ v=\Id_E \\
+                 &\iff u \in \uinv{\Endo{E}}.
   \end{align}
   La deuxième équivalence est due à la caractérisation des bijections et la troisième au corollaire précédent. Du coup \(\GL{E} = \uinv{\Endo{E}}\).
 \end{proof}
@@ -591,8 +591,8 @@ Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une
 \end{theo}
 \begin{proof}
   On sait que \(\GL{E} = \uinv{\Endo{E}}\) et on a vu dans le chapitre~
-\ref{chap:groupes} au théorème~
-\ref{theo:uinversible} à la page~\pageref{theo:uinversible} que c'est un groupe.
+  \ref{chap:groupes} au théorème~
+  \ref{theo:uinversible} à la page~\pageref{theo:uinversible} que c'est un groupe.
 \end{proof}
 
 \section{Intersection et somme de sous-espaces vectoriels}
@@ -605,17 +605,17 @@ Ces trois points principaux signifient que \((\Endo{E},+,\circ, \perp)\) est une
 \begin{proof}
   On note \(F\) cette intersection. Alors
   \begin{itemize}
-  \item par définition \(F\) est inclus dans \(E\);
-  \item pour tout \(i \in I\), \(E_i\) est un sous-espace vectoriel donc \(0 \in E_i\). Alors \(0 \in F\) et \(F\) est non vide;
-  \item soient un scalaire \(\lambda\) et deux vecteurs \((x,y) \in F^2\). Comme ils sont dans \(F\), ils sont dans tous les \(E_i\) pour \(i \in I\); et comme chaque \(E_i\) est un sous-espace vectoriel, on a \(\lambda x +y \in E_i\) et comme c'est vrai pour chaque \(i \in I\) alors \(\lambda x +y \in F\).
+    \item par définition \(F\) est inclus dans \(E\);
+    \item pour tout \(i \in I\), \(E_i\) est un sous-espace vectoriel donc \(0 \in E_i\). Alors \(0 \in F\) et \(F\) est non vide;
+    \item soient un scalaire \(\lambda\) et deux vecteurs \((x,y) \in F^2\). Comme ils sont dans \(F\), ils sont dans tous les \(E_i\) pour \(i \in I\); et comme chaque \(E_i\) est un sous-espace vectoriel, on a \(\lambda x +y \in E_i\) et comme c'est vrai pour chaque \(i \in I\) alors \(\lambda x +y \in F\).
   \end{itemize}
   Par caractérisation, \(F\) est un sous-espace vectoriel de \(E\).
 \end{proof}
 %
 En général, l'union de deux sous-espace vectoriel n'est pas un sous-espace vectoriel. Dans le \(\R\)-espace vectoriel \(\C\) :
 \begin{itemize}
-\item \(\R\) est un sous-espace vectoriel;
-\item \(\ii\R\) aussi.
+  \item \(\R\) est un sous-espace vectoriel;
+  \item \(\ii\R\) aussi.
 \end{itemize}
 Pourtant \(\R \cup \ii\R\) n'est pas un sous-espace vectoriel. En effet \(1 \in \R\) donc \(1 \in \R \cup \ii\R\) et \(\ii \in \ii\R\) donc \(\ii \in \R\cup \ii\R\), mais \(1+i \not\in \R\cup\ii\R\). Donc \(\R\cup\ii\R\) n'est pas stable par addition. Ce n'est donc pas un sous-espace vectoriel.
 
@@ -627,10 +627,10 @@ Soit un \(\K\)-espace vectoriel \(E\) et \(X\) une partie quelconque de \(E\).
 
 Soit \(\Xi=\enstq{E' \in \Part(E)}{E' \text{~est un sous-espace vectoriel de E et } X \subset E'}\). Alors
 \begin{itemize}
-\item \(\Xi\) est une partie non vide car \(E \in \Xi\);
-\item d'après la dernière sous section, \(\bigcap_{E' \in \Xi} E'\) est un sous-espace vectoriel de \(E\);
-\item pour tout \(E' \in \Xi\), on a \(X \in E'\) donc il est dans l'intersection \(X \subset \bigcap_{E' \in \Xi} E'\);
-\item soit \(E_0'\) un sous-espace vectoriel de \(E\) qui contient \(X\), alors par définition \(E_0' \in \Xi\).
+  \item \(\Xi\) est une partie non vide car \(E \in \Xi\);
+  \item d'après la dernière sous section, \(\bigcap_{E' \in \Xi} E'\) est un sous-espace vectoriel de \(E\);
+  \item pour tout \(E' \in \Xi\), on a \(X \in E'\) donc il est dans l'intersection \(X \subset \bigcap_{E' \in \Xi} E'\);
+  \item soit \(E_0'\) un sous-espace vectoriel de \(E\) qui contient \(X\), alors par définition \(E_0' \in \Xi\).
 \end{itemize}
 
 Donc \(\bigcap_{E' \in \Xi} E' \subset E_0'\).
@@ -661,9 +661,9 @@ Donc \(\bigcap_{E' \in \Xi} E' \subset E_0'\).
 \begin{proof}
   Par définition \(\VectEngendre(X)\) est un sous-espace vectoriel de \(E\) donc si \(X=\VectEngendre(X)\) alors \(X\) est un sous-espace vectoriel de \(E\). Si maintenant on vérifie les hypothèses pour la caractérisation
   \begin{itemize}
-  \item \(E_1=X\) est un sous-espace vectoriel de \(E\);
-  \item \(X \subset E_1=X\);
-  \item pour tout sous-espace vectoriel \(E_2\) de \(E\) si \(X \subset E_2\) alors \(X=E_1 \subset E_2\).
+    \item \(E_1=X\) est un sous-espace vectoriel de \(E\);
+    \item \(X \subset E_1=X\);
+    \item pour tout sous-espace vectoriel \(E_2\) de \(E\) si \(X \subset E_2\) alors \(X=E_1 \subset E_2\).
   \end{itemize}
   Comme elles sont validées, on peut écrire que \(E_1=X=\VectEngendre(X)\).
 \end{proof}
@@ -672,9 +672,9 @@ Donc \(\bigcap_{E' \in \Xi} E' \subset E_0'\).
 \end{prop}
 \begin{proof} On démontre ce résultat grâce à une caractérisation. Vérifions les hypothèses~:
   \begin{itemize}
-  \item \(\{0_E\}\) est un sous-espace vectoriel de \(E\);
-  \item \(\emptyset \subset \{0_E\}\)
-  \item pour tout sous-espace vectoriel \(E_2\) de \(E\), \(\{0\} \subset E_2\).
+    \item \(\{0_E\}\) est un sous-espace vectoriel de \(E\);
+    \item \(\emptyset \subset \{0_E\}\)
+    \item pour tout sous-espace vectoriel \(E_2\) de \(E\), \(\{0\} \subset E_2\).
   \end{itemize}
   Alors par caractérisation, \(\VectEngendre(\emptyset)=\{0_E\}\).
 \end{proof}
@@ -692,25 +692,25 @@ Donc \(\bigcap_{E' \in \Xi} E' \subset E_0'\).
   \end{equation}
   On va montrer que \(V=\VectEngendre(X)\) par caractérisation~:
   \begin{itemize}
-  \item \(V\) est un sous-espace vectoriel de \(E\)~:
-    \begin{itemize}
-    \item \(V \subset E\);
-    \item \(V \neq \emptyset\) car \(X \neq \emptyset\) donc il existe \(x \in X\) et \(x=1 x \in V\);
-    \item Soit deux vecteurs \(y,z \in V\) et un scalaire \(\alpha\)~:
-      \begin{align}
-        y \in V &\quad \exists n \in \N^* \ \exists x_1, \ldots, x_n \in X \ \exists \lambda_1, \ldots, \lambda_n \in \K \ y=\sum_{i=1}^n \lambda_i x_i \\
-        z \in V &\quad \exists p \in \N^* \ \exists x'_1, \ldots, x'_p \in X \ \exists \lambda'_1, \ldots, \lambda' \in \K \ z=\sum_{i=1}^p \lambda'_i x'_i,
-      \end{align}
-      alors
-      \begin{align}
-        \alpha y +z &= \alpha \sum_{i=1}^n \lambda_i x_i + \sum_{i=1}^p \lambda'_i x'_i \\
-        &= \sum_{i=1}^n (\alpha\lambda_i) x_i + \sum_{i=1}^p \lambda'_i x'_i,
-      \end{align}
-      et donc \(\alpha y +z \in V\).
-    \end{itemize}
-    Alors par caractérisation, \(V\) est un sous-espace vectoriel de \(E\).
-  \item \(X \subset V\) : en effet pour tout \(x \in X\), \(x = 1x \in V\);
-  \item soit \(F\) un sous-espace vectoriel de \(E\) qui contient \(X\), alors \(F\) est stable par combinaison linéaire et donc il contient toutes les combinaisons linéaires d'éléments de \(X\), c'est-à-dire \(V\).
+    \item \(V\) est un sous-espace vectoriel de \(E\)~:
+      \begin{itemize}
+        \item \(V \subset E\);
+        \item \(V \neq \emptyset\) car \(X \neq \emptyset\) donc il existe \(x \in X\) et \(x=1 x \in V\);
+        \item Soit deux vecteurs \(y,z \in V\) et un scalaire \(\alpha\)~:
+          \begin{align}
+            y \in V &\quad \exists n \in \N^* \ \exists x_1, \ldots, x_n \in X \ \exists \lambda_1, \ldots, \lambda_n \in \K \ y=\sum_{i=1}^n \lambda_i x_i \\
+            z \in V &\quad \exists p \in \N^* \ \exists x'_1, \ldots, x'_p \in X \ \exists \lambda'_1, \ldots, \lambda' \in \K \ z=\sum_{i=1}^p \lambda'_i x'_i,
+          \end{align}
+          alors
+          \begin{align}
+            \alpha y +z &= \alpha \sum_{i=1}^n \lambda_i x_i + \sum_{i=1}^p \lambda'_i x'_i \\
+                        &= \sum_{i=1}^n (\alpha\lambda_i) x_i + \sum_{i=1}^p \lambda'_i x'_i,
+          \end{align}
+          et donc \(\alpha y +z \in V\).
+      \end{itemize}
+      Alors par caractérisation, \(V\) est un sous-espace vectoriel de \(E\).
+    \item \(X \subset V\) : en effet pour tout \(x \in X\), \(x = 1x \in V\);
+    \item soit \(F\) un sous-espace vectoriel de \(E\) qui contient \(X\), alors \(F\) est stable par combinaison linéaire et donc il contient toutes les combinaisons linéaires d'éléments de \(X\), c'est-à-dire \(V\).
   \end{itemize}
   Alors par caractérisation, \(V=\VectEngendre(X)\).
 \end{proof}
@@ -737,32 +737,32 @@ Il n'y a pas d'unicité de la famille génératrice, en effet \(\{0\}=\VectEngen
 \begin{theo}
   Soient un \(\K\)-espace vectoriel \(E\) puis \(E_1\) et \(E_2\) deux de ses sous-espaces vectoriels. Alors
   \begin{enumerate}
-  \item \(E_1+E_2\) est un sous-espace vectoriel de \(E\);
-  \item \(E_1+E_2=\VectEngendre(E_1 \cup E_2)\).
+    \item \(E_1+E_2\) est un sous-espace vectoriel de \(E\);
+    \item \(E_1+E_2=\VectEngendre(E_1 \cup E_2)\).
   \end{enumerate}
 \end{theo}
 
 \begin{proof}
   \begin{enumerate}
-  \item On démontre que c'est un sous-espace vectoriel par caractérisation~:
-    \begin{itemize}
-    \item par définition \(E_1 + E_2 \subset E\);
-    \item comme \(E_1\) et \(E_2\) sont des sous esapces vectoriels de \(E\), \(0\in E_1\) et \(0 \in E_2\) donc par somme \(0=0+0 \in E_1+E_2\), donc il n'est pas vide;
-    \item pour tout scalaire \(\lambda\) et tous vecteusr \(y\), \(y'\) de \(E_1+E_2\) on peut dire qu'il existe \(x_1\), \(x'_1\) dans \(E_1\) et \(x_2\), \(x'_2\) dans \(E_2\) tels que \(y=x_1+x_2\) et \(y'=x'_1+x'_2\), alors
-      \begin{align}
-        \lambda y + y' &= \lambda(x_1+x_2)+x'_1+x'_2 \\
-        &=(\lambda x_1+x'_1)+(\lambda x_2+x'_2),
-      \end{align}
-      comme \(E_1\) et \(E_2\) sont des sous-espaces vectoriel de \(E\) on a \((\lambda x_1+x'_1) \in E_1\) et \((\lambda x_2+x'_2) \in E_2\), ainsi \(\lambda y + y' \in E_1+E_2\).
-    \end{itemize}
-    Alors \(E_1+E_2\) est un sous-espace vectoriel de \(E\).
-  \item
-    \begin{itemize}
-    \item on sait que \(E_1+E_2\) est un sous-espace vectoriel de \(E\);
-    \item quelque soit \(x_1 \in E_1\) on a aussi \(0 \in E_2\) donc \(x_1=x_1+0 \in E_1+E_2\), alors \(E_1 \subset E_1+E_2\), de la même manière \(E_2 \subset E_1+E_2\), ainsi en réunissant les deux ensembles : \(E_1 \cup E_2 \subset E_1+E_2\);
-    \item Soit un sous-espace vectoriel \(F\) de \(E\) qui contient \(E_1 \cup E_2\), montrons que \(E_1+E_2 \subset F\)~: Soit \(y \in E_1+E_2\) alors il existe \((x_1,x_2) \in E_1 \times E_2\) tel que \(y=x_1+x_2\); comme \(x_1 \in E_1 \subset E_1 \cup E_2  \subset F\) idem \(x_2 \in E_2 \subset E_1 \cup E_2  \subset F\); \(F\) est un sous-espace vectoriel alors \(y=x_1+x_2 \in F\) et finalement \(E_1+E_2 \subset F\).
-    \end{itemize}
-    Alors par caractérisation \(E_1+E_2=\VectEngendre(E_1 \cup E_2)\). Il est appelé l'espace somme de \(E_1 \cup E_2\).
+    \item On démontre que c'est un sous-espace vectoriel par caractérisation~:
+      \begin{itemize}
+        \item par définition \(E_1 + E_2 \subset E\);
+        \item comme \(E_1\) et \(E_2\) sont des sous esapces vectoriels de \(E\), \(0\in E_1\) et \(0 \in E_2\) donc par somme \(0=0+0 \in E_1+E_2\), donc il n'est pas vide;
+        \item pour tout scalaire \(\lambda\) et tous vecteusr \(y\), \(y'\) de \(E_1+E_2\) on peut dire qu'il existe \(x_1\), \(x'_1\) dans \(E_1\) et \(x_2\), \(x'_2\) dans \(E_2\) tels que \(y=x_1+x_2\) et \(y'=x'_1+x'_2\), alors
+          \begin{align}
+            \lambda y + y' &= \lambda(x_1+x_2)+x'_1+x'_2 \\
+                           &=(\lambda x_1+x'_1)+(\lambda x_2+x'_2),
+          \end{align}
+          comme \(E_1\) et \(E_2\) sont des sous-espaces vectoriel de \(E\) on a \((\lambda x_1+x'_1) \in E_1\) et \((\lambda x_2+x'_2) \in E_2\), ainsi \(\lambda y + y' \in E_1+E_2\).
+      \end{itemize}
+      Alors \(E_1+E_2\) est un sous-espace vectoriel de \(E\).
+    \item
+      \begin{itemize}
+        \item on sait que \(E_1+E_2\) est un sous-espace vectoriel de \(E\);
+        \item quelque soit \(x_1 \in E_1\) on a aussi \(0 \in E_2\) donc \(x_1=x_1+0 \in E_1+E_2\), alors \(E_1 \subset E_1+E_2\), de la même manière \(E_2 \subset E_1+E_2\), ainsi en réunissant les deux ensembles : \(E_1 \cup E_2 \subset E_1+E_2\);
+        \item Soit un sous-espace vectoriel \(F\) de \(E\) qui contient \(E_1 \cup E_2\), montrons que \(E_1+E_2 \subset F\)~: Soit \(y \in E_1+E_2\) alors il existe \((x_1,x_2) \in E_1 \times E_2\) tel que \(y=x_1+x_2\); comme \(x_1 \in E_1 \subset E_1 \cup E_2  \subset F\) idem \(x_2 \in E_2 \subset E_1 \cup E_2  \subset F\); \(F\) est un sous-espace vectoriel alors \(y=x_1+x_2 \in F\) et finalement \(E_1+E_2 \subset F\).
+      \end{itemize}
+      Alors par caractérisation \(E_1+E_2=\VectEngendre(E_1 \cup E_2)\). Il est appelé l'espace somme de \(E_1 \cup E_2\).
   \end{enumerate}
 \end{proof}
 
@@ -775,10 +775,10 @@ Par exemple, \(\C=\R \oplus \ii\R\). Puisque tout complexe \(z\) admet une parti
 \begin{theo}\label{theo:caracSommeDirecte}
   Soient un \(\K\)-espace vectoriel \(E\) puis \(E_1\) et \(E_2\) deux de ses sous-espaces vectoriels. Il y a équivalence entre les assertions suivantes~:
   \begin{enumerate}
-  \item \(\forall x \in E_1+E_2 \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2\);
-  \item \(\exists! (x_1,x_2) \in E_1\times E_2 \quad x_1+x_2=0\);
-  \item \(\forall (x_1,x_2) \in E_1\times E_2 \quad x_1+x_2=0 \implies x_1=x_2=0\);
-  \item \(E_1 \cap E_2 = \{0\}\).
+    \item \(\forall x \in E_1+E_2 \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2\);
+    \item \(\exists! (x_1,x_2) \in E_1\times E_2 \quad x_1+x_2=0\);
+    \item \(\forall (x_1,x_2) \in E_1\times E_2 \quad x_1+x_2=0 \implies x_1=x_2=0\);
+    \item \(E_1 \cap E_2 = \{0\}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
@@ -806,11 +806,11 @@ Par exemple, \(\C=\R \oplus \ii\R\). Puisque tout complexe \(z\) admet une parti
 \end{theo}
 \begin{proof}
   S'ils sont supplémentaires alors on a \(E_1 \cap E_2 = \{0\}\) (qui donne l'unicité du couple)  et \(E=E_1+E_2\) (qui donne l'existence du couple). Si maintenant on suppose que
-\begin{equation}
-  \forall x \in E \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2.
-\end{equation}
-alors elle nous dit que \(E \subset E_1+E_2\) et comme l'autre inclusion est triviale on a \(E = E_1+E_2\). Par le théorème~
-\ref{theo:caracSommeDirecte} c'est équivalent à \(E_1 \cap E_2 =\{0\}\).
+  \begin{equation}
+    \forall x \in E \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2.
+  \end{equation}
+  alors elle nous dit que \(E \subset E_1+E_2\) et comme l'autre inclusion est triviale on a \(E = E_1+E_2\). Par le théorème~
+  \ref{theo:caracSommeDirecte} c'est équivalent à \(E_1 \cap E_2 =\{0\}\).
 \end{proof}
 
 \emph{Exemples}~: \(\R\) et \(\ii\R\) sont supplémentaires dans le \(\R\)-espace vectoriel \(C\). Pour n'importe quel \(\K\)-espace vectoriel \(E\) \(E=E \oplus \{0\}\). Si on note \(E=\R^\R\) le \(\R\)-espace vectoriel des fonctions et si on note \(P\) l'ensemble des fonctions paires et \(I\) l'ensemble des fonctions impaires alors \(\R^R=P \oplus I\).
@@ -841,15 +841,15 @@ Pour l'existence, on la démontrera en dimension finie au chapitre~
 \begin{prop}\label{prop:deuxsuppiso}
   Soit un \(\K\)-espace vectoriel \(E\) et \(E_1\) un sous-espace vectoriel de \(E\). Supposons que \(E_1\) admettent deux supplémentaires notés \(E_2\) et \(E'_2\). Alors
   \begin{itemize}
-  \item Ils sont isomorphes;
-  \item si \(E_2 \subset E'_2\) ou l'inverse alors \(E_2=E'_2\).
+    \item Ils sont isomorphes;
+    \item si \(E_2 \subset E'_2\) ou l'inverse alors \(E_2=E'_2\).
   \end{itemize}
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item voir la sous-sous-section~
-\ref{sec:projections}
-  \item On sait que \(E=E_1 \oplus E_2=E_1 \oplus E'_2\) et que \(E_2 \subset E'_2\). Soit \(x \in E'_2 \subset E\) et comme \(E=E_1 \oplus E_2\) il existe un unique couple \((x_1,x_2 ) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). Donc \(x-x_2=x_1\) et alors comme \(x_2 \in E_2 \subset E'_2\) et comme c'est un sous-espace vectoriel on a \(x-x_2\in E'_2\)  et \(x_1 \in E_1\) comme ils sont égaux et que \(E_1 \cap E'_2=0\)  alors \(x=x_2 \in E_2\). On a montré \(E'_2 \subset E_2\) donc l'égalité.
+    \item voir la sous-sous-section~
+      \ref{sec:projections}
+    \item On sait que \(E=E_1 \oplus E_2=E_1 \oplus E'_2\) et que \(E_2 \subset E'_2\). Soit \(x \in E'_2 \subset E\) et comme \(E=E_1 \oplus E_2\) il existe un unique couple \((x_1,x_2 ) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). Donc \(x-x_2=x_1\) et alors comme \(x_2 \in E_2 \subset E'_2\) et comme c'est un sous-espace vectoriel on a \(x-x_2\in E'_2\)  et \(x_1 \in E_1\) comme ils sont égaux et que \(E_1 \cap E'_2=0\)  alors \(x=x_2 \in E_2\). On a montré \(E'_2 \subset E_2\) donc l'égalité.
   \end{itemize}
 \end{proof}
 
@@ -862,15 +862,15 @@ Comme son nom l'indique, ce théorème sert à préparer la démonstration du th
 \begin{proof}
   Soit un supplémentaire \(S\) de \(\Ker(u)\) dans \(E\). Construisons un isomorphisme de \(S\) sur \(\Image(u)\). Soit l'application \(v=u_{|S}^{|\Image(u)}\). Alors~:
   \begin{enumerate}
-  \item \(v\) est bien définie puisque pour tout \(x \in S\), \(u(x) \in \Image(u)\);
-  \item \(v\) est linéaire puisque c'est une restriction de l'application linéaire \(u\);
-  \item \(\Ker(v)=\Ker(u) \cap S =\{0\}\) puisque par hypothèse ils sont supplémentaires, alors \(v\) est injective;
-  \item Montrons que \(\Image(u)=\Image(v)\)~:
-    \begin{enumerate}
-    \item Déjà \(\Image(v) \subset \Image(u)\) par définition de \(v\)
-    \item et ensuite soit \(y \in \Image(u)\), alors il existe \(x \in E\) tel que \(y=u(x)\). Comme \(E=\Ker(u) \oplus S\) il existe un unique couple \((z,t) \in \Ker(u) \times S\) tel que \(x=z+t\). Alors \(y=u(z+t)=u(z)+u(t)=u(t)=v(t)\) parce que \(z \in \Ker(u)\) et parce que \(t \in S\). Alors \(y \in \Image(v)\). Ainsi \(\Image(u) \subset \Image(v)\)
-    \end{enumerate}
-    Par double inclusion \(\Image(u)=\Image(v)\), donc \(v\) est surjective.
+    \item \(v\) est bien définie puisque pour tout \(x \in S\), \(u(x) \in \Image(u)\);
+    \item \(v\) est linéaire puisque c'est une restriction de l'application linéaire \(u\);
+    \item \(\Ker(v)=\Ker(u) \cap S =\{0\}\) puisque par hypothèse ils sont supplémentaires, alors \(v\) est injective;
+    \item Montrons que \(\Image(u)=\Image(v)\)~:
+      \begin{enumerate}
+        \item Déjà \(\Image(v) \subset \Image(u)\) par définition de \(v\)
+        \item et ensuite soit \(y \in \Image(u)\), alors il existe \(x \in E\) tel que \(y=u(x)\). Comme \(E=\Ker(u) \oplus S\) il existe un unique couple \((z,t) \in \Ker(u) \times S\) tel que \(x=z+t\). Alors \(y=u(z+t)=u(z)+u(t)=u(t)=v(t)\) parce que \(z \in \Ker(u)\) et parce que \(t \in S\). Alors \(y \in \Image(v)\). Ainsi \(\Image(u) \subset \Image(v)\)
+      \end{enumerate}
+      Par double inclusion \(\Image(u)=\Image(v)\), donc \(v\) est surjective.
   \end{enumerate}
   Finalement l'application \(v\) est bijective et linéaire. C'est donc un isomorphisme de \(S\) sur \(\Image(u)\).
 \end{proof}
@@ -884,50 +884,50 @@ Dans toute cette section, \(E\) désignera un \(\K\)-espace vectoriel muni de so
 
 \begin{defdef}
   Soient \(E_1, E_2\) deux sous-espaces vectoriels supplémentaires de \(E\). Pour tout vecteur \(x \in E\) il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(x=x_1+x_2\) (d'après le théorème~
-\ref{theo:caracSommeDirecte}). Alors on peut définir les applications \(\fonction{p_1}{E}{E_1}{x}{x_1}\) et \(\fonction{p_2}{E}{E_2}{x}{x_2}\). L'application \(p_1\) est appelée la projection sur \(E_1\) parallèlement à \(E_2\). De manière analogue, l'application \(p_2\) est appelée la projection sur \(E_2\) parallèlement à \(E_1\).
+  \ref{theo:caracSommeDirecte}). Alors on peut définir les applications \(\fonction{p_1}{E}{E_1}{x}{x_1}\) et \(\fonction{p_2}{E}{E_2}{x}{x_2}\). L'application \(p_1\) est appelée la projection sur \(E_1\) parallèlement à \(E_2\). De manière analogue, l'application \(p_2\) est appelée la projection sur \(E_2\) parallèlement à \(E_1\).
 \end{defdef}
 
 \begin{theo}\label{theo:propprojection}
   Soient \(E_1, E_2\) deux sous-espaces vectoriels supplémentaires de \(E\). Soit aussi \(p_1\) la projection sur \(E_1\) parallèlement à \(E_2\) et l'application \(p_2\) la projection sur \(E_2\) parallèlement à \(E_1\). Alors ces projections vérifient les propriétés suivantes
   \begin{enumerate}
-  \item \(p_1\) et \(p_2\) sont des endomorphismes de \(E\);
-  \item \(\Image(p_1)=E_1\) et de manière analogue \(\Image(p_2)=E_2\);
-  \item \(\Ker(p_1)=E_2\) et de manière analogue \(\Ker(p_2)=E_1\);
-  \item \(p_1 \circ p_1=p_1\) et de manière analogue \(p_2 \circ p_2=p_2\);
-  \item \(p_1 \circ p_2 = p_2 \circ p_1=0\);
-  \item \(p_1+p_2=\Id\).
+    \item \(p_1\) et \(p_2\) sont des endomorphismes de \(E\);
+    \item \(\Image(p_1)=E_1\) et de manière analogue \(\Image(p_2)=E_2\);
+    \item \(\Ker(p_1)=E_2\) et de manière analogue \(\Ker(p_2)=E_1\);
+    \item \(p_1 \circ p_1=p_1\) et de manière analogue \(p_2 \circ p_2=p_2\);
+    \item \(p_1 \circ p_2 = p_2 \circ p_1=0\);
+    \item \(p_1+p_2=\Id\).
   \end{enumerate}
 \end{theo}
 
 \begin{proof}
   \begin{enumerate}
-  \item
-    Soient \(x\) et \(y\) deux vecteurs de \(E\) et un scalaire \(\lambda\). Puisque \(E_1\) et \(E_2\) sont deux sous-espaces vectoriels supplémentaires de \(E\), il existe deux uniques couples \((x_1,x_2) \in E_1 \times E_2\) et \((y_1,y_2) \in E_1 \times E_2\) tels que \(x=x_1+x_2\) et \(y=y_1+y_2\). Alors
-    \begin{equation}
-      \lambda x +y= \lambda (x_1+x_2) + (y_1+y_2) = (\lambda x_1+y_1) + (\lambda x_2 +y_2),
-    \end{equation}
-    et comme \(E_1\) et \(E_2\) sont stables par combinaison linéaire \(\lambda x_1+y_1 \in E_1\) et \(\lambda x_2 +y_2 \in E_2\) et comme cette décomposition est unique on a bien~:
-    \begin{align}
-      \lambda p_1(x)+p_1(y) &= p_1(\lambda x+y); \\
-      \lambda p_2(x)+p_2(y) &= p_2(\lambda x+y).
-    \end{align}
-    Ce qui montre bien que \(p_1\) et \(p_2\) sont linéaires, de plus par définition \(\Image(p_1) \subset E_1 \subset E\) et \(\Image(p_2) \subset E_2 \subset E\) donc \(p_1,p_2 \in \Endo{E}\).
-  \item On démontre le résultat pour \(p_1\). Par définition \(\Image(p_1) \subset E_1\), alors montrons l'autre inclusion. Soit \(x_1 \in E_1\) et on a \(x_1 = x_1+0\) donc \(p(x_1)=x_1\). Ainsi \(x_1 \in \Image(p_1)\) et alors \(E_1 \subset \Image(p_1)\). Par double inclusion \(\Image(p_1)=E_1\).
-  \item On démontre le résultat pour \(p_1\). Soit \(x_2 \in E_2\) et comme \(x_2=0+x_2\) alors \(p_1(x_2)=0\), on a montré l'inclusion \(E_2 \subset \Ker(p_1)\). Soit maintenant \(x \in \Ker(p_1) \subset E\) alors \(p_1(x)=0\). Comme \(x \in E\), il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). Comme \(x_1=p_1(x)=0\) on a \(x=x_2 \in E_2\). Alors on vient de montrer \(\Ker(p_1) \in E_2\). Par double inclusion on obtient \(\Ker(p_1)=E_2\).
-  \item On démontre le résultat pour \(p_1\). Soit \(x \in E\), alors \(p_1(x) \in E_1\) donc \(p_1(p_1(x))=p_1(x)\) (puisque \(\Image(p_1)=E_1\)). donc \(p_1 \circ p_1=p_1\).
-  \item On démontre le résultat pour \(p_1\). Soit \(x \in E\), comme \(p_2(x) \in E_2 = \Ker(p_1)\) alors \(p_1(p_2(x))=0\) alors \(p_1 \circ p_2=0\).
-  \item Soit un vecteur \(x \in E\), il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). De plus \(x_1=p_1(x)\) et \(x_2=p_2(x)\) alors \(x=(p_1+p_2)(x)\). Finalament \(p_1+p_2 = \Id\).
-\end{enumerate}
+    \item
+      Soient \(x\) et \(y\) deux vecteurs de \(E\) et un scalaire \(\lambda\). Puisque \(E_1\) et \(E_2\) sont deux sous-espaces vectoriels supplémentaires de \(E\), il existe deux uniques couples \((x_1,x_2) \in E_1 \times E_2\) et \((y_1,y_2) \in E_1 \times E_2\) tels que \(x=x_1+x_2\) et \(y=y_1+y_2\). Alors
+      \begin{equation}
+        \lambda x +y= \lambda (x_1+x_2) + (y_1+y_2) = (\lambda x_1+y_1) + (\lambda x_2 +y_2),
+      \end{equation}
+      et comme \(E_1\) et \(E_2\) sont stables par combinaison linéaire \(\lambda x_1+y_1 \in E_1\) et \(\lambda x_2 +y_2 \in E_2\) et comme cette décomposition est unique on a bien~:
+      \begin{align}
+        \lambda p_1(x)+p_1(y) &= p_1(\lambda x+y); \\
+        \lambda p_2(x)+p_2(y) &= p_2(\lambda x+y).
+      \end{align}
+      Ce qui montre bien que \(p_1\) et \(p_2\) sont linéaires, de plus par définition \(\Image(p_1) \subset E_1 \subset E\) et \(\Image(p_2) \subset E_2 \subset E\) donc \(p_1,p_2 \in \Endo{E}\).
+    \item On démontre le résultat pour \(p_1\). Par définition \(\Image(p_1) \subset E_1\), alors montrons l'autre inclusion. Soit \(x_1 \in E_1\) et on a \(x_1 = x_1+0\) donc \(p(x_1)=x_1\). Ainsi \(x_1 \in \Image(p_1)\) et alors \(E_1 \subset \Image(p_1)\). Par double inclusion \(\Image(p_1)=E_1\).
+    \item On démontre le résultat pour \(p_1\). Soit \(x_2 \in E_2\) et comme \(x_2=0+x_2\) alors \(p_1(x_2)=0\), on a montré l'inclusion \(E_2 \subset \Ker(p_1)\). Soit maintenant \(x \in \Ker(p_1) \subset E\) alors \(p_1(x)=0\). Comme \(x \in E\), il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). Comme \(x_1=p_1(x)=0\) on a \(x=x_2 \in E_2\). Alors on vient de montrer \(\Ker(p_1) \in E_2\). Par double inclusion on obtient \(\Ker(p_1)=E_2\).
+    \item On démontre le résultat pour \(p_1\). Soit \(x \in E\), alors \(p_1(x) \in E_1\) donc \(p_1(p_1(x))=p_1(x)\) (puisque \(\Image(p_1)=E_1\)). donc \(p_1 \circ p_1=p_1\).
+    \item On démontre le résultat pour \(p_1\). Soit \(x \in E\), comme \(p_2(x) \in E_2 = \Ker(p_1)\) alors \(p_1(p_2(x))=0\) alors \(p_1 \circ p_2=0\).
+    \item Soit un vecteur \(x \in E\), il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(x=x_1+x_2\). De plus \(x_1=p_1(x)\) et \(x_2=p_2(x)\) alors \(x=(p_1+p_2)(x)\). Finalament \(p_1+p_2 = \Id\).
+  \end{enumerate}
 \end{proof}
 
 \begin{proof}[Démonstration de la proposition~
-\ref{prop:deuxsuppiso}]
+  \ref{prop:deuxsuppiso}]
   Soient \(E_1, E_2, E'_2\) trois sous-espaces vectoriels de \(E\) tels que \(E_1\) et \(E_2\) soient supplémentaires et tels que \(E_1\) et \(E'_2\) soient aussi supplémentaires.
   \begin{equation}
     E=E_1 \oplus E_2 = E_1 \oplus E'_2
   \end{equation}
-Soit \(p_1\) la projection sur \(E_1\) parallèlement à \(E'_2\) et \(p'_2\) la projection sur \(E'_2\) parallélement à \(E_1\). Soit l'application \(\varphi={p'_2}_{|E_2}^{|E'_2}\), qui est légitime puisque \(E'_2=\Image(p'_2)\). L'application \(\varphi\) est linéaire puisque c'est une restriction de \(p'_2\) qui est linéaire. Comme \(E_2\) est un supplémentaire de \(E_1\) on a \(E_1 = \Ker(p'_2)\) et par définition \(E'_2 = \Image(p'_2)\). D'après le théorème~
-\ref{theo:preptheorang}, comme \(p'_2\) est linéaire tout supplémentaire de \(\Ker(p'_2)\) est isomorphe à \(\Image(p'_2)\). C'est-à-dire en remplaçant que \(\varphi\) est un isomorphisme de \(E_2\) sur \(E'_2\).
+  Soit \(p_1\) la projection sur \(E_1\) parallèlement à \(E'_2\) et \(p'_2\) la projection sur \(E'_2\) parallélement à \(E_1\). Soit l'application \(\varphi={p'_2}_{|E_2}^{|E'_2}\), qui est légitime puisque \(E'_2=\Image(p'_2)\). L'application \(\varphi\) est linéaire puisque c'est une restriction de \(p'_2\) qui est linéaire. Comme \(E_2\) est un supplémentaire de \(E_1\) on a \(E_1 = \Ker(p'_2)\) et par définition \(E'_2 = \Image(p'_2)\). D'après le théorème~
+  \ref{theo:preptheorang}, comme \(p'_2\) est linéaire tout supplémentaire de \(\Ker(p'_2)\) est isomorphe à \(\Image(p'_2)\). C'est-à-dire en remplaçant que \(\varphi\) est un isomorphisme de \(E_2\) sur \(E'_2\).
 \end{proof}
 
 \subsubsection{Projecteurs}
@@ -954,7 +954,7 @@ Soit \(p_1\) la projection sur \(E_1\) parallèlement à \(E'_2\) et \(p'_2\) la
 \end{prop}
 \begin{proof}
   Si \(p\) est un projecteur alors par définition, \(p\) est linéaire et d'après la proposition~
-\ref{prop:caracimageproj} pour tout \(x \in \Image(p)\) \(p(x)=x\).
+  \ref{prop:caracimageproj} pour tout \(x \in \Image(p)\) \(p(x)=x\).
 
   Si maintenant on suppose que \(p \in \Endo{E}\) et \(\forall x \in \Image(p)\) \(p(x)=x\). On veut montrer que c'est un projecteur. Déjà \(p\) est linéaire et ensuite \(p(x)=x \in \Image(p)\) donc \(p(x)=p(p(x))\) alors \(p \circ p=p\).
 \end{proof}
@@ -975,19 +975,19 @@ Soit \(p_1\) la projection sur \(E_1\) parallèlement à \(E'_2\) et \(p'_2\) la
 \end{proof}
 
 \begin{prop}[Équivalence entre projecteur et projection]
-Les projections et les projecteurs de \(E\) vérifient~:
+  Les projections et les projecteurs de \(E\) vérifient~:
   \begin{enumerate}
-  \item Toute projection est un projecteur;
-  \item Tout projecteur \(p\) est la projection sur \(\Image(p)\) parallèlement à \(\Ker(p)\).
+    \item Toute projection est un projecteur;
+    \item Tout projecteur \(p\) est la projection sur \(\Image(p)\) parallèlement à \(\Ker(p)\).
   \end{enumerate}
   On pourra utiliser indifféremment les deux termes.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Déjà vu au théorème~
-\ref{theo:propprojection} au point 4.
-  \item Si \(p\) est un projecteur, on a montré que \(E = \Image(p) \oplus \Ker(p)\) (proposition~
-\ref{prop:projecteursupplementaire}). Alors \(p\) est la projection sur \(\Image(p)\) parallèlement à \(\Ker(p)\).
+    \item Déjà vu au théorème~
+      \ref{theo:propprojection} au point 4.
+    \item Si \(p\) est un projecteur, on a montré que \(E = \Image(p) \oplus \Ker(p)\) (proposition~
+      \ref{prop:projecteursupplementaire}). Alors \(p\) est la projection sur \(\Image(p)\) parallèlement à \(\Ker(p)\).
   \end{enumerate}
 \end{proof}
 
@@ -1001,7 +1001,7 @@ Les projections et les projecteurs de \(E\) vérifient~:
 \end{prop}
 \begin{proof}
   On note \(E_1 = \Image(p)\) et \(E_2 = \Ker(p)\). D'après la sous-section~
-\ref{sec:projections} on sait que \(q=\Id-p\) est la projection sur \(E_2\) parallèlement à \(E_1\) et les égalités en découlent.
+  \ref{sec:projections} on sait que \(q=\Id-p\) est la projection sur \(E_2\) parallèlement à \(E_1\) et les égalités en découlent.
 \end{proof}
 
 \begin{defdef}
@@ -1022,8 +1022,8 @@ Les projections et les projecteurs de \(E\) vérifient~:
   Soit un vecteur \(x \in E\)
   \begin{align}
     x \in \Inv(u) &\iff u(x) = x \\
-    &\iff (u-\Id)(x)=0 \\
-    &\iff x \in \Ker(u-\Id)
+                  &\iff (u-\Id)(x)=0 \\
+                  &\iff x \in \Ker(u-\Id)
   \end{align}
   et alors \(\Inv(u) = \Ker(u-\Id)\), de la même manière \(\Opp(u) = \Ker(u+\Id)\). Comme ce sont des noyaux d'applications linéaires, ce sont des sous-espaces vectoriels de \(E\).
 \end{proof}
@@ -1056,29 +1056,29 @@ Les projections et les projecteurs de \(E\) vérifient~:
 \begin{prop}
   Soient \(\lambda, \mu\) des scalaires et \(\lambda_0\) un scalaire non nul, alors
   \begin{enumerate}
-  \item \(h_\lambda \in \Endo{E}\);
-  \item \(h_\lambda \circ h_\mu = h_{\lambda \mu} = h_{\mu \lambda} = h_\mu \circ h_\lambda\);
-  \item \(h_{\lambda_0} \in \GL{E} \ (h_{\lambda_0})^{-1}=h_{\lambda_0^{-1}}\);
-  \item l'application \(\fonction{\Phi}{\K\setminus\{0\}}{\GL{E}}{\lambda}{h_\lambda}\) est un morphisme de groupes du groupe \((\K\setminus\{0\}, \times)\) sur le groupe \((\GL{E}, \circ)\). Soit \(\H=\Image(\Phi)\), alors \(\H\) est un sous-groupe de \((\GL{E}, \circ)\) isomorphe à \((\K\setminus\{0\}, \times)\).
+    \item \(h_\lambda \in \Endo{E}\);
+    \item \(h_\lambda \circ h_\mu = h_{\lambda \mu} = h_{\mu \lambda} = h_\mu \circ h_\lambda\);
+    \item \(h_{\lambda_0} \in \GL{E} \ (h_{\lambda_0})^{-1}=h_{\lambda_0^{-1}}\);
+    \item l'application \(\fonction{\Phi}{\K\setminus\{0\}}{\GL{E}}{\lambda}{h_\lambda}\) est un morphisme de groupes du groupe \((\K\setminus\{0\}, \times)\) sur le groupe \((\GL{E}, \circ)\). Soit \(\H=\Image(\Phi)\), alors \(\H\) est un sous-groupe de \((\GL{E}, \circ)\) isomorphe à \((\K\setminus\{0\}, \times)\).
   \end{enumerate}
 
 \end{prop}
 
 \begin{proof}
   Les trois premiers points ont déjà vu à la sous-sous section~
-\ref{subsec:exemples}.
+  \ref{subsec:exemples}.
 
   Pour le quatrième point, l'application \(\Phi\) est bien définie d'après le troisième point. C'est un morphisme grâce au deuxième point. Déjà \(\Phi^{|\H}\) est surjectif par définition. Montrons qu'il est injectif.
 
-Déjà \(\Ker(\Phi)=\enstq{\lambda \in \K}{\Phi(\lambda)=\Id}\) et soit un scalaire non nul \(\lambda\), alors
-\begin{align}
-  \Phi(\lambda) = 1 &\iff \forall x \in E \quad \lambda x=x\\
-  &\iff \forall x \in E \quad (\lambda-1)x=0\\
-  &\iff \lambda=1.
-\end{align}
-Alors  \(\Ker(\Phi)=\{1\}\) donc \(\Phi\) est injectif.
+  Déjà \(\Ker(\Phi)=\enstq{\lambda \in \K}{\Phi(\lambda)=\Id}\) et soit un scalaire non nul \(\lambda\), alors
+  \begin{align}
+    \Phi(\lambda) = 1 &\iff \forall x \in E \quad \lambda x=x\\
+                      &\iff \forall x \in E \quad (\lambda-1)x=0\\
+                      &\iff \lambda=1.
+  \end{align}
+  Alors  \(\Ker(\Phi)=\{1\}\) donc \(\Phi\) est injectif.
 
-Finalement \(\Phi\) induit une bijection de \(\K\setminus\{0\}\) sur \(\H=\Image(\Phi)\).
+  Finalement \(\Phi\) induit une bijection de \(\K\setminus\{0\}\) sur \(\H=\Image(\Phi)\).
 \end{proof}
 
 \subsection{Symétries vectorielles}
@@ -1105,9 +1105,9 @@ Soit un projecteur \(p\) de \(E\), on dispose de \(E_1=\Image(p)\) et \(E_2=\Ker
   Comme \((p,q) \in \Endo{E}^2\) et que \(s=p-q\) alors \(s \in \Endo{E}\). De plus
   \begin{align}
     s \circ s &=(p-q) \circ (p-q)\\
-    &=p \circ p -p \circ q -q \circ p +q \circ q\\
-    &=p+q\\
-    &=\Id.
+              &=p \circ p -p \circ q -q \circ p +q \circ q\\
+              &=p+q\\
+              &=\Id.
   \end{align}
   Puisque \(\circ\) est distributive à droite et à gauche et puisque \(p\) et \(q\) sont des projecteurs.
 \end{proof}
@@ -1125,11 +1125,11 @@ Soit une symétrie vectorielle \(s \in \Endo{E}\). Comme \(\K\) est \(\R\) ou \(
   Comme \(s, \Id \in \Endo{E}\) alors \(p \in \Endo{E}\). De plus
   \begin{align}
     p \circ p &= \frac{1}{2}(s+\Id) \circ \frac{1}{2}(s+\Id) \\
-    &=\frac{1}{4}(s \circ s + s\circ \Id +\Id \circ s +\Id \circ \Id)\\
-    &=\frac{1}{4}(\Id +s +s+\Id)\\
-    &=\frac{1}{2}(s+\Id).
+              &=\frac{1}{4}(s \circ s + s\circ \Id +\Id \circ s +\Id \circ \Id)\\
+              &=\frac{1}{4}(\Id +s +s+\Id)\\
+              &=\frac{1}{2}(s+\Id).
   \end{align}
-\(p\) est donc un projecteur, \(s=2p-\Id\) donc \(s\) est la symétrie associée à \(p\).
+  \(p\) est donc un projecteur, \(s=2p-\Id\) donc \(s\) est la symétrie associée à \(p\).
 \end{proof}
 
 \subsubsection{\(\Inv(s)\) et \(\Opp(s)\) pour une symétrie \(s\)}
@@ -1137,28 +1137,28 @@ Soit une symétrie vectorielle \(s \in \Endo{E}\). Comme \(\K\) est \(\R\) ou \(
 Si on garde les notations de la sous-sous section précédente, on a \(p,q\) des projecteurs et \(s\) une symétrie tels que \(p=\frac{1}{2}(s+\Id)\), \(q=p-\Id\) et \(E_1=\Image(p)\) et \(E_2=\Ker(p)\). Alors pour tout \(x \in E\)
 \begin{align}
   x \in \Inv(s) &\iff s(x)=x \\
-  &\iff p(x)-q(x)=p(x)+q(x) \\
-  &\iff 2q(x)=0\\
-  &\iff x \in \Ker(q).
+                &\iff p(x)-q(x)=p(x)+q(x) \\
+                &\iff 2q(x)=0\\
+                &\iff x \in \Ker(q).
 \end{align}
 Alors comme \(\Ker(q)=\Image(p)=E_1\) on a \(\Inv(s)=E_1\).
 \begin{align}
-   x \in \Opp(s) &\iff s(x)=-x \\
-  &\iff p(x)-q(x)=-p(x)-q(x) \\
-  &\iff 2p(x)=0\\
-  &\iff x \in \Ker(p).
+  x \in \Opp(s) &\iff s(x)=-x \\
+                &\iff p(x)-q(x)=-p(x)-q(x) \\
+                &\iff 2p(x)=0\\
+                &\iff x \in \Ker(p).
 \end{align}
 Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
 %
 \begin{prop}
   Soit une symétrie vectorielle \(s\) de \(E\), alors
-\begin{equation}
-  E=\Inv(s) \oplus \Opp(s).
-\end{equation}
+  \begin{equation}
+    E=\Inv(s) \oplus \Opp(s).
+  \end{equation}
 \end{prop}
 \begin{proof}
   Si on note \(p\) le projecteur associé à \(s\), on a montré juste avant que \(\Opp(s)=\Ker(p)\) et \(\Inv(s)=\Image(p)\) et on sait que l'image et le noyau d'un projecteur sont supplémentaires (proposition~
-\ref{prop:projecteursupplementaire}).
+  \ref{prop:projecteursupplementaire}).
 \end{proof}
 
 \emph{Exemple}~: Soit l'application \(\fonction{s}{E}{E}{x}{-x}\), donc \(s=-\Id \in \Endo{E}\). \(s \circ s = (-\Id) \circ (-\Id) = \Id\) donc \(s\) est une symétrie. Le projecteur auquel \(s\) est associée est nul : \(p=\frac{1}{2}(s+\Id)=0\). Alors \(E_1=\Image(p)=\{0\}\) et \(E_2=\Ker(p)=E\) et alors \(\Opp(s)=\Ker(p)=E\) et \(\Inv(s)=\Image(p)=\{0\}\).
@@ -1177,16 +1177,16 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
   \begin{align}
     x&=p_1(x)+p_2(x)\\
     u(x)&=u(p_1(x))+u(p_2(x))\\
-    &=u_1(p_1(x)) +u_2(p_2(x))\\
-    &=[u_1\circ p_1 +u_2 \circ p_2](x).
+        &=u_1(p_1(x)) +u_2(p_2(x))\\
+        &=[u_1\circ p_1 +u_2 \circ p_2](x).
   \end{align}
   Donc nécessairement \(u=u_1\circ p_1 +u_2 \circ p_2\) et il y a unicité.
 \end{proof}
 \begin{proof}[Existence]
   Soit \(u=u_1\circ p_1 +u_2 \circ p_2\). Puisque \(u_1,p_1,u_2,p_2 \in \Endo{E}\) on a \(u \in \Endo{E}\).
   \begin{itemize}
-  \item Si \(x \in E_1\) alors \(p_1(x)=x\) et \(p_2(x)=0\) donc \(u(x)=u_1(x)+u_2(0)=u_1(x)\);
-  \item Si \(x \in E_2\) alors \(p_1(x)=0\) et \(p_2(x)=x\) donc \(u(x)=u_1(0)+u_2(x)=u_2(x)\).
+    \item Si \(x \in E_1\) alors \(p_1(x)=x\) et \(p_2(x)=0\) donc \(u(x)=u_1(x)+u_2(0)=u_1(x)\);
+    \item Si \(x \in E_2\) alors \(p_1(x)=0\) et \(p_2(x)=x\) donc \(u(x)=u_1(0)+u_2(x)=u_2(x)\).
   \end{itemize}
   Donc \(u_{|E_1}={u_1}_{|E_1} \ u_{|E_2}={u_2}_{|E_2}\).
 \end{proof}
@@ -1197,8 +1197,8 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
 %
 \begin{prop}
   Avec les notations du lemme~
-\ref{lemme:affinites} et de la définition~
-\ref{def:affinites}, \(a_{\alpha}=p_1+\alpha p_2\).
+  \ref{lemme:affinites} et de la définition~
+  \ref{def:affinites}, \(a_{\alpha}=p_1+\alpha p_2\).
 \end{prop}
 \begin{proof}
   Puisque \(E_1\) et \(E_2\) sont supplémentaires, alors \(a_\alpha= {a_\alpha}_{|E_1} + {a_\alpha}_{|E_2}\), c'est à dire avec les notations de la définition \(a_\alpha= \Id \circ p_1 + h_\alpha \circ p_2\) et donc pour tout \(x \in E\) \(a_\alpha(x)=p_1(x)+\alpha p_2(x)\).
@@ -1216,26 +1216,26 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
   \end{gather}
 \end{prop}
 \begin{proof}
-    \begin{align}
-      a_{\alpha} \circ a_{\beta} &= (p_1+\alpha p_2) \circ (p_1+\beta p_2) \\
-      &= p_1 \circ p_1 + \beta p_1 \circ p_2 + \alpha p_2 \circ p_1 +\alpha \beta p_2 \circ p_2 \\
-      &=p_1+ \alpha\beta p_2\\
-      &=a_{\alpha\beta}
-    \end{align}
-    puisque \(p_1\) et \(p_2\) sont des projecteurs.
+  \begin{align}
+    a_{\alpha} \circ a_{\beta} &= (p_1+\alpha p_2) \circ (p_1+\beta p_2) \\
+                               &= p_1 \circ p_1 + \beta p_1 \circ p_2 + \alpha p_2 \circ p_1 +\alpha \beta p_2 \circ p_2 \\
+                               &=p_1+ \alpha\beta p_2\\
+                               &=a_{\alpha\beta}
+  \end{align}
+  puisque \(p_1\) et \(p_2\) sont des projecteurs.
 
-    Si \(\alpha\) est non nul, alors il est inversible d'invers \(\alpha^{-1}\) et on a
-    \begin{equation}
-      a_\alpha \circ a_{\alpha^{-1}} = a_{\alpha \alpha^{-1}} = \alpha_1 = p_1+p_2=\Id
-    \end{equation}
-    donc \(a_\alpha \in \GL{E}\) et \((a_\alpha)^{-1}=a_{\alpha^{-1}}\).
+  Si \(\alpha\) est non nul, alors il est inversible d'invers \(\alpha^{-1}\) et on a
+  \begin{equation}
+    a_\alpha \circ a_{\alpha^{-1}} = a_{\alpha \alpha^{-1}} = \alpha_1 = p_1+p_2=\Id
+  \end{equation}
+  donc \(a_\alpha \in \GL{E}\) et \((a_\alpha)^{-1}=a_{\alpha^{-1}}\).
 
-    On a \(a_\alpha - \Id=p_1+\alpha p_2 -(p_1+p_2) = (\alpha-1)p_2\) et \(a_\alpha -\alpha \Id = p_1+\alpha p_2 -\alpha(p_1+p_2) = (1-\alpha)p_1\). Alors
-    \begin{equation}
-      (a_\alpha-\Id) \circ (a_\alpha -\alpha \Id) = -(\alpha-1)^2 p_2 \circ p_1=0.
-    \end{equation}
+  On a \(a_\alpha - \Id=p_1+\alpha p_2 -(p_1+p_2) = (\alpha-1)p_2\) et \(a_\alpha -\alpha \Id = p_1+\alpha p_2 -\alpha(p_1+p_2) = (1-\alpha)p_1\). Alors
+  \begin{equation}
+    (a_\alpha-\Id) \circ (a_\alpha -\alpha \Id) = -(\alpha-1)^2 p_2 \circ p_1=0.
+  \end{equation}
 
-    On a \(a_\alpha-\Id = (\alpha-1)p_2\) et comme \(\alpha \neq 1\) on a \(\Ker(a_\alpha-\Id)=\Ker(p_2)=E_1\). De la même manière \(a_{\alpha}-\alpha \Id = (1-\alpha)p_1\) et comme \(\alpha \neq 1\) on a \(\Ker(a_\alpha-\alpha\Id)=\Ker(p_1)=E_2\). Comme \(E=E_1 \oplus E_2\) alors \(E=\Ker(a_\alpha - \Id) \oplus \Ker(a_\alpha - \alpha \Id)\).
+  On a \(a_\alpha-\Id = (\alpha-1)p_2\) et comme \(\alpha \neq 1\) on a \(\Ker(a_\alpha-\Id)=\Ker(p_2)=E_1\). De la même manière \(a_{\alpha}-\alpha \Id = (1-\alpha)p_1\) et comme \(\alpha \neq 1\) on a \(\Ker(a_\alpha-\alpha\Id)=\Ker(p_1)=E_2\). Comme \(E=E_1 \oplus E_2\) alors \(E=\Ker(a_\alpha - \Id) \oplus \Ker(a_\alpha - \alpha \Id)\).
 \end{proof}
 
 \emph{Remarques}~: La troisième propriété fait appel à des notions de polynôme annulateur. Si \(p\) est est projecteur alors \(p \circ p=p\) et on dit que \(X^2-X\) est annulateur de \(p\). Si \(s\) est une symétrie, comme \(s \circ s =\Id\) alors son polynôme annulateur est \(X^2-1\). Si \(a_\alpha\) est une affinité de rapport \(\alpha\) alors \((X-1)(X-\alpha\) est son polynôme annulmateur. La quatrième propriété est en fait une conséquence de la troisième et du théorème de décomposition des noyaux, car les polynômes sont premiers entre eux cf.\ chapitre~
@@ -1252,11 +1252,11 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
   Comme \(1-\alpha\neq 0\), on peut poser \(p_1=\frac{1}{1-\alpha} (a-\alpha\Id)\). Cette application est un endomorphisme de \(E\) et de plus
   \begin{align}
     p_1 \circ p_1 &= \frac{1}{1-\alpha} (a-\alpha\Id) \circ \frac{1}{1-\alpha} (a-\alpha\Id) \\
-    &=\frac{1}{(1-\alpha)^2} (a-\alpha\Id) \circ (a-\alpha\Id) \\
-    &=\frac{1}{(1-\alpha)^2} (a-\Id +(1-\alpha)\Id) \circ (a-\alpha\Id) \\
-    &=\frac{1}{(1-\alpha)^2} (a-\Id) \circ (a-\alpha\Id) + \frac{1-\alpha}{(1-\alpha)^2}(a-\alpha\Id) \\
-    &= 0 + \frac{1}{(1-\alpha)}(a-\alpha\Id)\\
-    &=p_1.
+                  &=\frac{1}{(1-\alpha)^2} (a-\alpha\Id) \circ (a-\alpha\Id) \\
+                  &=\frac{1}{(1-\alpha)^2} (a-\Id +(1-\alpha)\Id) \circ (a-\alpha\Id) \\
+                  &=\frac{1}{(1-\alpha)^2} (a-\Id) \circ (a-\alpha\Id) + \frac{1-\alpha}{(1-\alpha)^2}(a-\alpha\Id) \\
+                  &= 0 + \frac{1}{(1-\alpha)}(a-\alpha\Id)\\
+                  &=p_1.
   \end{align}
   Alors \(p_1\) est un projecteur. Ainsi \(E_1=\Image(p_1)\) et \(E_2=\Ker(p_1)\) et ils sont supplémentaires dans \(E\). Alors
   \begin{equation}
@@ -1270,14 +1270,14 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
 Soient, comme d'habitude, \(E_1\) et \(E_2\) deux sous-espace vectoriels supplémentaires de \(E\). On note \(p_1\) la projection sur \(E_1\) parallélement à \(E_2\) et \(p_2\) la projection sur \(E_2\) parallélement à \(E_1\). Pour tout scalaire \(\alpha\), on note \(a_\alpha = p_1+\alpha p_2\) l'affinité vectorielle de rapport \(\alpha\) de base \(E_1\) selon \(E_2\). Alors
 \begin{align}
   \forall x \in E \quad x \in \Inv(a_\alpha) &\iff a_\alpha(x)=x \\
-  &\iff p_1(x)+\alpha p_2(x) = p_1(x)+p_2(x) \\
-  &\iff (\alpha-1) p_2(x)=0.
+                                             &\iff p_1(x)+\alpha p_2(x) = p_1(x)+p_2(x) \\
+                                             &\iff (\alpha-1) p_2(x)=0.
 \end{align}
 Si \(\alpha=1\) alors \(a_1=\Id\) et \(\Inv(a_1)=E\). Sinon, alors \(\Inv(a_\alpha)=\Ker(p_2)=\Image(p_1)=E_1\), et
 \begin{align}
   \forall x \in E \quad x \in \Opp(a_\alpha) &\iff a_\alpha(x)=-x \\
-  &\iff p_1(x)+\alpha p_2(x) = -p_1(x)-p_2(x) \\
-  &\iff 2p_1(x)=-(\alpha+1)p_2(x).
+                                             &\iff p_1(x)+\alpha p_2(x) = -p_1(x)-p_2(x) \\
+                                             &\iff 2p_1(x)=-(\alpha+1)p_2(x).
 \end{align}
 Or \(2p_1(x) \in E_1\) et \(-(\alpha+1)p_2(x) \in E_2\). Puisque ces sous-espaces vectoriels sont supplémentaires alors leur intersection est nulle donc chacun des termes est nul. Donc
 \begin{equation}
@@ -1285,14 +1285,14 @@ Or \(2p_1(x) \in E_1\) et \(-(\alpha+1)p_2(x) \in E_2\). Puisque ces sous-espace
 \end{equation}
 Deux cas se présentent~:
 \begin{itemize}
-\item si \(\alpha=-1\) alors \(x \in \Opp(a_\alpha) \iff 2p_1(x)=0 \iff x \in \Ker(p_1)=E_2\);
-\item sinon alors \(x \in \Opp(a_\alpha) \iff \begin{cases} x \in \Ker(p_1) \\ x \in \Ker(p_2) \end{cases} \iff x=0\).
+  \item si \(\alpha=-1\) alors \(x \in \Opp(a_\alpha) \iff 2p_1(x)=0 \iff x \in \Ker(p_1)=E_2\);
+  \item sinon alors \(x \in \Opp(a_\alpha) \iff \begin{cases} x \in \Ker(p_1) \\ x \in \Ker(p_2) \end{cases} \iff x=0\).
 \end{itemize}
 Finalement
 \begin{itemize}
-\item si \(\alpha \neq 1\) et \(\alpha \neq -1\) alors \(\Inv(a_\alpha)=E_1\) et \(\Opp(a_\alpha)=\{0\}\);
-\item si \(\alpha =1\) alors \(\Inv(a_{-1})=E_1\) et \(\Opp(a_{-1})=E_2\) et on a bien les propriétés d'une symétrie \(E=\Inv(a_{-1}) \oplus \Opp(a_{-1})\);
-\item si \(\alpha=1\) alors  \(\Inv(a_{1})=E\) et \(\Opp(a_{1})=\{0\}\) et c'est normal parce que \(a_1=\Id\).
+  \item si \(\alpha \neq 1\) et \(\alpha \neq -1\) alors \(\Inv(a_\alpha)=E_1\) et \(\Opp(a_\alpha)=\{0\}\);
+  \item si \(\alpha =1\) alors \(\Inv(a_{-1})=E_1\) et \(\Opp(a_{-1})=E_2\) et on a bien les propriétés d'une symétrie \(E=\Inv(a_{-1}) \oplus \Opp(a_{-1})\);
+  \item si \(\alpha=1\) alors  \(\Inv(a_{1})=E\) et \(\Opp(a_{1})=\{0\}\) et c'est normal parce que \(a_1=\Id\).
 \end{itemize}
 
 \section{Translation, sous-espace affine}
@@ -1302,13 +1302,13 @@ Finalement
 \begin{defdef}
   On appelle espace affine tout couple \((\A,E)\) où~:
   \begin{enumerate}
-  \item \(\A\) est un ensemble non vide ;
-  \item \((E,+,\perp)\) est un \(\R\)-espace vectoriel ;
-  \item Il existe une application \(\fonction{+}{\A\times E}{E}{(A,x)}{A+x}\) telle que~:
-    \begin{enumerate}
-    \item \(\forall A \in \A \quad \fonction{+_A}{E}{E}{x}{A+x}\) est bijective;
-    \item \(\forall A \in \A \ \forall (x,y) \in E^2 \quad (A+x)+y = A+(x+y)\).
-    \end{enumerate}
+    \item \(\A\) est un ensemble non vide ;
+    \item \((E,+,\perp)\) est un \(\R\)-espace vectoriel ;
+    \item Il existe une application \(\fonction{+}{\A\times E}{E}{(A,x)}{A+x}\) telle que~:
+      \begin{enumerate}
+        \item \(\forall A \in \A \quad \fonction{+_A}{E}{E}{x}{A+x}\) est bijective;
+        \item \(\forall A \in \A \ \forall (x,y) \in E^2 \quad (A+x)+y = A+(x+y)\).
+      \end{enumerate}
   \end{enumerate}
 \end{defdef}
 
@@ -1317,22 +1317,22 @@ Finalement
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item \(E\) est non vide, puisque c'est un espace vectoriel ;
-  \item \(E\) est un \(\R\)-espace vectoriel ;
-  \item Soit l'application \(\fonction{+}{E\times E}{E}{(A,x)}{A+x}\), soit \(A \in E\) alors
-    \begin{enumerate}
-    \item l'application \(x \longmapsto A+x\) est injective
-      \begin{equation}
-        \forall (x,y) \in E^2 \quad A+x=A+y \implies x=y,
-      \end{equation}
-      puisque \((E,+)\) est un groupe et donc tous les éléments sont simplifiables pour \(+\).
-    \item l'application \(x \longmapsto A+x\) est surjective
-      \begin{equation}
-        \forall B \in E \ \exists x \in E \quad A+x=B,
-      \end{equation}
-      en prenant \(x=B-A \in E\) puisque \(E\) est un espace vectoriel.
-    \item associativité de l'addition dans \(E\).
-    \end{enumerate}
+    \item \(E\) est non vide, puisque c'est un espace vectoriel ;
+    \item \(E\) est un \(\R\)-espace vectoriel ;
+    \item Soit l'application \(\fonction{+}{E\times E}{E}{(A,x)}{A+x}\), soit \(A \in E\) alors
+      \begin{enumerate}
+        \item l'application \(x \longmapsto A+x\) est injective
+          \begin{equation}
+            \forall (x,y) \in E^2 \quad A+x=A+y \implies x=y,
+          \end{equation}
+          puisque \((E,+)\) est un groupe et donc tous les éléments sont simplifiables pour \(+\).
+        \item l'application \(x \longmapsto A+x\) est surjective
+          \begin{equation}
+            \forall B \in E \ \exists x \in E \quad A+x=B,
+          \end{equation}
+          en prenant \(x=B-A \in E\) puisque \(E\) est un espace vectoriel.
+        \item associativité de l'addition dans \(E\).
+      \end{enumerate}
   \end{enumerate}
   Alors le couple \((E,E)\) muni de la loi \(+\) de \(E\) est un espace affine.
 \end{proof}
@@ -1357,9 +1357,9 @@ On dispose de l'application \(\fonction{+}{E\times E}{E}{(A,x)}{A+x}\).
 \begin{prop}
   Soient trois points \(A,B\) et \(C\) de \(E\), alors
   \begin{enumerate}
-  \item \(\vect{AB}=0 \iff A=B\);
-  \item \(\vect{BA}=-\vect{AB}\);
-  \item \(\vect{AB}+\vect{BC}=\vect{AC}\), c'est la relation de Chasles.
+    \item \(\vect{AB}=0 \iff A=B\);
+    \item \(\vect{BA}=-\vect{AB}\);
+    \item \(\vect{AB}+\vect{BC}=\vect{AC}\), c'est la relation de Chasles.
   \end{enumerate}
 \end{prop}
 
@@ -1393,7 +1393,7 @@ On dispose de l'application \(\fonction{+}{E\times E}{E}{(A,x)}{A+x}\).
 \end{prop}
 \begin{proof}
   Il suffit d'appliquer la proposition~
-\ref{prop:associativitevec} pour \(y_0=-x_0\).
+  \ref{prop:associativitevec} pour \(y_0=-x_0\).
 \end{proof}
 
 On peut considérer l'application \(\fonction{T}{E}{\sigma(E)}{x_0}{t_{x_0}}\) avec \(\sigma(E)\) l'ensemble des permutations de \(E\). On rappelle que \((\sigma(E),\circ)\) est un groupe. La proposition~
@@ -1411,8 +1411,8 @@ On peut considérer l'application \(\fonction{T}{E}{\sigma(E)}{x_0}{t_{x_0}}\) a
 alors pour tout \(x_0 \in E\)
 \begin{align}
   x_0 \in \Ker(T) &\iff \forall A \in E \quad t_{x_0}(A)=A\\
-  &\iff \forall A \in E \quad A+x_0=A \\
-  &\iff x_0=0.
+                  &\iff \forall A \in E \quad A+x_0=A \\
+                  &\iff x_0=0.
 \end{align}
 Alors \(\Ker(T)=\{0\}\), alors \(T\) est injectif. Ainsi \(T\) induit un isomorphisme de \((E,+)\) sur \((T(E),\circ)\). On en déduit que
 \begin{prop}
@@ -1435,11 +1435,11 @@ Alors \(\Ker(T)=\{0\}\), alors \(T\) est injectif. Ainsi \(T\) induit un isomorp
   \end{equation}
   alors
   \begin{align}
-   f(M)&=f(A)+\vect{AM} \\
-   f(M)&=B+(\vect{AB}+\vect{BM}) \\
-   f(M)&=(B+\vect{BM})+\vect{AB} \\
-   f(M)&=M+x_0\\
-   f(M)&=t_{x_0}(M).
+    f(M)&=f(A)+\vect{AM} \\
+    f(M)&=B+(\vect{AB}+\vect{BM}) \\
+    f(M)&=(B+\vect{BM})+\vect{AB} \\
+    f(M)&=M+x_0\\
+    f(M)&=t_{x_0}(M).
   \end{align}
   Alors \(f=t_{x_0}\) est une translation.
 \end{proof}
@@ -1451,8 +1451,8 @@ Alors \(\Ker(T)=\{0\}\), alors \(T\) est injectif. Ainsi \(T\) induit un isomorp
 \begin{defdef}
   On appelle sous-espace affine de \(E\) toute partie \(W_1\) de \(E\) telle que~:
   \begin{enumerate}
-  \item il existe un point \(A_1\) de \(E\);
-  \item il existe un sous-espace vectoriel \(E_1\) de \(E\);
+    \item il existe un point \(A_1\) de \(E\);
+    \item il existe un sous-espace vectoriel \(E_1\) de \(E\);
   \end{enumerate}
   vérifiant \(W_1=\enstq{A_1+x}{x \in E_1} = \{A_1\}+E_1\). On notera \(W_1=A_1+E_1\).
 \end{defdef}
@@ -1473,25 +1473,25 @@ Alors \(\Ker(T)=\{0\}\), alors \(T\) est injectif. Ainsi \(T\) induit un isomorp
 %
 \begin{prop}
   \begin{itemize}
-  \item Les sous-espace vectoriels sont des sous-espaces affines;
-  \item si \(W_1=A_1+E_1\) est un sous-espace affine, alors c'est un sous-espace vectoriel si et seulement s'il contient \(0\).
+    \item Les sous-espace vectoriels sont des sous-espaces affines;
+    \item si \(W_1=A_1+E_1\) est un sous-espace affine, alors c'est un sous-espace vectoriel si et seulement s'il contient \(0\).
   \end{itemize}
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item Soit \(E_1\) un sous-espace vectoriel de \(E\), alors \(E_1=\{0\}+E_1\), c'est donc un sous-espace affine;
-  \item soit \(W_1=A_1+E_1\) un sous-espace affine~: \(\implies\) Si \(W_1\) est un sous-espace vectoriel, alors il contient \(0\);
+    \item Soit \(E_1\) un sous-espace vectoriel de \(E\), alors \(E_1=\{0\}+E_1\), c'est donc un sous-espace affine;
+    \item soit \(W_1=A_1+E_1\) un sous-espace affine~: \(\implies\) Si \(W_1\) est un sous-espace vectoriel, alors il contient \(0\);
 
-    \(\impliedby\) Si \(0 \in W_1\), il existe \(x \in E_1\) tel que \(A_1+x=0\) et donc \(A_1 = -x \in E_1\) car c'est un sous-espace vectoriel.
+      \(\impliedby\) Si \(0 \in W_1\), il existe \(x \in E_1\) tel que \(A_1+x=0\) et donc \(A_1 = -x \in E_1\) car c'est un sous-espace vectoriel.
 
-    Montrons que \(W_1=E1\). Si \(A \in W_1\), il existe alors \(x \in E_1\) tel que \(A=A_1+x \in E_1\) donc \(W_1 \subset E_1\). Si \(A \in E_1\), alors \(A=A_1 +\vect{A_1A}\) et comme \(A_1\) et \(A\) sont dans \(E\), le vecteur \(\vect{A_1A} \in E\) donc \(A \in W_1\). Ainsi \(E_1 \subset W_1\). Par double inclusion \(W_1=E1\)
+      Montrons que \(W_1=E1\). Si \(A \in W_1\), il existe alors \(x \in E_1\) tel que \(A=A_1+x \in E_1\) donc \(W_1 \subset E_1\). Si \(A \in E_1\), alors \(A=A_1 +\vect{A_1A}\) et comme \(A_1\) et \(A\) sont dans \(E\), le vecteur \(\vect{A_1A} \in E\) donc \(A \in W_1\). Ainsi \(E_1 \subset W_1\). Par double inclusion \(W_1=E1\)
   \end{itemize}
 \end{proof}
 
 \paragraph{Choix du point \(A_1\)}
 \begin{prop}
 
-Soit \(W_1=A_1+E_1\) un sous-espace affine. Pour tout point \(A' \in E\), \(A' \in W_1\) si et seulement s'il existe un sous-espace vectoriel \(E'\) de \(E\) tel que \(W_1=A'+E'\).
+  Soit \(W_1=A_1+E_1\) un sous-espace affine. Pour tout point \(A' \in E\), \(A' \in W_1\) si et seulement s'il existe un sous-espace vectoriel \(E'\) de \(E\) tel que \(W_1=A'+E'\).
 \end{prop}
 \begin{proof}
   Considérons que \(A' \in W_1\) alors \(A'=A'+0 \in W_1\).
@@ -1506,14 +1506,14 @@ Soit \(W_1=A_1+E_1\) un sous-espace affine. Pour tout point \(A' \in E\), \(A' \
   Soit \(W_1=A_1+E_1\) un sous-espace affine. Alors
   \begin{align}
     E_1 &=\enstq{\vect{A_1M_1}}{M_1 \in W_1}\\
-    &=\enstq{\vect{M_1N_1}}{M_1,N_1 \in \W_1}.
+        &=\enstq{\vect{M_1N_1}}{M_1,N_1 \in \W_1}.
   \end{align}
 \end{prop}
 
 \begin{proof}
   Soit \(x \in E_1\) et \(M_1=A_1+x \in W_1\) avec \(x=\vect{A_1M_1}\). Donc \(E_1 \subset \enstq{\vect{A_1M_1}}{M_1 \in W_1}\). Soit \(x \in \enstq{\vect{A_1M_1}}{M_1 \in W_1}\) alors \(M_1=A_1+x\), or \(M_1 \in W_1\) donc il existe \(y \in E_1\) tel que \(M_1=A_1+y\). Ainsi \(x=y \in E_1\). Donc \(\enstq{\vect{A_1M_1}}{M_1 \in W_1} \subset E_1\). Finalement par double inclusion \(E_1 =\enstq{\vect{A_1M_1}}{M_1 \in W_1}\).
 
-Comme \(A_1 \in W_1\), on a \(\enstq{\vect{A_1M_1}}{M_1 \in W_1} \subset \enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\). Soit maintenant \(x \in \enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\), alors il existe \((M_1, N_1) \in W_1^2\) tel que \(x=\vect{M_1N_1}\) et il existe \((y,z) \in E_1^2\) tels que \(M_1=A_1+y\) et \(N_1=A_1+z\) donc \(x=z-y \in E_1\) puisque c'est un sous-espace vectoriel. Alors \(\enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2} \subset E_1\). Par double inclusion, on a bien \(E_1=\enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\).
+  Comme \(A_1 \in W_1\), on a \(\enstq{\vect{A_1M_1}}{M_1 \in W_1} \subset \enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\). Soit maintenant \(x \in \enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\), alors il existe \((M_1, N_1) \in W_1^2\) tel que \(x=\vect{M_1N_1}\) et il existe \((y,z) \in E_1^2\) tels que \(M_1=A_1+y\) et \(N_1=A_1+z\) donc \(x=z-y \in E_1\) puisque c'est un sous-espace vectoriel. Alors \(\enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2} \subset E_1\). Par double inclusion, on a bien \(E_1=\enstq{\vect{M_1N_1}}{(M_1,N_1) \in \W_1^2}\).
 \end{proof}
 %
 \begin{cor}
@@ -1529,22 +1529,22 @@ Comme \(A_1 \in W_1\), on a \(\enstq{\vect{A_1M_1}}{M_1 \in W_1} \subset \enstq{
 \begin{defdef}
   Soient \(W_1\) et \(W_2\) deux sous-espaces affines de directions respectives \(E_1\) et \(E_2\). Alors
   \begin{enumerate}
-  \item \(W_1\) est parallèle à \(W_2\) si et seulement si \(E_1 \subset E_2\) ;
-  \item \(W_1\) et \(W_2\) sont parallèles si et seulement si \(E_1=E_2\).
+    \item \(W_1\) est parallèle à \(W_2\) si et seulement si \(E_1 \subset E_2\) ;
+    \item \(W_1\) et \(W_2\) sont parallèles si et seulement si \(E_1=E_2\).
   \end{enumerate}
 \end{defdef}
 %
 \begin{prop}
   Dans l'ensemble des sous-espaces affines de \(E\)
   \begin{enumerate}
-  \item la relation ``est parallèle à'' est réflexive et transitive;
-  \item la relation \(\RelBin{}\) définie par \(W_1\RelBin{}W_2\) par ``\(W_1\) et \(W_2\) sont parallèles'' est une relation d'équivalence.
+    \item la relation ``est parallèle à'' est réflexive et transitive;
+    \item la relation \(\RelBin{}\) définie par \(W_1\RelBin{}W_2\) par ``\(W_1\) et \(W_2\) sont parallèles'' est une relation d'équivalence.
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Si \(W_1\) est un sous-espace affine, \(W_1\) est parallèle à lui-même car \(E_1 \subset E_1\), donc elle est symétrique. Si \(W_1\) est parallèle à \(W_2\) et si \(W_2\) est parallèle à \(W_3\) alors \(E_1 \subset E_2 \subset E_3\) donc \(W_1\) est parallèle à \(W_3\), donc elle est transitive.
-  \item Puisque \(E_1=E_1\) alors \(W_1\RelBin{}W_1\), symétrique. Si \(W_1 \RelBin{}W_2\) alors \(W_1=W_2\) donc \(W_2\RelBin{}W_1\), symétrique. Si \(W_1 \RelBin{}W_2\) et \(W_2\RelBin{}W_3\) alors \(E_1=E_2=E_3\) donc \(W_1\RelBin{}W_3\).
+    \item Si \(W_1\) est un sous-espace affine, \(W_1\) est parallèle à lui-même car \(E_1 \subset E_1\), donc elle est symétrique. Si \(W_1\) est parallèle à \(W_2\) et si \(W_2\) est parallèle à \(W_3\) alors \(E_1 \subset E_2 \subset E_3\) donc \(W_1\) est parallèle à \(W_3\), donc elle est transitive.
+    \item Puisque \(E_1=E_1\) alors \(W_1\RelBin{}W_1\), symétrique. Si \(W_1 \RelBin{}W_2\) alors \(W_1=W_2\) donc \(W_2\RelBin{}W_1\), symétrique. Si \(W_1 \RelBin{}W_2\) et \(W_2\RelBin{}W_3\) alors \(E_1=E_2=E_3\) donc \(W_1\RelBin{}W_3\).
   \end{enumerate}
 \end{proof}
 %
@@ -1583,11 +1583,11 @@ Si \(W_1\cap W_2=\emptyset\), alors ce n'est pas un sous-espace effine puisqu'un
 \begin{proof}
   Soit \(I \in W_1 \cap W_2\). On sait que \(I+\E_1 \cap E_2\) est un sous-espace affine car \(E_1\cap E_2\) est un sous-espace vectoriel. Montrons que \(W_1 \cap W_2 = I +E_1 \cap E_2\).
 
-Soit \(M \in W_1 \cap W_2\), alors \(M \in I+E_1\) donc il existe \(x \in E_1\) tel que \(M=I+x\) et \(M \in I+E_2\) aussi donc il existe \(y \in E_2\) tel que \(M=I+y\). D'où \(x=y=\vect{IM}\) alors \(x=y \in E_1 \cap E_2\), alors \(M=I+x \in I+E_1 \cap E_2\).  On a montré l'inclusion \(W_1 \cap W_2 \subset E_1 \cap E_2\).
+  Soit \(M \in W_1 \cap W_2\), alors \(M \in I+E_1\) donc il existe \(x \in E_1\) tel que \(M=I+x\) et \(M \in I+E_2\) aussi donc il existe \(y \in E_2\) tel que \(M=I+y\). D'où \(x=y=\vect{IM}\) alors \(x=y \in E_1 \cap E_2\), alors \(M=I+x \in I+E_1 \cap E_2\).  On a montré l'inclusion \(W_1 \cap W_2 \subset E_1 \cap E_2\).
 
-Soit \(M \in I+E_1 \cap E_2\). Il existe \(x \in E_1 \cap E_2\) tel que \(M=I+x\). Comme \(x \in E_1\) alors \(M \in I+E_1=W_1\) et aussi \(x \in E_2\) alors \(M \in I+E_2=W_2\). Ainsi \(M \in W_1 \cap W_2\). On a montré l'inclusion  \(E_1 \cap E_2 \subset W_1 \cap W_2 \).
+  Soit \(M \in I+E_1 \cap E_2\). Il existe \(x \in E_1 \cap E_2\) tel que \(M=I+x\). Comme \(x \in E_1\) alors \(M \in I+E_1=W_1\) et aussi \(x \in E_2\) alors \(M \in I+E_2=W_2\). Ainsi \(M \in W_1 \cap W_2\). On a montré l'inclusion  \(E_1 \cap E_2 \subset W_1 \cap W_2 \).
 
-Finalement par double inclusion \(W_1 \cap W_2 = I +E_1 \cap E_2\).
+  Finalement par double inclusion \(W_1 \cap W_2 = I +E_1 \cap E_2\).
 \end{proof}
 
 \begin{prop}[Cas particulier]
@@ -1596,8 +1596,8 @@ Finalement par double inclusion \(W_1 \cap W_2 = I +E_1 \cap E_2\).
 \begin{proof}
   \(W_1\) et \(W_2\) sont tous deux non vides car ce sont des sous-espaces affines. Soit \((A_1,A_2) \in W_1 \times W_2\) et \(\vect{A_1A_2} \in E\).
 
-Or \(E=E_1 \oplus E_2\) donc il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(\vect{A_1A_2}=x_1+x_2\) alors \(A_2-x_2=x_1+A_1\). Comme \(A_2\) et \(x_2\) sont dans \(W_2\) alors \(A_2-x_2 \in W_2\) et comme \(A_1\) et \(x_1\) sont dans \(W_1\) alors \(A_1+x_1 \in W_1\). Si on pose \(I=A_2-x_2=x_1+A_1\) alors \(I \in W_1\cap W_2\). D'après la propostion~
-\ref{prop:interssaffines}, \(W_1 \cap W_2\) est un sous-espace affine et \(W_1 \cap W_2 = I+E_1 \cap E_2 = I+\{0\}=\{I\}\).
+  Or \(E=E_1 \oplus E_2\) donc il existe un unique couple \((x_1,x_2) \in E_1 \times E_2\) tel que \(\vect{A_1A_2}=x_1+x_2\) alors \(A_2-x_2=x_1+A_1\). Comme \(A_2\) et \(x_2\) sont dans \(W_2\) alors \(A_2-x_2 \in W_2\) et comme \(A_1\) et \(x_1\) sont dans \(W_1\) alors \(A_1+x_1 \in W_1\). Si on pose \(I=A_2-x_2=x_1+A_1\) alors \(I \in W_1\cap W_2\). D'après la propostion~
+  \ref{prop:interssaffines}, \(W_1 \cap W_2\) est un sous-espace affine et \(W_1 \cap W_2 = I+E_1 \cap E_2 = I+\{0\}=\{I\}\).
 \end{proof}
 
 L'union de sous-espaces affines n'est pas, en général, un sous-espace affine.
@@ -1608,9 +1608,9 @@ L'union de sous-espaces affines n'est pas, en général, un sous-espace affine.
 \begin{proof}
   Soit \(A \in W_1 \cap W_2\). Alors~:
   \begin{itemize}
-  \item \(W=A+(E_2+E_2)\) est un sous-espace affine puisque \(E_1+E_2\) est un sous-espace vectoriel;
-  \item \(W_1=A+E_1\) et \(W_2=A+E_2\), et comme \(E_1 \subset E_1+_2\) et \(E_2 \subset E_1+E_2\) alors \(W_1 \subset W\) et \(W_2 \subset W\), donc \(W_1 \cup W_2 \subset W\); et alors \(W\) est un sous-espace affine qui contient \(W_1 \cup W_2\);
-  \item soit \(W'\) un sous-espace affine qui contient \(W_1 \cup W_2\) et soit \(E'\) sa direction; Puisque \(A \in W_1 \cap W_2 \subset W_1\cup W_2 \subset W'\) on peut écrire que \(W'=A+E'\); soit \(M \in W\) il existe alors \(x \in E_1+E_2\) tel que \(M=A+x\); il existe \(x_1 \in E_1\) et \(x_2 \in E_2\) tels que \(x=x_1+x_2\), donc \(M=A+x_1+x_2\); comme \(A+x_1 \in W_1 \subset W'=A+E'\) on a \(x_1 \in E'\); comme aussi \(A+x_2 \in W_2 \subset W'=A+E'\) on a \(x_2 \in E'\); enfin \(M=A+(x_1+x_2) \in A+E'=W'\) alors \(W \subset W'\).
+    \item \(W=A+(E_2+E_2)\) est un sous-espace affine puisque \(E_1+E_2\) est un sous-espace vectoriel;
+    \item \(W_1=A+E_1\) et \(W_2=A+E_2\), et comme \(E_1 \subset E_1+_2\) et \(E_2 \subset E_1+E_2\) alors \(W_1 \subset W\) et \(W_2 \subset W\), donc \(W_1 \cup W_2 \subset W\); et alors \(W\) est un sous-espace affine qui contient \(W_1 \cup W_2\);
+    \item soit \(W'\) un sous-espace affine qui contient \(W_1 \cup W_2\) et soit \(E'\) sa direction; Puisque \(A \in W_1 \cap W_2 \subset W_1\cup W_2 \subset W'\) on peut écrire que \(W'=A+E'\); soit \(M \in W\) il existe alors \(x \in E_1+E_2\) tel que \(M=A+x\); il existe \(x_1 \in E_1\) et \(x_2 \in E_2\) tels que \(x=x_1+x_2\), donc \(M=A+x_1+x_2\); comme \(A+x_1 \in W_1 \subset W'=A+E'\) on a \(x_1 \in E'\); comme aussi \(A+x_2 \in W_2 \subset W'=A+E'\) on a \(x_2 \in E'\); enfin \(M=A+(x_1+x_2) \in A+E'=W'\) alors \(W \subset W'\).
   \end{itemize}
   On vient de montrer que pour tout \(I \in W_1 \cup W_2\), \(I+(E_1+E_2)\) est le plus petit sous-espace affine contenant \(W_1 \cup W_2\).
 \end{proof}
@@ -1626,9 +1626,9 @@ L'union de sous-espaces affines n'est pas, en général, un sous-espace affine.
 \begin{theo}
   Soient un entier naturel \(n\) non nul, \(\{(A_i,\lambda_i)\}_{i \in \llbracket 1,n \rrbracket}\) une famille de points pondérés de \(E\) tel que \(\sum_{i=1}^n \lambda_i \neq 0\) (masse totale non nulle). Alors il existe un unique point \(G\), appelé barycentre de la famille noté \(G=\Bary(A_i,\lambda_i)_{i=1, \ldots, n}\), vérifiant les propriétés équivalentes suivantes~:
   \begin{enumerate}
-  \item \(\sum_{i=1}^n \vect{GA_i}=0\);
-  \item \(\forall A \in E \sum_{i=1}^n \lambda_i \vect{AG}=\sum_{i=1}^n \lambda_i \vect{AA_i}\);
-  \item \(\exists A \in E \sum_{i=1}^n \lambda_i \vect{AG}=\sum_{i=1}^n \lambda_i \vect{AA_i}\).
+    \item \(\sum_{i=1}^n \vect{GA_i}=0\);
+    \item \(\forall A \in E \sum_{i=1}^n \lambda_i \vect{AG}=\sum_{i=1}^n \lambda_i \vect{AA_i}\);
+    \item \(\exists A \in E \sum_{i=1}^n \lambda_i \vect{AG}=\sum_{i=1}^n \lambda_i \vect{AA_i}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
@@ -1636,7 +1636,7 @@ L'union de sous-espaces affines n'est pas, en général, un sous-espace affine.
   \begin{equation}
     \sum_{i=1}^n \lambda_i A_i = \left(\sum_{i=1}^n \lambda_i \right) G \iff \sum_{i=1}^n \lambda_i \vect{AA_i} = \sum_{i=1}^n \lambda_i \vect{AG}
   \end{equation}
-Les égalités \(2\) et \(3\) ne dépendent pas du point \(A\), donc \(1 \iff 2 \iff 3 \iff \left(\sum_{i=1}^n \lambda_i \right) G = \sum_{i=1}^n \lambda_i A_i\) et comme la masse totale est non nulle, le point \(G\) existe et est unique et vérifie \(G = \frac{\sum_{i=1}^n \lambda_i A_i}{\sum_{i=1}^n \lambda_i}\).
+  Les égalités \(2\) et \(3\) ne dépendent pas du point \(A\), donc \(1 \iff 2 \iff 3 \iff \left(\sum_{i=1}^n \lambda_i \right) G = \sum_{i=1}^n \lambda_i A_i\) et comme la masse totale est non nulle, le point \(G\) existe et est unique et vérifie \(G = \frac{\sum_{i=1}^n \lambda_i A_i}{\sum_{i=1}^n \lambda_i}\).
 \end{proof}
 
 \begin{prop}[Homogénéité]
@@ -1663,10 +1663,10 @@ Les égalités \(2\) et \(3\) ne dépendent pas du point \(A\), donc \(1 \iff 2 
     \bigcup_{j=1}^p I_j &= \intervalleentier{1}{n}; \\
     \forall (j,k) \in &\intervalleentier{1}{n}^2 \quad j \neq k \implies I_j \cap I_k= \emptyset.
   \end{align}
-On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que pour tout \(j \in \llbracket 1,p\rrbracket \), \(\mu_j=\sum_{i \in I_j} \lambda_i \neq 0\). On définit pour tout \(j \in \llbracket 1,p\) le barycentre \(G_j=\Bary(A_i,\lambda_i)_{i \in I_j}\). Alors
-\begin{equation}
-  \Bary(A_i,\lambda_i)_{i=1, \ldots, n} = \Bary(G_j, \mu_j)_{j=1, \ldots, p}.
-\end{equation}
+  On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que pour tout \(j \in \llbracket 1,p\rrbracket \), \(\mu_j=\sum_{i \in I_j} \lambda_i \neq 0\). On définit pour tout \(j \in \llbracket 1,p\) le barycentre \(G_j=\Bary(A_i,\lambda_i)_{i \in I_j}\). Alors
+  \begin{equation}
+    \Bary(A_i,\lambda_i)_{i=1, \ldots, n} = \Bary(G_j, \mu_j)_{j=1, \ldots, p}.
+  \end{equation}
 \end{prop}
 \begin{proof}
   On pose
@@ -1680,9 +1680,9 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
     G' &= \frac{\sum_{j=1}^p \mu_j G_j}{\sum_{j=1}^p \mu_j} = \frac{\sum_{j=1}^p \sum_{i \in I_j}\lambda_i A_i}{\sum_{j=1}^p \sum_{i \in I_j}\lambda_i}.
   \end{align}
   Comme \((I_j)_{j=1, \ldots, p}\) est une partition de \(\intervalleentier{1}{n}\) alors
-    \begin{equation}
-      G' = \frac{1}{\sum_{i=1}^n \lambda_i} \sum_{i=1}^n \lambda_i A_i =G.
-    \end{equation}
+  \begin{equation}
+    G' = \frac{1}{\sum_{i=1}^n \lambda_i} \sum_{i=1}^n \lambda_i A_i =G.
+  \end{equation}
 \end{proof}
 %
 \begin{prop}
@@ -1700,7 +1700,7 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
   Alors
   \begin{equation}
     G' = \frac{1}{\sum_{i=1}^n \lambda_i}{\sum_{i=1}^n \lambda_i t_{x_0}(A_i)} = \frac{1}{\sum_{i=1}^n \lambda_i} \left(\sum_{i=1}^n \lambda_i A_i + \sum_{i=1}^n \lambda_i x_0 \right) = G+x_0 = t_{x_0}(G).
-\end{equation}
+  \end{equation}
 \end{proof}
 
 \subsubsection{Stabilité d'un sous-espace affine par barycentration}
@@ -1731,13 +1731,13 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
 
 \emph{Remarques}~:
 \begin{enumerate}
-\item \([A;B]=[B;A]\);
-\item si \(A \neq B\) on définit la droite \((AB)\) par
-  \begin{align}
-    \forall M \in E \quad M \in (AB) &\iff \exists \mu \in \R \vect{AM}=\mu \vect{AB} \\
-    &\iff \exists \mu \in \R M=\mu B +(1-\mu)A.\\
-  \end{align}
-  C'est l'ensemble des barycentres de \(A\) et de \(B\). Soit l'application suivante \(\fonction{\varphi}{\R}{E}{\lambda}{\lambda A +(1-\lambda)B}\). Elle est injective et induit une bijection de \(\R\) sur \((AB)\). \(\varphi\) est un paramétrage de \((AB)\). La restriction de \(\varphi\) à \([0,1]\) permet de réaliser un paramétrage du segment \([A;B]\).
+  \item \([A;B]=[B;A]\);
+  \item si \(A \neq B\) on définit la droite \((AB)\) par
+    \begin{align}
+      \forall M \in E \quad M \in (AB) &\iff \exists \mu \in \R \vect{AM}=\mu \vect{AB} \\
+                                       &\iff \exists \mu \in \R M=\mu B +(1-\mu)A.\\
+    \end{align}
+    C'est l'ensemble des barycentres de \(A\) et de \(B\). Soit l'application suivante \(\fonction{\varphi}{\R}{E}{\lambda}{\lambda A +(1-\lambda)B}\). Elle est injective et induit une bijection de \(\R\) sur \((AB)\). \(\varphi\) est un paramétrage de \((AB)\). La restriction de \(\varphi\) à \([0,1]\) permet de réaliser un paramétrage du segment \([A;B]\).
 \end{enumerate}
 
 \subsubsection{Parties convexes}
@@ -1758,16 +1758,16 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
 
   \emph{Hérédité}~: Soit \(n \geqslant 2\) et supposons \(\P(n)\). Soit une famille, \((A_{i}, \lambda_i)_{i=1, \ldots, n+}\) telle que pour tout \(i\) \(A_{i} \in \courbe{}\), \(\lambda_{i} \geqslant 0\) et \(\sum_{i=1}^{n+1}\lambda_i \neq 0\). Deux cas se présentent~:
   \begin{enumerate}
-  \item si \(\sum_{i=1}^{n}\lambda_i =0\) alors pour tout \(i \in \llbracket 1,n \rrbracket \lambda_i =0\) et donc
-    \begin{equation}
-      G=\Bary(A_i,\lambda_i)_{i=1, \ldots, n+1}=A_{n+1} \in \courbe{}
-    \end{equation}
-  \item Sinon, on peut appliquer l'hypothèse de récurrence à la famille \((A_i,\lambda_i)_{i=1, \ldots, n}\) alors \(G_n=\Bary(A_i,\lambda_i)_{i=1,\ldots, n} \in \courbe{}\).
-    Alors par associativite
-    \begin{equation}
-      G=\Bary\left(\left(G_n,\sum_{i=1}^n \lambda_i\right), (A_{n+1}, \lambda_{n+1})\right),
-    \end{equation}
-    et alors \(G \in \courbe{}\).
+    \item si \(\sum_{i=1}^{n}\lambda_i =0\) alors pour tout \(i \in \llbracket 1,n \rrbracket \lambda_i =0\) et donc
+      \begin{equation}
+        G=\Bary(A_i,\lambda_i)_{i=1, \ldots, n+1}=A_{n+1} \in \courbe{}
+      \end{equation}
+    \item Sinon, on peut appliquer l'hypothèse de récurrence à la famille \((A_i,\lambda_i)_{i=1, \ldots, n}\) alors \(G_n=\Bary(A_i,\lambda_i)_{i=1,\ldots, n} \in \courbe{}\).
+      Alors par associativite
+      \begin{equation}
+        G=\Bary\left(\left(G_n,\sum_{i=1}^n \lambda_i\right), (A_{n+1}, \lambda_{n+1})\right),
+      \end{equation}
+      et alors \(G \in \courbe{}\).
   \end{enumerate}
   Dans les deux cas, \(G \in \courbe{}\) et alors par définiton \(\courbe{}\) est une partie convexe. Alors \(\P(n+1)\) est vraie.
 
@@ -1787,7 +1787,7 @@ On suppose de plus que chaque ``sous-masse'' est non nulle, c'est à dire que po
 %
 \emph{Remarques}~:
 \begin{enumerate}
-\item Si \(\courbe{}_1\) et \(\courbe{}_2\)  sont deux parties convexes d'intersection vide, alors comme l'ensemble vide est convexe, la proposition précédente est encore vraie.
-\item Par contre l'union de deux paries convexes n'est pas convexe en général. Les parties convexes de \(\R\) sont les intervalles cf.\ chapitre~
-\ref{chap:reels}.
+  \item Si \(\courbe{}_1\) et \(\courbe{}_2\)  sont deux parties convexes d'intersection vide, alors comme l'ensemble vide est convexe, la proposition précédente est encore vraie.
+  \item Par contre l'union de deux paries convexes n'est pas convexe en général. Les parties convexes de \(\R\) sont les intervalles cf.\ chapitre~
+    \ref{chap:reels}.
 \end{enumerate}

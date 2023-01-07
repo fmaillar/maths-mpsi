@@ -15,8 +15,8 @@ Dans tout le chapitre, \(I\) est un intervalle réel contenant au moins deux poi
 \begin{defdef}
   Soit \(f \in \R^I\). On appelle primitive de \(f\) toute application \(F \in \R^I\) telle que~:
   \begin{enumerate}
-  \item \(F\) est dérivable sur \(I\);
-  \item \(F'=f\).
+    \item \(F\) est dérivable sur \(I\);
+    \item \(F'=f\).
   \end{enumerate}
 \end{defdef}
 
@@ -29,11 +29,11 @@ Dans tout le chapitre, \(I\) est un intervalle réel contenant au moins deux poi
   Soit une fonction \(G \in \R^I\). Alors
   \begin{align}
     G \text{~est une primitive de~} f &\iff \begin{cases} G \in \Dr(I,\R) \\ G'=f \end{cases} \\
-    &\iff \begin{cases} G \in \Dr(I,\R) \\ G'=F' \end{cases} \\ 
-    &\iff \begin{cases} G \in \Dr(I,\R) \\ \exists c \in \R \quad G=F+\tilde{c} \end{cases} \\
-    &\iff \exists c \in \R \quad G=F+\tilde{c}.
-   \end{align}
-   La première équivalence est la définition d'une primitive. La deuxième est claire par définition de \(F\). La troisième est due à l'intégration. Enfin la quatrième est vraie puisque pour toute constante \(c\), \(F+\tilde{c}\) est dérivable.
+                                      &\iff \begin{cases} G \in \Dr(I,\R) \\ G'=F' \end{cases} \\ 
+                                      &\iff \begin{cases} G \in \Dr(I,\R) \\ \exists c \in \R \quad G=F+\tilde{c} \end{cases} \\
+                                      &\iff \exists c \in \R \quad G=F+\tilde{c}.
+  \end{align}
+  La première équivalence est la définition d'une primitive. La deuxième est claire par définition de \(F\). La troisième est due à l'intégration. Enfin la quatrième est vraie puisque pour toute constante \(c\), \(F+\tilde{c}\) est dérivable.
 \end{proof}
 
 \begin{corth}
@@ -54,8 +54,8 @@ On peut définir l'application \(\fonction{\Phi_f}{I}{\R}{x}{\int_a^x f(t)\,\dif
   Soit \((x_1,x_2)\in I^2\) tel que \(x_1<x_2\). Alors
   \begin{align}
     \Phi_f(x_2)-\Phi_f(x_1) &= \int_a^{x_2} f(t)\,\diff t - \int_a^{x_1} f(t)\,\diff t \\
-    &= \int_a^{x_2} f(t)\,\diff t + \int_{x_1}^a f(t)\,\diff t \\
-    &= \int_{x_1}^{x_2} f(t)\,\diff t
+                            &= \int_a^{x_2} f(t)\,\diff t + \int_{x_1}^a f(t)\,\diff t \\
+                            &= \int_{x_1}^{x_2} f(t)\,\diff t
   \end{align}
   et comme \(f\) est positive alors \(\Phi_f(x_2)-\Phi_f(x_1) \geqslant 0\) par positivité de l'intagrale. Finalement \(\Phi_f\) est croissante.
 \end{proof}
@@ -77,17 +77,17 @@ On peut définir l'application \(\fonction{\Phi_f}{I}{\R}{x}{\int_a^x f(t)\,\dif
 \begin{proof}
   Soit \(x_0 \in I\). Deux cas de figures se présentent~:
   \begin{itemize}
-  \item Soit \(x_0 \in \mathring{I}\) (ce qui signifie qu'il est dans l'intérieur et que ce n'est pas une borne, ou plus formellement qu'il existe un réel \(\eta>0\) tel que \(\intervalleoo{x_0-\eta}{x_0+\eta} \subset I\)). On peut alors choisir \((\alpha,\beta) \in I^2\) tel que \(\alpha < x_0 < \beta\) et on pose \(J=\intervalleff{\alpha}{\beta}\).
-  \item Soit \(x_0 \in I\setminus\mathring{I}\) (ce qui signifie que c'est une borne) alors deux sous-cas se présentent~:
-    \begin{itemize}
-    \item soit \(x_0 = \min I\) alors il existe \(\beta \in \R\) tel que \(\beta > x_0\) et donc on pose \(J=\intervalleff{x_0}{\beta} \subset I\);
-    \item soit \(x_0 = \max I\) alors il existe \(\alpha \in \R\) tel que \(\alpha < x_0\) et donc on pose \(J=\intervalleff{\alpha}{x_0} \subset I\);
-    \end{itemize}
+    \item Soit \(x_0 \in \mathring{I}\) (ce qui signifie qu'il est dans l'intérieur et que ce n'est pas une borne, ou plus formellement qu'il existe un réel \(\eta>0\) tel que \(\intervalleoo{x_0-\eta}{x_0+\eta} \subset I\)). On peut alors choisir \((\alpha,\beta) \in I^2\) tel que \(\alpha < x_0 < \beta\) et on pose \(J=\intervalleff{\alpha}{\beta}\).
+    \item Soit \(x_0 \in I\setminus\mathring{I}\) (ce qui signifie que c'est une borne) alors deux sous-cas se présentent~:
+      \begin{itemize}
+        \item soit \(x_0 = \min I\) alors il existe \(\beta \in \R\) tel que \(\beta > x_0\) et donc on pose \(J=\intervalleff{x_0}{\beta} \subset I\);
+        \item soit \(x_0 = \max I\) alors il existe \(\alpha \in \R\) tel que \(\alpha < x_0\) et donc on pose \(J=\intervalleff{\alpha}{x_0} \subset I\);
+      \end{itemize}
   \end{itemize}
 
-Dans tous les cas et sous-cas, \(J\) est un segment inclus dans \(I\). Alors \(f\) est continue par morceaux sur \(J\). Par conséquent \(f\) est bornée sur \(J\) donc l'application \({\Phi_f}_{|J}\) est lipschitzienne et donc continue.
+  Dans tous les cas et sous-cas, \(J\) est un segment inclus dans \(I\). Alors \(f\) est continue par morceaux sur \(J\). Par conséquent \(f\) est bornée sur \(J\) donc l'application \({\Phi_f}_{|J}\) est lipschitzienne et donc continue.
 
-Or \(x_0 \in J\), donc \(\Phi_f\) est continue en \(x_0\) pour tout \(x_0 \in I\). Donc \(\Phi\) est continue sur \(I\).
+  Or \(x_0 \in J\), donc \(\Phi_f\) est continue en \(x_0\) pour tout \(x_0 \in I\). Donc \(\Phi\) est continue sur \(I\).
 \end{proof}
 
 \begin{prop}
@@ -105,7 +105,7 @@ Or \(x_0 \in J\), donc \(\Phi_f\) est continue en \(x_0\) pour tout \(x_0 \in I\
   Alors pour tout \(x \in I \setminus\{x_0\}\), on a
   \begin{align}
     \frac{\Phi_f(x)-\Phi_f(x_0)}{x-x_0} &= \frac{1}{x-x_0} \int_{x_0}^x (f(x_0)+\epsilon(t))\,\diff t \\
-    &=  \frac{1}{x-x_0} \int_{x_0}^x f(x_0)\,\diff t + \frac{1}{x-x_0} \int_{x_0}^x\epsilon(t)\,\diff t.
+                                        &=  \frac{1}{x-x_0} \int_{x_0}^x f(x_0)\,\diff t + \frac{1}{x-x_0} \int_{x_0}^x\epsilon(t)\,\diff t.
   \end{align}
 
   Comme la fonction \(f\) est continue en \(x_0\), on a par définition
@@ -130,19 +130,19 @@ Or \(x_0 \in J\), donc \(\Phi_f\) est continue en \(x_0\) pour tout \(x_0 \in I\
 \begin{theo}[Théorème fondamental]
   Soit \(f \in \R^I\) \emph{continue} sur \(I\). Alors \(f\) admet des primitives. De plus~:
   \begin{enumerate}
-  \item pour tout \(x_0 \in I\), l'unique primitive de \(f\) qui s'annule en \(x_0\) est l'application
-    \begin{equation}
-      \fonction{F}{I}{\R}{x}{\int_{x_0}^x f(t)\,\diff t};
-    \end{equation}
-  \item toutes les primitives de \(f\) sont de classe \(\classe{1}\).
+    \item pour tout \(x_0 \in I\), l'unique primitive de \(f\) qui s'annule en \(x_0\) est l'application
+      \begin{equation}
+        \fonction{F}{I}{\R}{x}{\int_{x_0}^x f(t)\,\diff t};
+      \end{equation}
+    \item toutes les primitives de \(f\) sont de classe \(\classe{1}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   Soit \(a \in I\) et soit l'application \(\fonction{\Phi_f}{I}{\R}{x}{\int_a^xf(t)\,\diff t}\). La fonction \(f\) est continue sur \(I\), alors pour tout \(x_0 \in I\), \(\Phi_f\) est dérivable en \(x_0\) avec \(\Phi_f'(x_0)=f(x_0)\). Alors comme c'est pour tout \(x_0\), \(\Phi\) est dérivable sur \(I\) et \(\Phi_f'=f\). Comme \(f\) est continue, l'application \(\Phi_f\) est de classe \(\classe{1}\).
 
-Les autres primitives de \(f\) différent de \(\Phi_f\) d'une constantes, donc elles sont aussi de classe \(\classe{1}\).
+  Les autres primitives de \(f\) différent de \(\Phi_f\) d'une constantes, donc elles sont aussi de classe \(\classe{1}\).
 
-Enfin, on a déjà vu l'unicité de la primitive de \(f\) qui s'annule en \(x_0\).
+  Enfin, on a déjà vu l'unicité de la primitive de \(f\) qui s'annule en \(x_0\).
 \end{proof}
 
 \begin{prop}
@@ -195,15 +195,15 @@ Enfin, on a déjà vu l'unicité de la primitive de \(f\) qui s'annule en \(x_0\
   Comme les applications \(u\) et \(v\) sont de classe \(\classe{1}\), l'application \(uv\) est de classe \(\classe{1}\). Alors
   \begin{align}
     [u(t)v(t)]_a^b = u(b)v(b)-u(a)v(a) &=\int_a^b (uv)'(t)\,\diff t \\
-    &=\int_a^b[u'(t)v(t)u(t)v'(t)]\,\diff t \\
-    &=\int_a^b u'(t)v(t)\,\diff t + \int_a^b u(t)v'(t)\,\diff t.
+                                       &=\int_a^b[u'(t)v(t)u(t)v'(t)]\,\diff t \\
+                                       &=\int_a^b u'(t)v(t)\,\diff t + \int_a^b u(t)v'(t)\,\diff t.
   \end{align}
 \end{proof}
 
 En pratique, on utilise l'intégration par parties pour~:
 \begin{enumerate}
-\item se ramener à des fonctions plus simples. Comme par exemple pour calculer pour tout \(x>0\), l'intégrale \(\int_1^x \ln(t)\,\diff t\).
-\item calculer des intégrales par récurrence, comme par exemple les intégrales de Wallis.
+  \item se ramener à des fonctions plus simples. Comme par exemple pour calculer pour tout \(x>0\), l'intégrale \(\int_1^x \ln(t)\,\diff t\).
+  \item calculer des intégrales par récurrence, comme par exemple les intégrales de Wallis.
 \end{enumerate}
 
 \subsection{Changement de variable}
@@ -222,8 +222,8 @@ En pratique, on utilise l'intégration par parties pour~:
   Comme \(\varphi \in \classe{1}(J,I)\) et \(F \in \classe{1}(J,\R)\), alors \(F \circ \varphi\) est dans  \(\classe{1}(J,\R)\) et \((F\circ \varphi)'=\varphi' \cdot f \circ \varphi\). Alors
   \begin{align}
     \int_a^b f(\varphi(t)) \varphi'(t)\,\diff t &= \int_a^b (F\circ \varphi)'\,\diff t\\
-    &=F\circ \varphi(b) - F\circ \varphi(a) \\
-    &=\int_{\varphi(a)}^{\varphi(b)}f(u)\,\diff u.
+                                                &=F\circ \varphi(b) - F\circ \varphi(a) \\
+                                                &=\int_{\varphi(a)}^{\varphi(b)}f(u)\,\diff u.
   \end{align}
 \end{proof}
 
@@ -245,30 +245,30 @@ Soit l'application \(\fonction{\varphi}{\intervalleff{0}{\pi/2}}{\R}{t}{\cos t}\
 
 \emph{Applications}~: Notons trois applications singulières
 \begin{enumerate}
-\item Les fonctions paires et les fonctions impaires. Soit un réel \(a\) positif strictement et une application \(f : \intervalleff{-a}{a} \longmapsto \R\) continue. Alors
-  \begin{align}
-    \int_{-a}^a f(t)\,\diff t &=\int_{-a}^0 f(t)\,\diff t + \int_{0}^a f(t)\,\diff t \\
-    &=\int_a^0 f(-s)(-\diff s) + \int_{0}^a f(t)\,\diff t \\
-    &=\int_0^a f(-s)\,\diff s + \int_{0}^a f(t)\,\diff t \\
-  \end{align}
-  Si \(f\) est pair alors \(\int_{-a}^a f(t)\,\diff t = 2 \int_{0}^a f(t)\,\diff t\). Si \(f\) est impaire alors l'intégrale est nulle.
+  \item Les fonctions paires et les fonctions impaires. Soit un réel \(a\) positif strictement et une application \(f : \intervalleff{-a}{a} \longmapsto \R\) continue. Alors
+    \begin{align}
+      \int_{-a}^a f(t)\,\diff t &=\int_{-a}^0 f(t)\,\diff t + \int_{0}^a f(t)\,\diff t \\
+                                &=\int_a^0 f(-s)(-\diff s) + \int_{0}^a f(t)\,\diff t \\
+                                &=\int_0^a f(-s)\,\diff s + \int_{0}^a f(t)\,\diff t \\
+    \end{align}
+    Si \(f\) est pair alors \(\int_{-a}^a f(t)\,\diff t = 2 \int_{0}^a f(t)\,\diff t\). Si \(f\) est impaire alors l'intégrale est nulle.
 
-\item Les fonctions périodiques. Soit \(T >0\) et \(f \in \R^{\R}\) continue est \(T\)-périodique. Pour tout réel \(a\) et \(b\), on a
-  \begin{equation}
-    \int_{a+T}^{b+T} f(t)\,\diff t = \int_a^bf(x+T)\,\diff x = \int_a^bf(x)\,\diff x
-  \end{equation}
-\item Passage de \(\intervalleff{a}{b}\) à \(\intervalleff{0}{1}\). Soient deux réels \(a\) et \(b\) tels que \(b>a\) et \(f:\intervalleff{a}{b} \longmapsto \R\) une application continue. Soit l'application \(\varphi\) telle que
-  \begin{equation}
-    \fonction{\intervalleff{a}{b}}{\intervalleff{0}{1}}{t}{\frac{t-a}{b-a}}.
-  \end{equation}
-  Pour tout \(t \in \intervalleff{a}{b}\), on a \(\varphi'(t) = \frac{1}{b-a}\), \(\varphi(a)=0\) et \(\varphi(b)=1\).
-  \begin{equation}
-    \forall u \in \intervalleff{0}{1} \ \forall t \in \intervalleff{a}{b} \quad u=\varphi(t) \iff t=(b-a)u +a = bu +(1-u)a
-  \end{equation}
-  et alors
-  \begin{equation}
-    \int_a^b f(t)\,\diff t = \int_0^1 f(bu+(1-u)a)(b-a)\,\diff u = (b-a) \int_0^1 f(bu+(1-u))a\,\diff u.
-  \end{equation}
+  \item Les fonctions périodiques. Soit \(T >0\) et \(f \in \R^{\R}\) continue est \(T\)-périodique. Pour tout réel \(a\) et \(b\), on a
+    \begin{equation}
+      \int_{a+T}^{b+T} f(t)\,\diff t = \int_a^bf(x+T)\,\diff x = \int_a^bf(x)\,\diff x
+    \end{equation}
+  \item Passage de \(\intervalleff{a}{b}\) à \(\intervalleff{0}{1}\). Soient deux réels \(a\) et \(b\) tels que \(b>a\) et \(f:\intervalleff{a}{b} \longmapsto \R\) une application continue. Soit l'application \(\varphi\) telle que
+    \begin{equation}
+      \fonction{\intervalleff{a}{b}}{\intervalleff{0}{1}}{t}{\frac{t-a}{b-a}}.
+    \end{equation}
+    Pour tout \(t \in \intervalleff{a}{b}\), on a \(\varphi'(t) = \frac{1}{b-a}\), \(\varphi(a)=0\) et \(\varphi(b)=1\).
+    \begin{equation}
+      \forall u \in \intervalleff{0}{1} \ \forall t \in \intervalleff{a}{b} \quad u=\varphi(t) \iff t=(b-a)u +a = bu +(1-u)a
+    \end{equation}
+    et alors
+    \begin{equation}
+      \int_a^b f(t)\,\diff t = \int_0^1 f(bu+(1-u)a)(b-a)\,\diff u = (b-a) \int_0^1 f(bu+(1-u))a\,\diff u.
+    \end{equation}
 \end{enumerate}
 
 De façon générale, les changements de variables affines servent à exploiter des symétries de la fonctions à intégrer.
@@ -280,16 +280,16 @@ De façon générale, les changements de variables affines servent à exploiter 
 \begin{defdef}
   Soit \(I\) un intervalle réel, \(a \in I\), \(f \in \R^I\) et \(n \in \N\). Supposons que \(f\) est dérivable au moins \(n\) fois en \(a\).
 
-On appelle développement de Taylor de \(f\) au point \(a\) à l'ordre \(n\), l'application polynomiale
-\begin{equation}
-  \fonction{T_{n,f,a}}{\R}{\R}{x}{\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k}
-\end{equation}
+  On appelle développement de Taylor de \(f\) au point \(a\) à l'ordre \(n\), l'application polynomiale
+  \begin{equation}
+    \fonction{T_{n,f,a}}{\R}{\R}{x}{\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k}
+  \end{equation}
 
-Pour tout réel \(x\),
-\begin{equation}
-  T_{n}(x)= f(a) + f'(a)(x-a) + \dotsb +\frac{f^{(n)}(a)}{n!}(x-a)^n.
-\end{equation}
-Si \(0 \in I\) et si \(a=0\) on parle de développement de Mac-Laurin. 
+  Pour tout réel \(x\),
+  \begin{equation}
+    T_{n}(x)= f(a) + f'(a)(x-a) + \dotsb +\frac{f^{(n)}(a)}{n!}(x-a)^n.
+  \end{equation}
+  Si \(0 \in I\) et si \(a=0\) on parle de développement de Mac-Laurin. 
 \end{defdef}
 
 \emph{Remarque}~: Pour tout naturel \(k\) non nul, on a \(f^{(k)} = (f')^{(k-1)}\), donc pour tout réel \(x\)
@@ -313,9 +313,9 @@ Soit un naturel \(n\). On pose \(n'=E\left(\frac{n}{2}\right)\) et \(n''=E\left(
     \(f(x)\) &  \(f^{(k)}(0), k\geqslant 1\) & \(T_n(x)\) & \(I\) \\ \hline
     \(\e^x\) &  \(1\) & \(\sum_{k=0}^n \frac{1}{k!}x^k\) & \(\R\) \\ \hline
     \(\cosh x\)  & \(1\) si \(k\) pair & \(\sum_{k=0}^{n'} \frac{1}{(2k)!}x^{2k}\) & \(\R\) \\
-    &  \(0\) si \(k\) impair & & \\ \hline
+                 &  \(0\) si \(k\) impair & & \\ \hline
     \(\sinh x\)  & \(0\) si \(k\) pair & \(\sum_{k=0}^{n''} \frac{1}{(2k+1)!}x^{2k+1}\) & \(\R\) \\
-    &  \(1\) si \(k\) impair & & \\ \hline
+                 &  \(1\) si \(k\) impair & & \\ \hline
     \(\cos x\)  & \(\cos\left(\frac{k\pi}{2}\right)\) & \(\sum_{k=0}^{n'} \frac{(-1)^k}{(2k)!}x^{2k}\) & \(\R\) \\ \hline
     \(\sin x\)  & \(\sin\left(\frac{k\pi}{2}\right)\) & \(\sum_{k=0}^{n''} \frac{(-1)^k}{(2k+1)!}x^{2k+1}\) & \(\R\) \\ \hline
     \(\ln(1+x)\)  & \((-1)^{k-1}(k-1)\)! & \(\sum_{k=1}^n \frac{(-1)^{k-1}}{k} x^k\) & \(\intervalleoo{-1}{+\infty}\) \\ \hline
@@ -343,39 +343,39 @@ Soit un naturel \(n\). On pose \(n'=E\left(\frac{n}{2}\right)\) et \(n''=E\left(
   \end{equation}
   et montrons par récurrence sur \(n \in \N\) l'assertion \(\P(n)\) ``si \(f \in \classe{n+1}(I,\R)\) alors \(\R_n(x)=\int_a^x \frac{(x-t)^n}{n!} f^{(n+1)}(t)\,\diff t\).''
 
-\emph{Initialisation}~: \(n=0\), suppsons que \(f\) soit \(\classe{1}\), alors pour tout \(x \in I\), on a
-\begin{equation}
-  R_0(x) = f(x)-f(a) = \int_a^x f'(t)\,\diff t = \int_a^x \frac{(x-t)^0}{0!}f^{(0+1)}(t)\,\diff t.
-\end{equation}
-Alors \(\P(0)\) est vraie.
+  \emph{Initialisation}~: \(n=0\), suppsons que \(f\) soit \(\classe{1}\), alors pour tout \(x \in I\), on a
+  \begin{equation}
+    R_0(x) = f(x)-f(a) = \int_a^x f'(t)\,\diff t = \int_a^x \frac{(x-t)^0}{0!}f^{(0+1)}(t)\,\diff t.
+  \end{equation}
+  Alors \(\P(0)\) est vraie.
 
-\emph{Hérédité}~: Soit \(n \in \N\) et supposon \(\P(n)\). Si \(f\) est de classe \(\classe{n+2}\) alors pour tout \(x \in I\), on a
-\begin{equation}
-  R_{n+1}(x)=f(x) - \sum_{k=0}\frac{f^{(k)}(a)}{k!} (x-a)^k = f(x) - T_n(x) - \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1}.
-\end{equation}
+  \emph{Hérédité}~: Soit \(n \in \N\) et supposon \(\P(n)\). Si \(f\) est de classe \(\classe{n+2}\) alors pour tout \(x \in I\), on a
+  \begin{equation}
+    R_{n+1}(x)=f(x) - \sum_{k=0}\frac{f^{(k)}(a)}{k!} (x-a)^k = f(x) - T_n(x) - \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1}.
+  \end{equation}
 
-La fonction \(f\) est de classe \(\classe{2}\), donc elle est de classe \(\classe{1}\) et l'hypothèse de récurrence nous donne que pour tout \(x \in I\), on a
-\begin{equation}
-  f(x) - T_n(x) = \int_a^x \frac{(x-t)^n}{n!} f^{(n+1)}(t)\,\diff t
-\end{equation}
-et alors
-\begin{equation}
-   R_{n+1}(x) = int_a^x \frac{(x-t)^n}{n!} f^{(n+1)}(t)\,\diff t - \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1}.
-\end{equation}
+  La fonction \(f\) est de classe \(\classe{2}\), donc elle est de classe \(\classe{1}\) et l'hypothèse de récurrence nous donne que pour tout \(x \in I\), on a
+  \begin{equation}
+    f(x) - T_n(x) = \int_a^x \frac{(x-t)^n}{n!} f^{(n+1)}(t)\,\diff t
+  \end{equation}
+  et alors
+  \begin{equation}
+    R_{n+1}(x) = int_a^x \frac{(x-t)^n}{n!} f^{(n+1)}(t)\,\diff t - \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1}.
+  \end{equation}
 
-Soit les applications \(\fonction{u}{I}{\R}{t}{f^{(n+1)}(t)}\) et \(\fonction{v}{I}{\R}{t}{-\frac{(x-t)^{n+1}}{(n+1)!}}\). La fonction \(v\) est de classe \(\classe{1}\) puisqu'elle est polynomiale, et \(u\) est aussi de classe \(\classe{1}\) car \(f\) est de classe \(\classe{n+2}\). De plus, pour \(t \in I\), on a
-\begin{equation}
-  u'(t) = f^{(n+2)}(t) \quad v'(t)=\frac{(x-t)^n}{n!},
-\end{equation}
-alors pour tout \(x \in I\), en intégrant par parties on a
-\begin{align}
-  R_{n+1}(x)& = \left[ -\frac{(x-t)^{n+1}}{(n+1)!}f^{(n+1)}(t)\right]_a^x - \int_a^x f^{(n+2)}(t)\left(-\frac{(x-t)^{n+1}}{(n+1)!}\right)\,\diff t \\ 
-  &- \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1} \notag \\
-  &= \int_a^x f^{(n+2)}(t) \frac{(x-t)^{n+1}}{(n+1)!}\,\diff t
-\end{align}
-donc \(\P(n+1)\) est vraie.
+  Soit les applications \(\fonction{u}{I}{\R}{t}{f^{(n+1)}(t)}\) et \(\fonction{v}{I}{\R}{t}{-\frac{(x-t)^{n+1}}{(n+1)!}}\). La fonction \(v\) est de classe \(\classe{1}\) puisqu'elle est polynomiale, et \(u\) est aussi de classe \(\classe{1}\) car \(f\) est de classe \(\classe{n+2}\). De plus, pour \(t \in I\), on a
+  \begin{equation}
+    u'(t) = f^{(n+2)}(t) \quad v'(t)=\frac{(x-t)^n}{n!},
+  \end{equation}
+  alors pour tout \(x \in I\), en intégrant par parties on a
+  \begin{align}
+    R_{n+1}(x)& = \left[ -\frac{(x-t)^{n+1}}{(n+1)!}f^{(n+1)}(t)\right]_a^x - \int_a^x f^{(n+2)}(t)\left(-\frac{(x-t)^{n+1}}{(n+1)!}\right)\,\diff t \\ 
+              &- \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1} \notag \\
+              &= \int_a^x f^{(n+2)}(t) \frac{(x-t)^{n+1}}{(n+1)!}\,\diff t
+  \end{align}
+  donc \(\P(n+1)\) est vraie.
 
-\emph{Conclusion}~: On a montré \(\P(0)\) et pour tout naturel \(n\), \(\P(n) \Rightarrow \P(n+1)\). Alors par théorème de récurrence, pour tout naturel \(n\), \(\P(n)\).
+  \emph{Conclusion}~: On a montré \(\P(0)\) et pour tout naturel \(n\), \(\P(n) \Rightarrow \P(n+1)\). Alors par théorème de récurrence, pour tout naturel \(n\), \(\P(n)\).
 \end{proof}
 
 \subsection{Inégalité de Taylor-Lagrange}
@@ -386,7 +386,7 @@ donc \(\P(n+1)\) est vraie.
     \abs{f(x)-T_{n,f,a}(x)} \leqslant \frac{\abs{x-a}^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
   \end{equation}
 
-C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au point \(a\).
+  C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au point \(a\).
 \end{theo}
 \begin{proof}
   La fonction \(f\) est de classe \(\classe{n+2}\), alors d'après la formule de Taylor-Lagrange avec reste intégral, on a pour tout \(x \in I\)
@@ -395,18 +395,18 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au p
   \end{equation}
   Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(x \geqslant a\) alors
-    \begin{align}
-      \abs{R_n(x)} &\leqslant \int_a^x \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
-      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(x-t)^n}{n!}\,\diff t\\
-      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(x-a)^{n+1}}{(n+1)!};
-    \end{align}
-  \item Si \(x \leqslant a\) alors
-    \begin{align}
-      \abs{R_n(x)} &\leqslant \int_x^a \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
-      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(t-x)^n}{n!}\,\diff t\\
-      &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(a-x)^{n+1}}{(n+1)!}.
-    \end{align}
+    \item Si \(x \geqslant a\) alors
+      \begin{align}
+        \abs{R_n(x)} &\leqslant \int_a^x \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
+                     &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(x-t)^n}{n!}\,\diff t\\
+                     &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(x-a)^{n+1}}{(n+1)!};
+      \end{align}
+    \item Si \(x \leqslant a\) alors
+      \begin{align}
+        \abs{R_n(x)} &\leqslant \int_x^a \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
+                     &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x \frac{(t-x)^n}{n!}\,\diff t\\
+                     &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \frac{(a-x)^{n+1}}{(n+1)!}.
+      \end{align}
   \end{enumerate}
   Dans les deux cas,
   \begin{equation}
@@ -421,8 +421,8 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au p
 \begin{theo}
   Soient un intervalle réel \(I\), \(a \in I\), \(n \in \N\) et \(f \in \R^I\). Supposons que~:
   \begin{enumerate}
-  \item \(f\) admet un développement limité à l'ordre \(n\) au voisinage de \(a\);
-  \item \(f\) admet une primitive \(F\) sur \(I\).
+    \item \(f\) admet un développement limité à l'ordre \(n\) au voisinage de \(a\);
+    \item \(f\) admet une primitive \(F\) sur \(I\).
   \end{enumerate}
   Alors \(F\) admet un développement limité à l'ordre \(n+1\) au voisinage de \(a\). De plus la partie régulière \(P_{n+1}(F)\) de ce développement limité est la primitive de \(P_n(f)\) qui vaut \(F(a)\) en \(a\).
 
@@ -450,13 +450,13 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au p
   \(F-B_{n+1}\) est continue sur \([(a,x)]\) et dérivable sur \(](a,x)[\) alors d'après le théorème de Rolle, il existe un réel \(c_x \in [(a,x)]\) tel que
   \begin{align}
     F(x)-B_{n+1}(x) &= (F-B_{n+1})'(c_x)(x-a)\\
-    & = (f(c_x)-A_n(c_x))(x-a)\\
-    &=(c_x-a)^n\epsilon(c_x)(x-a)\\
-    &=(x-a)^{n+1} \left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x).
+                    & = (f(c_x)-A_n(c_x))(x-a)\\
+                    &=(c_x-a)^n\epsilon(c_x)(x-a)\\
+                    &=(x-a)^{n+1} \left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x).
   \end{align}
   On note \(\epsilon_1(x)=\left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x)\). Puisque \(c_x \in [(a,x)]\), le théorème des gendarmes nous dit que \(\lim\limits_{x \to a} c_x =a\). De plus on sait que \(\lim\limits_{x \to a}\epsilon(x)=0\). Alors par composition de limites, \(\lim\limits_{x \to a} \epsilon(c_x)=0\). 
 
-De plus pour tout \(x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leqslant 1\) alors finalement \(F(x)-B_{n+1}(x) = \petito{(x-a)^{n+1}}\).
+  De plus pour tout \(x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leqslant 1\) alors finalement \(F(x)-B_{n+1}(x) = \petito{(x-a)^{n+1}}\).
 \end{proof}
 
 \begin{corth}
@@ -480,9 +480,9 @@ De plus pour tout \(x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leqslant 1\) alors f
 \begin{prop}
   Soient \(I\) un intervalle réel, \(a \in I\), \(n \in \N^*\) et \(f \in \R^I\). On suppose que~:
   \begin{enumerate}
-  \item \(f\) admet un \(DL_n(a)\);
-  \item \(f\) est dérivable sur \(I\);
-  \item \(f'\) admet un \(DL_{n-1}(a)\).
+    \item \(f\) admet un \(DL_n(a)\);
+    \item \(f\) est dérivable sur \(I\);
+    \item \(f'\) admet un \(DL_{n-1}(a)\).
   \end{enumerate}
   Alors si on note \(P\) les parties régulières on a
   \begin{equation}
@@ -506,36 +506,36 @@ De plus pour tout \(x \in [(a,x)], \abs{\frac{c_x-a}{x-a}} \leqslant 1\) alors f
 \begin{proof}
   On montre cette assertion, qu'on note \(\P(n)\) pour tout naturel \(n\), par récurrence sur \(n\).
 
-\emph{Initialisation}~: \(n=0\). Si \(f\) est continue alors on a déjà vue que \(f(x)=f(a)+o(1)\). Alors \(\P(0)\) est vraie.
+  \emph{Initialisation}~: \(n=0\). Si \(f\) est continue alors on a déjà vue que \(f(x)=f(a)+o(1)\). Alors \(\P(0)\) est vraie.
 
-\emph{Hérédité}~: Soit \(n \in \N\) et supposons \(\P(n)\). Comme \(f\) est de classe \(\classe{n}\), on peut lui appliquer la formule de Taylor avec reste intégral à l'ordre \(n-1\) en \(a\), c'est-à-dire que
-\begin{equation}
-  \forall x \in I \quad f(x) = T_{n-1,f,a}(x) + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} f^{(n)}(t)\,\diff t.
-\end{equation}
+  \emph{Hérédité}~: Soit \(n \in \N\) et supposons \(\P(n)\). Comme \(f\) est de classe \(\classe{n}\), on peut lui appliquer la formule de Taylor avec reste intégral à l'ordre \(n-1\) en \(a\), c'est-à-dire que
+  \begin{equation}
+    \forall x \in I \quad f(x) = T_{n-1,f,a}(x) + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} f^{(n)}(t)\,\diff t.
+  \end{equation}
 
-La fonction \(f^{(n)}\) est continue donc il existe une application \(\epsilon: I \longmapsto \R\) telle que
-\begin{equation}
-  \begin{cases}
-    \forall t \in I \quad f^{(n)}(t) = f^{(n)}(a)+\epsilon(t) \\
-    \lim\limits_{t \to 0}\epsilon(t)=0
-  \end{cases}
-\end{equation}
-Alors pour tout \(x \in I\), on a
-\begin{align}
-  f(x) &= T_{n-1,f,a}(x) + f^{(n)}(a) \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} f^{(n)}(t)\,\diff t + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
-  &= T_{n-1,f,a}(x) + f^{(n)}(a) \frac{(x-a)^n}{n!} + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
-  &= T_{n,f,a}(x) + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t.
-\end{align}
-Du coup pour tout \(x \in I\setminus\{a\}\) on a
-\begin{align}
-  f(x) - T_{n,f,a}(x) &= \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
-  &= (x-a)^{n-1} \int_a^x \left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t)\,\diff t.
-\end{align}
-Au voisinage de \(a\), on a \(\left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t) = o(1)\). Donc au voisinage de \(a\),
-\begin{equation}
-\int_a^x \left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t)\,\diff t = o(x-a).
-\end{equation}
-Par conséquent \(f(x)-T_{n,f,a}(x) = \petito{(x-a)^n})\).
+  La fonction \(f^{(n)}\) est continue donc il existe une application \(\epsilon: I \longmapsto \R\) telle que
+  \begin{equation}
+    \begin{cases}
+      \forall t \in I \quad f^{(n)}(t) = f^{(n)}(a)+\epsilon(t) \\
+      \lim\limits_{t \to 0}\epsilon(t)=0
+    \end{cases}
+  \end{equation}
+  Alors pour tout \(x \in I\), on a
+  \begin{align}
+    f(x) &= T_{n-1,f,a}(x) + f^{(n)}(a) \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} f^{(n)}(t)\,\diff t + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
+         &= T_{n-1,f,a}(x) + f^{(n)}(a) \frac{(x-a)^n}{n!} + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
+         &= T_{n,f,a}(x) + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t.
+  \end{align}
+  Du coup pour tout \(x \in I\setminus\{a\}\) on a
+  \begin{align}
+    f(x) - T_{n,f,a}(x) &= \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
+                        &= (x-a)^{n-1} \int_a^x \left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t)\,\diff t.
+  \end{align}
+  Au voisinage de \(a\), on a \(\left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t) = o(1)\). Donc au voisinage de \(a\),
+  \begin{equation}
+    \int_a^x \left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} \epsilon(t)\,\diff t = o(x-a).
+  \end{equation}
+  Par conséquent \(f(x)-T_{n,f,a}(x) = \petito{(x-a)^n})\).
 \end{proof}
 
 \emph{Remarque}~: Si \(f\) est de classe \(\classe{n}\) et admet un \(DL_n(a)\)  qui est
@@ -559,8 +559,8 @@ Soient \(R=(O,\vi,\vj)\) un repère orthonormal direct du plan, \((I,f)\) un arc
   On note \(M_0=M(t_0)\). Ainsi pour tout \(t \in I\setminus\{t_0\}\) on a
   \begin{align}
     \vect{M_0M(t)} &= (x(t)-x_0)\vi + (y(t)-y_0)\vj \\
-    &= (x'(t_0)(t-t_0) +o(t-t_0))\vi + (y'(t_0)(t-t_0) +o(t-t_0))\vj\\
-    &=(t-t_0)\vect{f'(t_0)} +(t-t_0)o(1)(\vi+\vj)
+                   &= (x'(t_0)(t-t_0) +o(t-t_0))\vi + (y'(t_0)(t-t_0) +o(t-t_0))\vj\\
+                   &=(t-t_0)\vect{f'(t_0)} +(t-t_0)o(1)(\vi+\vj)
   \end{align}
   Ainsi
   \begin{equation}
@@ -593,7 +593,7 @@ Ainsi~: pour tout \(i \in \llbracket 1, p-1 \rrbracket\), \(\vect{A_i}=\vect{0}\
 Le couple \((\vect{Ap}, \vect{A_q})\) est libre, c'est donc une base du plan. Alors
 \begin{align}
   \vect{M_0M}(t) &= (t-t_0)^p \vect{A_p} + \sum_{i=p+1}^{q-1} (t-t_0)^i \alpha_i \vect{A_p} +(t-t_0)^q \vect{A_q} +\vect{o}((t-t_0)^q) \\
-&=[(t-t_0)^q + \sum_{i=p+1}^{q-1} (t-t_0)^i \alpha_i]\vect{A_p} + (t-t_0)^q \vect{A_q} +\vect{o}((t-t_0)^q)
+                 &=[(t-t_0)^q + \sum_{i=p+1}^{q-1} (t-t_0)^i \alpha_i]\vect{A_p} + (t-t_0)^q \vect{A_q} +\vect{o}((t-t_0)^q)
 \end{align}
 
 Soit \((X(t),Y(t))\) les coordonnées de \(M(t)\) le repère \((M_0,\vect{A_p},\vect{A_q})\). Alors
@@ -612,10 +612,10 @@ La tangente est dirigée par \(\vect{A_p}\).
 
 \emph{Allure en fonction de la parité de \(p\) et de \(q\)}~:
 \begin{itemize}
-\item si \(p\) est impair et si \(q\) est pair alors \(M_0\) est un point birrégulier;
-\item si \(p\) est impair et si \(q\) est impair alors \(M_0\) est un point d'inflexion;
-\item si \(p\) est pair et si \(q\) est impair alors \(M_0\) est un point de rebroussement de première espèce;
-\item si \(p\) est pair et si \(q\) est pair alors \(M_0\) est un point de rebroussement de deuxième espèce;
+  \item si \(p\) est impair et si \(q\) est pair alors \(M_0\) est un point birrégulier;
+  \item si \(p\) est impair et si \(q\) est impair alors \(M_0\) est un point d'inflexion;
+  \item si \(p\) est pair et si \(q\) est impair alors \(M_0\) est un point de rebroussement de première espèce;
+  \item si \(p\) est pair et si \(q\) est pair alors \(M_0\) est un point de rebroussement de deuxième espèce;
 \end{itemize}
 
 \subsubsection{Asymptotes}
@@ -624,16 +624,16 @@ Soit \(\alpha\) une borne de \(I\), (\(\alpha \notin I\)) avec \(\alpha \in \bar
 
 Alors la courbe admet une direction asymptotique de pente \(p\). Deux cas se présentent selon que \(\alpha \in \R\) ou pas.
 \begin{itemize}
-\item Si \(\alpha \in \R\), on suppose que l'on peut faire un développement limité de \(y(t)-px(t)\) au voisinage de \(\alpha\). Si on montre que
-  \begin{equation}
-    y(t)=px(t)+m +c(t-\alpha)^q +o((t-\alpha)^q)
-  \end{equation}
-  alors la droite d'équation \(y=px+m\) est asympote à la courbe. On peut connaître la position de l'asymptote par rapport à la courbe à l'aide du signe de \(c(t-\alpha)^q\).
-\item Si \(\alpha =\pm \infty\), on pose \(u=\frac{1}{t}\) qui tend vers zéro. On fait un développement limité au voisinage de zéro de \(y(t)-px(t) = y\left(\frac{1}{u}\right) -px \left(\frac{1}{u}\right)\). Si on montre que
-  \begin{equation}
-    y\left(\frac{1}{u}\right)=px\left(\frac{1}{u}\right)+m +c(u)^q +o(u^q)
-  \end{equation}
-  alors la droite d'équation \(y=px+m\) est asymptote à la courbe et la position de la courbe par rapport à l'asymptote est donnée par le signe de \(cu^q\).
+  \item Si \(\alpha \in \R\), on suppose que l'on peut faire un développement limité de \(y(t)-px(t)\) au voisinage de \(\alpha\). Si on montre que
+    \begin{equation}
+      y(t)=px(t)+m +c(t-\alpha)^q +o((t-\alpha)^q)
+    \end{equation}
+    alors la droite d'équation \(y=px+m\) est asympote à la courbe. On peut connaître la position de l'asymptote par rapport à la courbe à l'aide du signe de \(c(t-\alpha)^q\).
+  \item Si \(\alpha =\pm \infty\), on pose \(u=\frac{1}{t}\) qui tend vers zéro. On fait un développement limité au voisinage de zéro de \(y(t)-px(t) = y\left(\frac{1}{u}\right) -px \left(\frac{1}{u}\right)\). Si on montre que
+    \begin{equation}
+      y\left(\frac{1}{u}\right)=px\left(\frac{1}{u}\right)+m +c(u)^q +o(u^q)
+    \end{equation}
+    alors la droite d'équation \(y=px+m\) est asymptote à la courbe et la position de la courbe par rapport à l'asymptote est donnée par le signe de \(cu^q\).
 \end{itemize}
 
 \section{Calcul approché par la méthode des trapèzes}
@@ -649,8 +649,8 @@ En un pas, \((n=1)\). On choisit pour \(g\) la fonction affine qui prend les mê
 On approche \(I\) par \(T_1=\int_a^bg(x)\,\diff x\). Lorsqu'on calcule on a
 \begin{align}
   T_1&=\int_a^bg(x)\,\diff x = (b-a)f(a) + \frac{f(b)-f(a)}{b-a} \int_a^b (x-a)\,\diff x \\
-  &=(b-a)f(a) + (f(b)-f(a))\left(\frac{b-a}{2}\right)\\
-  &=(b-a) \frac{f(a)+f(b)}{2}.
+     &=(b-a)f(a) + (f(b)-f(a))\left(\frac{b-a}{2}\right)\\
+     &=(b-a) \frac{f(a)+f(b)}{2}.
 \end{align}
 
 En \(n\) pas, \(n \in \N\setminus\{0,1\}\). On considère la subdivision régulière \(\sigma\) de \(\intervalleff{a}{b}\) à \(n+1\) points.
@@ -666,9 +666,9 @@ Sur chaque intervalle \(\intervalleff{a_k}{a_{k+1}}\) on définit la fonction af
 On approche \(I\) par le réel
 \begin{align}
   T_n &= \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} g_k(x)\,\diff x \\
-  &= \sum_{k=0}^{n-1} \frac{a_{k+1}-a_k}{2}(f(a_k)+f(a_{k+1}))\\
-  &=\frac{b-a}{2n}  \sum_{k=0}^{n-1}(f(a_k)+f(a_{k+1})) \\
-  &=\frac{b-a}{n} \left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{n-1}(f(a_k)+f(a_{k+1})) \right).
+      &= \sum_{k=0}^{n-1} \frac{a_{k+1}-a_k}{2}(f(a_k)+f(a_{k+1}))\\
+      &=\frac{b-a}{2n}  \sum_{k=0}^{n-1}(f(a_k)+f(a_{k+1})) \\
+      &=\frac{b-a}{n} \left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{n-1}(f(a_k)+f(a_{k+1})) \right).
 \end{align}
 
 \subsection{Majoration de l'erreur lorsque \(f\) est \(\classe{2}\)}
@@ -693,36 +693,36 @@ On cherche à majorer la quantité \(\int_a^bf(x)\,\diff x -T_n\). Lorsque \(n=1
 
   La fonction \(\varphi\) est continue sur \(\intervalleff{a}{x_0}\), dérivable sur \(\intervalleoo{a}{x_0}\) et \(\varphi(a)=\varphi(x_0)\) alors le théorème de Rolle nous dit qu'il existe un point \(d \in \intervalleoo{a}{x_0}\) tel que \(\varphi'(d)=0\). De la même manière  \(\varphi\) est continue sur \(\intervalleff{x_0}{b}\), dérivable sur \(\intervalleoo{x_0}{b}\) et \(\varphi(x_0)=\varphi(b)\) alors le théorème de Rolle nous dit qu'il existe un point \(e \in \intervalleoo{x_0}{b}\) tel que \(\varphi'(e)=0\). 
 
-La fonction \(\varphi'\) est continue sur \(\intervalleff{d}{e}\), dérivable su \(\intervalleoo{d}{e}\) et \(\varphi'(d)=\varphi'(e)\) alors le théorème de Rolle nous dit qu'il existe un poinbt \(c_{x_0} \in \intervalleoo{d}{e} \subset ]a,b[\) tel que \(\varphi''(c_{x_0})=0\). 
+  La fonction \(\varphi'\) est continue sur \(\intervalleff{d}{e}\), dérivable su \(\intervalleoo{d}{e}\) et \(\varphi'(d)=\varphi'(e)\) alors le théorème de Rolle nous dit qu'il existe un poinbt \(c_{x_0} \in \intervalleoo{d}{e} \subset ]a,b[\) tel que \(\varphi''(c_{x_0})=0\). 
 
-Or pour tout \(x \in \intervalleff{a}{b}\), \(\varphi''(x)=f''(x)-2k\).
+  Or pour tout \(x \in \intervalleff{a}{b}\), \(\varphi''(x)=f''(x)-2k\).
 
-On vient de montrer que pour tout \(x_0 \in ]a,b[\) il existe \(c_{x_0} \in \intervalleoo{a}{b}\) tel que \(f''(c_{x_0})=2\frac{f(x_0)-g(x_0)}{(x_0-a)(x_0-b)}\). C'est-à-dire
-\begin{equation}
-  f(x_0)-g(x_0)=\frac{1}{2} f''(c_{x_0})(x_0-a)(x_0-b).
-\end{equation}
-Donc
-\begin{equation}
-  \int_a^b (f(x)-g(x))\,\diff x = \int_a^b \frac{1}{2} f''(c_{x})(x-a)(x-b)\,\diff x.
-\end{equation}
-Alors
-\begin{equation}
-  \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{2} \int_a^b (x-a)(x-b)\,\diff x.
-\end{equation}
-L'intégrale vaut \(\frac{(b-a)^3}{6}\) donc
-\begin{equation}
-  \abs{\int_a^b f(x)\,\diff x -\frac{b-a}{2}(f(a)+f(b))} = \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{12} (b-a)^3.
-\end{equation}
+  On vient de montrer que pour tout \(x_0 \in ]a,b[\) il existe \(c_{x_0} \in \intervalleoo{a}{b}\) tel que \(f''(c_{x_0})=2\frac{f(x_0)-g(x_0)}{(x_0-a)(x_0-b)}\). C'est-à-dire
+  \begin{equation}
+    f(x_0)-g(x_0)=\frac{1}{2} f''(c_{x_0})(x_0-a)(x_0-b).
+  \end{equation}
+  Donc
+  \begin{equation}
+    \int_a^b (f(x)-g(x))\,\diff x = \int_a^b \frac{1}{2} f''(c_{x})(x-a)(x-b)\,\diff x.
+  \end{equation}
+  Alors
+  \begin{equation}
+    \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{2} \int_a^b (x-a)(x-b)\,\diff x.
+  \end{equation}
+  L'intégrale vaut \(\frac{(b-a)^3}{6}\) donc
+  \begin{equation}
+    \abs{\int_a^b f(x)\,\diff x -\frac{b-a}{2}(f(a)+f(b))} = \abs{\int_a^b (f(x)-g(x))\,\diff x} \leqslant \frac{M_2}{12} (b-a)^3.
+  \end{equation}
 \end{proof}
 
 Pour démontrer plus génralement cette majoration, suppososn que \(n \in \N\setminus\{0,1\}\). Alors
 \begin{align}
   \left|\int_a^b f(x)\,\diff x-T_{n}\right| &= \left| \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} f(x)\,\diff x -  \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} g_k(x)\,\diff x \right| \\
-  &= \left| \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
-  &\leqslant \sum_{k=0}^{n-1} \left|\int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
-  &\leqslant \sum_{k=0}^{n-1} \frac{M_2}{12} (a_{k+1}-a_k)^3 \\
-  &\leqslant \frac{M_2}{12} \sum_{k=0}^{n-1} \left(\frac{b-a}{n}\right)^3 \\
-  &\leqslant \frac{M_2}{12} \frac{(b-a)^3}{n^2}.
+                                            &= \left| \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
+                                            &\leqslant \sum_{k=0}^{n-1} \left|\int_{a_k}^{a_{k+1}} (f(x) -g_k(x))\,\diff x \right| \\
+                                            &\leqslant \sum_{k=0}^{n-1} \frac{M_2}{12} (a_{k+1}-a_k)^3 \\
+                                            &\leqslant \frac{M_2}{12} \sum_{k=0}^{n-1} \left(\frac{b-a}{n}\right)^3 \\
+                                            &\leqslant \frac{M_2}{12} \frac{(b-a)^3}{n^2}.
 \end{align}
 
 On a ainsi montré que si \(f\) est de classe \(\classe{2}\) sur \(\intervalleff{a}{b}\) alors
@@ -734,10 +734,10 @@ où \(n+1\) est le nombre de points de la subdivision. On admet que ce résultat
 \subsection{Intérêt du procédé de dichotomie}
 
 Soit \(n \in \N\setminus\{0,1\}\), alors \(T_n = \frac{b-a}{n}\left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{n-1}f(a_k)\right)\). Pour calculer \(T_n\), on a besoin de calculer la valeur de \(f\) en \(n+1=2+(n-1)\) points. Pour passer de \(T_n\) à \(T_{n+1}\), on a besoin de calculer \(f\) en \(n\) nouveaux points.
-  \begin{align}
-    T_{2n} &= \frac{b-a}{2n}\left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{2n-1}f(a+k \frac{b-a}{2n}\right)\\
-      &=\frac{T_n}{2} + \frac{b-a}{2n}  \sum_{k=1}^{n-1}f\left(a+(2k+1)\frac{b-a}{2n}\right).
-  \end{align}
+\begin{align}
+  T_{2n} &= \frac{b-a}{2n}\left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{2n-1}f(a+k \frac{b-a}{2n}\right)\\
+         &=\frac{T_n}{2} + \frac{b-a}{2n}  \sum_{k=1}^{n-1}f\left(a+(2k+1)\frac{b-a}{2n}\right).
+\end{align}
 Donc pour passer de \(T_n\) à \(T_{2n}\), il suffit de calculer la valeur de \(f\) en \(n\) nouveaux points. C'est donc plus intéressant de considérer des subdivisions dichotomiques, c'est-à-dire en divisant l'intervalle en deux parties égales à chaque étape.
 
 \section{Calcul de primitives}
@@ -787,12 +787,12 @@ On commence par donner une table, la table~
   \emph{Hérédité}~: Soit \(n \in \N\) et on suppose \(\P(n)\). Soit \(P \in \R_{n+1}[X]\). En intégrant par parties, pour tout \(x \in \R\),
   \begin{align}
     \int_a^x P(t)\e^{at}\,\diff t &= \left[P(t)\frac{\e^{at}}{a}\right]_0^x - \int_0^x \frac{P'(t)\e^{at}}{a}\,\diff t \\
-  & = \frac{1}{a}(P(x)\e^{ax} -P(0) - \int_0^x P'(t)\e^{at}\,\diff t ).
+                                  & = \frac{1}{a}(P(x)\e^{ax} -P(0) - \int_0^x P'(t)\e^{at}\,\diff t ).
   \end{align}
   Comme \(P'\in\R_n[X]\), d'après l'hypothèse de récurrence, il existe un polynôme \(Q_0 \in \R_n[X]\) tel que \(\deg(Q_0)=\deg(P)\) et tel que \(x \longmapsto Q_0(x)\e^{ax}\) est une primitive de \(P'(x)\e^{ax}\). Pour tout réel \(x \in \R\), on a donc
   \begin{align}
     \int_a^x P(t)\e^{at}\,\diff t &= \frac{1}{a}(P(x)\e^{ax} -P(0) - (Q_0(x)\e^{ax}-Q_0(0))\\
-    &=(P(x)-Q_0(x))\frac{\e^{ax}}{a} - \frac{P(0)-Q_0(0)}{a}.
+                                  &=(P(x)-Q_0(x))\frac{\e^{ax}}{a} - \frac{P(0)-Q_0(0)}{a}.
   \end{align}
   On pose \(Q = \frac{P-Q_0}{a}\) et on a \(\deg(Q)=\deg(P)\) et \(x\longmapsto Q(x)\e^{ax}\) est une primitive de \(x\longmapsto P(x)\e^{ax}\). \(\P(n+1)\) est vraie.
 
@@ -801,14 +801,14 @@ On commence par donner une table, la table~
 
 En pratique, on peut~:
 \begin{itemize}
-\item soit chercher \(Q\) par une méthode de coefficients indéterminés;
-\item soit faire des intégrations par parties successives, cependant à éviter si \(\deg(P) >2\).
+  \item soit chercher \(Q\) par une méthode de coefficients indéterminés;
+  \item soit faire des intégrations par parties successives, cependant à éviter si \(\deg(P) >2\).
 \end{itemize}
 
 \emph{Remarque}~: Cette méthode permet également de trouver des primitives pour des applications de la formes~:
 \begin{itemize}
-\item polynôme \(\times \sinh\) ou \(\cosh\), par passage à l'exponentielle;
-\item polynôme \(\times \sin\) ou \(\cos\), par passage à l'exponentielle complexe.
+  \item polynôme \(\times \sinh\) ou \(\cosh\), par passage à l'exponentielle;
+  \item polynôme \(\times \sin\) ou \(\cos\), par passage à l'exponentielle complexe.
 \end{itemize}
 
 \subsection{Fractions rationelles}
@@ -868,22 +868,22 @@ Soit \(F(X)\) une fraction rationelle. Soit \(G(X,Y)\) une fraction rationelle �
 
 Il existe deux méthodes~:
 \begin{enumerate}
-\item On fait le changement de variable \(t=\e^x\) pour se ramener à une fraction rationelle;
-\item On utilise la ``cousine trigonométrique''. On applique les régles de Bioche avec \(\int G(\cos x,\sin x)\diff x\). On pose \(w(x) = G(\cos x,\sin x) \diff x\) et les régles sont données par la table~
-\ref{tab:cousinetrigo}
+  \item On fait le changement de variable \(t=\e^x\) pour se ramener à une fraction rationelle;
+  \item On utilise la ``cousine trigonométrique''. On applique les régles de Bioche avec \(\int G(\cos x,\sin x)\diff x\). On pose \(w(x) = G(\cos x,\sin x) \diff x\) et les régles sont données par la table~
+    \ref{tab:cousinetrigo}
 
-\begin{table}[!h]
-  \centering
-  \begin{tabular}{|c|c|}\hline
-    Si \(w(x)\) est invariant par & on fait le changement de variable \\
-    un changement de \(x\) en &  \\ \hline
-    \(-x\) & \(t \to \cosh x\)\\
-    \(\pi-x\) & \(t \to \sinh x\)\\
-    \(\pi+x\) & \(t \to \tanh x\)\\
-  \hline\end{tabular}
-  \caption{Cousine trigonométrique}
-  \label{tab:cousinetrigo}
-\end{table}
+    \begin{table}[!h]
+      \centering
+      \begin{tabular}{|c|c|}\hline
+        Si \(w(x)\) est invariant par & on fait le changement de variable \\
+        un changement de \(x\) en &  \\ \hline
+        \(-x\) & \(t \to \cosh x\)\\
+        \(\pi-x\) & \(t \to \sinh x\)\\
+        \(\pi+x\) & \(t \to \tanh x\)\\
+      \hline\end{tabular}
+      \caption{Cousine trigonométrique}
+      \label{tab:cousinetrigo}
+    \end{table}
 \end{enumerate}
 
 Dans tous les cas, on peut prendre \(t=\tanh\left(\frac{x}{2}\right)\) mais les claculs sont souvent plus compliqués. Alors on essaie les régles avant.
@@ -897,8 +897,8 @@ On considère des fonctions définies sur un intervalle réel \(I\) à valeur da
 \begin{defdef}
   Soit \(f \in \C^I\). Une application \(F \in \C^I\) est appelée primitive de \(f\) si et seulement si~:
   \begin{enumerate}
-  \item \(F\) est dérivable;
-  \item \(F'=f\).
+    \item \(F\) est dérivable;
+    \item \(F'=f\).
   \end{enumerate}
 \end{defdef}
 
@@ -906,23 +906,23 @@ De l'étude de la dérivation des fonctions à valeurs complexes, il vient~:
 \begin{prop}
   Soient deux applications \(f\) et \(F\) de \(I\) vers \(\C\), alors
   \begin{itemize}
-  \item \(F\) est une primitive de \(f\) si et seulement si \(\Re(F)\) et \(\Im(F)\) sont des primitives respectives de \(\Re(f)\) et \(\Im(f)\).
-  \item Si \(F\) est une primitive de \(f\), alors l'ensemble des primitives de \(f\) est \(\{F+\tilde{c}, c \in \C\}\).
+    \item \(F\) est une primitive de \(f\) si et seulement si \(\Re(F)\) et \(\Im(F)\) sont des primitives respectives de \(\Re(f)\) et \(\Im(f)\).
+    \item Si \(F\) est une primitive de \(f\), alors l'ensemble des primitives de \(f\) est \(\{F+\tilde{c}, c \in \C\}\).
   \end{itemize}
 \end{prop}
 
 \begin{theo}[Théorème fondamental]
   Soit \(f\) une fonction continue de \(I\) vers \(\C\). Alors \(f\) admet des primitives, de plus
   \begin{enumerate}
-  \item pour tout \(t_0 \in I\), il existe une seule primitve \(\Phi_0\) de \(f\) qui s'annule en \(t_0\);
-  \item toutes les primitives de \(f\) sont de classe \(\classe{1}\).
+    \item pour tout \(t_0 \in I\), il existe une seule primitve \(\Phi_0\) de \(f\) qui s'annule en \(t_0\);
+    \item toutes les primitives de \(f\) sont de classe \(\classe{1}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   La fonction \(f\) est continue de \(I\) vers \(\C\) donc \(\Im(f)\) et \(\Re(f)\) sont aussi continues de \(I\) vers \(\R\). Elles admettent des primitives donc \(f\) admet des primitives.
   \begin{enumerate}
-  \item l'application \(t\longmapsto \int_{t_0}^t \Re(f)\) est une primitive de \(\Re(f)\) quiu s''annule en \(t_0\), idem pour \(t\longmapsto \int_{t_0}^t \Im(f)\). Alors \(t\longmapsto \int_{t_0}^t f\) est une primitive de \(f\) qui s'annule en \(t_0\). L'unicité découle du fait que les primitives ne différent que d'une constante.
-  \item Les primitives de \(f\) sont de classe \(\classe{1}\) car leurs parties imaginaires et réelles sont de classe \(\classe{1}\) en tant que primitives de fonctions continues réelles \(\Re(f)\) et \(\Im(f)\).
+    \item l'application \(t\longmapsto \int_{t_0}^t \Re(f)\) est une primitive de \(\Re(f)\) quiu s''annule en \(t_0\), idem pour \(t\longmapsto \int_{t_0}^t \Im(f)\). Alors \(t\longmapsto \int_{t_0}^t f\) est une primitive de \(f\) qui s'annule en \(t_0\). L'unicité découle du fait que les primitives ne différent que d'une constante.
+    \item Les primitives de \(f\) sont de classe \(\classe{1}\) car leurs parties imaginaires et réelles sont de classe \(\classe{1}\) en tant que primitives de fonctions continues réelles \(\Re(f)\) et \(\Im(f)\).
   \end{enumerate}
 \end{proof}
 
@@ -965,11 +965,11 @@ De l'étude de la dérivation des fonctions à valeurs complexes, il vient~:
     \forall t \in I \quad \theta(t) = \int_{t_0}^t g(u)\,\diff u +\theta_0.
   \end{equation}
   Cette application est de classe \(\classe{k}\). Soit \(\fonction{\psi}{I}{\C}{t}{f(t)\e^{-\ii\theta(t)}}\). Par produit et composée, \(\psi\) est de classe \(\classe{k}\) et donc au moins de classe \(\classe{1}\). Alors pour tout \(t \in I\), on a
-    \begin{align}
-      \psi'(t) &= f'(t)\e^{-\ii \theta(t)}-\ii \theta'(t)f(t) \e^{-\ii\theta(t)} \\
-      &=\left(f'(t)-\ii f(t) \frac{f'(t)}{\ii f(t)} \right)\e^{-\ii \theta(t)} =0.
-    \end{align}
-    Donc \(\psi\) est constante sur \(I\) et comme \(\psi(t_0)=f(t_0)\e^{-\ii \theta_0}=1\) (puisque \(f(t_0)=\e^{\ii \theta_0}\). Donc pour tout \(t \in I\), \(\psi(t)=1\), c'est-à-dire que \(f(t)=\e^{\ii \theta(t)}\).
+  \begin{align}
+    \psi'(t) &= f'(t)\e^{-\ii \theta(t)}-\ii \theta'(t)f(t) \e^{-\ii\theta(t)} \\
+             &=\left(f'(t)-\ii f(t) \frac{f'(t)}{\ii f(t)} \right)\e^{-\ii \theta(t)} =0.
+  \end{align}
+  Donc \(\psi\) est constante sur \(I\) et comme \(\psi(t_0)=f(t_0)\e^{-\ii \theta_0}=1\) (puisque \(f(t_0)=\e^{\ii \theta_0}\). Donc pour tout \(t \in I\), \(\psi(t)=1\), c'est-à-dire que \(f(t)=\e^{\ii \theta(t)}\).
 \end{proof}
 
 \emph{Remarque}~: Si \(f \in \classe{k}(I,\C)\) et si elle ne s'annule pas, alors on peut appliquer le théorème du relévement à \(t \longmapsto \frac{f(t)}{|f(t)|}\). Il existe alors une application \(\theta \in \classe{k}(I,\C)\) telle que pour tout \(t \in I\), on a \(f(t) = |f(t)|\e^{\ii \theta(t)}\).
@@ -1013,7 +1013,7 @@ De l'étude de la dérivation des fonctions à valeurs complexes, il vient~:
     \left|f(x)-\sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\right| \leqslant \frac{|x-a|^{n+1}}{(n+1)!} \sup \abs{f^{(n+1)}}.
   \end{equation}
 
-C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au point \(a\).
+  C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au point \(a\).
 \end{theo}
 \begin{proof}
   Idem.
@@ -1037,7 +1037,7 @@ C'est l'inégalité de Taylor-Lagrange à l'ordre \(n\) appliquée à \(f\) au p
   \begin{equation}
     \forall x \in I \quad f(x)=\sum_{k=0}^n a_k (x-a)^k + \epsilon(x)(x-a)^n.
   \end{equation}
-  
+
   On vérifie facilement que \(f\in \C^I\) admet un \(DL_n(a)\) si et seulement si \(\Re(f)\) et \(\Im(f)\) admettent des \(DL_n(a)\) et auquel cas~:
   \begin{equation}
     P_n(f) = P_n(\Re(f)) + \ii P_n(\Im(f)).

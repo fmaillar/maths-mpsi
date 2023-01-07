@@ -13,10 +13,10 @@
 \begin{defdef}
   Soit \(E\) un espace vectoriel réel. On appelle norme sur \(E\) toute application \(N : E \to \R\) qui vérifie les quatre points suivants~:
   \begin{enumerate}
-  \item Positivité~: pour tout \(x \in E\), \(N(x)\geqslant 0\);
-  \item Séparation~: pour tout \(x \in E\), \(N(x)=0\) si et seulement \(x=0\);
-  \item Homogénéité~: pour tout \(x \in E\) et tout \(\lambda \in \R\), \(N(\lambda x)=\abs{\lambda}N(x)\);
-  \item Inégalité triangulaire~: pour tout \((x, y) \in E^2\), \(N(x+y) \leqslant N(x) + N(y)\).
+    \item Positivité~: pour tout \(x \in E\), \(N(x)\geqslant 0\);
+    \item Séparation~: pour tout \(x \in E\), \(N(x)=0\) si et seulement \(x=0\);
+    \item Homogénéité~: pour tout \(x \in E\) et tout \(\lambda \in \R\), \(N(\lambda x)=\abs{\lambda}N(x)\);
+    \item Inégalité triangulaire~: pour tout \((x, y) \in E^2\), \(N(x+y) \leqslant N(x) + N(y)\).
   \end{enumerate}
 \end{defdef}
 
@@ -75,18 +75,18 @@ La relation \og{} être équivalente à\fg{} sur l'ensemble des normes de \(E\) 
 \begin{defdef}
   Soit \((E, N)\) un espace vectoriel normé. Soit \(a \in E\) et \(r \in \Rplusetoile\). On appelle
   \begin{enumerate}
-  \item la boule fermée de centre \(a\) et de rayon \(r\) l'ensemble
-    \begin{equation}
-      \Bbar{a}{r}{} = \enstq{x\in E}{N(x-a) \leqslant r};
-    \end{equation}
-  \item la boule ouverte de centre \(a\) et de rayon \(r\) l'ensemble
-    \begin{equation}
-      B(a, r) = \enstq{x\in E}{N(x-a) < r};
-    \end{equation}
-  \item la sphère de centre \(a\) et de rayon \(r\) l'ensemble
-    \begin{equation}
-      S(a, r) = \enstq{x\in E}{N(x-a) = r}.
-    \end{equation}    
+    \item la boule fermée de centre \(a\) et de rayon \(r\) l'ensemble
+      \begin{equation}
+        \Bbar{a}{r}{} = \enstq{x\in E}{N(x-a) \leqslant r};
+      \end{equation}
+    \item la boule ouverte de centre \(a\) et de rayon \(r\) l'ensemble
+      \begin{equation}
+        B(a, r) = \enstq{x\in E}{N(x-a) < r};
+      \end{equation}
+    \item la sphère de centre \(a\) et de rayon \(r\) l'ensemble
+      \begin{equation}
+        S(a, r) = \enstq{x\in E}{N(x-a) = r}.
+      \end{equation}    
   \end{enumerate}
 \end{defdef}
 %
@@ -136,8 +136,8 @@ Cela signifie que si \(N_1\) et \(N_2\) sont équivalentes, alors toute boule po
 
 \emph{Propriétés}~:
 \begin{itemize}
-\item L'intersection de deux parties bornées de \(E\) est une partie partie bornée de \(E\);
-\item l'union de deux parties bornées de \(E\) est une partie partie bornée de \(E\).
+  \item L'intersection de deux parties bornées de \(E\) est une partie partie bornée de \(E\);
+  \item l'union de deux parties bornées de \(E\) est une partie partie bornée de \(E\).
 \end{itemize}
 
 \subsection{Voisinages et parties ouvertes}
@@ -152,8 +152,8 @@ Soit \((E, \norme{.})\) un espace vectoriel normé.
 
 \emph{Propriétés}~:
 \begin{itemize}
-\item Toute partie de \(E\) contenant un voisinage de \(a \in E\) est encore un voisinage de \(a\);
-\item l'ensemble des voisinages d'un point \(a \in E\) est stable par intersection \emph{finie} et réunion quelconque.
+  \item Toute partie de \(E\) contenant un voisinage de \(a \in E\) est encore un voisinage de \(a\);
+  \item l'ensemble des voisinages d'un point \(a \in E\) est stable par intersection \emph{finie} et réunion quelconque.
 \end{itemize}
 
 Soit pour tout naturel \(n\), \(I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}\), alors \(\bigcap_{n \in \N} I_n =\{0\}\). Pour tout naturel \(n\), \(I_n\) est un voisinage de zéro mais pas l'intersection.
@@ -163,7 +163,7 @@ Soit pour tout naturel \(n\), \(I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}
 \subsubsection{Parties ouvertes}
 
 \begin{defdef}
- Soit \(\Oouvert \in \P(E)\). On dit que \(\theta\) est une partie ouverte de \(E\) si et seulement s'il est voisinage de chacun de ses points. 
+  Soit \(\Oouvert \in \P(E)\). On dit que \(\theta\) est une partie ouverte de \(E\) si et seulement s'il est voisinage de chacun de ses points. 
 
   Autrement dit~: Soit \(\Oouvert \in \P(E)\),
   \begin{equation}
@@ -173,10 +173,10 @@ Soit pour tout naturel \(n\), \(I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}
 \end{defdef}
 \begin{prop}
   \begin{enumerate}
-  \item \(E \in \Oouvert(E)\);
-  \item \(\emptyset \in \Oouvert(E)\);
-  \item \(\Oouvert(E)\) est stable par intersection finie;
-  \item \(\Oouvert(E)\) est stable par union quelconque.
+    \item \(E \in \Oouvert(E)\);
+    \item \(\emptyset \in \Oouvert(E)\);
+    \item \(\Oouvert(E)\) est stable par intersection finie;
+    \item \(\Oouvert(E)\) est stable par union quelconque.
   \end{enumerate}
 \end{prop}
 %
@@ -186,9 +186,9 @@ Soit pour tout naturel \(n\), \(I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}
 
 \emph{Exemples usuels~:}
 \begin{enumerate}
-\item Dans \(\R\), les intervalles \(\intervalleoo{a}{b}\) sont des ouverts;
-\item dans \(\R^2\), les rectangles \(\intervalleoo{a}{b}\times\intervalleoo{c}{d}\) sont des ouverts;
-\item toute boule ouverte d'un espace vectoriel normé est un ouvert.
+  \item Dans \(\R\), les intervalles \(\intervalleoo{a}{b}\) sont des ouverts;
+  \item dans \(\R^2\), les rectangles \(\intervalleoo{a}{b}\times\intervalleoo{c}{d}\) sont des ouverts;
+  \item toute boule ouverte d'un espace vectoriel normé est un ouvert.
 \end{enumerate}
 
 \subsection{Parties fermées -- Points adhérents}
@@ -203,9 +203,9 @@ Soit pour tout naturel \(n\), \(I_n=\intervalleoo{\frac{-1}{n+1}}{\frac{1}{n+1}}
 \end{defdef}
 \begin{prop}
   \begin{enumerate}
-  \item \(\emptyset \in \F(E)\);
-  \item \(E \in \F(E)\);
-  \item \(\F(E)\) est stable par intersection quelconque et par union finie.
+    \item \(\emptyset \in \F(E)\);
+    \item \(E \in \F(E)\);
+    \item \(\F(E)\) est stable par intersection quelconque et par union finie.
   \end{enumerate}
 \end{prop}
 %
@@ -230,14 +230,14 @@ On note \(\bar{A}\) l'ensemble des point adhérents à la partie \(A\). On a tou
 \begin{proof}
   \begin{align}
     F \notin \F(E) &\iff E\setminus F \notin \Oouvert(E) \\
-    &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \not\subset E\setminus F \\
-    &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \cap F \neq \emptyset \\
-    &\iff \exists a \in E\setminus F \ a \text{~est adhérent à~} F.
+                   &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \not\subset E\setminus F \\
+                   &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, r) \cap F \neq \emptyset \\
+                   &\iff \exists a \in E\setminus F \ a \text{~est adhérent à~} F.
   \end{align}
   On a montré que \(F\) est non fermé si et seulement s'il existe un point adhérent à \(F\) qui n'est pas dans \(F\), c'est-à-dire \(\bar{F} \not\subset F\). Par contraposée,
   \begin{align}
     F \text{~est fermé} &\iff \bar{F} \subset F \\
-    &\iff \bar{F}=F.
+                        &\iff \bar{F}=F.
   \end{align}
 \end{proof}
 
@@ -280,7 +280,7 @@ On montre l'unicité de la limite exactement comme pour les fonction d'une seule
 On définit \(\eta_0=\min(\eta_1, \eta_2)\) et soit \(x \in A \cap B(a,\eta_0)\), alors
 \begin{align}
   \abs{\ell_1-\ell_2} &\leqslant \abs{\ell_1-f(x)} + \abs{f(x)-\ell_2} \\
-  &\leqslant 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
+                      &\leqslant 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
 \end{align}
 Ce qui est absurde. Donc \(\ell_1=\ell_2\).
 
@@ -302,12 +302,12 @@ Ce résultat sert à nier ``\(f(x) \to \ell\)'' en exhibant une droite \((x_n, y
 \end{defdef}
 \emph{Exemples~:}
 \begin{enumerate}
-\item Soient \(\fonction{p_1}{\R^2}{\R}{(x_1, x_2)}{x_1}\) et \(\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}\) les projecteurs canoniques de \(\R^2\). Ces applications sont continues en tout point. En effet,
-  \begin{equation}
-    \forall (x, y) \in \R^2 \times \R^2 \quad \abs{p_1(x)-p_1(y)} = \abs{x_1-y_1} \leqslant \norme{x-y}.
-  \end{equation}
-  Il suffit de prendre \(\eta=\epsilon\) dans la définition.
-\item Les applications polynomiales de deux variables sont continues.
+  \item Soient \(\fonction{p_1}{\R^2}{\R}{(x_1, x_2)}{x_1}\) et \(\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}\) les projecteurs canoniques de \(\R^2\). Ces applications sont continues en tout point. En effet,
+    \begin{equation}
+      \forall (x, y) \in \R^2 \times \R^2 \quad \abs{p_1(x)-p_1(y)} = \abs{x_1-y_1} \leqslant \norme{x-y}.
+    \end{equation}
+    Il suffit de prendre \(\eta=\epsilon\) dans la définition.
+  \item Les applications polynomiales de deux variables sont continues.
 \end{enumerate}
 \begin{prop}
   Soient \(A \in \P(\R^2)\), \(a \in A\) et \(f \in \R^A\). Si \(f\) est continue au voisinage de \(A\), alors elle est bornée au voisinage de \(a\). Autrement dit
@@ -387,7 +387,7 @@ La réciproque est fausse. En effet, soit \(\fonction{f}{\R^2}{\R}{(x, y)}{\begi
 \begin{theo}
   Soient \(A \subset \R^2\), \(\B\subset \R\) ou \(\R^2\) et \(p \in \{1, 2\}\). Soient \(f : A \rightarrow B\) et \(g: B \rightarrow \R^p\). Soient \(a \in A\) et \(b=f(a) \in B\). Si \(f\) est continue en \(a\) et \(g\) continue en \(b\) alors \(g \circ f\) est continue en \(a\).
 
-Par conséquent, si \(f\) est continue sur \(A\) et \(g\) continue sur \(B\) alors \(g \circ f\) est continue sur \(A\).
+  Par conséquent, si \(f\) est continue sur \(A\) et \(g\) continue sur \(B\) alors \(g \circ f\) est continue sur \(A\).
 \end{theo}
 
 \section{Calcul différentiel}
@@ -401,7 +401,7 @@ Soient \(U\) un ouvert de \(\R^2\), \(a \in U\) et \(f \in \R^U\). Pour tout \(h
 Pour tout \(t\) au voisinage de \(0\), \(a+th\) est au voisinage de \(a\) donc \(t \longmapsto f(a+th)\) est définie au voisinage de zéro. Plus concrètement, il existe \(r>0\) tel que \(B(a, r) \subset U\).
 \begin{align}
   \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leqslant r \\
-  &\iff \abs{t} \norme{h} \leqslant r.
+                                          &\iff \abs{t} \norme{h} \leqslant r.
 \end{align}
 Si \(h=(0, 0)\), alors \(t \longmapsto f(a+th)\) est définie sur \(\R\). Sinon, \(a+th \in B(a, r) \iff \abs{t} \leqslant \frac{r}{\norme{h}}\). L'application \(t \longmapsto f(a+th)\) est définie au moins sur \(\intervalleoo{\frac{-r}{\norme{h}}}{\frac{r}{\norme{h}}}\). Dans tous les cas, il existe \(\delta>0\) tel que \(\Psi_h : t \longmapsto f(a+th)\) soit définie au moins sur \(\intervalleoo{-\delta}{\delta}\). 
 
@@ -430,9 +430,9 @@ Soient \(U\) un ouvert de \(\R^2\), \(a \in U\) et \(f \in \R^U\). Notons \((e_1
 \emph{Interprétation~:}
 \begin{align}
   D_{e_1}f(a) &= \lim\limits_{t \to 0}\frac{f(a+te_1)-f(a)}{t} \\
-  &= \lim\limits_{t \to 0}\frac{f(a_1+t, a_2)-f(a_1, a_2)}{t}\\
-  &= \lim\limits_{t \to 0}\frac{\varphi_{a, 1}(a_1+t)-\varphi_{a, 1}(a_1)}{t}\\
-  &= \varphi_{a, 1}'(a_1).
+              &= \lim\limits_{t \to 0}\frac{f(a_1+t, a_2)-f(a_1, a_2)}{t}\\
+              &= \lim\limits_{t \to 0}\frac{\varphi_{a, 1}(a_1+t)-\varphi_{a, 1}(a_1)}{t}\\
+              &= \varphi_{a, 1}'(a_1).
 \end{align}
 Alors \(\derivep{f}{x_1}(a)\) existe si et seulement si l'application partielle \(\varphi_{1, 1}\) est dérivable en \(a_1\). Auquel cas~:
 \begin{equation}
@@ -475,20 +475,20 @@ Soient \(U\) un ouvert de \(\R^2\) et \(f \in \R^U\).
 \begin{theo}[Théorème fondamental]
   Soient \(U\) un ouvert de \(\R^2\) et \(f \in \R^U\). Si les applications dérivées partielles d'ordre \(1\), \(\derivep{f}{x_1}\) et \(\derivep{f}{x_2}\) sont définies et continues sur l'ouvert \(U\), alors~:
   \begin{enumerate}
-  \item pour tout \(a \in U\), \(f\) admet un \(DL_1(a)\)~: pour tout \(h \in \R^2\) au voisinage de \((0,0)\) on a
-    \begin{equation}
-      f(a+h) = f(a) + h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2} + \petito{\norme{h}};
-    \end{equation}
-  \item pour tout \(a \in U\) et pour tout \(h \in \R^2\), \(f\) admet une dérivée en \(a\) selon \(h\) et
-    \begin{equation}
-      D_h f(a) = h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2},
-    \end{equation}
-    d'où pour \(h\) au voisinage de \((0, 0)\)
-    \begin{equation}
-      f(a+h) = f(a) + D_h f(a) + \petito{\norme{h}};
-    \end{equation}
-  \item \(f \in \classe{1}(U, \R)\);
-  \item pour tout \(a \in U\), l'application \(\fonction{L}{\R^2}{\R}{h}{D_h f(a)}\) est une forme linéaire sur \(\R^2\) appelée différentielle de \(f\) en \(a\) et notée \(\D f_a\).
+    \item pour tout \(a \in U\), \(f\) admet un \(DL_1(a)\)~: pour tout \(h \in \R^2\) au voisinage de \((0,0)\) on a
+      \begin{equation}
+        f(a+h) = f(a) + h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2} + \petito{\norme{h}};
+      \end{equation}
+    \item pour tout \(a \in U\) et pour tout \(h \in \R^2\), \(f\) admet une dérivée en \(a\) selon \(h\) et
+      \begin{equation}
+        D_h f(a) = h_1\derivep{f}{x_1} + h_2\derivep{f}{x_2},
+      \end{equation}
+      d'où pour \(h\) au voisinage de \((0, 0)\)
+      \begin{equation}
+        f(a+h) = f(a) + D_h f(a) + \petito{\norme{h}};
+      \end{equation}
+    \item \(f \in \classe{1}(U, \R)\);
+    \item pour tout \(a \in U\), l'application \(\fonction{L}{\R^2}{\R}{h}{D_h f(a)}\) est une forme linéaire sur \(\R^2\) appelée différentielle de \(f\) en \(a\) et notée \(\D f_a\).
   \end{enumerate}
 \end{theo}
 
@@ -500,7 +500,7 @@ Soient \(U\) un ouvert de \(\R^2\) et \(f \in \R^U\).
 Ainsi
 \begin{align}
   D_h f(a) &= h_1 \derivep{f}{x_1}(a) + h_2 \derivep{f}{x_2}(a) \\
-  &= D_h p_1(a) \derivep{f}{x_1}(a) + D_h p_2(a) \derivep{f}{x_2}(a),  
+           &= D_h p_1(a) \derivep{f}{x_1}(a) + D_h p_2(a) \derivep{f}{x_2}(a),  
 \end{align}
 et comme c'est vrai pour tout vecteur \(h\) on a
 \begin{equation}
@@ -526,7 +526,7 @@ Soient \(U\) un ouvert de \(\R^2\) et \(f \in \classe{1}(U, \R)\). Pour tout \(a
 D'après l'expression de \(\D f_a\) on a
 \begin{align}
   \grad f(a) &= \left(\derivep{f}{x_1}(a), \derivep{f}{x_2}(a)\right) \\
-  &= \derivep{f}{x_1}(a) \vect{e_1} + \derivep{f}{x_2}(a) \vect{e_2}.
+             &= \derivep{f}{x_1}(a) \vect{e_1} + \derivep{f}{x_2}(a) \vect{e_2}.
 \end{align}
 
 \emph{Remarque}~: L'application \(\grad : a \longmapsto \grad f(a)\) est appelée champ de vecteurs.
@@ -552,8 +552,8 @@ D'après l'expression de \(\D f_a\) on a
   On a \(\gamma = \alpha \beta\), donc \(\gamma\) est dérivable en \(a_1\) et
   \begin{align}
     \gamma'(a_1) &= \alpha(a_1) \beta'(a_1) + \beta(a_1) \alpha'(a_1) \\
-    &=\alpha(a_1) \derivep{g}{x_1}(a) + \beta(a_1) \derivep{f}{x_1}(a_1) \\
-    &=f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a).
+                 &=\alpha(a_1) \derivep{g}{x_1}(a) + \beta(a_1) \derivep{f}{x_1}(a_1) \\
+                 &=f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a).
   \end{align}
   Alors \(\derivep{fg}{x_1}(a)\) existe et vaut \(f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a)\). Ce qui est vrai pour tout \(a \in U\), donc \(\derivep{fg}{x_1}\) est défini sur \(U\) et son expression montre qu'elle est continue. De la même manière on montre que \(\derivep{fg}{x_2}\) est définie et continue sur \(U\). Alors, d'après le théorème fondamental, \(fg\) est de classe \(\classe{1}\).
 \end{proof}
@@ -569,33 +569,33 @@ D'après l'expression de \(\D f_a\) on a
   \end{equation}
 \end{lemme}
 \begin{proof}
-Soit \(\varphi\) la première application partielle de \(f\) en \(a\). Comme \(0 \notin f(U)\), \(\frac{1}{f}\) est définie. Soit \(\psi\) la première application partielle de \(\frac{1}{f}\) en \(a\). Ainsi \(\psi= \frac{1}{\varphi}\). L'application \(f\) est de classe \(\classe{1}\) donc \(\varphi\) est dérivable en \(a_1\) et \(\psi'(a_1)=-\frac{\varphi'(a_1)}{\varphi(a_1)^2}\). Cela signifie que \(\derivep{\frac{1}{f}}{x_1}(a)\) existe et vaut \(-\frac{\varphi'(a_1)}{\varphi(a_1)^2}=-\frac{1}{\varphi(a_1)^2}\derivep{f}{x_1}(a)\).
+  Soit \(\varphi\) la première application partielle de \(f\) en \(a\). Comme \(0 \notin f(U)\), \(\frac{1}{f}\) est définie. Soit \(\psi\) la première application partielle de \(\frac{1}{f}\) en \(a\). Ainsi \(\psi= \frac{1}{\varphi}\). L'application \(f\) est de classe \(\classe{1}\) donc \(\varphi\) est dérivable en \(a_1\) et \(\psi'(a_1)=-\frac{\varphi'(a_1)}{\varphi(a_1)^2}\). Cela signifie que \(\derivep{\frac{1}{f}}{x_1}(a)\) existe et vaut \(-\frac{\varphi'(a_1)}{\varphi(a_1)^2}=-\frac{1}{\varphi(a_1)^2}\derivep{f}{x_1}(a)\).
 
-C'est vrai pour tout \(a \in U\) donc \(\derivep{\frac{1}{f}}{x_1}\) est définie sur \(U\). L'application \(f\) étant de classe \(\classe{1}\), l'expression \(\derivep{\frac{1}{f}}{x_1}\) montre qu'elle est continue. De même, \(\derivep{\frac{1}{f}}{x_2}\) est définie et continue sur \(U\).
+  C'est vrai pour tout \(a \in U\) donc \(\derivep{\frac{1}{f}}{x_1}\) est définie sur \(U\). L'application \(f\) étant de classe \(\classe{1}\), l'expression \(\derivep{\frac{1}{f}}{x_1}\) montre qu'elle est continue. De même, \(\derivep{\frac{1}{f}}{x_2}\) est définie et continue sur \(U\).
 
-Le théorème fondamental permet alors de conclure que \(\frac{1}{f}\) est de classe \(\classe{1}\) sur \(U\).
+  Le théorème fondamental permet alors de conclure que \(\frac{1}{f}\) est de classe \(\classe{1}\) sur \(U\).
 \end{proof}
 \begin{lemme}
   Soit \(U\) un ouvert de \(\R^2\). Pour toutes fonctions \(f\) et \(g\) de classe \(\classe{1}\) sur \(U\) et pour tout réel \(\lambda\), la fonction \(\lambda f +g\) est de classe \(\classe{1}\) sur \(U\). 
 
-De plus, pour tout \(a \in U\) et pour tout \(h \in \R^2\),
-\begin{gather}
-  \grad{\lambda f+g}(a) = \lambda \grad{f}(a) + \grad{g}(a), \\
-  D_h(\lambda f+g)(a) = \lambda D_h(f)(a) + D_h(g)(a).
-\end{gather}
+  De plus, pour tout \(a \in U\) et pour tout \(h \in \R^2\),
+  \begin{gather}
+    \grad{\lambda f+g}(a) = \lambda \grad{f}(a) + \grad{g}(a), \\
+    D_h(\lambda f+g)(a) = \lambda D_h(f)(a) + D_h(g)(a).
+  \end{gather}
 \end{lemme}
 \begin{theo}
   Soit \(U\) un ouvert de \(\R^2\). Alors \(\classe{1}(U, \R)\) est un sous-espace vectoriel et un sous-anneau de \(\cont{U}{\R}\). De plus
-    \begin{equation}
-      \uinv{\classe{1}(U, \R)}=\enstq{f \in \classe{1}(U, \R)}{0 \notin f(U)}.
-    \end{equation}
+  \begin{equation}
+    \uinv{\classe{1}(U, \R)}=\enstq{f \in \classe{1}(U, \R)}{0 \notin f(U)}.
+  \end{equation}
 \end{theo}
 
 \subsection{Dérivée d'une fonction composée}
 
 \begin{theo}
   Soit \(U\) un ouvert de \(\R^2\) et \(f \in \classe{1}(U, \R)\). Soit \(I\) un intervalle réel et \(\varphi \in \classe{1}(I, \R^2)\) telle que \(\varphi(I) \subset U\). On note \(\varphi_1\) et \(\varphi_2\) les applications coordonnées de \(\varphi\). On dispose de \(f \circ \varphi\). 
-  
+
   Alors \(f \circ \varphi \in \classe{1}(I, \R)\) et pour tout \(t \in I\) on a
   \begin{equation}
     (f \circ \varphi)'(t) = \derivep{f}{x_1}(\varphi(t))\varphi_1'(t) + \derivep{f}{x_2}(\varphi(t))\varphi_2'(t).
@@ -622,9 +622,9 @@ De plus, pour tout \(a \in U\) et pour tout \(h \in \R^2\),
   Au voisinage de \(t_0\),
   \begin{align}
     f \circ \varphi(t) &= f \circ \varphi(t_0) + \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0)(t-t_0) + \derivep{f}{x_1}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
-    &+ \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)(t-t_0) + \derivep{f}{x_2}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
-    &+ \norme{(\varphi_1'(t_0)(t-t_0)+ (t-t_0)\petito{1} + \varphi_2'(t_0)(t-t_0)+ (t-t_0)\petito{1})}\petito{1} \\
-    &= f \circ \varphi(t_0) + (t-t_0)\left[ \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0) \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)\right] +\petito{t-t_0}. 
+                       &+ \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)(t-t_0) + \derivep{f}{x_2}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
+                       &+ \norme{(\varphi_1'(t_0)(t-t_0)+ (t-t_0)\petito{1} + \varphi_2'(t_0)(t-t_0)+ (t-t_0)\petito{1})}\petito{1} \\
+                       &= f \circ \varphi(t_0) + (t-t_0)\left[ \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0) \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)\right] +\petito{t-t_0}. 
   \end{align}
   Alors \(f \circ \varphi\) admet un développement limité à l'ordre \(1\) en \(t_0\).
   \begin{equation}
@@ -637,10 +637,10 @@ On peut généraliser au cas où \(\varphi\) est définie sur un ouvert de \(\R^
 \begin{theo}
   Soient \(U\) et \(V\) deux ouverts de \(\R^2\). Soient \(f \in \classe{1}(U, \R)\) et \(\varphi \in \classe{1}(V, \R^2)\) telles que \(\varphi(V) \subset U\). On dispose donc de l'application \(f \circ \varphi : V \rightarrow \R\). 
 
-Alors l'application \(f\circ \varphi\) est de classe \(\classe{1}\), pour tout \(a \in V\) et pour \(i \in \{1, 2\}\) on a
-\begin{equation}
-  \derivep{f\circ \varphi}{x_i}(a) = \derivep{f}{x_1}(\varphi(a))\derivep{\varphi_1}{x_i}(a) + \derivep{f}{x_2}(\varphi(a))\derivep{\varphi_2}{x_i}(a).
-\end{equation}
+  Alors l'application \(f\circ \varphi\) est de classe \(\classe{1}\), pour tout \(a \in V\) et pour \(i \in \{1, 2\}\) on a
+  \begin{equation}
+    \derivep{f\circ \varphi}{x_i}(a) = \derivep{f}{x_1}(\varphi(a))\derivep{\varphi_1}{x_i}(a) + \derivep{f}{x_2}(\varphi(a))\derivep{\varphi_2}{x_i}(a).
+  \end{equation}
 \end{theo}
 
 \paragraph{Interprétation géométrique du gradient}
@@ -669,10 +669,10 @@ Alors l'application \(f\circ \varphi\) est de classe \(\classe{1}\), pour tout \
 \begin{defdef}
   Soient \(A \subset \R^2\), \(a \in A\) et \(f \in \R^A\).
   \begin{enumerate}
-  \item On dit que \(f\) présente un maximum (minimum) local en \(a\) si et seulement s'il existe un voisinage \(V\) de \(a\) tel que pour tout \(x \in A \cap V\) on a \(f(x) \leqslant f(a)\) (\(f(x) \geqslant f(a)\));
-  \item on dit que \(f\) présente un extremum local en \(a\) si elle admet un maximum local ou un minimum local;
-  \item on dit que l'extremum est global lorsque l'inégalité est vraie sur \(A\) tout entier;
-  \item on dit que l'extremum est strict lorsque l'inégalité est stricte pour \(x \neq a\).
+    \item On dit que \(f\) présente un maximum (minimum) local en \(a\) si et seulement s'il existe un voisinage \(V\) de \(a\) tel que pour tout \(x \in A \cap V\) on a \(f(x) \leqslant f(a)\) (\(f(x) \geqslant f(a)\));
+    \item on dit que \(f\) présente un extremum local en \(a\) si elle admet un maximum local ou un minimum local;
+    \item on dit que l'extremum est global lorsque l'inégalité est vraie sur \(A\) tout entier;
+    \item on dit que l'extremum est strict lorsque l'inégalité est stricte pour \(x \neq a\).
   \end{enumerate}
 \end{defdef}
 
@@ -690,7 +690,7 @@ Alors l'application \(f\circ \varphi\) est de classe \(\classe{1}\), pour tout \
 
   Soit, pour tout \(h\in \R^2\), l'application \(\psi_h: t \rightarrow f(a+th)\). On sait qu'il existe \(\delta>0\) tel que \(\Psi_h\) soit au moins définie sur \(\intervalleoo{-\delta}{\delta}\). Si \(\norme{th}\leqslant r\) et \(\abs{t}\leqslant \delta\) alors \(f(a+th)\) est définie et \(f(a+th) \leqslant f(a)\). 
 
-Or \(\psi_h\) est dérivable en \(0\), \(\psi_h\) admet un maximum local en zéro, zéro est à l'intérieur de son intervalle de définition donc \(\psi_h'(0)=0\). On a montré que pour tout \(h \in \R^2\) \(D_h f(a)=0\). L'application \(\D f_a\) est une forme linéaire nulle donc son vecteur normal (\(\grad f(a)\)) est nul.
+  Or \(\psi_h\) est dérivable en \(0\), \(\psi_h\) admet un maximum local en zéro, zéro est à l'intérieur de son intervalle de définition donc \(\psi_h'(0)=0\). On a montré que pour tout \(h \in \R^2\) \(D_h f(a)=0\). L'application \(\D f_a\) est une forme linéaire nulle donc son vecteur normal (\(\grad f(a)\)) est nul.
 \end{proof}
 %
 La réciproque est fausse. En effet soit \(\fonction{f}{\R^2}{\R}{(x,y)}{xy}\), de classe \(\classe{1}\). Pour tout \((x,y) \in \R^2\) on a
@@ -717,8 +717,8 @@ Un tel point est appelé point col ou point selle.
 
 En pratique pour rechercher des extremums~:
 \begin{itemize}
-\item si le domaine de départ n'est pas ouvert, on le sépare en ``plusieurs morceaux'' et on traite la frontière à part;
-\item sur le ou les ``morceaux'' ouverts, on commence par déterminer les points critiques, et en chaque point critique trouvé on regarde s'il y a vraiment un extremum ou pas.
+  \item si le domaine de départ n'est pas ouvert, on le sépare en ``plusieurs morceaux'' et on traite la frontière à part;
+  \item sur le ou les ``morceaux'' ouverts, on commence par déterminer les points critiques, et en chaque point critique trouvé on regarde s'il y a vraiment un extremum ou pas.
 \end{itemize}
 
 \subsection{Fonctions de classe \(\classe{1}\), Théorème de Schwarz}

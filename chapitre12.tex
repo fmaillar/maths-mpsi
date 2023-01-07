@@ -22,9 +22,9 @@ On note \(\R^X\) l'ensemble des applications de \(X\) vers \(\R\). On munit \(\R
   \end{equation}
 \end{prop}
 Dans ce cas, on dit que \((\R^X,+,\cdot,\perp)\) est une \(\R\)-algèbre. Le neutre pour la multiplication est la fonction constante égale à un.
- \begin{defdef}
-   Soit \(f \in \R^X\). On suppose que pour tout réel \(x\), \(f(x)\neq 0\), alors on peut définir la fonction inverse de \(f\) notée \(\dfrac{1}{f}\) telle que \(\fonction{\dfrac{1}{f}}{X}{\R}{x}{\dfrac{1}{f(x)}}\).
- \end{defdef}
+\begin{defdef}
+  Soit \(f \in \R^X\). On suppose que pour tout réel \(x\), \(f(x)\neq 0\), alors on peut définir la fonction inverse de \(f\) notée \(\dfrac{1}{f}\) telle que \(\fonction{\dfrac{1}{f}}{X}{\R}{x}{\dfrac{1}{f(x)}}\).
+\end{defdef}
 
 \subsection{Ensemble \((\R^X, \leqslant)\) partiellement ordonné}
 
@@ -32,15 +32,15 @@ On définit une relation d'ordre sur \(\R^X\) à partir de la relation d'ordre u
 \begin{equation}
   \forall f,g \in \R^X \quad f \leqslant g \iff \forall x \in X \ f(x) \leqslant g(x).
 \end{equation}
- Cet ordre n'est pas total. En effet, on peut trouver des fonctions qui ne sont pas comparables par \(\leqslant\). Attention à la notation \(f < g\), car elle est ambiguë puisqu'elle peut signifier
- \begin{itemize}
- \item soit \(\forall x \in X \ f(x) < g(x)\);
- \item soit \(f \leqslant g\) et \(f \neq g\) c'est-à-dire que pour tout \(x \in \X\), \(f(x) \leqslant g(x)\) et \(\exists x_0 \in X \ f(x_0) < g(x_0)\).
- \end{itemize}
+Cet ordre n'est pas total. En effet, on peut trouver des fonctions qui ne sont pas comparables par \(\leqslant\). Attention à la notation \(f < g\), car elle est ambiguë puisqu'elle peut signifier
+\begin{itemize}
+  \item soit \(\forall x \in X \ f(x) < g(x)\);
+  \item soit \(f \leqslant g\) et \(f \neq g\) c'est-à-dire que pour tout \(x \in \X\), \(f(x) \leqslant g(x)\) et \(\exists x_0 \in X \ f(x_0) < g(x_0)\).
+\end{itemize}
 Ne pas utiliser cette notation si possible. En particulier se méfier de la notation \(f > \tilde{0}\) qui peut signifier
 \begin{itemize}
-\item soit \(f\) est à valeur strictement positives;
-\item soit \(f\) est à valeurs positives ou nulles et \(f\) est différente de \(\tilde{0}\).
+  \item soit \(f\) est à valeur strictement positives;
+  \item soit \(f\) est à valeurs positives ou nulles et \(f\) est différente de \(\tilde{0}\).
 \end{itemize}
 
 Les propriétés de compatibilité de l'ordre sur \(\R^X\) avec l'addition, la multiplication par un réel et la multiplication interne se déduisent des propriétés de compatibilité de l'ordre sur \(\R\) avec l'addition et la multiplication.
@@ -72,7 +72,7 @@ Les propriétés de compatibilité de l'ordre sur \(\R^X\) avec l'addition, la m
   \end{equation}
 \end{prop}
 \begin{proof}
-Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(\{f,g\}\) dans \((\R^X, \leqslant)\). Soit un réel \(x \in X\) \(S(x)=\max(f(x),g(x))\) alors \(S(x) \geqslant f(x)\) et \(S(x) \geqslant g(x)\) donc \(S \geqslant f\) et \(S \geqslant g\) donc \(S\) est un majorant de \(\{f,g\}\). Soit \(h\) un majorant de \(\{f,g\}\) dans \(\R^X\), c'est-à-dire que \(h \geqslant f\) et \(h \geqslant g\) et donc que pour tout réel \(x\) de la partie \(X\) on a \(h(x) \geqslant f(x)\) et \(h(x) \geqslant g(x)\) donc que \(h(x) \geqslant \max(f(x),g(x))=S(x)\) donc \(h \geqslant S\). Alors \(S\) est le plus petit majorant. Finalement \(S=\sup\{f,g\}\).
+  Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(\{f,g\}\) dans \((\R^X, \leqslant)\). Soit un réel \(x \in X\) \(S(x)=\max(f(x),g(x))\) alors \(S(x) \geqslant f(x)\) et \(S(x) \geqslant g(x)\) donc \(S \geqslant f\) et \(S \geqslant g\) donc \(S\) est un majorant de \(\{f,g\}\). Soit \(h\) un majorant de \(\{f,g\}\) dans \(\R^X\), c'est-à-dire que \(h \geqslant f\) et \(h \geqslant g\) et donc que pour tout réel \(x\) de la partie \(X\) on a \(h(x) \geqslant f(x)\) et \(h(x) \geqslant g(x)\) donc que \(h(x) \geqslant \max(f(x),g(x))=S(x)\) donc \(h \geqslant S\). Alors \(S\) est le plus petit majorant. Finalement \(S=\sup\{f,g\}\).
 \end{proof}
 \begin{prop}
   On peut exprimer différemment \(\sup\) et \(\inf\), en effet pour toutes fonctions \(f\) et \(g\) de \(X\) dans \(\R\) on a
@@ -82,7 +82,7 @@ Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(
 \end{prop}
 \begin{proof}
   Voir celle du chapitre~
-\ref{chap:reels}.
+  \ref{chap:reels}.
 \end{proof}
 \begin{cor}
   Pour toute fonction \(f \in \R^X\),
@@ -104,11 +104,11 @@ Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(
 \end{defdef}
 \begin{prop}[Propriétés]
   \begin{itemize}
-  \item \(f^+\) et \(f^-\) sont à valeurs positives ou nulles;
-  \item \(\abs{f}=f^++f^-\);
-  \item \(f=f^+-f^-\);
-  \item \(-f^-=\inf(f,0)\);
-  \item \(-f^+=\inf(-f,0)\).
+    \item \(f^+\) et \(f^-\) sont à valeurs positives ou nulles;
+    \item \(\abs{f}=f^++f^-\);
+    \item \(f=f^+-f^-\);
+    \item \(-f^-=\inf(f,0)\);
+    \item \(-f^+=\inf(-f,0)\).
   \end{itemize}
 \end{prop}
 
@@ -118,9 +118,9 @@ Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(
 \begin{defdef}
   Soit une fonction \(f \in \R^X\), on dit que
   \begin{itemize}
-  \item \(f\) est majorée, s'il existe un réel \(M\) tel que pour tout \(x \in X\) \(f(x) \leqslant M\);
-  \item \(f\) est minorée, s'il existe un réel \(m\) tel que pour tout \(x \in X\) \(f(x) \geqslant m\);
-  \item \(f\) est bornée si elle est majorée et minorée.
+    \item \(f\) est majorée, s'il existe un réel \(M\) tel que pour tout \(x \in X\) \(f(x) \leqslant M\);
+    \item \(f\) est minorée, s'il existe un réel \(m\) tel que pour tout \(x \in X\) \(f(x) \geqslant m\);
+    \item \(f\) est bornée si elle est majorée et minorée.
   \end{itemize}
 \end{defdef}
 \begin{prop}
@@ -128,7 +128,7 @@ Pour la fonction \(S\). Montrons que \(S\) est le plus petit des majorants de \(
 \end{prop}
 \begin{proof}
   Voir celle du chapitre~
-\ref{chap:suites}.
+  \ref{chap:suites}.
 \end{proof}
 \begin{defdef}
   On appelle \(\Born(X,\R)\) l'ensemble des applications bornées de \(X\) dans \(\R\).
@@ -140,10 +140,10 @@ Soit une fonction \(f \in \R^X\), alors \(f\) est majorée si et seulement si la
 \begin{defdef}
   Soit une fonction \(f \in \R^X\) et \(a\) un réel de \(X\).
   \begin{itemize}
-  \item On dit que \(f\) admet un maximum en \(a\) si pour tout \(x \in X\), \(f(x) \leqslant f(a)\);
-  \item On dit que \(f\) admet un maximum local en \(a\) s'il existe un réel \(h >0\) tel que pour tout réel \(x \in X\), \(\abs{x-a} \leqslant h \implies f(x) \leqslant f(a)\);
-  \item On dit que \(f\) admet un minimum en \(a\) si pour tout \(x \in X\), \(f(x) \geqslant f(a)\);
-  \item On dit que \(f\) admet un minimum local en \(a\) s'il existe un réel \(h >0\) tel que pour tout réel \(x \in X\), \(\abs{x-a} \leqslant h \implies f(x) \geqslant f(a)\).
+    \item On dit que \(f\) admet un maximum en \(a\) si pour tout \(x \in X\), \(f(x) \leqslant f(a)\);
+    \item On dit que \(f\) admet un maximum local en \(a\) s'il existe un réel \(h >0\) tel que pour tout réel \(x \in X\), \(\abs{x-a} \leqslant h \implies f(x) \leqslant f(a)\);
+    \item On dit que \(f\) admet un minimum en \(a\) si pour tout \(x \in X\), \(f(x) \geqslant f(a)\);
+    \item On dit que \(f\) admet un minimum local en \(a\) s'il existe un réel \(h >0\) tel que pour tout réel \(x \in X\), \(\abs{x-a} \leqslant h \implies f(x) \geqslant f(a)\).
   \end{itemize}
 \end{defdef}
 
@@ -185,22 +185,22 @@ En général, ce n'est pas une égalité. Il suffit de prendre \(X=\intervalleff
   \end{equation}
   Deux cas de figures se présentent~:
   \begin{itemize}
-  \item si \(\lambda =0\) alors \(\lambda f\) est la fonction nulle donc il y a égalité.
-  \item sinon, on a \(\lambda > 0\) et
-    \begin{equation}
-      \lambda \sup\limits_{X} f= \lambda \sup\limits_{X} \frac{1}{\lambda} \lambda f.
-    \end{equation}
-    Or d'après la première partie de la preuve, en notant \(g=\lambda f\) et en appliquant l'équation.~\eqref{eq:inégalité2} à la fonction \(g\) et au réel \(\frac{1}{\lambda}\), on a
-    \begin{equation}
-      \label{eq:inegalite1}
-      \sup\limits_{X}\frac{1}{\lambda} g \leqslant \frac{1}{\lambda} \sup\limits_{X}g.
-    \end{equation}
-%on sait que \(\sup\limits_{X}\frac{1}{\lambda} \lambda f \leqslant \frac{1}{\lambda} \sup\limits_{X}\lambda f\). 
-Or \(\dfrac{1}{\lambda}g=f\) et en multipliant par \(\lambda > 0\) de chaque coté de l'équation.~\eqref{eq:inegalite1}, on obtient
-    \begin{equation}
-      \lambda \sup\limits_{X} f \leqslant \sup\limits_{X}\lambda f.
-    \end{equation}
-    D'où l'égalité par double inégalité.
+    \item si \(\lambda =0\) alors \(\lambda f\) est la fonction nulle donc il y a égalité.
+    \item sinon, on a \(\lambda > 0\) et
+      \begin{equation}
+        \lambda \sup\limits_{X} f= \lambda \sup\limits_{X} \frac{1}{\lambda} \lambda f.
+      \end{equation}
+      Or d'après la première partie de la preuve, en notant \(g=\lambda f\) et en appliquant l'équation.~\eqref{eq:inégalité2} à la fonction \(g\) et au réel \(\frac{1}{\lambda}\), on a
+      \begin{equation}
+        \label{eq:inegalite1}
+        \sup\limits_{X}\frac{1}{\lambda} g \leqslant \frac{1}{\lambda} \sup\limits_{X}g.
+      \end{equation}
+      %on sait que \(\sup\limits_{X}\frac{1}{\lambda} \lambda f \leqslant \frac{1}{\lambda} \sup\limits_{X}\lambda f\). 
+      Or \(\dfrac{1}{\lambda}g=f\) et en multipliant par \(\lambda > 0\) de chaque coté de l'équation.~\eqref{eq:inegalite1}, on obtient
+      \begin{equation}
+        \lambda \sup\limits_{X} f \leqslant \sup\limits_{X}\lambda f.
+      \end{equation}
+      D'où l'égalité par double inégalité.
   \end{itemize}
 \end{proof}
 \begin{prop}
@@ -208,7 +208,7 @@ Or \(\dfrac{1}{\lambda}g=f\) et en multipliant par \(\lambda > 0\) de chaque cot
   \begin{equation}
     \sup\limits_{X}(fg) \leqslant (\sup\limits_{X}f)(\sup\limits_{X}g).
   \end{equation}
-Ce n'est en général pas une égalité.
+  Ce n'est en général pas une égalité.
 \end{prop}
 \begin{proof}
   Les fonctions \(f\) et \(g\) sont majorées donc \(\sup\limits_{X}f\) et \(\sup\limits_{X}g\) existent. Soit \(x \in X\) alors
@@ -237,9 +237,9 @@ Ce n'est en général pas une égalité.
   En effet, puisque
   \begin{align}
     f \text{~est minorée} &\iff \exists m \in \R \ \forall x \in X \ m \leqslant f(x)\\
-    &\iff \exists m \in \R \ \forall x \in X \ -f(x) \leqslant -m\\
-    &\iff \exists M \in \R \ \forall x \in X \ -f(x) \leqslant M\\
-    &\iff -f \text{~est majorée}.
+                          &\iff \exists m \in \R \ \forall x \in X \ -f(x) \leqslant -m\\
+                          &\iff \exists M \in \R \ \forall x \in X \ -f(x) \leqslant M\\
+                          &\iff -f \text{~est majorée}.
   \end{align}
   La fonction \(-f\) est majorée, donc \(\sup\limits_{X} (-f)\) existe et 
   \begin{equation}
@@ -338,9 +338,9 @@ On peut aussi dire que c'est une sous-algèbre puisque \(\tilde{0}\) et \(\tilde
 \end{theo}
 \begin{proof}
   \begin{itemize}
-  \item \(\abs{f} \geqslant \tilde{0}\) donc en passant à la borne supérieure \(\norme{f}_\infty \geqslant 0\);
-  \item \(\norme{f}_\infty = 0 \iff \sup\limits_{X}\abs{f}=0\) c'est-à-dire si et seulement si \(\abs{f}=\tilde{0}\) donc si et seulement si \(f=\tilde{0}\);
-  \item C'est une conséquence des propriétés de la borne supérieure.
+    \item \(\abs{f} \geqslant \tilde{0}\) donc en passant à la borne supérieure \(\norme{f}_\infty \geqslant 0\);
+    \item \(\norme{f}_\infty = 0 \iff \sup\limits_{X}\abs{f}=0\) c'est-à-dire si et seulement si \(\abs{f}=\tilde{0}\) donc si et seulement si \(f=\tilde{0}\);
+    \item C'est une conséquence des propriétés de la borne supérieure.
   \end{itemize}
 \end{proof}
 
@@ -404,9 +404,9 @@ Soit un réel \(a\).
 \begin{defdef}
   Soit une fonction \(f:\Dr_{f} \longrightarrow \R\) avec \(\Def{f} \subset \R\). On dit que \(f\) est définie au voisinage de \(a\) s'il existe un réel \(h > 0\) tel que
   \begin{itemize}
-  \item soit \(\intervalleff{a-h}{a+h}\setminus\{a\} \subset \Def{f}\);
-  \item soit \(\intervalleoo{a-h}{a} \subset \Def{f}\);  
-  \item ou soit \(\intervalleoo{a}{a+h} \subset \Def{f}\).
+    \item soit \(\intervalleff{a-h}{a+h}\setminus\{a\} \subset \Def{f}\);
+    \item soit \(\intervalleoo{a-h}{a} \subset \Def{f}\);  
+    \item ou soit \(\intervalleoo{a}{a+h} \subset \Def{f}\).
   \end{itemize}
 \end{defdef}
 Par exemple la fonction \(x \longmapsto \frac{\ln x}{x}\) est définie au voisinage de zéro.
@@ -416,9 +416,9 @@ Par exemple la fonction \(x \longmapsto \frac{\ln x}{x}\) est définie au voisin
 \begin{defdef}
   Soit \(b \in \Rbar\) et \(f : \Def{f} \longrightarrow \R\). On dit qu'une propriété \(P\) portant sur \(f\) est vraie au voisinage de \(b\), si \(f\) est définie au voisinage de \(b\) et si
   \begin{itemize}
-  \item \(b \in \R\), il existe un réel \(h\) tel que \(P\) soit vraie sur \(\intervalleff{a-h}{a+h} \cap \Def{f}\);
-  \item \(b=+\infty\), il existe un réel \(A\) tel que \(P\) soit vraie sur \(\intervallefo{A}{+\infty} \cap \Def{f}\);
-  \item \(b=+\infty\), il existe un réel \(A\) tel que \(P\) soit vraie sur \(\intervalleof{-\infty}{A} \cap \Def{f}\).
+    \item \(b \in \R\), il existe un réel \(h\) tel que \(P\) soit vraie sur \(\intervalleff{a-h}{a+h} \cap \Def{f}\);
+    \item \(b=+\infty\), il existe un réel \(A\) tel que \(P\) soit vraie sur \(\intervallefo{A}{+\infty} \cap \Def{f}\);
+    \item \(b=+\infty\), il existe un réel \(A\) tel que \(P\) soit vraie sur \(\intervalleof{-\infty}{A} \cap \Def{f}\).
   \end{itemize}
 \end{defdef}
 
@@ -428,18 +428,18 @@ Par exemple la fonction \(x \longmapsto \frac{\ln x}{x}\) est définie au voisin
 
 \begin{defdef}
   \begin{itemize}
-  \item Soit un réel \(a\) et une fonction \(f:\Def{f} \longrightarrow \R\), on dit que \(f\) tend vers zéro en \(a\) si \(f\) est définie au voisinage de \(a\) et si
-    \begin{equation}
-      \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)} \leqslant \epsilon ;
-    \end{equation}
-  \item on dit que \(f\) tend vers zéro en \(+\infty\) si \(f\) est définie au voisinage de \(+\infty\) et si
-    \begin{equation}
-      \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in \Def{f} \quad x \geqslant A \implies \abs{f(x)} \leqslant \epsilon ;
-    \end{equation}
-  \item on dit que \(f\) tend vers zéro en \(-\infty\) si \(f\) est définie au voisinage de \(+\infty\) et si
-    \begin{equation}
-      \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in \Def{f} \quad x \leqslant A \implies \abs{f(x)} \leqslant \epsilon.
-    \end{equation}
+    \item Soit un réel \(a\) et une fonction \(f:\Def{f} \longrightarrow \R\), on dit que \(f\) tend vers zéro en \(a\) si \(f\) est définie au voisinage de \(a\) et si
+      \begin{equation}
+        \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)} \leqslant \epsilon ;
+      \end{equation}
+    \item on dit que \(f\) tend vers zéro en \(+\infty\) si \(f\) est définie au voisinage de \(+\infty\) et si
+      \begin{equation}
+        \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in \Def{f} \quad x \geqslant A \implies \abs{f(x)} \leqslant \epsilon ;
+      \end{equation}
+    \item on dit que \(f\) tend vers zéro en \(-\infty\) si \(f\) est définie au voisinage de \(+\infty\) et si
+      \begin{equation}
+        \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in \Def{f} \quad x \leqslant A \implies \abs{f(x)} \leqslant \epsilon.
+      \end{equation}
   \end{itemize}
 \end{defdef}
 
@@ -450,21 +450,21 @@ Par exemple la fonction \(x \longmapsto \frac{\ln x}{x}\) est définie au voisin
 \end{defdef}
 \begin{theo}[Unicité de la limite]
   Soit \(a \in \Rbar\) et \(f\) une application définie au voisinage de \(a\). Il existe au plus un réel \(\ell\) tel que \(f\) tende vers \(\ell\) en \(a\). S'il existe on dit que \(\ell\) est la limite de la fonction \(f\) en \(a\). On note
-\begin{equation}
-  \lim\limits_{x \to a}f(x)=\ell \qquad \lim\limits_{a}f=\ell \qquad f(x) \underset{x \to a}{\longrightarrow} \ell.
-\end{equation}
+  \begin{equation}
+    \lim\limits_{x \to a}f(x)=\ell \qquad \lim\limits_{a}f=\ell \qquad f(x) \underset{x \to a}{\longrightarrow} \ell.
+  \end{equation}
 \end{theo}
 \begin{proof}
-Pour \(a \in \R\). On suppose qu'il existe \(\ell\) et \(\ell'\) deux réels différents tels que \(f-\ell\) et \(f-\ell'\) tendent vers zéro en \(a\). On va chercher une absurdité pour montrer que \(\ell=\ell'\). Soit \(\epsilon = \frac{\abs{\ell-\ell'}}{3} > 0\) puisque \(\ell \neq \ell'\). Il existe donc deux réels \(\eta_1\) et \(\eta_2\) strictement positifs tels que pour tout \(x \in \Def{f}\) on ait
-\begin{gather}
-  \abs{x-a} \leqslant \eta_1 \implies \abs{f(x)-\ell} \leqslant \epsilon, \\ 
-  \abs{x-a} \leqslant \eta_2 \implies \abs{f(x)-\ell'} \leqslant \epsilon.
-\end{gather}
-Soit \(\eta=\min(\eta_1, \eta_2)\), alors pour tout \(x \in \Def{f}\) si \(\abs{x-a} \leqslant \eta\) alors par inégalité triangulaire
-\begin{equation}
-  \abs{\ell-\ell'} \leqslant \abs{f(x)-\ell} + \abs{f(x)-\ell'} \leqslant \frac{2}{3}\abs{\ell-\ell'}.
-\end{equation}
-Car \(\abs{\ell-\ell'} >0\), on peut simplifier l'inégalité et \(1 \leqslant \frac{2}{3}\), ce qui est absurde. Donc \(\ell=\ell'\).
+  Pour \(a \in \R\). On suppose qu'il existe \(\ell\) et \(\ell'\) deux réels différents tels que \(f-\ell\) et \(f-\ell'\) tendent vers zéro en \(a\). On va chercher une absurdité pour montrer que \(\ell=\ell'\). Soit \(\epsilon = \frac{\abs{\ell-\ell'}}{3} > 0\) puisque \(\ell \neq \ell'\). Il existe donc deux réels \(\eta_1\) et \(\eta_2\) strictement positifs tels que pour tout \(x \in \Def{f}\) on ait
+  \begin{gather}
+    \abs{x-a} \leqslant \eta_1 \implies \abs{f(x)-\ell} \leqslant \epsilon, \\ 
+    \abs{x-a} \leqslant \eta_2 \implies \abs{f(x)-\ell'} \leqslant \epsilon.
+  \end{gather}
+  Soit \(\eta=\min(\eta_1, \eta_2)\), alors pour tout \(x \in \Def{f}\) si \(\abs{x-a} \leqslant \eta\) alors par inégalité triangulaire
+  \begin{equation}
+    \abs{\ell-\ell'} \leqslant \abs{f(x)-\ell} + \abs{f(x)-\ell'} \leqslant \frac{2}{3}\abs{\ell-\ell'}.
+  \end{equation}
+  Car \(\abs{\ell-\ell'} >0\), on peut simplifier l'inégalité et \(1 \leqslant \frac{2}{3}\), ce qui est absurde. Donc \(\ell=\ell'\).
 \end{proof}
 
 \subsubsection{Fonction admettant une limite infinie}
@@ -472,39 +472,39 @@ Car \(\abs{\ell-\ell'} >0\), on peut simplifier l'inégalité et \(1 \leqslant \
 \begin{defdef}
   Soit \(a \in \Rbar\) et \(f\) une application définie au voisinage de \(a\). On dit que \(f\) tend vers \(+\infty\) en \(a\) si
   \begin{itemize}
-  \item si \(a \in \R\)
-    \begin{equation}
-      \forall A \in \R \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \geqslant A;
-    \end{equation}
-  \item si \(a= + \infty\)
-    \begin{equation}
-      \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \geqslant B \implies f(x) \geqslant A;
-    \end{equation}
+    \item si \(a \in \R\)
+      \begin{equation}
+        \forall A \in \R \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \geqslant A;
+      \end{equation}
+    \item si \(a= + \infty\)
+      \begin{equation}
+        \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \geqslant B \implies f(x) \geqslant A;
+      \end{equation}
     \item si \(a= - \infty\)
-    \begin{equation}
-      \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \leqslant B \implies f(x) \geqslant A.
-    \end{equation}
+      \begin{equation}
+        \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \leqslant B \implies f(x) \geqslant A.
+      \end{equation}
   \end{itemize}
   On dit aussi que \(f\) admet \(+\infty\) pour limite en \(a\) et on note
-\begin{equation}
-  \lim\limits_{x \to a}f(x)=+\infty \qquad \lim\limits_{a}f=+\infty \qquad f(x) \underset{x \to a}{\longrightarrow} +\infty.
-\end{equation}
+  \begin{equation}
+    \lim\limits_{x \to a}f(x)=+\infty \qquad \lim\limits_{a}f=+\infty \qquad f(x) \underset{x \to a}{\longrightarrow} +\infty.
+  \end{equation}
 \end{defdef}
 \begin{defdef}
   Soit \(a \in \Rbar\) et \(f\) une application définie au voisinage de \(a\). On dit que \(f\) tend vers \(-\infty\) en \(a\) si \(-f\) tend vers \(+\infty\) en \(a\). c'est-à-dire
-\begin{itemize}
-  \item si \(a \in \R\)
-    \begin{equation}
-      \forall A \in \R \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \leqslant A;
-    \end{equation}
-  \item si \(a= + \infty\)
-    \begin{equation}
-      \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \geqslant B \implies f(x) \leqslant A;
-    \end{equation}
+  \begin{itemize}
+    \item si \(a \in \R\)
+      \begin{equation}
+        \forall A \in \R \ \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \leqslant A;
+      \end{equation}
+    \item si \(a= + \infty\)
+      \begin{equation}
+        \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \geqslant B \implies f(x) \leqslant A;
+      \end{equation}
     \item si \(a= - \infty\)
-    \begin{equation}
-      \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \leqslant B \implies f(x) \leqslant A.
-    \end{equation}
+      \begin{equation}
+        \forall A \in \R \ \exists B \in \R \ \forall x \in \Def{f} \quad x \leqslant B \implies f(x) \leqslant A.
+      \end{equation}
   \end{itemize}
   On dit aussi que \(f\) admet \(-\infty\) pour limite en \(a\) et on note
   \begin{equation}
@@ -522,10 +522,10 @@ Car \(\abs{\ell-\ell'} >0\), on peut simplifier l'inégalité et \(1 \leqslant \
     \forall x \geqslant B \quad \ln x \geqslant \ln B,
   \end{equation}
   car le logarithme népérien est croissant. Alors \(\ln x \geqslant \ln B \geqslant A\) donc \(\ln x \geqslant A\). On a montré
-\begin{equation}
-  \forall A \in \R \ \exists B \in \R \ \forall x \geqslant B \quad \ln x \geqslant A,
-\end{equation}
-donc \(\lim\limits_{x \to +\infty} \ln x = + \infty\).
+  \begin{equation}
+    \forall A \in \R \ \exists B \in \R \ \forall x \geqslant B \quad \ln x \geqslant A,
+  \end{equation}
+  donc \(\lim\limits_{x \to +\infty} \ln x = + \infty\).
 \end{proof}
 
 \subsubsection{Restriction -- Limites à gauche -- Limites à droite}
@@ -535,11 +535,11 @@ Soit un intervalle réel \(I\).
   \begin{equation}
     \lim\limits_{\begin{array}{l} x \to a \\ x \in I\end{array}}f(x)=\lim\limits_{a}f=\ell \implies \lim\limits_{\begin{array}{l} x \to a \\ x \in I'\end{array}}f(x)=\lim\limits_{a}f_{|I^{'}}=\ell
   \end{equation}
-La réciproque est fausse. Par exemple, on prend \(I=[-1,1]\), \(I'=[0,1]\), \(a=0\) et
-\begin{equation}
-  \fonction{f}{I}{\R}{x}{\begin{cases} 0 & -1 \leqslant x < 0 \\ 1 & 0 \leqslant x \leqslant 1\end{cases}},
-\end{equation}
-alors \(\lim\limits_{x \to 0}f_{|I^{'}}(x)=1\) cependant \(f\) n'admet pas de limite en zéro.
+  La réciproque est fausse. Par exemple, on prend \(I=[-1,1]\), \(I'=[0,1]\), \(a=0\) et
+  \begin{equation}
+    \fonction{f}{I}{\R}{x}{\begin{cases} 0 & -1 \leqslant x < 0 \\ 1 & 0 \leqslant x \leqslant 1\end{cases}},
+  \end{equation}
+  alors \(\lim\limits_{x \to 0}f_{|I^{'}}(x)=1\) cependant \(f\) n'admet pas de limite en zéro.
 \end{prop}
 \begin{proof}
   On a \( I' \subset I\), par exemple si \(\lim\limits_{a} f =\ell\) alors
@@ -575,25 +575,25 @@ On définit de la même manière la limite à gauche et les propriétés sont id
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[\(\impliedby\)] C'est la conséquence de la proposition sur les restrictions.
-  \item[\(\implies\)] On peut par exemple le montrer avec \(\ell=+\infty\). On a la limite à droite \(\lim\limits_{a^{+}}f=\ell\), alors
-    \begin{equation}
-      \forall A \in \R \ \exists \eta > 0 \ \forall x \in I \quad a < x < a + \eta \implies f(x) \geqslant A
-    \end{equation}
-    et la limite à gauche \(\lim\limits_{a^{-}}f=\ell\)
-    \begin{equation}
-      \forall A \in \R \ \exists \alpha > 0 \ \forall x \in I \quad a-\alpha \leqslant x < a
-    \end{equation}
-    Soit \(\beta=\min(\alpha, \eta)\). Pour tout \(x \in I\setminus\{a\}\)
-    \begin{equation}
-      \abs{x-a} \leqslant \beta \implies a-\beta \leqslant x \leqslant a+\beta,
-    \end{equation}
-    alors deux cas de figure se présentent~:
-    \begin{itemize}
-    \item soit \(a < x \leqslant a+\beta \leqslant a + \eta\) et alors \(f(x) \geqslant A\);
-    \item soit \(\alpha - \beta \leqslant x < a\) et comme \(\beta \leqslant \alpha\) alors on a \(a-\alpha \leqslant x < a\) donc \(f(x) \geqslant A\).
-    \end{itemize}
-    Pour tout \(x \in I\setminus\{a\}\) on a bien \(\abs{x-a}\leqslant \beta \implies f(x) \geqslant A\) donc \(\lim\limits_{\begin{array}{l} x \to a \\ x \in I\setminus\{a\}\end{array}}f(x)=+\infty\).
+    \item[\(\impliedby\)] C'est la conséquence de la proposition sur les restrictions.
+    \item[\(\implies\)] On peut par exemple le montrer avec \(\ell=+\infty\). On a la limite à droite \(\lim\limits_{a^{+}}f=\ell\), alors
+      \begin{equation}
+        \forall A \in \R \ \exists \eta > 0 \ \forall x \in I \quad a < x < a + \eta \implies f(x) \geqslant A
+      \end{equation}
+      et la limite à gauche \(\lim\limits_{a^{-}}f=\ell\)
+      \begin{equation}
+        \forall A \in \R \ \exists \alpha > 0 \ \forall x \in I \quad a-\alpha \leqslant x < a
+      \end{equation}
+      Soit \(\beta=\min(\alpha, \eta)\). Pour tout \(x \in I\setminus\{a\}\)
+      \begin{equation}
+        \abs{x-a} \leqslant \beta \implies a-\beta \leqslant x \leqslant a+\beta,
+      \end{equation}
+      alors deux cas de figure se présentent~:
+      \begin{itemize}
+        \item soit \(a < x \leqslant a+\beta \leqslant a + \eta\) et alors \(f(x) \geqslant A\);
+        \item soit \(\alpha - \beta \leqslant x < a\) et comme \(\beta \leqslant \alpha\) alors on a \(a-\alpha \leqslant x < a\) donc \(f(x) \geqslant A\).
+      \end{itemize}
+      Pour tout \(x \in I\setminus\{a\}\) on a bien \(\abs{x-a}\leqslant \beta \implies f(x) \geqslant A\) donc \(\lim\limits_{\begin{array}{l} x \to a \\ x \in I\setminus\{a\}\end{array}}f(x)=+\infty\).
   \end{itemize}
 \end{proof}
 
@@ -618,7 +618,7 @@ Soient \(f\) une fonction définie au voisinage de \(a \in \Rbar\) et \(\ell \in
 \end{prop}
 \begin{proof}
   Voir la démonstration équivalente du chapitre~
-\ref{chap:suites} relative aux suites.
+  \ref{chap:suites} relative aux suites.
 \end{proof}
 \begin{prop}
   Si la fonction \(f\) admet une limite finie en \(a \in \Rbar\), alors \(f\) est bornée au voisinage de \(a\).
@@ -644,22 +644,22 @@ Soient \(f\) une fonction définie au voisinage de \(a \in \Rbar\) et \(\ell \in
 \begin{proof}
   Prenons le cas où \(a \in \R\). Alors deux cas de figures se présentent~: soit \(\ell \in \R\) ou soit \(\ell = + \infty\)
   \begin{itemize}
-  \item Dans le cas où \(\ell \in \R\), on pose \(\epsilon = \ell-m >0\) et donc
-    \begin{equation}
-      \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-\ell} \leqslant \epsilon.
-    \end{equation}
-    Alors pour tout \(x \in \Def{f} \cap \intervalleff{a-\eta,}{a+\eta}\) on a \(-\epsilon \leqslant f(x)-l \leqslant \epsilon\) soit en particulier \(m-\ell \leqslant f(x)-\ell\), donc \(m \leqslant f(x)\). La fonction \(f\) est donc minorée au voisinage de \(a\).
-  \item Dans le cas où \(\ell=\infty\), on écrit la définition
-    \begin{equation}
-      \forall m \in \R \ \exists \eta \in \R \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \geqslant m.
-    \end{equation}
-    Donc \(\forall x \in \Def{f} \cap \intervalleff{a-\eta}{a+\eta} \quad f(x) \geqslant m\). La fonction \(f\) est donc minorée au voisinage de \(a\).
+    \item Dans le cas où \(\ell \in \R\), on pose \(\epsilon = \ell-m >0\) et donc
+      \begin{equation}
+        \exists \eta > 0 \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-\ell} \leqslant \epsilon.
+      \end{equation}
+      Alors pour tout \(x \in \Def{f} \cap \intervalleff{a-\eta,}{a+\eta}\) on a \(-\epsilon \leqslant f(x)-l \leqslant \epsilon\) soit en particulier \(m-\ell \leqslant f(x)-\ell\), donc \(m \leqslant f(x)\). La fonction \(f\) est donc minorée au voisinage de \(a\).
+    \item Dans le cas où \(\ell=\infty\), on écrit la définition
+      \begin{equation}
+        \forall m \in \R \ \exists \eta \in \R \ \forall x \in \Def{f} \quad \abs{x-a} \leqslant \eta \implies f(x) \geqslant m.
+      \end{equation}
+      Donc \(\forall x \in \Def{f} \cap \intervalleff{a-\eta}{a+\eta} \quad f(x) \geqslant m\). La fonction \(f\) est donc minorée au voisinage de \(a\).
   \end{itemize}
 \end{proof}
 \begin{cor}
   \begin{itemize}
-  \item Si \(f\) admet une limite positive, finie ou infinie, en \(a \in \Rbar\), alors \(f\) est minorée par un réel strictement positif au voisinage de \(a\),
-  \item si \(f\) admet une limite non nulle, alors \(\abs{f}\) est minorée par un réel strictement positif au voisinage de \(a\).
+    \item Si \(f\) admet une limite positive, finie ou infinie, en \(a \in \Rbar\), alors \(f\) est minorée par un réel strictement positif au voisinage de \(a\),
+    \item si \(f\) admet une limite non nulle, alors \(\abs{f}\) est minorée par un réel strictement positif au voisinage de \(a\).
   \end{itemize}
 \end{cor}
 \begin{prop}
@@ -688,16 +688,16 @@ Soient \(f\) une fonction définie au voisinage de \(a \in \Rbar\) et \(\ell \in
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[\(\impliedby\)] Évident
-  \item[\(\implies\)] Soit \(l=\lim\limits_{a} f\). Supposons que \(l \neq f(a)\). Alors puisque \(\ell\) existe et est finie, on a
-    \begin{equation}
-      \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in X \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-\ell} \leqslant \epsilon
-    \end{equation}
-    Avec \(\epsilon=\frac{\abs{f(a)-\ell}}{2}\) et avec \(a \in X\) (\(\abs{a-a}=0 \leqslant \eta\)) on a
-    \begin{equation}
-      \abs{f(a)-\ell} \leqslant \frac{\abs{f(a)-\ell}}{2},
-    \end{equation}
-    et comme \(\abs{f(a)-\ell} > 0\) on simplifie et on obtient \(1 \leqslant \frac{1}{2}\). Ce qui est absurde donc \(\ell=f(a)\).
+    \item[\(\impliedby\)] Évident
+    \item[\(\implies\)] Soit \(l=\lim\limits_{a} f\). Supposons que \(l \neq f(a)\). Alors puisque \(\ell\) existe et est finie, on a
+      \begin{equation}
+        \forall \epsilon > 0 \ \exists \eta > 0 \ \forall x \in X \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-\ell} \leqslant \epsilon
+      \end{equation}
+      Avec \(\epsilon=\frac{\abs{f(a)-\ell}}{2}\) et avec \(a \in X\) (\(\abs{a-a}=0 \leqslant \eta\)) on a
+      \begin{equation}
+        \abs{f(a)-\ell} \leqslant \frac{\abs{f(a)-\ell}}{2},
+      \end{equation}
+      et comme \(\abs{f(a)-\ell} > 0\) on simplifie et on obtient \(1 \leqslant \frac{1}{2}\). Ce qui est absurde donc \(\ell=f(a)\).
   \end{itemize}
 \end{proof}
 \begin{defdef}
@@ -718,8 +718,8 @@ Soient \(X\) une partie de \(\R\) et \(a\) un réel. On suppose que \(f\) est d�
   \end{equation}
   Pour tout \(x \in X \cup \{a\}\) tel que \(\abs{x-a} \leqslant \eta\), deux cas de figure se présentent~:
   \begin{itemize}
-  \item si \(x \in X\) alors \(\abs{g(x)-\ell}=\abs{f(x)-\ell} \leqslant \epsilon\),
-  \item si \(x=a\) alors \(\abs{g(a)-\ell}=0 \leqslant \epsilon\).
+    \item si \(x \in X\) alors \(\abs{g(x)-\ell}=\abs{f(x)-\ell} \leqslant \epsilon\),
+    \item si \(x=a\) alors \(\abs{g(a)-\ell}=0 \leqslant \epsilon\).
   \end{itemize}
   Donc pour tout \(x \in X \cup \{a\}\), si \(\abs{x-a} \leqslant \eta\) alors \(\abs{g(x)-\ell} \leqslant \epsilon\). La fonction \(g\) admet une limite finie en \(a\), alors elle est continue en \(a\).
 \end{proof}
@@ -737,9 +737,9 @@ Soient \(X\) une partie de \(\R\) et \(a\) un réel. On suppose que \(f\) est d�
 
 \emph{Exemples}~:
 \begin{itemize}
-\item Soit la fonction \(\fonction{f}{\R^*}{\R}{x}{\frac{\sin x}{x}}\). On sait que \(\lim\limits_{0} f=1\). On peut prolonger \(f\) par continuité en zéro en prenant \(f(0)=1\) (en notant abusivement \(f\) la fonction prolongée alors que ces deux fonctions sont différentes). On obtient une fonction définie sur \(\R\) appelée sinus cardinal et notée \(\sinc\) couramment utilisée en physique.
-\item Soit la fonction \(\fonction{g}{\R^*}{\R}{x}{\e^{-\frac{1}{x^2}}}\). On sait que \(\lim\limits_{0} g=0\). On peut prolonger \(g\) par continuité en posant \(g(0)=0\).
-\item Soit la fonction \(\fonction{h}{\R^*}{\R}{x}{\e^{-\frac{1}{x}}}\). Cette fonction n'est pas prolongeable par continuité puisque \(\lim\limits_{0^{+}}h=0\) et \(\lim\limits_{0^{-}}h=+\infty\). Par contre la restriction de \(h\) à \(]0,+\infty[\) notée \(h_1\) est prolongeable par continuité en posant \(h_1(0)=0\).
+  \item Soit la fonction \(\fonction{f}{\R^*}{\R}{x}{\frac{\sin x}{x}}\). On sait que \(\lim\limits_{0} f=1\). On peut prolonger \(f\) par continuité en zéro en prenant \(f(0)=1\) (en notant abusivement \(f\) la fonction prolongée alors que ces deux fonctions sont différentes). On obtient une fonction définie sur \(\R\) appelée sinus cardinal et notée \(\sinc\) couramment utilisée en physique.
+  \item Soit la fonction \(\fonction{g}{\R^*}{\R}{x}{\e^{-\frac{1}{x^2}}}\). On sait que \(\lim\limits_{0} g=0\). On peut prolonger \(g\) par continuité en posant \(g(0)=0\).
+  \item Soit la fonction \(\fonction{h}{\R^*}{\R}{x}{\e^{-\frac{1}{x}}}\). Cette fonction n'est pas prolongeable par continuité puisque \(\lim\limits_{0^{+}}h=0\) et \(\lim\limits_{0^{-}}h=+\infty\). Par contre la restriction de \(h\) à \(]0,+\infty[\) notée \(h_1\) est prolongeable par continuité en posant \(h_1(0)=0\).
 \end{itemize}
 
 \subsubsection{Continuité à gauche et continuité à droite}
@@ -754,23 +754,23 @@ La définition est similaire pour la continuité à gauche.
 Les limites à gauche et à droite peuvent être différentes. Par exemple prenons la fonction qui vaut 1 sur \(\Rpluss\) et est nulle ailleurs. Alors \(\lim\limits_{0^{+}} f=1\) et \(\lim\limits_{0^{-}} f=0\). La fonction \(f\) n'est pas continue à gauche en zéro.
 \begin{proof}
   \begin{itemize}
-  \item[\(\implies\)] C'est une conséquence du théorème sur les restrictions.
-  \item[\(\impliedby\)] Soit \(\epsilon > 0\), il existe alors deux réels \(\eta_1\) et \(\eta_2\) strictement positifs tels que pour tout \(x \in X\) on a
-    \begin{align}
-      a < x \leqslant a +\eta_1 \implies \abs{f(x)-f(a)} \leqslant \epsilon;\\
-      a-\eta_2 \leqslant x < a \implies \abs{f(x)-f(a)} \leqslant \epsilon.
-    \end{align}
-    On pose \(\eta=\min(\eta_1,\eta_2)\). Si \(\abs{x-a} \leqslant \eta\), trois cas de figures se présentent
-    \begin{itemize}
-    \item si \(a < x \leqslant a+\eta_0 \leqslant a+\eta_1\) alors \(\abs{f(x)-f(a)} \leqslant \epsilon\);
-    \item si \(x=a\) alors \(\abs{f(x)-f(a)} = 0 \leqslant \epsilon\);
-    \item si \(a-\eta_2 < a-\eta_0 \leqslant x < a\) alors \(\abs{f(x)-f(a)} \leqslant \epsilon\).
-    \end{itemize}
-    Finalement,
-    \begin{equation}
-      \forall x \in X \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-f(a)} \leqslant \epsilon.
-    \end{equation}
-    Alors \(\lim\limits_{a} f=f(a)\). La fonction \(f\) est continue en \(a\).
+    \item[\(\implies\)] C'est une conséquence du théorème sur les restrictions.
+    \item[\(\impliedby\)] Soit \(\epsilon > 0\), il existe alors deux réels \(\eta_1\) et \(\eta_2\) strictement positifs tels que pour tout \(x \in X\) on a
+      \begin{align}
+        a < x \leqslant a +\eta_1 \implies \abs{f(x)-f(a)} \leqslant \epsilon;\\
+        a-\eta_2 \leqslant x < a \implies \abs{f(x)-f(a)} \leqslant \epsilon.
+      \end{align}
+      On pose \(\eta=\min(\eta_1,\eta_2)\). Si \(\abs{x-a} \leqslant \eta\), trois cas de figures se présentent
+      \begin{itemize}
+        \item si \(a < x \leqslant a+\eta_0 \leqslant a+\eta_1\) alors \(\abs{f(x)-f(a)} \leqslant \epsilon\);
+        \item si \(x=a\) alors \(\abs{f(x)-f(a)} = 0 \leqslant \epsilon\);
+        \item si \(a-\eta_2 < a-\eta_0 \leqslant x < a\) alors \(\abs{f(x)-f(a)} \leqslant \epsilon\).
+      \end{itemize}
+      Finalement,
+      \begin{equation}
+        \forall x \in X \quad \abs{x-a} \leqslant \eta \implies \abs{f(x)-f(a)} \leqslant \epsilon.
+      \end{equation}
+      Alors \(\lim\limits_{a} f=f(a)\). La fonction \(f\) est continue en \(a\).
   \end{itemize}
 \end{proof}
 
@@ -820,11 +820,11 @@ les opérations 1,2,3 et 4 concernant les limites finies et infinies, la somme, 
     \exists \eta > 0 \ \forall x \in I \quad \abs{x-a} \leqslant \eta \implies f(x) \leqslant B.
   \end{equation}
   Alors partant de là on a
-\begin{align}
-  \forall x \in I \quad \abs{x-a} \leqslant \eta &\implies f(x) \leqslant B\\
-  &\implies g \circ f(x)=g(f(x)) \geqslant A
-\end{align}
-donc \(\lim\limits_{x \to a} g \circ f(x)=+\infty=\ell\)
+  \begin{align}
+    \forall x \in I \quad \abs{x-a} \leqslant \eta &\implies f(x) \leqslant B\\
+                                                   &\implies g \circ f(x)=g(f(x)) \geqslant A
+  \end{align}
+  donc \(\lim\limits_{x \to a} g \circ f(x)=+\infty=\ell\)
 \end{proof}
 \begin{cor}
   Soient \(I\) et \(J\) deux intervalles réels, \(f \in \R^I\) et \(g \in \R^J\) et \(a \in I\). On suppose que \(f\) est continue en \(a\), \(g\) est continue en \(f(a)\) et que \(f(I) \subset J\). Alors \(g \circ f\) est continue en \(a\).
@@ -841,24 +841,24 @@ donc \(\lim\limits_{x \to a} g \circ f(x)=+\infty=\ell\)
 \begin{proof}
   On prend par exemple \(a=-\infty\) et \(\ell \in \R\).
   \begin{itemize}
-  \item[\(\implies\)] On suppose que la limite en \(a\) de \(f\) vaut \(\ell\). Alors
-    \begin{equation}
-      \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in X \quad x \leqslant A \implies \abs{f(x)-\ell} \leqslant \epsilon.
-    \end{equation}
-    Soit une suite \(u \in X^\N\) telle que \(\lim u = a =-\infty\), alors
-    \begin{equation}
-      \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n \leqslant A.
-    \end{equation}
-    Pour tout \(n \geqslant n_0\), \(u_n \in X\) et \(u_n \leqslant A\) donc \(\abs{f(u_n) -\ell} \leqslant \epsilon\). Par conséquent \(\lim f(u)=\ell\).
-  \item[\(\impliedby\)] On montre cela par contraposée. Supposons que \(f\) n'admette pas \(\ell\) comme limite en \(a=-\infty\) alors
-    \begin{equation}
-      \exists \epsilon \ \forall A \in \R \ \exists x \in X \quad x \leqslant A \wedge \abs{f(x)-\ell} > \epsilon.
-    \end{equation}
-    En particulier avec \(A=-n\) pour tout naturel \(n\).
-    \begin{equation}
-      \forall n \in \N \exists x_n \in X \ x_n \leqslant -n \wedge \abs{f(x_n)-\ell} \geqslant \epsilon.
-    \end{equation}
-    La suite \((x_n)_{n \in \N}\) tend vers \(a=-\infty\) et la suite \(f(x_n)_{n \in \N}\) ne tend pas vers \(\ell\). On a donc montré que si \(f\) n'admet pas \(\ell\) pour limite en \(a\) alors il existe une suite \(x \in X^\N\) qui converge vers \(a\) telle que \(f(x_n)\) ne converge pas vers \(\ell\). Finalement, par contraposée, la limite de \(f\) en \(a\) vaut \(\ell\).
+    \item[\(\implies\)] On suppose que la limite en \(a\) de \(f\) vaut \(\ell\). Alors
+      \begin{equation}
+        \forall \epsilon > 0 \ \exists A \in \R \ \forall x \in X \quad x \leqslant A \implies \abs{f(x)-\ell} \leqslant \epsilon.
+      \end{equation}
+      Soit une suite \(u \in X^\N\) telle que \(\lim u = a =-\infty\), alors
+      \begin{equation}
+        \exists n_0 \in \N \ \forall n \in \N \quad n \geqslant n_0 \implies u_n \leqslant A.
+      \end{equation}
+      Pour tout \(n \geqslant n_0\), \(u_n \in X\) et \(u_n \leqslant A\) donc \(\abs{f(u_n) -\ell} \leqslant \epsilon\). Par conséquent \(\lim f(u)=\ell\).
+    \item[\(\impliedby\)] On montre cela par contraposée. Supposons que \(f\) n'admette pas \(\ell\) comme limite en \(a=-\infty\) alors
+      \begin{equation}
+        \exists \epsilon \ \forall A \in \R \ \exists x \in X \quad x \leqslant A \wedge \abs{f(x)-\ell} > \epsilon.
+      \end{equation}
+      En particulier avec \(A=-n\) pour tout naturel \(n\).
+      \begin{equation}
+        \forall n \in \N \exists x_n \in X \ x_n \leqslant -n \wedge \abs{f(x_n)-\ell} \geqslant \epsilon.
+      \end{equation}
+      La suite \((x_n)_{n \in \N}\) tend vers \(a=-\infty\) et la suite \(f(x_n)_{n \in \N}\) ne tend pas vers \(\ell\). On a donc montré que si \(f\) n'admet pas \(\ell\) pour limite en \(a\) alors il existe une suite \(x \in X^\N\) qui converge vers \(a\) telle que \(f(x_n)\) ne converge pas vers \(\ell\). Finalement, par contraposée, la limite de \(f\) en \(a\) vaut \(\ell\).
   \end{itemize}
 \end{proof}
 \begin{theo}[Caractérisation séquentielle de la continuité]
@@ -870,8 +870,8 @@ donc \(\lim\limits_{x \to a} g \circ f(x)=+\infty=\ell\)
 
 Les théorèmes précédents sont très utiles pour démontrer qu'une fonction n'a pas de limite ou alors qu'elle n'est pas continue. Pour cela il suffit de trouver~:
 \begin{itemize}
-\item une suite \(u\) qui tend vers \(a\) alors que \(f(u)\) diverge;
-\item deux suites \(u\) et \(v\) qui tendent vers \(a\) alors que \(f(u)\) et \(f(v)\) ont deux limites distinctes.
+  \item une suite \(u\) qui tend vers \(a\) alors que \(f(u)\) diverge;
+  \item deux suites \(u\) et \(v\) qui tendent vers \(a\) alors que \(f(u)\) et \(f(v)\) ont deux limites distinctes.
 \end{itemize}
 
 Par exemple, montrons que la fonction cosinus n'a pas de limite en \(+\infty\). Soit pour tout naturel \(n\) \(u_n=2n\pi\), alors \(u\) tend à l'infini, pourtant \(\cos(u)\) est constante égale à 1. Soit pour tout naturel \(n\), \(v_n=\pi(2n+1)\). Alors \(v\) tend à l'infini et pourtant \(\cos(v)\) est constante égale à \(-1\). Alors cosinus n'admet pas de limite en l'infini.
@@ -882,12 +882,12 @@ Par exemple, montrons que la fonction cosinus n'a pas de limite en \(+\infty\). 
 
 Soient \(X\) une partie de \(\R\) contenant au moins deux éléments et \(f \in \R^X\). Soit \(x\) et \(x'\) deux éléments de \(X\). Alors
 \begin{enumerate}
-\item \(f\) est croissante si \(x \leqslant x' \implies f(x) \leqslant f(x')\);
-\item \(f\) est décroissante si \(x \leqslant x' \implies f(x) \geqslant f(x')\);
-\item \(f\) est monotone si elle est croissante ou décroissante;
-\item \(f\) est strictement croissante si \(x < x' \implies f(x) < f(x')\);
-\item \(f\) est strictement décroissante si \(x < x' \implies f(x) > f(x')\);
-\item \(f\) est strictement monotone si elle est strictement croissante ou strictement décroissante.
+  \item \(f\) est croissante si \(x \leqslant x' \implies f(x) \leqslant f(x')\);
+  \item \(f\) est décroissante si \(x \leqslant x' \implies f(x) \geqslant f(x')\);
+  \item \(f\) est monotone si elle est croissante ou décroissante;
+  \item \(f\) est strictement croissante si \(x < x' \implies f(x) < f(x')\);
+  \item \(f\) est strictement décroissante si \(x < x' \implies f(x) > f(x')\);
+  \item \(f\) est strictement monotone si elle est strictement croissante ou strictement décroissante.
 \end{enumerate}
 
 \subsubsection{Monotonie et opérations algébriques}
@@ -895,12 +895,12 @@ Soient \(X\) une partie de \(\R\) contenant au moins deux éléments et \(f \in 
 \begin{prop}
   Soient \(f\) et \(g\) deux applications de \(\R^X\) et un réel \(\lambda\). Alors
   \begin{enumerate}
-  \item si \(f\) et \(g\) sont croissantes, alors \(f+g\) est croissante;
-  \item si \(f\) est croissante et \(\lambda \geqslant 0\) alors \(\lambda f\) est croissante;
-  \item si \(f\) est croissante et \(\lambda \leqslant 0\) alors \(\lambda f\) est décroissante;
-  \item si \(f\) et \(g\) sont croissantes et positives, alors \(fg\) est croissante;
-  \item si \(f\) est croissante et \(f(X)\subset ]0,+\infty[\) alors \(\frac{1}{f}\) est décroissante;
-  \item si \(f\) est croissante et \(f(X)\subset ]-\infty, 0[\) alors \(\frac{1}{f}\) est décroissante.
+    \item si \(f\) et \(g\) sont croissantes, alors \(f+g\) est croissante;
+    \item si \(f\) est croissante et \(\lambda \geqslant 0\) alors \(\lambda f\) est croissante;
+    \item si \(f\) est croissante et \(\lambda \leqslant 0\) alors \(\lambda f\) est décroissante;
+    \item si \(f\) et \(g\) sont croissantes et positives, alors \(fg\) est croissante;
+    \item si \(f\) est croissante et \(f(X)\subset ]0,+\infty[\) alors \(\frac{1}{f}\) est décroissante;
+    \item si \(f\) est croissante et \(f(X)\subset ]-\infty, 0[\) alors \(\frac{1}{f}\) est décroissante.
   \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -909,8 +909,8 @@ Soient \(X\) une partie de \(\R\) contenant au moins deux éléments et \(f \in 
 \begin{theo}
   Soient \(f \in \R^X\) et \(g \in \R^Y\) tels que \(f(X) \subset Y\). Si \(f\) et \(g\) sont monotones alors \(g \circ f\) est monotone. De plus
   \begin{itemize}
-  \item \(g \circ f\) est croissante si \(f\) et \(g\) sont de même monotonie;
-  \item \(g \circ f\) est décroissante sinon.
+    \item \(g \circ f\) est croissante si \(f\) et \(g\) sont de même monotonie;
+    \item \(g \circ f\) est décroissante sinon.
   \end{itemize}
 \end{theo}
 
@@ -920,13 +920,13 @@ Soient \(X\) une partie de \(\R\) contenant au moins deux éléments et \(f \in 
 \end{theo}
 \begin{proof}
   \begin{itemize}
-  \item[\(\implies\)] Soit \((x,x') \in X^2\) tels que \(x < x'\). Alors \(f(x) \leqslant f(x')\) puisque \(f\) croît et ensuite comme \(x \neq x'\) et que \(f\) est injective alors \(f(x) < f(x')\). Donc \(f\) est strictement croissante.
-  \item[\(\impliedby\)] \(f\) est strictement monotone donc \(f\) est monotone. Soit \(x\) et \(x'\) deux éléments de \(X\) différents. Deux cas de figure se présentent
-    \begin{itemize}
-    \item soit \(x < x'\) auquel cas \(f(x) < f(x')\) donc \(f(x) \neq f(x')\);
-    \item soit \(x > x'\) auquel cas \(f(x) > f(x')\) donc \(f(x) \neq f(x')\).
-    \end{itemize}
-    Dans les deux cas, \(\forall (x,x') \in X^2 \quad x \neq x' \implies f(x) \neq f(x')\). La fonction \(f\) est donc injective.
+    \item[\(\implies\)] Soit \((x,x') \in X^2\) tels que \(x < x'\). Alors \(f(x) \leqslant f(x')\) puisque \(f\) croît et ensuite comme \(x \neq x'\) et que \(f\) est injective alors \(f(x) < f(x')\). Donc \(f\) est strictement croissante.
+    \item[\(\impliedby\)] \(f\) est strictement monotone donc \(f\) est monotone. Soit \(x\) et \(x'\) deux éléments de \(X\) différents. Deux cas de figure se présentent
+      \begin{itemize}
+        \item soit \(x < x'\) auquel cas \(f(x) < f(x')\) donc \(f(x) \neq f(x')\);
+        \item soit \(x > x'\) auquel cas \(f(x) > f(x')\) donc \(f(x) \neq f(x')\).
+      \end{itemize}
+      Dans les deux cas, \(\forall (x,x') \in X^2 \quad x \neq x' \implies f(x) \neq f(x')\). La fonction \(f\) est donc injective.
   \end{itemize}
 \end{proof}
 \begin{cor}
@@ -935,15 +935,15 @@ Soient \(X\) une partie de \(\R\) contenant au moins deux éléments et \(f \in 
 \begin{proof}
   La fonction \(f\) est injective d'après le théorème précédent. La fonction \(g=f^{|f(X)}\) est surjective. Donc \(g\) est bijective. On définit donc sa bijection réciproque \(g^{-1}:f(X) \longrightarrow X\). On suppose que \(f\) est strictement décroissante. Montrons que \(g^{-1}\) est strictement décroissante.
 
-La fonction \(g\) est strictement décroissante si et seulement si
-\begin{equation}
-  \forall x,x' \in f(X) \quad x < x' \implies g^{-1}(x) > g^{-1}(x') ,
-\end{equation}
-c'est-à-dire, par contraposée, si et seulement si 
-\begin{equation}
-  \forall x,x' \in f(X) \quad  g^{-1}(x) \leqslant g^{-1}(x') \implies x \geqslant x'.
-\end{equation}
-Montrons cette dernière inégalité pour conclure. Soient \((x, x') \in f(X)^2\), supposons que \(g^{-1}(x) \leqslant g^{-1}(x')\) alors comme \(f\) est décroissante on a \(f \circ g^{-1}(x) \geqslant f \circ g^{-1}(x')\) donc comme \(f=g\), on a bien \(x \geqslant x'\). La fonction \(g^{-1}\) est alors strictement décroissante.
+  La fonction \(g\) est strictement décroissante si et seulement si
+  \begin{equation}
+    \forall x,x' \in f(X) \quad x < x' \implies g^{-1}(x) > g^{-1}(x') ,
+  \end{equation}
+  c'est-à-dire, par contraposée, si et seulement si 
+  \begin{equation}
+    \forall x,x' \in f(X) \quad  g^{-1}(x) \leqslant g^{-1}(x') \implies x \geqslant x'.
+  \end{equation}
+  Montrons cette dernière inégalité pour conclure. Soient \((x, x') \in f(X)^2\), supposons que \(g^{-1}(x) \leqslant g^{-1}(x')\) alors comme \(f\) est décroissante on a \(f \circ g^{-1}(x) \geqslant f \circ g^{-1}(x')\) donc comme \(f=g\), on a bien \(x \geqslant x'\). La fonction \(g^{-1}\) est alors strictement décroissante.
 \end{proof}
 
 \subsubsection{Monotonie et limite}
@@ -951,35 +951,35 @@ Montrons cette dernière inégalité pour conclure. Soient \((x, x') \in f(X)^2\
 \begin{theo}
   Soit \(a \in \R\) et \(b \in \R\cup\{+\infty\}\) et \(f : \intervallefo{a}{b} \longrightarrow \R\). On suppose que \(f\) croît. Alors
   \begin{itemize}
-  \item Soit \(f\) est majorée et \(f\) admet une limite en \(b\) et \(\lim\limits_{b} = \sup\limits_{\intervalleff{a}{b}}f\);
-  \item Soit \(f\) n'est pas majorée et \(\lim\limits_{b}f=+\infty\).
+    \item Soit \(f\) est majorée et \(f\) admet une limite en \(b\) et \(\lim\limits_{b} = \sup\limits_{\intervalleff{a}{b}}f\);
+    \item Soit \(f\) n'est pas majorée et \(\lim\limits_{b}f=+\infty\).
   \end{itemize}
 \end{theo}
 \begin{proof}
   Soit la partie \(E=\enstq{f(x)}{x \in \intervallefo{a}{b}}\).
   \begin{itemize}
-  \item si \(f\) est majorée, alors \(E\) est une partie non vide et majorée de \(\R\). Elle admet donc une borne supérieure notée S. Par caractérisation de la borne supérieure
-    \begin{equation}
-      \forall \epsilon >0 \ \exists y_0 \in E \quad S-\epsilon <y_0 \leqslant S,
-    \end{equation}
-    ou alors
-    \begin{equation}
-      \forall \epsilon >0 \ \exists x_0 \in \intervallefo{a}{b} \quad S-\epsilon <f(x_0) \leqslant S.
-    \end{equation}
-    Pour tout \(x \geqslant x_0\) dans \(\intervallefo{a}{b}\) \(S \geqslant f(x) \geqslant f(x_0) > S-\epsilon\). Pour tout \(x \geqslant x_0\) dans \(\intervallefo{a}{b}\), \(\abs{f(x)-S}=S-f(x) \leqslant \epsilon\) donc \(\lim\limits_{b} f =S\).
-  \item Si \(f\) n'est pas majorée. Alors
-    \begin{equation}
-      \forall A \in \R \ \exists y_0 \in E \quad y_0 \geqslant A,
-    \end{equation}
-    ou alors
-    \begin{equation}
-      \forall A \in \R \ \exists x_0 \in \intervallefo{a}{b} \quad f(x_0) \geqslant A.
-    \end{equation}
-    La fonction \(f\) est croissante, donc
-    \begin{equation}
-      \forall x \in \intervallefo{a}{b} \quad x \geqslant x_0 \implies f(x) \geqslant f(x_0) \geqslant A.
-    \end{equation}
-    Alors \(f\) tend vers \(+\infty\).
+    \item si \(f\) est majorée, alors \(E\) est une partie non vide et majorée de \(\R\). Elle admet donc une borne supérieure notée S. Par caractérisation de la borne supérieure
+      \begin{equation}
+        \forall \epsilon >0 \ \exists y_0 \in E \quad S-\epsilon <y_0 \leqslant S,
+      \end{equation}
+      ou alors
+      \begin{equation}
+        \forall \epsilon >0 \ \exists x_0 \in \intervallefo{a}{b} \quad S-\epsilon <f(x_0) \leqslant S.
+      \end{equation}
+      Pour tout \(x \geqslant x_0\) dans \(\intervallefo{a}{b}\) \(S \geqslant f(x) \geqslant f(x_0) > S-\epsilon\). Pour tout \(x \geqslant x_0\) dans \(\intervallefo{a}{b}\), \(\abs{f(x)-S}=S-f(x) \leqslant \epsilon\) donc \(\lim\limits_{b} f =S\).
+    \item Si \(f\) n'est pas majorée. Alors
+      \begin{equation}
+        \forall A \in \R \ \exists y_0 \in E \quad y_0 \geqslant A,
+      \end{equation}
+      ou alors
+      \begin{equation}
+        \forall A \in \R \ \exists x_0 \in \intervallefo{a}{b} \quad f(x_0) \geqslant A.
+      \end{equation}
+      La fonction \(f\) est croissante, donc
+      \begin{equation}
+        \forall x \in \intervallefo{a}{b} \quad x \geqslant x_0 \implies f(x) \geqslant f(x_0) \geqslant A.
+      \end{equation}
+      Alors \(f\) tend vers \(+\infty\).
   \end{itemize}
 \end{proof}
 
@@ -993,8 +993,8 @@ On peut énoncer de la même manière.
 \begin{theo}
   Soient \(a \in \R\cup \{-\infty\}\) et \(b \in \R\) tels que \(b > a\) et \(f:\intervalleof{a}{b} \longrightarrow \R\) croissante. Alors
   \begin{itemize}
-  \item soit \(f\) est minorée sur \(\intervalleof{a}{b}\) et alors \(f\) admet une limite en \(a\) telle que \(\lim\limits_{a} f = \inf\limits_{\intervalleof{a}{b}}f\);
-  \item soit \(f\) n'est pas minorée et \(\lim\limits_{a} f = -\infty\).
+    \item soit \(f\) est minorée sur \(\intervalleof{a}{b}\) et alors \(f\) admet une limite en \(a\) telle que \(\lim\limits_{a} f = \inf\limits_{\intervalleof{a}{b}}f\);
+    \item soit \(f\) n'est pas minorée et \(\lim\limits_{a} f = -\infty\).
   \end{itemize}
 \end{theo}
 \begin{proof}
@@ -1038,10 +1038,10 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 
 \begin{prop}
   \begin{enumerate}
-  \item Si \(f \in \contpoint{a}{I}{\R}\) alors \(f\) est bornée au voisinage de \(a\), ça ne signifie pas que \(f\) est bornée sur \(I\).
-  \item L'ensemble \(\contpoint{a}{I}{\R}\) est un sous-espace vectoriel et un sous-anneau de \(\R^I\).
-  \item Si \(f \in \contpoint{a}{I}{\R}\) et \(f(a) \neq 0\) alors \(\frac{1}{f}\) est définie au voisinage de \(a\) et \(\frac{1}{f}\) est continue en \(a\).
-  \item Soit \(f \in \R^I\), \(J\) un intervalle réel et \(g \in \R^J\) telles que \(f(I) \subset J\). Alors si \(f \in \contpoint{a}{I}{\R}\) et \(f \in \contpoint{a}{J}{\R}\) alors \(g \circ f \in \contpoint{a}{I}{\R}\).
+    \item Si \(f \in \contpoint{a}{I}{\R}\) alors \(f\) est bornée au voisinage de \(a\), ça ne signifie pas que \(f\) est bornée sur \(I\).
+    \item L'ensemble \(\contpoint{a}{I}{\R}\) est un sous-espace vectoriel et un sous-anneau de \(\R^I\).
+    \item Si \(f \in \contpoint{a}{I}{\R}\) et \(f(a) \neq 0\) alors \(\frac{1}{f}\) est définie au voisinage de \(a\) et \(\frac{1}{f}\) est continue en \(a\).
+    \item Soit \(f \in \R^I\), \(J\) un intervalle réel et \(g \in \R^J\) telles que \(f(I) \subset J\). Alors si \(f \in \contpoint{a}{I}{\R}\) et \(f \in \contpoint{a}{J}{\R}\) alors \(g \circ f \in \contpoint{a}{I}{\R}\).
   \end{enumerate}
 \end{prop}
 
@@ -1070,8 +1070,8 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[\(\implies\)] C'est la conséquence de la proposition précédente.
-  \item[\(\impliedby\)] La fonction \(f\) est continue en tout point de \(\intervalleff{a}{c}\) autre que \(b\). Pourtant \(\lim\limits_{b^{-}} f=f(b)\) et \(\lim\limits_{b^{+}} f=f(b)\) donc \(\lim\limits_{b} f\) existe et vaut \(f(b)\). Alors \(f\) est continues en \(b\).
+    \item[\(\implies\)] C'est la conséquence de la proposition précédente.
+    \item[\(\impliedby\)] La fonction \(f\) est continue en tout point de \(\intervalleff{a}{c}\) autre que \(b\). Pourtant \(\lim\limits_{b^{-}} f=f(b)\) et \(\lim\limits_{b^{+}} f=f(b)\) donc \(\lim\limits_{b} f\) existe et vaut \(f(b)\). Alors \(f\) est continues en \(b\).
   \end{itemize}
 \end{proof}
 \begin{prop}
@@ -1086,13 +1086,13 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 \begin{prop}
   Soient \(f\) et \(g\) deux applications continues de \(I\) dans \(\R\) et \(\lambda\) un réel, alors~:
   \begin{itemize}
-  \item \(f+g\) est continue;
-  \item \(\lambda f\) est continue;
-  \item pour tout naturel \(n\), \(f^n\) est continue;
-  \item \(fg\) est continue;
-  \item si \(f\) ne s'annule pas, \(\frac{1}{f}\) est continue;
-  \item si \(f\) ne s'annule pas, \(\frac{g}{f}\) est continue;
-  \item si \(f\) ne s'annule pas, pour tout relatif \(n\), \(f^n\) est continue.
+    \item \(f+g\) est continue;
+    \item \(\lambda f\) est continue;
+    \item pour tout naturel \(n\), \(f^n\) est continue;
+    \item \(fg\) est continue;
+    \item si \(f\) ne s'annule pas, \(\frac{1}{f}\) est continue;
+    \item si \(f\) ne s'annule pas, \(\frac{g}{f}\) est continue;
+    \item si \(f\) ne s'annule pas, pour tout relatif \(n\), \(f^n\) est continue.
   \end{itemize}
   \(\cont{I}{\R}\) est alors un sous-espace vectoriel et un sous-anneau de \(\R^I\).
 \end{prop}
@@ -1102,16 +1102,16 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 \begin{prop}
   Soient \(f\) et \(g\) deux application continues de I vers \(\R\). Alors
   \begin{enumerate}
-  \item \(\abs{f}\) est continue;
-  \item \(\sup(f,g)\) et \(\inf(f,g)\) sont continues;
-  \item \(f^{+}\) et \(f^{-}\) sont continues.
+    \item \(\abs{f}\) est continue;
+    \item \(\sup(f,g)\) et \(\inf(f,g)\) sont continues;
+    \item \(f^{+}\) et \(f^{-}\) sont continues.
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Soit \(a\) un élément de \(I\), alors \(f\) admet une limite finie \(\ell\) en \(a\), donc \(\abs{f}\) tend vers \(\abs{\ell}\); l'application \(\abs{f}\) est donc continue en tout point de \(I\);
-  \item Puisque \(\sup(f,g)=\frac{f+g+\abs{f-g}}{2}\) et \(\inf(f,g)=\frac{f+g-\abs{f-g}}{2}\) alors d'après le point précédent elles sont continues;
-  \item Puisque \(f^{+}=\sup(f,0)\) et \(f^{-}=\sup(-f,0)\) alors d'après le point précédent elles sont continues;
+    \item Soit \(a\) un élément de \(I\), alors \(f\) admet une limite finie \(\ell\) en \(a\), donc \(\abs{f}\) tend vers \(\abs{\ell}\); l'application \(\abs{f}\) est donc continue en tout point de \(I\);
+    \item Puisque \(\sup(f,g)=\frac{f+g+\abs{f-g}}{2}\) et \(\inf(f,g)=\frac{f+g-\abs{f-g}}{2}\) alors d'après le point précédent elles sont continues;
+    \item Puisque \(f^{+}=\sup(f,0)\) et \(f^{-}=\sup(-f,0)\) alors d'après le point précédent elles sont continues;
   \end{enumerate}
 \end{proof}
 \begin{prop}
@@ -1125,7 +1125,7 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 
 \begin{rappel}
   On a montré au chapitre~
-\ref{chap:reels} sur les réels que les intervalles de \(\R\) sont les parties convexes de \(\R\). C'est-à-dire les parties \(I\) telles que
+  \ref{chap:reels} sur les réels que les intervalles de \(\R\) sont les parties convexes de \(\R\). C'est-à-dire les parties \(I\) telles que
   \begin{equation}
     \forall (x,y) \in I^2 \quad x \leqslant y \implies \intervalleff{x}{y} \subset I
   \end{equation}
@@ -1138,16 +1138,16 @@ On notera \(\contpoint{a}{I}{\R}\) l'ensemble des applications de \(\R^I\) qui s
 \end{theo}
 \begin{proof}[Démonstration hors-programme]
   On utilise une méthode de dichotomie et on construit par récurrence deux suites \(a\) et \(b\). Initialement, on pose \(a_0=a\) et \(b_0=b\) on a bien \(f(a_0)f(b_0) < 0\) et quitte à changer \(f\) en \(-f\) on peut supposer que \(f(a_0)>0\) et \(f(b_0)<0\). Pour l'hérédité, on suppose avoir construit \(a\) et \(b\) jusqu'au rang \(n\) de telle sorte que
-\begin{equation}
-  f(a_n) > 0 \geqslant f(b_n).
-\end{equation}
-Soit alors \(c_n=\frac{a_n+b_n}{2}\). Si \(f(c_n) >0\) alors \(a_{n+1}=c_n\) et \(b_{n+1}=b_n\), sinon \(a_{n+1}=a_n\) et \(b_{n+1}=c_n\). Dans les deux cas \(f(a_{n+1})> 0 \geqslant f(b_{n+1})\). Les deux suites \((a_n)\) et \((b_n)\) vérifient~:
-\begin{enumerate}
-\item \(\forall n \in \N \quad f(a_n) > 0 > f(b_n)\);
-\item La suite \((a_n)\) est croissante et la suite \((b_n)\) est décroissante;
-\item pour tout naturel \(n\), \(b_{n+1}-a_{n+1}=\frac{b_n -a_n}{2}\). 
-\end{enumerate}
-La suite \((b_n-a_n)\) est géométrique de raison \(\frac{1}{2}\) donc elle tend vers zéro. Les suite \((a_n)\) et \((b_n)\) sont adjacentes. Alors elles tendent vers la même limite qu'on note \(c\). Alors pour tout naturel \(n\), \(a\leqslant a_n \leqslant c \leqslant b_n \leqslant b\). donc \(c \in [a,b]\). On sait que \(f\) est  continue en \(c\). Alors les suites \((f(a_n))\) et \((f(b_n))\) tendent vers \(f(c)\). D'ailleurs pour tout naturel \(n\), \(f(a_n) \geqslant 0 \geqslant f(b_n)\) donc en passant à la limite on obtient que \(f(c) \geqslant 0 \geqslant f(c)\) donc \(f(c)=0\). On a trouvé un élément \(c \in \intervalleff{a}{b}\) tel que \(f(c)=0\). Or \(f(a)f(b) < 0\) donc \(c\) est dans\(\intervalleoo{a}{b}\).
+  \begin{equation}
+    f(a_n) > 0 \geqslant f(b_n).
+  \end{equation}
+  Soit alors \(c_n=\frac{a_n+b_n}{2}\). Si \(f(c_n) >0\) alors \(a_{n+1}=c_n\) et \(b_{n+1}=b_n\), sinon \(a_{n+1}=a_n\) et \(b_{n+1}=c_n\). Dans les deux cas \(f(a_{n+1})> 0 \geqslant f(b_{n+1})\). Les deux suites \((a_n)\) et \((b_n)\) vérifient~:
+  \begin{enumerate}
+    \item \(\forall n \in \N \quad f(a_n) > 0 > f(b_n)\);
+    \item La suite \((a_n)\) est croissante et la suite \((b_n)\) est décroissante;
+    \item pour tout naturel \(n\), \(b_{n+1}-a_{n+1}=\frac{b_n -a_n}{2}\). 
+  \end{enumerate}
+  La suite \((b_n-a_n)\) est géométrique de raison \(\frac{1}{2}\) donc elle tend vers zéro. Les suite \((a_n)\) et \((b_n)\) sont adjacentes. Alors elles tendent vers la même limite qu'on note \(c\). Alors pour tout naturel \(n\), \(a\leqslant a_n \leqslant c \leqslant b_n \leqslant b\). donc \(c \in [a,b]\). On sait que \(f\) est  continue en \(c\). Alors les suites \((f(a_n))\) et \((f(b_n))\) tendent vers \(f(c)\). D'ailleurs pour tout naturel \(n\), \(f(a_n) \geqslant 0 \geqslant f(b_n)\) donc en passant à la limite on obtient que \(f(c) \geqslant 0 \geqslant f(c)\) donc \(f(c)=0\). On a trouvé un élément \(c \in \intervalleff{a}{b}\) tel que \(f(c)=0\). Or \(f(a)f(b) < 0\) donc \(c\) est dans\(\intervalleoo{a}{b}\).
 \end{proof}
 \begin{cor}[Théorème des valeurs intermédiaires]
   Soient \(f\) une application continue sur \(I \subset \R\) à valeurs réelles et \((a,b) \in I^2\) tels que \(a < b\). Alors pour tout \(\lambda\) strictement comprit entre \(f(a)\) et \(f(b)\), il existe un réel \(c \in \intervalleoo{a}{b}\) tel que \(\lambda =f(c)\).
@@ -1164,14 +1164,14 @@ La suite \((b_n-a_n)\) est géométrique de raison \(\frac{1}{2}\) donc elle ten
 \begin{cor}
   Soient un intervalle \(I\) et \(f \in \cont{I}{\R}\), alors
   \begin{enumerate}
-  \item si \(f\) admet pour limite \(+\infty\) (resp.\ \(-\infty\)) en une extrémité de \(I\) et prend par ailleurs une valeur strictement négative (resp.\ positive) en un point de \(I\), alors \(f\) s'annule au moins en un point de \(I\);
-  \item si \(f\) admet pour limite \(+\infty\) en une extrémité de \(I\) et \(-\infty\) en l'autre alors \(f\) s'annule en au moins un point de \(I\).
+    \item si \(f\) admet pour limite \(+\infty\) (resp.\ \(-\infty\)) en une extrémité de \(I\) et prend par ailleurs une valeur strictement négative (resp.\ positive) en un point de \(I\), alors \(f\) s'annule au moins en un point de \(I\);
+    \item si \(f\) admet pour limite \(+\infty\) en une extrémité de \(I\) et \(-\infty\) en l'autre alors \(f\) s'annule en au moins un point de \(I\).
   \end{enumerate}
 \end{cor}
 \begin{proof}
   \begin{enumerate}
-  \item Soit par exemple \(I=\intervallefo{a}{b}\) avec \(\lim\limits_{b} f =+\infty\). Alors il existe \(d \in I\) tel que \(f(d)>0\). On sait qu'il existe \(e \in I\) tel que \(f(e) < 0\). Alors d'après le théorème il existe \(c \in I\) tel que \(f(c)=0\).
-  \item Soit par exemple \(I=\intervalleoo{a}{b}\) avec \(\lim\limits_{b} f =+\infty\) et \(\lim\limits_{a} f =-\infty\) alors il existe \(d\) et \(e\) dans I tels que \(f(d)>0\) et \(f(e) <0\). D'après le théorème, il existe un point \(c\) de I tel que \(f(c)=0\).
+    \item Soit par exemple \(I=\intervallefo{a}{b}\) avec \(\lim\limits_{b} f =+\infty\). Alors il existe \(d \in I\) tel que \(f(d)>0\). On sait qu'il existe \(e \in I\) tel que \(f(e) < 0\). Alors d'après le théorème il existe \(c \in I\) tel que \(f(c)=0\).
+    \item Soit par exemple \(I=\intervalleoo{a}{b}\) avec \(\lim\limits_{b} f =+\infty\) et \(\lim\limits_{a} f =-\infty\) alors il existe \(d\) et \(e\) dans I tels que \(f(d)>0\) et \(f(e) <0\). D'après le théorème, il existe un point \(c\) de I tel que \(f(c)=0\).
   \end{enumerate}
 \end{proof}
 
@@ -1182,15 +1182,15 @@ Si \(A\) est une partie de \(\R\) non majorée, on définit \(\sup A = + \infty\
 \begin{lemme}
   Soient \(A\) et \(B\) deux parties non vide de \(\R\), alors
   \begin{itemize}
-  \item si \(A\) et \(B\) sont majorées alors \(A \cup B\) est majorée et \(\sup(A\cup B)=\max(\sup A, \sup B)\);
-  \item si \(A\) ou \(B\) n'est pas majoré alors \(A \cup B\) n'est pas majorée et \(\sup(A\cup B)=+\infty\).
+    \item si \(A\) et \(B\) sont majorées alors \(A \cup B\) est majorée et \(\sup(A\cup B)=\max(\sup A, \sup B)\);
+    \item si \(A\) ou \(B\) n'est pas majoré alors \(A \cup B\) n'est pas majorée et \(\sup(A\cup B)=+\infty\).
   \end{itemize}
 \end{lemme}
 \begin{proof}
   \begin{itemize}
-  \item Si \(A\) et \(B\) sont majorées, alors \(\sup A\) et\(\sup B\) existent. Soit \(c \in A \cup B\). si \(c \in A\) alors \(c \leqslant \sup A \leqslant \max(\sup A, \sup B)\), sinon \(c \in B\) alors \(c \leqslant \sup B \leqslant \max(\sup A, \sup B)\). Dans tous les cas \(c \leqslant \max(\sup A, \sup B)\) donc \(A \cup B\) est majorée. Soit \(M\) un autre majorant de \(A \cup B\), alors \(M\) est un majorant de \(A\) et de \(B\) et donc \(M \geqslant \sup A\) et \(M \geqslant \sup B\). Par conséquent \(M \geqslant \max(\sup A, \sup B)\). C'est donc bien la borne supérieure \(\max(\sup A, \sup B)=\sup(A \cup B)\).
-  \item Si \(A\) ou \(B\) n'est pas majorée, alors l'union non plus et donc \(\sup(A\cup B)=+\infty\).
-\end{itemize}
+    \item Si \(A\) et \(B\) sont majorées, alors \(\sup A\) et\(\sup B\) existent. Soit \(c \in A \cup B\). si \(c \in A\) alors \(c \leqslant \sup A \leqslant \max(\sup A, \sup B)\), sinon \(c \in B\) alors \(c \leqslant \sup B \leqslant \max(\sup A, \sup B)\). Dans tous les cas \(c \leqslant \max(\sup A, \sup B)\) donc \(A \cup B\) est majorée. Soit \(M\) un autre majorant de \(A \cup B\), alors \(M\) est un majorant de \(A\) et de \(B\) et donc \(M \geqslant \sup A\) et \(M \geqslant \sup B\). Par conséquent \(M \geqslant \max(\sup A, \sup B)\). C'est donc bien la borne supérieure \(\max(\sup A, \sup B)=\sup(A \cup B)\).
+    \item Si \(A\) ou \(B\) n'est pas majorée, alors l'union non plus et donc \(\sup(A\cup B)=+\infty\).
+  \end{itemize}
 \end{proof}
 Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
 \begin{equation}
@@ -1198,7 +1198,7 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
 \end{equation}
 %
 \begin{theo}[Théorème des bornes]
-    \label{theo:bornes}
+  \label{theo:bornes}
   Soient \(a<b\) deux réels et \(f:\intervalleff{a}{b} \longrightarrow \R\) continue. Alors \(f\) est bornée et atteint ses bornes, c'est-à-dire qu'il existe \(c\) et \(d\) dans \(\intervalleff{a}{b}\) tels que \(f(c)=\sup\limits_{\intervalleff{a}{b}}f\) et \(f(d)=\inf\limits_{\intervalleff{a}{b}}f\)
 \end{theo}
 \begin{proof}
@@ -1208,14 +1208,14 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
   \end{equation}
   Deux cas se présentent~:
   \begin{itemize}
-  \item si \(S=\sup\limits_{\intervalleff{a_n}{c_n}}f\) alors \(a_{n+1}=a_n\) et \(b_{n+1}=c_n\);
-  \item si \(S=\sup\limits_{\intervalleff{c_n}{b_n}}f\) alors \(a_{n+1}=c_n\) et \(b_{n+1}=b_n\).
+    \item si \(S=\sup\limits_{\intervalleff{a_n}{c_n}}f\) alors \(a_{n+1}=a_n\) et \(b_{n+1}=c_n\);
+    \item si \(S=\sup\limits_{\intervalleff{c_n}{b_n}}f\) alors \(a_{n+1}=c_n\) et \(b_{n+1}=b_n\).
   \end{itemize}
   Dans les deux cas, la suite \((b_n-a_n)\) est géométrique de raison \(\frac{1}{2}\). Les suites \((a_n)\) et \((b_n)\) vérifient les propriétés suivantes
   \begin{enumerate}
-  \item pour tout naturel \(n\), \(S=\sup\limits_{\intervalleff{a_n}{b_n}}f\);
-  \item la suite \(a\) est croissante et la suite \(b\) est décroissante;
-  \item la suite \((b-a)_n\) tend vers zéro.
+    \item pour tout naturel \(n\), \(S=\sup\limits_{\intervalleff{a_n}{b_n}}f\);
+    \item la suite \(a\) est croissante et la suite \(b\) est décroissante;
+    \item la suite \((b-a)_n\) tend vers zéro.
   \end{enumerate}
   Alors les suite \((a_n)\) et \((b_n)\) sont adjacentes, elles tendent alors vers la même limite notée \(c\). Alors \(c \in \intervalleff{a}{b}\). Il reste à prouver que \(S\) est finie et que \(f(c)=S\). Supposons par l'absurde que \(S=+\infty\). Alors pour tout naturel \(n\), \(+\infty = \sup\limits_{\intervalleff{a_n}{b_n}}f\). Il existe alors \(x_n \in \intervalleff{a_n}{b_n}\) tel que \(f(x_n) \geqslant n\). On sait aussi que pour tout naturel \(n\), \(a_n \leqslant x_n \leqslant b_n\) et que par théorème des gendarmes \((x_n)_{n _in \N}\) tend vers \(c\). D'une part, pour tout naturel \(n\), \(f(x_n) \geqslant n\) donc en passant à la limite \(\lim f(x_n) = +\infty\). D'autre part comme \(f\) est continue sur \(\intervalleff{a}{b}\), notamment en \(c\), alors \((f(x_n))_{n\in \N}\) tend vers \(f(c)\). On arrive donc à une absurdité par unicité de la limite donc \(S\) est finie. Avec \(\epsilon=\frac{1}{n+1}\), par caractérisation de la borne supérieure, il existe \(x_n \in \intervalleff{a_n}{b_n}\) tel que
   \begin{equation}
@@ -1243,44 +1243,44 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
 \begin{theo}
   Soient \(a\) un réel et \(b\) dans \(\R\cup\{+\infty\}\) avec \(a < b\), une application continue croissante \(f:\intervallefo{a}{b} \longrightarrow \R\). Alors
   \begin{enumerate}
-  \item si \(f\) n'est pas majorée, \(f(\intervallefo{a}{b})=\intervallefo{f(a),}{+\infty}\)
-  \item si \(f\) est majorée, on pose \(S=\sup\limits_{\intervallefo{a}{b}}f\) et alors
-    \begin{equation}
-      \intervallefo{f(a)}{S} \subset f(\intervallefo{a}{b}) \subset \intervalleff{f(a)}{S}.
-    \end{equation}
-    Si on suppose de plus que \(f\) est strictement croissante alors
-    \begin{equation}
-      f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}.
-    \end{equation}
+    \item si \(f\) n'est pas majorée, \(f(\intervallefo{a}{b})=\intervallefo{f(a),}{+\infty}\)
+    \item si \(f\) est majorée, on pose \(S=\sup\limits_{\intervallefo{a}{b}}f\) et alors
+      \begin{equation}
+        \intervallefo{f(a)}{S} \subset f(\intervallefo{a}{b}) \subset \intervalleff{f(a)}{S}.
+      \end{equation}
+      Si on suppose de plus que \(f\) est strictement croissante alors
+      \begin{equation}
+        f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}.
+      \end{equation}
   \end{enumerate}
 \end{theo}
 \begin{proof}
   \begin{enumerate}
-  \item
-    \begin{itemize}
-    \item Soit \(y \in f(\intervallefo{a}{b})\). Il existe alors un réel \(x \in \intervallefo{a}{b}\) tel que \(y=f(x)\). Puisque \(f\) croît alors \(f(x) \geqslant f(a)\). Alors \(y \in \intervallefo{f(a)}{+\infty}\).
-    \item Soit \(y \in \intervallefo{f(a)}{+\infty}\), il existe alors un réel \(c \in \intervallefo{a}{b}\) tel que \(f(c) \geqslant y\). L'application continue \(f\) croît sur \(\intervalleff{a}{c}\) donc d'après le théorème~
-\ref{theo:imagesegment} on écrit que \(f(\intervalleff{a}{c})=\intervalleff{f(a)}{f(c)}\). On sait que \(f(a) \le y \leqslant f(c)\) alors \(y \in f(\intervalleff{a}{c})\). Il existe donc un réel \(d \in \intervalleff{a}{c}\) tel que \(y=f(d)\).
-    \end{itemize}
-    Par double inclusion, on a montré l'égalité \(f(\intervallefo{a}{b})=\intervallefo{f(a)}{+\infty}\).
-  \item Si \(f\) est majorés, alors on pose \(S=\sup\limits_{\intervallefo{a}{b}}f\)
-    \begin{itemize}
-    \item Si \(y \in f(\intervallefo{a}{b})\), alors il existe \(x \in \intervallefo{a}{b}\) tel que \(y=f(x)\). \(f\) est croissante donc \(y \geqslant f(a)\) mais \(S=\sup\limits_{\intervallefo{a}{b}}f\) alors \(y \leqslant S\). Alors \(y \in \intervalleff{f(a)}{S}\). D'où l'inclusion.
-    \item Si \(y \in \intervallefo{f(a)}{S}\), alors \(y < S\) et soit \(\epsilon=S-y\). Par caractérisation de la borne supérieure, il existe un réel \(c \in \intervallefo{a}{b}\) tel que
+    \item
+      \begin{itemize}
+        \item Soit \(y \in f(\intervallefo{a}{b})\). Il existe alors un réel \(x \in \intervallefo{a}{b}\) tel que \(y=f(x)\). Puisque \(f\) croît alors \(f(x) \geqslant f(a)\). Alors \(y \in \intervallefo{f(a)}{+\infty}\).
+        \item Soit \(y \in \intervallefo{f(a)}{+\infty}\), il existe alors un réel \(c \in \intervallefo{a}{b}\) tel que \(f(c) \geqslant y\). L'application continue \(f\) croît sur \(\intervalleff{a}{c}\) donc d'après le théorème~
+          \ref{theo:imagesegment} on écrit que \(f(\intervalleff{a}{c})=\intervalleff{f(a)}{f(c)}\). On sait que \(f(a) \le y \leqslant f(c)\) alors \(y \in f(\intervalleff{a}{c})\). Il existe donc un réel \(d \in \intervalleff{a}{c}\) tel que \(y=f(d)\).
+      \end{itemize}
+      Par double inclusion, on a montré l'égalité \(f(\intervallefo{a}{b})=\intervallefo{f(a)}{+\infty}\).
+    \item Si \(f\) est majorés, alors on pose \(S=\sup\limits_{\intervallefo{a}{b}}f\)
+      \begin{itemize}
+        \item Si \(y \in f(\intervallefo{a}{b})\), alors il existe \(x \in \intervallefo{a}{b}\) tel que \(y=f(x)\). \(f\) est croissante donc \(y \geqslant f(a)\) mais \(S=\sup\limits_{\intervallefo{a}{b}}f\) alors \(y \leqslant S\). Alors \(y \in \intervalleff{f(a)}{S}\). D'où l'inclusion.
+        \item Si \(y \in \intervallefo{f(a)}{S}\), alors \(y < S\) et soit \(\epsilon=S-y\). Par caractérisation de la borne supérieure, il existe un réel \(c \in \intervallefo{a}{b}\) tel que
+          \begin{equation}
+            y=S-\epsilon < f(c) \leqslant S
+          \end{equation}
+          la fonction \(f\) croît et est continue sur \(\intervalleff{a}{c}\) donc \(f(\intervalleff{a}{c})=\intervalleff{f(a)}{f(c)}\). Alors \(y \in f(\intervalleff{a}{c})\) et donc \(y \in f(\intervallefo{a}{b})\) (car \(f(\intervalleff{a}{c}) \subset f(\intervallefo{a}{b})\)).
+      \end{itemize}
+      On a montré que
       \begin{equation}
-        y=S-\epsilon < f(c) \leqslant S
+        \intervallefo{f(a)}{S} \subset f(\intervallefo{a}{b}) \subset \intervalleff{f(a)}{S},
       \end{equation}
-      la fonction \(f\) croît et est continue sur \(\intervalleff{a}{c}\) donc \(f(\intervalleff{a}{c})=\intervalleff{f(a)}{f(c)}\). Alors \(y \in f(\intervalleff{a}{c})\) et donc \(y \in f(\intervallefo{a}{b})\) (car \(f(\intervalleff{a}{c}) \subset f(\intervallefo{a}{b})\)).
-    \end{itemize}
-    On a montré que
-    \begin{equation}
-      \intervallefo{f(a)}{S} \subset f(\intervallefo{a}{b}) \subset \intervalleff{f(a)}{S},
-    \end{equation}
-    c'est-à-dire
-    \begin{equation}
-      f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S} \text{~ou~} f(\intervallefo{a}{b}) = \intervalleff{f(a)}{S}.
-    \end{equation}
-    Dans le cas général, on ne peut rien dire de plus. Dans le cas où \(f\) est strictement croissante, on va montrer que \(f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}\). Il faut montrer que \(S\) n'admet pas d'antécédents. On suppose par l'absurde que \(S\) en admet un. Alors il existe un réel \(c \in \intervallefo{a}{b}\) tel que \(f(c)=S\). Puisque \(f\) croît strictement il existe un \(x \in \intervalleoo{c}{b}\) tel que \(f(x) \geqslant f(c)=S\). Or c'est absurde puisque \(S\) est la borne supérieure de \(f\). Alors \(S\) n'admet pas d'antécédent et \(f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}\).
+      c'est-à-dire
+      \begin{equation}
+        f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S} \text{~ou~} f(\intervallefo{a}{b}) = \intervalleff{f(a)}{S}.
+      \end{equation}
+      Dans le cas général, on ne peut rien dire de plus. Dans le cas où \(f\) est strictement croissante, on va montrer que \(f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}\). Il faut montrer que \(S\) n'admet pas d'antécédents. On suppose par l'absurde que \(S\) en admet un. Alors il existe un réel \(c \in \intervallefo{a}{b}\) tel que \(f(c)=S\). Puisque \(f\) croît strictement il existe un \(x \in \intervalleoo{c}{b}\) tel que \(f(x) \geqslant f(c)=S\). Or c'est absurde puisque \(S\) est la borne supérieure de \(f\). Alors \(S\) n'admet pas d'antécédent et \(f(\intervallefo{a}{b}) = \intervallefo{f(a)}{S}\).
   \end{enumerate}
 \end{proof}
 
@@ -1294,23 +1294,23 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
 \begin{proof}
   Supposons par exemple que \(f\) soit croissante tel que \(f(I)\) soit un intervalle. Supposons par l'absurde qu'il existe \(c \in I\) tel que \(f\) ne soit pas continue en \(c\)
   \begin{enumerate}
-  \item Dans le cas où \(c\) est à l'intérieur de \(I\). On a
-    \begin{equation}
-      \ell_1 = \lim\limits_{c^{-}}f \leqslant f(c) \leqslant \ell_2 = \lim\limits_{c^{+}}f.
-    \end{equation}
-    Dire que \(f\) n'est pas continue en \(c\) revient à dire que l'une des deux au moins de ces inégalités est stricte. Supposons que c'est la première \(\ell_1 < f(c)\) et \(\ell_1 = \lim\limits_{c^{-}}f = \sup\limits_{x < c} f(x)\). Soient \(b \in I\) tel que \(b < c\), alors \(f(b) \leqslant l_1\). Soit \(y \in \intervalleoo{\ell_1}{f(c)} \subset \intervalleoo{f(b)}{f(c)}\). Alors on a
-    \begin{itemize}
-    \item \(y \in \intervalleoo{f(b)}{f(c)}\);
-    \item \(f(b)\) et \(f(c)\) sont dans \(f(I)\);
-    \item \(I\) est convexe (car c'est un intervalle).
-    \end{itemize}
-    Donc \(y \in f(I)\). Il existe donc un \(x \in I\) tel que \(y=f(x)\), or
-    \begin{itemize}
-    \item si \(x < c\) alors \(f(x) < \ell_1\);
-    \item si \(x \geqslant c\) alors \(f(x) \geqslant f(c)\) (car \(f\) est croissante).
-    \end{itemize}
-    C'est absurde puisqu'on avait posé \(f(x)=y \in \intervalleoo{\ell_1}{f(c)}\). Alors \(f\) est continue.
-  \item Si \(c\) est une borne de \(I\) alors on fait le même raisonnement avec une inégalité.
+    \item Dans le cas où \(c\) est à l'intérieur de \(I\). On a
+      \begin{equation}
+        \ell_1 = \lim\limits_{c^{-}}f \leqslant f(c) \leqslant \ell_2 = \lim\limits_{c^{+}}f.
+      \end{equation}
+      Dire que \(f\) n'est pas continue en \(c\) revient à dire que l'une des deux au moins de ces inégalités est stricte. Supposons que c'est la première \(\ell_1 < f(c)\) et \(\ell_1 = \lim\limits_{c^{-}}f = \sup\limits_{x < c} f(x)\). Soient \(b \in I\) tel que \(b < c\), alors \(f(b) \leqslant l_1\). Soit \(y \in \intervalleoo{\ell_1}{f(c)} \subset \intervalleoo{f(b)}{f(c)}\). Alors on a
+      \begin{itemize}
+        \item \(y \in \intervalleoo{f(b)}{f(c)}\);
+        \item \(f(b)\) et \(f(c)\) sont dans \(f(I)\);
+        \item \(I\) est convexe (car c'est un intervalle).
+      \end{itemize}
+      Donc \(y \in f(I)\). Il existe donc un \(x \in I\) tel que \(y=f(x)\), or
+      \begin{itemize}
+        \item si \(x < c\) alors \(f(x) < \ell_1\);
+        \item si \(x \geqslant c\) alors \(f(x) \geqslant f(c)\) (car \(f\) est croissante).
+      \end{itemize}
+      C'est absurde puisqu'on avait posé \(f(x)=y \in \intervalleoo{\ell_1}{f(c)}\). Alors \(f\) est continue.
+    \item Si \(c\) est une borne de \(I\) alors on fait le même raisonnement avec une inégalité.
   \end{enumerate}
 \end{proof}
 
@@ -1319,9 +1319,9 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
 \begin{theo}
   Soit \(f\) une application continue et strictement monotone sur l'intervalle \(I\). Alors
   \begin{enumerate}
-  \item \(f(I)\) est un intervalle;
-  \item \(f\) induit une bijection de \(I\) sur \(f(I)\);
-  \item la bijection réciproque \(g\), notée abusivement \(f^{-1}\), est continue et strictement monotone (de même monotonie que \(f\)) sur \(f(I)\).
+    \item \(f(I)\) est un intervalle;
+    \item \(f\) induit une bijection de \(I\) sur \(f(I)\);
+    \item la bijection réciproque \(g\), notée abusivement \(f^{-1}\), est continue et strictement monotone (de même monotonie que \(f\)) sur \(f(I)\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
@@ -1339,24 +1339,24 @@ Alors pour tout réel \(\alpha < \beta< \gamma\) et pour toute application \(f\)
     \fonction{\varphi}{\intervalleff{0}{1}}{\R}{t}{f(ta+(1-t)c)-f(tb+(1-t)d)}.
   \end{equation}
   La fonction \(\varphi\) est bien définie parce que pour tout \(t \in \intervalleff{0}{1}\) \(ta+(1-t)c \in \intervalleff{a}{c}\) et \(tb+(1-t)d \in \intervalleff{b}{d}\). \(I\) est un intervalle et \(a\), \(b\), \(c\) et \(d\) sont dans \(I\) donc \(\intervalleff{a}{c} \subset I\) et \(\intervalleff{b}{d} \subset I\). La fonction \(\varphi\) est continue puisque \(f\) est continue. On a \(\varphi(0)=f(c)-f(d) <0\) et \(\varphi(1)=f(a)-f(b) >0\). Par théorème des valeurs intermédiaires il existe un réel \(t_0 \in \intervalleoo{0}{1}\) tel que \(\varphi(t_0)=0\). C'est-à-dire
-\begin{equation}
-  f(t_0a+(1-t_0)c)-f(t_0b+(1-t_0)d)=0,
-\end{equation}
-comme \(f\) est injective, cela signifie que \(t_0a+(1-t_0)c=t_0b+(1-t_0)d\) donc \(t_0(a-b)=(1-t_0)(b-c)\). Le premier membre est strictement négatif alors que le deuxième membre est strictement positif. C'est absurde, donc \(f\) est monotone.
+  \begin{equation}
+    f(t_0a+(1-t_0)c)-f(t_0b+(1-t_0)d)=0,
+  \end{equation}
+  comme \(f\) est injective, cela signifie que \(t_0a+(1-t_0)c=t_0b+(1-t_0)d\) donc \(t_0(a-b)=(1-t_0)(b-c)\). Le premier membre est strictement négatif alors que le deuxième membre est strictement positif. C'est absurde, donc \(f\) est monotone.
 \end{proof}
 \begin{cor}
   Soient \(I\) et \(J\) deux intervalles réels, et soit \(\fonctionR{f}{I}{J}\). Il y a équivalence entre
   \begin{enumerate}
-  \item \(f\) est une bijection et \(f\) est continue;
-  \item \(f\) est une bijection et \(f\) est monotone.
+    \item \(f\) est une bijection et \(f\) est continue;
+    \item \(f\) est une bijection et \(f\) est monotone.
   \end{enumerate}
   Une telle application qui vérifie l'une ou l'autre hypothèse est appelée un \emph{homéomorphisme}.
 \end{cor}
 \begin{proof}
   \begin{itemize}
-  \item[\(1 \implies 2\)] C'est la conséquence du théorème précédent, \(f\) est continue et bijective donc \(f\) est continue et injective donc monotone.
-  \item[\(2 \implies 1\)] La fonction \(f\) est monotone et \(f(I)=J\) (puisque \(f\) est bijective) donc \(f(I)\) est un intervalle alors par théorème (
-\ref{theo:monotone-intervalle-donc-continue}) l'application \(f\) est continue.
+    \item[\(1 \implies 2\)] C'est la conséquence du théorème précédent, \(f\) est continue et bijective donc \(f\) est continue et injective donc monotone.
+    \item[\(2 \implies 1\)] La fonction \(f\) est monotone et \(f(I)=J\) (puisque \(f\) est bijective) donc \(f(I)\) est un intervalle alors par théorème (
+      \ref{theo:monotone-intervalle-donc-continue}) l'application \(f\) est continue.
   \end{itemize}
 \end{proof}
 
@@ -1388,11 +1388,11 @@ Si la fonction \(f\) est non uniformément continue cela équivaut à
   Alors
   \begin{align}
     f \text{~est uniformément continue} &\iff \forall \epsilon > 0 \ \exists \eta_{\epsilon} > 0 \ \forall (x,x') \in I^2 \quad C(x,x')\\
-    &\implies \forall \epsilon > 0 \ \forall x \in I \ \exists \eta_{\epsilon, x} > 0 \ \forall x' \in I \quad C(x,x')\\
-    &\implies \forall x \in I \ \left[\forall \epsilon > 0 \ \exists \eta_{\epsilon, x} > 0 \ \forall x' \in I \quad C(x,x')\right]\\
-    &\implies \forall x \in I \ f \text{~est continue en } x 
+                                        &\implies \forall \epsilon > 0 \ \forall x \in I \ \exists \eta_{\epsilon, x} > 0 \ \forall x' \in I \quad C(x,x')\\
+                                        &\implies \forall x \in I \ \left[\forall \epsilon > 0 \ \exists \eta_{\epsilon, x} > 0 \ \forall x' \in I \quad C(x,x')\right]\\
+                                        &\implies \forall x \in I \ f \text{~est continue en } x 
   \end{align}
-Alors \(f\) est continue sur \(I\).
+  Alors \(f\) est continue sur \(I\).
 \end{proof}
 
 \emph{Contre-exemple}~: Soit la fonction \(\fonction{f}{\intervalleoo{0}{1}}{\R}{x}{\frac{1}{x}}\). Alors \(f\) est continue, montrons qu'elle n'est pas uniformément continue. Soit \(\epsilon=1\), montrons que
@@ -1402,13 +1402,13 @@ Alors \(f\) est continue sur \(I\).
 Soit \((x,x') \in \intervalleoo{0}{1}^2\) tel que \(x < x'\), alors
 \begin{align}
   \abs{f(x)-f(x')} > 1 &\iff \abs{\frac{1}{x} - \frac{1}{x'}} > 1\\
-  &\iff \abs{x'-x} > \abs{xx'} \\
-  &\iff x'-x > xx'.
+                       &\iff \abs{x'-x} > \abs{xx'} \\
+                       &\iff x'-x > xx'.
 \end{align}
 On a deux cas, soit \(1>\eta >0\) ou soit \(\eta>1\) alors
 \begin{itemize}
-\item Pour tout \(1>\eta >0\), si on pose \(x'=\eta\) et \(x=\frac{\eta}{2}\) alors \(\abs{x'-x}= \frac{\eta}{2} \leqslant \eta\) et \(xx'= \eta \frac{\eta}{2} < \frac{\eta}{2}\). Avec ce \(x\) et ce \(x'\) on a \(x'-x > xx'\) ce qui est équivalent à \(\abs{f(x')-f(x)} > 1\);
-\item pour tout \(\eta \geqslant 1\), on pose \(\eta_0 \in \intervalleoo{0}{1}\) tel que \(\abs{x-x'} \leqslant \eta_0 \leqslant \eta\) et, comme dans le premier cas, \(\abs{f(x)-f(x')} > 1\).
+  \item Pour tout \(1>\eta >0\), si on pose \(x'=\eta\) et \(x=\frac{\eta}{2}\) alors \(\abs{x'-x}= \frac{\eta}{2} \leqslant \eta\) et \(xx'= \eta \frac{\eta}{2} < \frac{\eta}{2}\). Avec ce \(x\) et ce \(x'\) on a \(x'-x > xx'\) ce qui est équivalent à \(\abs{f(x')-f(x)} > 1\);
+  \item pour tout \(\eta \geqslant 1\), on pose \(\eta_0 \in \intervalleoo{0}{1}\) tel que \(\abs{x-x'} \leqslant \eta_0 \leqslant \eta\) et, comme dans le premier cas, \(\abs{f(x)-f(x')} > 1\).
 \end{itemize}
 La fonction \(f\) n'est pas uniformément continue. On dispose cependant du théorème suivant.
 \begin{theo}[Théorème de Heine]
@@ -1436,28 +1436,28 @@ La fonction \(f\) n'est pas uniformément continue. On dispose cependant du thé
     \forall n \in \N \quad \abs{f(x_{\varphi{n}})-f(y_{\varphi{n}})} > \epsilon.
   \end{equation}
   Les suites \((y_{\varphi(n)})\) et \((x_{\varphi(n)})\) convergent de même limite \(c\), \(f\) est continue sur \(\intervalleff{a}{b}\) par hypothèse donc particulièrement en \(c\). Par conséquent les suites \(f(x_{\varphi{n}})\) et \(f(y_{\varphi{n}})\) convergent vers \(f(c)\). On peut donc passer à la limite dans l'équation~
-\ref{eq:etoile} pour écrire que \(0 \geqslant \epsilon\). C'est absurde puisqu'on avait posé \(\epsilon >0\). Alors la fonction \(f\) est uniformément continue.
+  \ref{eq:etoile} pour écrire que \(0 \geqslant \epsilon\). C'est absurde puisqu'on avait posé \(\epsilon >0\). Alors la fonction \(f\) est uniformément continue.
 \end{proof}
 \begin{prop}
   \begin{enumerate}
-  \item Soient \(f\) et \(g\) deux fonctions uniformément continues de \(I\) vers \(\R\) et un réel \(\lambda\). Alors \(\lambda f +g\) est uniformément continue mais en général le produit \(fg\) n'est pas uniformément continu.
-  \item Soient deux intervalles réels \(I\), \(J\) et deux fonctions \(f \in \R^I\) et \(g\in \R^J\) uniformément continues telles que \(f(I)\subset J\). Alors la fonction \(f \circ g\) est uniformément continue sur \(I\).
+    \item Soient \(f\) et \(g\) deux fonctions uniformément continues de \(I\) vers \(\R\) et un réel \(\lambda\). Alors \(\lambda f +g\) est uniformément continue mais en général le produit \(fg\) n'est pas uniformément continu.
+    \item Soient deux intervalles réels \(I\), \(J\) et deux fonctions \(f \in \R^I\) et \(g\in \R^J\) uniformément continues telles que \(f(I)\subset J\). Alors la fonction \(f \circ g\) est uniformément continue sur \(I\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Soit \(\epsilon >0\), il existe alors deux réels \(\eta_1\) et \(\eta_2\) tels que pour tout \((x,x') \in I^2\) on ait
-    \begin{align}
-      \abs{x-x'} \leqslant \eta_1 &\implies \abs{f(x)-f(x')} \leqslant \frac{\epsilon}{2(\abs{\lambda}+1)},\\
-      \abs{x-x'} \leqslant \eta_2 &\implies \abs{g(x)-g(x')} \leqslant \frac{\epsilon}{2}.
-    \end{align}
-    Soit \(\eta=\min(\eta_1,\eta_2)\) et donc si \(\abs{x'-x} \leqslant \eta\) alors 
-    \begin{align}
-      \abs{(\lambda f+g)(x)-(\lambda f+g)(x')} &\leqslant \abs{\lambda} \abs{f(x)-f(x')} + \abs{g(x)-g(x')} \\
-      &\leqslant \frac{\abs{\lambda}}{\abs{\lambda} +1} \frac{\epsilon}{2}+\frac{\epsilon}{2} \leqslant \epsilon.
-    \end{align}
-    Alors \(\lambda f+g\) est uniformément continue.
-  \item Puisque \(g\) est uniformément continue, pour tout \(\epsilon >0\) il existe \(\eta >0\) tels que pour tout \((y,y') \in J^2\) si \(\abs{y-y'} \leqslant \eta\) alors \(\abs{g(y)-g(y')} \leqslant \epsilon\). Comme \(f\) est aussi uniformément continue il existe \(\alpha >0\) tel que pour tout \((x,x') \in I^2\) si \(\abs{x-x'} \leqslant \alpha\) alors \(\abs{f(x)-f(x')} \leqslant \eta\). Comme \(f(x)\) et \(f(x')\) sont dans \(f(I)\), ils sont dans \(J\) et \(\abs{f(x)-f(x')} \leqslant \eta\). Alors en appliquant \(g\) on a \(\abs{g \circ f(x)-g \circ f(x')} \leqslant \epsilon\). Alors la composée \(g \circ f\) est uniformément continue.
+    \item Soit \(\epsilon >0\), il existe alors deux réels \(\eta_1\) et \(\eta_2\) tels que pour tout \((x,x') \in I^2\) on ait
+      \begin{align}
+        \abs{x-x'} \leqslant \eta_1 &\implies \abs{f(x)-f(x')} \leqslant \frac{\epsilon}{2(\abs{\lambda}+1)},\\
+        \abs{x-x'} \leqslant \eta_2 &\implies \abs{g(x)-g(x')} \leqslant \frac{\epsilon}{2}.
+      \end{align}
+      Soit \(\eta=\min(\eta_1,\eta_2)\) et donc si \(\abs{x'-x} \leqslant \eta\) alors 
+      \begin{align}
+        \abs{(\lambda f+g)(x)-(\lambda f+g)(x')} &\leqslant \abs{\lambda} \abs{f(x)-f(x')} + \abs{g(x)-g(x')} \\
+                                                 &\leqslant \frac{\abs{\lambda}}{\abs{\lambda} +1} \frac{\epsilon}{2}+\frac{\epsilon}{2} \leqslant \epsilon.
+      \end{align}
+      Alors \(\lambda f+g\) est uniformément continue.
+    \item Puisque \(g\) est uniformément continue, pour tout \(\epsilon >0\) il existe \(\eta >0\) tels que pour tout \((y,y') \in J^2\) si \(\abs{y-y'} \leqslant \eta\) alors \(\abs{g(y)-g(y')} \leqslant \epsilon\). Comme \(f\) est aussi uniformément continue il existe \(\alpha >0\) tel que pour tout \((x,x') \in I^2\) si \(\abs{x-x'} \leqslant \alpha\) alors \(\abs{f(x)-f(x')} \leqslant \eta\). Comme \(f(x)\) et \(f(x')\) sont dans \(f(I)\), ils sont dans \(J\) et \(\abs{f(x)-f(x')} \leqslant \eta\). Alors en appliquant \(g\) on a \(\abs{g \circ f(x)-g \circ f(x')} \leqslant \epsilon\). Alors la composée \(g \circ f\) est uniformément continue.
   \end{enumerate}
 \end{proof}
 Attention, le produit \(fg\) n'est pas forcément uniformément continu.
@@ -1480,10 +1480,10 @@ Si \(f\) est \(k-\)lipschitzienne, alors \(f\) est \(k'-\)lipschitzienne pour to
 \end{theo}
 \begin{proof}
   Soient \(k >0\) et \(f\) une application \(k-\)lipschitzienne, alors pour tout \((x,x') \in I^2\), \(f(x)-f(x') \leqslant k\abs{x-x'}\). Soit \(\epsilon >0\) il existe alors \(\eta = \frac{\epsilon}{k+1}\) tel que si \(\abs{x-x'} \leqslant \eta\) alors 
-\begin{equation}
-  \abs{f(x)-f(x')} \leqslant k\abs{x-x'} \leqslant \frac{k}{k+1} \epsilon \leqslant \epsilon.
-\end{equation}
-Donc \(f\) est uniformément continue.
+  \begin{equation}
+    \abs{f(x)-f(x')} \leqslant k\abs{x-x'} \leqslant \frac{k}{k+1} \epsilon \leqslant \epsilon.
+  \end{equation}
+  Donc \(f\) est uniformément continue.
 \end{proof}
 La réciproque est fausse. On en donne un contre-exemple. Soit \(I=\intervalleff{0}{1}\) et \(\fonction{f}{I}{\R}{x}{\sqrt{x}}\). Alors \(f\) est continue sur le segment \(I\). D'après le théorème de Heine, elle est uniformément continue. Montrons qu'elle n'est pas lipschitzienne. Supposons par l'absurde qu'elle le soit, alors il existe un \(k >0\) tel que pour tout \((x,x') \in I^2\), \(\abs{\sqrt{x}-\sqrt{x'}} \leqslant k\abs{x-x'}\). Soit alors en prenant \(x'=0\) on a \(\sqrt{x} \leqslant k x\). Alors pour tout \(x \in \intervalleof{0}{1}\) on aurait \(\frac{\sqrt{x}}{x}=\frac{1}{\sqrt{x}} \leqslant k\). Par passage à la limite en \(0\) on aurait \(k \geqslant + \infty\). Ce qui est complètement absurde. Alors \(f\) n'est pas lipschitzienne.
 
@@ -1495,23 +1495,23 @@ Si on note \(\Lip{I}{\R}\) l'ensemble des applications lipschitziennes de \(I\) 
 \begin{prop}
   Soient \(I\) un intervalle réel, deux réels \(k\) et \(k'\) positifs, un autre réel \(\lambda\) et deux applications \(f\in \R^I\) \(k-\)lipschitzienne et \(g\in \R^I\) \(k'-\)lipschitzienne. Alors
   \begin{enumerate}
-  \item \(\lambda f+g\) est \(\abs{\lambda}k+k'\)-lipschitzienne;
-  \item si on suppose que \(f(I) \subset J\) alors \(g \circ f\) est \(kk'-\)lipschitzienne.
+    \item \(\lambda f+g\) est \(\abs{\lambda}k+k'\)-lipschitzienne;
+    \item si on suppose que \(f(I) \subset J\) alors \(g \circ f\) est \(kk'-\)lipschitzienne.
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item Soient \((x,x') \in I^2\) alors
-    \begin{align}
-      \abs{(\lambda f+g)(x)-(\lambda f+g)(x')} &\leqslant \abs{\lambda} \abs{f(x)-f(x')}+\abs{g(x)-g(x')}\\
-      &\leqslant (\abs{\lambda}k+k')\abs{x-x'},
-    \end{align}
-    alors \(\lambda f+g\) est \(\abs{\lambda}k+k'\)-lipschitzienne.
-  \item Soient \((x,x') \in I^2\) alors
-    \begin{equation}
-      \abs{g \circ f(x)-g \circ f(x')} \leqslant k' \abs{f(x)-f(x')} \leqslant kk' \abs{x-x'},
-    \end{equation}
-    alors \(g \circ f\) est \(kk'-\)lipschitzienne
+    \item Soient \((x,x') \in I^2\) alors
+      \begin{align}
+        \abs{(\lambda f+g)(x)-(\lambda f+g)(x')} &\leqslant \abs{\lambda} \abs{f(x)-f(x')}+\abs{g(x)-g(x')}\\
+                                                 &\leqslant (\abs{\lambda}k+k')\abs{x-x'},
+      \end{align}
+      alors \(\lambda f+g\) est \(\abs{\lambda}k+k'\)-lipschitzienne.
+    \item Soient \((x,x') \in I^2\) alors
+      \begin{equation}
+        \abs{g \circ f(x)-g \circ f(x')} \leqslant k' \abs{f(x)-f(x')} \leqslant kk' \abs{x-x'},
+      \end{equation}
+      alors \(g \circ f\) est \(kk'-\)lipschitzienne
   \end{enumerate}
 \end{proof}
 
@@ -1524,10 +1524,10 @@ Soit \(X\) une partie de \(\R\) qui contient au moins deux éléments. On note \
 \begin{defdef}
   Soit \(f \in \C^X\), on lui associe les fonctions suivantes~:
   \begin{enumerate}
-  \item La partie réelle de \(f\), \(\fonction{\Re(f)}{X}{\R}{x}{\Re(f(x))}\);
-  \item La partie imaginaire de \(f\), \(\fonction{\Im(f)}{X}{\R}{x}{\Im(f(x))}\);
-  \item Le module de \(f\), \(\fonction{\abs{f}}{X}{\R}{x}{\abs{f(x)}}\);
-  \item Le conjugué de \(f\), \(\fonction{\bar{f}}{X}{\R}{x}{\bar{f(x)}}\).
+    \item La partie réelle de \(f\), \(\fonction{\Re(f)}{X}{\R}{x}{\Re(f(x))}\);
+    \item La partie imaginaire de \(f\), \(\fonction{\Im(f)}{X}{\R}{x}{\Im(f(x))}\);
+    \item Le module de \(f\), \(\fonction{\abs{f}}{X}{\R}{x}{\abs{f(x)}}\);
+    \item Le conjugué de \(f\), \(\fonction{\bar{f}}{X}{\R}{x}{\bar{f(x)}}\).
   \end{enumerate}
 \end{defdef}
 \begin{defdef}
@@ -1555,12 +1555,12 @@ Soit \(X\) une partie de \(\R\) qui contient au moins deux éléments. On note \
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item[\(\implies\)] Soit \(x \in X\), alors \(\abs{\Re(f)x-\Re(l)}=\abs{\Re(f(x)-l)} \leqslant \abs{f(x)-l}\) par passage à la limite, on a \(\lim\limits_{a}\Re(f) = \Re(l)\) et de la même manière \(\abs{\Im(f)(x)-\Im(l)}=\abs{\Im(f(x)-l)} \leqslant \abs{f(x)-l}\) par passage à la limite, on a \(\lim\limits_{a}\Im(f) = \Im(l)\).
-  \item[\(\impliedby\)] Si \(\Re(f)\) tend vers \(\alpha\) en \(a\) et si \(\Im(f)\) tend vers \(\beta\) en \(a\) alors pour tout \(x \in X\) on a par inégalité triangulaire
-    \begin{equation}
-      \abs{f(x)-(\alpha+\ii \beta)} \leqslant \abs{\Re(f)(x)-\alpha} + \abs{\Im(f)(x)-\beta},
-    \end{equation}
-    alors en passant à la limite on montre que \(f\) tend vers \(\alpha+\ii \beta\) en \(a\).
+    \item[\(\implies\)] Soit \(x \in X\), alors \(\abs{\Re(f)x-\Re(l)}=\abs{\Re(f(x)-l)} \leqslant \abs{f(x)-l}\) par passage à la limite, on a \(\lim\limits_{a}\Re(f) = \Re(l)\) et de la même manière \(\abs{\Im(f)(x)-\Im(l)}=\abs{\Im(f(x)-l)} \leqslant \abs{f(x)-l}\) par passage à la limite, on a \(\lim\limits_{a}\Im(f) = \Im(l)\).
+    \item[\(\impliedby\)] Si \(\Re(f)\) tend vers \(\alpha\) en \(a\) et si \(\Im(f)\) tend vers \(\beta\) en \(a\) alors pour tout \(x \in X\) on a par inégalité triangulaire
+      \begin{equation}
+        \abs{f(x)-(\alpha+\ii \beta)} \leqslant \abs{\Re(f)(x)-\alpha} + \abs{\Im(f)(x)-\beta},
+      \end{equation}
+      alors en passant à la limite on montre que \(f\) tend vers \(\alpha+\ii \beta\) en \(a\).
   \end{itemize}
 \end{proof}
 \begin{cor}[Unicité de la limite]
@@ -1572,10 +1572,10 @@ Soit \(X\) une partie de \(\R\) qui contient au moins deux éléments. On note \
 \begin{prop}
   Soient \(f \in \C^X\), \(a \in \Rbar\) et \(\ell \in \C\), si \(\ell=\lim\limits_{a}f\) alors
   \begin{itemize}
-  \item \(\lim\limits_{a} \abs{f}=\abs{\ell}\);
-  \item \(\lim\limits_{a} \Re(f)=\Re(\ell)\);
-  \item \(\lim\limits_{a} \Im(f)=\Im(\ell)\);
-  \item \(\lim\limits_{a} \bar{f}=\bar{\ell}\).
+    \item \(\lim\limits_{a} \abs{f}=\abs{\ell}\);
+    \item \(\lim\limits_{a} \Re(f)=\Re(\ell)\);
+    \item \(\lim\limits_{a} \Im(f)=\Im(\ell)\);
+    \item \(\lim\limits_{a} \bar{f}=\bar{\ell}\).
   \end{itemize}
 \end{prop}
 \begin{proof}
@@ -1606,9 +1606,9 @@ Soit \(I\) un intervalle réel qui contient au moins deux points.
 \end{defdef}
 \begin{prop}
   Soit \(f \in \C^I\), alors 
-\begin{equation}
-  f \in \cont{I}{\C} \iff \Re(f) \in \cont{I}{\R} \text{~et~}\Im(f) \in \cont{I}{\R}
-\end{equation}
+  \begin{equation}
+    f \in \cont{I}{\C} \iff \Re(f) \in \cont{I}{\R} \text{~et~}\Im(f) \in \cont{I}{\R}
+  \end{equation}
 \end{prop}
 \begin{prop}
   Soit \(f \in \cont{I}{\C}\), alors \(\bar{f} \in \cont{I}{\C}\) et \(\abs{f} \in \cont{I}{\R}\).

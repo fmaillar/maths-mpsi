@@ -32,15 +32,16 @@ Soient \(f \in \R^I\) et \(a \in I\). On suppose que \(f\) est dérivable en \(a
     \forall x \in I \quad f(x) = f(a) + f'(a)(x-a) + \epsilon(x)(x-a),
   \end{equation}
   avec \(\lim\limits_{a} \epsilon=0\). Soit \(h\) la partie régulière du \(DL_1(a)\) de \(f\), c'est une fonction affine appelée fonction affine tangente. La droite d'équation \(y=f(a)+f'(a)(x-a)\) est tangente à la courbe représentative de \(f\) au point \(A(a,f(a))\).
-% Par exemple on peut donner la tangente de la fonction \(f : x \longrightarrow \frac{1}{x} - \frac{x^2-2}{x-10}\) au point d'abcisse \(\sqrt{2}\) sur la figure~
-\ref{fig:derivee}. 
-% \begin{figure}
-%   \centering
-%   \includegraphics[angle=-90,scale=1,width=0.6\textwidth]{./derivee.ps}
-%   \caption{Dérivée en un point d'une fonction}
-%   \label{fig:derivee}
-% \end{figure}
-% La tangente en \(A\) est la position limite des cordes lorsque \(M(x,f(x))\) tend vers \(A\).
+  % Par exemple on peut donner la tangente de la fonction \(f : x 
+  % \longrightarrow \frac{1}{x} - \frac{x^2-2}{x-10}\) au point d'abcisse 
+  % \(\sqrt{2}\) sur la figure~\ref{fig:derivee}. 
+  % \begin{figure}
+  %   \centering
+  %   \includegraphics[angle=-90,scale=1,width=0.6\textwidth]{./derivee.ps}
+  %   \caption{Dérivée en un point d'une fonction}
+  %   \label{fig:derivee}
+  % \end{figure}
+  % La tangente en \(A\) est la position limite des cordes lorsque \(M(x,f(x))\) tend vers \(A\).
 \end{prop}
 %
 Lorsque \(\frac{f(x)-f(a)}{x-a}\) tend vers \(\pm\infty\) alors la tangente est verticale. La fonction n'est dans ce cas pas dérivable en \(a\).
@@ -48,8 +49,8 @@ Lorsque \(\frac{f(x)-f(a)}{x-a}\) tend vers \(\pm\infty\) alors la tangente est 
 \subsubsection{Interprétation cinématique}
 Si on suppose que \(f(t)\) représente la position d'un point mobile \(M(t)\) à l'innstant \(t\)~:
 \begin{itemize}
-\item \(\frac{f(t)-f(a)}{t-a}\) est la vitesse moyenne du point \(M\) entre les instants \(a\) et \(t\);
-\item \(f'(a)\) est la vitesse instantannée à l'instant \(a\).
+  \item \(\frac{f(t)-f(a)}{t-a}\) est la vitesse moyenne du point \(M\) entre les instants \(a\) et \(t\);
+  \item \(f'(a)\) est la vitesse instantannée à l'instant \(a\).
 \end{itemize}
 
 \subsection{Dérivée à droite, dérivée à gauche}
@@ -59,8 +60,8 @@ Soit \(f \in \R^I\), \(a \in I\) et on suppose que \(I \cap \intervalleoo{a}{+\i
 \begin{defdef}
   On dit que \(f\) est dérivable à droite en \(a\) lorsque la restriction de \(f\) à \(I \cap \intervalleoo{a}{+\infty}\) est dérivable en \(a\). C'est équivalent à
   \begin{enumerate}
-  \item la fonction \(\fonction{h_1}{I\setminus\{a\}}{\R}{x}{\frac{f(x)-f(a)}{x-a}}\) admet une limite finie à droite en \(a\);
-  \item la fonction \(\fonction{h_2}{I \cap \intervalleoo{a}{+\infty}}{\R}{x}{\frac{f(x)-f(a)}{x-a}}\) admet une limite finie en \(a\).
+    \item la fonction \(\fonction{h_1}{I\setminus\{a\}}{\R}{x}{\frac{f(x)-f(a)}{x-a}}\) admet une limite finie à droite en \(a\);
+    \item la fonction \(\fonction{h_2}{I \cap \intervalleoo{a}{+\infty}}{\R}{x}{\frac{f(x)-f(a)}{x-a}}\) admet une limite finie en \(a\).
   \end{enumerate}
   Sous réserve d'existence de cette limite, on note \(f'_d(a) = \lim\limits_{x \to a^+}\frac{f(x)-f(a)}{x-a}\). On définit de manière analogue la dérivée à gauche en \(f\). On note \(f'_g(a) = \lim\limits_{x \to a^-}\frac{f(x)-f(a)}{x-a}\) lorsque la limite existe et est finie..
 \end{defdef}
@@ -101,13 +102,13 @@ La réciproque est fausse, on peut avoir des fonctions continues qui ne sont pas
 
 Soit \(f \in \R^I\), \(a \in I\), on dit que
 \begin{enumerate}
-\item \(f\) admet un maximum global en \(a\) si \(\forall x \in I \quad f(x) \leqslant f(a)\);
-\item \(f\) admet un minimum global en \(a\) si \(\forall x \in I \quad f(x) \geqslant f(a)\);
-\item \(f\) admet un extremum global en \(a\) si elle admet un maximum ou un minimum global en \(a\);
-\item \(f\) admet un maximum local en \(a\) si \(\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h}  \quad f(x) \leqslant f(a)\);
-\item \(f\) admet un minimum local en \(a\) si \(\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h} \quad f(x) \geqslant f(a)\);
-\item \(f\) admet un extremum local en \(a\) si elle admet un maximum ou un minimum local en \(a\);
-\item On définit les notions d'extremum stricts de la même manière en remplaçant \(\leqslant\) resp.\ \(\geqslant\) par \(<\) resp.\ \(>\).
+  \item \(f\) admet un maximum global en \(a\) si \(\forall x \in I \quad f(x) \leqslant f(a)\);
+  \item \(f\) admet un minimum global en \(a\) si \(\forall x \in I \quad f(x) \geqslant f(a)\);
+  \item \(f\) admet un extremum global en \(a\) si elle admet un maximum ou un minimum global en \(a\);
+  \item \(f\) admet un maximum local en \(a\) si \(\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h}  \quad f(x) \leqslant f(a)\);
+  \item \(f\) admet un minimum local en \(a\) si \(\exists h > 0 \forall x \in I \cap \intervalleoo{a-h}{a+h} \quad f(x) \geqslant f(a)\);
+  \item \(f\) admet un extremum local en \(a\) si elle admet un maximum ou un minimum local en \(a\);
+  \item On définit les notions d'extremum stricts de la même manière en remplaçant \(\leqslant\) resp.\ \(\geqslant\) par \(<\) resp.\ \(>\).
 \end{enumerate}
 
 \subsubsection{Liens avec les dérivées}
@@ -118,8 +119,8 @@ Soit \(f \in \R^I\), \(a \in I\), on dit que
 \begin{proof}
   On suppose par exemple que \(f\) admet un maximum local en \(a\). Le réel \(a\) est dans l'intérieur de \(I\) donc il existe \(h_1>0\) tel que \(\intervalleff{a-h_1}{a+h_1} \subset I\). La fonction \(f\) admet un maximum local en \(a\) donc il existe \(h_2>0\) tel que pour tout \(x \in I \cap \intervalleff{a-h_2}{a+h_2}\), \(f(x) \leqslant f(a)\). Soit \(h_0=\min(h_1,h_2)\) alors \(\intervalleff{a-h_0}{a+h_0} \cap A = \intervalleff{a-h_0}{a+h_0}\). Soit \(x \in \intervalleff{a-h_0}{a+h_0}\),
   \begin{itemize}
-  \item Si \(x > a\) alors \(\frac{f(x)-f(a)}{x-a} \leqslant 0\) et donc par passage à la limite \(f'_d(a) \leqslant 0\);
-  \item Si \(x < a\) alors \(\frac{f(x)-f(a)}{x-a} \geqslant 0\) et donc par passage à la limite \(f'_g(a) \geqslant 0\).
+    \item Si \(x > a\) alors \(\frac{f(x)-f(a)}{x-a} \leqslant 0\) et donc par passage à la limite \(f'_d(a) \leqslant 0\);
+    \item Si \(x < a\) alors \(\frac{f(x)-f(a)}{x-a} \geqslant 0\) et donc par passage à la limite \(f'_g(a) \geqslant 0\).
   \end{itemize}
   Or on sait que \(f\) est dérivable en \(a\), donc \(0 \leqslant f'_d(a)=f'_g(a) \leqslant 0\). Donc \(f'(a)=0\).
 \end{proof}
@@ -310,10 +311,10 @@ Ce théorème est parfois utile pour calculer les dérivées de produits ou de q
 \emph{Exemples}
 
 \begin{enumerate}
-\item Si \(f \in \deriv{I}{\R}\) (resp.\ \(\classe{1}(I,\R)\)) alors \(\e^f \in \deriv{I}{\R}\) (resp.\ \(\classe{1}(I,\R)\)) et \((\e^f)'=f' \e^f\);
-\item si \(f \in \deriv{I}{\R}\) qui ne s'annule pas, alors \(\ln \abs{f} \in \deriv{I}{\R}\) et \(\left(\ln\abs{f} \right)'=\frac{f'}{f}\);
-\item si \(f \in \deriv{I}{\R}\) et \(f(I) \subset \Rplusetoile\) et \(\alpha \in \R\) alors \(f^\alpha \in \deriv{I}{\R}\) et \((f^\alpha)'=\alpha f' f^{\alpha-1}\);
-\item si \(f \in \deriv{I}{\R}\) avec \(f(I) \subset \Rplusetoile\) et \(u \in \deriv{I}{\R}\) alors \(f^u=\e^{u \ln f} \in \deriv{I}{\R}\) et \((f^u)'=\left(u'\ln f+u \frac{f'}{f}\right) f^u\).
+  \item Si \(f \in \deriv{I}{\R}\) (resp.\ \(\classe{1}(I,\R)\)) alors \(\e^f \in \deriv{I}{\R}\) (resp.\ \(\classe{1}(I,\R)\)) et \((\e^f)'=f' \e^f\);
+  \item si \(f \in \deriv{I}{\R}\) qui ne s'annule pas, alors \(\ln \abs{f} \in \deriv{I}{\R}\) et \(\left(\ln\abs{f} \right)'=\frac{f'}{f}\);
+  \item si \(f \in \deriv{I}{\R}\) et \(f(I) \subset \Rplusetoile\) et \(\alpha \in \R\) alors \(f^\alpha \in \deriv{I}{\R}\) et \((f^\alpha)'=\alpha f' f^{\alpha-1}\);
+  \item si \(f \in \deriv{I}{\R}\) avec \(f(I) \subset \Rplusetoile\) et \(u \in \deriv{I}{\R}\) alors \(f^u=\e^{u \ln f} \in \deriv{I}{\R}\) et \((f^u)'=\left(u'\ln f+u \frac{f'}{f}\right) f^u\).
 \end{enumerate}
 
 \subsection{Dérivation d'une fonction réciproque}
@@ -362,12 +363,12 @@ Ne pas confondre \(f^{(k)}\) qui est la dérivée \(k\)\ieme de \(f\) avec la pu
 
 Finalement sous réserve d'existence, \(f^{(0)}=f\) et pour tout naturel \(n\), \(f^{(n+1)}=(f^{(n)})'=(f')^{(n)}\). Soit un naturel \(n\), alors
 \begin{itemize}
-\item \(f\) est dite \(\Dr^n\) lorsqu'elle est dérivable \(n\) fois sur \(I\). On note \(\derivnfois{n}{I}{\R}\) l'ensemble des fonctions qui sont \(\Dr^n\) sur I;
-\item \(f\) est dite \(\classe{n}\) lorsqu'elle est dérivable \(n\) fois sur \(I\) et que \(f^{(n)}\) est continue. On note \(\classe{n}(I)\) l'ensemble des applications qui sont \(\classe{n}\) sur I;
-\item \(f\) est dite \(\classe{\infty}\) lorsque pour tout naturel \(n\), \(f\) est \(\classe{n}\); on note
-  \begin{equation}
-    \classe{\infty}(I,\R)=\bigcap\limits_{n \in \N} \classe{n}(I,\R).
-  \end{equation}
+  \item \(f\) est dite \(\Dr^n\) lorsqu'elle est dérivable \(n\) fois sur \(I\). On note \(\derivnfois{n}{I}{\R}\) l'ensemble des fonctions qui sont \(\Dr^n\) sur I;
+  \item \(f\) est dite \(\classe{n}\) lorsqu'elle est dérivable \(n\) fois sur \(I\) et que \(f^{(n)}\) est continue. On note \(\classe{n}(I)\) l'ensemble des applications qui sont \(\classe{n}\) sur I;
+  \item \(f\) est dite \(\classe{\infty}\) lorsque pour tout naturel \(n\), \(f\) est \(\classe{n}\); on note
+    \begin{equation}
+      \classe{\infty}(I,\R)=\bigcap\limits_{n \in \N} \classe{n}(I,\R).
+    \end{equation}
 \end{itemize}
 On a donc les inclusions suivantes~:
 \begin{equation}
@@ -391,9 +392,9 @@ Les inclusions sont strictes.
 \begin{theo}
   Soient \(n\) un naturel non nul, \(\lambda\) un réel, \(f\) et \(g\) deux applications de \(I\) dans \(\R\).
   \begin{enumerate}
-  \item Si \(f\) et \(g\) sont \(n\) fois dérivables alors \(\lambda f +g\) l'est aussi et \((\lambda f +g)^{(n)}=\lambda f^{(n)} + g^{(n)}\) et \(fg\) est aussi \(n\) fois dérivable telle que \((fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}\);
-  \item si \(f\) et \(g\) sont de classe \(\classe{n}\) alors \(\lambda f +g\) et \(fg\) sont aussi de classe \(\classe{n}\);
-  \item si \(f\) et \(g\) sont de classe \(\classe{\infty}\) alors \(\lambda f +g\) et \(fg\) sont aussi de classe \(\classe{\infty}\).
+    \item Si \(f\) et \(g\) sont \(n\) fois dérivables alors \(\lambda f +g\) l'est aussi et \((\lambda f +g)^{(n)}=\lambda f^{(n)} + g^{(n)}\) et \(fg\) est aussi \(n\) fois dérivable telle que \((fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}\);
+    \item si \(f\) et \(g\) sont de classe \(\classe{n}\) alors \(\lambda f +g\) et \(fg\) sont aussi de classe \(\classe{n}\);
+    \item si \(f\) et \(g\) sont de classe \(\classe{\infty}\) alors \(\lambda f +g\) et \(fg\) sont aussi de classe \(\classe{\infty}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
@@ -402,39 +403,39 @@ Les inclusions sont strictes.
     \forall (f,g) \in \derivnfois{n}{I}{\R}^2 \quad fg \in \derivnfois{n}{I}{\R} \text{~et~} (fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}.
   \end{equation}
 
-Soit \(n=1\), alors si \(f\) et \(g\) sont dérivables, alors on sait que \(fg\) est dérivable d'après les propriétés et \((fg)'=f'g+g'f=\sum_{k=0}^1 \binom{1,k} f^{(k)}g^{(1-k)}\). Donc \(\P(1)\) est vraie.
+  Soit \(n=1\), alors si \(f\) et \(g\) sont dérivables, alors on sait que \(fg\) est dérivable d'après les propriétés et \((fg)'=f'g+g'f=\sum_{k=0}^1 \binom{1,k} f^{(k)}g^{(1-k)}\). Donc \(\P(1)\) est vraie.
 
-Supposons maintenant \(\P(n)\) pour \(n \neq 0\), montrons \(\P(n+1)\). Soit \(f\) et \(g\) \(n+1\) fois dérivables, alors elles le sont \(n\) fois et par hypothèse de récurrence \((fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}\). Pour tout \(k \leqslant n\) \(f^{(k)}\) et \(g^{(n-k)}\) sont dérivables (puisque \(f\) et \(g\) le sont \(n+1\) fois). Par produit est combinaisons linéaires de fonctions dérivables, la fonction \((fg)^{(n)}\) est dérivable. Autrement dit \(fg\) est \(n+1\) fois dérivable et
-\begin{align}
-  (fg)^{(n+1)}=\left((fg)^{(n)}\right)'&=\sum_{k=0}^n \binom{n}{k} [f^{(k)}g^{(n-k)}]' \\
-  &=\sum_{k=0}^n \binom{n}{k} [f^{(k+1)}g^{(n-k)}+f^{(k)}g^{(n-k+1)}]\\
-  &=\sum_{k=0}^n \binom{n}{k} f^{(k+1)}g^{(n-k)} + \sum_{k=0}^n \binom{n,k} f^{(k)}g^{(n-k+1)}.
-\end{align}
-On change de variable \(j=k+1\) dans la première somme et on obtient
-\begin{align}
-  (fg)^{(n+1)}&=\sum_{j=1}^{n+1} \binom{n}{j-1} f^{(j)}g^{(n+1-j)} + \sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k+1)}\\
-  &= \binom{n}{n} f^{(n+1)}g^{(0)} + \sum_{j=1}^n \left[\binom{n}{j-1}+\binom{n}{j}\right]f^{(j)}g^{(n+1-j)} + \binom{n}{0} f^{(0)}g^{(n+1)}\\
-  &= \sum_{j=0}^{n+1} \binom{n+1}{j}f^{(j)}g^{(n+1-j)}.
-\end{align}
-Alors \(\P(n+1)\) est vraie. Par théorème de récurrence, \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
+  Supposons maintenant \(\P(n)\) pour \(n \neq 0\), montrons \(\P(n+1)\). Soit \(f\) et \(g\) \(n+1\) fois dérivables, alors elles le sont \(n\) fois et par hypothèse de récurrence \((fg)^{(n)}=\sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k)}\). Pour tout \(k \leqslant n\) \(f^{(k)}\) et \(g^{(n-k)}\) sont dérivables (puisque \(f\) et \(g\) le sont \(n+1\) fois). Par produit est combinaisons linéaires de fonctions dérivables, la fonction \((fg)^{(n)}\) est dérivable. Autrement dit \(fg\) est \(n+1\) fois dérivable et
+  \begin{align}
+    (fg)^{(n+1)}=\left((fg)^{(n)}\right)'&=\sum_{k=0}^n \binom{n}{k} [f^{(k)}g^{(n-k)}]' \\
+                                         &=\sum_{k=0}^n \binom{n}{k} [f^{(k+1)}g^{(n-k)}+f^{(k)}g^{(n-k+1)}]\\
+                                         &=\sum_{k=0}^n \binom{n}{k} f^{(k+1)}g^{(n-k)} + \sum_{k=0}^n \binom{n,k} f^{(k)}g^{(n-k+1)}.
+  \end{align}
+  On change de variable \(j=k+1\) dans la première somme et on obtient
+  \begin{align}
+    (fg)^{(n+1)}&=\sum_{j=1}^{n+1} \binom{n}{j-1} f^{(j)}g^{(n+1-j)} + \sum_{k=0}^n \binom{n}{k} f^{(k)}g^{(n-k+1)}\\
+                &= \binom{n}{n} f^{(n+1)}g^{(0)} + \sum_{j=1}^n \left[\binom{n}{j-1}+\binom{n}{j}\right]f^{(j)}g^{(n+1-j)} + \binom{n}{0} f^{(0)}g^{(n+1)}\\
+                &= \sum_{j=0}^{n+1} \binom{n+1}{j}f^{(j)}g^{(n+1-j)}.
+  \end{align}
+  Alors \(\P(n+1)\) est vraie. Par théorème de récurrence, \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 
 \begin{theo}
   Soient deux applications \(f\) et \(g\) de \(I\) dans \(\R\) telles que \(g\) ne s'annulent pas sur \(I\). Soit un naturel \(n\) non nul.
   \begin{enumerate}
-  \item Si \(f\) et \(g\) sont \(n\) fois dérivables alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi;
-  \item si \(f\) et \(g\) sont de classe \(\classe{n}\) alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi;
-  \item si \(f\) et \(g\) sont de classe \(\classe{\infty}\) alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi.
+    \item Si \(f\) et \(g\) sont \(n\) fois dérivables alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi;
+    \item si \(f\) et \(g\) sont de classe \(\classe{n}\) alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi;
+    \item si \(f\) et \(g\) sont de classe \(\classe{\infty}\) alors \(\frac{1}{g}\) et \(\frac{f}{g}\) le sont aussi.
   \end{enumerate}
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-   Soit un naturel \(n\) non nul et la propriété \(\P(n)\)~:``\(\forall g \in \derivnfois{n}{I}{\R} \ 0 \notin g(I) \quad \frac{1}{g} \in \derivnfois{n}{I}{\R}\)''.
+  Soit un naturel \(n\) non nul et la propriété \(\P(n)\)~:``\(\forall g \in \derivnfois{n}{I}{\R} \ 0 \notin g(I) \quad \frac{1}{g} \in \derivnfois{n}{I}{\R}\)''.
 
   L'initialisation a déjà été vue dans les propriétés, donc \(\P(1)\) est vraie. Soit \(n \in \N^*\) et supposons que \(\P(n)\) est vraie, alors soit \(g \in \derivnfois{n+1}{I}{\R}\) qui ne s'annule pas.
 
   L'hérédité se montre comme tel : Soit \(n \in \N^*\), on suppose que \(\P(n)\) est vraie, montrons \(\P(n+1)\). Soit \(g \in \derivnfois{n+1}{I}{\R}\) telle que \(0 \notin g(I)\). En particulier \(g\) est dérivable et puisqu'elle ne s'annule pas \(\frac{1}{g}\) est dérivable et \(\frac{1}{g} '=-\frac{g'}{g^2}\). Alors \(-g'\) est \(n\) fois dérivable et par hypothèse de récurrence \(\frac{1}{g}\) est \(n\) fois dérivable et donc par produit \(\frac{1}{g^2}\) est \(n\) fois dérivable. Finalement \(\frac{1}{g} '\) est \(n\) fois dérivable donc \(\frac{1}{g}\) est \(n+1\) fois dérivable. \(\P(n+1)\) est vraie.
 
-Alors par théorème de récurrence la propriété P est vrai pour tout naturel \(n\) non nul.
+  Alors par théorème de récurrence la propriété P est vrai pour tout naturel \(n\) non nul.
 \end{proof}
 
 \subsubsection{Composition}
@@ -445,7 +446,7 @@ Alors par théorème de récurrence la propriété P est vrai pour tout naturel 
 \begin{proof}[Démonstration par récurrence]
   Soit un naturel \(n\) non nul et la propriété \(\P(n)\) ``\(\forall (f,g) \in \derivnfois{n}{I}{\R}^2 \times \derivnfois{n}{J}{\R} / f(I)\subset J \quad g \circ f \in \derivnfois{n}{I}{\R}\)''.
 
-\(\P(1)\) est vraie d'après les propriétés sur la dérivée. Soit \(n \in \N^*\), supposons \(\P(n)\) alors soit \(f \in \derivnfois{n+1}{I}{\R}\) et \(g \in \Dr^{n+1}(J)\) telles que \(f(I) \subset J\). En particulier \(f\) et \(g\) sont dérivables et donc \(g \circ f\) est dérivable et \((g \circ f)'=f' g' \circ f\). Alors \(f\) et \(f'\) sont \(n\) fois dérivable et \(g'\) aussi. Alors par hypothèse de récurrence \(g' \circ f\) est \(n\) fois dérivable et par produit \((g \circ f)'\) est \(n\) fois dérivable. Alors finalement \(g \circ f\) est \(n+1\) fois dérivable. \(\P(n+1)\) est vraie. Le théorème de récurrence affirme donc que la propriété \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
+  \(\P(1)\) est vraie d'après les propriétés sur la dérivée. Soit \(n \in \N^*\), supposons \(\P(n)\) alors soit \(f \in \derivnfois{n+1}{I}{\R}\) et \(g \in \Dr^{n+1}(J)\) telles que \(f(I) \subset J\). En particulier \(f\) et \(g\) sont dérivables et donc \(g \circ f\) est dérivable et \((g \circ f)'=f' g' \circ f\). Alors \(f\) et \(f'\) sont \(n\) fois dérivable et \(g'\) aussi. Alors par hypothèse de récurrence \(g' \circ f\) est \(n\) fois dérivable et par produit \((g \circ f)'\) est \(n\) fois dérivable. Alors finalement \(g \circ f\) est \(n+1\) fois dérivable. \(\P(n+1)\) est vraie. Le théorème de récurrence affirme donc que la propriété \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 
 \subsubsection{Application réciproque}
@@ -464,18 +465,18 @@ Alors par théorème de récurrence la propriété P est vrai pour tout naturel 
 \begin{theo}[Théorème de Rolle]
   Soient deux réels \(a\) et \(b\) tels que \(a < b\) et \(f \in \R^{\intervalleff{a}{b}}\). On suppose que
   \begin{itemize}
-  \item \(f\) est continue sur \(\intervalleff{a}{b}\);
-  \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\);
-  \item \(f(a)=f(b)\).
+    \item \(f\) est continue sur \(\intervalleff{a}{b}\);
+    \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\);
+    \item \(f(a)=f(b)\).
   \end{itemize}
   Alors il existe au moins un réel \(c \in \intervalleoo{a}{b}\) tel que \(f'(c)=0\).
 \end{theo}
 \begin{proof}
   La fonction \(f\) est continue sur \(\intervalleff{a}{b}\). Le théorème des bornes, Théorème
-\ref{theo:bornes}, nous dit alors qu'il existe deux réels \(m,M\) tels que \(f(\intervalleff{a}{b})=\intervalleff{m}{M}\), \(m = \inf\limits_{\intervalleff{a}{b}} f\) et \(M = \sup\limits_{\intervalleff{a}{b}} f\). Deux cas se présentent~:
+  \ref{theo:bornes}, nous dit alors qu'il existe deux réels \(m,M\) tels que \(f(\intervalleff{a}{b})=\intervalleff{m}{M}\), \(m = \inf\limits_{\intervalleff{a}{b}} f\) et \(M = \sup\limits_{\intervalleff{a}{b}} f\). Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(M=m\), alors \(f\) est constante sur \(\intervalleff{a}{b}\) et sa dérivée et constante nulle sur l'intérieur. On peut donc choisir n'importe quel \(c\) à l'intérieur;
-  \item Si \(M > m\), \(f(a)\) ne peut être à la fois égal à \(m\) et à \(M\). On suppose par exemple que \(f(a) \neq m\), alors \(f(b) \neq m\). Comme \(m \in f(\intervalleff{a}{b})\), il existe un réel \(c \in \intervalleoo{a}{b}\) tel que \(m=f(c)\). Le réel \(m\) est un extremum (dans l'exemple ici un minimum) donc \(f'(c)=0\).
+    \item Si \(M=m\), alors \(f\) est constante sur \(\intervalleff{a}{b}\) et sa dérivée et constante nulle sur l'intérieur. On peut donc choisir n'importe quel \(c\) à l'intérieur;
+    \item Si \(M > m\), \(f(a)\) ne peut être à la fois égal à \(m\) et à \(M\). On suppose par exemple que \(f(a) \neq m\), alors \(f(b) \neq m\). Comme \(m \in f(\intervalleff{a}{b})\), il existe un réel \(c \in \intervalleoo{a}{b}\) tel que \(m=f(c)\). Le réel \(m\) est un extremum (dans l'exemple ici un minimum) donc \(f'(c)=0\).
   \end{enumerate}
   Dans les deux cas, on a montré l'existence d'un réel \(c \in \intervalleoo{a}{b}\) tel que \(f'(c)=0\).
 \end{proof}
@@ -485,8 +486,8 @@ C'est-à-dire que graphiquement, il existe au moins une tangente horizontale à 
 \begin{corth}
   Soit un intervalle réel \(I\) et \(f \in \R^I\). On suppose que
   \begin{enumerate}
-  \item \(f\) est continue sur I;
-  \item \(f\) est dérivable sur \(\mathring{I}\), l'intérieur de I;
+    \item \(f\) est continue sur I;
+    \item \(f\) est dérivable sur \(\mathring{I}\), l'intérieur de I;
   \end{enumerate}
   Alors entre deux zéros de \(f\) sur \(I\), il existe un zéro de \(f'\).
 \end{corth}
@@ -496,8 +497,8 @@ C'est-à-dire que graphiquement, il existe au moins une tangente horizontale à 
 \begin{theo}[Égalité des accroissements finis]
   Soient deux réels \(a,b\) tels que \(a < b\) et \(f \in \R^{\intervalleff{a}{b}}\). On suppose que
   \begin{enumerate}
-  \item \(f\) est continue sur \(\intervalleff{a}{b}\);
-  \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\).
+    \item \(f\) est continue sur \(\intervalleff{a}{b}\);
+    \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\).
   \end{enumerate}
   Alors il existe au moins un réel \(c \in \intervalleoo{a}{b}\) tel que \(f(b)-f(a)=f'(c)(b-a)\). 
 \end{theo}
@@ -508,7 +509,7 @@ C'est-à-dire que graphiquement, il existe au moins une tangente horizontale à 
   \end{equation}
   Par construction \(\varphi_k(b)=0\) et on veut \(\varphi_k(a)=0\) alors on choisit \(k = -\frac{f(a)-f(b)}{a-b}\). Avec cette valeur de \(k\) on a bien les hypothèses du théorème de Rolle alors il existe un réel \(c \in \intervalleoo{a}{b}\) tel que \(\varphi_k'(c)=0\). Or pour tout réel \(x \in \intervalleoo{a}{b}\) on a \(\varphi_k'(x)=f'(x)+k\) et donc comme \(\varphi_k'(c)=0\) alors \(f'(c)=-k=\frac{f(a)-f(b)}{a-b}\).
 
-On a montré l'existence d'un réel \(c \in \intervalleoo{a}{b}\) tel que \(f(b)-f(a)=f'(c)(b-a)\).
+  On a montré l'existence d'un réel \(c \in \intervalleoo{a}{b}\) tel que \(f(b)-f(a)=f'(c)(b-a)\).
 \end{proof}
 
 Graphiquement, ce théorème s'interpréte comme cela~: il existe au moins un réel \(c \in \intervalleoo{a}{b}\) tel que la tangente à la courbe représentative de \(f\) au point \((c,f(c))\) soit parallèle à la droite \((A(a,f(a))B(b,f(b)))\).
@@ -521,12 +522,12 @@ Graphiquement, ce théorème s'interpréte comme cela~: il existe au moins un r�
 \begin{prop}
   Soit un intervalle réel \(I\) et \(f \in \R^I\). On suppose que \(f\) est continue sur \(I\) et dérivable sur \(\mathring{I}\). Alors pour tout \(x \in I\), tout \(h \in \R\) tel que \(x+h \in I\), il existe au moins un réel \(\theta \in \intervalleoo{0}{1}\) tel que \(f(x+h)=f(x)+hf'(x+\theta h)\). 
 
-En particulier, si \(\theta \in I\) pour tout \(x \in I\), il existe \(\theta \in \intervalleoo{0}{1}\) tel que \(f(x)=f(0)+xf'(\theta h)\).
+  En particulier, si \(\theta \in I\) pour tout \(x \in I\), il existe \(\theta \in \intervalleoo{0}{1}\) tel que \(f(x)=f(0)+xf'(\theta h)\).
 \end{prop}
 \begin{proof}
   \begin{itemize}
-  \item si \(h=0\), on choisit n'importe quel \(\theta \in \intervalleoo{0}{1}\)
-  \item sinon, on pose \(x_1=x\) et \(x_2=x+h\) et alors \(x_1 \neq x_2\) et on applique la proposition précédente pour dire qu'il existe un \(c \in ](x_1,x_2)[\) tel que \(f(x_2)-f(x_1)=f'(c)(x_1-x_2)\). Alors \(f(x+h)-f(x)=hf'(c)\) et \(](x_1,x_2)[ = \enstq{x+\theta h}{0 < \theta < 1}\). Alors comme \(c \in \enstq{x+\theta h}{0 < \theta < 1}\), on a \(f(x+h)-f(x)=hf'(x + \theta h)\).
+    \item si \(h=0\), on choisit n'importe quel \(\theta \in \intervalleoo{0}{1}\)
+    \item sinon, on pose \(x_1=x\) et \(x_2=x+h\) et alors \(x_1 \neq x_2\) et on applique la proposition précédente pour dire qu'il existe un \(c \in ](x_1,x_2)[\) tel que \(f(x_2)-f(x_1)=f'(c)(x_1-x_2)\). Alors \(f(x+h)-f(x)=hf'(c)\) et \(](x_1,x_2)[ = \enstq{x+\theta h}{0 < \theta < 1}\). Alors comme \(c \in \enstq{x+\theta h}{0 < \theta < 1}\), on a \(f(x+h)-f(x)=hf'(x + \theta h)\).
   \end{itemize}
 \end{proof}
 
@@ -535,7 +536,7 @@ En particulier, si \(\theta \in I\) pour tout \(x \in I\), il existe \(\theta \i
 \begin{theo}[IAF]\label{theo:iaf}
   Soit un intervalle réel \(I\) et \(f \in \R^I\). On suppose que \(f\) est continue sur \(I\) et dérivable sur \(\mathring{I}\). On suppose de plus qu'il existe des réels \(m,M\) tels que pour tout réel \(x \in \mathring{I}\) \(m \leqslant f'(x) \leqslant M\).
 
-Alors pour tout réel \(x_1 \neq x_2 \in I\) on a \(m < \frac{f(x_2)-f(x_1)}{x_2-x_1} < M\).
+  Alors pour tout réel \(x_1 \neq x_2 \in I\) on a \(m < \frac{f(x_2)-f(x_1)}{x_2-x_1} < M\).
 \end{theo}
 \begin{proof}
   C'est une conséquence immédiate de l'égalité des accroissements finis. Soient \(x_1, x_2 \in I\) différents, alors il existe un réel \(c \in ](x_1,x_2)[\) tel que \(\frac{f(x_2)-f(x_1)}{x_2-x_1} = f'(c) \in \intervalleff{m}{M}\)
@@ -544,12 +545,12 @@ Alors pour tout réel \(x_1 \neq x_2 \in I\) on a \(m < \frac{f(x_2)-f(x_1)}{x_2
 \begin{corth}
   Soient deux réels \(a < b\) et \(f \in \R^{\intervalleff{a}{b}}\). On suppose que \(f\) est continue sur \(\intervalleff{a}{b}\) et dérivable sur \(\intervalleoo{a}{b}\) et qu'il existe deux réels \(m,M\) tels que pour tout \(x \in \intervalleoo{a}{b}\) \(m \leqslant f'(x) \leqslant M\).
 
-Alors pour tout réel \(x \in \intervalleff{a}{b}\), \(f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)\).
+  Alors pour tout réel \(x \in \intervalleff{a}{b}\), \(f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)\).
 \end{corth}\label{corth:iaf2}
 \begin{proof}
   \begin{itemize}
-  \item si \(x=a\) alors \(f(a) \leqslant f(a) \leqslant f(a)\) est vraie
-  \item sinon, \(x \in \intervalleof{a}{b}\) et on applique l'inégalité des accroissements finis avec \(x_1=a\) et \(x_2 \neq x_1\). Alors \(m \leqslant \frac{f(x)-f(a)}{x-a} \leqslant M\). Comme \(x-a >0\) on a bien \(f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)\).
+    \item si \(x=a\) alors \(f(a) \leqslant f(a) \leqslant f(a)\) est vraie
+    \item sinon, \(x \in \intervalleof{a}{b}\) et on applique l'inégalité des accroissements finis avec \(x_1=a\) et \(x_2 \neq x_1\). Alors \(m \leqslant \frac{f(x)-f(a)}{x-a} \leqslant M\). Comme \(x-a >0\) on a bien \(f(a)+m(x-a) \leqslant f(x) \leqslant f(a)+M(x-a)\).
   \end{itemize}
 \end{proof}
 
@@ -564,9 +565,9 @@ Alors pour tout réel \(x \in \intervalleff{a}{b}\), \(f(a)+m(x-a) \leqslant f(x
 \begin{theo}
   Soient un intervalle réel \(I\) et \(f \in \R^I\). On suppose que
   \begin{itemize}
-  \item \(f\) est continue sur \(I\);
-  \item \(f\) est dérivable sur \(\mathring{I}\);
-  \item qu'il existe \(k \in \Rpluss\) tel que pour tout \(x \in \mathring{I}\) \(\abs{f'(x)} \leqslant k\).
+    \item \(f\) est continue sur \(I\);
+    \item \(f\) est dérivable sur \(\mathring{I}\);
+    \item qu'il existe \(k \in \Rpluss\) tel que pour tout \(x \in \mathring{I}\) \(\abs{f'(x)} \leqslant k\).
   \end{itemize}
   Alors pour tout \(x,y\) dans \(I\), \(\abs{f(x)-f(y)} \leqslant k\abs{x-y}\)
 \end{theo}
@@ -575,15 +576,15 @@ Si \(a < b\) et si \(f \in \classe{1}(\intervalleff{a}{b}, \R)\) alors les hypot
 
 \begin{proof}
   \begin{itemize}
-  \item si \(x_1=x_2\), alors on a bien \(0 \leqslant 0\);
-  \item sinon, grâce aux inéaglités des accroissements finis on a
-    \begin{equation}
-      -k \leqslant \frac{f(x_2)-f(x_1)}{x_2-x_1} \leqslant k,
-    \end{equation}
-    et donc
-    \begin{equation}
-       \abs{f(x_2)-f(x_1)} \leqslant k\abs{x_2-x_1}.
-    \end{equation}
+    \item si \(x_1=x_2\), alors on a bien \(0 \leqslant 0\);
+    \item sinon, grâce aux inéaglités des accroissements finis on a
+      \begin{equation}
+        -k \leqslant \frac{f(x_2)-f(x_1)}{x_2-x_1} \leqslant k,
+      \end{equation}
+      et donc
+      \begin{equation}
+        \abs{f(x_2)-f(x_1)} \leqslant k\abs{x_2-x_1}.
+      \end{equation}
   \end{itemize}
 \end{proof}
 
@@ -594,20 +595,20 @@ Si \(a < b\) et si \(f \in \classe{1}(\intervalleff{a}{b}, \R)\) alors les hypot
 \begin{theo}
   Soient \(I\) un intervalle réel et \(f \in \R^I\) et \(k \in \Rplus\). On suppose que \(f\) est continue sur I et dérivable sur \(\mathring{I}\). Alors
   \begin{enumerate}
-  \item \(f\) est constante qur I si et seulement si \(f'\) est nulle sur \(\mathring{I}\);
-  \item \(f\) est croissante (resp.\ décroissante) sur I si et seulement si \(f'\) est positive (resp.\ négative) sur \(\mathring{I}\);
-  \item \(f\) est strictement croissante (resp.\ strictement décroissante) sur I si et seulement si \(f'\) est positive (resp.\ négative) sur \(\mathring{I}\) et pour tout \(a,b \in I\) qu'il existe un \(c \in \intervalleoo{a}{b}\) en lequel \(f'\) est non nulle;
-  \item \(f\) est \(k\)-lipschitzienne si et seulement si \(\sup\limits_{\mathring{I}} \abs{f'} \leqslant k\).
+    \item \(f\) est constante qur I si et seulement si \(f'\) est nulle sur \(\mathring{I}\);
+    \item \(f\) est croissante (resp.\ décroissante) sur I si et seulement si \(f'\) est positive (resp.\ négative) sur \(\mathring{I}\);
+    \item \(f\) est strictement croissante (resp.\ strictement décroissante) sur I si et seulement si \(f'\) est positive (resp.\ négative) sur \(\mathring{I}\) et pour tout \(a,b \in I\) qu'il existe un \(c \in \intervalleoo{a}{b}\) en lequel \(f'\) est non nulle;
+    \item \(f\) est \(k\)-lipschitzienne si et seulement si \(\sup\limits_{\mathring{I}} \abs{f'} \leqslant k\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   Démontrons le deuxième point pour \(f\) croissante. Si \(f\) est croissante alors pour tout \(x_0 \in \mathring{I}\) et tout \(x \in I\) \(\frac{f(x)-f(x_0)}{x-x_0} \geqslant 0\) or on sait que \(f\) est dérivable en \(x_0\) donc par passage à la limite \(f'(x_0) \geqslant 0\). Si maintenant \(f'\) est positive sur \(\mathring{I}\) alors pour tout \(x,y\) de \(I\) tels que \(x < y\), par égalité des accroissements finis, il existe \(c \in ]x,y[\) tel que \(f(x)-f(y) = f'(c)(x-y)\). Or \(f'(c) \geqslant 0\) et \(y-x > 0\). Donc \(f(y) \geqslant f(x)\) et ainsi \(f\) est croissante. Pour \(f\) décroissante on applique le résultat qui précéde à \(-f\).
 
-Le premier point se déduit du deuxième puisque \(f\) est constante si et seulement si \(f\) est croissante et \(f\) est décroissante.
+  Le premier point se déduit du deuxième puisque \(f\) est constante si et seulement si \(f\) est croissante et \(f\) est décroissante.
 
-Démontrons le troisième point pour \(f\) strictement croissante. La fonction \(f\) est strictement croissante si et seulement si elle est croissante et injective, c'est à dire si et seulement si \(f' \geqslant \tilde{0}\) et \(f\) injective. Donc d'après l'égalité des accroissement finis pour tout \(a,b \in I\) avec \(a <b\) il existe un \(c \in \intervalleoo{a}{b}\) tel que \(f(b)-f(a)=f'(c)(b-a)\). Comme \(a \neq b\) et que \(f\) est injective alors \(f'(c) \neq 0\). Si maintenant on suppose que \(f\) est croissante et qu'il existe un \(c \in ]a,b[\) tel que \(f'(c) \neq 0\). Alors d'après le premier point \(f\) n'est pas constante donc \(f(a) < f(b)\) (Il serait absurde d'avoir \(f(a)=f(b)\)). Alors \(f\) est strictement croissante. On a montré l'équivalence. Pour \(f\) strictement décroissante on applique le résultat à \(-f\).
+  Démontrons le troisième point pour \(f\) strictement croissante. La fonction \(f\) est strictement croissante si et seulement si elle est croissante et injective, c'est à dire si et seulement si \(f' \geqslant \tilde{0}\) et \(f\) injective. Donc d'après l'égalité des accroissement finis pour tout \(a,b \in I\) avec \(a <b\) il existe un \(c \in \intervalleoo{a}{b}\) tel que \(f(b)-f(a)=f'(c)(b-a)\). Comme \(a \neq b\) et que \(f\) est injective alors \(f'(c) \neq 0\). Si maintenant on suppose que \(f\) est croissante et qu'il existe un \(c \in ]a,b[\) tel que \(f'(c) \neq 0\). Alors d'après le premier point \(f\) n'est pas constante donc \(f(a) < f(b)\) (Il serait absurde d'avoir \(f(a)=f(b)\)). Alors \(f\) est strictement croissante. On a montré l'équivalence. Pour \(f\) strictement décroissante on applique le résultat à \(-f\).
 
-Pour le quatrième point, on a déjà vu que si \(f'\) était bornée alors \(f\) est \(k-\)lipschitzienne. Si maintenant on suppose que \(f\) est \(k-\)lipschitzienne et dérivable sur \(\mathring{I}\), alors pour tout \(x_0 \in \mathring{I}\) et tout \(x \in I\) \(x \neq x_0\) on a \(\abs{\frac{f(x)-f(x_0)}{x-x_0}} \leqslant k\). Comme \(f\) est dérivable en \(x_0\), on peut passer à la limite en \(x_0\) et donc on a bien \(\abs{f'(x_0)} \leqslant k\). Il faut quand même vérifier que \(f\) est bien dérivable avant d'appliquer ce point.
+  Pour le quatrième point, on a déjà vu que si \(f'\) était bornée alors \(f\) est \(k-\)lipschitzienne. Si maintenant on suppose que \(f\) est \(k-\)lipschitzienne et dérivable sur \(\mathring{I}\), alors pour tout \(x_0 \in \mathring{I}\) et tout \(x \in I\) \(x \neq x_0\) on a \(\abs{\frac{f(x)-f(x_0)}{x-x_0}} \leqslant k\). Comme \(f\) est dérivable en \(x_0\), on peut passer à la limite en \(x_0\) et donc on a bien \(\abs{f'(x_0)} \leqslant k\). Il faut quand même vérifier que \(f\) est bien dérivable avant d'appliquer ce point.
 \end{proof}
 
 En particulier si \(x \in \mathring{I}\), alors \(f'(x)>0\) et donc \(f\) est strictement croissante. Ou encore si pour tout \(x \in \mathring{I}\),  \(f'(x_0) >0\) et si \(f'\) ne s'annule qu'en un nombre fini de point alors \(f\) est strictement croissante.
@@ -617,26 +618,26 @@ En particulier si \(x \in \mathring{I}\), alors \(f'(x)>0\) et donc \(f\) est st
 \begin{theo}
   Soient deux réels \(a,b\) avec \(a <b\) et \(f \in \R^{\intervallefo{a}{b}}\). On suppose que
   \begin{enumerate}
-  \item \(f\) est croissante sur \(\intervallefo{a}{b}\);
-  \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\);
-  \item qu'il existe un réel \(l\) tel que \(\ell = \lim\limits_{a^+}f'\).
+    \item \(f\) est croissante sur \(\intervallefo{a}{b}\);
+    \item \(f\) est dérivable sur \(\intervalleoo{a}{b}\);
+    \item qu'il existe un réel \(l\) tel que \(\ell = \lim\limits_{a^+}f'\).
   \end{enumerate}
   Alors \(f\) est dérivable en \(a\) et \(f'(a)=\ell\) et la dérivée de \(f\) est continue en \(a\).
 \end{theo}
 \begin{proof}
   Pour tout \(x \in \intervalleoo{a}{b}\), on peut appliquer l'égalité des accroissements finis à \(f\) sur \(\intervalleff{a}{x}\) car
   \begin{enumerate}
-  \item \(f\) est continue sur \(\intervalleff{a}{x} \subset \intervallefo{a}{b}\);
-  \item \(f\) est dérivable sur \(\intervalleoo{a}{x} \subset \intervalleoo{a}{b}\).
+    \item \(f\) est continue sur \(\intervalleff{a}{x} \subset \intervallefo{a}{b}\);
+    \item \(f\) est dérivable sur \(\intervalleoo{a}{x} \subset \intervalleoo{a}{b}\).
   \end{enumerate}
   Alors pour tout \(x \in  \intervalleoo{a}{b}\) il existe \(c_x \in ]a,x[\) tel que \(\frac{f(x)-f(a)}{x-a}=f'(c_x)\). Par théorème des gendarmes \(\lim\limits{x \to a} c_x=a\) et par hypothèse \(\ell = \lim\limits_{a^+}f'\). Alors par composition \(\lim\limits_{x \to a^+} f'(c_x)=\ell\). Alors on a montré que \(\lim\limits_{x \to a^+} \frac{f(x)-f(a)}{x-a} = \ell\). Ainsi \(f\) est dérivable en \(a\) et \(f'(a)=\ell\). Par hypothèse on a aussi \(\ell = \lim\limits_{a^+}f'\). Finalement \(f'(a)=\lim\limits_{a^+}f'\) donc \(f'\) est continue en \(a\).
 \end{proof}
 \begin{corth}
   Soient deux réels \(a,b\) avec \(a<b\) et \(f\in \R^{\intervalleff{a}{b}}\). On suppose que
   \begin{enumerate}
-  \item \(f\) est continue sur \(\intervalleff{a}{b}\);
-  \item \(f\) est de classe \(\classe{1}\) sur \(\intervalleof{a}{b}\);
-  \item qu'il existe \(\ell \in \R\) tel que \(\ell=\lim\limits_{a^+}f'\).
+    \item \(f\) est continue sur \(\intervalleff{a}{b}\);
+    \item \(f\) est de classe \(\classe{1}\) sur \(\intervalleof{a}{b}\);
+    \item qu'il existe \(\ell \in \R\) tel que \(\ell=\lim\limits_{a^+}f'\).
   \end{enumerate}
   Alors \(f \in \classe{1}(\intervalleff{a}{b},\R)\) et \(f'(a)=\ell\).
 \end{corth}
@@ -656,7 +657,7 @@ On montre de la même manière que \(\frac{f(x)-f(a)}{x-a} \to \pm \infty\) et q
 \begin{defdef}
   Soit \(f \in \C^I\) et \(a \in I\). On dit que \(f\) est dérivable en \(a\) lorsque la fonction \(x \longmapsto \frac{f(x)-f(a)}{x-a}\) admet une limite \(\ell\). Si cette limite existe elle est unique. On l'appelle nombre dérivée de \(f\) en \(a\) et on note \(\ell=f'(a)\).
 
-On note \(\derivpt{a}{I}{\C}\) l'ensemble des fonctions de \(\C^I\) qui sont dérivables en \(a\).
+  On note \(\derivpt{a}{I}{\C}\) l'ensemble des fonctions de \(\C^I\) qui sont dérivables en \(a\).
 \end{defdef}
 \begin{theo}
   Soit \(f \in \C^I\) et \(a \in I\). \(f\) est dérivable en \(a\) si et seulement si sa partie réelle \(\Re(f)\) et sa partie imaginaire \(\Im(f)\) sont dérivables en \(a\). Auquel cas
@@ -665,7 +666,7 @@ On note \(\derivpt{a}{I}{\C}\) l'ensemble des fonctions de \(\C^I\) qui sont dé
   \end{equation}
 \end{theo}
 \begin{proof}
- On note \(\fonction{g}{I\setminus\{a\}}{\C}{x}{\frac{f(x)-f(a)}{x-a}}\). La fonction \(f\) est dérivable en \(a\) si et seulement si \(g\) admet une limite en a -- par définition. Cette fonction \(g\) admet une limite en \(a\) si et seulement si sa partie réelle \(\Re(g)\) et sa partie imaginaire \(\Im(g)\) admettent une limite en \(a\) et auquel cas \(\lim\limits_{a}g =  \lim\limits_{a} \Re(g) + \ii \lim\limits_{a} \Im(g)\). Les fonctions \(\Re(g)\) et \(\Im(g)\) admettent une limite en \(a\) si et seulement si  \(\Re(f)\) et \(\Im(f)\) sont dérivables en \(a\) et auquel cas \(f'(a) = \Re(f)'(a) + \ii \Im(f)'(a)\).
+  On note \(\fonction{g}{I\setminus\{a\}}{\C}{x}{\frac{f(x)-f(a)}{x-a}}\). La fonction \(f\) est dérivable en \(a\) si et seulement si \(g\) admet une limite en a -- par définition. Cette fonction \(g\) admet une limite en \(a\) si et seulement si sa partie réelle \(\Re(g)\) et sa partie imaginaire \(\Im(g)\) admettent une limite en \(a\) et auquel cas \(\lim\limits_{a}g =  \lim\limits_{a} \Re(g) + \ii \lim\limits_{a} \Im(g)\). Les fonctions \(\Re(g)\) et \(\Im(g)\) admettent une limite en \(a\) si et seulement si  \(\Re(f)\) et \(\Im(f)\) sont dérivables en \(a\) et auquel cas \(f'(a) = \Re(f)'(a) + \ii \Im(f)'(a)\).
 \end{proof}
 \begin{prop}
   Soit \(f \in \C^I\) et \(a \in I\). Si \(f\) est dérivable en \(a\) alors elle est continue en \(a\).
@@ -788,35 +789,35 @@ Soit \(I\) un intervalle réel non vide et non réduit à un point.
 \begin{proof}[Démonstration par récurrence]
   Soit un naturel \(n\) non nul et la propriété \(\P\) telle que \(\P(n)\) ``\(\forall x_1, \ldots x_n \in I \ \forall \alpha_1, \ldots, \alpha_n \in \R\) tels que \(\forall k \in \intervalleentier{1}{n} \ \alpha_k \geqslant 0 \quad \sum_{k=1}^n \alpha_k = 1\) alors \(\sum_{k=1}^n \alpha_k x_k \in I \ f\left(\sum_{k=1}^n \alpha_k x_k \right) \leqslant \sum_{k=1}^n \alpha_k f(x_k)\)''.
 
-Pour l'initialisation à \(n=1\), on a \(\alpha_1=1 \geqslant 0\) alors \(\alpha_1 x_1=x_1 \in I\) et \(f(\alpha_1 x_1)=f(x_1)=\alpha_1f(x_1)\) alors \(\P(1)\) est vraie.
+  Pour l'initialisation à \(n=1\), on a \(\alpha_1=1 \geqslant 0\) alors \(\alpha_1 x_1=x_1 \in I\) et \(f(\alpha_1 x_1)=f(x_1)=\alpha_1f(x_1)\) alors \(\P(1)\) est vraie.
 
-Soit \(n \in \N^*\) et supposons \(\P(n)\), montrons \(\P(n+1)\). Soient \(x_1, \ldots, x_{n+1} \in I \ \forall \alpha_1, \ldots, \alpha_{n+1} \in \R\) tels que \(\forall k \in \llbracket 1,n+1 \rrbracket \ \alpha_k \geqslant 0 \quad \sum_{k=1}^{n+1} \alpha_k = 1\). Deux cas de figure se présentent :
-\begin{itemize}
-\item si \(\alpha_{n+1}=1\) les autres sont tous nuls et donc 
-  \begin{equation}
-    \sum_{k=1}^{n+1} \alpha_k x_k = x_{n+1} \in I  \quad f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) = f(x_{n+1})=\sum_{k=1}^{n+1} \alpha_k f(x_k).
-  \end{equation}
-  Donc \(\P(n+1)\) est vraie.
-\item sinon, \(\sum_{k=1}^{n+1} \alpha_k = 1-\alpha_{n+1} \neq 0\) et donc
-  \begin{align}
-    \sum_{k=1}^{n+1} \alpha_k x_k &= \sum_{k=1}^{n} \alpha_k x_k + \alpha_{n+1} x_{n+1}\\
-    &=(1-\alpha_{n+1}) \sum_{k=1}^{n} \frac{\alpha_k}{1-\alpha_{n+1}} x_k + \alpha_{n+1} x_{n+1}.
-  \end{align}
-  On note pour tout \(k\) tel que \(1 \leqslant k \leqslant n\) \(\beta_k=\frac{\alpha_k}{1-\alpha_{n+1}} \geqslant 0\). Alors \(\sum_{k=1}^n \beta_k = 1\). Par hypothèse de récurrence, \(\sum_{k=1}^n \beta_kx_k \in I\). De plus \(x_{n+1} \in I\), alors puisque \(I\) est un intervalle, il est convexe donc \((1-\alpha_{n+1}) \sum_{k=1}^{n} \beta_k x_k + \alpha_{n+1} x_{n+1} \in I\). En appliquant \(f\) qui est convexe on a
-  \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1}) f\left(\sum_{k=1}^n \beta_k x_k \right) + \alpha_{n+1}f(x_{n+1}).
-  \end{equation}
-  Par hypothèse de récurrence, puisque pour tout \(k\) \(\beta_k \geqslant 0\) et \(\sum_{k=1}^n \beta_k = 1\) alors \(f\left(\sum_{k=1}^n \beta_k x_k \right) \leqslant \sum_{k=1}^n \beta_k f(x_k)\). Puisque \(1-\alpha_{n+1} \geqslant 0\) on a
-  \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1})\sum_{k=1}^n \beta_k f(x_k) + \alpha_{n+1} f(x_{n+1})
-  \end{equation}
-  Par définition des \(\beta_k\) on obtient
-  \begin{equation}
-    f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant \sum_{k=1}^{n+1} \alpha_k f(x_k).
-  \end{equation}
-  Alors \(\P(n+1)\) est vraie.
-\end{itemize}
-Dans tous les cas, \(\P(n)\) entraîne \(\P(n+1)\) et \(\P(1)\) est vrai donc par théorème de récurrence, la propriété \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
+  Soit \(n \in \N^*\) et supposons \(\P(n)\), montrons \(\P(n+1)\). Soient \(x_1, \ldots, x_{n+1} \in I \ \forall \alpha_1, \ldots, \alpha_{n+1} \in \R\) tels que \(\forall k \in \llbracket 1,n+1 \rrbracket \ \alpha_k \geqslant 0 \quad \sum_{k=1}^{n+1} \alpha_k = 1\). Deux cas de figure se présentent :
+  \begin{itemize}
+    \item si \(\alpha_{n+1}=1\) les autres sont tous nuls et donc 
+      \begin{equation}
+        \sum_{k=1}^{n+1} \alpha_k x_k = x_{n+1} \in I  \quad f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) = f(x_{n+1})=\sum_{k=1}^{n+1} \alpha_k f(x_k).
+      \end{equation}
+      Donc \(\P(n+1)\) est vraie.
+    \item sinon, \(\sum_{k=1}^{n+1} \alpha_k = 1-\alpha_{n+1} \neq 0\) et donc
+      \begin{align}
+        \sum_{k=1}^{n+1} \alpha_k x_k &= \sum_{k=1}^{n} \alpha_k x_k + \alpha_{n+1} x_{n+1}\\
+                                      &=(1-\alpha_{n+1}) \sum_{k=1}^{n} \frac{\alpha_k}{1-\alpha_{n+1}} x_k + \alpha_{n+1} x_{n+1}.
+      \end{align}
+      On note pour tout \(k\) tel que \(1 \leqslant k \leqslant n\) \(\beta_k=\frac{\alpha_k}{1-\alpha_{n+1}} \geqslant 0\). Alors \(\sum_{k=1}^n \beta_k = 1\). Par hypothèse de récurrence, \(\sum_{k=1}^n \beta_kx_k \in I\). De plus \(x_{n+1} \in I\), alors puisque \(I\) est un intervalle, il est convexe donc \((1-\alpha_{n+1}) \sum_{k=1}^{n} \beta_k x_k + \alpha_{n+1} x_{n+1} \in I\). En appliquant \(f\) qui est convexe on a
+      \begin{equation}
+        f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1}) f\left(\sum_{k=1}^n \beta_k x_k \right) + \alpha_{n+1}f(x_{n+1}).
+      \end{equation}
+      Par hypothèse de récurrence, puisque pour tout \(k\) \(\beta_k \geqslant 0\) et \(\sum_{k=1}^n \beta_k = 1\) alors \(f\left(\sum_{k=1}^n \beta_k x_k \right) \leqslant \sum_{k=1}^n \beta_k f(x_k)\). Puisque \(1-\alpha_{n+1} \geqslant 0\) on a
+      \begin{equation}
+        f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant (1-\alpha_{n+1})\sum_{k=1}^n \beta_k f(x_k) + \alpha_{n+1} f(x_{n+1})
+      \end{equation}
+      Par définition des \(\beta_k\) on obtient
+      \begin{equation}
+        f\left(\sum_{k=1}^{n+1} \alpha_k x_k\right) \leqslant \sum_{k=1}^{n+1} \alpha_k f(x_k).
+      \end{equation}
+      Alors \(\P(n+1)\) est vraie.
+  \end{itemize}
+  Dans tous les cas, \(\P(n)\) entraîne \(\P(n+1)\) et \(\P(1)\) est vrai donc par théorème de récurrence, la propriété \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 
 \subsubsection{Interprétation graphique}
@@ -850,13 +851,13 @@ et il existe un point \(M \in [M_1M_2]\) si et seulement si \(M(tx_1+(1-t)x_2, t
   \end{equation}
   Pour avoir la définition il manque
   \begin{enumerate}
-  \item si \(t=0\) et si \(x_1, x_2 \in I\) alors \(f(tx_1+(1-t)x_2)=f(x_2)=tf(x_1)+(1-t)f(x_2)\);
-  \item si \(t=1\) et si \(x_1, x_2 \in I\) alors \(f(tx_1+(1-t)x_2)=f(x_1)=tf(x_1)+(1-t)f(x_2)\);
-  \item si \(x_1=x_2\) et si \(t \in [0,1]\) alors \(f(tx_1+(1-t)x_2)=f(x_2)=f(x_2)=tf(x_1)+(1-t)f(x_2)\);
-  \item si \(x_1>x_2\) et si \(t \in ]0,1[\) on pose \(x'_1=x_2\), \(x'_2=x_1\) et \(t'=1-t\) et on a
-    \begin{align}
-      f(tx_1+(1-t)x_2) &=f((1-t')x'_2+t'x'_2)\\ &= (1-t')f(x'_2) + t'f(x'_1) \\ &=tf(x_1)+(1-t)f(x_2).
-    \end{align}
+    \item si \(t=0\) et si \(x_1, x_2 \in I\) alors \(f(tx_1+(1-t)x_2)=f(x_2)=tf(x_1)+(1-t)f(x_2)\);
+    \item si \(t=1\) et si \(x_1, x_2 \in I\) alors \(f(tx_1+(1-t)x_2)=f(x_1)=tf(x_1)+(1-t)f(x_2)\);
+    \item si \(x_1=x_2\) et si \(t \in [0,1]\) alors \(f(tx_1+(1-t)x_2)=f(x_2)=f(x_2)=tf(x_1)+(1-t)f(x_2)\);
+    \item si \(x_1>x_2\) et si \(t \in ]0,1[\) on pose \(x'_1=x_2\), \(x'_2=x_1\) et \(t'=1-t\) et on a
+      \begin{align}
+        f(tx_1+(1-t)x_2) &=f((1-t')x'_2+t'x'_2)\\ &= (1-t')f(x'_2) + t'f(x'_1) \\ &=tf(x_1)+(1-t)f(x_2).
+      \end{align}
   \end{enumerate}
   Finalement puisque ces quatres conditions sont vérifiées, la fonction \(f\) est convexe.
 \end{proof}
@@ -904,23 +905,23 @@ et il existe un point \(M \in [M_1M_2]\) si et seulement si \(M(tx_1+(1-t)x_2, t
 \end{theo}
 \begin{proof}
   Supposons que \(f\) soit convexe. Soit \(a \in I\), montrons que \(p_a\) croît. Soient \((x,x') \in I\setminus\{a\}^2\) tels que \(x < x'\). La démarche repose sur l'utilisation du théorème~
-\ref{theo:pentes}. Trois cas de figures se présentent :
+  \ref{theo:pentes}. Trois cas de figures se présentent :
   \begin{enumerate}
-  \item \(x < x' < a\) et dans ce cas le théorème nous dit que
-    \begin{equation}
-      \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(a)-f(x')}{a-x'}
-    \end{equation}
-    et donc \(p_a(x) \leqslant p_a(x')\);
-  \item \(a < x < x'\) et dans ce cas le théorème nous dit que
-    \begin{equation}
-      \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(x')-f(a)}{x'-a} \leqslant \frac{f(x')-f(x)}{x'-x}
-    \end{equation}
-    et donc \(p_a(x) \leqslant p_a(x')\);
-  \item \(x<a<x'\)  et dans ce cas le théorème nous dit que
-    \begin{equation}
-      \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(x')-f(a)}{x'-a}
-    \end{equation}
-    et donc \(p_a(x) \leqslant p_a(x')\).
+    \item \(x < x' < a\) et dans ce cas le théorème nous dit que
+      \begin{equation}
+        \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(a)-f(x')}{a-x'}
+      \end{equation}
+      et donc \(p_a(x) \leqslant p_a(x')\);
+    \item \(a < x < x'\) et dans ce cas le théorème nous dit que
+      \begin{equation}
+        \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(x')-f(a)}{x'-a} \leqslant \frac{f(x')-f(x)}{x'-x}
+      \end{equation}
+      et donc \(p_a(x) \leqslant p_a(x')\);
+    \item \(x<a<x'\)  et dans ce cas le théorème nous dit que
+      \begin{equation}
+        \frac{f(a)-f(x)}{a-x} \leqslant \frac{f(x')-f(x)}{x'-x} \leqslant \frac{f(x')-f(a)}{x'-a}
+      \end{equation}
+      et donc \(p_a(x) \leqslant p_a(x')\).
   \end{enumerate}
   Dans tous les cas, on a montré que \(p_a\) était croissante.
 
@@ -953,7 +954,7 @@ et il existe un point \(M \in [M_1M_2]\) si et seulement si \(M(tx_1+(1-t)x_2, t
 \end{theo}
 \begin{proof}
   Soient \((a,b) \in I^2\) tels que \(a <b\) et \(x \in \intervalleoo{a}{b}\). D'après le théorème~
-\ref{theo:pentes} on a
+  \ref{theo:pentes} on a
   \begin{equation}
     \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(b)-f(a)}{b-a} \leqslant \frac{f(b)-f(x)}{b-x}.
   \end{equation}
@@ -964,7 +965,7 @@ et il existe un point \(M \in [M_1M_2]\) si et seulement si \(M(tx_1+(1-t)x_2, t
 \end{theo}
 \begin{proof}
   Si \(f\) est convexe alors d'après le théorème~
-\ref{theo:croisderiv} la dérivée \(f'\) est croissante.
+  \ref{theo:croisderiv} la dérivée \(f'\) est croissante.
 
   On suppose que \(f'\) est croissante. Soient \(x_1,x_2 \in I\) tels que \(x_1<x_2\) et \(t \in \intervalleoo{0}{1}\). Posons \(y=tx_1+(1-t)x_2 \in \intervalleoo{x_1}{x_2}\). Nous voulons démontrer que \(f(y) \leqslant tf(x_1)+(1-t)f(x_2)\). La fonction \(f\) est continue sur \(\intervalleff{x_1}{y}\) et dérivable sur \(\intervalleoo{x_1}{y}\). En appliquant l'égalité des accroissements finis, il existe un réel \(c_1 \in \intervalleoo{x_1}{y}\) tel que
   \begin{equation}
@@ -975,23 +976,23 @@ et il existe un point \(M \in [M_1M_2]\) si et seulement si \(M(tx_1+(1-t)x_2, t
     f(x_2)-f(y)=f'(c_2)(x_2-y)=f'(c_2)t(x_2-x_1).
   \end{equation}
 
-Comme \(x_1<c_1<y<c_2<y_2\), comme \(f'\) croît on a \(f'(c_1) \leqslant f'(c_2)\). Comme \(0<t<1\) et \(x_1<x_2\) on divise et on obtient
-\begin{equation}
-  f'(c_1) = \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \quad f'(c_2) = \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
-\end{equation}
-Alors
-\begin{equation}
-  \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leqslant \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
-\end{equation}
-Soit alors, puisque \(t>0, 1-t>0\) et \(x_2-x_1>0\),
-\begin{equation}
-  t(f(y)-f(x_1)) \leqslant (1-t)(f(x_2)-f(y)).
-\end{equation}
-Finalement
-\begin{equation}
-  f(y) \leqslant tf(x_1)+(1-t)f(x_2).
-\end{equation}
-Par caractérisation des fonctions convexes, la fonction \(f\) est convexe.
+  Comme \(x_1<c_1<y<c_2<y_2\), comme \(f'\) croît on a \(f'(c_1) \leqslant f'(c_2)\). Comme \(0<t<1\) et \(x_1<x_2\) on divise et on obtient
+  \begin{equation}
+    f'(c_1) = \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \quad f'(c_2) = \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
+  \end{equation}
+  Alors
+  \begin{equation}
+    \frac{f(y)-f(x_1)}{(1-t)(x_2-x_1)} \leqslant \frac{f(x_2)-f(x_1)}{t(x_2-x_1)}.
+  \end{equation}
+  Soit alors, puisque \(t>0, 1-t>0\) et \(x_2-x_1>0\),
+  \begin{equation}
+    t(f(y)-f(x_1)) \leqslant (1-t)(f(x_2)-f(y)).
+  \end{equation}
+  Finalement
+  \begin{equation}
+    f(y) \leqslant tf(x_1)+(1-t)f(x_2).
+  \end{equation}
+  Par caractérisation des fonctions convexes, la fonction \(f\) est convexe.
 \end{proof}
 \begin{corth}
   Soit \(f \in \R^I\). Si \(f\) est deux fois dérivable sur \(I\) alors \(f\) est convexe si et seulement si \(f''\) est positive.
@@ -1005,11 +1006,11 @@ Par caractérisation des fonctions convexes, la fonction \(f\) est convexe.
 \begin{proof}
   Supposons que \(f\) soit convexe. Soit \(a \in I\).
   \begin{itemize}
-  \item Si \(x=a\) alors la proposition est vraie \(f(a) \geqslant f(a)\);
-  \item si \(x < a\) alors d'après le théorème~
-\ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \leqslant f'(a)\) et donc comme \(x-a <0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\);
-  \item si \(x > a\) alors d'après le théorème~
-\ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \geqslant f'(a)\) et donc comme \(x-a >0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\).
+    \item Si \(x=a\) alors la proposition est vraie \(f(a) \geqslant f(a)\);
+    \item si \(x < a\) alors d'après le théorème~
+      \ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \leqslant f'(a)\) et donc comme \(x-a <0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\);
+    \item si \(x > a\) alors d'après le théorème~
+      \ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \geqslant f'(a)\) et donc comme \(x-a >0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\).
   \end{itemize}
 
   Supposons maintenant que  pour tout \((x,a) \in I^2\), \(f(x) \geqslant f(a)+f'(a)(x-a)\). Pour montrer que \(f\) est convexe, on va montrer que \(f'\) est croissante. Soit \((a,b) \in I^2\) tels que \(a \leqslant b\) alors
@@ -1035,9 +1036,9 @@ Pour pouvoir définir une suite \(u\) par \(\begin{cases} u_0=a \in I \\ u_{n+1}
 \begin{prop}
   On suppose que 
   \begin{enumerate}
-  \item \(f\) est continue;
-  \item \(I\) est stable par \(f\);
-  \item \(I\) est fermé.
+    \item \(f\) est continue;
+    \item \(I\) est stable par \(f\);
+    \item \(I\) est fermé.
   \end{enumerate}
   Soit \(a \in I\) et \(u\) définie par \(\begin{cases} u_0=a \in I \\ u_{n+1}=f(u_n) \end{cases}\). On suppose que \(u\) tend vers \(\ell\). Alors \(\ell \in I\) et \(f(\ell)=\ell\).
 \end{prop}
@@ -1064,8 +1065,8 @@ Sous les trois premières hypothèses, si la fonction \(f\) n'admet pas de point
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-  \item si \(u_0 \leqslant u_1\), on montre par récurrence la sur \(n \in \N\) la propriété \(\P(n)\) ``\(u_n \leqslant u_{n+1}\)''. \(\P(0)\) est vraie par hypothèse. Supposons que pour un \(n \in \N\) donné, \(\P(n)\) soit vérifiée, alors puisque \(f\) est croissante on a \(f(u_n) \leqslant f(u_{n+1})\), c'est-à-dire que \(\P(n+1)\) est vraie. Alors par théorème de récurrence la propriété est vraie pour tout \(n \in \N\). La suite \(u\) croît.
-  \item si \(u_0 \geqslant u_1\), on montre de la même manière que pour tout naturel \(n\) \(u_n \geqslant u_{n+1}\). La suite \(u\) décroît.
+    \item si \(u_0 \leqslant u_1\), on montre par récurrence la sur \(n \in \N\) la propriété \(\P(n)\) ``\(u_n \leqslant u_{n+1}\)''. \(\P(0)\) est vraie par hypothèse. Supposons que pour un \(n \in \N\) donné, \(\P(n)\) soit vérifiée, alors puisque \(f\) est croissante on a \(f(u_n) \leqslant f(u_{n+1})\), c'est-à-dire que \(\P(n+1)\) est vraie. Alors par théorème de récurrence la propriété est vraie pour tout \(n \in \N\). La suite \(u\) croît.
+    \item si \(u_0 \geqslant u_1\), on montre de la même manière que pour tout naturel \(n\) \(u_n \geqslant u_{n+1}\). La suite \(u\) décroît.
   \end{enumerate}
 \end{proof}
 
@@ -1079,11 +1080,11 @@ Si \(u_0\) est un point fixe de \(f\), alors \(u\) est constante égale à \(u_0
 \end{prop}
 \begin{proof}
   L'application \(f\) est décroissante, donc la composée \(f \circ f\) est aussi décroissante. Pour tout naturel \(n\) \(u_{2n+2}=f \circ f(u_{2n})\). D'après la proposition~
-\ref{prop:fmonotoneu} la suite extraite \((u_{2n})\) est monotone. Deux cas de figure se présentent
+  \ref{prop:fmonotoneu} la suite extraite \((u_{2n})\) est monotone. Deux cas de figure se présentent
   \begin{enumerate}
-  \item si \((u_{2n})\) est croissante alors pour tout naturel \(n\) on a \(u_{2n} \leqslant u_{2n+2}\) et comme \(f\) est décroissante \(f(u_{2n}) \geqslant f(u_{2n+2})\) c'est à dire \(u_{2n+1} \geqslant u_{2n+3}\). Alors la suite extraite \((u_{2n+1})\) est décroissante;
-  \item si \((u_{2n})\) est décroissante on montre de la même manière que \((u_{2n+1})\) est croissante.
-    \end{enumerate}
+    \item si \((u_{2n})\) est croissante alors pour tout naturel \(n\) on a \(u_{2n} \leqslant u_{2n+2}\) et comme \(f\) est décroissante \(f(u_{2n}) \geqslant f(u_{2n+2})\) c'est à dire \(u_{2n+1} \geqslant u_{2n+3}\). Alors la suite extraite \((u_{2n+1})\) est décroissante;
+    \item si \((u_{2n})\) est décroissante on montre de la même manière que \((u_{2n+1})\) est croissante.
+  \end{enumerate}
 \end{proof}
 
 On étudie la convergence des suites extraites en regardant si elles sont majorées ou minorées. Si elles convergent toutes les deux vers la même limite alors la suite \(u\) converge aussi vers cette limite. Si l'une au moins des deux est divergente ou si leurs limites sont différentes, alors la suite \(u\) diverge.
@@ -1102,7 +1103,7 @@ On étudie la convergence des suites extraites en regardant si elles sont major�
 \end{prop}
 \begin{proof}
   Il suffit d'appliquer le deuxième corollaire de l'inégalité des accroissements finis~
-\ref{corth:iaf2}. Soit un naturel \(n\), alors
+  \ref{corth:iaf2}. Soit un naturel \(n\), alors
   \begin{equation}
     \abs{u_{n+1}-\ell}=\abs{f(u_n)-f(\ell)} \leqslant M \abs{u_n-\ell}.
   \end{equation}
@@ -1120,16 +1121,16 @@ On étudie la convergence des suites extraites en regardant si elles sont major�
 
   Sinon, alors pour tout naturel \(n\) \(u_n \neq \ell\). Soit la suite \(v=|u-\ell|>0\). Supposons que \(u\) tend vers \(\ell\) alors \(v\) tend vers zéro. On sait que \(\abs{f'(l)}>1\). Soit \(a \in \R\) tel que \(\abs{f'(\ell)}>a>1\). Pour tout naturel \(n\) \(v_n>0\) donc \(\frac{v_{n+1}}{v_n} = \abs{\frac{f(u_n)-f(\ell)}{u_n-\ell}} \to \abs{f'(\ell)}\). Comme \(\abs{f'(\ell)}>a\) il existe un naturel \(n_0\) à partir duquel \(\frac{v_{n+1}}{v_n} \geqslant a\). Alors par récurrence immédiate pour tout naturel \(p\) non nul \(v_{n_0+p} \geqslant a^p v_{n_0}\).
 
-Or \(\lim\limits{p \to \infty} v_{n_0+p} = 0\) par hypothèse, mais comme \(a >1\) \(\lim\limits_{p \to \infty} a^p v_{n_0}= + \infty\). On aboutit à une absurdité. La suite \(u\) ne tend pas vers \(\ell\).
+  Or \(\lim\limits{p \to \infty} v_{n_0+p} = 0\) par hypothèse, mais comme \(a >1\) \(\lim\limits_{p \to \infty} a^p v_{n_0}= + \infty\). On aboutit à une absurdité. La suite \(u\) ne tend pas vers \(\ell\).
 \end{proof}
 
 \subsection{Étude d'un exemple}
 
 Considérons la fonction \(\fonction{f}{\R^{*}}{\R}{x}{1+\frac{1}{x}}\). Deux intervalles sont possibles \(\Rmoinsetoile\) et \(\Rplusetoile\). Or \(f(-1)=0\) donc \(\Rmoinsetoile\) n'est pas stable par \(f\). On travaille \(\Rplusetoile\). La fonction \(f\) est dérivable et sa dérivée est strcitement négative, alors \(f\) est strictement décroissante. De plus
 \begin{gather}
- f(\Rplusetoile)=\intervalleoo{1}{+\infty}; \\
- f(\intervalleoo{1}{+\infty})=\intervalleoo{1}{2};\\
- f(\intervalleoo{1}{2})=\intervalleoo{3/2}{2} \subset \intervalleoo{1}{2}.
+  f(\Rplusetoile)=\intervalleoo{1}{+\infty}; \\
+  f(\intervalleoo{1}{+\infty})=\intervalleoo{1}{2};\\
+  f(\intervalleoo{1}{2})=\intervalleoo{3/2}{2} \subset \intervalleoo{1}{2}.
 \end{gather}
 Alors l'intervalle \(I=\intervalleff{1}{2}\) est stable par \(f\).
 
@@ -1139,7 +1140,7 @@ Soit la suite définie pour tout naturel \(n\) \(u_{n+1}=f(u_n)\) et par \(u_0 =
 \end{equation}
 et d'après l'inégalité des accroissements finis on a
 \begin{equation}
- \forall n \geqslant 3 \quad \abs{u_{n+1}-\ell}  \leqslant \frac{4}{9} \abs{u_n-\ell}.
+  \forall n \geqslant 3 \quad \abs{u_{n+1}-\ell}  \leqslant \frac{4}{9} \abs{u_n-\ell}.
 \end{equation}
 Alors
 \begin{equation}
@@ -1155,8 +1156,8 @@ Notons déjà que les problèmes sont équivalents, puisqu'un zéro de la foncti
 
 On modifie la fonction \(g\) pour s'assurer de la convergence de la suite \(u\) avec quelques hypothèses sur \(f\). Soit \(\fonction{g}{I}{\R}{x}{x-\frac{f(x)}{f'(x)}}\) en supposant que \(f\) est dérivable et que \(f'\) ne s'annule pas. Plus précisément on pose
 \begin{enumerate}
-\item \(f(a)f(b) <0\), c'est à dire que \(f\) change de signe sur \(I\);
-\item \(f\) est strictement croissante ou décroissante (on supposera que \(f\) est strictement décroissante dans la suite).
+  \item \(f(a)f(b) <0\), c'est à dire que \(f\) change de signe sur \(I\);
+  \item \(f\) est strictement croissante ou décroissante (on supposera que \(f\) est strictement décroissante dans la suite).
 \end{enumerate}
 La fonction \(f\) est continue et \(f(a)f(b) <0\) si et seulement si \(f\) s'annule au moins une fois sur \(\mathring{I}\), d'après le théorème des valeurs intermédiaires. La deuxième hypothèse entraîne que \(f\) est strictement monotone, alors \(f\) ne peut s'annuler qu'une et une seule fois dans \(\mathring{I}\). Notons \(c\) cet unique zéro de \(f\). Construisons une suite \(u\) qui tend vers \(c\). Soit \(u_0 \in \intervalleff{a}{b}\) et \(u_1=g(u_0)\). La tangente à la courbe de \(f\) en \(u_0\) s'exprime comme
 \begin{equation}
@@ -1170,14 +1171,14 @@ En \(x=c\), on a
 \begin{equation}
   0 \geqslant f(u_0)+(c-u_0)f'(u_0),
 \end{equation}
- et comme \(f'(u_0) < 0\) on divise et on obtient
+et comme \(f'(u_0) < 0\) on divise et on obtient
 \begin{equation}
   0 \geqslant c - g(u_0).
 \end{equation}
 Comme \(u_1=g(u_0)\) on a \(u_0 \geqslant u_1 \geqslant c\). Finalement on s'est rapproché de \(c\). Comparons \(\abs{u_1-c}\) et \(\abs{u_0-c}\)~:
 \begin{align}
   \abs{u_1-c} = & \abs{u_0 - \frac{f(u_0)}{f'(u_0)} -c} = \frac{\abs{f'(u_0)u_0 - f(u_0) -f'(u_0)c}}{\abs{f'(u_0)}}\\
-  &= \frac{\abs{f(c)-f(u_0)-f'(u_0)(c-u_0)}}{\abs{f'(u_0)}}.
+                &= \frac{\abs{f(c)-f(u_0)-f'(u_0)(c-u_0)}}{\abs{f'(u_0)}}.
 \end{align}
 En attendant les formules de Taylor, on admet qu'il existe \(d \in \intervalleoo{u_0}{c}\) tel que
 \begin{equation}

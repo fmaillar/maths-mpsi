@@ -15,15 +15,15 @@ Soient deux ensembles finis \(E\) et \(F\) de même cardinal. Il existe alors un
 Pour toutes permutations \(\sigma \in \S(E)\) et \(\sigma' \in \S(F)\) on a
 \begin{align}
   \varphi(\sigma) = \sigma' &\iff f \circ \sigma \circ f^{-1} = \sigma' \\
-  & \iff \sigma =f^{-1} \circ \sigma' \circ f.
+                            & \iff \sigma =f^{-1} \circ \sigma' \circ f.
 \end{align}
 Tout élément de \(\S(F)\) admet un et un seul antécédent par \(\varphi\)~: \(\varphi\) est bijective.
 
 Pour toutes permutations \(\sigma, \zeta\) de \(E\), on a
 \begin{align}
   \varphi(\sigma) \circ \varphi(\zeta) &= (f \circ \sigma \circ f^{-1}) \circ (f \circ \zeta \circ f^{-1}) \\
-  & = f \circ \sigma \circ (f^{-1} \circ f) \circ \zeta \circ f^{-1} \\
-  & = \varphi(\sigma \circ \zeta).
+                                       & = f \circ \sigma \circ (f^{-1} \circ f) \circ \zeta \circ f^{-1} \\
+                                       & = \varphi(\sigma \circ \zeta).
 \end{align}
 Alors \(\varphi\) est un isomorphisme du groupe \((\S(E),\circ)\) sur \((\S(F),\circ)\).
 
@@ -75,9 +75,9 @@ Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = (
 
 \emph{Exemples}~:
 \begin{enumerate}
-\item si \(n = 1\) alors \(\sigma_1 = \{\Id\}\);
-\item si \(n = 2\) alors \(\sigma_2 = \{\Id, (1,2)\}\);
-\item si \(n = 3\) alors \(\sigma_2 = \{\Id, (1,2), (1,3), (2,3), (1,2,3), (1,3,2)\}\).
+  \item si \(n = 1\) alors \(\sigma_1 = \{\Id\}\);
+  \item si \(n = 2\) alors \(\sigma_2 = \{\Id, (1,2)\}\);
+  \item si \(n = 3\) alors \(\sigma_2 = \{\Id, (1,2), (1,3), (2,3), (1,2,3), (1,3,2)\}\).
 \end{enumerate}
 
 \section{Signature d'une permutation}
@@ -95,9 +95,9 @@ Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = (
 
 \emph{Exemple}~: Soit la permutation \(\sigma = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2\end{pmatrix}\). Alors~:
 \begin{itemize}
-\item \((1,2)\) est une inversion puisque \(3>1\);
-\item \((1,3)\) est une inversion puisque \(3>2\);
-\item \((2,3)\) n'est pas une inversion puisque \(1<2\).
+  \item \((1,2)\) est une inversion puisque \(3>1\);
+  \item \((1,3)\) est une inversion puisque \(3>2\);
+  \item \((2,3)\) n'est pas une inversion puisque \(1<2\).
 \end{itemize}
 Ainsi la signature de \(\sigma\) vaut \(1\).
 
@@ -116,8 +116,8 @@ Ainsi la signature de \(\sigma\) vaut \(1\).
   \end{equation}
   Inversions~:
   \begin{itemize}
-  \item \((i,i+1)\) \ldots \((i,j)\);
-  \item \((i+1,j)\) \ldots \((j-1,j)\).
+    \item \((i,i+1)\) \ldots \((i,j)\);
+    \item \((i+1,j)\) \ldots \((j-1,j)\).
   \end{itemize}
   Alors au final on a \(I(\sigma)=[j-(i+1)+1]+[(j-1)-(i+1)+1] = 2(j-i)-1\) qui est un nombre impair donc la signature vaut \(\epsilon(\sigma) = -1\) et donc \(t\) est une permutation impaire.
 \end{proof}
@@ -140,8 +140,8 @@ Montrons que cette définition est équivalente à la première.
   avec \(\epsilon_{ij} = 1\) si \((i,j)\) n'est pas une inversion pour \(\sigma\) et \(-1\) si c'est une inversion pour \(\sigma\). Ainsi
   \begin{align}
     \frac{N}{D} &= \frac{\prod_{(i,j) \in A}\epsilon_{ij}\prod_{(i,j) \in A}(k-h)}{\prod_{(i,j) \in A}(j-i)}\\
-    & = \prod_{(i,j) \in A}\epsilon_{ij}\\
-    & = (-1)^{I(\sigma)}.  
+                & = \prod_{(i,j) \in A}\epsilon_{ij}\\
+                & = (-1)^{I(\sigma)}.  
   \end{align}
 \end{proof}
 
@@ -153,16 +153,16 @@ Montrons que cette définition est équivalente à la première.
 \begin{proof}
   L'application \(\epsilon\) est bien définie. Ensuite~:
   \begin{itemize}
-  \item \(\epsilon(\Id) = 1\) (l'identité n'a aucune inversion);
-  \item \(\epsilon((1,2)) = -1\) (possible puisque \(n\geqslant 2\)).
+    \item \(\epsilon(\Id) = 1\) (l'identité n'a aucune inversion);
+    \item \(\epsilon((1,2)) = -1\) (possible puisque \(n\geqslant 2\)).
   \end{itemize}
   Donc \(\epsilon\) est surjective.
 
   Soient \(\sigma\) et \(s\) deux éléments de \(\sigma_n\). Alors
   \begin{align}
     \epsilon(\sigma \circ s) &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{j-i} \\
-    & = \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)} \prod_{(i,j)\in A} \frac{s(j)-s(i)}{j-i}\\
-    &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)}\epsilon(s).
+                             & = \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)} \prod_{(i,j)\in A} \frac{s(j)-s(i)}{j-i}\\
+                             &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)}\epsilon(s).
   \end{align}
   On note \(h = \min(s(i),s(j))\) et \(k = \max(s(i),s(j))\), l'application
   \begin{equation}

@@ -10,7 +10,7 @@ Dans tout le chapitre \(\K\) désigne un corps.
 
 \subsection{Notion de fraction rationnelle}
 
-On dispose de l'anneau intègre \(\K[X]\) des polynômes à une indéterminée dans le corps \(\K\). On admet qu'on peut définir sons corps des fractions, noté \(\K(X)\), comme le plus petit corps dont \(\K[X]\) est un sous-anneau (définition avec unicité à isomorphisme près).
+On dispose de l'anneau intègre \(\K[X]\) des polynômes à une indéterminée dans le corps \(\K\). On admet qu'on peut définir son corps des fractions, noté \(\K(X)\), comme le plus petit corps dont \(\K[X]\) est un sous-anneau (définition avec unicité à isomorphisme près).
 
 Les éléments de \(\K(X)\) sont appelés fractions rationnelles à une indéterminée à coefficients dans \(\K\). Ils sont de la forme \(F=\frac{A}{B}\) avec \((A,B) \in \K[X]^2\) et \(B\) non nul.
 
@@ -23,14 +23,14 @@ pour tout \((A_1,B_1,A_2,B_2) \in \K[X]^2\) avec \(B_1\) et \(B_2\) non nuls on 
 
 \subsubsection{Lois de compositions internes}
 \begin{itemize}
-\item On définit l'addition par
-  \begin{equation}
-    \forall \left(\frac{A}{B}, \frac{C}{D} \right) \in \K(X)^2 \quad \frac{A}{B}+\frac{C}{D} = \frac{AD+BC}{BD};
-  \end{equation}
-\item on définit le produit par
-\begin{equation}
-    \forall \left(\frac{A}{B}, \frac{C}{D} \right) \in \K(X)^2 \quad \frac{A}{B} \times \frac{C}{D} = \frac{AC}{BD}.
-  \end{equation}
+  \item On définit l'addition par
+    \begin{equation}
+      \forall \left(\frac{A}{B}, \frac{C}{D} \right) \in \K(X)^2 \quad \frac{A}{B}+\frac{C}{D} = \frac{AD+BC}{BD};
+    \end{equation}
+  \item on définit le produit par
+    \begin{equation}
+      \forall \left(\frac{A}{B}, \frac{C}{D} \right) \in \K(X)^2 \quad \frac{A}{B} \times \frac{C}{D} = \frac{AC}{BD}.
+    \end{equation}
 \end{itemize}
 Ces définitions sont légitimes puisque \(AC\) et \(BD\) sont des polynômes (donc \(AC+BD\) en est un aussi). De plus \(BD \neq 0\). Vérifions que ces définitions ne dépendent pas du représentant choisi. Si \(\frac{A}{B}=\frac{A^{*}}{B^{*}}\) et \(\frac{C}{D}=\frac{C^{*}}{D^{*}}\) alors
 \begin{align}
@@ -74,11 +74,11 @@ Soit \((A,B) \in \K[X]^2\) avec \(B\) non nul. Si \(B\) divise \(A\) dans \(\K[X
 
 C'est légitime puisque~:
 \begin{enumerate}
-\item Les polynômes \(\bar{A}\) et \(\bar{B}\) sont dans \(\C[X]\) et comme \(B \neq 0\) alors \(\bar{B} \neq 0\).
-\item Soient deux représentants \(F=\frac{A}{B}=\frac{A^*}{B^*}\) alors \(AB^*=A^*B\) d'où dans \(\K[X]\) on a \(\bar{A}\bar{B^*}=\bar{B}\bar{A^*}\) et ainsi \(\bar{F}=\frac{\bar{A}}{\bar{B}}=\frac{\bar{A^*}}{\bar{B^*}}\). La définition du conjugué ne dépend pas du représentant choisi. En utilisant les propriétés de conjugaison sur \(\C[X]\) on montre que~:
-  \begin{equation}
-    \forall (F,G) \in \C(X)^2 \qquad \overline{F+G}=\overline{F}+\overline{G} \quad \overline{FG}=\overline{F} \cdot \overline{G}.
-  \end{equation}
+  \item Les polynômes \(\bar{A}\) et \(\bar{B}\) sont dans \(\C[X]\) et comme \(B \neq 0\) alors \(\bar{B} \neq 0\).
+  \item Soient deux représentants \(F=\frac{A}{B}=\frac{A^*}{B^*}\) alors \(AB^*=A^*B\) d'où dans \(\K[X]\) on a \(\bar{A}\bar{B^*}=\bar{B}\bar{A^*}\) et ainsi \(\bar{F}=\frac{\bar{A}}{\bar{B}}=\frac{\bar{A^*}}{\bar{B^*}}\). La définition du conjugué ne dépend pas du représentant choisi. En utilisant les propriétés de conjugaison sur \(\C[X]\) on montre que~:
+    \begin{equation}
+      \forall (F,G) \in \C(X)^2 \qquad \overline{F+G}=\overline{F}+\overline{G} \quad \overline{FG}=\overline{F} \cdot \overline{G}.
+    \end{equation}
 \end{enumerate}
 
 \subsection{Fraction rationnelle dérivée}
@@ -91,26 +91,26 @@ C'est légitime puisque~:
 \end{defdef}
 C'est légitime puisque~:
 \begin{enumerate}
-\item \(A'B-B'A \in \K[X]\), \(B^2 \in \K[X] \setminus\{0\}\) donc c'est bien une fraction rationnelle.
-\item Soient deux représentants \(F=\frac{A}{B}=\frac{A_1}{B_1}\) alors on sait que
-  \begin{align}
-    AB_1-A_1B = 0 \label{eq:bidulezz1}\\
-    A'B_1 +AB_1' - A_1'B-A_1B'=0\label{eq:bidulezz2}
-  \end{align}
-  on a dérivé la première égalité. Ensuite
-  \begin{align}
+  \item \(A'B-B'A \in \K[X]\), \(B^2 \in \K[X] \setminus\{0\}\) donc c'est bien une fraction rationnelle.
+  \item Soient deux représentants \(F=\frac{A}{B}=\frac{A_1}{B_1}\) alors on sait que
+    \begin{align}
+      AB_1-A_1B = 0 \label{eq:bidulezz1}\\
+      A'B_1 +AB_1' - A_1'B-A_1B'=0\label{eq:bidulezz2}
+    \end{align}
+    on a dérivé la première égalité. Ensuite
+    \begin{align}
     &(A'B-AB')B_1^{2}-(A_1'B_1-A_1B_1')B^2\\
     &=A'BB_1^{2} - AB'B_1^{2} - A_1'B_1B^{2} -A_1B_1'B^{2} \\
     &=(A'B-A_1'B)BB_1 - (AB_1)B'B_1 +(A_1B)B_1'B\\
     &=(A_1B'-AB_1')BB_1 - (A_1B)B'B_1 +(AB_1)B_1'B\\
     &=0.
-  \end{align}
-  d'après les équations \eqref{eq:bidulezz1} et \eqref{eq:bidulezz2}. Donc
-  \begin{equation}
-    \frac{A'B-AB'}{B^2}=\frac{A_1'B_1-A_1B_1'}{B_1^{2}}.
-  \end{equation}
-  La définition de la dérivée ne dépend pas du représentant choisi.
-\item Vérifions que c'est compatible avec la définition de la dérivée sur \(\K[X]\). Si \(P\in\K[X]\), alors on identifie \(P\) à la fraction rationnelle \(F=\frac{P}{1}\) et \(F'=\frac{P'1-P1'}{1^2}=\frac{P'}{1}\) identifié à \(P\). La dérivée de \(P\) en tant que fraction rationnelle est égale (ou identifiée) à sa dérivé en tant que polynôme.
+    \end{align}
+    d'après les équations \eqref{eq:bidulezz1} et \eqref{eq:bidulezz2}. Donc
+    \begin{equation}
+      \frac{A'B-AB'}{B^2}=\frac{A_1'B_1-A_1B_1'}{B_1^{2}}.
+    \end{equation}
+    La définition de la dérivée ne dépend pas du représentant choisi.
+  \item Vérifions que c'est compatible avec la définition de la dérivée sur \(\K[X]\). Si \(P\in\K[X]\), alors on identifie \(P\) à la fraction rationnelle \(F=\frac{P}{1}\) et \(F'=\frac{P'1-P1'}{1^2}=\frac{P'}{1}\) identifié à \(P\). La dérivée de \(P\) en tant que fraction rationnelle est égale (ou identifiée) à sa dérivé en tant que polynôme.
 \end{enumerate}
 
 \begin{theo}
@@ -124,18 +124,18 @@ C'est légitime puisque~:
   On note \(F=\frac{A}{B}\) et \(G=\frac{C}{D}\) avec \(A,B,C\) et \(D\) quatre polynômes et \(B\) et \(D\) tous les deux non nuls. Alors \(F+G=\frac{AD+BC}{BD}\) et \(FG=\frac{AC}{BD}\). Lorsqu'on dérive on a~:
   \begin{align}
     (F+G)' &= \frac{(AD+BC)'BD-(AD+BC)(BD)'}{(BD)^2}\\
-    &=\frac{A'BD^2+ABDD'+BB'CD+B^2C'D}{B^2D^2}\\
-    &\phantom{=}-\frac{AD^2B'+ABDD'+BB'CD+B^2CD'}{B^2D^2}\\
-    &=\frac{(A'B-AB')D^2}{B^2D^2} +\frac{B^2(C'D-CD')}{B^2D^2} \\
-    &=\frac{A'B-AB'}{B^2} +\frac{C'D-CD'}{D^2}\\
-    &=F'+G'.
+           &=\frac{A'BD^2+ABDD'+BB'CD+B^2C'D}{B^2D^2}\\
+           &\phantom{=}-\frac{AD^2B'+ABDD'+BB'CD+B^2CD'}{B^2D^2}\\
+           &=\frac{(A'B-AB')D^2}{B^2D^2} +\frac{B^2(C'D-CD')}{B^2D^2} \\
+           &=\frac{A'B-AB'}{B^2} +\frac{C'D-CD'}{D^2}\\
+           &=F'+G'.
   \end{align}
   Pour le produit
   \begin{align}
     (FG)' &= \frac{(AC)'BD-(AC)(BD)'}{(BD)^2}\\
-    &=\frac{A'BCD+ABC'D-AB'CD-ABCD'}{B^2D^2}\\
-    &=\frac{(A'B-AB')CD}{B^2D^2} + \frac{AB(C'D-CD')}{B^2D^2}\\
-    &=F'G +FG'.
+          &=\frac{A'BCD+ABC'D-AB'CD-ABCD'}{B^2D^2}\\
+          &=\frac{(A'B-AB')CD}{B^2D^2} + \frac{AB(C'D-CD')}{B^2D^2}\\
+          &=F'G +FG'.
   \end{align}
 \end{proof}
 
@@ -151,8 +151,8 @@ C'est légitime puisque~:
 
 C'est légitime puisque~:
 \begin{enumerate}
-\item Si \(F=\frac{A}{B}=\frac{A_1}{B_1}\) alors \(AB_1=A_1B\) et \(\deg(AB_1)=\deg(A_1B)\) et donc \(\deg(A)-\deg(B)=\deg(A_1)-\deg(B_1)\). La définition de \(\deg(F)\) ne dépend pas du représentant choisi pour \(F\).
-\item Si \(P\in\K[X]\), on identifie \(P\) à la fraction rationnelle \(\frac{P}{1}\). Son degré en tant que fraction rationnelle vaut \(\deg(P)-\deg(1)=\deg(P)\) est égal à son degré en tant que polynôme.
+  \item Si \(F=\frac{A}{B}=\frac{A_1}{B_1}\) alors \(AB_1=A_1B\) et \(\deg(AB_1)=\deg(A_1B)\) et donc \(\deg(A)-\deg(B)=\deg(A_1)-\deg(B_1)\). La définition de \(\deg(F)\) ne dépend pas du représentant choisi pour \(F\).
+  \item Si \(P\in\K[X]\), on identifie \(P\) à la fraction rationnelle \(\frac{P}{1}\). Son degré en tant que fraction rationnelle vaut \(\deg(P)-\deg(1)=\deg(P)\) est égal à son degré en tant que polynôme.
 \end{enumerate}
 
 \begin{prop}
@@ -166,16 +166,16 @@ C'est légitime puisque~:
   Soient \((A,B)\) et \((C,D)\) deux représentants respectifs de \(F\) et \(G\). Alors \(F+G=\frac{AD+BC}{BD}\) et \(FG=\frac{AC}{BD}\). Leurs degrés valent~:
   \begin{align}
     \deg(F+G) &= \deg(AD+BC)-\deg(BD) \\ 
-    & \leqslant \max(\deg(AB),\deg(BC))-\deg(B)-\deg(D) \\
-    & \leqslant \max(\deg(A)+\deg(D),\deg(B)+\deg(C))-\deg(B)-\deg(D)\\
-    & \leqslant \max(\deg(A)-\deg(B),\deg(C)-\deg(D))\\
-    & \leqslant \max(\deg(F),\deg(G));
+              & \leqslant \max(\deg(AB),\deg(BC))-\deg(B)-\deg(D) \\
+              & \leqslant \max(\deg(A)+\deg(D),\deg(B)+\deg(C))-\deg(B)-\deg(D)\\
+              & \leqslant \max(\deg(A)-\deg(B),\deg(C)-\deg(D))\\
+              & \leqslant \max(\deg(F),\deg(G));
   \end{align}
   et pour le produit
   \begin{align}
     \deg(FG) &= \deg(AC)-\deg(BD) \\
-    &= \deg(A)+\deg(C)-\deg(B)-\deg(D)\\
-    &=\deg(F)+\deg(G).
+             &= \deg(A)+\deg(C)-\deg(B)-\deg(D)\\
+             &=\deg(F)+\deg(G).
   \end{align}
 \end{proof}
 
@@ -212,9 +212,9 @@ C'est légitime puisque~:
   comme \(B_1\) et non nul et que l'anneau \(\K[X]\) est intègre on a \(A=A_1D\). Puisque \(D\) est non nul soit son coefficient dominant \(\alpha \neq 0\). On pose \(\widetilde{D}=\frac{D}{\alpha}\) (\(\widetilde{D}\) est unitaire). Alors
   \begin{align}
     A \wedge B &= (A_1D) \wedge (B_1D) \\
-    & = (\alpha A_1 \widetilde{D}) \wedge (\alpha B_1 \widetilde{D}) \\
-    & = \widetilde{D} (\alpha A_1) \wedge (\alpha B_1) && \widetilde{D} \text{~unitaire}\\
-    & = \widetilde{D} = \frac{D}{\alpha}.
+               & = (\alpha A_1 \widetilde{D}) \wedge (\alpha B_1 \widetilde{D}) \\
+               & = \widetilde{D} (\alpha A_1) \wedge (\alpha B_1) && \widetilde{D} \text{~unitaire}\\
+               & = \widetilde{D} = \frac{D}{\alpha}.
   \end{align}
   Ainsi \(A \wedge B\) et \(D\) sont associés.
 \end{proof}
@@ -247,22 +247,22 @@ C'est légitime puisque~:
 \begin{defdef}
   Soit \(F=\frac{A}{B} \in \K(X)\). On suppose que \((A,B)\) est un représentant irréductible de \(F\). Soit un scalaire \(\alpha\) et un naturel non nul \(r\). On dit que~:
   \begin{itemize}
-  \item \(\alpha\) est racine de \(F\) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(A\) d'ordre \(r\);
-  \item \(\alpha\) est pôle de \(F\) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(B\) d'ordre \(r\).
+    \item \(\alpha\) est racine de \(F\) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(A\) d'ordre \(r\);
+    \item \(\alpha\) est pôle de \(F\) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(B\) d'ordre \(r\).
   \end{itemize}
 \end{defdef}
 
 C'est légitime, puisque
 \begin{enumerate}
-\item si \((A,B)\) et \((A_1,B_1)\) sont deux représentants irréductibles de \(F\), d'après le théorème~
-\ref{theo:thm3}, il existe un scalaire \(\lambda\) non nul tel que \(\begin{cases} A=\lambda A_1 \\ B = \lambda B_1 \end{cases}\).
+  \item si \((A,B)\) et \((A_1,B_1)\) sont deux représentants irréductibles de \(F\), d'après le théorème~
+    \ref{theo:thm3}, il existe un scalaire \(\lambda\) non nul tel que \(\begin{cases} A=\lambda A_1 \\ B = \lambda B_1 \end{cases}\).
 
-  Pour tout scalaire \(\alpha\) et tout naturel non nul \(r\), \(\alpha\) est racine de \(A\) (resp. \(B\)) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(A_1\) (resp. \(B_1\)) d'ordre \(r\).
+    Pour tout scalaire \(\alpha\) et tout naturel non nul \(r\), \(\alpha\) est racine de \(A\) (resp. \(B\)) d'ordre \(r\) si et seulement si \(\alpha\) est racine de \(A_1\) (resp. \(B_1\)) d'ordre \(r\).
 
-  La définition ne dépend pas du représentant irréductible choisi, mais il doit être irréductible.
-\item Si \(P \in \K[X]\), pour tout couple \((A_1,B_1) \in \K[X] \times \K[X]\setminus\{0\}\), \((A_1,B_1)\) est un représentant irréductible de \(\frac{P}{1}\) si et seulement s'il existe un scalaire \(\lambda\) non nul tel que \(A_1=\lambda P\) et \(B_1=\lambda\).
+    La définition ne dépend pas du représentant irréductible choisi, mais il doit être irréductible.
+  \item Si \(P \in \K[X]\), pour tout couple \((A_1,B_1) \in \K[X] \times \K[X]\setminus\{0\}\), \((A_1,B_1)\) est un représentant irréductible de \(\frac{P}{1}\) si et seulement s'il existe un scalaire \(\lambda\) non nul tel que \(A_1=\lambda P\) et \(B_1=\lambda\).
 
-  Les racines de \(P\) en tant que polynôme sont les mêmes que les racines de \(P\) en tant que fraction rationnelle avec les mêmes ordres.
+    Les racines de \(P\) en tant que polynôme sont les mêmes que les racines de \(P\) en tant que fraction rationnelle avec les mêmes ordres.
 \end{enumerate}
 
 Il faut faire attention au corps, les racines et les pôles en dépendent. Par exemple \(F=\frac{X^2+1}{X^2+2}\).
@@ -271,7 +271,7 @@ Il faut faire attention au corps, les racines et les pôles en dépendent. Par e
 
 \begin{proof}
   On suppose que \(\frac{A}{B}\) est un représentant irréductible de \(F\). \(F\) est non nul donc \(A\) est non nul. Ainsi \(\ZZ_F\) est l'ensemble des racines de \(A\) et comme \(A\) est non nul alors \(\ZZ_F\) est fini. De la même manière, le polynôme \(B\) est non nul donc l'ensemble de ses racines, c.-à.-d. \(\P_F\), est fini.
-  
+
   S'il existe \(\alpha \in \ZZ_F \cap \P_F\) alors \(X-\alpha\mid{}A\) et \(X-\alpha\mid{}B\) mais comme \(A\) et \(B\) sont premiers entre eux, c'est absurde. Donc il n'existe aucun élément dans \(\ZZ_F \cap \P_F\).
 \end{proof}
 
@@ -286,9 +286,9 @@ Il faut faire attention au corps, les racines et les pôles en dépendent. Par e
 
 C'est légitime, puisque~:
 \begin{itemize}
-\item Pour tout scalaire \(x \in \K\setminus\P_F\), \(\widetilde{B_1}(x) \neq 0\), donc \(\frac{\widetilde{A_1}(x)}{\widetilde{B_1}(x)}\) est bien défini dans \(\K\).
-\item si \(\frac{A_2}{b_2}\) est un autre représentant irréductible de \(F\), il existe un scalaire non nul \(\lambda\) tel que \(\begin{cases}A_2 = \lambda A_1 \\ B_2=\lambda B_1\end{cases}\), donc pour tout \(x \in \K\setminus\P_F\) on a \(\frac{\widetilde{A_2}(x)}{\widetilde{B_2}(x)}=\frac{\lambda \widetilde{A_1}(x)}{\lambda \widetilde{B_1}(x)}=\frac{\widetilde{A_1}(x)}{\widetilde{B_1}(x)}\).
-\item Si \(P \in \K[X]\), on dispose de la fonction polynomiale associée \(\widetilde{P}\). Le polynôme \(P\) est identifié à \(F=\frac{P}{1}\). Vérifions que \(\widetilde{F}=\widetilde{P}\). On sait que \(\P_F=\emptyset\) donc \(\fonction{\widetilde{F}}{\K}{\K}{x}{\frac{\widetilde{P}(x)}{\widetilde{1}(x)}=\widetilde{P}(x)}\). Donc  \(\widetilde{F}=\widetilde{P}\). 
+  \item Pour tout scalaire \(x \in \K\setminus\P_F\), \(\widetilde{B_1}(x) \neq 0\), donc \(\frac{\widetilde{A_1}(x)}{\widetilde{B_1}(x)}\) est bien défini dans \(\K\).
+  \item si \(\frac{A_2}{b_2}\) est un autre représentant irréductible de \(F\), il existe un scalaire non nul \(\lambda\) tel que \(\begin{cases}A_2 = \lambda A_1 \\ B_2=\lambda B_1\end{cases}\), donc pour tout \(x \in \K\setminus\P_F\) on a \(\frac{\widetilde{A_2}(x)}{\widetilde{B_2}(x)}=\frac{\lambda \widetilde{A_1}(x)}{\lambda \widetilde{B_1}(x)}=\frac{\widetilde{A_1}(x)}{\widetilde{B_1}(x)}\).
+  \item Si \(P \in \K[X]\), on dispose de la fonction polynomiale associée \(\widetilde{P}\). Le polynôme \(P\) est identifié à \(F=\frac{P}{1}\). Vérifions que \(\widetilde{F}=\widetilde{P}\). On sait que \(\P_F=\emptyset\) donc \(\fonction{\widetilde{F}}{\K}{\K}{x}{\frac{\widetilde{P}(x)}{\widetilde{1}(x)}=\widetilde{P}(x)}\). Donc  \(\widetilde{F}=\widetilde{P}\). 
 \end{itemize}
 
 \begin{prop}
@@ -310,8 +310,8 @@ C'est légitime, puisque~:
   Soir \(F=\frac{A}{B}\) et \(G=\frac{C}{D}\) deux représentants irréductibles. Alors
   \begin{align}
     \courbe &=\{x \in \K, \widetilde{F}(x)=\widetilde{G}(x)\} \\
-    &=\{x \in \K, \frac{\widetilde{A}(x)}{\widetilde{B}(x)}=\frac{\widetilde{C}(x)}{\widetilde{D}(x)}\} \\
-    &=\{x \in \K, \widetilde{AD-BC}(x)=0 \}\\
+            &=\{x \in \K, \frac{\widetilde{A}(x)}{\widetilde{B}(x)}=\frac{\widetilde{C}(x)}{\widetilde{D}(x)}\} \\
+            &=\{x \in \K, \widetilde{AD-BC}(x)=0 \}\\
   \end{align}
   Comme \(\courbe\) est infini, on en déduit par la dernière égalité que le polynôme \(AD-BC\) est nul et par conséquent \(F=G\).
 \end{proof}
@@ -324,19 +324,19 @@ C'est légitime, puisque~:
 
 C'est légitime, puisque~:
 \begin{enumerate}
-\item \(P \circ R\) et \(Q \circ R\) sont dans \(\K[X]\) et \(Q \circ R\) est non nul car \(Q\) et \(P\) sont non nuls;
-\item Si \(F=\frac{P}{Q}=\frac{P_1}{Q_1}\) alors
-  \begin{align}
-    PQ_1&=P_1Q \\
-    (PQ_1) \circ R &= (P_1Q) \circ R\\
-    (P\circ R)(Q_1\circ R) &= (P_1\circ R)(Q\circ R)
-  \end{align}
-  donc \(\frac{P \circ R}{Q \circ R}=\frac{P_1 \circ R}{Q_1 \circ R}\). La définition ne dépend pas du représentant choisi;
-\item Si \(P \in \K[X]\), \(F=\frac{P}{1}\) est identifiée à \(P\) et
-  \begin{equation}
-    \forall R \in \K[X]\setminus\{0\} \quad F \circ R = \frac{P \circ R}{1 \circ R}=\frac{P \circ R}{1}  
-  \end{equation}
-  identifiée à \(P\circ R\). La définition est compatible avec celle sur \(\K[X]\).
+  \item \(P \circ R\) et \(Q \circ R\) sont dans \(\K[X]\) et \(Q \circ R\) est non nul car \(Q\) et \(P\) sont non nuls;
+  \item Si \(F=\frac{P}{Q}=\frac{P_1}{Q_1}\) alors
+    \begin{align}
+      PQ_1&=P_1Q \\
+      (PQ_1) \circ R &= (P_1Q) \circ R\\
+      (P\circ R)(Q_1\circ R) &= (P_1\circ R)(Q\circ R)
+    \end{align}
+    donc \(\frac{P \circ R}{Q \circ R}=\frac{P_1 \circ R}{Q_1 \circ R}\). La définition ne dépend pas du représentant choisi;
+  \item Si \(P \in \K[X]\), \(F=\frac{P}{1}\) est identifiée à \(P\) et
+    \begin{equation}
+      \forall R \in \K[X]\setminus\{0\} \quad F \circ R = \frac{P \circ R}{1 \circ R}=\frac{P \circ R}{1}  
+    \end{equation}
+    identifiée à \(P\circ R\). La définition est compatible avec celle sur \(\K[X]\).
 \end{enumerate}
 
 \begin{prop}
@@ -348,9 +348,9 @@ C'est légitime, puisque~:
   Soit \(F=\frac{P}{Q}\), alors
   \begin{align}
     \deg(F \circ R) = \deg\left(\frac{P \circ R}{Q \circ R}\right) &= \deg(P\circ R) - \deg(Q\circ R) \\
-    &=\deg(P)\deg(R)-\deg(Q)\deg(R)\\
-    &=\deg(R)(\deg(P)-\deg(Q))\\
-    &=\deg(R)\deg(F).
+                                                                   &=\deg(P)\deg(R)-\deg(Q)\deg(R)\\
+                                                                   &=\deg(R)(\deg(P)-\deg(Q))\\
+                                                                   &=\deg(R)\deg(F).
   \end{align}
 \end{proof}
 
@@ -411,7 +411,7 @@ En particulier, si \(E\) désigne la partie entière de la fonction rationnelle 
   alors \(\psi(F)=Q_1\) et \(\psi(G)=Q_2\). On calcule \(H\)~:
   \begin{align}
     H = \lambda F+G &= \lambda\left(Q_1+\frac{R_1}{B}\right)+\left(Q_2+\frac{R_2}{D}\right) \\
-    &=(\lambda Q_1 +Q_2) +\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right).
+                    &=(\lambda Q_1 +Q_2) +\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right).
   \end{align}
   De plus
   \begin{equation}
@@ -436,7 +436,7 @@ En particulier, si \(E\) désigne la partie entière de la fonction rationnelle 
 \end{lemme}
 \begin{proof}[Unicité]
   Soient \((R,G) \in \K[X] \times \K(X)\) et \((R_1,G_1) \in \K[X] \times \K(X)\) tels que
-\begin{equation}
+  \begin{equation}
     \begin{cases} F = \frac{R}{(X-a)^n} +G=\frac{R_1}{(X-a)^n} +G_1 \\ a\notin \P_G\cup\P_{G_1} \\ \deg(R)<n \\ \deg(R_1)<n \end{cases}.
   \end{equation}
   Alors
@@ -447,11 +447,11 @@ En particulier, si \(E\) désigne la partie entière de la fonction rationnelle 
   \begin{equation}
     R-R_1=(X-a)^p \quad \text{et} \quad Q(a)\neq 0.
   \end{equation}
-Ainsi
-\begin{equation}
-  \frac{R-R_1}{(X-a)^n} = \frac{(X-a)^pQ}{(X-a)^n} = \frac{Q}{(X-a)^{n-p}}.
-\end{equation}
-Comme \(Q(a)\neq 0\), \(a\) est un pôle d'ordre \(n-p\geqslant n-(n-1)=1\). Alors \(a\) est ``vraiment'' un pôle. Cependant \(\frac{R-R_1}{(X-a)^n}=G_1-G\) et on avait pris comme hypothèse que \(a\) n'est pas un pôle de \(G_1-G\). (Contradiction).
+  Ainsi
+  \begin{equation}
+    \frac{R-R_1}{(X-a)^n} = \frac{(X-a)^pQ}{(X-a)^n} = \frac{Q}{(X-a)^{n-p}}.
+  \end{equation}
+  Comme \(Q(a)\neq 0\), \(a\) est un pôle d'ordre \(n-p\geqslant n-(n-1)=1\). Alors \(a\) est ``vraiment'' un pôle. Cependant \(\frac{R-R_1}{(X-a)^n}=G_1-G\) et on avait pris comme hypothèse que \(a\) n'est pas un pôle de \(G_1-G\). (Contradiction).
 \end{proof}
 \begin{proof}[Existence]
   Soit \((A,B)\) un représentant irréductible de \(F\). Comme \(a\) est un pôle de \(F\) d'ordre \(n\), il existe un polynôme \(C \in \K[X]\) tel que
@@ -473,7 +473,7 @@ Comme \(Q(a)\neq 0\), \(a\) est un pôle d'ordre \(n-p\geqslant n-(n-1)=1\). Alo
   On reporte cette équation dans l'expression de \(F\)~:
   \begin{align}
     F&=\frac{AU}{C} + \frac{(X-a)^nQ+R}{(X-a)^n}\\
-    &=\frac{R}{(X-a)^n} + \left(\frac{AU}{C}+Q\right)
+     &=\frac{R}{(X-a)^n} + \left(\frac{AU}{C}+Q\right)
   \end{align}
   avec \(R \in \K[X]\) (\(\deg(R)<n\)) et \(\frac{AU}{C}+Q \in \K(X)\). Comme \(C(a)\neq 0\), le couple \((R,\frac{AU}{C}+Q)\) convient.
 \end{proof}
@@ -493,7 +493,7 @@ Comme \(Q(a)\neq 0\), \(a\) est un pôle d'ordre \(n-p\geqslant n-(n-1)=1\). Alo
   S'il existe \((\alpha_1, \ldots, \alpha_n) \in \K^n\) et \(G_1 \in \K(X)\) tels que \(F=\sum_{i=1}^n \frac{\alpha_i}{(X-a)^i} + G_1\) et \(a\) n'est pas un pôle de \(G_1\) alors
   \begin{align}
     F &= \sum_{i=1}^n \frac{\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1\\
-    &= \frac{\sum_{i=1}^n\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1
+      &= \frac{\sum_{i=1}^n\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1
   \end{align}
   avec \(\deg\left(\sum_{i=1}^n\alpha_i(X-a)^{n-i}\right)\leqslant n-1 <n\). D'après l'unicité du lemme, on a forcément
   \begin{equation}
@@ -517,8 +517,8 @@ Comme \(Q(a)\neq 0\), \(a\) est un pôle d'ordre \(n-p\geqslant n-(n-1)=1\). Alo
   Ainsi, la fraction rationnelle s'écrit
   \begin{align}
     F &= \frac{\sum_{k=0}^{n-1} \beta_k (X-a)^k}{(X-a)^n}+G \\
-    &=\sum_{k=0}^{n-1} \frac{\beta_k}{(X-a)^{n-k}} +G \\
-    &=\sum_{i=1}^{n} \frac{\beta_{n-i}}{(X-a)^{i}} +G.
+      &=\sum_{k=0}^{n-1} \frac{\beta_k}{(X-a)^{n-k}} +G \\
+      &=\sum_{i=1}^{n} \frac{\beta_{n-i}}{(X-a)^{i}} +G.
   \end{align}
   Posons pour tout naturel \(i \in \intervalleentier{1}{n}\) \(\alpha_i=\beta_{n-i}\) donc
   \begin{equation}
@@ -635,7 +635,7 @@ d'où \(\beta = \frac{A'(a)C(a)-C'(a)A(a)}{C(a)^2}\) et en dérivant trois fois~
 et en prenant la valeur en \(a\)~: \(C(a)=\frac{B''(a)}{2}\) et \(C'(a)=\frac{B^{(3)}}{6}\). Ainsi
 \begin{align}
   \beta &= \frac{A'(a)\frac{B''(a)}{2}-A(a)\frac{B^{(3)}(a)}{6}}{\frac{B''(a)^2}{4}}\\
-  &=\frac{2A'(a)B''(a)-\frac{2}{3}A(a)B^{(3)}(a)}{B''(a)^2}
+        &=\frac{2A'(a)B''(a)-\frac{2}{3}A(a)B^{(3)}(a)}{B''(a)^2}
 \end{align}
 
 \subsection[Décomposition en éléments simples]{Décomposition en éléments simples d'une fraction rationnelle}
@@ -650,15 +650,15 @@ et en prenant la valeur en \(a\)~: \(C(a)=\frac{B''(a)}{2}\) et \(C'(a)=\frac{B^
 
 \emph{Exemples}~:
 \begin{enumerate}
-\item Sur \(\C\), les polynômes irréductibles sont les polynôme de degré \(1\). Les éléments simples sont tous de première espèce. Ce sont les
-  \begin{equation}
-    \frac{\alpha}{(X-a)^j} \quad (\alpha,a,j)\in \C^2\times \N^*
-  \end{equation}
-\item Sur \(\R\), les polynômes irréductibles sont les polynômes de degré \(1\) et les polynômes de degré \(2\) dont le discriminant est strictement négatif. On dispose donc~:
-  \begin{itemize}
-  \item des éléments simples de 1\iere espèce \(\frac{\alpha}{(X-a)^j}\) où \((\alpha,a,j)\in \R^2\times \N^*\);
-  \item des éléments simples de 2\ieme espèce \(\frac{\alpha X+\beta}{(X^2+pX+q)^j}\) où \((\alpha,\beta,p,q,j)\in \R^4\times \N^*\) et \(p^2<4q\).
-  \end{itemize}
+  \item Sur \(\C\), les polynômes irréductibles sont les polynôme de degré \(1\). Les éléments simples sont tous de première espèce. Ce sont les
+    \begin{equation}
+      \frac{\alpha}{(X-a)^j} \quad (\alpha,a,j)\in \C^2\times \N^*
+    \end{equation}
+  \item Sur \(\R\), les polynômes irréductibles sont les polynômes de degré \(1\) et les polynômes de degré \(2\) dont le discriminant est strictement négatif. On dispose donc~:
+    \begin{itemize}
+      \item des éléments simples de 1\iere espèce \(\frac{\alpha}{(X-a)^j}\) où \((\alpha,a,j)\in \R^2\times \N^*\);
+      \item des éléments simples de 2\ieme espèce \(\frac{\alpha X+\beta}{(X^2+pX+q)^j}\) où \((\alpha,\beta,p,q,j)\in \R^4\times \N^*\) et \(p^2<4q\).
+    \end{itemize}
 \end{enumerate}
 
 \begin{theo}[Décomposition en éléments simples sur \(\C(X)\)]
@@ -679,8 +679,8 @@ et en prenant la valeur en \(a\)~: \(C(a)=\frac{B''(a)}{2}\) et \(C'(a)=\frac{B^
   \end{equation}
   alors \(F-P_i\) n'admet pas \(a_i\) pour pôle. Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(a_i\) est un pôle de \(F\), \(F=P_i+(F-P_i)\). Alors \(P_i\) est forcément la partie polaire de \(F\) relative au pôle \(a_i\). D'où l'unicité des \(\alpha_{i,j}\);
-  \item Si \(a_i\) n'est pas un pôle de \(F\), alors tous les \(\alpha_{i,j}\) doivent être nuls car sinon \(a_i\) serait un pôle.
+    \item Si \(a_i\) est un pôle de \(F\), \(F=P_i+(F-P_i)\). Alors \(P_i\) est forcément la partie polaire de \(F\) relative au pôle \(a_i\). D'où l'unicité des \(\alpha_{i,j}\);
+    \item Si \(a_i\) n'est pas un pôle de \(F\), alors tous les \(\alpha_{i,j}\) doivent être nuls car sinon \(a_i\) serait un pôle.
   \end{enumerate}
   Dans les deux cas, les \(\alpha_{i,j}\) sont uniquement déterminés.
 \end{proof}
@@ -696,40 +696,40 @@ Cette décomposition s'appelle la Décomposition en Éléments Simples (DES) de 
 
 Soit \(F \in \C(X)\) tel que \(F=\frac{A}{B}\) avec \((A,B)\in\C[X]^2\) et \(B\) non nul.
 \begin{enumerate}
-\item Trouver la partie entière de \(F\)
-\item Factoriser \(B\) sous la forme
-  \begin{equation}
-    B=\lambda \prod_{i=1}^n(X-a_i)^{k_i} \quad \lambda \in \C^*
-  \end{equation}
-  \(a_1,\ldots,a_n \in \C\) deux à deux distincts et \(k_1, \ldots, k_n\) des naturels tous non nuls
-\item Écrire la DES a priori, il existe de façon unique des complexes \(\alpha_{i,j}\) tels que
-  \begin{equation}
-    F=E+\sum_{i=1}^n\sum_{j=1}^{k_i} \frac{\alpha_{i,j}}{(X-a_i)^{j}}
-  \end{equation}
-\item Il reste à calculer tous les coefficients \(\alpha_{i,j}\)~:
-  \begin{itemize}
-  \item On a vu des formules pour les pôles simples, pôles doubles, \ldots
-  \item On peut aussi utiliser les particularités de \(F\). Par exemple si \(F\) est paire ou impaire, on obtient des relations entre les coefficients en utilisant \(F(-X)=\pm F(X)\) et l'unicité de la DES.
-  \end{itemize}
+  \item Trouver la partie entière de \(F\)
+  \item Factoriser \(B\) sous la forme
+    \begin{equation}
+      B=\lambda \prod_{i=1}^n(X-a_i)^{k_i} \quad \lambda \in \C^*
+    \end{equation}
+    \(a_1,\ldots,a_n \in \C\) deux à deux distincts et \(k_1, \ldots, k_n\) des naturels tous non nuls
+  \item Écrire la DES a priori, il existe de façon unique des complexes \(\alpha_{i,j}\) tels que
+    \begin{equation}
+      F=E+\sum_{i=1}^n\sum_{j=1}^{k_i} \frac{\alpha_{i,j}}{(X-a_i)^{j}}
+    \end{equation}
+  \item Il reste à calculer tous les coefficients \(\alpha_{i,j}\)~:
+    \begin{itemize}
+      \item On a vu des formules pour les pôles simples, pôles doubles, \ldots
+      \item On peut aussi utiliser les particularités de \(F\). Par exemple si \(F\) est paire ou impaire, on obtient des relations entre les coefficients en utilisant \(F(-X)=\pm F(X)\) et l'unicité de la DES.
+    \end{itemize}
 
-\emph{Exemple}~:
-\begin{equation}
-  F=\frac{1}{X^2+1}=\frac{1}{(X-\ii)(X+\ii)}
-\end{equation}
-Il existe un unique couple \((\alpha,\beta) \in \C^2\) tel que \(F=\frac{\alpha}{X-\ii}+\frac{\beta}{X+\ii}\).
+    \emph{Exemple}~:
+    \begin{equation}
+      F=\frac{1}{X^2+1}=\frac{1}{(X-\ii)(X+\ii)}
+    \end{equation}
+    Il existe un unique couple \((\alpha,\beta) \in \C^2\) tel que \(F=\frac{\alpha}{X-\ii}+\frac{\beta}{X+\ii}\).
 
-\(F\) est paire : \(F(-X)=F(X)=\frac{-\beta}{X-\ii}+ \frac{-\alpha}{X+\ii}\). Alors par unicité de la DES : \(\beta=-\alpha\). On a qu'un seul coefficient à trouver~:
-\begin{equation}
-  \alpha = \widetilde{(X-\ii)F}(\ii) = \frac{1}{2\ii} = -\frac{\ii}{2}
-\end{equation}
-donc \(\beta=\frac{i}{2}\). Finalement
-\begin{equation}
-  F = \frac{-\ii/2}{X-i}+\frac{\ii/2}{X+\ii}
-\end{equation}
+    \(F\) est paire : \(F(-X)=F(X)=\frac{-\beta}{X-\ii}+ \frac{-\alpha}{X+\ii}\). Alors par unicité de la DES : \(\beta=-\alpha\). On a qu'un seul coefficient à trouver~:
+    \begin{equation}
+      \alpha = \widetilde{(X-\ii)F}(\ii) = \frac{1}{2\ii} = -\frac{\ii}{2}
+    \end{equation}
+    donc \(\beta=\frac{i}{2}\). Finalement
+    \begin{equation}
+      F = \frac{-\ii/2}{X-i}+\frac{\ii/2}{X+\ii}
+    \end{equation}
 
-Cette méthode fonctionne aussi avec des relations du genre \(F(\ii X)=F(X)\) ou autre.
-\item S'il reste peu de coefficients à calculer on peut prendre des valeurs de la fonction rationnelle associée à \(F\) pour obtenir des équations
-\item On peut également utiliser des limites de la fonction rationnelle associée à \(F\) en \(\pm \infty\), lorsqu'elles existent.
+    Cette méthode fonctionne aussi avec des relations du genre \(F(\ii X)=F(X)\) ou autre.
+  \item S'il reste peu de coefficients à calculer on peut prendre des valeurs de la fonction rationnelle associée à \(F\) pour obtenir des équations
+  \item On peut également utiliser des limites de la fonction rationnelle associée à \(F\) en \(\pm \infty\), lorsqu'elles existent.
 \end{enumerate}
 
 \emph{Fraction rationnelle à coefficients réels}
@@ -815,18 +815,18 @@ Soit \(P \in \C[X]\setminus\C\), \(\deg(P)\geqslant 1\). Le polynôme \(P\) est 
 \begin{equation}
   P = \lambda \prod_{i=1}^n (X-a_i)^{k_i}
 \end{equation}
- Comme \(\deg(P)\geqslant 1\), on a \(\deg(P')=\deg(P)-1\). Alors \(\deg\left(\frac{P'}{P}\right)=-1<0\). La partie entière de \(frac{P'}{P}\) est nulle. Il existe de façon unique des complexes \(\alpha_{i,j}\) tels que
- \begin{equation}
-   \frac{P'}{P} = \sum_{i=1}^n \sum_{j=1}^{k_i} \frac{\alpha_{i,j}}{(X-a_i)^j}.
- \end{equation}
+Comme \(\deg(P)\geqslant 1\), on a \(\deg(P')=\deg(P)-1\). Alors \(\deg\left(\frac{P'}{P}\right)=-1<0\). La partie entière de \(frac{P'}{P}\) est nulle. Il existe de façon unique des complexes \(\alpha_{i,j}\) tels que
+\begin{equation}
+  \frac{P'}{P} = \sum_{i=1}^n \sum_{j=1}^{k_i} \frac{\alpha_{i,j}}{(X-a_i)^j}.
+\end{equation}
 Dérivons \(P\)~:
 \begin{equation}
   P' = \lambda \sum_{i=1}^n \prod_{j \in \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i
 \end{equation}
 Alors
 \begin{align}
- \frac{P'}{P} &= \frac{\lambda \sum_{i=1}^n \prod_{j \in \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i}{\lambda \prod_{i=1}^n (X-a_i)^{k_i}} \\
- &=\sum_{i=1}^n \left(\frac{\prod_{j \in \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i}{\prod_{i=1}^n (X-a_i)^{k_i}} \right) \\
- &=\sum_{i=1}^n \frac{k_i(X-a_i)^{k_i-1}}{(X-a_i)^{k_i}} \\
- \frac{P'}{P} &= \sum_{i=1}^n \frac{k_i}{X-a_i}
+  \frac{P'}{P} &= \frac{\lambda \sum_{i=1}^n \prod_{j \in \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i}{\lambda \prod_{i=1}^n (X-a_i)^{k_i}} \\
+               &=\sum_{i=1}^n \left(\frac{\prod_{j \in \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i}{\prod_{i=1}^n (X-a_i)^{k_i}} \right) \\
+               &=\sum_{i=1}^n \frac{k_i(X-a_i)^{k_i-1}}{(X-a_i)^{k_i}} \\
+  \frac{P'}{P} &= \sum_{i=1}^n \frac{k_i}{X-a_i}
 \end{align}

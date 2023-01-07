@@ -66,8 +66,8 @@ Supposons qu'on ait \(\sigma=(0,1/2,1)\) et \(\sigma'=(0,1/3,2/3,1)\) alors \(\d
 
 \emph{Remarque}~:
 \begin{enumerate}
-\item Si \(f \in \E(\intervalleff{a}{b})\) et si \(\sigma\) est une subdivision adaptée à \(f\), alors toute subdivision \(\sigma'\) de \(\intervalleff{a}{b}\) plus fine que \(\sigma\) est encore adaptée à \(f\);
-\item les fonctions constantes sur \(\intervalleff{a}{b}\) sont en escalier et toutes les subdivisions de \(\intervalleff{a}{b}\) leurs sont adaptées.
+  \item Si \(f \in \E(\intervalleff{a}{b})\) et si \(\sigma\) est une subdivision adaptée à \(f\), alors toute subdivision \(\sigma'\) de \(\intervalleff{a}{b}\) plus fine que \(\sigma\) est encore adaptée à \(f\);
+  \item les fonctions constantes sur \(\intervalleff{a}{b}\) sont en escalier et toutes les subdivisions de \(\intervalleff{a}{b}\) leurs sont adaptées.
 \end{enumerate}
 
 \subsubsection{Premières propriétés}
@@ -76,8 +76,8 @@ On peut avoir besoin de construire une subdivision adaptée à la fois à deux f
 
 Soient \(\sigma=(a_i)_{i \in \intervalleentier{0}{n}}\) et \(\sigma'=(b_i)_{i \in \intervalleentier{0}{m}}\) deux subdivisions de \(\intervalleff{a}{b}\). On note \(A(\sigma)\) (resp. \(A(\sigma')\)) l'ensemble des points de \(\sigma\) (resp. \(\sigma'\)). Il existe une unique subdivision \(s\) de \(\intervalleff{a}{b}\) telle que \(A(s)=A(\sigma) \cup A(\sigma')\). La subdivision \(s\) est appelée la réunion de \(\sigma\) et \(\sigma'\). Elle est plus fine que \(\sigma\) et \(\sigma'\). Si \((f,g) \in \E(\intervalleff{a}{b})^2\) sont telles que~:
 \begin{itemize}
-\item \(\sigma\) est adpatée à \(f\);
-\item \(\sigma'\) est adpatée à \(g\);
+  \item \(\sigma\) est adpatée à \(f\);
+  \item \(\sigma'\) est adpatée à \(g\);
 \end{itemize}
 alors \(s\) est adaptée à \(f\) et à \(g\).
 
@@ -102,10 +102,10 @@ alors \(s\) est adaptée à \(f\) et à \(g\).
 \begin{defdef}
   Soit \(f \in \R^{\intervalleff{a}{b}}\), on dit que \(f\) est continue par morceaux sur \(\intervalleff{a}{b}\) s'il existe une subdivision \(\sigma=(a_i)_{i \in \intervalleentier{0}{n}}\) telle que~:
   \begin{itemize}
-  \item \(\forall i \in \intervalleentier{0}{n-1}\) \(f\) est continue sur l'intervalle ouvert \(\intervalleoo{a_i}{a_{i+1}}\)
-  \item \(\forall i \in \intervalleentier{0}{n-1}\) la restriction de \(f\) à l'intervalle ouvert \(\intervalleoo{a_i}{a_{i+1}}\) admet une limite finie à gauche en \(a_{i+1}\) et à droite en \(a_i\).
+    \item \(\forall i \in \intervalleentier{0}{n-1}\) \(f\) est continue sur l'intervalle ouvert \(\intervalleoo{a_i}{a_{i+1}}\)
+    \item \(\forall i \in \intervalleentier{0}{n-1}\) la restriction de \(f\) à l'intervalle ouvert \(\intervalleoo{a_i}{a_{i+1}}\) admet une limite finie à gauche en \(a_{i+1}\) et à droite en \(a_i\).
   \end{itemize}
-Une telle subdivision sera dite adaptée à \(f\).
+  Une telle subdivision sera dite adaptée à \(f\).
 \end{defdef}
 
 Il est à noter que \(f\) est définie en tous les \(a_i\) mais n'est pas a priori continue en les \(a_i\). On note \(\CM(\intervalleff{a}{b})\) l'ensemble des fonctions continues par morceaux sur \(\intervalleff{a}{b}\). 
@@ -134,7 +134,7 @@ Les fonctions continues sur \(\intervalleff{a}{b}\) sont continues par morceaux 
   fermé \(\intervalleff{a_i}{a_{i+1}}\). Alors \(g_i\) est continue sur le 
   segment \(\intervalleff{a_i}{a_{i+1}}\) donc bornée (d'après le théorème des 
   bornes, Théorème~
-\ref{theo:bornes}). Il existe alors \(M_i \in \R_+\) tel que 
+  \ref{theo:bornes}). Il existe alors \(M_i \in \R_+\) tel que 
   pour tout \(x \in \intervalleff{a_i}{a_{i+1}} \) on ait \(\abs{g_i(x)} 
   \leqslant M_i\). D'où
   \begin{equation}
@@ -146,8 +146,8 @@ Les fonctions continues sur \(\intervalleff{a}{b}\) sont continues par morceaux 
 \end{proof}
 
 \begin{prop}
-%  L'ensemble des fonctions continues par morceaux 
-\(\CM(\intervalleff{a}{b})\) est un sous espace du \(\R\)-espace vectoriel \(\R^{\intervalleff{a}{b}}\).
+  %  L'ensemble des fonctions continues par morceaux 
+  \(\CM(\intervalleff{a}{b})\) est un sous espace du \(\R\)-espace vectoriel \(\R^{\intervalleff{a}{b}}\).
 \end{prop}
 \begin{proof}
   Par définition, \(\CM(\intervalleff{a}{b})\subset \R^{\intervalleff{a}{b}}\). Ensuite \(\CM(\intervalleff{a}{b})\) est non vide puisqu'il contient \(\courbe(\intervalleff{a}{b})\). Soient \(f\) et \(g\) deux fonctions continues par morceaux et un réel \(\lambda\). Soient \(\sigma\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\) et \(\sigma'\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(g\). Soit \(s\) la réunion de \(\sigma\) et de \(\sigma'\). Elle est plus fine que \(\sigma\) et que \(\sigma'\) donc elle est adaptée à \(f\) et à \(g\). On note \(s=(a_i)_{0 \leqslant i \leqslant n}\). Pour tout \(i \in \intervalleentier{0}{n-1}\) \(f\) et \(g\) sont continues sur \(\intervalleoo{a_i}{a_{i+1}}\) donc \(\lambda f+g\) l'est aussi. De plus pour tout \(i \in \intervalleentier{0}{n-1}\) \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) et \(g_{|\intervalleoo{a_i}{a_{i+1}}}\) admettent des limites finies à droite en \(a_i\) et à gauche en \(a_{i+1}\) alors \((\lambda f+ g)_{|\intervalleoo{a_i}{a_{i+1}}}\) admet des limites finies à droite en \(a_i\) et à gauche en \(a_{i+1}\).
@@ -203,9 +203,9 @@ Les fonctions continues sur \(\intervalleff{a}{b}\) sont continues par morceaux 
 \begin{proof}[Démonstration~: Deuxième étape]
   On revient au cas général. On suppose que \(f\) est continue par morceaux sur \(\intervalleff{a}{b}\). Soit \(\sigma=(a_i)_{0 \leqslant i \leqslant m}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). Soit \(i \in \intervalleentier{0}{m-1}\), alors~:
   \begin{itemize}
-  \item \(f_{|\intervalleoo{\alpha_i}{\alpha_{i+1}}}\) est continue
-  \item \(f\) admet une limite finie à droite en chacun des \(a_i\)
-  \item \(f\) admet une limite finie à gauche en chacun des \(a_{i+1}\)
+    \item \(f_{|\intervalleoo{\alpha_i}{\alpha_{i+1}}}\) est continue
+    \item \(f\) admet une limite finie à droite en chacun des \(a_i\)
+    \item \(f\) admet une limite finie à gauche en chacun des \(a_{i+1}\)
   \end{itemize}
   On peut alors définir le prolongement par continuité de \(f_{|\intervalleoo{a_i}{a_{i+1}}}\) à \(\intervalleff{a_i}{a_{i+1}}\) noté \(f_i\).
 
@@ -253,25 +253,25 @@ Les fonctions continues sur \(\intervalleff{a}{b}\) sont continues par morceaux 
 \begin{proof}
   Soient \(\sigma\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\) et \(c \in \intervalleff{a}{b}\). Soit \(\sigma' = \sigma \cup \{c\}\). Il existe \(i_0 \in \intervalleentier{0}{n}\) tel que \(c \in \intervalleff{a_{i_0}}{a_{i_0+1}}\).
   \begin{itemize}
-  \item Si \(c=a_{i_0}\) ou \(c=a_{i_0+1}\) alors \(\sigma=\sigma'\) et donc \(I(f,\sigma')=I(f,\sigma)\);
-  \item sinon alors \(c \in \intervalleoo{a_{i_0}}{a_{i_0+1}}\). la subdivision \(\sigma'\) est plus fine que \(\sigma\) et alors
-    \begin{align}
-      \sigma &= (a_0, \ldots, a_n) \\
-      \sigma' &= (a_0, \ldots, a_{i_0},c,a_{i_0+1}, \ldots, a_n),
-    \end{align}
-    donc
-    \begin{equation}
-      I(f,\sigma')= \sum_{i=1}^{i_0}(a_i-a_{i-1})\lambda_i + (c-a_{i_0})\lambda_{i_0+1} + (a_{i_0+1}-c)\lambda_{i_0+1} + \sum_{i=i_0+1}^{n}(a_i-a_{i-1})\lambda_i,
-    \end{equation}
-    et finalement en retranchant
-    \begin{align}
-       I(f,\sigma')-I(f,\sigma)&= (a_{i_0+1}-a_{i_0})\lambda_{i_0+1} - (c-a_{i_0})\lambda_{i_0+1} - (a_{i_0+1}-c)\lambda_{i_0+1} \\
-       &=0.
-    \end{align}
+    \item Si \(c=a_{i_0}\) ou \(c=a_{i_0+1}\) alors \(\sigma=\sigma'\) et donc \(I(f,\sigma')=I(f,\sigma)\);
+    \item sinon alors \(c \in \intervalleoo{a_{i_0}}{a_{i_0+1}}\). la subdivision \(\sigma'\) est plus fine que \(\sigma\) et alors
+      \begin{align}
+        \sigma &= (a_0, \ldots, a_n) \\
+        \sigma' &= (a_0, \ldots, a_{i_0},c,a_{i_0+1}, \ldots, a_n),
+      \end{align}
+      donc
+      \begin{equation}
+        I(f,\sigma')= \sum_{i=1}^{i_0}(a_i-a_{i-1})\lambda_i + (c-a_{i_0})\lambda_{i_0+1} + (a_{i_0+1}-c)\lambda_{i_0+1} + \sum_{i=i_0+1}^{n}(a_i-a_{i-1})\lambda_i,
+      \end{equation}
+      et finalement en retranchant
+      \begin{align}
+        I(f,\sigma')-I(f,\sigma)&= (a_{i_0+1}-a_{i_0})\lambda_{i_0+1} - (c-a_{i_0})\lambda_{i_0+1} - (a_{i_0+1}-c)\lambda_{i_0+1} \\
+                                &=0.
+      \end{align}
   \end{itemize}
   On en déduit alors par récurrence ``immédiate''  que si on rajoute un nombre fini de points à \(\sigma\) pour former une subdivision \(\sigma'\) alors \(I(f,\sigma')=I(f,\sigma)\). Toute subdivision \(\sigma'\) plus fine que \(\sigma\) vérifie \(I(f,\sigma')=I(f,\sigma)\).
 
-Soient \(\sigma\) et \(\sigma'\) deux subdivisions quelconque adaptées à \(f\). Soit \(s\) la réunion de \(\sigma\) et de \(\sigma'\). Alors \(s\) est adaptée à \(f\) et est plus fine que \(\sigma\)~: \(I(f,s)=I(f,\sigma)\). La subdivision \(s\) est adaptée à \(f\) et est plus fine que \(\sigma'\)~: \(I(f,s)=I(f,\sigma')\). Par conséquent \(I(f,\sigma')=I(f,\sigma)\).
+  Soient \(\sigma\) et \(\sigma'\) deux subdivisions quelconque adaptées à \(f\). Soit \(s\) la réunion de \(\sigma\) et de \(\sigma'\). Alors \(s\) est adaptée à \(f\) et est plus fine que \(\sigma\)~: \(I(f,s)=I(f,\sigma)\). La subdivision \(s\) est adaptée à \(f\) et est plus fine que \(\sigma'\)~: \(I(f,s)=I(f,\sigma')\). Par conséquent \(I(f,\sigma')=I(f,\sigma)\).
 \end{proof}
 
 \emph{Remarque}~: La valeur de \(I(f,\sigma)\) ne dépend pas de la valeur de \(f\) en les points de la subdivision. En particulier si \(f \in \R^{\intervalleff{a}{b}}\) est nulle sauf en un nombre fini de points alors \(f\) est en escalier sur \(\intervalleff{a}{b}\) et \(\int_a^b f=0\).
@@ -314,14 +314,14 @@ En particulier, une fonction constante égale à \(k \in \R\) sur \(\intervallef
   Supposons que \(f \in \E(\intervalleff{a}{b})\). Soit \(\sigma=(a_i)_{0\leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) adaptée à \(f\). Soit \(\sigma'\) la subdivision obtenue en ajoutant \(c\) à \(\sigma\). Soit \((\lambda_i)_{0 \leqslant i \leqslant n}\in\R^{n+1}\) la famille des valeurs constantes de \(f\) sur \(\sigma'\). On note \(\sigma_1'\) (resp. \(\sigma_2'\)) les restrictions de \(\sigma'\) à \(\intervalleff{a}{c}\) (resp. \(\intervalleff{c}{b}\)). La fonction \(f_{|\intervalleff{a}{c}}\) (resp. \(f_{|\intervalleff{c}{b}}\)) est constante sur les intervalles ouverts de \(\sigma_1'\) (resp. \(\sigma_2'\)). Alors ces deux fonctions sont en escaliers.
   \begin{align}
     \int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} &= I(f_{|\intervalleff{a}{c}},\sigma_1')+I(f_{|\intervalleff{c}{b}},\sigma_2') \\
-&=\sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + (c-a_{i_0-1})\lambda_{i_0} + (a_{i_0}-c)\lambda_{i_0} + \sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i \\
-&= \sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + \lambda_{i_0}(a_{i_0}-a_{i_0-1}) +\sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i\\
-&=\sum_{i=1}^{n} (a_i-a_{i-1})\lambda_i\\
-&=I(f,\sigma)=\int_a^bf
+                                                                         &=\sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + (c-a_{i_0-1})\lambda_{i_0} + (a_{i_0}-c)\lambda_{i_0} + \sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i \\
+                                                                         &= \sum_{i=1}^{i_0-1} (a_i-a_{i-1})\lambda_i + \lambda_{i_0}(a_{i_0}-a_{i_0-1}) +\sum_{i=i_0+1}^{n} (a_i-a_{i-1})\lambda_i\\
+                                                                         &=\sum_{i=1}^{n} (a_i-a_{i-1})\lambda_i\\
+                                                                         &=I(f,\sigma)=\int_a^bf
   \end{align}
 
   Supposons désormais que \(f_{|\intervalleff{a}{c}} \in \E(\intervalleff{a}{c})\) et \( f_{|\intervalleff{c}{b}} \in \E(\intervalleff{c}{b})\). Soient \(\sigma=(a_i)_{i \in \intervalleentier{0}{n}}\) et \(\sigma'=(a_i)_{i \in \intervalleentier{m}{n}}\) deux subdivisions respectives de \(\intervalleff{a}{c}\) et \(\intervalleff{c}{b}\) respectivement adaptées à  \(f_{|\intervalleff{a}{c}}\) et \( f_{|\intervalleff{c}{b}}\). Soit \(s\) la réunion de \(\sigma\) et \(\sigma'\). La fonction \(f\) est constante sur tous les intervalles ouverts de \(s\) donc \(f\) est en escalier sur \(\intervalleff{a}{b}\). De la même manière on montre que 
-\(\int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} = \int_a^b f\).
+  \(\int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} = \int_a^b f\).
 \end{proof}
 
 \subsubsection{Linéarité par rapport aux fonctions}
@@ -340,8 +340,8 @@ On a vu que \(\E(\intervalleff{a}{b})\) est un \(\R\)-espace vectoriel.
   Alors \(\lambda f+g\) est constante sur chaque intervalle ouvert \(\intervalleoo{a_{i-1}}{a_i}\) égale à \(\lambda \alpha_i +\beta_i\). Ainsi
   \begin{align}
     I(\lambda f+g,s) &= \sum_{i=1}^n (a_i-a_{i-1})(\lambda \alpha_i+\beta_i) \\
-    &=\lambda \sum_{i=1}^n (a_i-a_{i-1}) \alpha_i + \sum_{i=1}^n (a_i-a_{i-1})\beta_i \\
-    &=\lambda I(f,s)+ I(g,s)
+                     &=\lambda \sum_{i=1}^n (a_i-a_{i-1}) \alpha_i + \sum_{i=1}^n (a_i-a_{i-1})\beta_i \\
+                     &=\lambda I(f,s)+ I(g,s)
   \end{align}
   d'où la linéarité de \(\varphi\).
 \end{proof}
@@ -362,7 +362,7 @@ Cependant on peut avoir \(\int_a^b f \geqslant 0\) sans que \(f \geqslant \tilde
     \int_a^b f = I(f,\sigma)=\sum_{i=1}^n(a_i-a_{i-1})\lambda_i \geqslant 0
   \end{equation}
 
-   Soit \((f,g) \in \E(\intervalleff{a}{b})^2\) telles que \(f \leqslant g\). Comme \(g-f\) est en escalaier et que \(g-f \geqslant \tilde{0}\) d'après la première partie on a \(\int_a^b g-f \geqslant 0\). Par linéarité de l'intégrale on a \(\int_a^b f \leqslant \int_a^b g\).
+  Soit \((f,g) \in \E(\intervalleff{a}{b})^2\) telles que \(f \leqslant g\). Comme \(g-f\) est en escalaier et que \(g-f \geqslant \tilde{0}\) d'après la première partie on a \(\int_a^b g-f \geqslant 0\). Par linéarité de l'intégrale on a \(\int_a^b f \leqslant \int_a^b g\).
 \end{proof}
 
 \subsubsection{Majoration}
@@ -381,7 +381,7 @@ Cependant on peut avoir \(\int_a^b f \geqslant 0\) sans que \(f \geqslant \tilde
   De plus
   \begin{align}
     \abs{\int_a^b f} &= \abs{\sum_{i=1}^n (a_i-a_{i-1})\lambda_i}\\
-      &\leqslant \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}
+                     &\leqslant \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}
   \end{align}
   puisque \(a_{i-1} < a_i\). Donc on a bien la majoration
   \begin{equation}
@@ -411,10 +411,10 @@ Soit une fonction \(f\) continue par morceaux sur \(\intervalleff{a}{b}\). On d�
 \end{equation}
 et comme ces fonctions sont en escalier, on a bien \(\tilde{m} \in \E^{-}(f)\) et \(\tilde{M} \in \E^{+}(f)\). Les ensembles \(\E^{-}(f)\) et \(\E^{+}(f)\) sont non vides. On définit 
 \begin{align}
-I^{-}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{-}(f)}, \\
-I^{+}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{+}(f)}.
+  I^{-}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{-}(f)}, \\
+  I^{+}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{+}(f)}.
 \end{align}
- Ces deux ensembles sont non vides puisque \(\E^{-}(f)\) et \(\E^{+}(f)\) sont non vides. Comme la fonction \(\tilde{M}\) majore l'ensemble \(\E^{-}(f)\), \(I^{-}(f)\) est majoré par \(M(b-a)\). De la même manière comme la fonction \(\tilde{m}\) minore l'ensemble \(\E^{-}(f)\), \(I^{+}(f)\) est minoré par \(m(b-a)\). Finalement, \(I^{-}(f)\) admet une borne supérieure notée \(S\) et \(I^{+}(f)\) admet une borne inférieure notée \(I\). Pour toutes fonctions \(\varphi \in \E^{-}(f)\) et \(\psi \in \E^{+}(f)\) on a
+Ces deux ensembles sont non vides puisque \(\E^{-}(f)\) et \(\E^{+}(f)\) sont non vides. Comme la fonction \(\tilde{M}\) majore l'ensemble \(\E^{-}(f)\), \(I^{-}(f)\) est majoré par \(M(b-a)\). De la même manière comme la fonction \(\tilde{m}\) minore l'ensemble \(\E^{-}(f)\), \(I^{+}(f)\) est minoré par \(m(b-a)\). Finalement, \(I^{-}(f)\) admet une borne supérieure notée \(S\) et \(I^{+}(f)\) admet une borne inférieure notée \(I\). Pour toutes fonctions \(\varphi \in \E^{-}(f)\) et \(\psi \in \E^{+}(f)\) on a
 \begin{equation}
   \varphi \leqslant f \leqslant \psi,
 \end{equation}
@@ -476,76 +476,76 @@ Ce qu'on a appelé \(\int_a^b f\) au sens des fonctions continues par morceaux e
 \begin{proof}
   La démonstration se déroule en trois étapes. Soient d'abord deux fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\) et un réel \(\lambda\). On montre d'abord que \(\int_a^b (-f) = -\int_a^b f\), ensuite que \(\int_a^b (f+g) = \int_a^b f + \int_a^b g\) et enfin que \(\int_a^b (\lambda f) = \lambda \int_a^b f\).
 
-Montrons le premier point. Par définition,
-\begin{align}
-  \int_a^b (-f) &= \sup\limits_{\varphi \leqslant -f \in \E(\intervalleff{a}{b})} \int_a^b \varphi ,\\
-  &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi ,\\
-  &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi 
-\end{align}
-car \(\psi\) est une fonction en escalier et on a montré la linéarité. Ensuite
-\begin{equation}
-  \int_a^b (-f) = -\inf\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b \psi ,\\
-\end{equation}
-d'après les propriétés de la borne inférieure et supérieures. Alors
-\begin{equation}
-   \int_a^b (-f) = -\int_a^b f,
-\end{equation}
-par définition.
+  Montrons le premier point. Par définition,
+  \begin{align}
+    \int_a^b (-f) &= \sup\limits_{\varphi \leqslant -f \in \E(\intervalleff{a}{b})} \int_a^b \varphi ,\\
+                  &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi ,\\
+                  &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi 
+  \end{align}
+  car \(\psi\) est une fonction en escalier et on a montré la linéarité. Ensuite
+  \begin{equation}
+    \int_a^b (-f) = -\inf\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b \psi ,\\
+  \end{equation}
+  d'après les propriétés de la borne inférieure et supérieures. Alors
+  \begin{equation}
+    \int_a^b (-f) = -\int_a^b f,
+  \end{equation}
+  par définition.
 
-Soit ensuites \((\varphi_1, \varphi_2) \in \E^{-}(f) \times \E^{-}(g)\) alors \(\varphi+\varphi_2\) est en escalier et \(\varphi_1+\varphi_2 \leqslant f+g\), donc \(\varphi_1+\varphi_2 \in \E^{-}(f+g)\). Ainsi
-\begin{equation}
-  \int_a^b (\varphi_1+\varphi_2) \leqslant \int_a^b (f+g),
-\end{equation}
-par linéarité de l'intégrale pour les fonction en escalier, \(\int_a^b (\varphi_1+\varphi_2) = \int_a^b \varphi_1 + \int_a^b \varphi_2\). D'où
-\begin{equation}
-  \int_a^b \varphi_1 \leqslant \int_a^b (f+g) - \int_a^b \varphi_2,
-\end{equation}
-et cette égalité est vraie pour toute fonction \(\varphi_1 \in \E^{-}(f)\) donc \(\int_a^b (f+g) - \int_a^b \varphi_2\) est un majorant de \(I^{-}(f)\). Alors
-\begin{equation}
-  \int_a^b (f+g) - \int_a^b \varphi_2 \geqslant \sup I^{-}(f) = \int_a^b f.
-\end{equation}
-De la même manière
-\begin{equation}
-  \int_a^b \varphi_2 \leqslant \int_a^b (f+g) - \int_a^b f,
-\end{equation}
-est vraie pour toute fonction \(\varphi_2 \in \E^{-}(g)\), alors \(\int_a^b (f+g) - \int_a^b f\) est un majorant de \(I^{-}(g)\). D'où
-\begin{equation}
-  \int_a^b g = \sup I^{-}(g) \leqslant \int_a^b (f+g) - \int_a^b f.
-\end{equation}
+  Soit ensuites \((\varphi_1, \varphi_2) \in \E^{-}(f) \times \E^{-}(g)\) alors \(\varphi+\varphi_2\) est en escalier et \(\varphi_1+\varphi_2 \leqslant f+g\), donc \(\varphi_1+\varphi_2 \in \E^{-}(f+g)\). Ainsi
+  \begin{equation}
+    \int_a^b (\varphi_1+\varphi_2) \leqslant \int_a^b (f+g),
+  \end{equation}
+  par linéarité de l'intégrale pour les fonction en escalier, \(\int_a^b (\varphi_1+\varphi_2) = \int_a^b \varphi_1 + \int_a^b \varphi_2\). D'où
+  \begin{equation}
+    \int_a^b \varphi_1 \leqslant \int_a^b (f+g) - \int_a^b \varphi_2,
+  \end{equation}
+  et cette égalité est vraie pour toute fonction \(\varphi_1 \in \E^{-}(f)\) donc \(\int_a^b (f+g) - \int_a^b \varphi_2\) est un majorant de \(I^{-}(f)\). Alors
+  \begin{equation}
+    \int_a^b (f+g) - \int_a^b \varphi_2 \geqslant \sup I^{-}(f) = \int_a^b f.
+  \end{equation}
+  De la même manière
+  \begin{equation}
+    \int_a^b \varphi_2 \leqslant \int_a^b (f+g) - \int_a^b f,
+  \end{equation}
+  est vraie pour toute fonction \(\varphi_2 \in \E^{-}(g)\), alors \(\int_a^b (f+g) - \int_a^b f\) est un majorant de \(I^{-}(g)\). D'où
+  \begin{equation}
+    \int_a^b g = \sup I^{-}(g) \leqslant \int_a^b (f+g) - \int_a^b f.
+  \end{equation}
 
-On vient de montrer que
-\begin{equation}
-  \int_a^b f + \int_a^b g \leqslant \int_a^b (f+g),
-\end{equation}
-on a aussi
-\begin{equation}
-  \int_a^b (-f) + \int_a^b (-g) \leqslant \int_a^b (-f-g).
-\end{equation}
-Soit alors
-\begin{equation}
-  -\int_a^b f - \int_a^b g \leqslant -\int_a^b (f+g),
-\end{equation}
-et en passant à l'opposé on change le sens de l'inégalité
-\begin{equation}
-  \int_a^b f + \int_a^b g \geqslant \int_a^b (f+g).
-\end{equation}
-Finalement, il y a égalité 
-\begin{equation}
-  \int_a^b f + \int_a^b g = \int_a^b (f+g).
-\end{equation}
+  On vient de montrer que
+  \begin{equation}
+    \int_a^b f + \int_a^b g \leqslant \int_a^b (f+g),
+  \end{equation}
+  on a aussi
+  \begin{equation}
+    \int_a^b (-f) + \int_a^b (-g) \leqslant \int_a^b (-f-g).
+  \end{equation}
+  Soit alors
+  \begin{equation}
+    -\int_a^b f - \int_a^b g \leqslant -\int_a^b (f+g),
+  \end{equation}
+  et en passant à l'opposé on change le sens de l'inégalité
+  \begin{equation}
+    \int_a^b f + \int_a^b g \geqslant \int_a^b (f+g).
+  \end{equation}
+  Finalement, il y a égalité 
+  \begin{equation}
+    \int_a^b f + \int_a^b g = \int_a^b (f+g).
+  \end{equation}
 
-Si \(\lambda>0\) on a
-\begin{align}
-  \int_a^b (\lambda f) &= \sup\limits_{\varphi \leqslant \lambda f \in \E(\intervalleff{a}{b})} \int_a^b \varphi \\
-  &= \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \int_a^b \lambda \psi \\
-  &= \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \lambda \int_a^b \psi \\
-  &= \lambda \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \int_a^b \psi \\
-  &=\lambda \int_a^b f.
-\end{align}
-Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
-\begin{align}
-  \int_a^b (\lambda f) = \int_a^b (-\lambda)(-f) = -\lambda \int_a^b(-f) = \lambda \int_a^b f.
-\end{align}
+  Si \(\lambda>0\) on a
+  \begin{align}
+    \int_a^b (\lambda f) &= \sup\limits_{\varphi \leqslant \lambda f \in \E(\intervalleff{a}{b})} \int_a^b \varphi \\
+                         &= \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \int_a^b \lambda \psi \\
+                         &= \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \lambda \int_a^b \psi \\
+                         &= \lambda \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \int_a^b \psi \\
+                         &=\lambda \int_a^b f.
+  \end{align}
+  Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
+  \begin{align}
+    \int_a^b (\lambda f) = \int_a^b (-\lambda)(-f) = -\lambda \int_a^b(-f) = \lambda \int_a^b f.
+  \end{align}
 \end{proof}
 
 \subsection{Positivité et croissance -- Majoration de la valeur absolue de l'intégrale}
@@ -564,7 +564,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
 \end{proof}
 
 \begin{theo}
-   Pour toute fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
+  Pour toute fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
   \begin{equation}
     f \geqslant g \implies \int_a^b f \geqslant \int_a^b g.
   \end{equation}
@@ -599,7 +599,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
   \end{equation}
   D'où
   \begin{equation}
-     \abs{\int_a^b f~} \leqslant \int_a^b \abs{f}.
+    \abs{\int_a^b f~} \leqslant \int_a^b \abs{f}.
   \end{equation}
 
   Les fonctions continues par morceaux sont bornées. Soit donc \(g\) la fonction constante égale à \(\sup\limits_{\intervalleff{a}{b}} \abs{f}\) sur \(\intervalleff{a}{b}\), alors
@@ -647,7 +647,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
 \end{corth}
 
 \begin{theo}
-   Pour toutes fonctions \(f\) et \(g\) continues sur \(\intervalleff{a}{b}\), on a
+  Pour toutes fonctions \(f\) et \(g\) continues sur \(\intervalleff{a}{b}\), on a
   \begin{equation}
     f \geqslant g \text{~et~} f \neq g \implies \int_a^b f > \int_a^b g.
   \end{equation}
@@ -672,7 +672,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
 \begin{proof}
   \(\impliedby\) Si \(f\) est de signe constant, alors si \(f \geqslant \tilde{0}\) alors \(\int_a^b f \geqslant 0\) et donc
   \begin{equation}
-     \abs{\int_a^b f~} = \int_a^b f = \int_a^b \abs{f};
+    \abs{\int_a^b f~} = \int_a^b f = \int_a^b \abs{f};
   \end{equation}
   sinon \(f \leqslant \tilde{0}\) et alors \(\int_a^b f \leqslant 0\) et donc
   \begin{equation}
@@ -681,16 +681,16 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
 
   \(\implies\) Deux cas se présentent selon le signe de l'intégrale.
   \begin{itemize}
-  \item Si \(\int_a^b f \geqslant 0\) alors l'hypothèse s'écrit~:
-    \begin{equation}
-      \int_a^b f = \int_a^b \abs{f}
-    \end{equation}
-    avec \(f \leqslant \abs{f}\). Donc \(f=\abs{f}\) et alors \(f \geqslant \tilde{0}\).
-  \item Si \(\int_a^b f \leqslant 0\) alors \(-\int_a^b f = \int_a^b \abs{f}\) et par linéarité
-    \begin{equation}
-      \int_a^b -f = \int_a^b \abs{f}
-    \end{equation}
-    avec \(-f \leqslant \abs{f}\) donc \(-f=\abs{f}\) et alors \(f \leqslant \tilde{0}\).
+    \item Si \(\int_a^b f \geqslant 0\) alors l'hypothèse s'écrit~:
+      \begin{equation}
+        \int_a^b f = \int_a^b \abs{f}
+      \end{equation}
+      avec \(f \leqslant \abs{f}\). Donc \(f=\abs{f}\) et alors \(f \geqslant \tilde{0}\).
+    \item Si \(\int_a^b f \leqslant 0\) alors \(-\int_a^b f = \int_a^b \abs{f}\) et par linéarité
+      \begin{equation}
+        \int_a^b -f = \int_a^b \abs{f}
+      \end{equation}
+      avec \(-f \leqslant \abs{f}\) donc \(-f=\abs{f}\) et alors \(f \leqslant \tilde{0}\).
   \end{itemize}
 \end{proof}
 
@@ -710,7 +710,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
   Soit une fonction \(f \in \CM(\intervalleff{a}{b})\), alors \(f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c})\) et \(f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b})\). Soit \(\epsilon>0\), alors
   \begin{align}
     \exists (\varphi_1, \psi_1) \in \E(\intervalleff{a}{c})^2 \ \begin{cases} \varphi_1 \leqslant f_{|\intervalleff{a}{c}} \\ \psi_1 - \varphi_1 \leqslant \tilde{\epsilon} \end{cases} \\
-\exists (\varphi_2, \psi_2) \in \E(\intervalleff{c}{b})^2 \ \begin{cases} \varphi_2 \leqslant f_{|\intervalleff{c}{b}} \\ \psi_2- \varphi_2 \leqslant \tilde{\epsilon} \end{cases}
+    \exists (\varphi_2, \psi_2) \in \E(\intervalleff{c}{b})^2 \ \begin{cases} \varphi_2 \leqslant f_{|\intervalleff{c}{b}} \\ \psi_2- \varphi_2 \leqslant \tilde{\epsilon} \end{cases}
   \end{align}
   Soient deux fonctions \(\psi\) et \(\varphi\) de \(\intervalleff{a}{b}\) vers \(\R\) définies par
   \begin{align}
@@ -746,9 +746,9 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
 \begin{theo}
   Soient un intervalle réel \(I\) et une fonction \(f \in \CM(I)\). pour tout réels \(a\) et \(b\) de \(I\) on a~:
   \begin{enumerate}
-  \item Si \(f \geqslant 0\), si \(a \leqslant b\) alors \(\int_a^bf \geqslant 0\) et si \(a \geqslant b\) \(\int_a^b f \leqslant 0\);
-  \item \(\abs{\int_a^b f} \leqslant \int_a^b \abs{f}\) si \(a<b\) et \(\abs{\int_a^b f} \geqslant \int_b^a \abs{f}\) si \(a \geqslant b\);
-  \item \(\abs{\int_a^b f~} \leqslant \abs{b-a} \sup\limits_{\intervalleff{a}{b}} \abs{f}\)
+    \item Si \(f \geqslant 0\), si \(a \leqslant b\) alors \(\int_a^bf \geqslant 0\) et si \(a \geqslant b\) \(\int_a^b f \leqslant 0\);
+    \item \(\abs{\int_a^b f} \leqslant \int_a^b \abs{f}\) si \(a<b\) et \(\abs{\int_a^b f} \geqslant \int_b^a \abs{f}\) si \(a \geqslant b\);
+    \item \(\abs{\int_a^b f~} \leqslant \abs{b-a} \sup\limits_{\intervalleff{a}{b}} \abs{f}\)
   \end{enumerate}
 \end{theo}
 
@@ -777,7 +777,7 @@ Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
   \end{equation}
   donc \(\varphi_T \in \E^{-}(f)\) et alors
   \begin{equation}
-   \int_a^b\varphi = \int_{a+T}^{b+T} \varphi_T \leqslant \int_{a+T}^{b+T} f_T.
+    \int_a^b\varphi = \int_{a+T}^{b+T} \varphi_T \leqslant \int_{a+T}^{b+T} f_T.
   \end{equation}
   C'est vrai pour toute fonction \(\varphi \in \E^{-}(f)\) donc \(\int_{a+T}^{b+T} f_T\) est un majorant de \(I^{-}(f)\) d'où
   \begin{equation}
@@ -868,7 +868,7 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
 \begin{theo}
   Pour toutes fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
   \begin{equation}
-   \abs{\int_a^b fg} \leqslant \sqrt{\int_a^b f^2 \int_a^b g^2} 
+    \abs{\int_a^b fg} \leqslant \sqrt{\int_a^b f^2 \int_a^b g^2} 
   \end{equation}
 \end{theo}
 
@@ -885,58 +885,58 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
   \end{equation}
   Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(\int_a^b g^2=0\) alors on a \(2\lambda \int_a^b fg + \int_a^b f^2 \geqslant 0\) pour tout \(\lambda\) alors \(\int_a^b fg=0\) et l'inégalité est vraie \(0 \leqslant 0\);
-  \item Sinon alors \(P\) est polynomiale de degré \(2\) et \(P \geqslant \tilde{0}\). Alors le dsicriminant est négatif~:
-    \begin{equation}
-      4 \left(\int_a^b fg \right)^2 - 4 \int_a^bf^2 \int_a^b g^2 \leqslant 0
-    \end{equation}
-    et ainsi on a bien l'inégalité
-    \begin{equation}
-      \left(\int_a^b fg \right)^2 \leqslant \int_a^bf^2 \int_a^b g^2
-    \end{equation}
-    et comme \(\int_a^bf^2 \int_a^b g^2  \geqslant 0\), par positivité de l'intégrale on a bien l'inégalité de Cauchy-Schwarz~:
-    \begin{equation}
-      \abs{\int_a^b fg~} \leqslant \sqrt{\int_a^b f^2 \int_a^b g^2}.
-    \end{equation}
+    \item Si \(\int_a^b g^2=0\) alors on a \(2\lambda \int_a^b fg + \int_a^b f^2 \geqslant 0\) pour tout \(\lambda\) alors \(\int_a^b fg=0\) et l'inégalité est vraie \(0 \leqslant 0\);
+    \item Sinon alors \(P\) est polynomiale de degré \(2\) et \(P \geqslant \tilde{0}\). Alors le dsicriminant est négatif~:
+      \begin{equation}
+        4 \left(\int_a^b fg \right)^2 - 4 \int_a^bf^2 \int_a^b g^2 \leqslant 0
+      \end{equation}
+      et ainsi on a bien l'inégalité
+      \begin{equation}
+        \left(\int_a^b fg \right)^2 \leqslant \int_a^bf^2 \int_a^b g^2
+      \end{equation}
+      et comme \(\int_a^bf^2 \int_a^b g^2  \geqslant 0\), par positivité de l'intégrale on a bien l'inégalité de Cauchy-Schwarz~:
+      \begin{equation}
+        \abs{\int_a^b fg~} \leqslant \sqrt{\int_a^b f^2 \int_a^b g^2}.
+      \end{equation}
   \end{enumerate}
 \end{proof}
 
 \begin{prop}
-   Pour toutes fonctions \(f\) et \(g\) continues sur \(\intervalleff{a}{b}\), il y a égalité dans l'inégalité de Cauchy-Schwarz si et seulement si la famille \((f,g)\) est liée.
+  Pour toutes fonctions \(f\) et \(g\) continues sur \(\intervalleff{a}{b}\), il y a égalité dans l'inégalité de Cauchy-Schwarz si et seulement si la famille \((f,g)\) est liée.
 \end{prop}
 \begin{proof}
   Deux cas se présentent~:
   \begin{enumerate}
-  \item Si \(\int_a^b g^2=0\) alors \(g^2=\tilde{0}\) donc \(g=\tilde{0}\). Alors
-    \begin{equation}
-      \abs{\int_a^b fg} =0 = \sqrt{\int_a^b f^2 \int_a^b g^2} 
-    \end{equation}
-  \item Sinon, alors le discriminant du polynôme \(P\) (cf demonstration précédente) est nul et il existe une racine double \(\lambda_0\) tel que
-    \begin{equation}
-      \begin{cases}
-        \int_a^b (f+\lambda_0 g)^2=0\\
-        (f+\lambda_0 g)^2 \geqslant 0
-      \end{cases}
-    \end{equation}
-    comme \(f+\lambda_0 g\) est continue, on a alors d'après l'intégrale nulle \(f=-\lambda_0 g\).
+    \item Si \(\int_a^b g^2=0\) alors \(g^2=\tilde{0}\) donc \(g=\tilde{0}\). Alors
+      \begin{equation}
+        \abs{\int_a^b fg} =0 = \sqrt{\int_a^b f^2 \int_a^b g^2} 
+      \end{equation}
+    \item Sinon, alors le discriminant du polynôme \(P\) (cf demonstration précédente) est nul et il existe une racine double \(\lambda_0\) tel que
+      \begin{equation}
+        \begin{cases}
+          \int_a^b (f+\lambda_0 g)^2=0\\
+          (f+\lambda_0 g)^2 \geqslant 0
+        \end{cases}
+      \end{equation}
+      comme \(f+\lambda_0 g\) est continue, on a alors d'après l'intégrale nulle \(f=-\lambda_0 g\).
 
-    Réciproquement s'il existe \(\mu \in \R\) tel que \(f=\mu g\) alors
-    \begin{equation}
-      \abs{\int_a^b fg~} = \abs{\int_a^b \mu g^2~} = \abs{\mu} \int_a^b g^2
-    \end{equation}
-    et alors
-    \begin{equation}
-      \sqrt{\int_a^b f^2 \int_a^b g^2}  = \sqrt{\mu^2 \left(\int_a^b g^2 \right)^2} = \abs{\mu} \int_a^b g^2.
-    \end{equation}
+      Réciproquement s'il existe \(\mu \in \R\) tel que \(f=\mu g\) alors
+      \begin{equation}
+        \abs{\int_a^b fg~} = \abs{\int_a^b \mu g^2~} = \abs{\mu} \int_a^b g^2
+      \end{equation}
+      et alors
+      \begin{equation}
+        \sqrt{\int_a^b f^2 \int_a^b g^2}  = \sqrt{\mu^2 \left(\int_a^b g^2 \right)^2} = \abs{\mu} \int_a^b g^2.
+      \end{equation}
   \end{enumerate}
 \end{proof}
 
 \subsubsection{Inégalité de Minkowski}
 
 \begin{theo}
-   Pour toutes fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
+  Pour toutes fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
   \begin{equation}
-   \sqrt{\int_a^b (f+g)^2} \leqslant \sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} 
+    \sqrt{\int_a^b (f+g)^2} \leqslant \sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} 
   \end{equation}
   C'est l'inégalité triangulaire \(||f+g||_2 \leqslant ||f||_2 + ||g||_2\).
 \end{theo}
@@ -944,8 +944,8 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
   Pour toutes fonctions \(f\) et \(g\) continues par morceaux sur \(\intervalleff{a}{b}\), on a
   \begin{align}
     \int_a^b (f+g)^2 & = \int_a^b f^2 + \int_a^b g^2 +2 \int_a^b fg \\
-    &\leqslant \int_a^b f^2 + \int_a^b g^2 +2 \sqrt{\int_a^b f^2 \int_a^b g^2} \\
-    &\leqslant \left(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2}\right)^2.
+                     &\leqslant \int_a^b f^2 + \int_a^b g^2 +2 \sqrt{\int_a^b f^2 \int_a^b g^2} \\
+                     &\leqslant \left(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2}\right)^2.
   \end{align}
   La première inégalité est issue de l'inégalité de Cauchy-Schwarz. Cependant \(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} \geqslant 0\) et \(\int_a^b (f+g)^2 \geqslant 0\) alors en passant à la racine on a bien l'inégalité de Minkowski~:
   \begin{equation}
@@ -989,7 +989,7 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
   Pour toute subdivision \(\sigma=(a_i)_{0 \leqslant i \leqslant n-1}\) de \(\intervalleff{a}{b}\) et pour toute famille de points \(\alpha=(\alpha_i)_{0 \leqslant i \leqslant n-1}\) de \(\intervalleff{a}{b}\) telle que pour tout \(i \in \intervalleentier{0}{n-1}\) on a \(\alpha_i \in \intervalleff{a_i}{a_{i+1}}\), on a
   \begin{align}
     R(f,\sigma,\alpha)- \int_a^b f &= \sum_{i=0}^{n-1}(a_{i+1}-a_i)f(\alpha_i) - \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} f \\
-    &=\sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} (f(\alpha_i)-f).
+                                   &=\sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} (f(\alpha_i)-f).
   \end{align}
   Comme \(f\) est continue sur \(\intervalleff{a}{b}\), grâce au théorème de Heine, elle est uniformément continue~:
   \begin{equation}
@@ -1006,7 +1006,7 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
   Alors
   \begin{align}
     \abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f} \\
-    &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a} = \int_a^b \frac{\epsilon}{b-a}=\epsilon.
+                                          &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a} = \int_a^b \frac{\epsilon}{b-a}=\epsilon.
   \end{align}
 \end{proof}
 
@@ -1017,14 +1017,14 @@ Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. Supposon
   \end{equation}
   Cas particulier pour le choix de la famille \(\alpha\)~:
   \begin{enumerate}
-  \item Si pour tout \(i \in \intervalleentier{0}{n-1}\) \(\alpha_i=a_i=a+i\frac{b-a}{n}\) alors
-    \begin{equation}
-      \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{i=0}^{n-1}f\left(a+i\frac{b-a}{n}\right) = \int_a^b f
-    \end{equation}
+    \item Si pour tout \(i \in \intervalleentier{0}{n-1}\) \(\alpha_i=a_i=a+i\frac{b-a}{n}\) alors
+      \begin{equation}
+        \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{i=0}^{n-1}f\left(a+i\frac{b-a}{n}\right) = \int_a^b f
+      \end{equation}
     \item Si pour tout \(i \in \intervalleentier{0}{n-1}\) \(\alpha_i=a_{i+1}=a+(i+1)\frac{b-a}{n}\) alors
-    \begin{equation}
-      \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{j=1}^{n}f\left(a+j\frac{b-a}{n}\right) = \int_a^b f.
-    \end{equation}
+      \begin{equation}
+        \lim\limits_{n \to \infty} \frac{b-a}{n} \sum_{j=1}^{n}f\left(a+j\frac{b-a}{n}\right) = \int_a^b f.
+      \end{equation}
   \end{enumerate}
 \end{cor}
 
@@ -1034,17 +1034,17 @@ Dans le cas où \(f\) est lipschitzienne, on peut majorer la différence entre l
 
 Soient deux réels \(a\) et \(b\) tels que \(a<b\) et \(k>0\) tel que \(f\) soit \(k\)-lipschitzienne sur \(\intervalleff{a}{b}\). Soit \(\sigma=(a_i)_{0 \leqslant i \leqslant n}\) une subdivision de \(\intervalleff{a}{b}\) de pas \(\delta(\sigma)\). Soit \((\alpha_i)_{0 \leqslant i \leqslant n-1}\) une famille de points de \(\intervalleff{a}{b}\) telle que pour tout \(i \in \intervalleentier{0}{n-1}\) on a \(\alpha_i \in \intervalleff{a_i}{a_{i+1}}\). Alors
 \begin{align}
-\abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f(x)}\,\diff x \\
-&\leqslant k \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x
+  \abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f(x)}\,\diff x \\
+                                        &\leqslant k \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x
 \end{align}
 
 Soit \(i \in \intervalleentier{0}{n-1}\), alors
 \begin{align}
   \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x &= \int_{a_i}^{\alpha_i} \abs{\alpha_i-x}\,\diff x + \int_{\alpha_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x \\
-&= \left[ -\frac{(\alpha_i-x)^2}{2}\right]_{a_i}^{\alpha_i} + \left[\frac{(x-\alpha_i)^2}{2}\right]_{\alpha_i}^{a_{i+1}} \\
-&= \frac{(\alpha_i-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
-& \leqslant \frac{(a_{i+1}-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
-& \leqslant \delta(\sigma)^2
+                                                 &= \left[ -\frac{(\alpha_i-x)^2}{2}\right]_{a_i}^{\alpha_i} + \left[\frac{(x-\alpha_i)^2}{2}\right]_{\alpha_i}^{a_{i+1}} \\
+                                                 &= \frac{(\alpha_i-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
+                                                 & \leqslant \frac{(a_{i+1}-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
+                                                 & \leqslant \delta(\sigma)^2
 \end{align}
 Alors
 \begin{equation}
@@ -1066,8 +1066,8 @@ Soit \((a,b) \in \R^2\), \(a<b\). On s'intéresse aux fonction de \(\intervallef
 \begin{defdef}
   Soit \(f \in \C^{\intervalleff{a}{b}}\). On dit que \(f\) est continue par morceaux sur \(\intervalleff{a}{b}\) s'il existe une subdivision \(\sigma=(a_i)_{0 \leqslant i \leqslant n}\) de \(\intervalleff{a}{b}\) telle que~:
   \begin{enumerate}
-  \item pour tout \(i \in \intervalleentier{1}{n}\) \(f\) est continue sur \(\intervalleoo{a_{i-1}}{a_i}\)
-  \item pour tout \(i \in \intervalleentier{1}{n}\) \(f_{|\intervalleoo{a_{i-1}}{a_i}}\) admet des limites finies à gauche en \(a_i\) et à droite en \(a_{i-1}\).
+    \item pour tout \(i \in \intervalleentier{1}{n}\) \(f\) est continue sur \(\intervalleoo{a_{i-1}}{a_i}\)
+    \item pour tout \(i \in \intervalleentier{1}{n}\) \(f_{|\intervalleoo{a_{i-1}}{a_i}}\) admet des limites finies à gauche en \(a_i\) et à droite en \(a_{i-1}\).
   \end{enumerate}
 \end{defdef}
 
@@ -1111,8 +1111,8 @@ est une forme linéaire sur le \(\C\)-espace vectoriel \(\CM(\intervalleff{a}{b}
   alors~:
   \begin{align}
     \int_a^b (f+g) &= \int_a^b (f_1+g_1) + \ii \int_a^b (f_2+g_2) \\
-    &=\int_a^b f_1 + \ii \int_a^b f_2 + \int_a^b g_1 + \ii \int_a^b g_2 \\
-    &=\int_a^b f+ \int_a^b g
+                   &=\int_a^b f_1 + \ii \int_a^b f_2 + \int_a^b g_1 + \ii \int_a^b g_2 \\
+                   &=\int_a^b f+ \int_a^b g
   \end{align}
   et comme
   \begin{equation}
@@ -1121,8 +1121,8 @@ est une forme linéaire sur le \(\C\)-espace vectoriel \(\CM(\intervalleff{a}{b}
   alors on a
   \begin{align}
     \int_a^b(\lambda f) &= \int_a^b (uf_1-vf_2)+ \ii \int_a^b (cf_1+uf_2) \\
-    &= (u+\ii v) \int_a^b f_1 + (\ii u-v) \int_a f_2\\
-    &=\lambda \int_a^b f_1 + \ii \lambda \int_a^b f_2 = \lambda \int_a^b f
+                        &= (u+\ii v) \int_a^b f_1 + (\ii u-v) \int_a f_2\\
+                        &=\lambda \int_a^b f_1 + \ii \lambda \int_a^b f_2 = \lambda \int_a^b f
   \end{align}
 \end{proof}
 
@@ -1131,7 +1131,7 @@ est une forme linéaire sur le \(\C\)-espace vectoriel \(\CM(\intervalleff{a}{b}
 \begin{theo}
   Soient trois réels \(a\leqslant c \leqslant b\) et \(f \in \C^{\intervalleff{a}{b}}\). Alors
   \begin{equation}
-   f \in \CM(\intervalleff{a}{b},\C) \iff f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c},\C) \text{~et~} f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b},\C).
+    f \in \CM(\intervalleff{a}{b},\C) \iff f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c},\C) \text{~et~} f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b},\C).
   \end{equation}
   Auquel cas
   \begin{equation}
@@ -1154,28 +1154,28 @@ est une forme linéaire sur le \(\C\)-espace vectoriel \(\CM(\intervalleff{a}{b}
 \begin{proof}
   On distingue deux cas, selon que \(\int_a^b f \in \Rpluss\) ou non.
   \begin{enumerate}
-  \item Supposons que \(\int_a^b f \in \Rpluss\). Alors \(\abs{\int_a^b f~}=\int_a^b f\) et donc \(\int_a^b \Im(f) =0\) et alors \(\int_a^b f = \int_a^b \Re(f)\). On a
-    \begin{equation}
-      \Re(f) \leqslant \abs{f}
-    \end{equation}
-    et par croissance de l'intégrale
-    \begin{equation}
-      \abs{\int_a^b f~} = \int_a^b \Re(f) \leqslant \int_a^b \abs{f}
-    \end{equation}
-  \item Supposons maintenant que \(\int_a^b f \notin \Rpluss\) et en particulier \(\int_a^b f \neq 0\). Alors il existe un réel \(\rho >0\) et un réel \(\theta\) tels que
-    \begin{equation}
-      \int_a^b f = \rho \e^{\ii \theta}
-    \end{equation}
-    et alors par linéarité
-    \begin{equation}
-      \rho = \int_a^b \e^{-\ii \theta}f
-    \end{equation}
-    Soit \(g=\int_a^b \e^{-\ii \theta}f\) alors \(\int_a^b g=\rho \in \Rpluss\). Donc on peut lui ppliquer le premier point~:
-    \begin{align}
-      \abs{\int_a^b g} &\leqslant \int_a^b \abs{g} \\
-      \abs{\int_a^b \e^{-\ii \theta} f~} &\leqslant \int_a^b \abs{\e^{-\ii \theta} f} \\
-      \abs{\int_a^b f} &\leqslant \int_a^b \abs{f} \\
-    \end{align}
+    \item Supposons que \(\int_a^b f \in \Rpluss\). Alors \(\abs{\int_a^b f~}=\int_a^b f\) et donc \(\int_a^b \Im(f) =0\) et alors \(\int_a^b f = \int_a^b \Re(f)\). On a
+      \begin{equation}
+        \Re(f) \leqslant \abs{f}
+      \end{equation}
+      et par croissance de l'intégrale
+      \begin{equation}
+        \abs{\int_a^b f~} = \int_a^b \Re(f) \leqslant \int_a^b \abs{f}
+      \end{equation}
+    \item Supposons maintenant que \(\int_a^b f \notin \Rpluss\) et en particulier \(\int_a^b f \neq 0\). Alors il existe un réel \(\rho >0\) et un réel \(\theta\) tels que
+      \begin{equation}
+        \int_a^b f = \rho \e^{\ii \theta}
+      \end{equation}
+      et alors par linéarité
+      \begin{equation}
+        \rho = \int_a^b \e^{-\ii \theta}f
+      \end{equation}
+      Soit \(g=\int_a^b \e^{-\ii \theta}f\) alors \(\int_a^b g=\rho \in \Rpluss\). Donc on peut lui ppliquer le premier point~:
+      \begin{align}
+        \abs{\int_a^b g} &\leqslant \int_a^b \abs{g} \\
+        \abs{\int_a^b \e^{-\ii \theta} f~} &\leqslant \int_a^b \abs{\e^{-\ii \theta} f} \\
+        \abs{\int_a^b f} &\leqslant \int_a^b \abs{f} \\
+      \end{align}
   \end{enumerate}
 \end{proof}
 

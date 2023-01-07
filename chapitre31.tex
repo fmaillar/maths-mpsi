@@ -15,19 +15,19 @@
   \begin{equation}
     \int_a^b\left(\int_c^d f(x,y)\diff y \right)\diff x = \int_c^d\left(\int_a^b f(x,y)\diff x\right)\diff y. 
   \end{equation}
-Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle \(\intervalleff{a}{b} \times \intervalleff{c}{d}\) et notée
-\begin{equation}
-  \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f(x,y) \diff x \diff y = \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f.
-\end{equation}
+  Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle \(\intervalleff{a}{b} \times \intervalleff{c}{d}\) et notée
+  \begin{equation}
+    \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f(x,y) \diff x \diff y = \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f.
+  \end{equation}
 \end{theo}
 
 \emph{Interprétation}~:
 \begin{enumerate}
-\item Lorsque \(f\) est à valeurs positives, \(\iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f\) représente le volume de l'ensemble \(\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times \intervalleff{c}{d} \ 0 \leqslant z \leqslant f(x,y)}\).
-\item Lorsque \(f=\tilde{1}\) sur le rectangle \(\intervalleff{a}{b} \times \intervalleff{c}{d}\),
-  \begin{equation}
-     \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}\tilde{1}=(a-b)(c-d).
-  \end{equation}
+  \item Lorsque \(f\) est à valeurs positives, \(\iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f\) représente le volume de l'ensemble \(\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times \intervalleff{c}{d} \ 0 \leqslant z \leqslant f(x,y)}\).
+  \item Lorsque \(f=\tilde{1}\) sur le rectangle \(\intervalleff{a}{b} \times \intervalleff{c}{d}\),
+    \begin{equation}
+      \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}\tilde{1}=(a-b)(c-d).
+    \end{equation}
 \end{enumerate}
 \begin{corth}
   Avec les hypothèses du théorème, on suppose en outre qu'il existe deux fonctions continues \(u \in \R^{\intervalleff{a}{b}}\) et \(v \in \R^{\intervalleff{c}{d}}\) telles que pour tout \((x, y) \in \intervalleff{a}{b} \times \intervalleff{c}{d}\) on a \(f(x,y)=u(x)v(y)\), alors
@@ -64,13 +64,13 @@ Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle \(
 \begin{defdef}
   On appelle domaine simple du plan toute partie \(\Ddomaine\) de \(\R^2\) telle~:
   \begin{itemize}
-  \item qu'il existe quatre réels \(a\), \(b\), \(c\) et \(d\) (\(a\leqslant b\) et \(c \leqslant d\)) ;
-  \item qu'il existe des fonctions continues \(\varphi_1\) et \(\varphi_2\) de \(\intervalleff{a}{b}\) vers \(\R\); et \(\psi_1\) et \(\psi_2\) de \(\intervalleff{c}{d}\) vers \(\R\) ;
+    \item qu'il existe quatre réels \(a\), \(b\), \(c\) et \(d\) (\(a\leqslant b\) et \(c \leqslant d\)) ;
+    \item qu'il existe des fonctions continues \(\varphi_1\) et \(\varphi_2\) de \(\intervalleff{a}{b}\) vers \(\R\); et \(\psi_1\) et \(\psi_2\) de \(\intervalleff{c}{d}\) vers \(\R\) ;
   \end{itemize}
   telles que
   \begin{align}
     \Ddomaine&=\enstq{(x,y)\in\R^2}{a\leqslant x\leqslant b \quad \varphi_1(x)\leqslant y\leqslant \varphi_2(x)}\\
-    &=\enstq{(x,y)\in\R^2}{c \leqslant y \leqslant d \quad \psi_1(y) \leqslant x \leqslant \psi_2(y)}
+             &=\enstq{(x,y)\in\R^2}{c \leqslant y \leqslant d \quad \psi_1(y) \leqslant x \leqslant \psi_2(y)}
   \end{align}
 \end{defdef}
 
@@ -125,9 +125,9 @@ Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle \(
 \begin{defdef}
   On dit que \(\varphi\) est un \(\classe{1}\)-difféomorphisme d'un ouvert \(U\) de \(\R^2\) sur un ouvert \(V\) de \(\R^2\) si et seulement si~:
   \begin{enumerate}
-  \item \(\varphi\) est de classe \(\classe{1}\) sur \(U\) ;
-  \item \(\varphi\) est bijective ;
-  \item \(\varphi^{-1}\) est de classe \(\classe{1}\) sur \(V\).
+    \item \(\varphi\) est de classe \(\classe{1}\) sur \(U\) ;
+    \item \(\varphi\) est bijective ;
+    \item \(\varphi^{-1}\) est de classe \(\classe{1}\) sur \(V\).
   \end{enumerate}
 \end{defdef}
 %
@@ -155,10 +155,10 @@ Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle \(
 \begin{theo}
   Soient quatre réels \(a\), \(b\), \(c\) et \(d\) tels que \(ad \neq bc\). On adopte comme nouvelles variables \(u\) et \(v\) telles que \(\begin{cases} x=au+bv \\ y=cu+dv \end{cases}\). Soit une bijection affine de classe \(\classe{1}\)~: \(\fonction{\varphi}{\R^2}{\R}{(u,v)}{(au+bv, cu+dv)}\). Ainsi que \(\varphi^{-1}\) (puisque \(ad-bc\neq 0\).
 
-Soit \(\Ddomaine\) un domaine simple de \(\R^2\), \(\Delta=\varphi(\Ddomaine)\) un domaine simple et \(f\) une fonction continue sur \(\Delta\). Alors
-\begin{equation}
-  \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(au+bv, cu+dv) \abs{ad-bc}\diff u \diff v.
-\end{equation}
+  Soit \(\Ddomaine\) un domaine simple de \(\R^2\), \(\Delta=\varphi(\Ddomaine)\) un domaine simple et \(f\) une fonction continue sur \(\Delta\). Alors
+  \begin{equation}
+    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(au+bv, cu+dv) \abs{ad-bc}\diff u \diff v.
+  \end{equation}
 \end{theo}
 
 \subsubsection{Changement de variables en polaire}
@@ -166,29 +166,29 @@ Soit \(\Ddomaine\) un domaine simple de \(\R^2\), \(\Delta=\varphi(\Ddomaine)\) 
 \begin{theo}
   On adopte comme nouvelles variables \(r\) et \(\theta\) telles que \(\begin{cases} x=r\cos\theta \\ y=r\sin\theta \end{cases}\). Soient \(U\) et \(V\) deux ouverts de \(\R^2\) tels que \(\fonction{\varphi}{U}{V}{(r, \theta)}{(r\cos\theta, r\sin\theta)}\) soit un \(\classe{1}\)-difféomorphisme.
 
-Soit \(\Ddomaine\) un domaine simple de \(\R^2\) tel que \(\Ddomaine \subset U\) et \(\Delta=\varphi(\Ddomaine)\) soit un domaine simple inclus dans \(V\). Soit \(f\) une fonction continue sur \(\Ddomaine\), alors
-\begin{equation}
-   \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(r\cos\theta, r\sin\theta) \abs{r}\diff r \diff \theta.
-\end{equation}
+  Soit \(\Ddomaine\) un domaine simple de \(\R^2\) tel que \(\Ddomaine \subset U\) et \(\Delta=\varphi(\Ddomaine)\) soit un domaine simple inclus dans \(V\). Soit \(f\) une fonction continue sur \(\Ddomaine\), alors
+  \begin{equation}
+    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(r\cos\theta, r\sin\theta) \abs{r}\diff r \diff \theta.
+  \end{equation}
 \end{theo}
 
 \emph{En pratique}~:
 \begin{itemize}
-\item toujours dessiner les domaines \(\Ddomaine\) et \(\Delta\) pour éviter de se tromper;
-\item essayer, pour des changements de variables en polaire, de choisir les domaines de sorte que \(r>0\).
+  \item toujours dessiner les domaines \(\Ddomaine\) et \(\Delta\) pour éviter de se tromper;
+  \item essayer, pour des changements de variables en polaire, de choisir les domaines de sorte que \(r>0\).
 \end{itemize}
 
 \emph{Exemple -- Aire d'un disque}~: Soit \(\Delta\) le disque de centre \(O\) et de rayon \(R>0\), tels que
- \begin{align}
-   \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad \Delta=\enstq{(x,y)\in\R^2}{x^2+y^2\leqslant R^2} \\
-   \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)} \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leqslant r \leqslant R \ 0 \leqslant \theta \leqslant 2\pi}
- \end{align}
+\begin{align}
+  \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad \Delta=\enstq{(x,y)\in\R^2}{x^2+y^2\leqslant R^2} \\
+  \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)} \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leqslant r \leqslant R \ 0 \leqslant \theta \leqslant 2\pi}
+\end{align}
 Alors
 \begin{align}
   \text{Aire}(\Delta) &= \iint_\Ddomaine \abs{r}\diff r \diff \theta \\
-  &= \iint_\Ddomaine r\diff r \diff \theta \\
-  &=\int_0^R r\diff r \int_0^{2\pi}\diff \theta \\
-  &=\pi R^2.
+                      &= \iint_\Ddomaine r\diff r \diff \theta \\
+                      &=\int_0^R r\diff r \int_0^{2\pi}\diff \theta \\
+                      &=\pi R^2.
 \end{align}
 
 
@@ -221,8 +221,8 @@ Si \(n=3\), on note pour tout \(M(x,y,z) \in U\) \(\vect{F}=P(x,y,z)\vect{e_1} +
 \begin{defdef}
   On appelle divergence du champ de vecteurs \(\vect{F}\) au point \(M \in U\), le réel noté \(\divgc \vect{F}(M)\) défini par~:
   \begin{itemize}
-  \item si \(n=2\), \(M=(x,y)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y) + \derivep{Q}{y}(x,y)\);
-  \item si \(n=3\), \(M=(x,y,z)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y,z) + \derivep{Q}{y}(x,y,z) + \derivep{R}{z}(x,y,z)\).
+    \item si \(n=2\), \(M=(x,y)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y) + \derivep{Q}{y}(x,y)\);
+    \item si \(n=3\), \(M=(x,y,z)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y,z) + \derivep{Q}{y}(x,y,z) + \derivep{R}{z}(x,y,z)\).
   \end{itemize}
   L'application \(\fonction{\divgc}{U}{\R}{M}{\divgc \vect{F}(M)}\) est un champ de scalaire
 \end{defdef}
@@ -248,7 +248,7 @@ Si \(n=3\), on note pour tout \(M(x,y,z) \in U\) \(\vect{F}=P(x,y,z)\vect{e_1} +
   \begin{align}
     (\varphi \vect{F})(M)& = (\varphi(M) P(M), \varphi(M) Q(M)) \\
     \divgc(\varphi \vect{F})(M)& = \derivep{\varphi}{x}(M)  P(M) + \varphi(M) \derivep{P}{x}(M) + \derivep{\varphi}{y}(M)  Q(M) + \varphi(M) \derivep{P}{y}(M) \\
-    &=\prodscal{\grad{\varphi}(M)}{\vect{F}(M)} + \varphi(M)\divgc\vect{F}(M)
+                               &=\prodscal{\grad{\varphi}(M)}{\vect{F}(M)} + \varphi(M)\divgc\vect{F}(M)
   \end{align}
 \end{proof}
 
@@ -279,8 +279,8 @@ L'application \(\fonction{\rot \vect{F}}{U}{\R^n}{M}{\rot \vect{F}(M)}\) est un 
   Alors
   \begin{align}
     \rot(\varphi \vect{F})(M)) &= \begin{pmatrix} \derivep{\varphi}{y}(M)R(M) + \varphi(M)\derivep{R}{y}(M) - \derivep{\varphi}{z}(M)Q(M) - \derivep{Q}{z}(M)\varphi(M) \\ \derivep{\varphi}{z}(M)P(M) + \varphi(M)\derivep{P}{z}(M) - \derivep{\varphi}{x}(M)R(M) - \derivep{R}{x}(M)\varphi(M) \\ \derivep{\varphi}{x}(M)Q(M) + \varphi(M)\derivep{Q}{x}(M) - \derivep{\varphi}{y}(M)P(M) - \derivep{P}{y}(M)\varphi(M)\end{pmatrix} \\
-    &=\begin{pmatrix} \derivep{\varphi}{y}(M)R(M) - \derivep{\varphi}{z}(M)Q(M) + \varphi(M)\left(\derivep{R}{y}(M)  - \derivep{Q}{z}(M)\right) \\ \derivep{\varphi}{z}(M)P(M) - \derivep{\varphi}{x}(M)R(M) + \varphi(M)\left(\derivep{P}{z}(M) - \derivep{R}{x}(M)\right) \\ \derivep{\varphi}{x}(M)Q(M) -\derivep{\varphi}{y}(M)P(M) + \varphi(M)\left(\derivep{Q}{x}(M)  - \derivep{P}{y}(M)\right)\end{pmatrix}\\
-    &=\grad \varphi(M) \wedge \vect{F}(M) + \varphi(M)\rot(\vect{F})(M).
+                               &=\begin{pmatrix} \derivep{\varphi}{y}(M)R(M) - \derivep{\varphi}{z}(M)Q(M) + \varphi(M)\left(\derivep{R}{y}(M)  - \derivep{Q}{z}(M)\right) \\ \derivep{\varphi}{z}(M)P(M) - \derivep{\varphi}{x}(M)R(M) + \varphi(M)\left(\derivep{P}{z}(M) - \derivep{R}{x}(M)\right) \\ \derivep{\varphi}{x}(M)Q(M) -\derivep{\varphi}{y}(M)P(M) + \varphi(M)\left(\derivep{Q}{x}(M)  - \derivep{P}{y}(M)\right)\end{pmatrix}\\
+                               &=\grad \varphi(M) \wedge \vect{F}(M) + \varphi(M)\rot(\vect{F})(M).
   \end{align}
 \end{proof}
 %
@@ -298,8 +298,8 @@ L'application \(\fonction{\rot \vect{F}}{U}{\R^n}{M}{\rot \vect{F}(M)}\) est un 
   En calculant la divergence~:
   \begin{align}
     \divgc(\vect{F} \wedge \vu)(M) &=c \derivep{Q}{x}(M) -b\derivep{R}{x}(M) + a \derivep{R}{y}(M) \notag\\
-    &-c\derivep{P}{y}(M) + b \derivep{P}{z}(M) -a\derivep{Q}{z}(M) \\
-    &=\prodscal{\rot \vect{F}(M)}{\vu}.
+                                   &-c\derivep{P}{y}(M) + b \derivep{P}{z}(M) -a\derivep{Q}{z}(M) \\
+                                   &=\prodscal{\rot \vect{F}(M)}{\vu}.
   \end{align}
 \end{proof}
 
@@ -382,8 +382,8 @@ Supposons que la notion de courbe paramétrée s'étend à l'espace (\(n \in \{2
   Soit \(([\alpha, \beta], g)\) un paramétrage admissible de \(\Gamma\). Il existe un \(\classe{1}\)-difféomorphisme \(\varphi : [a, b] \rightarrow [\alpha, \beta]\) strictement croissant tel que \(f=g \circ \varphi\).  Alors
   \begin{align}
     \int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t &= \int_a^b \prodscal{\vect{F}(g \circ \varphi(t))}{\varphi'(t)\vect{g'(\varphi(t))}} \diff t \\
-    &=\int_a^b \prodscal{\vect{F}(g \circ \varphi(t))}{\vect{g'(\varphi(t))}} \varphi'(t)\diff t \\
-    &=\int_\alpha^\beta \prodscal{\vect{F}(g(u))}{\vect{g'(u)}} \diff u.
+                                                             &=\int_a^b \prodscal{\vect{F}(g \circ \varphi(t))}{\vect{g'(\varphi(t))}} \varphi'(t)\diff t \\
+                                                             &=\int_\alpha^\beta \prodscal{\vect{F}(g(u))}{\vect{g'(u)}} \diff u.
   \end{align}
 \end{proof}
 
@@ -400,11 +400,11 @@ Particulièrement la circulation d'un champ de vecteurs qui dérive d'un potenti
 \begin{proof}[Dans le cas où \(n=2\)]
   \begin{align}
     \oint_\Gamma \vect{F}(M)\vect{\diff M}  &= \int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t \\
-    &= \int_a^b \prodscal{\grad h(x(t), y(t))}{(x'(t), y'(t))} \diff t  \\
-    &= \int_a^b \derivep{h}{x}(x(t), y(t))x'(t) + \derivep{h}{y}(x(t), y(t))y'(t) \diff t \\
-    &=\int_a^b (h \circ f)'(t)\diff t \\
-    &=h\circ f(b)-h\circ f(a) \\
-    &=h(B)-h(A).
+                                            &= \int_a^b \prodscal{\grad h(x(t), y(t))}{(x'(t), y'(t))} \diff t  \\
+                                            &= \int_a^b \derivep{h}{x}(x(t), y(t))x'(t) + \derivep{h}{y}(x(t), y(t))y'(t) \diff t \\
+                                            &=\int_a^b (h \circ f)'(t)\diff t \\
+                                            &=h\circ f(b)-h\circ f(a) \\
+                                            &=h(B)-h(A).
   \end{align}
 \end{proof}
 
