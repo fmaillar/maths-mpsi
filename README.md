@@ -4,16 +4,14 @@ d'Ailly par Mme Sophie RAINERO.
 
 Pour générer les figures, il est nécessaire d'utiliser Python (3.10 ici) et ses 
 bibliothèques scientifiques NumPy, SciPy et MatplotLib.
-Pour les tracer, il suffit de lancer cette commande dans un interpréteur 
-positionné dans le dossier racine (cd /home/.../maths-mpsi/):
+Pour les tracer, il suffit de lancer le script process_fig.py ou bien le 
+MakeFile :
 
-import *
+make fig
 
-Pour générer le cours en pdf, on peut lancer autant de fois que nécessaire la 
-commande :
+Pour générer le cours en pdf, on lance le MakeFile qui utilise latexmk:
 
-pdflatex mathematiques
+make
 
-Il faut la lancer au moins trois fois our générer les tables des matières, la 
-table des figures, la liste de tables, les références croisées et autres 
-fichiers intermédiaires.
+LaTeXMk gère automatiquement le nombre de compilations nécessaires pour générer 
+les figures, les tables et les références croisées.
