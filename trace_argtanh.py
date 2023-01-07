@@ -11,17 +11,19 @@ mpl.rcParams['text.usetex'] = True
 import matplotlib.pyplot as plt
 
 x = np.arange(-2,2,0.001)
+x1 = np.arange(-0.99,0.99,0.001)
+x2 = np.arange(-2,2,0.001)
 
-y1 = np.arctanh(x)
-y2 = np.tanh(x)
+y1 = np.arctanh(x1)
+y2 = np.tanh(x2)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
 ax.set_aspect('equal', adjustable='box')
 ax.axhline(y=0, color='k')
 ax.axvline(x=0, color='k')
-plt.plot(x,y1, label='$\\textrm{argtanh}~x$')
-plt.plot(x,y2, label='$\\textrm{tanh}~x$')
+plt.plot(x1,y1, label='$\\textrm{argtanh}~x$')
+plt.plot(x2,y2, label='$\\textrm{tanh}~x$')
 plt.plot(x,x, label='$x$')
 #asymptotes
 plt.plot(x, x/x,'r', ls = (0, (5, 10)), lw=0.5, label='$x,y=\pm 1$')

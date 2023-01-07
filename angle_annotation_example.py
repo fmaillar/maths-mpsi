@@ -307,7 +307,7 @@ for x, text in zip([2.0, 3.5, 5.0, 6.5], ['"pixels"', '"points"',
                  bbox=dict(boxstyle="round", fc="w"), ha="left", fontsize=8,
                  annotation_clip=True)
 
-plt.show()
+# plt.show()
 
 
 #############################################################################

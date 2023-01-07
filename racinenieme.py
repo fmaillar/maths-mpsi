@@ -4,6 +4,7 @@ Created on Sat Mar 12 16:08:44 2022
 
 @author: e_fmaill
 """
+# import pdb; pdb.set_trace()
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib as mpl
@@ -29,8 +30,7 @@ def Trace_Un(n):
     data = racine_nieme(n)
     annotations = []
     for i in np.arange(n):
-        annotations.append(r"$e^{{2\pi\times \
-                           \frac{{{K}}}{{{N}}}}}$".format(K=i, N=n))
+        annotations.append(r"$e^{{2\pi\times \frac{{{K}}}{{{N}}}}}$".format(K=i, N=n))
 
     # extract real part
     x = [ele.real for ele in data]
@@ -56,6 +56,6 @@ def Trace_Un(n):
     plt.close()
 
 
-for i in np.arange(3, 15):
+for i in np.arange(3, 8):
     Trace_Un(i)
 plt.close('all')
