@@ -3,7 +3,7 @@
 \minitoc
 \minilof
 \minilot
-\section{Ensemble ordonné \((\R,\leqslant)\)}
+\section{Ensemble ordonné \((\R, \leqslant)\)}
 
 \subsection{Notion d'ordre, éléments remarquables}
 
@@ -14,9 +14,9 @@ muni d'une relation d'ordre notée \(\leqslant\), c'est-à-dire d'une relation
 binaire qui est~:
 \begin{itemize}
   \item reflexive, \(\forall a \in \R \quad a\leqslant a\);
-  \item antisymétrique, \(\forall (a,b) \in \R^2 \quad a\leqslant b\) et \( 
-    b\leqslant a \implies a=b\);
-  \item transitive, \(\forall (a,b,c) \in \R^2 \quad a\leqslant b\) et 
+  \item antisymétrique, \(\forall (a, b) \in \R^2 \quad a\leqslant b\) et \( 
+    b\leqslant a \implies a = b\);
+  \item transitive, \(\forall (a, b, c) \in \R^2 \quad a\leqslant b\) et 
     \(b\leqslant c \implies a\leqslant c\).
 \end{itemize}
 L'ensemble \(\R\) est totalement ordonné par \(\leqslant\), c'est-à-dire que 
@@ -28,7 +28,7 @@ deux réels quelconques sont toujours comparables.
   On définit sur \(\R\) une relation binaire, appelée ``ordre'' stricte et notée 
   \(<\) par~:
   \begin{equation}
-    \forall (a,b) \in \R^2 \quad x<y \iff x\leqslant y \text{~et~} x\neq y.
+    \forall (a, b) \in \R^2 \quad x<y \iff x\leqslant y \text{~et~} x\neq y.
   \end{equation}
 \end{defdef}
 Ce n'est pas une relation d'ordre puisqu'elle n'est pas symétrique.
@@ -48,6 +48,7 @@ Soit \(A\) une partie de \(\R\), alors
       minorée.
   \end{enumerate}
 \end{defdef}
+
 \begin{defdef}
   \begin{enumerate}
     \item On appelle un plus grand élément de \(A\) tout élément de \(A\) qui 
@@ -75,28 +76,32 @@ Soit \(A\) une partie de \(\R\).
       \(\inf\limits_{x\in A} x\);
   \end{enumerate}
 \end{defdef}
+
 \begin{theo}
   Soient \(A\) une partie de \(\R\) et un réel \(a\), alors
   \begin{equation}
-    a=\sup A \iff \begin{cases} \forall x \in A \ x\leqslant a \\  \forall 
-    \epsilon >0 \ \exists x_0\in A \ a-\epsilon<x_0\end{cases}.
+    a = \sup A \iff \begin{cases} \forall x \in A \ x\leqslant a \\  \forall 
+      \epsilon >0 \ \exists x_0 \in A \ a - \epsilon < x_0
+    \end{cases}.
   \end{equation}
 \end{theo}
+
 \begin{proof}
   \begin{itemize}
-    \item[\(\implies\)] si \(a=\sup A\), alors par définition \(a\) majore \(A\) 
-      donc pour tout \(x \in A\) on a \(x\leqslant a\) et s'il existe un 
-      \(\epsilon\) positif tel que pour tout \(x\in A\) \(a-\epsilon\geqslant 
-      x\) alors \(a-\epsilon\) est un majorant de \(A\), or \(a-\epsilon<a\) et 
-      c'est impossible puisque \(a\) est le plus petit des majorants de \(A\). 
-      Donc pour tout \(\epsilon >0\) il existe \(x_0\in A \ a-\epsilon<x_0\).
+    \item[\(\implies\)] si \(a = \sup A\), alors par définition \(a\) majore 
+      \(A\) donc pour tout \(x \in A\) on a \(x\leqslant a\) et s'il existe un 
+      \(\epsilon\) positif tel que pour tout \(x\in A\) \(a - \epsilon\geqslant 
+      x\) alors \(a - \epsilon\) est un majorant de \(A\), or \(a - \epsilon < 
+      a\) et c'est impossible puisque \(a\) est le plus petit des majorants de 
+      \(A\).  Donc pour tout \(\epsilon >0\) il existe \(x_0\in A \ a - \epsilon 
+      < x_0\).
     \item [\(\impliedby\)] Déjà \(a\) est un majorant de \(A\). Supposons qu'il 
-      existe un majorant \(b\) qui soit plus petit que \(a\). Soit 
-      \(\epsilon=a-b>0\), par hypothèse il existe \(x_0\in A\) tel que 
-      \(x_0>a-\epsilon=b\), alors \(b\) n'est pas un majorant de \(A\). On 
-      arrive donc à une contradiction. Il n'existe donc pas de majorant de \(A\) 
-      qui soit strictement inférieur à \(a\). Le réel \(a\) est donc la borne 
-      supérieure de la partie \(A\).
+      existe un majorant \(b\) qui soit plus petit que \(a\). Soit \(\epsilon = 
+      a - b>0\), par hypothèse il existe \(x_0\in A\) tel que \(x_0>a - \epsilon 
+      = b\), alors \(b\) n'est pas un majorant de \(A\). On arrive donc à une 
+      contradiction. Il n'existe donc pas de majorant de \(A\) qui soit 
+      strictement inférieur à \(a\). Le réel \(a\) est donc la borne supérieure 
+      de la partie \(A\).
   \end{itemize}
 \end{proof}
 On peut voir une représentation illustrant un ensemble réel majoré, ses majorant 
@@ -104,97 +109,100 @@ et sa borne supérieure sur la figure~
 \ref{fig:BorneSup}.
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{./BorneSup.png}
+  \includegraphics[scale = 0.7]{./BorneSup.png}
   \caption{Illustration de la borne supérieure d'un ensemble réel}
   \label{fig:BorneSup}
 \end{figure}
 \begin{theo}
   Soient \(A\) une partie de \(\R\) et \(a\) un réel, alors
   \begin{equation}
-    a=\inf A \iff \begin{cases} \forall x \in A \ x\geqslant a \\  \forall 
-    \epsilon >0 \ \exists x_0\in A \ x_0<a+\epsilon\end{cases}.
+    a = \inf A \iff \begin{cases} \forall x \in A \ x\geqslant a \\  \forall 
+    \epsilon >0 \ \exists x_0\in A \ x_0<a + \epsilon\end{cases}.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit la partie \(B=-A=\{x\in\R; -x\in A\}\). L'ensemble des minorants de \(A\) 
-  correspond à l'ensemble des majorants de B. S'il existe le plus grand élément 
-  de l'ensemble des minorants de \(A\) sera égal à l'opposé du plus petit 
-  élément de l'ensemble des majorants de \(B\).
+  Soit la partie \(B = -A = \{x\in\R; -x\in A\}\). L'ensemble des minorants de 
+  \(A\) correspond à l'ensemble des majorants de B. S'il existe le plus grand 
+  élément de l'ensemble des minorants de \(A\) sera égal à l'opposé du plus 
+  petit élément de l'ensemble des majorants de \(B\).
   \begin{equation}
-    \inf A=-\sup B=-\sup(-A).
+    \inf A = -\sup B = -\sup( - A).
   \end{equation}
   Alors,
   \begin{align}
-    a=\inf A &\iff -a=\sup(-A)\\
-             &\iff \begin{cases} \forall x \in -A \ x\leqslant -a \\ \forall 
-             \epsilon>0 \ \exists x_0 \in -A \ x_0>-a-\epsilon \end{cases}\\
-             &\iff \begin{cases} \forall y \in A \ -y\leqslant -a \\ \forall 
-             \epsilon>0 \ \exists y_0 \in A \ -y_0>-a-\epsilon \end{cases}\\
-             &\iff \begin{cases} \forall y \in A \ y\geqslant a \\ \forall 
-             \epsilon>0 \ \exists y_0 \in A \ y_0<a+\epsilon \end{cases}.
+    a = \inf A &\iff -a = \sup( - A)\\
+               &\iff \begin{cases} \forall x \in -A \ x\leqslant -a \\ \forall 
+               \epsilon>0 \ \exists x_0 \in -A \ x_0> - a - \epsilon 
+             \end{cases}\\
+               &\iff \begin{cases} \forall y \in A \ -y\leqslant -a \\ \forall 
+               \epsilon>0 \ \exists y_0 \in A \ -y_0> - a - \epsilon 
+             \end{cases}\\
+               &\iff \begin{cases} \forall y \in A \ y\geqslant a \\ \forall 
+               \epsilon>0 \ \exists y_0 \in A \ y_0<a + \epsilon \end{cases}.
   \end{align}
 \end{proof}
 
 Si \(A\) admet un plus petit élément \(a\), alors \(A\) admet une borne 
-inférieure et \(\inf A=a\). La réciproque est fausse. De la même manière, Si 
+inférieure et \(\inf A = a\). La réciproque est fausse. De la même manière, Si 
 \(A\) admet un plus grand élément \(a\), alors \(A\) admet une borne supérieure 
-et \(\sup A=a\) et la réciproque est aussi fausse.
+et \(\sup A = a\) et la réciproque est aussi fausse.
 
-\section{Corps des réels \((\R,+,\times)\)}
+\section{Corps des réels \((\R, +, \times)\)}
 
 \subsection{Définition}
 
 L'ensemble \(\R\) est muni de deux lois de compositions internes, appelées 
-addition et multiplication notées respectivement \(+\) et \(\times\) ou 
+addition et multiplication notées respectivement \( + \) et \(\times\) ou 
 \(\cdot\) ou rien.
 \begin{prop}
-  L'ensemble \((\R,+)\) est un groupe abélien (ou commutatif), c'est-à-dire 
+  L'ensemble \((\R, +)\) est un groupe abélien (ou commutatif), c'est-à-dire 
   que~:
   \begin{enumerate}
-    \item La loi \(+\) est une loi de composition interne associative et 
+    \item La loi \( + \) est une loi de composition interne associative et 
       commutative
       \begin{equation}
-        \forall (x,y,z) \in \R^3 \quad (x+y)+z=x+(y+z) \ x+y=y+x;
+        \forall (x, y, z) \in \R^3 \quad (x + y) + z = x + (y + z) \ x + y = y + 
+        x;
       \end{equation}
-    \item \(\R\) admet \(0\) comme élément neutre pour \(+\)
+    \item \(\R\) admet \(0\) comme élément neutre pour \( + \)
       \begin{equation}
-        \forall x \in \R \quad x+0=0+x=x;
+        \forall x \in \R \quad x + 0 = 0 + x = x;
       \end{equation}
-    \item Tout élément \(x\in\R\) admet un symétrique pour la loi \(+\) noté 
-      \(-x\)
+    \item Tout élément \(x\in\R\) admet un symétrique pour la loi \( + \) noté 
+      \( - x\)
       \begin{equation}
-        \forall x \in \R \quad x+(-x)=-x+x=0.
+        \forall x \in \R \quad x + ( - x) = -x + x = 0.
       \end{equation}
   \end{enumerate}
 \end{prop}
 \begin{prop}
-  L'ensemble \((R,+,\times)\) est un anneau commutatif, c'est-à-dire que~:
+  L'ensemble \((R, +, \times)\) est un anneau commutatif, c'est-à-dire que~:
   \begin{enumerate}
-    \item L'ensemble \((\R,+)\) est un groupe abélien;
+    \item L'ensemble \((\R, +)\) est un groupe abélien;
     \item La loi \(\times\) est une loi de composition interne sur \(\R\) qui 
       est associative et commutative
       \begin{equation}
-        \forall (x,y,z) \in \R^3 \quad (x\times y)\times z=x\times (y\times z) \ 
-        x\times y=y\times x;
+        \forall (x, y, z) \in \R^3 \quad (x\times y)\times z = x\times (y\times 
+        z) \ x\times y = y\times x;
       \end{equation}
-    \item La loi \(\times\) est distributive par rapport à la loi \(+\)
+    \item La loi \(\times\) est distributive par rapport à la loi \( + \)
       \begin{equation}
-        \forall (x,y,z) \in \R^3 \quad x\times(y+z)=x\times y+x\times z \ 
-        (x+y)\times z=x\times z+y\times z;
+        \forall (x, y, z) \in \R^3 \quad x\times(y + z) = x\times y + x\times z 
+        \ (x + y)\times z = x\times z + y\times z;
       \end{equation}
     \item \(\R\) admet \(1\) comme élément neutre pour la loi \(\times\)
       \begin{equation}
-        \forall x \in \R \quad x\times 1=1\times x=x.
+        \forall x \in \R \quad x\times 1 = 1\times x = x.
       \end{equation}
   \end{enumerate}
 \end{prop}
 \begin{prop}
-  L'ensemble \((\R,+,\times)\) est un corps (commutatif), c'est-à-dire que~:
+  L'ensemble \((\R, +, \times)\) est un corps (commutatif), c'est-à-dire que~:
   \begin{enumerate}
-    \item L'ensemble \((R,+,\times)\) est un anneau commutatif;
+    \item L'ensemble \((R, +, \times)\) est un anneau commutatif;
     \item tout élément \(x\) non nul de \(\R\) admet un symétrique pour la loi 
-      \(\times\) noté \(\frac{1}{x}\) tel que \(x\cdot 
-      \frac{1}{x}=\frac{1}{x}\cdot x=1\);
+      \(\times\) noté \(\frac{1}{x}\) tel que \(x\cdot \frac{1}{x} = 
+      \frac{1}{x}\cdot x = 1\);
     \item \(0\neq 1\).
   \end{enumerate}
 \end{prop}
@@ -204,32 +212,33 @@ addition et multiplication notées respectivement \(+\) et \(\times\) ou
 \begin{prop}
   Pour tout réels \(x\), \(y\), et \(z\) on a~:
   \begin{align}
-    x\leqslant y &\implies x+z\leqslant y+z \\
+    x\leqslant y &\implies x + z\leqslant y + z \\
     \begin{cases} x\leqslant y \\ 0\leqslant z \end{cases} &\implies xz 
     \leqslant yz.
   \end{align}
-  On dit que \((R,+,\times)\) muni de la relation d'ordre \(\leqslant\) est un 
+  On dit que \((R, +, \times)\) muni de la relation d'ordre \(\leqslant\) est un 
   corps totalement ordonné. La multiplication d'une inégalité par un nombre 
   négatif change le sens de cette inégalité.
 \end{prop}
 \begin{enumerate}
   \item pour tout réels \(x\), \(y\), \(z\) et \(t\) on a~:
     \begin{equation}
-      \begin{cases}x\leqslant y \\ z \leqslant t \end{cases} \implies 
-      x+z\leqslant y+t;
+      \begin{cases}
+      x\leqslant y \\ z \leqslant t \end{cases} \implies x + z\leqslant y + t;  
     \end{equation}
   \item pour tout réels \(x\), \(y\), \(z\) et \(t\) on a~:
     \begin{equation}
-      \begin{cases}0\leqslant x\leqslant y \\ 0 \leqslant z \leqslant t 
-      \end{cases} \implies 0\leqslant xz \leqslant yt;
+      \begin{cases}
+      0 \leqslant x\leqslant y \\ 0 \leqslant z \leqslant t \end{cases} \implies 
+      0\leqslant xz \leqslant yt;
     \end{equation}
   \item pour tout réel \(x\) on a~:
     \begin{equation}
-      x>0 \iff \frac{1}{x}>0;
+      x > 0 \iff \frac{1}{x} > 0;
     \end{equation}
   \item pour tout réels \(x\) et \(y\) on a~:
     \begin{equation}
-      0<x\leqslant y \iff 0<\frac{1}{y}\leqslant \frac{1}{x}.
+      0 < x \leqslant y \iff 0 < \frac{1}{y} \leqslant \frac{1}{x}.
     \end{equation}
 \end{enumerate}
 
@@ -239,103 +248,112 @@ addition et multiplication notées respectivement \(+\) et \(\times\) ou
   Pour tout réel \(x\) on définit un réel appelé valeur absolue de \(x\) noté 
   \(\abs{x}\) par
   \begin{equation}
-    \abs{x}=\begin{cases} x & \text{si } x\geqslant 0 \\ -x & \text{si } 
-    x<0\end{cases},
+    \abs{x} = \begin{cases} x & \text{si } x\geqslant 0 \\ -x & \text{si } x < 0
+    \end{cases},
     \end{equation}
-    ou encore \(\abs{x}=\max(x,-x)\).
+    ou encore \(\abs{x} = \max(x, - x)\).
   \end{defdef}
+
   \begin{prop}
     Pour tout réel \(x\)
     \begin{gather}
       \abs{x}\geqslant 0 \\
-      \abs{x}=0 \iff x=0.
+      \abs{x} = 0 \iff x = 0.
     \end{gather}
   \end{prop}
+
   \begin{proof}
-    si \(x\geqslant 0\) alors \(\abs{x}=x\geqslant 0\) et \(\abs{x}=0 \iff 
-    x=0\). Sinon si \(x<0\) alors \(\abs{x}=-x>0\) donc \(\abs{x}\geqslant 0\) 
-    et \(\abs{x}\neq 0\).
+    si \(x \geqslant 0\) alors \(\abs{x} = x \geqslant 0\) et \(\abs{x} = 0 \iff 
+    x = 0\). Sinon si \(x < 0\) alors \(\abs{x} = -x>0\) donc \(\abs{x} 
+    \geqslant 0\) et \(\abs{x} \neq 0\).
   \end{proof}
+
   \begin{prop}
     pour tout réels \(x\) et \(y\) et tout réel non nul \(z\), on a~:
     \begin{gather}
-      \abs{xy}=\abs{x}\abs{y}, \\ \abs{\frac{1}{z}}=\frac{1}{\abs{z}}.
+      \abs{xy} = \abs{x}\abs{y}, \\ \abs{\frac{1}{z}} = \frac{1}{\abs{z}}.
     \end{gather}
   \end{prop}
+
   \begin{prop}[Inégalité triangulaire]
     Soient \(x\) et \(y\) deux réels, alors
     \begin{equation}
-      \abs{\abs{x}-\abs{y}}\leqslant \abs{x+y} \leqslant \abs{x}+\abs{y}.
+      \abs{\abs{x} - \abs{y}} \leqslant \abs{x + y} \leqslant \abs{x} + \abs{y}.
     \end{equation}
   \end{prop}
   \begin{proof}
     D'une part,
     \begin{align}
-      (\abs{x}+\abs{y})^2-\abs{x+y}^2 &=\abs{x}^2+\abs{y}^2+2\abs{xy}-(x+y)^2\\
-                                      &=x^2+y^2+2\abs{xy}-x^2-y^2-2xy\\
-                                      &=2(\abs{xy}-xy)\geqslant 0.
+      (\abs{x} + \abs{y})^2 - \abs{x + y}^2 & = \abs{x}^2 + \abs{y}^2 + 
+      2\abs{xy} - (x + y)^2\\
+                                            & = x^2 + y^2 + 2\abs{xy} - x^2 - 
+                                            y^2 - 2xy\\
+                                            & = 2(\abs{xy} - xy)\geqslant 0.
     \end{align}
-    Donc \(\abs{x+y}^2\leqslant (\abs{x}+\abs{y})^2\) et puisque les deux 
-    membres sont positifs \(\abs{x+y}\leqslant \abs{x}+\abs{y}\). D'autre part,
+    Donc \(\abs{x + y}^2\leqslant (\abs{x} + \abs{y})^2\) et puisque les deux 
+    membres sont positifs \(\abs{x + y}\leqslant \abs{x} + \abs{y}\). D'autre 
+    part,
     \begin{equation}
-      \abs{x}=\abs{x+y-y}\leqslant \abs{x+y}+\abs{y}.
+      \abs{x} = \abs{x + y - y}\leqslant \abs{x + y} + \abs{y}.
     \end{equation}
-    Donc \(\abs{x}-\abs{y}\leqslant \abs{x+y}\) et par symétrie des rôles de 
-    \(x\) et \(y\) on complète en écrivant \(\abs{\abs{x}-\abs{y}}\leqslant 
-    \abs{x+y}\).
+    Donc \(\abs{x} - \abs{y}\leqslant \abs{x + y}\) et par symétrie des rôles de 
+    \(x\) et \(y\) on complète en écrivant \(\abs{\abs{x} - \abs{y}}\leqslant 
+    \abs{x + y}\).
   \end{proof}
   \begin{defdef}
-    Soit une application \(d:\R\times\R\longmapsto \R\) appelée distance définie 
+    Soit une application \(\fonctionR{d}{\R\times\R}{\R}\) appelée distance définie 
     comme suit~:
     \begin{equation}
-      \forall (x,y) \in \R^2 \quad d(x,y)=\abs{x-y}.
+      \forall (x, y) \in \R^2 \quad d(x, y) = \abs{x - y}.
     \end{equation}
   \end{defdef}
   \begin{prop}
     \(d\) est une distance sur \(\R\), c'est-à-dire que pour tout réels \(x\), 
     \(y\) et \(z\) on a
     \begin{enumerate}
-      \item \(d(x,y)\geqslant 0\), positivité;
-      \item \(d(x,y)=0 \iff x=y\), séparation;
-      \item \(d(x,y)=d(y,x)\), symétrie;
-      \item \(d(x,y)\leqslant d(x,z)+d(z,y)\), inégalité triangulaire.
+      \item \(d(x, y) \geqslant 0\), positivité;
+      \item \(d(x, y) = 0 \iff x = y\), séparation;
+      \item \(d(x, y) = d(y, x)\), symétrie;
+      \item \(d(x, y) \leqslant d(x, z) + d(z, y)\), inégalité triangulaire.
     \end{enumerate}
   \end{prop}
   \begin{proof}
     Ce sont des conséquences immédiates des propriétés de la valeur absolue.
   \end{proof}
   \begin{prop}
-    pour tout réels \(x\) et \(y\), on a
+    Pour tous réels \(x\) et \(y\), on a
     \begin{equation}
-      \max(x,y)=\frac{x+y+\abs{x-y}}{2} \quad \min(x,y)=\frac{x+y-\abs{x-y}}{2}.
+      \max(x, y) = \frac{x + y + \abs{x - y}}{2} \quad \min(x, y) = \frac{x + y 
+      - \abs{x - y}}{2}.
     \end{equation}
   \end{prop}
   \begin{proof}
-    Si d'une part \(x\geqslant y\) alors \(\abs{x-y}=x-y\) et donc 
-    \(\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2x}{2}=x\) et 
-    \(\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2y}{2}=y\). Si d'autre part 
-    \(x\leqslant y\) alors \(\abs{x-y}=y-x\) et donc 
-    \(\max(x,y)=\frac{x+y+\abs{x-y}}{2}=\frac{2y}{2}=y\) et 
-    \(\min(x,y)=\frac{x+y-\abs{x-y}}{2}=\frac{2x}{2}=x\).
+    Si d'une part \(x\geqslant y\) alors \(\abs{x - y} = x - y\) et donc 
+    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2x}{2} = x\) et 
+    \(\min(x, y) = \frac{x + y - \abs{x - y}}{2} = \frac{2y}{2} = y\). Si 
+    d'autre part \(x\leqslant y\) alors \(\abs{x - y} = y - x\) et donc 
+    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2y}{2} = y\) et 
+    \(\min(x, y) = \frac{x + y - \abs{x - y}}{2} = \frac{2x}{2} = x\).
   \end{proof}
   \begin{defdef}
-    Pour tout réel \(x\), on note \(x^+=\max(x,0)\) et \(x^-=\max(-x,0)\).
+    Pour tout réel \(x\), on note \(x^+ = \max(x, 0)\) et \(x^- = \max( - x, 
+    0)\).
   \end{defdef}
   \begin{prop}
     Pour tout réel \(x\), on a
     \begin{equation}
-      x^+=\frac{x+\abs{x}}{2} \quad x^-=\frac{\abs{x}-x}{2},
+      x^+ = \frac{x + \abs{x}}{2} \quad x^- = \frac{\abs{x} - x}{2},
     \end{equation}
     ou alors
     \begin{equation}
-      \abs{x}=x^++x^- \quad x=x^+-x^-.
+      \abs{x} = x^ + +x^- \quad x = x^+ - x^ - .
     \end{equation}
   \end{prop}
   \begin{prop}
     pour tout réels \(x\) et \(y\) et tout réel \(h>0\)
     \begin{align}
-      \abs{x-y}\leqslant h \iff & -h \leqslant x-y \leqslant h\\
-                                &\iff y-h \leqslant x \leqslant y+h
+      \abs{x - y}\leqslant h &\iff -h \leqslant x - y \leqslant h\\
+                             &\iff y - h \leqslant x \leqslant y + h
     \end{align}
   \end{prop}
   \begin{prop}
@@ -346,50 +364,50 @@ addition et multiplication notées respectivement \(+\) et \(\times\) ou
   \begin{proof}
     \begin{itemize}
       \item[\(\impliedby\)] Supposons qu'il existe un réel \(M\) positif tel que 
-        pour tout élément \(a\) de \(A\) on ait \(\abs{a}\leqslant M\). Alors 
-        \(-M\leqslant a\leqslant M\) donc \(-M\) est un minorant de \(A\) et 
+        pour tout élément \(a\) de \(A\) on ait \(\abs{a}\leqslant M\). Alors \( 
+        - M\leqslant a\leqslant M\) donc \( - M\) est un minorant de \(A\) et 
         \(M\) en est un majorant. Ainsi \(A\) est bornée.
       \item[\(\implies\)] Supposons que \(A\) soit bornée, c'est-à-dire majorée 
         et minorée, alors il existe deux réels \(m_1\) et \(m_2\) tels que pour 
         tout élément \(a\) de \(A\) on ait \(m_1\leqslant a\leqslant m_2\). Si 
-        on pose \(M=\max(m_2,-m_1,0)\) alors \(\abs{a}\leqslant M\).
+        on pose \(M = \max(m_2, - m_1, 0)\) alors \(\abs{a}\leqslant M\).
     \end{itemize}
   \end{proof}
 
   \subsection{Droite numérique achevée}
 
   \begin{defdef}
-  On adjoint à \(\R\) deux éléments distincts notés \(+\infty\) et \(-\infty\) 
-et on note \(\bar{\R}=\R\cup\{+\infty\}\cup\{-\infty\}\). \(\bar{\R}\) est la 
-droite numérique achevée.  \end{defdef}
+  On adjoint à \(\R\) deux éléments distincts notés \( + \infty\) et \( - 
+\infty\) et on note \(\bar{\R} = \R\cup\{ + \infty\}\cup\{ - \infty\}\).  
+\(\bar{\R}\) est la droite numérique achevée.  \end{defdef}
 On prolonge la relation d'ordre \(\leqslant\) définie sur \(\R\) à \(\bar{\R}\) 
 en posant
 \begin{equation}
   \forall x\in \bar{\R} \quad -\infty\leqslant x\leqslant +\infty.
 \end{equation}
-Le plus petit (grand) élément de \(\bar{\R}\) est \(-\infty\) (\(+\infty\)). On 
-prolonge aussi partiellement les lois \(\times\) et \(+\) à \(\bar{\R}\).
+Le plus petit (grand) élément de \(\bar{\R}\) est \( - \infty\) (\( + \infty\)).  
+On prolonge aussi partiellement les lois \(\times\) et \( + \) à \(\bar{\R}\).
 \begin{table}[!h]
   \centering
   \begin{tabular}{|c|c|c|c|}\hline
-    + & \(-\infty\) & \(y\in\R\) & \(+\infty\) \\ \hline
-    \(-\infty\) & \(-\infty\) & \(-\infty\)& Ind \\ \hline
-    \(x\in\R\) & \(-\infty\) & \(x+y\) & \(+\infty\) \\ \hline
-  \(+\infty\) & Ind & \(+\infty\) & \(+\infty\) \\ \hline \end{tabular}
-  \caption{Prolongement de la loi \(+\) à la droite numérique achevée}
+    + & \( - \infty\) & \(y\in\R\) & \( + \infty\) \\ \hline
+    \( - \infty\) & \( - \infty\) & \( - \infty\)& Ind \\ \hline
+    \(x\in\R\) & \( - \infty\) & \(x + y\) & \( + \infty\) \\ \hline
+  \( + \infty\) & Ind & \( + \infty\) & \( + \infty\) \\ \hline \end{tabular}
+  \caption{Prolongement de la loi \( + \) à la droite numérique achevée}
 \end{table}
 \begin{table}[!h]
   \centering
   \begin{tabular}{|c|c|c|c|c|c|}\hline
-    \(\times\) & \(-\infty\) & \(x<0\) & \(x=0\) & \(x>0\) & \(+\infty\) \\ 
-    \hline
-    \(-\infty\) & \(+\infty\)& \(+\infty\)& Ind& \(-\infty\)& \(-\infty\)\\ 
-    \hline
-    \(y<0\) &\(+\infty\) & xy& 0& xy& \(-\infty\)\\ \hline
-    \(y=0\) & Ind& 0& 0& 0&Ind \\ \hline
-    \(y>0\) & \(-\infty\)& xy& 0& xy& \(+\infty\)\\ \hline
-  \(+\infty\) & \(-\infty\)& \(-\infty\)& Ind& \(+\infty\) & \(+\infty\)\\ 
-\hline \end{tabular}
+    \(\times\) & \( - \infty\) & \(x<0\) & \(x = 0\) & \(x>0\) & \( + \infty\) 
+    \\ \hline
+    \( - \infty\) & \( + \infty\)& \( + \infty\)& Ind& \( - \infty\)& \( - 
+    \infty\)\\ \hline
+    \(y<0\) &\( + \infty\) & xy& 0& xy& \( - \infty\)\\ \hline
+    \(y = 0\) & Ind& 0& 0& 0&Ind \\ \hline
+    \(y>0\) & \( - \infty\)& xy& 0& xy& \( + \infty\)\\ \hline
+  \( + \infty\) & \( - \infty\)& \( - \infty\)& Ind& \( + \infty\) & \( + 
+\infty\)\\ \hline \end{tabular}
 \caption{Prolongement de la loi \(\times\) à la droite numérique achevée}
 \end{table}
 
@@ -399,33 +417,34 @@ prolonge aussi partiellement les lois \(\times\) et \(+\) à \(\bar{\R}\).
   Soient deux réels, \(a\) et \(b\) tels que \(a<b\), les intervalles de \(\R\) 
   sont les parties suivantes~:
   \begin{itemize}
-    \item \(\R=\intervalleoo{-\infty}{+\infty}\);
-    \item \(\intervalleff{a}{b}=\enstq{x \in \R}{a\leqslant x \leqslant b}\) 
+    \item \(\R = \intervalleoo{ - \infty}{ + \infty}\);
+    \item \(\intervalleff{a}{b} = \enstq{x \in \R}{a\leqslant x \leqslant b}\) 
       segment;
-    \item \(\intervallefo{a}{b}=\enstq{x \in \R}{a\leqslant x < b}\) intervalle 
-      semi-ouvert ou semi-fermé;
-    \item \(\intervalleof{a}{b}=\enstq{x \in \R}{a< x \leqslant b}\) idem;
-    \item \(\intervalleoo{a}{b}=\enstq{x \in \R}{a< x < b}\) intervalle ouvert;
-    \item \(\intervallefo{a}{+\infty}=\enstq{x \in \R}{a\leqslant x}\) 
-      demi-droite fermée;
-    \item \(\intervalleoo{a}{+\infty}=\enstq{x \in \R}{a< x}\) demi-droite 
+    \item \(\intervallefo{a}{b} = \enstq{x \in \R}{a\leqslant x < b}\) 
+      intervalle semi - ouvert ou semi - fermé;
+    \item \(\intervalleof{a}{b} = \enstq{x \in \R}{a< x \leqslant b}\) idem;
+    \item \(\intervalleoo{a}{b} = \enstq{x \in \R}{a< x < b}\) intervalle 
+      ouvert;
+    \item \(\intervallefo{a}{ + \infty} = \enstq{x \in \R}{a\leqslant x}\) demi 
+      - droite fermée;
+    \item \(\intervalleoo{a}{ + \infty} = \enstq{x \in \R}{a< x}\) demi - droite 
       ouverte;
-    \item \(\intervalleof{-\infty}{b}=\enstq{x \in \R}{x \leqslant b}\) 
-      demi-droite fermée;
-    \item \(\intervalleoo{-\infty}{b}=\enstq{x \in \R}{x <b}\) demi-droite 
+    \item \(\intervalleof{ - \infty}{b} = \enstq{x \in \R}{x \leqslant b}\) demi 
+      - droite fermée;
+    \item \(\intervalleoo{ - \infty}{b} = \enstq{x \in \R}{x <b}\) demi - droite 
       ouverte;
   \end{itemize}
 \end{defdef}
-On note que l'ensemble vide est aussi un intervalle 
-\(\emptyset=\intervalleoo{a}{a}\).
+On note que l'ensemble vide est aussi un intervalle \(\emptyset = 
+\intervalleoo{a}{a}\).
 \begin{defdef}
   On notera que
   \begin{itemize}
-    \item \(\Rpluss=\intervallefo{0}{+\infty}\);
-    \item \(\R-=\intervalleof{-\infty}{0}\);
-    \item \({\Rpluss}^*=\intervalleoo{0}{+\infty}\);
-    \item \(\R-^*=\intervalleoo{-\infty}{0}\);
-    \item \(\R^*=\R-^* \cup {\Rpluss}^*\).
+    \item \(\Rpluss = \intervallefo{0}{ + \infty}\);
+    \item \(\R- = \intervalleof{ - \infty}{0}\);
+    \item \({\Rpluss}^* = \intervalleoo{0}{ + \infty}\);
+    \item \(\R - ^* = \intervalleoo{ - \infty}{0}\);
+    \item \(\R^* = \R - ^* \cup {\Rpluss}^*\).
   \end{itemize}
   \(\R^*\) n'est pas un intervalle.
 \end{defdef}
@@ -433,8 +452,8 @@ On note que l'ensemble vide est aussi un intervalle
   Soit \(A\) une partie de \(\R\). On dit que \(A\) est convexe si et seulement 
   si
   \begin{equation}
-    \forall (x,y) \in A^2 \quad x\leqslant y \implies \intervalleff{x}{y}\subset 
-    A.
+    \forall (x, y) \in A^2 \quad x\leqslant y \implies 
+    \intervalleff{x}{y}\subset A.
   \end{equation}
 \end{defdef}
 \begin{theo}
@@ -446,15 +465,15 @@ On note que l'ensemble vide est aussi un intervalle
   Soient \(a\) et \(b\) deux réels tels que \(a\leqslant b\), alors
   \begin{itemize}
     \item \(\R\) est convexe, puisque pour tout réels \(x\) et \(y\), si 
-      \(x\leqslant y\) alors \([x,y]\subset \R\);
+      \(x\leqslant y\) alors \([x, y]\subset \R\);
     \item \(\intervalleff{a}{b}\) est convexe puisque pour tout réels \(x\) et 
       \(y\) de \(\intervalleff{a}{b}\) si \(a\leqslant x\leqslant y\leqslant b\) 
       alors \(\intervalleff{x}{y}\subset \intervalleff{a}{b}\). Idem pour les 
-      intervalles semi-ouverts et semi-fermés;
-    \item \(\intervallefo{a}{+\infty}\) est convexe, puisque pour tout réels 
-      \(x\) et \(y\) de \(\intervallefo{a}{+\infty}\) tels que \(a\leqslant 
-      x\leqslant y\) \(\intervalleff{x}{y}\subset \intervallefo{a}{+\infty}\). 
-      Idem pour les autres demi-droites.
+      intervalles semi - ouverts et semi - fermés;
+    \item \(\intervallefo{a}{ + \infty}\) est convexe, puisque pour tout réels 
+      \(x\) et \(y\) de \(\intervallefo{a}{ + \infty}\) tels que \(a\leqslant 
+      x\leqslant y\) \(\intervalleff{x}{y}\subset \intervallefo{a}{ + \infty}\).  
+      Idem pour les autres demi - droites.
   \end{itemize}
 \end{proof}
 
@@ -470,11 +489,11 @@ On note que l'ensemble vide est aussi un intervalle
   Toute partie non vide et minorée de \(\R\) admet une borne inférieure.
 \end{theo}
 \begin{proof}
-  Soit \(A\) une partie non vide et minorée de \(\R\). Soit \(B=-A=\enstq{x\in 
-  \R}{-x \in A}\). \(B\) est donc non vide et majorée, alors en appliquant 
-  l'axiome de la borne supérieure, \(B\) admet une borne supérieure. D'après la 
-  caractérisation de la borne inférieure, on en déduit que \(A\) admet une borne 
-  inférieure et de plus \(\inf A=-\sup B\).
+  Soit \(A\) une partie non vide et minorée de \(\R\). Soit \(B = -A = 
+  \enstq{x\in \R}{ - x \in A}\). \(B\) est donc non vide et majorée, alors en 
+  appliquant l'axiome de la borne supérieure, \(B\) admet une borne supérieure.  
+  D'après la caractérisation de la borne inférieure, on en déduit que \(A\) 
+  admet une borne inférieure et de plus \(\inf A = -\sup B\).
 \end{proof}
 
 \subsection{Intervalles et parties convexes}
@@ -488,48 +507,48 @@ On note que l'ensemble vide est aussi un intervalle
     \item[\(\implies\)] déjà vue au théorème~
       \ref{theo:partieconvexe1}.
     \item[\(\impliedby\)] Supposons \(I\) convexe. Si \(I\) est vide, alors 
-      c'est un intervalle. Sinon, soit \(a\in I\) et on définit 
-      \(G_a=\intervalleof{-\infty}{a}\cap I\) et 
-      \(D_a=\intervallefo{a}{+\infty}\cap I\).
+      c'est un intervalle. Sinon, soit \(a\in I\) et on définit \(G_a = 
+      \intervalleof{ - \infty}{a}\cap I\) et \(D_a = \intervallefo{a}{ + 
+      \infty}\cap I\).
       \begin{itemize}
-        \item Si \(D_a\) n'est pas majoré, on va montrer que 
-          \(D_a=\intervallefo{a}{+\infty}\).
+        \item Si \(D_a\) n'est pas majoré, on va montrer que \(D_a = 
+          \intervallefo{a}{ + \infty}\).
           \begin{equation}
             \forall M \geqslant a \ \exists b \in D_a \quad b\geqslant M.
           \end{equation}
-          Donc \(b\in \intervallefo{a}{+\infty}\) et \(b\in I\). On note que 
-          \(\intervalleff{a}{b}\subset \intervallefo{a}{+\infty}\). Comme I est 
-          convexe et que \(a,b \in I \ a \leqslant b\) alors 
+          Donc \(b\in \intervallefo{a}{ + \infty}\) et \(b\in I\). On note que 
+          \(\intervalleff{a}{b}\subset \intervallefo{a}{ + \infty}\). Comme I 
+          est convexe et que \(a, b \in I \ a \leqslant b\) alors 
           \(\intervalleff{a}{b}\subset I\) et \(M\in \intervalleff{a}{b} \subset 
-          D_a\). On a donc montré que \(\intervallefo{a}{+\infty} \subset D_a\) 
-          et par définition de \(D_a\) l'inclusion réciproque est triviale donc 
-          \(D_a=\intervallefo{a}{+\infty}\).
+          D_a\). On a donc montré que \(\intervallefo{a}{ + \infty} \subset 
+          D_a\) et par définition de \(D_a\) l'inclusion réciproque est triviale 
+          donc \(D_a = \intervallefo{a}{ + \infty}\).
         \item Si \(D_a\) est majorée et non vide (puisque \(a\in D_a\)) alors 
           \(D_a\) admet une borne supérieure notée \(b\). la borne supérieure 
           \(b\) est un majorant de \(D_a\) donc \(D_a \subset 
           \intervalleff{a}{b}\). D'après la caractérisation de la borne 
           supérieure
           \begin{equation}
-            \forall \epsilon >0 \ \exists x_0 \in D_a \ b-\epsilon < 
+            \forall \epsilon >0 \ \exists x_0 \in D_a \ b - \epsilon < 
             x_0\leqslant b.
           \end{equation}
-          Soit \(x\in \intervallefo{a}{b}\), on pose \(\epsilon=b-x>0\). Il 
-          existe un \(x_0\in D_a\) tel que \(b-\epsilon<x_0 \leqslant b\), qui 
-          est équivalent à ce que pour tout \(x\in[a,b[\) il existe un \(x_0\in 
+          Soit \(x\in \intervallefo{a}{b}\), on pose \(\epsilon = b - x>0\). Il 
+          existe un \(x_0\in D_a\) tel que \(b - \epsilon<x_0 \leqslant b\), qui 
+          est équivalent à ce que pour tout \(x\in[a, b[\) il existe un \(x_0\in 
           D_a\) tel que \(x<x_0 \leqslant b\). Comme 
-          \(\intervalleff{a}{x_0}\subset \intervallefo{a}{+\infty}\) et 
-          \(\intervalleff{a}{x_0}\subset I\) (car \(a,x_0 \in I\) et I est 
+          \(\intervalleff{a}{x_0}\subset \intervallefo{a}{ + \infty}\) et 
+          \(\intervalleff{a}{x_0}\subset I\) (car \(a, x_0 \in I\) et I est 
           convexe). Alors \(\intervalleff{a}{x_0} \subset D_a\). Comme 
           \(a\leqslant x < x_0\leqslant b\) alors \(x\in 
           \intervalleff{a}{x_0}\subset D_a\). Finalement 
           \(\intervallefo{a}{b}\subset D_a \subset \intervalleff{a}{b}\), alors 
-          \(D_a=\intervallefo{a}{b}\) ou \(D_a=\intervalleff{a}{b}\).
+          \(D_a = \intervallefo{a}{b}\) ou \(D_a = \intervalleff{a}{b}\).
       \end{itemize}
-      De la même manière, on peut montrer que soit 
-      \(G_a=\intervalleof{-\infty}{a}\), soit \(G_a=\intervalleff{c}{a}\), soit 
-      \(G_a=\intervalleof{c}{a}\).
+      De la même manière, on peut montrer que soit \(G_a = \intervalleof{ - 
+      \infty}{a}\), soit \(G_a = \intervalleff{c}{a}\), soit \(G_a = 
+      \intervalleof{c}{a}\).
   \end{itemize}
-  Donc comme \(I=G_a\cup D_a\), c'est un intervalle de \(\R\).
+  Donc comme \(I = G_a\cup D_a\), c'est un intervalle de \(\R\).
 \end{proof}
 
 \subsection{Propriété d'Archimède}
@@ -542,48 +561,49 @@ On note que l'ensemble vide est aussi un intervalle
 \begin{proof}
   On peut démontrer ce résultat par l'absurde. Supposons qu'il existe un réel 
   \(x>0\) et un réel \(y\) et que pour tout entier naturel \(n\) on ait 
-  \(nx<y\). Soit \(A=\enstq{nx}{n\in \N}\), alors \(A\) est non vide (car \(0\in 
-  A\)) et majorée par \(y\) d'après l'hypothèse. La partie \(A\) admet donc une 
-  borne supérieure noté \(S\). Soit un naturel \(n\), alors \((n+1)x \in A\) 
-  donc \((n+1)x\leqslant S\) donc \(nx \leqslant S-x\). Ceci montre que \(S-x\) 
-  est un majorant de \(A\), or \(S-x<S\) puisque \(x>0\) et \(S\) est censé être 
-  le plus grand des majorants de \(A\). On aboutit donc à une contradiction. 
-  L'hypothèse de départ est fausse.
+  \(nx<y\). Soit \(A = \enstq{nx}{n\in \N}\), alors \(A\) est non vide (car 
+  \(0\in A\)) et majorée par \(y\) d'après l'hypothèse. La partie \(A\) admet 
+  donc une borne supérieure noté \(S\). Soit un naturel \(n\), alors \((n + 1)x 
+  \in A\) donc \((n + 1)x\leqslant S\) donc \(nx \leqslant S - x\). Ceci montre 
+  que \(S - x\) est un majorant de \(A\), or \(S - x<S\) puisque \(x>0\) et 
+  \(S\) est censé être le plus grand des majorants de \(A\). On aboutit donc à 
+  une contradiction.  L'hypothèse de départ est fausse.
 \end{proof}
 
 \subsection{Partie entière d'un réel}\index{partie entiere}
 
 \begin{prop}
   Pour tout réel \(x\), il existe un unique entier \(n\) relatif, tel que 
-  \(n\leqslant x<n+1\), c'est la partie entière de \(x\) et on la note \(E(x)\).
+  \(n\leqslant x<n + 1\), c'est la partie entière de \(x\) et on la note 
+  \(E(x)\).
 \end{prop}
 \begin{proof}[Unicité]
-  Soient deux entiers relatifs \(n\) et \(m\) tels que \(E(x)=m=n\), alors
+  Soient deux entiers relatifs \(n\) et \(m\) tels que \(E(x) = m = n\), alors
   \begin{align}
-    n\leqslant x< n+1 \\  m\leqslant x< m+1.
+    n\leqslant x< n + 1 \\  m\leqslant x< m + 1.
   \end{align}
   Alors
   \begin{align}
-    n<m+1 \\  m<n+1,
+    n<m + 1 \\  m<n + 1,
   \end{align}
-  et donc \(-1<n-m<1\) et comme c'est un entier, forcément \(m=n\).
+  et donc \( - 1<n - m<1\) et comme c'est un entier, forcément \(m = n\).
 \end{proof}
 \begin{proof}[Existence]
   Le corps \(\R\) est archimédien, il existe donc deux naturels \(n\) et \(m\) 
-  tels ques \(x\leqslant n\) et  \(-x\leqslant m\). Soit la partie \(A=\enstq{k 
-  \in \Z}{k\leqslant x}\), alors \(A\) est majorée par \(n\) et non vide puisque 
-  \(-m\in A\). \(A\) est une partie de \(\Z\) non vide et majorée, elle admet 
-  donc un plus grand élément noté \(n_0\). Alors \(n_0\in \Z\) et \(n_0\leqslant 
-  x\). Puisque \(n_0\) est le plus grand élément de \(A\), \(n_0+1\) n'est pas 
-  dans \(A\). donc \(n_0+1>x\). Au final \(n_0\) est la partie entière de \(x\) 
-  : \(n_0\leqslant x<n_0+1\).
+  tels ques \(x\leqslant n\) et  \( - x\leqslant m\). Soit la partie \(A = 
+  \enstq{k \in \Z}{k\leqslant x}\), alors \(A\) est majorée par \(n\) et non 
+  vide puisque \( - m\in A\). \(A\) est une partie de \(\Z\) non vide et 
+  majorée, elle admet donc un plus grand élément noté \(n_0\). Alors \(n_0\in 
+  \Z\) et \(n_0\leqslant x\). Puisque \(n_0\) est le plus grand élément de 
+  \(A\), \(n_0 + 1\) n'est pas dans \(A\). donc \(n_0 + 1>x\). Au final \(n_0\) 
+  est la partie entière de \(x\) : \(n_0\leqslant x<n_0 + 1\).
 \end{proof}
 
 \subsection{Ensembles \(\Q\) et \(\R\setminus\Q\)}
 
 \begin{defdef}[Densité]
   Soit \(A\) une partie de \(\R\). On dit que \(A\) est dense dans \(\R\) si et 
-  seulement si pour tout couple de réels \((x,y)\) tels que \(x<y\), on ait 
+  seulement si pour tout couple de réels \((x, y)\) tels que \(x<y\), on ait 
   \(\intervalleff{x}{y}\cap A \neq \emptyset\).
 \end{defdef}
 \begin{prop}
@@ -593,12 +613,12 @@ On note que l'ensemble vide est aussi un intervalle
 \begin{proof}
   On prouve  qu'il existe des réels non rationnels en prenant l'exemple du 
   nombre \(\sqrt{2}\). Supposons que \(\sqrt{2}\) est rationnel, alors il existe 
-  deux entiers \(p\) et \(q \neq 0\) tels que \(\sqrt{2}=\frac{p}{q}\) (fraction 
-  irréductible), donc \(2q^2=p^2\). L'entier \(p^2\) est pair, donc cela 
-  entraine qu'il existe un entier \(k\) tel que \(p=2k\). D'où \(2q^2=p^2=4k^2\) 
-  donc \(q^2=2k^2\), alors \(q^2\) est pair, donc \(q\) est pair. Alors \(p\) et 
-  \(q\) ne sont pas premiers enre eux. Contradiction. Alors \(\sqrt{2}\) n'est 
-  pas rationnel.
+  deux entiers \(p\) et \(q \neq 0\) tels que \(\sqrt{2} = \frac{p}{q}\) 
+  (fraction irréductible), donc \(2q^2 = p^2\). L'entier \(p^2\) est pair, donc 
+  cela entraine qu'il existe un entier \(k\) tel que \(p = 2k\). D'où \(2q^2 = 
+  p^2 = 4k^2\) donc \(q^2 = 2k^2\), alors \(q^2\) est pair, donc \(q\) est pair.  
+  Alors \(p\) et \(q\) ne sont pas premiers enre eux. Contradiction. Alors 
+  \(\sqrt{2}\) n'est pas rationnel.
 \end{proof}
 
 L'ensemble \(\Q\) est un sous-corps de \(\R\), c'est-à-dire que \(\Q\) est 
@@ -611,7 +631,7 @@ multiplication ni pour l'addition.
     \item La somme d'un rationnel et d'un irrationnel quelconques est 
       irrationnelle
       \begin{equation}
-        \forall x \in \Q \ \forall y \in \R\setminus\Q \quad x+y \in 
+        \forall x \in \Q \ \forall y \in \R\setminus\Q \quad x + y \in 
         \R\setminus\Q.
       \end{equation}
     \item Le produit d'un rationnel non nul et d'un irrationnel quelconques est 
@@ -622,11 +642,12 @@ multiplication ni pour l'addition.
       \end{equation}
   \end{enumerate}
 \end{prop}
+
 \begin{proof}
   \begin{enumerate}
-    \item Par l'absurde, si \(x+y\in\Q\) alors \(y=(x+y)-y \in \Q\), 
-      contradiction, donc \(x+y\in\R\setminus\Q\);
-    \item idem, par l'absurde, si \(xy\in \Q\) alors \(y=\frac{1}{x}xy\in\Q\). 
+    \item Par l'absurde, si \(x + y\in\Q\) alors \(y = (x + y) - y \in \Q\), 
+      contradiction, donc \(x + y\in\R\setminus\Q\);
+    \item idem, par l'absurde, si \(xy\in \Q\) alors \(y = \frac{1}{x}xy\in\Q\), 
       contradiction, donc \(xy\in\R\setminus\Q\).
   \end{enumerate}
 \end{proof}
@@ -636,82 +657,94 @@ La conséquence est que ces deux ensembles sont infinis.
 \begin{theo}
   Les ensembles \(\Q\) et \(\R\setminus\Q\) sont denses dans \(\R\).
 \end{theo}
+
 \begin{proof}
   D'après la définition de la densité, il faut montrer que pour tout couple de 
-  réels \((x,y)\) avec \(x<y\) il existe un rationnel \(a\) qui soit dans 
+  réels \((x, y)\) avec \(x<y\) il existe un rationnel \(a\) qui soit dans 
   \(\intervalleff{x}{y}\) et un irrationnel \(b\) qui soit aussi dans 
   \(\intervalleff{x}{y}\). Montrons d'abord la densité de \(\Q\). Soit le 
-  rationnel \(q=E\left(\frac{1}{y-x}\right)+1\), donc \(0<\frac{1}{q}<y-x\). 
-  Soit \(p=E(qx)\), alors \(p\leqslant qx<p+1\) et donc \(\frac{p}{q}\leqslant x 
-  <\frac{p+1}{q}\). Donc \(x<\frac{p}{q}+\frac{1}{q}<x+y-x\). Finalement 
-  \(x<\frac{p+1}{q}<y\), donc \(\frac{p+1}{q}\) est le rationnel recherché, ce 
-  qui prouve que \(\Q\) est dense dans \(\R\). Montrons la densité de 
-  \(\R\setminus\Q\). Comme \(\Q\) est dense dans \(\R\), il existe un rationnel 
-  \(r\) tel que \(x+\sqrt{2}<r<y+\sqrt{2}\) et \(r-\sqrt{2}\in\R\setminus\Q\) 
-  avec \(x<r-\sqrt{2}<y\), on montre que  \(\R\setminus\Q\) est dense dans 
-  \(\R\).
+  rationnel \(q = E\left(\frac{1}{y - x}\right) + 1\), donc \(0<\frac{1}{q}<y - 
+  x\).  Soit \(p = E(qx)\), alors \(p\leqslant qx<p + 1\) et donc 
+  \(\frac{p}{q}\leqslant x <\frac{p + 1}{q}\). Donc \(x<\frac{p}{q} + 
+  \frac{1}{q}<x + y - x\). Finalement \(x<\frac{p + 1}{q}<y\), donc \(\frac{p + 
+  1}{q}\) est le rationnel recherché, ce qui prouve que \(\Q\) est dense dans 
+  \(\R\). Montrons la densité de \(\R\setminus\Q\). Comme \(\Q\) est dense dans 
+  \(\R\), il existe un rationnel \(r\) tel que \(x + \sqrt{2}<r<y + \sqrt{2}\) 
+  et \(r - \sqrt{2}\in\R\setminus\Q\) avec \(x<r - \sqrt{2}<y\), on montre que  
+  \(\R\setminus\Q\) est dense dans \(\R\).
 \end{proof}
 
+\clearpage
+
 \section{Exercices}
+
 \begin{exercice}
   Soient \(A\) et \(B\) deux parties bornées et non vides de \(\R\). On suppose 
   que leur intersection est non vide. Montrer que l'intersection est bornées et 
   que~:
-  \[ \max(\inf A, \inf B) \leqslant \inf(A \cap B) \leqslant \sup(A \cap B) 
+  \[\max(\inf A, \inf B) \leqslant \inf(A \cap B) \leqslant \sup(A \cap B) 
   \leqslant \min(\sup A, \sup B)\]
 \end{exercice}
+
 \begin{exercice}
-  Les parties de \(\R\) suivantes sont-elles majorées, minorées ? Si oui, 
+  Les parties de \(\R\) suivantes sont - elles majorées, minorées ? Si oui, 
   déterminer leur bornes supérieures, inférieures, et dire s'il s'agit d'un 
   maximum, d'un minimum.
   \begin{align*}
-    E &= \enstq{\frac{1}{2^n}+\frac{(-1)^n}{n}}{n \in \N^*} \\
-    F &= \enstq{\frac{1+(-1)^n}{n}-n^2}{n \in \N^*}
+    E &= \enstq{\frac{1}{2^n} + \frac{( - 1)^n}{n}}{n \in \N^*} \\
+    F &= \enstq{\frac{1 + ( - 1)^n}{n} - n^2}{n \in \N^*}
   \end{align*}
 \end{exercice}
+
 \begin{exercice}
-  Soit \(A\) une partie non vide de \(\R+\) et \(B = \enstq{x \in \R}{\exists a 
-  \in A \ ax=1}\). On suppose que \(A\) est majorée et non réduite au singleton 
-  nul. Montrer que \(B\) admet une borne inférieure telle que \(\inf B = 
-  \frac{1}{\sup A}\).
+  Soit \(A\) une partie non vide de \(\R + \) et \(B = \enstq{x \in \R}{\exists 
+  a \in A \ ax = 1}\). On suppose que \(A\) est majorée et non réduite au 
+  singleton nul. Montrer que \(B\) admet une borne inférieure telle que \(\inf B 
+  = \frac{1}{\sup A}\).
 \end{exercice}
+
 \begin{exercice}
   Soit \(A = \enstq{r \in \Q}{r^2 \leqslant 2}\). Montrer que \(A\) n'admet pas 
   de borne supérieure dans \(\Q\).
 \end{exercice}
+
 \begin{exercice}
   Calculer les bornes supérieures et inférieures de \(\mathcal{E} = 
-  \enstq{\frac{3p-q}{2p+q+1}}{(p,q) \in \N^2 \ 0 <q<p}\).
+  \enstq{\frac{3p - q}{2p + q + 1}}{(p, q) \in \N^2 \ 0 <q<p}\).
 \end{exercice}
+
 \begin{exercice}
-  Déterminer \(\inf \enstq{\Ent(x) + \Ent(1/x)}{x \in \R^*+}\).
+  Déterminer \(\inf \enstq{\Ent(x) + \Ent(1/x)}{x \in \R^* + }\).
 \end{exercice}
+
 \begin{exercice}
-  Soient \(a\) et \(b\) deux réels tels que \(b-a>3\). Démontrer qu'entre \(a\) 
-  et \(b\) il existe au moins trois entiers relatifs distincts.
+  Soient \(a\) et \(b\) deux réels tels que \(b - a>3\). Démontrer qu'entre 
+  \(a\) et \(b\) il existe au moins trois entiers relatifs distincts.
 \end{exercice}
+
 \begin{exercice}
-  Soit \(f\) une application croissante de \(I = \intervalleff{0}{1}\) vers 
-  lui-même. Démontrer qu'il existe au moins un réel \(a \in I\) tel que 
-  \(f(a)=a\).
+  Soit \(f\) une application croissante de \(I = \intervalleff{0}{1}\) vers lui 
+  - même. Démontrer qu'il existe au moins un réel \(a \in I\) tel que \(f(a) = 
+  a\).
   \emph{Indication}: on pourra utiliser la partie \(A = \enstq{x \in I}{f(x) 
   \geqslant x}\).
 \end{exercice}
+
 \begin{exercice}
   Soient \(I\) et \(J\) des intervalles de \(\R\) non vides. Démontrer qu'une 
   condition suffisante pour que \(I \cup J\) soit un intervalle est \(I \cap J 
-  \neq \emptyset\). Est-ce une condition nécessaire ?
+  \neq \emptyset\). Est - ce une condition nécessaire ?
 \end{exercice}
+
 \begin{exercice}
   Soient un réel \(x\) et un naturel non nul \(p\).
   \begin{enumerate}
     \item Démontrer qu'il existe un seul naturel \(k\) avec \(0 \leqslant k 
-      \leqslant p-1\) tel que \(\Ent(px) = p\Ent(x)+k\).
-    \item Soit un naturel \(q\) tel que \(0 \leqslant q \leqslant p-1\). Prouver 
-      que \(\Ent(x+q/p)\) est égal à \(\Ent(x)\) lorsque \(0 \leqslant q 
-      \leqslant p-k-1\) et à \(\Ent(x)+1\) lorsque \(p-k\leqslant q \leqslant 
-      p-1\).
-    \item En déduire que \(\sum_{q=0}^{p-1} \Ent(x+q/p) = \Ent(px)\).
+      \leqslant p - 1\) tel que \(\Ent(px) = p\Ent(x) + k\).
+    \item Soit un naturel \(q\) tel que \(0 \leqslant q \leqslant p - 1\).  
+      Prouver que \(\Ent(x + q/p)\) est égal à \(\Ent(x)\) lorsque \(0 \leqslant 
+      q \leqslant p - k - 1\) et à \(\Ent(x) + 1\) lorsque \(p - k\leqslant q 
+      \leqslant p - 1\).
+    \item En déduire que \(\sum_{q = 0}^{p - 1} \Ent(x + q/p) = \Ent(px)\).
   \end{enumerate}
 \end{exercice}
-

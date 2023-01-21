@@ -34,8 +34,8 @@ ax.set_rticks([0.5, 1, 1.5, 2])  # Less radial ticks
 ax.set_rlabel_position(+60)  # Move radial labels away from plotted line
 ax.grid(True)
 
-ax.plot(theta+(r < 0)*np.pi, np.abs(r))
-
+ax.plot(theta+(r < 0)*np.pi, np.abs(r), label=r"$r=\cos\theta + \cos 3\theta$")
+ax.legend(loc='best')
 plt.grid('True', which='both')
 plt.savefig('courbepolaire.png')
 plt.close('all')

@@ -3,6 +3,7 @@
 \minitoc
 \minilof
 \minilot
+
 \section{Modes de repérage dans l'espace}
 Soit \(\E\) l'espace géométrique euclidien. On munit \(\E\) d'un repère 
 cartésien \(\Rep = \rondtrois\).
@@ -10,27 +11,27 @@ cartésien \(\Rep = \rondtrois\).
 \subsection{Coordonnées cartésiennes}
 \begin{defdef}
   Soit M un point de l'espace \(\E\). Il existe un unique triplet \((x, y, 
-  z)\in\R^3\) tel que \(\vect{OM}=x\vi + y\vj + z\vk\), ce sont les coordonnées 
-  cartésiennes du point M dans le repère \(\rondtrois\).  Réciproquement pour 
-  tout triplet \((x, y, z)\) de \(\R^3\) il existe un unique point M de l'espace 
-  tel que \(\vect{OM}=x\vi + y\vj + z\vk\)
+  z)\in\R^3\) tel que \(\vect{OM} = x\vi + y\vj + z\vk\), ce sont les 
+  coordonnées cartésiennes du point M dans le repère \(\rondtrois\).  
+  Réciproquement pour tout triplet \((x, y, z)\) de \(\R^3\) il existe un unique 
+  point M de l'espace tel que \(\vect{OM} = x\vi + y\vj + z\vk\)
 \end{defdef}
 Ainsi la donnée d'un repère cartésien de l'espace permet de définir une 
 bijection entre \(\R^3\) et \(\E\). La représentation du repère cartésien est 
 donné par la figure~\ref{fig:repcart}.
 
 \emph{Changement de repère en coordonnées cartésiennes}
-Soient \(\Rep = \rondtrois\) et \(\Rep'=\rondtroisu\) deux repères cartésiens.  
+Soient \(\Rep = \rondtrois\) et \(\Rep' = \rondtroisu\) deux repères cartésiens.  
 Dans \(\Rep\) \(\Omega(x_0, y_0, z_0)\) et les vecteurs \(\vu(a, b, c)\) 
 \(\vv(a',b',c')\) et \(\vw(a'',b'',c'')\). Soit M un point de l'espace. On note 
 \((x_0, y_0, z_0)\) ses coordonnées dans \(\Rep\) et \((X, Y, Z)\) ses 
 coordonnées dans \(\Rep'\). D'une part~:
 \begin{equation}
-  \vect{OM}=x\vi + y\vj + z\vk,
+  \vect{OM} = x\vi + y\vj + z\vk,
 \end{equation}
 et d'autre part~:
 \begin{equation}
-  \vect{OM}=\vect{O\Omega}+\vect{\Omega M}.
+  \vect{OM} = \vect{O\Omega} + \vect{\Omega M}.
 \end{equation}
 Alors par unicité des coordonnées dans \(\Rep\) on a~:
 \begin{equation}
@@ -59,19 +60,17 @@ Pour tout réel \(\varphi\) on définit \(
   + \cos\varphi\vj
 \end{cases}\).  Soit un point \(M\) de l'espace de coordonnées \((x, y, z)\) et 
 \(P\) le projeté orthogonal de \(M\) sur le plan \(\rond\), \(P(x, y, 0)\). Soit 
-\((r, \varphi)\) un système de coordonnées polaires de \(P\), alors 
-\(\vect{OP}=r\vu_\varphi\) et donc \(\vect{OM}=r\vu_\varphi + z\vk\). Une 
-représentation graphique des du repère cylindrique est donné par la 
-figure~\ref{fig:repcyl}.
+\((r, \varphi)\) un système de coordonnées polaires de \(P\), alors \(\vect{OP} 
+= r\vu_\varphi\) et donc \(\vect{OM} = r\vu_\varphi + z\vk\). Une représentation 
+graphique des du repère cylindrique est donné par la figure~\ref{fig:repcyl}.
 
 \begin{defdef}
   Soit \(M\) un point de l'espace \(\E\), on appelle système de coordonnées 
   cylindriques de \(M\) dans \(\Rep\) tout triplet de réels \((r, \varphi, z)\) 
-  avec \(r>0\) tel que \(\vect{OM}=r\vu_\varphi + z\vk\). Alors 
-  \(\vect{OM}=r\cos\varphi\vi + r\sin\varphi\vj + z\vk\), on peut retrouver les 
-  coordonnées cartésiennes. On a \(r = OP\), l'unicité de \(z\) est claire car 
-  c'est la conséquence de l'unicité des coordonnées cartésiennes.  
-  \begin{itemize}
+  avec \(r>0\) tel que \(\vect{OM} = r\vu_\varphi + z\vk\). Alors \(\vect{OM} = 
+  r\cos\varphi\vi + r\sin\varphi\vj + z\vk\), on peut retrouver les coordonnées 
+  cartésiennes. On a \(r = OP\), l'unicité de \(z\) est claire car c'est la 
+  conséquence de l'unicité des coordonnées cartésiennes.  \begin{itemize}
     \item Si \(M\notin(Oz)\) alors \(P\neq O\) et donc 
       \(\congru{\varphi}{\widehat{(\vi;\vect{OP})}}{2\pi}\);
     \item par contre si \(M\in(Oz)\) alors on définit le repère cylindrique 
@@ -94,19 +93,19 @@ un système de coordonnées cylindriques est \((r_0, \varphi, z)\) lorsque
 
 \subsection{Coordonnées sphériques}
 On conserve les notations de la sous - section~\ref{subsec:coordcyl}. On sait 
-que \(\vect{OM}=r\vu_\varphi + z\vk\), donc si on note \(\rho = OM\) on a \(\rho 
-= \sqrt{r^2 + z^2}\). Un représentation des coordonnées sphériques est donnée 
-par la figure~\ref{fig:repsphere}.
+que \(\vect{OM} = r\vu_\varphi + z\vk\), donc si on note \(\rho = OM\) on a 
+\(\rho = \sqrt{r^2 + z^2}\). Un représentation des coordonnées sphériques est 
+donnée par la figure~\ref{fig:repsphere}.
 
 \begin{itemize}
   \item Si le point \(M\) est différent de l'origine alors \(\rho>0\) et 
-    \(\frac{r^2}{\rho^2}+\frac{z^2}{\rho^2}=1\); alors il existe \(\theta\in 
+    \(\frac{r^2}{\rho^2} + \frac{z^2}{\rho^2} = 1\); alors il existe \(\theta\in 
     \intervalleff{0}{2\pi}\) tel que \(\begin{cases} r = \rho\sin\theta \\ z = 
     \rho\cos\theta \end{cases}\) on a \(r\geqslant 0\) et \(z\geqslant 0\) donc 
     on peut choisir \(\theta\in \intervalleff{0}{\pi}\) et on a
-    \(\vect{OM}=\rho\vu_{\varphi, \theta}\) où \(\vu_{\varphi, 
-    \theta}=\sin\theta\vu_\varphi + \cos\theta\vk\).
-  \item Si le point \(M\) est l'origine alors \(\rho = r=z = 0\), on peut 
+    \(\vect{OM} = \rho\vu_{\varphi, \theta}\) où \(\vu_{\varphi, \theta} = 
+    \sin\theta\vu_\varphi + \cos\theta\vk\).
+  \item Si le point \(M\) est l'origine alors \(\rho = r = z = 0\), on peut 
     prendre n'importe quel \(\theta \in \intervalleff{0}{\pi}\) et on a encore 
     \(\begin{cases} r = \rho\sin\theta \\ z = \rho\cos\theta \end{cases}\).
 \end{itemize}
@@ -114,7 +113,7 @@ par la figure~\ref{fig:repsphere}.
 \begin{defdef}
   Étant donné un point \(M\) de l'espace, on appelle système de coordonnées 
   sphérique de \(M\) tout triplet \((\rho, \varphi, \theta)\in\Rpluss \times \R 
-  \times \intervalleff{0}{\pi}\) tel que \(\vect{OM}=\rho\vu_{\varphi, 
+  \times \intervalleff{0}{\pi}\) tel que \(\vect{OM} = \rho\vu_{\varphi, 
   \theta}\).  On appelle \(r\) la rayon, \(\theta\) la colatitude 
   (\(\frac{\pi}{2}-\theta\) est la latitude) et \(\varphi\) la longitude.
 \end{defdef}
@@ -129,7 +128,7 @@ coordonnées cartésiennes à partir des coordonnées cylindriques grâce à~:
   \end{cases}
   \quad
   \begin{cases}
-    r &=\rho\sin\theta\\ \varphi&=\varphi\\ z&=\rho\cos\theta
+    r & = \rho\sin\theta\\ \varphi& = \varphi\\ z& = \rho\cos\theta
   \end{cases}.
 \end{equation}
 
@@ -142,8 +141,8 @@ la mesure de l'angle non - orienté \((\vect{z},\vect{OM})\) dans l'espace
   \item par contre si le point \(M\) n'est pas sur cet axe alors on définit le 
     repère sphérique attaché à \(M\), c'est le ROND \((O, \vu_{\varphi, 
     \theta},\vv_{\varphi, \theta},\vw_{\varphi, \theta})\) où \(\vv_{\varphi, 
-    \theta}=\vv_{\varphi}\) et \(\vw_{\varphi, \theta}=-\cos\theta\vu_\varphi + 
-    \sin\theta\vk\).
+    \theta} = \vv_{\varphi}\) et \(\vw_{\varphi, \theta} = 
+    -\cos\theta\vu_\varphi + \sin\theta\vk\).
 \end{itemize}
 
 \emph{Remarque}~: Soit \(\rho_0>0\), l'ensemble des points \(M\) de l'espace 
@@ -184,12 +183,11 @@ sphériques).
 \begin{proof}
   Soient \(\vu\) et \(\vv\) deux vecteurs de l'espace, alors~:
   \begin{align}
-    \vu \bot \vv 
-    &\iff \vu = 0 \text{~ou~} \vv = 0 \text{~ou~} (\widehat{\vu, 
-    \vv})=\frac{\pi}{2}\\
-    &\iff \vu = 0 \text{~ou~} \vv = 0 \text{~ou~} 
-    \cos(\widehat{\vu, \vv})=0\\
-    &\iff \vu\cdot\vv = 0.
+    \vu \bot \vv &\iff \vu = 0 \text{~ou~} \vv = 0 \text{~ou~} (\widehat{\vu, 
+    \vv}) = \frac{\pi}{2}\\
+                 &\iff \vu = 0 \text{~ou~} \vv = 0 \text{~ou~} 
+                 \cos(\widehat{\vu, \vv}) = 0\\
+                 &\iff \vu\cdot\vv = 0.
   \end{align}
 \end{proof}
 
@@ -317,7 +315,7 @@ vecteurs. Si \(ABC\) est un triangle non plat, alors
 \end{prop}
 
 \begin{proof}
-  En effet, on a \(\norme{\vi\wedge\vj}=1\) et on sait que \(\vk\) est 
+  En effet, on a \(\norme{\vi\wedge\vj} = 1\) et on sait que \(\vk\) est 
   orthogonal à \((\vi, \vj)\) de norme \(1\), donc \(\vk = \pm\vi\wedge\vj\).
 \end{proof}
 
@@ -364,10 +362,12 @@ vecteurs. Si \(ABC\) est un triangle non plat, alors
       intervertir \(\vu\) et \(\vv\), on peut supposer qu'il existe un réel 
       \(\lambda\) tel que \(\vv = \lambda\vu\). Alors~:
       \begin{align}
-        \norme{\vu\wedge\vv}^2 + (\vu\cdot\vv)^2 
-        &= 0 + \lambda^2\norme{\vu}^4\\
-        &= \norme{\lambda\vu}^2\cdot\norme{\vu}^2\\
-        &= \norme{\vu}^2\cdot\norme{\vv}^2
+        \norme{\vu\wedge\vv}^2 + (\vu\cdot\vv)^2 &= 0 + 
+        \lambda^2\norme{\vu}^4\\
+                                                 &= 
+                                                 \norme{\lambda\vu}^2\cdot\norme{\vu}^2\\
+                                                 &= 
+                                                 \norme{\vu}^2\cdot\norme{\vv}^2
       \end{align}
     \item S'ils ne sont pas colinéaires, alors ils sont tous les deux non nuls 
       et donc puisque \(\sin^2 + \cos^2 = 1\) on a bien l'égalité.
@@ -376,8 +376,9 @@ vecteurs. Si \(ABC\) est un triangle non plat, alors
 
 \begin{prop}
   Soit \(\bondtrois\) une BOND, \(\vu\) et \(\vv\) deux vecteurs de 
-  coordonnées respectives \((x, y, z)\) et \((x', y', z')\) dans cette base. 
-  Alors \(\vu\wedge\vv\) a pour coordonnée \((yz' - y'z, x'z - xz',xy' - yx')\)
+  coordonnées respectives \((x, y, z)\) et \((x', y', z')\) dans cette base.  
+  Alors \(\vu\wedge\vv\) a pour coordonnée \((yz' - y'z, x'z - xz',xy' - 
+  yx')\)
 \end{prop}
 
 \begin{proof}
@@ -435,11 +436,11 @@ noté \(ABCDEFGH\) avec \(\vu = \vect{AB}\), \(\vv = \vect{AD}\), \(\vw =
 la hauteur \(h\) du parallélépipède. L'aire n'est rien d'autre que \(\A = 
 \norme{\vect{AB}\wedge\vect{AD}}\) et si on note \(\vk\) un vecteur unitaire 
 directement orthogonal à \((\vect{AB},\vect{AD})\) alors 
-\(\vect{AB}\wedge\vect{AD} = \A \vk\). La hauteur est \(h = \abs{\vk\cdot\vw}\). 
-On a bien~:
+\(\vect{AB}\wedge\vect{AD} = \A \vk\). La hauteur est \(h = 
+\abs{\vk\cdot\vw}\).  On a bien~:
 \begin{equation}
-  \abs{\Det(\vu, \vv, \vw)} = \abs{(\vu\wedge\vv)\cdot\vw} = \abs{\A\vk\cdot\vw} 
-  = \A h.
+  \abs{\Det(\vu, \vv, \vw)} = \abs{(\vu\wedge\vv)\cdot\vw} = 
+  \abs{\A\vk\cdot\vw} = \A h.
 \end{equation}
 
 \begin{prop}
@@ -494,8 +495,8 @@ On a bien~:
   pour tout vecteurs \(\vu\), \(\vv\), \(\vw\) et \( \vz\) de l'espace \(\E\) 
   et tout réel \(\lambda\) on a~:
   \begin{gather}
-    \Det(\vu, \vw, \vv) = \Det(\vv, \vu, \vw)=\Det(\vw, \vv, \vu) = -\Det(\vu, 
-    \vv, \vw) \label{eq:antisym};\\
+    \Det(\vu, \vw, \vv) = \Det(\vv, \vu, \vw) = \Det(\vw, \vv, \vu) = 
+    -\Det(\vu, \vv, \vw) \label{eq:antisym};\\
     \Det(\lambda\vu, \vv, \vw) = \Det(\vu, \lambda\vv, \vw) = \Det(\vu, \vv, 
     \lambda\vw) = \lambda\Det(\vu, \vv, \vw)\label{eq:trilin1};\\
     \Det(\vu + \vv, \vw, \vz) = \Det(\vu, \vw, \vz) + \Det(\vv, \vw, \vz) 
@@ -528,8 +529,8 @@ On a bien~:
                        & =-(\vu\wedge\vv)\cdot\vw\\
                        & =-\Det(\vu, \vv, \vw).
   \end{align}
-  Pour les autres résultats, on utilise le résultat suivant~: si deux des trois 
-  vecteurs sont égaux alors le déterminant est nul. Cela signifie que le 
+  Pour les autres résultats, on utilise le résultat suivant~: si deux des 
+  trois vecteurs sont égaux alors le déterminant est nul. Cela signifie que le 
   déterminant est alterné
   \begin{equation}
     0 = \Det(\vu, \vv + \vw, \vv + \vw) = \Det(\vu, \vv, \vw) + \Det(\vu, \vw, 
@@ -546,8 +547,8 @@ On a bien~:
 \end{cor}
 
 \begin{proof}
-  On échange deux vecteurs à chaque fois et on multiplie par 
-  \(-1\times(-1)=1\)~:
+  On échange deux vecteurs à chaque fois et on multiplie par \(-1\times(-1) = 
+  1\)~:
   \begin{equation}
     \Det(\vv, \vw, \vu) = -\Det(\vu, \vw, \vv) = -(-\Det(\vu, \vv, \vw))) = 
     \Det(\vu, \vv, \vw).
@@ -559,13 +560,14 @@ On a bien~:
   \vv, \vw\) de coordonnées respectives \((x, y, z)\), \((x', y', z')\), 
   \((x'', y'', z'')\) dans cette base, alors~:
   \begin{equation}
-    \Det(\vu, \vv, \vw)=xy'z'' + yz'x'' + zx'y'' - zy'x'' - xz'y'' - yx'z''.
+    \Det(\vu, \vv, \vw) = xy'z'' + yz'x'' + zx'y'' - zy'x'' - xz'y'' - yx'z''.
   \end{equation}
 \end{prop}
 
 \begin{proof}
   La démonstration se construit sur le détail des calculs du produit vectoriel 
-  et du produit scalaire puisque \(\Det(\vu, \vv, \vw)=(\vu\wedge\vv)\cdot\vw\).
+  et du produit scalaire puisque \(\Det(\vu, \vv, \vw) = 
+  (\vu\wedge\vv)\cdot\vw\).
 \end{proof}
 
 \section{Droites et plans}
@@ -598,8 +600,8 @@ On place dans toute cette section un ROND \(\rondtrois\).
       \(\P\) est au moins de dimension \(2\).
   \end{itemize}
   Par trois points \(A\), \(B\), et \(C\) non alignés passe un unique plan. Un 
-  vecteur non nul \(\vect{n}\) est dit normal au plan s'il est orthogonal à tous 
-  les vecteur du plan.
+  vecteur non nul \(\vect{n}\) est dit normal au plan s'il est orthogonal à 
+  tous les vecteur du plan.
 \end{defdef}
 
 \subsection{Représentations paramétriques}
@@ -611,8 +613,7 @@ alors \(\Dr\) est paramétrée
 \begin{equation}
   \Dr : \forall t\in\R
   \begin{cases}
-    x(t) = at + x_0 \\ 
-    y(t) = bt + y_0 \\
+    x(t) = at + x_0 \\ y(t) = bt + y_0 \\
     z(t) = ct + z_0
   \end{cases}.
 \end{equation}
@@ -653,21 +654,21 @@ C'est moins pratique que pour une droite, puisqu'il y a deux paramètres.
 
 \paragraph{Plan défini par un point et deux vecteur non colinéaires}
 
-Soit \(\P\) le plan passant par \(A(x_0, y_0, z_0)\) dirigé par les vecteurs non 
-colinéaires \(\vu(a_1, b_1, c_1)\) et \(\vv(a_2, b_2, c_2)\). Alors
+Soit \(\P\) le plan passant par \(A(x_0, y_0, z_0)\) dirigé par les vecteurs 
+non colinéaires \(\vu(a_1, b_1, c_1)\) et \(\vv(a_2, b_2, c_2)\). Alors
 \begin{align}
   M(x, y, z) \in \P &\iff \vect{AM}, \vu, \vv \text{~sont coplanaires}\\
-                    &\Det(\vect{AM},\vu, \vv) = \begin{vmatrix} x - x_0 & a_1 & 
-                      a_2 \\ y - y_0 & b_1 & b_2 \\ z - z_0 & c_1 & 
-                    c_2\end{vmatrix}=0.
+                    &\Det(\vect{AM},\vu, \vv) = \begin{vmatrix} x - x_0 & a_1 
+                      & a_2 \\ y - y_0 & b_1 & b_2 \\ z - z_0 & c_1 & c_2
+                    \end{vmatrix} = 0.
 \end{align}
 
 \paragraph{Plan défini par trois points non alignés}
 
-Soit \(\P\) le plan passant par \(A\), \(B\) et \(C\), alors \(\P\) est le plan 
-passant par \(A\) et dirigé par \(\vect{AB}\) et \(\vect{BC}\),
+Soit \(\P\) le plan passant par \(A\), \(B\) et \(C\), alors \(\P\) est le 
+plan passant par \(A\) et dirigé par \(\vect{AB}\) et \(\vect{BC}\),
 \begin{equation}
-  M \in \P \iff \Det(\vect{AM},\vect{AB},\vect{BC})=0.
+  M \in \P \iff \Det(\vect{AM}, \vect{AB}, \vect{BC}) = 0.
 \end{equation}
 
 \paragraph{Plan défini par un point et un vecteur normal}
@@ -680,8 +681,8 @@ Soit \(\P\) le plan passant par \(A(x_0, y_0, z_0)\) de vecteur normal
 \end{align}
 
 Réciproquement une équation cartésienne de la forme \(ax + by + cz = \alpha\) 
-avec \(a\), \(b\) et \(c\) non tous nuls définit un plan dont un vecteur normal 
-est \(\vect{n}(a, b, c)\).
+avec \(a\), \(b\) et \(c\) non tous nuls définit un plan dont un vecteur 
+normal est \(\vect{n}(a, b, c)\).
 
 \subsubsection{Représentation cartésienne d'une droite}
 
@@ -694,7 +695,7 @@ et leur intersection \(\Dr\) est définie par~:
 \begin{equation}
   \begin{cases}
     ax + by + cz & = \alpha \\
-    a'x + b'y + c'z&=\alpha'
+    a'x + b'y + c'z& = \alpha'
   \end{cases}.
 \end{equation}
 Réciproquement, un tel système d'équation cartésiennes peut définir~:
@@ -715,30 +716,31 @@ orthogonalité}
 \end{defdef}
 
 \begin{prop}
-  Soient \(\P\) et \(\P'\) deux plans d'équations cartésiennes respectives \(ax 
-  + by + cz = \alpha\) et \(a'x + b'y + c'z = \alpha'\). Alors \(\P\) et \(\P'\) 
-  sont parallèles si et seulement si \((a, b, c)\) et \((a', b', c')\) sont 
-  proportionnels et \(\P\) et \(\P'\) sont égaux si et seulement si \((a, b, c, 
-  \alpha)\) et \((a', b', c', \alpha')\) sont proportionnels.
+  Soient \(\P\) et \(\P'\) deux plans d'équations cartésiennes respectives 
+  \(ax + by + cz = \alpha\) et \(a'x + b'y + c'z = \alpha'\). Alors \(\P\) et 
+  \(\P'\) sont parallèles si et seulement si \((a, b, c)\) et \((a', b', c')\) 
+  sont proportionnels et \(\P\) et \(\P'\) sont égaux si et seulement si \((a, 
+  b, c, \alpha)\) et \((a', b', c', \alpha')\) sont proportionnels.
 \end{prop}
 
 \begin{defdef}
-  Deux plans sont orthogonaux s'ils admettent des vecteurs normaux orthogonaux.
+  Deux plans sont orthogonaux s'ils admettent des vecteurs normaux 
+  orthogonaux.
 \end{defdef}
 
 \begin{prop}
-  Deux plans \(\P\) et \(\P'\) d'équations cartésiennes respectives \(ax + by + 
-  cz = \alpha\) et \(a'x + b'y + c'z = \alpha'\) avec des vecteurs normaux non 
-  nuls; alors \(\P\) et \(\P'\) sont orthogonaux si et seulement si 
-  \(aa' + bb' + cc'=0\).
+  Deux plans \(\P\) et \(\P'\) d'équations cartésiennes respectives \(ax + by 
+  + cz = \alpha\) et \(a'x + b'y + c'z = \alpha'\) avec des vecteurs normaux 
+  non nuls; alors \(\P\) et \(\P'\) sont orthogonaux si et seulement si \(aa' 
+  + bb' + cc' = 0\).
 \end{prop}
 
 \subsubsection{Positions relatives d'une droite et d'un plan}
 
 \begin{defdef}
-  Soient \(\Dr\) une droite et \(\P\) un plan. On dit que \(\Dr\) est parallèles 
-  à \(\P\) si pour tout vecteur directeur \(\vu\) de \(\Dr\) il existe deux 
-  points du plan \(\P\) tels que \(\vu = \vect{AB}\).
+  Soient \(\Dr\) une droite et \(\P\) un plan. On dit que \(\Dr\) est 
+  parallèles à \(\P\) si pour tout vecteur directeur \(\vu\) de \(\Dr\) il 
+  existe deux points du plan \(\P\) tels que \(\vu = \vect{AB}\).
 \end{defdef}
 
 \begin{prop}
@@ -756,14 +758,14 @@ orthogonalité}
 
 \begin{proof}
   \begin{enumerate}
-    \item Si \(\Dr\) est parallèle à \(\P\) alors soit \(\vu\neq 0\) un vecteur 
-      directeur de \(\Dr\) et on suppose qu'il existe \(A\in\Dr\cap\P\), alors 
-      il existe trois points C, D et E tels que \(\vu = \vect{CD} = \vect{AE}\). 
-      Pour tout point M du plan, il existe un réel \(\lambda\) tel que 
-      \(\vect{AM} = \lambda\vu = \lambda\vect{AE}\). Les point A et E sont dans le 
-      plan \(\P\), alors la droite \((AE)\) est incluse dans le plan \(\P\) donc 
-      si M est sur \((AE)\) alors M est sur le plan \(\P\), donc \(D \subset 
-      \P\).
+    \item Si \(\Dr\) est parallèle à \(\P\) alors soit \(\vu\neq 0\) un 
+      vecteur directeur de \(\Dr\) et on suppose qu'il existe 
+      \(A\in\Dr\cap\P\), alors il existe trois points C, D et E tels que \(\vu 
+      = \vect{CD} = \vect{AE}\).  Pour tout point M du plan, il existe un réel 
+      \(\lambda\) tel que \(\vect{AM} = \lambda\vu = \lambda\vect{AE}\). Les 
+      point A et E sont dans le plan \(\P\), alors la droite \((AE)\) est 
+      incluse dans le plan \(\P\) donc si M est sur \((AE)\) alors M est sur 
+      le plan \(\P\), donc \(D \subset \P\).
     \item Si \(\Dr\) n'est pas parallèle à \(\P\), alors \(\Dr\) est la droite 
       passant par A et dirigé par \(\vu\). \(\P\) est le plan passant par B de 
       vecteur normal \(\vv\). Les vecteurs \(\vu\) et \(\vv\) ne sont pas 
@@ -777,44 +779,46 @@ orthogonalité}
         \end{cases} \\
         & \iff 
         \begin{cases}
-          \exists \lambda \in \R \ \vect{AM}=\lambda\vu \\ 
+          \exists \lambda \in \R \ \vect{AM} = \lambda\vu \\ 
           \vect{BA}\cdot\vv + \vect{AM}\cdot\vv = 0
         \end{cases}\\
         & \iff
         \begin{cases}
-          \exists \lambda \in \R \ \vect{AM}=\lambda\vu \\
+          \exists \lambda \in \R \ \vect{AM} = \lambda\vu \\
           \lambda\vu\cdot\vv = \vect{AB}\cdot\vv
         \end{cases}\\
         & \iff
         \begin{cases}
-          \exists \lambda \in \R \ \vect{AM}=\lambda\vu \\
+          \exists \lambda \in \R \ \vect{AM} = \lambda\vu \\
           \lambda = \frac{\vect{AB}\cdot\vv}{\vu\cdot\vv}
-        \end{cases}\\
-        M \in \Dr\cap\P &\iff 
-        \vect{AM} = \frac{\vect{AB}\cdot\vv}{\vu\cdot\vv}\vu.
+        \end{cases}\\          
+        M \in \Dr\cap\P &\iff \vect{AM} = 
+        \frac{\vect{AB}\cdot\vv}{\vu\cdot\vv}\vu.
       \end{align}
       Il y a donc un unique point d'intersection.
   \end{enumerate}
 \end{proof}
 
 \subsection{Distance d'un point à un plan ou à une droite}
+
 \subsubsection{Projeté orthogonal}
+
 \begin{defdef}
-  Soit \(M\) un point de l'espace \(\epsilon\) et \(X\) une droite ou un plan.  
-  On appelle distance de \(M\) à \(X\) le réel~:
+  Soit \(M\) un point de l'espace \(\epsilon\) et \(X\) une droite ou un 
+  plan.  On appelle distance de \(M\) à \(X\) le réel~:
   \begin{equation}
-    d(M, X)=\Inf\enstq{MM'}{M' \in X}.
+    d(M, X) = \Inf\enstq{MM'}{M' \in X}.
   \end{equation}
-  Il s'agit de la borne inférieur, la plus petite distance de \(M\) à un point 
-  de \(X\).
+  Il s'agit de la borne inférieur, la plus petite distance de \(M\) à un 
+  point de \(X\).
 \end{defdef}
 
 \begin{prop}
-  Soit \(M\) un point de l'espace \(\epsilon\) et \(X\) une droite ou un plan.  
-  Il existe un unique point \(H\) de \(X\) tel que \(\vect{MH}\) soit 
-  orthogonal à \(X\). On l'appelle projeté orthogonal de \(M\) sur \(X\) et il 
-  vérifie \(d(M, X) = MH\) et la distance de \(M\) à \(X\) n'est atteinte qu'en 
-  \(H\).
+  Soit \(M\) un point de l'espace \(\epsilon\) et \(X\) une droite ou un 
+  plan.  Il existe un unique point \(H\) de \(X\) tel que \(\vect{MH}\) soit 
+  orthogonal à \(X\). On l'appelle projeté orthogonal de \(M\) sur \(X\) et 
+  il vérifie \(d(M, X) = MH\) et la distance de \(M\) à \(X\) n'est atteinte 
+  qu'en \(H\).
 \end{prop}
 
 \begin{proof}
@@ -822,23 +826,24 @@ orthogonalité}
     \item \(X\) est une droite. Soit \(\vu\) un vecteur directeur de \(X\), 
       puis \(A\) et \(N\) des points de X. Alors~:
       \begin{align}
-        \vect{MN}\perp X 
-        &\iff \vect{MN}\cdot\vu = \vect{MA}\cdot\vu + \vect{AN}\cdot\vu = 0\\
-        N \in X 
-        &\iff \exists \lambda \in \R \ \vect{AN} = \lambda\vu\\
+        \vect{MN}\perp X &\iff \vect{MN}\cdot\vu = \vect{MA}\cdot\vu + 
+        \vect{AN}\cdot\vu = 0\\
+        N \in X &\iff \exists \lambda \in \R \ \vect{AN} = \lambda\vu\\
         \vect{MN}\perp X &
         \iff \lambda = \frac{\vect{AM}\cdot\vu}{\norme{\vu}^2}.
       \end{align}
-      On a montré qu'il existe un unique point H de X tel que \(\vect{AH}\perp 
-      X\) et de plus \(\vect{AH} = \frac{\vect{AM}\cdot\vu}{\norme{\vu}^2}\vu\)
+      On a montré qu'il existe un unique point H de X tel que 
+      \(\vect{AH}\perp X\) et de plus \(\vect{AH} = 
+      \frac{\vect{AM}\cdot\vu}{\norme{\vu}^2}\vu\)
     \item X est un plan. Soit A un point de X et \(\bond\) une BON de X.  
       Alors~:
       \begin{align}
-        N \in X 
-        &\iff \exists (\lambda, \mu)\in\R^2 \ \vect{AN} = \lambda\vi + \mu\vj\\
-        \vect{MN}\perp X 
-        &\iff \vect{MN}\cdot\vi = 0 \wedge \vect{MN}\cdot\vj = 0\\
-        &\iff \vect{MA}\cdot\vi + \vect{AN}\cdot\vi = 0 \wedge \vect{MA}\cdot\vj + \vect{AN}\cdot\vj = 0.
+        N \in X &\iff \exists (\lambda, \mu)\in\R^2 \ \vect{AN} = \lambda\vi 
+        + \mu\vj\\
+        \vect{MN}\perp X &\iff \vect{MN}\cdot\vi = 0 \wedge 
+        \vect{MN}\cdot\vj = 0\\
+                         &\iff \vect{MA}\cdot\vi + \vect{AN}\cdot\vi = 0 
+                         \wedge \vect{MA}\cdot\vj + \vect{AN}\cdot\vj = 0.
       \end{align}
       Or on sait que~:
       \begin{align}
@@ -847,14 +852,15 @@ orthogonalité}
       \end{align}
       Alors finalement,
       \begin{equation}
-        \vect{MN}\perp X \iff \lambda = \vect{AM}\cdot\vi \wedge \mu = \vect{AM}\vj.
+        \vect{MN}\perp X \iff \lambda = \vect{AM}\cdot\vi \wedge \mu = 
+        \vect{AM}\vj.
       \end{equation}
       Il existe un seul point H de X tel que \(\vect{MH}\perp X\).
     \item \(X\) est une droite ou un plan. Soit \(M'\) un point de \(X\), 
-      \(\vect{MH}\) est orthogonal à \(\vect{HM'}\); le théorème de Pythagore 
-      nous donne \(MM'^2 = MH^2 + M'H^2\) donc \(MM'^2\geqslant MH^2\). Et 
-      \(MM' = MH \iff HM' = 0 \iff H = M'\), la distance est atteinte pour 
-      \(M' = H\) et seulement pour \(M' = H\)
+      \(\vect{MH}\) est orthogonal à \(\vect{HM'}\); le théorème de 
+      Pythagore nous donne \(MM'^2 = MH^2 + M'H^2\) donc \(MM'^2\geqslant 
+      MH^2\). Et \(MM' = MH \iff HM' = 0 \iff H = M'\), la distance est 
+      atteinte pour \(M' = H\) et seulement pour \(M' = H\)
   \end{itemize}
 \end{proof}
 
@@ -862,10 +868,10 @@ orthogonalité}
 
 \paragraph{Plan défini par un point A et deux vecteurs non colinéaires}
 
-Soit \(\P\) un plan, \(M\) un point de l'espace, \(H\) son projeté orthogonal 
-sur \(\P\). \(\vect{HM}\) est orthogonal à \(\vu\) et \(\vv\) donc il existe 
-un réel \(\lambda\) tel que \(\vect{HM} = \lambda \vu\wedge\vv\).  
-\begin{equation}
+Soit \(\P\) un plan, \(M\) un point de l'espace, \(H\) son projeté 
+orthogonal sur \(\P\). \(\vect{HM}\) est orthogonal à \(\vu\) et \(\vv\) 
+donc il existe un réel \(\lambda\) tel que \(\vect{HM} = \lambda 
+\vu\wedge\vv\).  \begin{equation}
   \vect{AM}\cdot(\vu\wedge\vv) = \vect{AH}\cdot(\vu\wedge\vv) + 
   \vect{HM}\cdot(\vu\wedge\vv) = \lambda \norme{\vu\wedge\vv}^2.
 \end{equation}
@@ -893,15 +899,15 @@ En appliquant la formule~\eqref{eq:freq} avec ces trois points, on obtient~:
 \paragraph{Plan défini par un point A et un vecteur normal}
 
 Ce vecteur normal est noté \(\vn(a, b, c)\) et \(A(x_0, y_0, z_0)\), soient 
-\(\vu\) et \(\vv\) deux vecteurs directeurs directeurs de \(\P\). Il existe un 
-réel non nul \(\lambda\) tel que \(\lambda\vn = \vu\wedge\vv\), alors
+\(\vu\) et \(\vv\) deux vecteurs directeurs directeurs de \(\P\). Il existe 
+un réel non nul \(\lambda\) tel que \(\lambda\vn = \vu\wedge\vv\), alors
 \begin{equation}
   HM = \frac{\abs{\vect{AM}\cdot(\vu\wedge\vv)}}{\norme{\vu\wedge\vv}} = 
   \frac{\abs{\vect{AM}\cdot\lambda\vn}}{\norme{\lambda\vn}} = 
   \frac{\abs{\vect{AM}\cdot\vn}}{\norme{\vn}}.
 \end{equation}
-Une équation cartésienne de \(\P\) est \(ax + by + cz = \alpha\) avec \(\alpha 
-= ax_0 + by_0 + cz_0\), finalement~:
+Une équation cartésienne de \(\P\) est \(ax + by + cz = \alpha\) avec 
+\(\alpha = ax_0 + by_0 + cz_0\), finalement~:
 \begin{equation}
   d(M, \P) = \frac{\abs{ax + by + cz - \alpha}}{\sqrt{a^2 + b^2 + c^2}}.
 \end{equation}
@@ -935,8 +941,8 @@ Soient \(\Dr\) et \(\Dr'\) deux droites de l'espace non parallèles.
   \begin{itemize}
     \item on dit qu'elles sont orthogonales si et seulement si leur vecteurs 
       directeurs sont orthogonaux;
-    \item on dit qu'elles sont perpendiculaires si et seulement si elles sont 
-      orthogonales et sécantes.
+    \item on dit qu'elles sont perpendiculaires si et seulement si elles 
+      sont orthogonales et sécantes.
   \end{itemize}
 \end{defdef}
 
@@ -944,8 +950,8 @@ Soient \(\Dr\) et \(\Dr'\) deux droites de l'espace non parallèles.
 
 \begin{theo}
   Soient \(\Dr\) et \(\Dr'\) deux droites de l'espace non parallèles. Il 
-  existe une unique droite \(\Delta\) perpendiculaire à \(\Dr\) et à \(\Dr'\), 
-  c'est la perpendiculaire commune de \(\Dr\) et \(\Dr'\).
+  existe une unique droite \(\Delta\) perpendiculaire à \(\Dr\) et à 
+  \(\Dr'\), c'est la perpendiculaire commune de \(\Dr\) et \(\Dr'\).
 \end{theo}
 
 \begin{proof}[Existence]
@@ -954,17 +960,18 @@ Soient \(\Dr\) et \(\Dr'\) deux droites de l'espace non parallèles.
   Ces deux vecteurs ne sont pas colinéaires. Soit le vecteur non nul \(\vv = 
   \vu\wedge\vu'\). Le triplet \((\vu, \vu',\vv)\) est alors une base directe 
   de l'espace. Il existe donc trois réels \(a, b, c\) tel que \(\vect{AA'} = 
-  a\vu + b\vu'+c\vv\). Posons le point H tel que \(\vect{AH} = a\vu\), alors H 
-  est un point de \(\Dr\). De la même manière, on pose le point \(H'\) tel que 
-  \(\vect{H'A'} = b\vu'\) alors \(H'\) est un point de \(\Dr'\). Soit 
-  \(\Delta\) la droite passant par \(H\) et dirigée par \(\vv\).  
-  Premièrement, \(\Delta\) passe par \(H\in\Dr\), \(\Delta\) et \(\Dr\) sont 
-  sécantes. \(\Delta\) est dirigée par \(\vv\) qui est orthogonal à \(\vu\) et 
-  \(\vv\) donc \(\Delta\) est orthogonale à \(\Dr\) et \(\Dr'\).  Il reste à 
-  montrer qu'elle est sécante avec \(\Dr'\). Secondement,
+  a\vu + b\vu' + c\vv\). Posons le point H tel que \(\vect{AH} = a\vu\), 
+  alors H est un point de \(\Dr\). De la même manière, on pose le point 
+  \(H'\) tel que \(\vect{H'A'} = b\vu'\) alors \(H'\) est un point de 
+  \(\Dr'\). Soit \(\Delta\) la droite passant par \(H\) et dirigée par 
+  \(\vv\).  Premièrement, \(\Delta\) passe par \(H\in\Dr\), \(\Delta\) et 
+  \(\Dr\) sont sécantes. \(\Delta\) est dirigée par \(\vv\) qui est 
+  orthogonal à \(\vu\) et \(\vv\) donc \(\Delta\) est orthogonale à \(\Dr\) 
+  et \(\Dr'\).  Il reste à montrer qu'elle est sécante avec \(\Dr'\). 
+  Secondement,
   \begin{equation}
-    \vect{HH'} = \vect{HA} + \vect{AA'} + \vect{A'H'} = -a\vu + (a\vu + b\vu' 
-    + c\vv) - b\vu' = c\vv.
+    \vect{HH'} = \vect{HA} + \vect{AA'} + \vect{A'H'} = -a\vu + (a\vu + 
+    b\vu' + c\vv) - b\vu' = c\vv.
   \end{equation}
   Puisque \(H\in\Delta\) et que \(\vv\) dirige \(\Delta\) alors 
   \(H'\in\Delta\). Ainsi \(\Delta\) et \(\Dr'\) sont sécantes. On a prouvé 
@@ -973,16 +980,16 @@ Soient \(\Dr\) et \(\Dr'\) deux droites de l'espace non parallèles.
 
 \begin{proof}[Unicité]
   Soit \(\Delta'\) une perpendiculaire commune à \(\Dr\) et à \(\Dr'\).  
-  Notons \(C\) et \(C'\) ses points d'intersections avec \(\Dr\) et \(\Dr'\). 
-  Alors \(\vect{CC'} = \vect{CH} + \vect{HH'} + \vect{H'C'}\).  Puisque \(C\) 
-  et \(H\) sont des points de \(\Dr\), il existe un réel \(\alpha\) tel que 
-  \(\vect{CH} = \alpha\vu\) et puisque \(C'\) et \(H'\) sont des points de 
-  \(\Dr'\), il existe un réel \(\beta\) tel que \(\vect{C'H'} = \beta\vu'\); 
-  nous savons aussi que \(\vect{HH'} = c\vv\).  Alors \(\vect{CC'} = \alpha\vu 
-  + c\vv + \beta\vu'\), or \(\vect{CC'}\) est orthogonal à \(\vu\) et à 
-  \(\vu'\) donc il est colinéaire à \(\vv = \vu\wedge\vu'\). Par unicité des 
-  coordonnées, on a forcément \(\alpha = \beta = 0\) alors \(C = H\) et \(C' = 
-  H'\). Ainsi \(\Delta = \Delta'\).
+  Notons \(C\) et \(C'\) ses points d'intersections avec \(\Dr\) et 
+  \(\Dr'\).  Alors \(\vect{CC'} = \vect{CH} + \vect{HH'} + \vect{H'C'}\).  
+  Puisque \(C\) et \(H\) sont des points de \(\Dr\), il existe un réel 
+  \(\alpha\) tel que \(\vect{CH} = \alpha\vu\) et puisque \(C'\) et \(H'\) 
+  sont des points de \(\Dr'\), il existe un réel \(\beta\) tel que 
+  \(\vect{C'H'} = \beta\vu'\); nous savons aussi que \(\vect{HH'} = c\vv\).  
+  Alors \(\vect{CC'} = \alpha\vu + c\vv + \beta\vu'\), or \(\vect{CC'}\) est 
+  orthogonal à \(\vu\) et à \(\vu'\) donc il est colinéaire à \(\vv = 
+  \vu\wedge\vu'\). Par unicité des coordonnées, on a forcément \(\alpha = 
+  \beta = 0\) alors \(C = H\) et \(C' = H'\). Ainsi \(\Delta = \Delta'\).
 \end{proof}
 
 \subsubsection{Distance entre deux droites non parallèles}
@@ -1092,22 +1099,23 @@ avec \(\varphi\in\intervalleff{0}{\pi}\). On en déduit une représentation
 paramétrique de \(S\)~:
 \begin{equation}
   \begin{cases}
-    x(\varphi, \theta)=\rho_0\sin\varphi\sin\theta\\
-    y(\varphi, \theta)=\rho_0\cos\varphi\sin\theta\\
-    z(\varphi, \theta)=\rho_0\cos\theta
+    x(\varphi, \theta) = \rho_0\sin\varphi\sin\theta\\
+    y(\varphi, \theta) = \rho_0\cos\varphi\sin\theta\\
+    z(\varphi, \theta) = \rho_0\cos\theta
   \end{cases}.
 \end{equation}
+
 Soient A et B deux points distincts de l'espace, l'ensemble S tel que \(S = 
-\enstq{M \in \epsilon}{\vect{MA}\cdot\vect{MB}=0}\) et I le milieu de \([AB]\).  
-Alors
+\enstq{M \in \epsilon}{\vect{MA}\cdot\vect{MB} = 0}\) et I le milieu de 
+\([AB]\).  Alors
 \begin{align}
   M \in S & \iff (\vect{MI} + \vect{IA}) \cdot (\vect{MI} + \vect{IB}) = 
   (\vect{MI} + \vect{IA}) \cdot (\vect{MI} - \vect{IA}) = 0\\
           &\iff MI^2 - IA^2 = 0\\
           &\iff MI^2 = \frac{AB^2}{4}.
 \end{align}
-\(S\) est la sphère de centre \(I\) de rayon \(\frac{AB}{2}\), c'est aussi la 
-sphère de diamètre \([AB]\).
+\(S\) est la sphère de centre \(I\) de rayon \(\frac{AB}{2}\), c'est aussi 
+la sphère de diamètre \([AB]\).
 
 \subsection{Problème d'intersection}
 Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
@@ -1147,21 +1155,21 @@ Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
 \subsubsection{Intersection d'une sphère et d'un plan}
 
 \begin{prop}
-  Soit \(\P\) un plan de l'espace \(\epsilon\), l'intersection de S et \(\P\) 
-  est~:
+  Soit \(\P\) un plan de l'espace \(\epsilon\), l'intersection de S et 
+  \(\P\) est~:
   \begin{itemize}
     \item vide si \(d(A, \P) > \rho\);
-    \item réduite au projeté orthogonal \(H\) de A sur \(\P\) si \(d(A, \P) = 
-      \rho\) et dans ce cas la sphère et le plan sont dit tangents;
+    \item réduite au projeté orthogonal \(H\) de A sur \(\P\) si \(d(A, \P) 
+      = \rho\) et dans ce cas la sphère et le plan sont dit tangents;
     \item un cercle de centre H, si \(d(A, \P) < \rho\).
   \end{itemize}
 \end{prop}
 
 \begin{proof}
-  Soit le point H le projeté orthogonal du point A sur le plan \(\P\). Soit M 
-  un point du plan \(\P\). Les vecteurs \(\vect{AH}\) et \(\vect{HM}\) sont 
-  orthogonaux, alors le théorème de Pythagore affirme que \(AM^2 = d(A, \P)^2 
-  + HM^2\). Alors
+  Soit le point H le projeté orthogonal du point A sur le plan \(\P\). Soit 
+  M un point du plan \(\P\). Les vecteurs \(\vect{AH}\) et \(\vect{HM}\) 
+  sont orthogonaux, alors le théorème de Pythagore affirme que \(AM^2 = d(A, 
+  \P)^2 + HM^2\). Alors
   \begin{align}
     M \in S &\iff AM^2 = d(A, \P)^2 + HM^2 = \rho^2\\
             &\iff HM^2 = \rho^2 - d(A, \P)^2.
@@ -1186,24 +1194,24 @@ Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
   L'intersection de \(S\) et de \(S'\) est~:
   \begin{itemize}
     \item vide si \(AA' > \rho + \rho'\) ou si \(AA' < \abs{\rho'-\rho}\);
-    \item réduite à un point si \(AA' = \rho + \rho'\) ou si \(AA' = \abs{\rho 
-      - \rho'}\), dans ce cas les sphères sont tangentes en un point H, qui 
-      est sur la droite \((AA')\);
-    \item un cercle si \(\abs{\rho - \rho'} < AA' < \rho + \rho'\), le centre 
-      de ce cercle est sur \((AA')\) et se situe dans un plan orthogonal à 
-      \((AA')\).
+    \item réduite à un point si \(AA' = \rho + \rho'\) ou si \(AA' = 
+      \abs{\rho - \rho'}\), dans ce cas les sphères sont tangentes en un 
+      point H, qui est sur la droite \((AA')\);
+    \item un cercle si \(\abs{\rho - \rho'} < AA' < \rho + \rho'\), le 
+      centre de ce cercle est sur \((AA')\) et se situe dans un plan 
+      orthogonal à \((AA')\).
   \end{itemize}
 \end{prop}
 
 \begin{proof}
   Puisque \(A \neq A'\), soient \(\vc = 
   \frac{\vect{AA'}}{\norme{\vect{AA'}}}\) un vecteur directeur de \((AA')\) 
-  \(\va\) un vecteur unitaire orthogonal à \(\vc\) et \(\vb = \va\wedge\vc\). 
-  Ainsi \((A, \va, \vb, \vc)\) est un ROND de l'espace.  L'équation de \(S\) 
-  dans ce ROND est : \(x^2 + y^2 + z^2 = \rho^2\). et \(\vect{AA'} = 
-  \norme{\vect{AA'}}\vc = d\vc\) et donc \(A'(0, 0, d)\) et l'équation de 
-  \(S'\) est telle que \(x^2 + y^2 + (z - d)^2 = \rho'^2\).  Soit un point 
-  \(M(x, y, z)\) de l'espace \(\epsilon\), alors
+  \(\va\) un vecteur unitaire orthogonal à \(\vc\) et \(\vb = 
+  \va\wedge\vc\).  Ainsi \((A, \va, \vb, \vc)\) est un ROND de l'espace.  
+  L'équation de \(S\) dans ce ROND est : \(x^2 + y^2 + z^2 = \rho^2\). et 
+  \(\vect{AA'} = \norme{\vect{AA'}}\vc = d\vc\) et donc \(A'(0, 0, d)\) et 
+  l'équation de \(S'\) est telle que \(x^2 + y^2 + (z - d)^2 = \rho'^2\).  
+  Soit un point \(M(x, y, z)\) de l'espace \(\epsilon\), alors
   \begin{align}
     M \in S\cap S'
     & \iff
@@ -1224,23 +1232,21 @@ Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
     d^2}{2d}\right)^2\\
     &\iff x^2 + y^2 = \left(\rho - \frac{\rho^2 - \rho'^2 + 
     d^2}{2d}\right)\left(\rho + \frac{\rho^2 - \rho'^2 + d^2}{2d}\right)\\
-    &\iff x^2 + y^2 = \frac{1}{4d^2}(\rho'-d + \rho)(\rho'+d - \rho)(\rho + d - 
-    \rho')(\rho + d+\rho')=\alpha.
+    &\iff x^2 + y^2 = \frac{1}{4d^2}(\rho'-d + \rho)(\rho' + d - \rho)(\rho + d 
+    - \rho')(\rho + d + \rho') = \alpha.
   \end{align}
-  Le réel \(\alpha\) est du signe de \((\rho'-d + \rho)(\rho'+d - 
-  \rho)(\rho + d - \rho')=(\rho'+d - \rho)(d^2 - \abs{\rho - \rho'}^2)\).  
-  Alors
+  Le réel \(\alpha\) est du signe de \((\rho'-d + \rho)(\rho' + d - 
+  \rho)(\rho + d - \rho') = (\rho' + d - \rho)(d^2 - \abs{\rho - 
+  \rho'}^2)\).  Alors
   \begin{itemize}
     \item si \(d>\rho + \rho'\) alors \(d>\abs{\rho - \rho'}\) donc 
-      \(\alpha<0\) et \(S\cap S'=\emptyset\);
+      \(\alpha<0\) et \(S\cap S' = \emptyset\);
     \item si \(d<\abs{\rho + \rho'}\) alors \(d<\rho + \rho'\) donc 
-      \(\alpha<0\) et \(S\cap S'=\emptyset\);
+      \(\alpha<0\) et \(S\cap S' = \emptyset\);
     \item si \(d = \rho + \rho'\) ou si \(d = \abs{\rho - \rho'}\) alors 
       \(\alpha = 0\) donc
       \begin{equation}
-        M\in S\cap S' 
-        \iff 
-        \begin{cases}
+        M\in S\cap S' \iff \begin{cases}
           z = \frac{\rho^2 - \rho'^2 + d^2}{2d} \\
           x^2 + y^2 = 0
         \end{cases},
@@ -1248,11 +1254,10 @@ Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
       et l'intersection est constituée d'un seul point H dont les 
       coordonnées sont de la forme \((0, 0, z_H)\) et \(\vect{AH} = z_H 
       \vc\), le point H est sur la droite \((AA')\);
-    \item si \(\abs{\rho - \rho'}\leqslant d \leqslant \rho + \rho'\) 
-      alors \(\alpha>0\) donc
+    \item si \(\abs{\rho - \rho'}\leqslant d \leqslant \rho + \rho'\) alors 
+      \(\alpha>0\) donc
       \begin{equation}
-        M\in S\cap S' \iff 
-        \begin{cases}
+        M\in S\cap S' \iff \begin{cases}
           z = \frac{\rho^2 - \rho'^2 + d^2}{2d} \\x^2 + y^2 = \alpha
         \end{cases},
       \end{equation}
@@ -1264,7 +1269,7 @@ Soit \(S\) la sphère de centre \(A(a, b, c)\) de rayon \(\rho>0\).
 \end{proof}
 Dans le cas particulier où \(S\) et \(S'\) ont le même centre, alors on 
 choisit un ROND de centre \(A\) et on a soit \(\rho = \rho'\) et donc 
-\(S\cap S'=S = S'\) ou alors \(\rho\neq \rho'\) et donc \(\S\cap S' = 
+\(S\cap S' = S = S'\) ou alors \(\rho\neq \rho'\) et donc \(\S\cap S' = 
 \emptyset\).
 
 \subsection{Projection orthogonale d'un cercle sur un plan}
@@ -1272,33 +1277,32 @@ choisit un ROND de centre \(A\) et on a soit \(\rho = \rho'\) et donc
 Soient \(\courbe\) un cercle contenu dans un plan \(\P\) et \(\P'\) un 
 deuxième plan. On définit l'application \(\fonctionR{\pi}{\epsilon}{\P'}\)
 qui à un point M associe son projeté orthogonal sur \(\P'\). On veut 
-déterminer l'ensemble \(X = \pi(\courbe)\). On note A le centre du 
-cercle \(\courbe\). On pose \(H = \pi(A)\) le projeté orthogonal de A 
-sur \(\P'\). 
+déterminer l'ensemble \(X = \pi(\courbe)\). On note A le centre du cercle 
+\(\courbe\). On pose \(H = \pi(A)\) le projeté orthogonal de A sur \(\P'\). 
 
 Soit \(\vn\) un vecteur normal unitaire du plan \(\P\). Soit \(\Dr\) la 
-droite passant par \(A\) de vecteur directeur \(\vn\). Soit \(\Dr'\) 
-l'image par \(\pi\) de la droite \(\Dr\). Soit \(\vi\) un vecteur 
-unitaire de \(\Dr'\) et soit \(\vj\) orthogonal à \(\vi\) unitaire dans 
-le plan \(\P'\). On pose \(\vk = \vi\wedge \vj\). Le repère \((H, \vi, 
-\vj, \vk)\) est donc un ROND de l'espace \(\epsilon\).
+droite passant par \(A\) de vecteur directeur \(\vn\). Soit \(\Dr'\) l'image 
+par \(\pi\) de la droite \(\Dr\). Soit \(\vi\) un vecteur unitaire de 
+\(\Dr'\) et soit \(\vj\) orthogonal à \(\vi\) unitaire dans le plan \(\P'\). 
+On pose \(\vk = \vi\wedge \vj\). Le repère \((H, \vi, \vj, \vk)\) est donc 
+un ROND de l'espace \(\epsilon\).
 
 Soit un point B tel que \(\vect{AB} = \vn\), alors B est un point de la 
 droite \(\Dr\) et soit \(B' = \pi(B)\) son projeté orthogonal sur \(\P'\), 
-alors \(B'\) est un point de \(\Dr'\). Le produit scalaire \(\vn\cdot\vj 
-= (\vect{AH} + \vect{HB'} + \vect{B'B})\cdot\vj\) vaut 
-\(\vect{HB'}\cdot\vj\) puisque \(\vect{AH}\) et \(\vect{B'B}\) sont 
-orthogonaux à \(\P'\) donc à \(\vj\). Les point \(H\) et \(B'\) sont sur 
-la droite \(\Dr'\), le vecteur \(\vi\) dirige \(\Dr'\) donc 
-\(\vect{HB'}\) est colinéaire à \(\vi\). Par définition \(\vi\cdot \vj = 
-0\) alors \(\vn\cdot \vj = 0\), ainsi \(\vn\) est dans le plan \((\vi, 
-\vk)\), il existe alors un réel \(\theta \in \intervallefo{0}{2\pi}\) tel que 
-\(\vn = \cos\theta\vi + \sin\theta\vk\). Alors si on résume~:
+alors \(B'\) est un point de \(\Dr'\). Le produit scalaire \(\vn\cdot\vj = 
+(\vect{AH} + \vect{HB'} + \vect{B'B})\cdot\vj\) vaut \(\vect{HB'}\cdot\vj\) 
+puisque \(\vect{AH}\) et \(\vect{B'B}\) sont orthogonaux à \(\P'\) donc à 
+\(\vj\). Les point \(H\) et \(B'\) sont sur la droite \(\Dr'\), le vecteur 
+\(\vi\) dirige \(\Dr'\) donc \(\vect{HB'}\) est colinéaire à \(\vi\). Par 
+définition \(\vi\cdot \vj = 0\) alors \(\vn\cdot \vj = 0\), ainsi \(\vn\) 
+est dans le plan \((\vi, \vk)\), il existe alors un réel \(\theta \in 
+\intervallefo{0}{2\pi}\) tel que \(\vn = \cos\theta\vi + \sin\theta\vk\). 
+Alors si on résume~:
 \begin{itemize}
   \item l'équation de \(\P'\) est telle que \(z = 0\),
   \item les coordonnées du point A sont telles que \(A(0, 0, d)\),
-  \item les coordonnées du projeté orthogonal de \(M(x, y, z)\) sur 
-    \(\P'\) sont telles que \(\pi(M)(x, y, 0)\),
+  \item les coordonnées du projeté orthogonal de \(M(x, y, z)\) sur \(\P'\) 
+    sont telles que \(\pi(M)(x, y, 0)\),
   \item l'équation de \(\P\) est telle que \begin{align}
       M\in\P &\iff \vect{AM}\cdot\vn = 0\\ &\iff x\cos\theta + (z - 
       d)\sin\theta = 0
@@ -1313,8 +1317,8 @@ la droite \(\Dr'\), le vecteur \(\vi\) dirige \(\Dr'\) donc
       \end{cases}\\
       &\iff
       \begin{cases}
-        x^2 + y^2 + (z - d)^2 = r^2\\ 
-        \cos\theta x + \sin\theta (z - d) = 0
+        x^2 + y^2 + (z - d)^2 = r^2\\ \cos\theta x + \sin\theta 
+        (z - d) = 0
       \end{cases}.
     \end{align}
 \end{itemize}
@@ -1323,8 +1327,8 @@ la droite \(\Dr'\), le vecteur \(\vi\) dirige \(\Dr'\) donc
 Soit \(N(x, y, 0)\), alors~:
 \begin{align}
   N \in X &\iff \exists M \in \courbe \ N = \pi(M)\\
-          &\iff \exists (\alpha, \beta, \gamma) \in \R^3 \ M(\alpha, 
-          \beta, \gamma) \ N = \pi(M)\\
+          &\iff \exists (\alpha, \beta, \gamma) \in \R^3 \ M(\alpha, \beta, 
+          \gamma) \ N = \pi(M)\\
           &\iff \exists \gamma \in \R \ M(x, y, \gamma)\in\courbe\\
           &\iff \exists \gamma \in \R 
           \begin{cases}
@@ -1340,12 +1344,13 @@ On distingue plusieurs cas selon la valeur de \(\theta\).
     \begin{equation}
       N \in X \iff \exists \gamma \in \R 
       \begin{cases}
-        x^2 + y^2 + (\gamma - d)^2 = r^2\\ x = 0
+        x^2 + y^2 + (\gamma - d)^2 = r^2\\ 
+        x = 0
       \end{cases},
     \end{equation}
     donc 
     \begin{equation}
-      N \in X \iff \exists \gamma \in \R \ 
+      N \in X \iff \exists \gamma \in \R \
       \begin{cases}
         x = 0 \\
         \gamma = d\pm\sqrt{r^2 - y^2}
@@ -1404,26 +1409,29 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
 \clearpage
 
 \section{Exercices}
+
 \begin{exercice}
-  Soient \(\Dr_1 = 
-  \begin{cases} 
+  Soient \(\Dr_1 =
+  \begin{cases}
     y = x + 1 \\
-    z = -1 
-  \end{cases}\), 
-  \(\Dr_2 = 
+    z = -1
+  \end{cases}
+  \), 
+  \(\Dr_2 =
   \begin{cases}
     y = -x + 1 \\
-    z = 0 
-  \end{cases}\) 
-  et \(\Dr_3 = 
+    z = 0
+  \end{cases}
+  \) et \(\Dr_3 = 
   \begin{cases} 
     y = x - 1 \\
     z = 1 
-  \end{cases}\). 
+  \end{cases}
+\). 
 
-  On note \(\vu\) le vecteur de coordonnées \((1, 2, 3)\). Déterminer l'ensemble 
-  des droites \(\Dr\) de l'espace rencontrant les trois droites \(\Dr_1, \Dr_2, 
-  \Dr_3\) et orthogonales à \(\vu\).
+  On note \(\vu\) le vecteur de coordonnées \((1, 2, 3)\). Déterminer 
+  l'ensemble des droites \(\Dr\) de l'espace rencontrant les trois droites 
+  \(\Dr_1, \Dr_2, \Dr_3\) et orthogonales à \(\vu\).
 \end{exercice}
 
 \begin{exercice}
@@ -1441,19 +1449,19 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
   On se place dans l'espace muni d'un repère orthonormal \((O, \vi, \vj, 
   \vk)\).
   \begin{enumerate}
-    \item Donner une équation cartésienne du plan \(\P\) passant par \(A(1, 3, 
-      0)\) et orthogonal au vecteur \(\vu(-2, 3, 1)\).
-    \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant par 
-      le point \(B(5, 1, -2)\) et contenant les vecteurs \(\vv(4, 4, 4)\) et 
-      \(\vw(1, -1, 0)\).
+    \item Donner une équation cartésienne du plan \(\P\) passant par \(A(1, 
+      3, 0)\) et orthogonal au vecteur \(\vu(-2, 3, 1)\).
+    \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant 
+      par le point \(B(5, 1, -2)\) et contenant les vecteurs \(\vv(4, 4, 
+      4)\) et \(\vw(1, -1, 0)\).
     \item Soit \(\Dr\) la droite d'intersection des plans \(\P\) et 
       \(\mathcal{Q}\). Donner un point et un vecteur directeur de \(\Dr\).
   \end{enumerate}
 \end{exercice}
 
 \begin{exercice}
-  Soit \(ABCD\) un tétraèdre. On suppose que les quatre face on la même aire.  
-  Montrer que les arêtes opposées ont la même longueur.
+  Soit \(ABCD\) un tétraèdre. On suppose que les quatre face on la même 
+  aire.  Montrer que les arêtes opposées ont la même longueur.
 \end{exercice}
 
 \begin{exercice}
@@ -1461,22 +1469,22 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
   \vj, \vk)\). Soient \(A(1, 2, 0)\), \(B(-1, 0, 3)\), et \(C(0, 2, -1)\) 
   trois points.
   \begin{enumerate}
-    \item Donner une équation cartésienne du plan \(\P\) contenant les points 
-      \(A, B, C\).
-    \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant par 
-      \(A\) et orthogonal à \((BC)\) ; du plan \(\mathcal{R}\) passant par 
-      \(B\) et orthogonal à la droite \((AC)\).
-    \item Déterminer les coordonnées cartésiennes de l'orthocentre du triangle 
-      \(ABC\).
+    \item Donner une équation cartésienne du plan \(\P\) contenant les 
+      points \(A, B, C\).
+    \item Donner une équation cartésienne du plan \(\mathcal{Q}\) passant 
+      par \(A\) et orthogonal à \((BC)\) ; du plan \(\mathcal{R}\) passant 
+      par \(B\) et orthogonal à la droite \((AC)\).
+    \item Déterminer les coordonnées cartésiennes de l'orthocentre du 
+      triangle \(ABC\).
     \item Déterminer l'ensemble des points équidistants de \(A, B, C\).
   \end{enumerate}
 \end{exercice}
 
 \begin{exercice}
   Soit \(\mathcal{R} = (O, \vi, \vj, \vk)\) un repère orthonormal direct de 
-  l'espace. On définit le point \(\Omega\) de coordonnées \((-1, 2, 4)\) dans 
-  \(\mathcal{R}\) et les vecteurs \(\vect{I} = \vi + \vj, \vect{J} = \vi - 
-  \vj, \vect{K} = \vi - \vk\).
+  l'espace. On définit le point \(\Omega\) de coordonnées \((-1, 2, 4)\) 
+  dans \(\mathcal{R}\) et les vecteurs \(\vect{I} = \vi + \vj, \vect{J} = 
+  \vi - \vj, \vect{K} = \vi - \vk\).
   \begin{enumerate}
     \item Montrer que \(\mathcal{R}' = (\Omega, \vect{I}, \vect{J}, 
       \vect{K})\) est un repère de l'espace. Est - il direct ou indirect?  
@@ -1499,19 +1507,19 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
 \end{exercice}
 
 \begin{exercice}
-  Déterminer les coordonnées du projeté orthogonal du point \(A(1, 1, 4)\) sur 
-  le plan \(\P\) d'équation cartésienne \(x - 2y + 2z = 2\) puis calculer 
-  \(d(A, \P)\).
+  Déterminer les coordonnées du projeté orthogonal du point \(A(1, 1, 4)\) 
+  sur le plan \(\P\) d'équation cartésienne \(x - 2y + 2z = 2\) puis 
+  calculer \(d(A, \P)\).
 \end{exercice}
 
 \begin{exercice}
-  Soient \(\Dr\) et \(\Dr'\) deux droites passant respectivement par \(A(1, 2, 
-  3)\) et \(A'(0, 4, -1)\) et dirigées respectivement par \(\vu(4, 2, 1)\) et 
-  \(\vu'(1, 1, 0)\).
+  Soient \(\Dr\) et \(\Dr'\) deux droites passant respectivement par \(A(1, 
+  2, 3)\) et \(A'(0, 4, -1)\) et dirigées respectivement par \(\vu(4, 2, 
+  1)\) et \(\vu'(1, 1, 0)\).
   \begin{enumerate}
     \item Calculer \(d(\Dr, \Dr')\).
-    \item Déterminer une équation cartésienne de la perpendiculaire commune à 
-      \(\Dr\) et à \(\Dr'\).
+    \item Déterminer une équation cartésienne de la perpendiculaire commune 
+      à \(\Dr\) et à \(\Dr'\).
   \end{enumerate}
 \end{exercice}
 
@@ -1520,11 +1528,11 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
   et tel que les points \(E, F, G, H\) sont les images dans cet ordre des 
   points \(D, A, B, C\) par la translation de vecteur \(\vect{DE}\). On se 
   propose de déterminer la perpendiculaire commune \(\Delta\) des droites 
-  \((AC)\) et \((DF)\). On se place dans le repère \((A, \vect{AF}, \vect{AD}, 
-  \vect{AB})\).
+  \((AC)\) et \((DF)\). On se place dans le repère \((A, \vect{AF}, 
+  \vect{AD}, \vect{AB})\).
   \begin{enumerate}
-    \item Faire un dessin et préciser les coordonnées des sommets \(B, C, D\) 
-      et \(F\)
+    \item Faire un dessin et préciser les coordonnées des sommets \(B, C, 
+      D\) et \(F\)
     \item Soient \(P\) et \(Q\) les points d'intersection respectifs de 
       \(\Delta\) avec \((CA)\), et \((DF)\). On définit \(u\) et \(v\) tels 
       que \(\vect{AP} = u \vect{AC}\) et \(\vect{DQ} = v \vect{DF}\).  
@@ -1533,9 +1541,9 @@ Dans tous les cas, l'ensemble \(X\) est trouvé.
         \vect{AC}\cdot\vect{DF} - v\norme{\vect{DF}}^2= 
       \vect{AD}\cdot\vect{DF}\]
     \item Déterminer les coordonnées de \(P\) et \(Q\).
-    \item Soient \(I\) le point d'intersection des droites \((DP)\) et \((AB)\), 
-      \(J\) le point d'intersections des droites \((AQ)\) et \((ED)\).  
-      Déterminer les coordonnées de \(I\) et \(J\) et donner une construction 
-      simple de \(\Delta\).
+    \item Soient \(I\) le point d'intersection des droites \((DP)\) et 
+      \((AB)\), \(J\) le point d'intersections des droites \((AQ)\) et 
+      \((ED)\).  Déterminer les coordonnées de \(I\) et \(J\) et donner une 
+      construction simple de \(\Delta\).
   \end{enumerate}
 \end{exercice}

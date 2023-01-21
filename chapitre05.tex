@@ -51,58 +51,58 @@ possibles. Par contre un s.c.p.\ définit un unique point.
 \begin{defdef}
   Pour tout réel \(\theta\) on définit le repère polaire d'angle \(\theta\)~: 
   \((O, \vu_\theta, \vv_\theta)\) avec
-  \begin{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
     \begin{cases} \vu_\theta& = \cos \theta \vi + \sin \theta \vj \\ \vv_\theta& 
       = -\sin \theta \vi + \cos \theta \vj
     \end{cases}.
-    \end{equation}
-  \end{defdef}
+  \end{empheq}
+\end{defdef}
 
-  On a aussi pour tout réel \(\theta\), \(\vv_\theta = \vu_{\theta + 
-  \frac{\pi}{2}}\).  Le repère \(\Rep\) est orthonormal direct 
-  \(\norme{\vu_\theta} = \norme{\vv_\theta} = 1\) et l'affixe de \(\vu_\theta\) 
-  est \(\e^{i \theta}\) et celle de \(\vv_\theta\) est \(i \e^{i \theta}\). 
+On a aussi pour tout réel \(\theta\), \(\vv_\theta = \vu_{\theta + 
+\frac{\pi}{2}}\).  Le repère \(\Rep\) est orthonormal direct 
+\(\norme{\vu_\theta} = \norme{\vv_\theta} = 1\) et l'affixe de \(\vu_\theta\) 
+est \(\e^{i \theta}\) et celle de \(\vv_\theta\) est \(i \e^{i \theta}\). 
 
-  \subsection{Changements de repères}
-  \label{subsec:changementsderepere}
+\subsection{Changements de repères}
+\label{subsec:changementsderepere}
 
-  \subsubsection{Changement de repère cartésien}
-  \label{subsubsec:changementsdereperecart}
+\subsubsection{Changement de repère cartésien}
+\label{subsubsec:changementsdereperecart}
 
-  Soit une deuxième repère cartésiens \(\Rep' = (\Omega , \vu , \vv)\) tels que 
-  dans le repère \(\Rep\), \(\Omega(x_1 , y_1)\) \(\vu(a , b)\) \(\vv(c , d)\). 
-  Soit \(M\) un point de \(\P\) de coordonnées \((x , y)\) dans le repère 
-  \(\Rep\) et \((X , Y)\) dans le repère \(\Rep'\).
+Soit une deuxième repère cartésiens \(\Rep' = (\Omega , \vu , \vv)\) tels que 
+dans le repère \(\Rep\), \(\Omega(x_1 , y_1)\) \(\vu(a , b)\) \(\vv(c , d)\). 
+Soit \(M\) un point de \(\P\) de coordonnées \((x , y)\) dans le repère 
+\(\Rep\) et \((X , Y)\) dans le repère \(\Rep'\).
 
-  On a ainsi d'une part
-  \begin{equation}
-    \vect{OM} = x \vi+ y \vj,
-  \end{equation}
-  et d'autre part
-  \begin{equation}
-    \vect{OM} = \vect{O\Omega} + \vect{\Omega M} = x_\Omega \vi + y_\Omega \vj + 
-    X \vu +Y\vv.
-  \end{equation}
+On a ainsi d'une part
+\begin{equation}
+  \vect{OM} = x \vi+ y \vj,
+\end{equation}
+et d'autre part
+\begin{equation}
+  \vect{OM} = \vect{O\Omega} + \vect{\Omega M} = x_\Omega \vi + y_\Omega \vj + 
+  X \vu +Y\vv.
+\end{equation}
 
-  Comme
-  \begin{equation}
-    \begin{cases}
-      \vu = a \vi + b \vj \\
-      \vv = c\vi + d\vj
-    \end{cases};
-  \end{equation}
-  alors
-  \begin{equation}
+Comme
+\begin{equation}
+  \begin{cases}
+    \vu = a \vi + b \vj \\
+    \vv = c\vi + d\vj
+  \end{cases};
+\end{equation}
+alors
+\begin{equation}
   \vect{OM} = (x_\Omega + aX + cY)\vi + (y_\Omega + bX + dY) \vj.  
 \end{equation}
 
 Par unicité des coordonnées on a
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   \begin{cases}
     x = x_\Omega + aX + cY\\
     y = y_\Omega + bX + dY
   \end{cases}.
-\end{equation}
+\end{empheq}
 
 \subsubsection{Formules de changement de bases orthonormales directes (BOND)}
 \label{subsubsec:formuledechangementdeBOND}
@@ -371,7 +371,10 @@ passant par \(O\) dirigée par \(\vu\). Soient \(M\) tel que \(\vect{OM} = \vu\)
 \begin{prop}
   Soient \((\vi , \vj)\) une BON, deux vecteurs \(\vu\) et \(\vv\) de 
   coordonnées cartésiennes \((x , y)\) et \((x',y')\) dans \((\vi , \vj)\). 
-  Alors \(\vu \cdot \vv = xx + yy'\)
+  Alors 
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \vu \cdot \vv = xx + yy'
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -388,8 +391,10 @@ passant par \(O\) dirigée par \(\vu\). Soient \(M\) tel que \(\vect{OM} = \vu\)
 
 \begin{prop}
   Soient \((\vi , \vj)\) une BON, deux vecteurs \(\vu\) et \(\vv\) des vecteurs 
-  d'affixes respectives \(z\) et \(z'\) dans la BON\@. Alors \(\vu \cdot \vv = 
-  \Re(\bar{z} z')\).
+  d'affixes respectives \(z\) et \(z'\) dans la BON\@. Alors 
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \vu \cdot \vv = \Re(\bar{z} z').
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -403,9 +408,10 @@ passant par \(O\) dirigée par \(\vu\). Soient \(M\) tel que \(\vect{OM} = \vu\)
 \end{proof}
 
 \begin{prop}[Théorème d'Al - Kashi]
-  Dans un triangle ABC quelconque, on a \begin{equation}
+  Dans un triangle ABC quelconque, on a 
+  \begin{empheq}[box = \shadowbox*]{equation}
     BC^2 = AC^2 + AB^2 - 2 AB \times AC \cos(\widehat{BAC}).
-  \end{equation}
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -549,9 +555,10 @@ Si \(\vu\) est non nul alors on introduit la base \((\vect{a},\vect{b})\).
 \begin{prop}
   Soient \((\vi , \vj)\) une BOND, \(\vu\) et \(\vv\) deux vecteurs de 
   coordonnées cartésiennes respectives \((x , y)\) et \((x',y')\) dans \((\vi , 
-  \vj)\). Alors \begin{equation}
+  \vj)\). Alors 
+  \begin{empheq}[box = \shadowbox*]{equation}
     \Det(\vu , \vv) = xy'-yx' = \begin{vmatrix} x&x'\\y&y'\end{vmatrix}.
-  \end{equation}
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -565,9 +572,10 @@ Si \(\vu\) est non nul alors on introduit la base \((\vect{a},\vect{b})\).
 
 \begin{prop}
   Soient \((\vi , \vj)\) une BOND, \(\vu\) et \(\vv\) deux vecteurs d'affixe 
-  respectives \(z\) et \(z'\), alors \begin{equation}
+  respectives \(z\) et \(z'\), alors 
+  \begin{empheq}[box = \shadowbox*]{equation}
     \Det(\vu , \vv) = \Im(\bar{z}z').
-  \end{equation}
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -576,9 +584,9 @@ Si \(\vu\) est non nul alors on introduit la base \((\vect{a},\vect{b})\).
 
 \begin{prop}
   pour tout vecteurs \(\vu\) et \(\vv\)~:
-  \begin{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
     (\vu \cdot \vv)^2 + \Det(\vu , \vv)^2 = \norme{\vu}^2 \norme{\vv}^2.
-  \end{equation}
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -590,7 +598,8 @@ Si \(\vu\) est non nul alors on introduit la base \((\vect{a},\vect{b})\).
 
 Soient \(A\) un point fixe du plan, \(\vu\) un vecteur fixe, \(\lambda\) un réel 
 fixe. On cherche à déterminer
-\begin{equation} Y_\lambda = \enstq{M \in \P}{\Det(\vu, \vect{AM}) = \lambda}.
+\begin{equation}
+  Y_\lambda = \enstq{M \in \P}{\Det(\vu, \vect{AM}) = \lambda}.
 \end{equation}
 
 \begin{enumerate}
@@ -633,7 +642,8 @@ fixe. On cherche à déterminer
     vecteur \(\vw\), on a \(\vv \cdot \vw = \Det(\vu , \vw)\).
     \begin{proof}
       Si le vecteur \(\vw\) est nul alors comme le produit scalaire est nul et 
-      le déterminant aussi, c'est bon. Sinon alors \begin{align}
+      le déterminant aussi, c'est bon. Sinon alors 
+      \begin{align}
         \vv\cdot\vw& = \norme{\vv}\norme{\vw}\cos(\vv , \vw)\\ & = 
         \norme{\vu}\norme{\vw} \cos((\vv , \vu) + (\vu , \vw))\\ & = 
         \norme{\vu}\norme{\vw} \cos\left(\vu , \vw -\frac{\pi}{2} \right)\\ & 
@@ -652,7 +662,8 @@ fixe. On cherche à déterminer
         \begin{equation}
           \forall M \in \P \quad M \in \Dr \iff \Det(\vu, \vect{AM}) = 0,
         \end{equation}
-      \item deux points \(A\) et \(B\) de \(\Dr\) \begin{equation}
+      \item deux points \(A\) et \(B\) de \(\Dr\)
+        \begin{equation}
           \forall M \in \P \quad M \in \Dr \iff \Det(\vect{AB}, \vect{AM}) = 
           0.
         \end{equation}
@@ -678,12 +689,14 @@ On se place dans un repère orthonormal \((O , \vi , \vj)\).
 \end{prop}
 
 \begin{prop}
-  On considère une droite \(\Dr\) passant par \(A(a_1 , b_1)\) et dirigé par 
+  On considère une droite \(\Dr\) passant par \(A(a_1, b_1)\) et dirigé par 
   \(\vu(a , b)\). L'équation paramétrique de \(\Dr\) est
-  \begin{equation}
-    \forall \lambda \in \R \begin{cases} x = a_1 + \lambda a \\ y = b_1+ 
-    \lambda b\end{cases}.
-  \end{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \forall \lambda \in \R 
+    \begin{cases}
+      x = a_1 + \lambda a \\ y = b_1 + \lambda b
+    \end{cases}.
+  \end{empheq}
 
   L'équation cartésienne de \(\Dr\) est donnée par la condition sur le 
   déterminant. Si un point \(M\) du plan est sur la droite alors \(\Det(\vu , 
@@ -692,17 +705,20 @@ On se place dans un repère orthonormal \((O , \vi , \vj)\).
 \end{prop}
 
 Si la droite \(\Dr\) a pour équation cartésienne
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   ax + by + c = 0 \quad ((a , b) \neq (0 , 0)),
-\end{equation}
+\end{empheq}
 alors un vecteur directeur de \(\Dr\) est \(\vu(-b , a)\).
 
 \begin{prop}
   On considère une droite \(\Dr\) passant par \(A(a_1 , b_1)\) et \(B(a_2 , 
   b_2)\) avec \(A \neq B\). L'équation paramétrique de \((AB)\) est
   \begin{equation}
-    \forall \lambda \in \R \begin{cases} x = a_1 + \lambda (a_2 - a_1) \\ y = 
-    b_1+ \lambda (b_2 - b_1)\end{cases}.
+    \forall \lambda \in \R 
+    \begin{cases}
+      x = a_1 + \lambda (a_2 - a_1) \\ 
+      y = b_1 + \lambda (b_2 - b_1)
+    \end{cases}.
   \end{equation}
   L'équation cartésienne de \(\Dr\) est donnée par la condition sur le 
   déterminant. Si un point \(M\) du plan est sur la droite \((AB)\) alors 
@@ -714,7 +730,7 @@ alors un vecteur directeur de \(\Dr\) est \(\vu(-b , a)\).
   Soient un point \(A(a_1 , b_1)\) et un vecteur \(\vv(v_1 , v_2)\). On 
   considère la droite \(\Dr\) passant par \(A\) et dont \(\vv\) est un vecteur 
   normal.  Alors pour tout point \(M(x , y)\) du plan, \(M\) est sur la droite 
-  si et seulement si \(\vect{AM}\cdot\vv = 0\), c'est - à-dire si et seulement 
+  si et seulement si \(\vect{AM}\cdot\vv = 0\), c'est-à-dire si et seulement 
   si \(v_1(x - a_1) + v_2(y - b_1) = 0\).
 \end{prop}
 
@@ -766,14 +782,14 @@ On montre ici plusieurs cas de figure selon la situation~:
     \end{align}
     Ainsi
     \begin{equation}
-      d(A , \Dr) = |p - a_1\cos\varphi - b_1\cos\varphi|.
+      d(A , \Dr) = \abs{p - a_1\cos\varphi - b_1\cos\varphi}.
     \end{equation}
   \item Si \(\Dr\) a pour équation polaire \(\rho\cos(\theta - \varphi) = p\) 
     alors \(x \cos \varphi + y \sin \varphi = p\) est une équation normale de 
     \(\Dr\). Soit \((\rho_A , \theta_A)\) un s.c.p.\ de A, alors \(a_1 = 
     \rho_A\cos\theta_A \ b_1 = \rho_A\sin\theta_A\), donc
     \begin{equation}
-      d(A , \Dr) = |p - \rho_A\cos(\theta_A - \varphi)|.
+      d(A , \Dr) = \abs{p - \rho_A\cos(\theta_A - \varphi)}.
     \end{equation}
   \item Si \(\Dr\) admet pour équation cartésienne \(ax + by + c = 0\) avec 
     \((a , b) \neq (0 , 0)\), soient \(A(x_0 , y_0)\) et \(\vu 
@@ -889,9 +905,9 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
   \label{prop:cocy}
   Soit \(\mathcal{C}\) un cercle de centre \(\Omega\), \(M\) \(A\) et \(B\) 
   trois points de \(\mathcal{C}\) tels que \(M \neq A\) et \(M \neq B\). Alors 
-  \begin{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
     (\vect{\Omega A},\vect{\Omega B}) = 2 (\vect{MA},\vect{MB})
-  \end{equation}
+  \end{empheq}
 \end{prop}
 
 \begin{proof}
@@ -919,10 +935,10 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
 
 \begin{theo}[Théorème de l'angle inscrit]
   Soient \(A , B , C\) et \(D\) quatre points distincts du plan.
-  \begin{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
     \text{A , B , C et D sont alignés ou cocycliques} \iff \congru{(\vect{CA}, 
     \vect{CB})}{(\vect{DA}, \vect{DB})}{\pi}.
-  \end{equation}
+  \end{empheq}
 \end{theo}
 
 \begin{proof}
@@ -1017,20 +1033,22 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
   vecteur unitaire orthogonal à \(\vu\). Alors \((A , \vu , \vv)\) est un 
   repère orthonormal direct et dans ce repère, l'équation cartésienne du 
   cercle est \(x^2 + y^2 = R^2\) et celle de la droite est \(y = \pm d = 
-  \epsilon d\), avec \(\epsilon \in \{-1; 1\}\). Alors \begin{equation}
-    M \in \cercle{A}{R} \cap \Dr \iff  \begin{cases} y& = \epsilon d \\ x^2& = 
+  \epsilon d\), avec \(\epsilon \in \{-1; 1\}\). Alors 
+  \begin{equation}
+    M \in \cercle{A}{R} \cap \Dr \iff 
+    \begin{cases} y& = \epsilon d \\ x^2& = 
       R^2 - d^2
     \end{cases}.
-    \end{equation}
-    Trois cas de figures peuvent se produire :
-    \begin{itemize}
-      \item si \(d \geqslant R\) alors l'intersection est vide;
-      \item si \(d = R\) alors \(x = 0 y = \epsilon d\) alors l'intersection 
-        est un singleton;
-      \item si \(d \leqslant R\) alors le système admet deux solutions et 
-        l'intersection est constituée de deux points \((\sqrt{R^2 - 
-        d^2},\epsilon d)\) et \((-\sqrt{R^2 - d^2},\epsilon d)\).
-    \end{itemize}
+  \end{equation}
+  Trois cas de figures peuvent se produire :
+  \begin{itemize}
+    \item si \(d \geqslant R\) alors l'intersection est vide;
+    \item si \(d = R\) alors \(x = 0 y = \epsilon d\) alors l'intersection 
+      est un singleton;
+    \item si \(d \leqslant R\) alors le système admet deux solutions et 
+      l'intersection est constituée de deux points \((\sqrt{R^2 - 
+      d^2},\epsilon d)\) et \((-\sqrt{R^2 - d^2},\epsilon d)\).
+  \end{itemize}
 \end{proof}
 
 \subsubsection{Intersection de deux cercles}
@@ -1040,9 +1058,9 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
   réels strictement positifs. On considère les cercles \(\cercle{A}{R}\) et 
   \(\cercle{B}{R'}\) et on note \(d = AB\)
   \begin{itemize}
-    \item si \(\abs{R - R'}<d<R + R'\) alors l'intersection est constitué de 
+    \item si \(\abs{R - R'} < d < R + R'\) alors l'intersection est constitué de 
       deux points, les cercles sont dits sécants;
-    \item si \(d \in \{\abs{R - R'};R + R'\}\) alors l'intersection est un 
+    \item si \(d \in \{\abs{R - R'} ; R + R'\}\) alors l'intersection est un 
       singleton, les cercles sont dits tangents;
     \item sinon il n'y a pas d'intersection.
   \end{itemize}
@@ -1051,10 +1069,10 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
 \begin{proof}
   Soit le vecteur unitaire \(\vu = \frac{\vect{AB}}{AB}\) et le vecteur 
   \(\vv\) unitaire orthogonal à \(\vu\) de telle manière à ce que le repère 
-  \((A , \vu , \vv)\) constitue un repère orthonormal direct. Dans ce 
-  repère, \(A\) est l'origine et \(B(d , 0)\), l'équation cartésienne de 
+  \((A, \vu, \vv)\) constitue un repère orthonormal direct. Dans ce 
+  repère, \(A\) est l'origine et \(B(d, 0)\), l'équation cartésienne de 
   \(\mathcal{C}\) est \(x^2 + y^2 = R^2\) et celle de \(\mathcal{C}'\) est 
-  \((x - d)^2 + y^2 = R'^2\). Soit un point \(M(x , y)\) du plan, alors
+  \((x - d)^2 + y^2 = R'^2\). Soit un point \(M(x, y)\) du plan, alors
   \begin{align}
     M \in \mathcal{C} \cap \mathcal{C}' 
       &\iff 
@@ -1080,7 +1098,7 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
   Il y a une solution unique si et seulement si \(R'^2 = (R - d)^2\) ou 
   \((R + d)^2 = R'^2\) c'est à dire si et seulement si \(R' = R - d\) ou 
   \(R' = d - R\) ou \(R + d = R'\) ou \(R + d = -R'\) soit si et seulement 
-  si \(d = R - R'\) ou \(d = R' + R\) ou \(d = R'-R\). Soit finalement si 
+  si \(d = R - R'\) ou \(d = R' + R\) ou \(d = R' - R\). Soit finalement si 
   et seulement si \(d = R + R'\) ou \(d = \abs{R - R'}\).
 
   Il y a deux solutions si et seulement si \(
@@ -1120,7 +1138,7 @@ a)^2 + (y - b)^2 = c + a^2 + b^2\). Trois cas de figures se présentent :
   \end{equation*}
 \end{proof}
 
-Si les points \(A\) et \(B\) sont confondus alors pour tout point \(M(x , 
+Si les points \(A\) et \(B\) sont confondus alors pour tout point \(M(x, 
 y)\) on a~:
 \begin{equation}
   M \in \mathcal{C} \cap \mathcal{C}' \iff 
@@ -1156,10 +1174,10 @@ tout point \(M\) du plan \(\P\),
 Puisque \(\vect{IA} = -\vect{IB}\), on a 
 \begin{equation}
   M \in X_{\lambda}^{1}  \iff MI^2 = \lambda + IA^2 = \lambda + 
-  \frac{IA^2}{4}.
+  \frac{AB^2}{4}.
 \end{equation}
-Trois cas de figure se présente :
-\begin{itemize}
+Trois cas de figure se présentent~:
+\begin{enumerate}
   \item si \(\lambda \geqslant -\frac{AB^2}{4}\) alors 
     \(X_{\lambda}^{1}\) est le cercle de centre \(I\) et de rayon 
     \(\sqrt{\lambda +\frac{AB^2}{4}}\);
@@ -1167,7 +1185,7 @@ Trois cas de figure se présente :
     \{I\}\);
   \item si \(\lambda \leqslant -\frac{AB^2}{4}\) alors 
     \(X_{\lambda}^{1} = \emptyset\).
-\end{itemize}
+\end{enumerate}
 En particulier, \(X_{0}^{1}\) est le cercle de centre \(I\) et de 
 rayon \(\sqrt{\frac{AB^2}{4}} = \frac{AB}{2}\) (ou encore le cercle de 
 diamètre \([AB]\)).
@@ -1181,15 +1199,15 @@ un réel \(\lambda\). Cette fonction est définie par
 veut décrire l'ensemble
 \begin{equation}
   X_{\lambda}^2 = \enstq{M \in \P\setminus\{B\}}{\frac{MA}{MB} = 
-\lambda}.
+  \lambda}.
 \end{equation}
 
 Pour tout point \(M\) du plan privé de \(B\), on a
 \begin{equation}
   M \in X_{\lambda}^2 \iff MA = \lambda MB.
 \end{equation}
-
-\begin{itemize}
+Plusieurs cas de figures se présentent~:
+\begin{enumerate}
   \item Si \(\lambda \leqslant 0\) alors \(X_{\lambda}^2 = \emptyset\);
   \item si \(\lambda = 0\) alors \(X_{\lambda}^2 = \{A\}\);
   \item si \(\lambda = 1\) alors \(X_{\lambda}^2\) est la médiatrice de 
@@ -1205,7 +1223,7 @@ Pour tout point \(M\) du plan privé de \(B\), on a
       (1 - \lambda) \vect{MI} \cdot (1 + \lambda) \vect{MJ} = 0 \iff 
     \vect{MI} \cdot \vect{MJ} = 0.  \end{equation}
     \(X_{\lambda}^2\) est le cercle de diamètre \([IJ]\).
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{Décrire les lignes de niveaux de l'application 
 \(\varphi_3\)}
@@ -1269,7 +1287,7 @@ Soit \(z\) l'affixe de \(M\), alors
                                                    \\
                                                    & = (r^2\cos \alpha - 
   2r\Re{z} + \abs{z}^2\cos \alpha) \\ &+ \ii(r^2\sin \alpha - \abs{z}^2\sin 
-  \alpha).
+  \alpha). \notag
 \end{align}
 
 Donc on a la suite d'équivalences suivante
@@ -1304,10 +1322,11 @@ diamètre \([AB]\) privé de \(A\) et de \(B\).
 
 \section{Transformation remarquables du plan}
 
-À toute transformation \(f\) du plan, on peut associer une application 
-\(\tilde{f} : \C \longrightarrow \C\) telle que pour tout points \(M\) et 
-\(M'\) d'affixe \(z\) et \(z'\), \(M' = f(M) \iff z' = \tilde{f}(z)\). On 
-dit que \(f\) est représentée dans le plan complexe par \(\tilde{f}\).
+À toute transformation \(\fonctionR{f}{\P}{\P}\) du plan, on peut associer une 
+application \(\fonctionR{\tilde{f}}{\C}{\C}\) telle que pour tout points \(M\) 
+et \(M'\) d'affixes respectives \(z\) et \(z'\), \(M' = f(M) \iff z' = 
+\tilde{f}(z)\). On dit que \(f\) est représentée dans le plan complexe par 
+\(\tilde{f}\).
 
 \subsection{Homothéties et translations}
 
@@ -1343,15 +1362,16 @@ dit que \(f\) est représentée dans le plan complexe par \(\tilde{f}\).
   \end{itemize}
 \end{prop}
 
-\begin{proof} On ne démontre que le troisième point. \(\Dr\) est la droite 
-  passant par \(A\) de vecteur directeur \(\vv\) et \(t\) est la translation 
-  de vecteur \(\vu\) alors
+\begin{proof} 
+  On ne démontre que le troisième point. \(\Dr\) est la droite passant par \(A\) 
+  de vecteur directeur \(\vv\) et \(t\) est la translation de vecteur \(\vu\) 
+  alors
   \begin{equation}
     t(\Dr) = \enstq{M \in \P}{\exists N \in \Dr \quad \vect{NM} = \vu}.
   \end{equation}
   Or \(N \in \Dr \iff \exists \alpha \in \R \ \vect{AN} = \alpha \vv\), donc
   \begin{align}
-    t(\Dr)& = \enstq{M \in \P}{\exists \alpha \in \R \quad \vect{AM}-\alpha 
+    t(\Dr)& = \enstq{M \in \P}{\exists \alpha \in \R \quad \vect{AM} - \alpha
     \vv = \vu} \\
           & = \enstq{M \in \P}{\exists \alpha \in \R \quad \vect{AM} = 
           \alpha \vv + \vu}.
@@ -1388,11 +1408,11 @@ dit que \(f\) est représentée dans le plan complexe par \(\tilde{f}\).
   Soient \(\Dr\) et \(\Dr'\) deux droites sécantes en un point 
   \(\Omega\), \(A\) et \(B\) deux points distincts de \(\Dr\), \(A'\) et 
   \(B'\) deux points distincts de \(\Dr'\). Alors
-  \begin{equation}
+  \begin{empheq}[box = \shadowbox*]{equation}
     (AA') \parallel (BB') \iff \frac{\overline{\Omega 
     B}}{\overline{\Omega A}} = \frac{\overline{\Omega 
     B'}}{\overline{\Omega A'}} = \frac{\overline{BB'}}{\overline{AA'}}
-  \end{equation}
+  \end{empheq}
 \end{theo}
 
 \begin{proof}
@@ -1464,7 +1484,7 @@ c'est une homothétie de rapport \(a\).
     z'_2}{z'_3 - z'_1}\right)}{2\pi} 
     \iff & \congru{(\vect{A'_1 A'_3};\vect{A'_2 
     A'_4})}{\Arg\left(\frac{a(z_4 - z_2)}{a(z_3 - z_1)}\right)}{2\pi}\\
-    \iff&\congru{(\vect{A'_1 A'_3};\vect{A'_2 A'_4})}{(\vect{A_1 
+        \iff&\congru{(\vect{A'_1 A'_3};\vect{A'_2 A'_4})}{(\vect{A_1 
         A_3};\vect{A_2 A_4})}{2\pi}.
   \end{align}
   On a aussi
@@ -1536,7 +1556,7 @@ c'est une homothétie de rapport \(a\).
 \end{exercice}
 
 \begin{exercice}
-  Soient \(\vu\) et \(vv\) deux vecteurs du plan. Montrer que~:
+  Soient \(\vu\) et \(\vv\) deux vecteurs du plan. Montrer que~:
   \begin{align}
     \vu \cdot \vv &= \frac{1}{2}{\norme{\vu + \vv}^2 - \norme{u}^2 
     - \norme{v}^2} \\
@@ -1562,7 +1582,8 @@ c'est une homothétie de rapport \(a\).
       \end{equation}
     \item Montrer que les droites \((AA')\), \((BB')\) et 
       \((CC')\) sont parallèles ou concourantes si et 
-      seulement si~: \begin{equation}
+      seulement si~:
+      \begin{equation}
         \frac{\overline{A'B}}{\overline{A'C}} \times 
         \frac{\overline{B'C}}{\overline{B'A}} \times 
         \frac{\overline{C'A}}{\overline{C'B}} = -1
