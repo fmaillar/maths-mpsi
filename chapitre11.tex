@@ -113,7 +113,8 @@ On note \(B(\R)\) l'ensemble des suites réelles bornées.
 Soient \(u\) et \(v\) bornées. Il existe donc \(M\) et \(M'\) des réels positifs 
 tels que pour tout naturel \(n\) \(\abs{u_n}\leqslant M\) et 
 \(\abs{v_n}\leqslant M'\) donc \(\abs{u_n v_n} = \abs{u_n}\abs{v_n}\leqslant 
-MM'\).  \end{proof}
+MM'\).
+\end{proof}
 
 \subsection{Notion de suite réelle convergente et de suite réelle divergente}
 
@@ -140,12 +141,12 @@ MM'\).  \end{proof}
 \begin{proof}[Unicité]
   Soit une suite réelle \(u\). On suppose qu'il existe deux réels différents 
   \(l\) et \(l'\) tels que \(u\) tende vers ces deux réels. Alors
-  \begin{align}
+  \begin{align*}
     \forall \epsilon >0 \ \exists n_0\in \N \ \forall n\in\N \quad n\geqslant 
-    n_0 \implies \abs{u_n-l}\leqslant \epsilon \\ \forall \epsilon >0 \ \exists 
-    n_1\in \N \ \forall n\in\N \quad n\geqslant n_1 \implies 
-    \abs{u_n-l'}\leqslant \epsilon.
-  \end{align}
+    n_0 \implies \abs{u_n-l}\leqslant \epsilon \\
+    \forall \epsilon >0 \ \exists n_1\in \N \ \forall n\in\N \quad n\geqslant 
+    n_1 \implies \abs{u_n-l'}\leqslant \epsilon.
+  \end{align*}
   Puisque \(l\) et \(l'\) sont différents, prenons \(\epsilon = 
   \frac{\abs{l-l'}}{3}\) et \(n_2 = max(n_1,n_0)\) alors pour tout naturel \(n\) 
   si \(n\geqslant n_2\) alors
@@ -199,7 +200,7 @@ que \(u\) converge comme par exemple la suite réelle de terme général \(u_n =
     \forall n \in \N \quad
     \begin{cases}
       n \geqslant n_0 & \abs{u_n}\leqslant 1+\abs{l}\leqslant M \\
-      n>n_0 & \abs{u_n}\leqslant M_0\leqslant M
+      n > n_0 & \abs{u_n}\leqslant M_0\leqslant M
     \end{cases}.
   \end{equation}
   Dans tous les cas, on majore la valeur absolue de \(u\) par \(M\). Donc \(u\) 

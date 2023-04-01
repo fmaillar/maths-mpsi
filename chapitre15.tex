@@ -7,11 +7,18 @@
 \subsection{Notion de loi de composition interne}
 \subsubsection{Définition}
 \begin{defdef}
-  Soit E un ensemble quelconque, on appelle loi de composition interne sur E toute application \(*:E\times E \longmapsto E\). Pour \(x,y \in E\) on note \(x*y\).
+  Soit E un ensemble quelconque, on appelle loi de composition interne sur E 
+  toute application \(*:E\times E \longmapsto E\). Pour \(x,y \in E\) on note 
+  \(x*y\).
 \end{defdef}
 \subsubsection{Partie stable par une loi de composition interne}
 \begin{defdef}
-  Soit \((E,*)\) un couple où E est un ensemble et \(*\) une loi de composition interne sur E. On dit que c'est un magma. Soit \(A\) une partie de \(E\). On dit que la partie \(A\) est stable pour la loi \(*\) si et seulement si pour tout \(x,y \in A\) \(x*y \in A\). On dispose alors de la restriction \(*_{A} : A\times A \longmapsto A\). On l'appelle loi induite sur \(A\) par la loi \(*\).
+  Soit \((E,*)\) un couple où E est un ensemble et \(*\) une loi de composition 
+  interne sur E. On dit que c'est un magma. Soit \(A\) une partie de \(E\). On 
+  dit que la partie \(A\) est stable pour la loi \(*\) si et seulement si pour 
+  tout \(x,y \in A\) \(x*y \in A\). On dispose alors de la restriction \(*_{A} : 
+  A\times A \longmapsto A\). On l'appelle loi induite sur \(A\) par la loi 
+  \(*\).
 \end{defdef}
 \subsubsection{Qualités éventuelles d'une loi de composition interne}
 Soit le magma \((E,*)\). Les qualités éventuelles sont les suivantes
@@ -26,46 +33,65 @@ Soit le magma \((E,*)\). Les qualités éventuelles sont les suivantes
     \end{equation}
     qu'on pourra noter \(x*y*z\).
 \end{enumerate}
-On dit que E admet un élément neutre pour \(*\) lorsqu'il existe un élément \(e \in E\) tel que pour tout élément \(x \in E\), \(x*e=e*x=x\). Soit \(e \in E\), alors 
-\begin{itemize}
-  \item \(e\) est neutre à gauche si et seulement si \(\forall x \in E \quad e * x =x\);
-  \item \(e\) est neutre à droite si et seulement si \(\forall x \in E \quad x * e =x\).
+On dit que E admet un élément neutre pour \(*\) lorsqu'il existe un élément \(e 
+\in E\) tel que pour tout élément \(x \in E\), \(x*e=e*x=x\). Soit \(e \in E\), 
+alors \begin{itemize}
+  \item \(e\) est neutre à gauche si et seulement si \(\forall x \in E \quad e * 
+    x =x\);
+  \item \(e\) est neutre à droite si et seulement si \(\forall x \in E \quad x * 
+    e =x\).
 \end{itemize}
-\(e\) est un élément neutre si et seulement si \(e\) est neutre à gauche et \(e\) est neutre à droite.
+\(e\) est un élément neutre si et seulement si \(e\) est neutre à gauche et 
+\(e\) est neutre à droite.
 \begin{prop}
   Un élément neutre, s'il existe, est unique.
 \end{prop}
 \begin{proof}
-  Supposons, qu'il en existe deux \(e_1, e_2\). Alors \(e_1*e_2 =e_1\) puisque \(e_2\) est neutre donc neutre à droite. Puisque \(e_1\) est neutre donc neutre à gauche, on a aussi \(e_1*e_2=e_2\) donc finalement \(e_1=e_2\).
+  Supposons, qu'il en existe deux \(e_1, e_2\). Alors \(e_1*e_2 =e_1\) puisque 
+  \(e_2\) est neutre donc neutre à droite. Puisque \(e_1\) est neutre donc 
+  neutre à gauche, on a aussi \(e_1*e_2=e_2\) donc finalement \(e_1=e_2\).
 \end{proof}
 \subsubsection{Propriétés  élémentaires}
-Soit le magma \((E,*)\). On suppose que \(*\) est associative et que \(e\) est le neutre de \(E\).
+Soit le magma \((E,*)\). On suppose que \(*\) est associative et que \(e\) est 
+le neutre de \(E\).
 \begin{defdef}
-  Soit \(x \in E\). On dit que \(x\) est symétrisable à gauche s'il existe \(x' \in E\) tel que \(x' * x=e\). De la même manière \(x\) est symétrisable à droite s'il existe \(x'' \in E\) tel que \(x * x''=e\).
+  Soit \(x \in E\). On dit que \(x\) est symétrisable à gauche s'il existe \(x' 
+  \in E\) tel que \(x' * x=e\). De la même manière \(x\) est symétrisable à 
+  droite s'il existe \(x'' \in E\) tel que \(x * x''=e\).
 \end{defdef}
 \begin{prop}
-  Soit \(x \in E\). Si \(x\) admet un symétrique à droite \(x'\) et un symétrique à gauche \(x''\) alors \(x'=x''\). On a donc \(x*x'=x'*x=e\). On dit dans ce cas que \(x\) est inversible et \(x'\) est l'inverse de \(x\).
+  Soit \(x \in E\). Si \(x\) admet un symétrique à droite \(x'\) et un 
+  symétrique à gauche \(x''\) alors \(x'=x''\). On a donc \(x*x'=x'*x=e\). On 
+  dit dans ce cas que \(x\) est inversible et \(x'\) est l'inverse de \(x\).
 \end{prop}
 \begin{proof}
-  On sait par hypothèse que \(x'*x=e\) et que \(x*x''=e\). Alors \(x'*(x*x'')=x'*e=x'\) et comme \(*\) est associative on a
+  On sait par hypothèse que \(x'*x=e\) et que \(x*x''=e\). Alors 
+  \(x'*(x*x'')=x'*e=x'\) et comme \(*\) est associative on a
   \begin{equation}
     x'=x'*(x*x'')=(x'*x)*x''=e*x''=x''.
   \end{equation}
 \end{proof}
 \begin{prop}
-  Soit \(x \in E\). Si \(x\) est inversible alors l'inverse est unique et on le note \(x^{-1}\).
+  Soit \(x \in E\). Si \(x\) est inversible alors l'inverse est unique et on le 
+  note \(x^{-1}\).
 \end{prop}
 \begin{proof}
-  Soient \(x'\) et \(x''\) deux inverses de \(x\), alors x' est inversible à gauche et on a \(x'*x=e\). On compose par \(x''\) à droite et on a \(x'*(x*x'')=e*x''\). Alors \(x'*e=x''\) donc \(x'=x''\).
+  Soient \(x'\) et \(x''\) deux inverses de \(x\), alors x' est inversible à 
+  gauche et on a \(x'*x=e\). On compose par \(x''\) à droite et on a 
+  \(x'*(x*x'')=e*x''\). Alors \(x'*e=x''\) donc \(x'=x''\).
 \end{proof}
 \begin{prop}
-  Soit \(x \in E\). Si \(x\) est inversible d'inverse \(x^{-1}\) alors celui-ci est inversible d'inverse \(x\), \((x^{-1})^{-1}=x\).
+  Soit \(x \in E\). Si \(x\) est inversible d'inverse \(x^{-1}\) alors celui-ci 
+  est inversible d'inverse \(x\), \((x^{-1})^{-1}=x\).
 \end{prop}
 \begin{proof}
-  On sait que \(x*x^{-1}=x^{-1}*x=e\) donc \(x^{-1}\) est inversible et \(x^{-1}*(x^{-1})^{-1}=e\) en composant par \(x\) à gauche on a \((x*x^{-1})*(x^{-1})^{-1}=x*e\) d'où le résultat.
+  On sait que \(x*x^{-1}=x^{-1}*x=e\) donc \(x^{-1}\) est inversible et 
+  \(x^{-1}*(x^{-1})^{-1}=e\) en composant par \(x\) à gauche on a 
+  \((x*x^{-1})*(x^{-1})^{-1}=x*e\) d'où le résultat.
 \end{proof}
 \begin{prop}
-  Soient \(x,y \in E\) inversibles, d'inverse respectif \(x^{-1}\) et \(y^{-1}\). Alors \(x*y\) est inversible d'inverse \(y^{-1}*x^{-1}\).
+  Soient \(x,y \in E\) inversibles, d'inverse respectif \(x^{-1}\) et 
+  \(y^{-1}\). Alors \(x*y\) est inversible d'inverse \(y^{-1}*x^{-1}\).
 \end{prop}
 \begin{proof}
   \begin{gather}
@@ -82,36 +108,54 @@ Soit le magma \((E,*)\). On suppose que \(*\) est associative et que \(e\) est l
   \begin{equation}
     \forall x,y \in E \quad a*x=a*y \implies x=y.
   \end{equation}
-  On dit que \(a\) est simplifiable ou régulier s'il est simplifiable à droite et à gauche.
+  On dit que \(a\) est simplifiable ou régulier s'il est simplifiable à droite 
+  et à gauche.
 \end{defdef}
 \begin{prop}
   Tout élément inversible est régulier.
 \end{prop}
 \begin{proof}
-  Soit \(a \in E\) inversible, et notons \(a^{-1}\) son inverse. Soient \(x,y \in E\) tels que \(x*a=y*a\). Alors
+  Soit \(a \in E\) inversible, et notons \(a^{-1}\) son inverse. Soient \(x,y 
+  \in E\) tels que \(x*a=y*a\). Alors
   \begin{align}
     (x*a)*a^{-1}&=(y*a)*a^{-1} \\
     x*(a*a^{-1})&=y*(a*a^{-1})\\
     x*e&=y*e\\
     x&=y.
   \end{align}
-  On a montré que \(a\) est simplifiable à droite, on peut monter de la même manière que \(a\) est simplifiable à gauche.
+  On a montré que \(a\) est simplifiable à droite, on peut monter de la même 
+  manière que \(a\) est simplifiable à gauche.
 \end{proof}
 
 \subsubsection{Notations usuelles}
 \paragraph{Notation multiplicative}
-La loi est notée \(\cdot\), pour \(a,b \in E\) on a \(a*b=ab\). Le neutre est noté \(1\) et le symétrique de \(a\) est noté \(a^{-1}\).
+La loi est notée \(\cdot\), pour \(a,b \in E\) on a \(a*b=ab\). Le neutre est 
+noté \(1\) et le symétrique de \(a\) est noté \(a^{-1}\).
 \paragraph{Notation additive}
-La loi est notée \(+\), pour \(a,b \in E\) on a \(a*b=a+b\). Le neutre est noté \(0\) et le symétrique de \(a\) est noté \(-a\). La notation additive est en général réservée au cas où la loi est commutative.
+La loi est notée \(+\), pour \(a,b \in E\) on a \(a*b=a+b\). Le neutre est noté 
+\(0\) et le symétrique de \(a\) est noté \(-a\). La notation additive est en 
+général réservée au cas où la loi est commutative.
 \paragraph{Itérés d'un élément}
 
-Soit \(x \in E\). Pour un naturel \(n\) non nul, si la loi \(*\) est commutative on définit \(x * \ldots *x = *^{n} x = x^n\). Par convention on pose \(x^0=e\) et par récurrence \(x^{n+1}=x*x^{n}\). Si \(x\) est inversible, on peut définir les itérés pour \(n \in \Z\setminus\N\) par \(x^n=(x^{-1})^{-n}\).
+Soit \(x \in E\). Pour un naturel \(n\) non nul, si la loi \(*\) est commutative 
+on définit \(x * \ldots *x = *^{n} x = x^n\). Par convention on pose \(x^0=e\) 
+et par récurrence \(x^{n+1}=x*x^{n}\). Si \(x\) est inversible, on peut définir 
+les itérés pour \(n \in \Z\setminus\N\) par \(x^n=(x^{-1})^{-n}\).
 
 \subsubsection{Premiers exemples}
 
-Soit un ensemble \(E\), \(E^E\) est l'ensemble des applications de \(E\) dans \(E\). La loi de composition \(\circ\) est une loi de composition interne sur \(E^E\). Elle est associative et \(\Id\) est son élément neutre. Elle n'est en revanche pas commutative et tous les élément de \(E^E\) ne sont pas inversibles. Les lois habituelles \(+\) et \(\times\) sont des lois associatives et commutatives sur \(\N\), \(\Z\), \(\Q\), \(\R\) et \(\C\). \(0\) est le neutre de \(+\) et \(1\) est le neutre de \(\times\).
+Soit un ensemble \(E\), \(E^E\) est l'ensemble des applications de \(E\) dans 
+\(E\). La loi de composition \(\circ\) est une loi de composition interne sur 
+\(E^E\). Elle est associative et \(\Id\) est son élément neutre. Elle n'est en 
+revanche pas commutative et tous les élément de \(E^E\) ne sont pas inversibles. 
+Les lois habituelles \(+\) et \(\times\) sont des lois associatives et 
+commutatives sur \(\N\), \(\Z\), \(\Q\), \(\R\) et \(\C\). \(0\) est le neutre 
+de \(+\) et \(1\) est le neutre de \(\times\).
 
-Soit \(E\) un ensemble. \(\Part(E)\) est l'ensemble des parties de \(E\). Les opérations \(\bigcap\) et \(\bigcup\) sont des lois de composition internes sur \(\Part(E)\). Elles sont toutes deux associatives et commutatives. \(E\) est le neutre pour \(\bigcap\) et \(\emptyset\) est le neutre de \(\bigcup\).
+Soit \(E\) un ensemble. \(\Part(E)\) est l'ensemble des parties de \(E\). Les 
+opérations \(\bigcap\) et \(\bigcup\) sont des lois de composition internes sur 
+\(\Part(E)\). Elles sont toutes deux associatives et commutatives. \(E\) est le 
+neutre pour \(\bigcap\) et \(\emptyset\) est le neutre de \(\bigcup\).
 
 \subsection{Notion de groupe}
 
@@ -126,7 +170,8 @@ Soit \(E\) un ensemble. \(\Part(E)\) est l'ensemble des parties de \(E\). Les op
   \end{itemize}
 \end{defdef}
 \begin{defdef}
-  Un groupe commutatif ou abélien est un groupe pour lequel la loi est commutative.
+  Un groupe commutatif ou abélien est un groupe pour lequel la loi est 
+  commutative.
 \end{defdef}
 
 \subsubsection{Propriétés}
@@ -141,28 +186,39 @@ Soit \(E\) un ensemble. \(\Part(E)\) est l'ensemble des parties de \(E\). Les op
   Tout élément d'un groupe admet un et un seul inverse.
 \end{prop}
 \begin{prop}
-  Tout élément d'un groupe est régulier. Puisque tout élément d'un groupe est inversible.
+  Tout élément d'un groupe est régulier. Puisque tout élément d'un groupe est 
+  inversible.
 \end{prop}
 
 \subsubsection{Exemples}
 
-\((\Z,+)\), \((\Q,+)\), \((\R,+)\), \((\C,+)\), \((\Q^*,\times)\), \((\R^*,\times)\), \((\C^*,\times)\) sont des groupes. Par contre \((\N,+)\), \((\R,\times)\) ne sont pas des groupes.
+\((\Z,+)\), \((\Q,+)\), \((\R,+)\), \((\C,+)\), \((\Q^*,\times)\), 
+\((\R^*,\times)\), \((\C^*,\times)\) sont des groupes. Par contre \((\N,+)\), 
+\((\R,\times)\) ne sont pas des groupes.
 
-Soit \(E\) un ensemble et \(\sigma(E)\) l'ensemble des permutations de \(E\). Alors \((\sigma(E), \circ)\) est un groupe. Mais \((E^E, \circ)\) n'est pas un groupe puisqu'il existe des application de E dans E qui ne sont pas inversibles.
+Soit \(E\) un ensemble et \(\sigma(E)\) l'ensemble des permutations de \(E\). 
+Alors \((\sigma(E), \circ)\) est un groupe. Mais \((E^E, \circ)\) n'est pas un 
+groupe puisqu'il existe des application de E dans E qui ne sont pas inversibles.
 
-Si \((G,*_1)\) et \((H,*_2)\) sont deux groupes alors \((G \times H, *)\) est un groupe, le groupe produit, où \(*\) est la loi de composition interne définie par
+Si \((G,*_1)\) et \((H,*_2)\) sont deux groupes alors \((G \times H, *)\) est un 
+groupe, le groupe produit, où \(*\) est la loi de composition interne définie 
+par
 \begin{equation}
-  \forall (g_1,g_2) \in G^2 \ \forall (h_1,h_2) \in H^2 \quad (g_1,h_1)*(g_2,h_2) = (g_1*_1g_2, h_1 *_2 h_2).
+  \forall (g_1,g_2) \in G^2 \ \forall (h_1,h_2) \in H^2 \quad 
+  (g_1,h_1)*(g_2,h_2) = (g_1*_1g_2, h_1 *_2 h_2).
 \end{equation}
 La loi \(*\) est appelée la loi produit.
 
-Soit \(E\) un ensemble. Si on note \(\Delta\) la différence symétrique alors \((\Part(E), \Delta)\) est un groupe abélien. Avec
+Soit \(E\) un ensemble. Si on note \(\Delta\) la différence symétrique alors 
+\((\Part(E), \Delta)\) est un groupe abélien. Avec
 \begin{equation}
   \forall A,B \in \Part(E) \quad A\Delta B = (A \cup B) \setminus (A \cap B).
 \end{equation}
-L'ensemble vide est le neutre de \(\Delta\) et l'inverse de chaque élément est l'élément lui-même
+L'ensemble vide est le neutre de \(\Delta\) et l'inverse de chaque élément est 
+l'élément lui-même
 \begin{align}
-  \forall A \in \Part(E) \quad & A \Delta \emptyset = A \setminus \emptyset = A; \\
+  \forall A \in \Part(E) \quad & A \Delta \emptyset = A \setminus \emptyset = A; 
+  \\
   \forall A \in \Part(E) \quad & A \Delta A = A \setminus A = \emptyset.
 \end{align}
 
@@ -185,20 +241,26 @@ Soit \((G,*)\) un groupe et \(H\) un sous-groupe de G.
   Si \(G\) est un groupe abélien, alors \(H\) est un groupe abélien.
 \end{prop}
 \begin{proof}
-  Soient \(g,h \in H\) alors \(h*_H g=h*g\) par définition de \(*_H\) et comme \(G\) est abélien \(h*g=g*h\) donc \(h*_H g=g*_Hh\).
+  Soient \(g,h \in H\) alors \(h*_H g=h*g\) par définition de \(*_H\) et comme 
+  \(G\) est abélien \(h*g=g*h\) donc \(h*_H g=g*_Hh\).
 \end{proof}
 \begin{prop}
   \(e_H=e_G\).
 \end{prop}
 \begin{proof}
-  Comme \(H\) et \(G\) sont des groupes, on a \(e_H * e_H = e_H*_H e_H =e_H=e_H *e_G\). Donc \(e_H * e_H = e_H *e_G\) et comme \(e_H\) est simplifiable on a \(e_H=e_G\).
+  Comme \(H\) et \(G\) sont des groupes, on a \(e_H * e_H = e_H*_H e_H =e_H=e_H 
+  *e_G\). Donc \(e_H * e_H = e_H *e_G\) et comme \(e_H\) est simplifiable on a 
+  \(e_H=e_G\).
 \end{proof}
 \begin{prop}
   \label{prop:ssgroupesym}
   Tout élément de H admet le même symétrique dans \(H\) et dans \(G\).
 \end{prop}
 \begin{proof}
-  Soit \(h \in H\). \(H\) est un groupe donc il existe un élément \(h' \in H\) qui est le symétrique de \(h\) dans \(H\). \(h \in G\) et \(G\) est un groupe donc il existe un élément \(h'' \in H\) qui est le symétrique de \(h\) dans \(G\). Ainsi
+  Soit \(h \in H\). \(H\) est un groupe donc il existe un élément \(h' \in H\) 
+  qui est le symétrique de \(h\) dans \(H\). \(h \in G\) et \(G\) est un groupe 
+  donc il existe un élément \(h'' \in H\) qui est le symétrique de \(h\) dans 
+  \(G\). Ainsi
   \begin{align}
     h *_H h' &= h' *_H h = e_H; \\
     h * h' & = h' * h = e_H.
@@ -213,32 +275,59 @@ Soit \((G,*)\) un groupe et \(H\) un sous-groupe de G.
 \subsubsection{Caractérisation des sous-groupes}
 
 \begin{theo}
-  Soit \((G,*)\) un groupe et \(H\) une partie de \(G\). Il y a équivalence entre
+  Soit \((G,*)\) un groupe et \(H\) une partie de \(G\). Il y a équivalence 
+  entre
   \begin{enumerate}
     \item \(H\) est un sous-groupe de \(G\);
-    \item \(H \neq \emptyset\), \(H \subset G\), \(H\) est stable pour la loi \(*\) et stable par passage au symétrique;
-    \item \(H \neq \emptyset\), \(H \subset G\), \(\forall x,y \in H \ x*y^{-1} \in H\).
+    \item \(H \neq \emptyset\), \(H \subset G\), \(H\) est stable pour la loi 
+      \(*\) et stable par passage au symétrique;
+    \item \(H \neq \emptyset\), \(H \subset G\), \(\forall x,y \in H \ x*y^{-1} 
+      \in H\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   \begin{itemize}
-    \item[\(1 \implies 2\)] Si \(H\) est un sous-groupe de \(G\) alors par définition H est non vide, \(H \subset G\) et \(H\) est stable par la loi de \(G\). Soit \(x \in H\) alors son symétrique dans \(H\) est le même que dans \(G\) (d'après la proposition~
-      \ref{prop:ssgroupesym}). Donc son symétrique dans \(G\) est dans \(H\). \(H\) est donc stable par passage au symétrique.
-    \item[\(2 \implies 3\)] Il faut juste démontrer le troisième sous-point. Soit \((x, y) \in H^2\), \(H\) est stable par symétrie donc \(y^{-1} \in H\). \(x\) et \(y^{-1}\) sont dans \(H\) et comme \(H\) est stable pour la loi \(*\), on a \(x*y^{-1} \in H\).
-    \item[\(3 \implies 1\)] Déjà \(H \subset G\) et \(H\) est non vide. Alors il existe \(h \in H\) tel que \(e_G = h*h^{-1}\) alors \(e_G \in H\). Soit \(y \in H\) alors \(e_G*y^{-1} = y^{-1} \in H\). Tout élément de \(H\) admet un symétrique dans \(H\). Soit \(x \in H\) alors comme \(y^{-1} \in H\) on a \(x*y=x*(y^{-1})^{-1} \in H\). \(H\) est stable par \(*\) donc on peut considérer le couple \((H,*_H)\) où \(*_H\) est la loi induite. Montrons que \((H,*_H)\) est un groupe. La loi \(*_H\) est associative puisque \(*\) l'est.  Soit \(h \in H\) alors
+    \item[\(1 \implies 2\)] Si \(H\) est un sous-groupe de \(G\) alors par 
+      définition H est non vide, \(H \subset G\) et \(H\) est stable par la loi 
+      de \(G\). Soit \(x \in H\) alors son symétrique dans \(H\) est le même que 
+      dans \(G\) (d'après la proposition~
+      \ref{prop:ssgroupesym}). Donc son symétrique dans \(G\) est dans \(H\). 
+      \(H\) est donc stable par passage au symétrique.
+    \item[\(2 \implies 3\)] Il faut juste démontrer le troisième sous-point. 
+      Soit \((x, y) \in H^2\), \(H\) est stable par symétrie donc \(y^{-1} \in 
+      H\). \(x\) et \(y^{-1}\) sont dans \(H\) et comme \(H\) est stable pour la 
+      loi \(*\), on a \(x*y^{-1} \in H\).
+    \item[\(3 \implies 1\)] Déjà \(H \subset G\) et \(H\) est non vide. Alors il 
+      existe \(h \in H\) tel que \(e_G = h*h^{-1}\) alors \(e_G \in H\). Soit 
+      \(y \in H\) alors \(e_G*y^{-1} = y^{-1} \in H\). Tout élément de \(H\) 
+      admet un symétrique dans \(H\). Soit \(x \in H\) alors comme \(y^{-1} \in 
+      H\) on a \(x*y=x*(y^{-1})^{-1} \in H\). \(H\) est stable par \(*\) donc on 
+      peut considérer le couple \((H,*_H)\) où \(*_H\) est la loi induite. 
+      Montrons que \((H,*_H)\) est un groupe. La loi \(*_H\) est associative 
+      puisque \(*\) l'est.  Soit \(h \in H\) alors
       \begin{align}
         h *_H e_G &= h * e_G =h; \\
         e_G *_H h &= e_G * h =h.
       \end{align}
-      Donc \(e_G\) est neutre dans \(H\). Tout élément de \(H\) admet un symétrique dans \(H\). Alors \((H,*_H)\) est un groupe.
+      Donc \(e_G\) est neutre dans \(H\). Tout élément de \(H\) admet un 
+      symétrique dans \(H\). Alors \((H,*_H)\) est un groupe.
   \end{itemize}
 \end{proof}
 
 \subsubsection{Exemples de sous-groupes}
 
-Soit \((G,*)\) un groupe, alors les sous-groupes dits triviaux sont \(G\) et \(\{e_G\}\). \(\Z\) est un sous-groupe de \((\R,+)\). Les sous-groupes de \((\Z,+)\) sont les \(n\Z\) où \(n \in \N\), c'est à dire \(n\Z=\enstq{np}{p \in \Z}\). \(\U\) et \(\U_n\) sont des sous-groupes de \((\C^{*},\times)\). Soit \((G,*)\) un groupe, \(H_1\) et \(H_2\) deux sous-groupes de \((G,*)\). Soit \(H = H_1 \cap H_2\) alors c'est aussi un sous-groupe de \(G\).
+Soit \((G,*)\) un groupe, alors les sous-groupes dits triviaux sont \(G\) et 
+\(\{e_G\}\). \(\Z\) est un sous-groupe de \((\R,+)\). Les sous-groupes de 
+\((\Z,+)\) sont les \(n\Z\) où \(n \in \N\), c'est à dire \(n\Z=\enstq{np}{p \in 
+\Z}\). \(\U\) et \(\U_n\) sont des sous-groupes de \((\C^{*},\times)\). Soit 
+\((G,*)\) un groupe, \(H_1\) et \(H_2\) deux sous-groupes de \((G,*)\). Soit \(H 
+= H_1 \cap H_2\) alors c'est aussi un sous-groupe de \(G\).
 \begin{proof}
-  Puisque \(H_1 \subset G\) et \(H_2 \subset G\) alors \(H \subset G\). On sait que \(e_G \in H_1\) et \(e_G \in H_2\) donc \(e_G \in H\). Il est non vide. Soit ensuite \((x,y) \in H^2\) alors ils sont dans \(H_1\) et dans \(H_2\). Alors \(x*y^{-1}\) est dans \(H_1\) et dans \(H_2\) donc il est dans \(H\). Par caractérisation, H est un sous-groupe de \((G,*)\).
+  Puisque \(H_1 \subset G\) et \(H_2 \subset G\) alors \(H \subset G\). On sait 
+  que \(e_G \in H_1\) et \(e_G \in H_2\) donc \(e_G \in H\). Il est non vide. 
+  Soit ensuite \((x,y) \in H^2\) alors ils sont dans \(H_1\) et dans \(H_2\). 
+  Alors \(x*y^{-1}\) est dans \(H_1\) et dans \(H_2\) donc il est dans \(H\). 
+  Par caractérisation, H est un sous-groupe de \((G,*)\).
 \end{proof}
 
 En général l'union de sous-groupes n'est pas un sous-groupe.
@@ -248,7 +337,9 @@ En général l'union de sous-groupes n'est pas un sous-groupe.
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soient \((G,*)\) et \((H,\#)\) deux groupes. Une application \(f:(G,*) \longrightarrow (H,\#)\) est un morphisme (ou homo-morphisme) de groupes du groupe \(G\) sur le groupe \(H\) si et seulement si
+  Soient \((G,*)\) et \((H,\#)\) deux groupes. Une application \(f:(G,*) 
+  \longrightarrow (H,\#)\) est un morphisme (ou homo-morphisme) de groupes du 
+  groupe \(G\) sur le groupe \(H\) si et seulement si
   \begin{equation}
     \forall x,y \in G \quad f(x*g) = f(x)\#f(y).
   \end{equation}
@@ -257,18 +348,24 @@ Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. On dit que
 \begin{itemize}
   \item \(f\) est un isomorphisme si \(f\) est bijective;
   \item \(f\) est un endomorphisme si \(G=H\) et \(*=\#\);
-  \item \(f\) est un automorphisme si \(G=H\), \(*=\#\) et si \(f\) est bijective.
+  \item \(f\) est un automorphisme si \(G=H\), \(*=\#\) et si \(f\) est 
+    bijective.
 \end{itemize}
 
 \begin{defdef}
-  Soient \((G,*)\) et \((H,\#)\) deux groupes. On dit que \((G,*)\) et \((H,\#)\) sont isomorphes si et seulement s'il existe un isomorphisme de groupe de \((G,*)\) sur \((H,\#)\).
+  Soient \((G,*)\) et \((H,\#)\) deux groupes. On dit que \((G,*)\) et 
+  \((H,\#)\) sont isomorphes si et seulement s'il existe un isomorphisme de 
+  groupe de \((G,*)\) sur \((H,\#)\).
 \end{defdef}
 
 \subsubsection{Propriétés}
 
 \begin{prop}
   \label{prop:compmorph}
-  Soient \((G,*)\), \((H,\#)\) et \((I,\%)\) trois groupes. Soient \(f:(G,*) \longrightarrow (H,\#)\) et \(g: (H,\#) \longrightarrow (I,\%)\) deux morphismes de groupes. Alors la composée \(g \circ f\) est un morphisme de groupe de \((G,*)\) sur \((I,\%)\).
+  Soient \((G,*)\), \((H,\#)\) et \((I,\%)\) trois groupes. Soient \(f:(G,*) 
+  \longrightarrow (H,\#)\) et \(g: (H,\#) \longrightarrow (I,\%)\) deux 
+  morphismes de groupes. Alors la composée \(g \circ f\) est un morphisme de 
+  groupe de \((G,*)\) sur \((I,\%)\).
 \end{prop}
 \begin{proof}
   Déjà \(g \circ f\) es bien définie et pour tout \((x,y) \in G^2\) on a
@@ -278,33 +375,47 @@ Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. On dit que
 \end{proof}
 \begin{prop}
   \label{prop:morphinv}
-  Soit \(f\) un isomorphisme de \((G,*)\) sur \((H,\#)\). Alors la réciproque \(f^{-1}\) est un isomorphisme de \((H,\#)\) sur \((G,*)\).
+  Soit \(f\) un isomorphisme de \((G,*)\) sur \((H,\#)\). Alors la réciproque 
+  \(f^{-1}\) est un isomorphisme de \((H,\#)\) sur \((G,*)\).
 \end{prop}
 \begin{proof}
-  \(f\) est un isomorphisme donc \(f\) est bijective et sa réciproque existe. On sait que \(f \circ f^{-1}=\Id_{H}\) donc pour tout \((x,y) \in H^2\) on a
+  \(f\) est un isomorphisme donc \(f\) est bijective et sa réciproque existe. On 
+  sait que \(f \circ f^{-1}=\Id_{H}\) donc pour tout \((x,y) \in H^2\) on a
   \begin{align}
     f^{-1}(x \# y) &=f^{-1}(f \circ f^{-1}(x) \# f \circ f^{-1}(y))\\
-                   &=f^{-1}[f(f^{-1}(x) *  f^{-1}(y))]\\
-                   &=f^{-1}(x) *  f^{-1}(y).
+    &=f^{-1}[f(f^{-1}(x) *  f^{-1}(y))]\\
+    &=f^{-1}(x) *  f^{-1}(y).
   \end{align}
-  C'est donc bien un morphisme de \((H,\#)\) sur \((G,*)\). Comme \(f\) est bijective alors \(f^{-1}\) est aussi bijective. Finalement \(f^{-1}\) est bien un isomorphisme.
+  C'est donc bien un morphisme de \((H,\#)\) sur \((G,*)\). Comme \(f\) est 
+  bijective alors \(f^{-1}\) est aussi bijective. Finalement \(f^{-1}\) est bien 
+  un isomorphisme.
 \end{proof}
 \begin{prop}
-  Soit \((G,*)\) un groupe. Alors \(\Auto{G}\) (ensemble des automorphismes de \(G\)) est un sous-groupe de l'ensemble des permutations de \(G\) muni de la composition, \((\sigma(G), \circ)\).
+  Soit \((G,*)\) un groupe. Alors \(\Auto{G}\) (ensemble des automorphismes de 
+  \(G\)) est un sous-groupe de l'ensemble des permutations de \(G\) muni de la 
+  composition, \((\sigma(G), \circ)\).
 \end{prop}
 \begin{proof}
-  Déjà \(\Auto{G} \subset \sigma(G)\) car par définition les automorphismes de \(G\) sont des bijections de \(G\) dans \(G\).
+  Déjà \(\Auto{G} \subset \sigma(G)\) car par définition les automorphismes de 
+  \(G\) sont des bijections de \(G\) dans \(G\).
   \begin{itemize}
     \item L'application identité est une bijection de \(G\) dans lui-même et
       \begin{equation}
         \forall (x,y) \in G^2 \quad \Id_G(x * y) = x*y=\Id_G(x) * \Id_G(y),
       \end{equation}
-      alors l'identité est un endomorphisme de \((G,*)\). Comme c'est une bijection, alors \(\Id_G  \in \Auto{G}\).
-    \item Soient \(f\) et \(g\) deux automorphismes de \(G\). Déjà \(f \circ g^{-1}\) est une bijection de \(G\) dans \(G\). D'après la proposition~
-      \ref{prop:morphinv}, \(g^{-1}\) est un isomorphisme. D'après la proposition~
-      \ref{prop:compmorph}, \(f \circ g^{-1}\) est un morphisme. Comme \(f\) et \(g^{-1}\) sont bijectives alors \(f \circ g^{-1}\) est bijective donc c'est un isomorphisme de \(G\) dans \(G\). Finalement c'est un automorphisme.
+      alors l'identité est un endomorphisme de \((G,*)\). Comme c'est une 
+      bijection, alors \(\Id_G  \in \Auto{G}\).
+    \item Soient \(f\) et \(g\) deux automorphismes de \(G\). Déjà \(f \circ 
+      g^{-1}\) est une bijection de \(G\) dans \(G\). D'après la proposition~
+      \ref{prop:morphinv}, \(g^{-1}\) est un isomorphisme. D'après la 
+      proposition~
+      \ref{prop:compmorph}, \(f \circ g^{-1}\) est un morphisme. Comme \(f\) et 
+      \(g^{-1}\) sont bijectives alors \(f \circ g^{-1}\) est bijective donc 
+      c'est un isomorphisme de \(G\) dans \(G\). Finalement c'est un 
+      automorphisme.
   \end{itemize}
-  Par caractérisation des sous-groupes, on conclue en écrivant que \(\Auto{G}\) est un sous-groupe de \(\sigma(G)\).
+  Par caractérisation des sous-groupes, on conclue en écrivant que \(\Auto{G}\) 
+  est un sous-groupe de \(\sigma(G)\).
 \end{proof}
 \begin{theo}
   Soit \(f\) un morphisme de groupe de \((G,*)\) vers \((H,\#)\), alors
@@ -312,18 +423,24 @@ Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. On dit que
     f(e_G)=e_H; \\
     \forall x \in G \quad f(x^{-1})=f(x)^{-1}; \\
     \forall (x,y) \in G^2 \quad f(x*y^{-1})=f(x) \# f(y)^{-1}; \\
-    \forall n \in \N^{*} \ \forall (x_1, \ldots, x_n) \in G^n \quad f(x_1 * \ldots * x_n) = f(x_1) \# \ldots \# f(x_n); \\
+    \forall n \in \N^{*} \ \forall (x_1, \ldots, x_n) \in G^n \quad f(x_1 * 
+    \ldots * x_n) = f(x_1) \# \ldots \# f(x_n); \\
     \forall k \in \Z \ \forall x \in G \quad f(x^k)=f(x)^k.
   \end{gather}
 \end{theo}
 \begin{proof}
   \begin{enumerate}
-    \item \(f\) est un morphisme donc \(f(e_G * e_G)=f(e_G)\#f(e_G)\). Comme \(e_G\) est le neutre, on a \(f(e_G * e_G)=f(e_G)\). Comme \(e_{H}\) est le neutre de H on a \(f(e_G*e_G)=f(e_G) \# e_H\). Donc \(f(e_G)\#f(e_G) = f(e_G) \# e_H\). Comme H est un sous-groupe, tous ses éléments sont simplifiables alors \(f(e_G)=e_H\).
+    \item \(f\) est un morphisme donc \(f(e_G * e_G)=f(e_G)\#f(e_G)\). Comme 
+      \(e_G\) est le neutre, on a \(f(e_G * e_G)=f(e_G)\). Comme \(e_{H}\) est 
+      le neutre de H on a \(f(e_G*e_G)=f(e_G) \# e_H\). Donc \(f(e_G)\#f(e_G) = 
+      f(e_G) \# e_H\). Comme H est un sous-groupe, tous ses éléments sont 
+      simplifiables alors \(f(e_G)=e_H\).
     \item Soit \(x \in G\), puisque \(f\) est un morphisme alors
       \begin{equation}
         f(x) \# f(x^{-1})=f(x * x^{-1})=f(e_G)=e_H,
       \end{equation}
-      d'après le premier point. De même on  montre \(f(x^{-1}) \# f(x)=e_H\). Alors \(f(x^{-1})=f(x)^{-1}\).
+      d'après le premier point. De même on  montre \(f(x^{-1}) \# f(x)=e_H\). 
+      Alors \(f(x^{-1})=f(x)^{-1}\).
     \item Soient \((x,y) \in G^2\) alors comme \(f\) est un morphisme, on a
       \begin{equation}
         f(x*y^{-1})=f(x)\#f(y^{-1}) = f(x)\#f(y)^{-1},
@@ -331,9 +448,11 @@ Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. On dit que
       d'après le deuxième point.
     \item On démontre par récurrence à partir de la définition
       \begin{equation}
-        \forall n \in \N^* \quad P(n) "\forall (x_1, \ldots, x_n) \in G^n \quad f(x_1 * \ldots * x_n) = f(x_1) \# \ldots \# f(x_n)"
+        \forall n \in \N^* \quad P(n) "\forall (x_1, \ldots, x_n) \in G^n \quad 
+        f(x_1 * \ldots * x_n) = f(x_1) \# \ldots \# f(x_n)"
       \end{equation}
-    \item Si \(k \in \N\) on applique le quatrième point pour \(x_k=x\), sinon on a
+    \item Si \(k \in \N\) on applique le quatrième point pour \(x_k=x\), sinon 
+      on a
       \begin{equation}
         f(x^k)=f((x^{-1})^{-k})=f(x^{-1})^{-k}=(f(x)^{-1})^{-k}=f(x)^k.
       \end{equation}
@@ -342,87 +461,125 @@ Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. On dit que
 
 \subsubsection{Image et noyau d'un morphisme de groupes}
 
-Soient \((G,*)\) et \((H,\#)\) deux groupes et \(f\) un morphisme de \(G\) sur \(H\).
+Soient \((G,*)\) et \((H,\#)\) deux groupes et \(f\) un morphisme de \(G\) sur 
+\(H\).
 
 \begin{theo}
   \label{theo:theo1sousgroupe}
-  Soit \(G'\) un sous-groupe de G. Alors l'image directe \(f(G')\) est un sous-groupe de \(H\). 
-\end{theo}
+Soit \(G'\) un sous-groupe de G. Alors l'image directe \(f(G')\) est un 
+sous-groupe de \(H\). \end{theo}
 \begin{proof}
   \begin{itemize}
     \item \(f(G') \subset H\) par définition;
-    \item \(G'\) est un sous-groupe de G donc \(e_G \in G'\). \(f(e_G)=e_H \in f(G')\) alors \(f(G')\) est non vide;
-    \item Soient \((x,y) \in f(G')^2\) il existe \((z,t) \in G'^2\) tels que \(x=f(z)\) et \(y=f(t)\) et
+    \item \(G'\) est un sous-groupe de G donc \(e_G \in G'\). \(f(e_G)=e_H \in 
+      f(G')\) alors \(f(G')\) est non vide;
+    \item Soient \((x,y) \in f(G')^2\) il existe \((z,t) \in G'^2\) tels que 
+      \(x=f(z)\) et \(y=f(t)\) et
       \begin{equation}
         x\#y^{-1}  = f(z*y^{-1}).
       \end{equation}
-      \(G'\) est un sous-groupe de \(G\) et comme \(z\) et \(t\) sont dans \(G'\) alors \(z*y^{-1} \in G'\) d'où \(f(z*y^{-1}) \in f(G')\). On a montré que \(x\#y^{-1} \in f(G')\).
+      \(G'\) est un sous-groupe de \(G\) et comme \(z\) et \(t\) sont dans 
+      \(G'\) alors \(z*y^{-1} \in G'\) d'où \(f(z*y^{-1}) \in f(G')\). On a 
+      montré que \(x\#y^{-1} \in f(G')\).
   \end{itemize}
   Par caractérisation des sous-groupes, \(f(G')\) est un sous-groupe de \(H\).
 \end{proof}
 
 \begin{theo}\label{theo:theo2sousgroupe}
-  Soit \(H'\) un sous-groupe de \(H\). Alors l'image réciproque \(f^{-1}(H')\) est un sous-groupe de \(G\).
+  Soit \(H'\) un sous-groupe de \(H\). Alors l'image réciproque \(f^{-1}(H')\) 
+  est un sous-groupe de \(G\).
 \end{theo}
 \begin{proof}
-  \(f^{-1}(H')\) est un image réciproque et \(f^{-1}(H')=\enstq{x \in G}{f(x) \in H'}\).
+  \(f^{-1}(H')\) est un image réciproque et \(f^{-1}(H')=\enstq{x \in G}{f(x) 
+  \in H'}\).
   \begin{itemize}
     \item Par définition \(f^{-1}(H') \subset G\);
-    \item \(f(e_G)=e_H\), \(H'\) est un sous-groupe de H donc \(e_H \in H'\) et donc \(f(e_G) \in H'\), alors \(e_G \in f^{-1}(H')\) donc \(f^{-1}(H')\) est non-vide;
-    \item soient \((x,y) \in f^{-1}(H')^2\), montrons que \(x*y^{-1} \in f^{-1}(H')\); comme \(f\) est un morphisme
+    \item \(f(e_G)=e_H\), \(H'\) est un sous-groupe de H donc \(e_H \in H'\) et 
+      donc \(f(e_G) \in H'\), alors \(e_G \in f^{-1}(H')\) donc \(f^{-1}(H')\) 
+      est non-vide;
+    \item soient \((x,y) \in f^{-1}(H')^2\), montrons que \(x*y^{-1} \in 
+      f^{-1}(H')\); comme \(f\) est un morphisme
       \begin{equation}
         f(x*y^{-1}) = f(x) \# f(y)^{-1},
       \end{equation}
-      et comme \((x,y) \in f^{-1}(H')^2\) alors \((f(x), f(y)) \in H'^2\) et puisque \(H'\) est un sous-groupe \(f(y)^{-1} \in H'\) et \(f(x) \# f(y)^{-1} \in H'\). Finalement \(f(x*y^{-1}) \in H'\) donc \(x*y^{-1} \in f^{-1}(H')\).
+      et comme \((x,y) \in f^{-1}(H')^2\) alors \((f(x), f(y)) \in H'^2\) et 
+      puisque \(H'\) est un sous-groupe \(f(y)^{-1} \in H'\) et \(f(x) \# 
+      f(y)^{-1} \in H'\). Finalement \(f(x*y^{-1}) \in H'\) donc \(x*y^{-1} \in 
+      f^{-1}(H')\).
   \end{itemize}
-  Par caractérisation des sous-groupes, \(f^{-1}(H')\) est un sous-groupe de \(G\).
+  Par caractérisation des sous-groupes, \(f^{-1}(H')\) est un sous-groupe de 
+  \(G\).
 \end{proof}
 \begin{defdef}
-  Soient \((G,*)\) et \((H,\#)\) deux groupes et \(f\) un morphisme de \(G\) sur \(H\). On pose
+  Soient \((G,*)\) et \((H,\#)\) deux groupes et \(f\) un morphisme de \(G\) sur 
+  \(H\). On pose
   \begin{align}
-    \Image(f) &= \enstq{f(x)}{x \in G} = \enstq{y \in H}{\exists x \in G \quad  y=f(x)}=f(G)\\
+    \Image(f) &= \enstq{f(x)}{x \in G} = \enstq{y \in H}{\exists x \in G \quad  
+    y=f(x)}=f(G)\\
     \Ker(f) &= \enstq{x \in G}{f(x)=e_{G'}}=f^{-1}(\{e_{G'}\}).
   \end{align}
 \end{defdef}
 \begin{prop}
-  L'image \(\Image(f)\) est un sous-groupe de \(H\) et le noyau \(\Ker(f)\) est un sous-groupe de \(G\).
+  L'image \(\Image(f)\) est un sous-groupe de \(H\) et le noyau \(\Ker(f)\) est 
+  un sous-groupe de \(G\).
 \end{prop}
 \begin{proof}
-  On sait que \(\Image(f)=f(G)\) et comme \(G\) est un sous-groupe de \(G\) alors d'après le théorème~
-  \ref{theo:theo1sousgroupe} \(\Image(f)\) est un sous-groupe. On sait aussi que \(\Ker(f)=f^{-1}(\{e_H\})\) et \(\{e_H\}\) est un sous-groupe de \(H\) donc d'après le théorème~
+  On sait que \(\Image(f)=f(G)\) et comme \(G\) est un sous-groupe de \(G\) 
+  alors d'après le théorème~
+  \ref{theo:theo1sousgroupe} \(\Image(f)\) est un sous-groupe. On sait aussi que 
+  \(\Ker(f)=f^{-1}(\{e_H\})\) et \(\{e_H\}\) est un sous-groupe de \(H\) donc 
+  d'après le théorème~
   \ref{theo:theo2sousgroupe} \(\Ker(f)\) est un sous-groupe.
 \end{proof}
 \begin{prop}
-  Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. Alors \(f\) est surjective si et seulement si \(\Image(f)=H\).
+  Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. Alors \(f\) 
+  est surjective si et seulement si \(\Image(f)=H\).
 \end{prop}
 \begin{proof}
   Déjà faite au chapitre~
   \ref{chap:ensembles}.
 \end{proof}
 \begin{prop}
-  Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. Alors \(f\) est injective si et seulement si \(\Ker(f)=\{e_G\}\).
+  Soit \(f:(G,*) \longrightarrow (H,\#)\) un morphisme de groupes. Alors \(f\) 
+  est injective si et seulement si \(\Ker(f)=\{e_G\}\).
 \end{prop}
 \begin{proof}
-  Supposons \(f\) injective, alors comme c'est un morphisme de groupes \(f(e_G)=e_H\) alors \(\{e_G\} \subset \Ker(f)\). Soit \(x \in \Ker(f)\) alors \(f(x)=e_H=f(e_G)\) or \(f\) est injective donc \(x=e_G\) donc \(\Ker(f) \subset \{e_G\}\). Finalement \(\Ker(f)=\{e_G\}\).
+  Supposons \(f\) injective, alors comme c'est un morphisme de groupes 
+  \(f(e_G)=e_H\) alors \(\{e_G\} \subset \Ker(f)\). Soit \(x \in \Ker(f)\) alors 
+  \(f(x)=e_H=f(e_G)\) or \(f\) est injective donc \(x=e_G\) donc \(\Ker(f) 
+  \subset \{e_G\}\). Finalement \(\Ker(f)=\{e_G\}\).
 
-  Supposons que \(\Ker(f)=\{e_G\}\). Soit \((x,y) \in G^2\) tels que \(f(x)=f(y)\) alors \(f(x)\#f(y)^{-1}=f(y)\#f(y)^{-1} = e_H\). Comme \(f\) est un morphisme on a \(f(x)\#f(y)^{-1} = f(x*y^{-1})\). Alors \(f(x*y^{-1}) = e_H\) et donc \(x*y^{-1} \in \Ker(f)\). Comme \(\Ker(f)=\{e_G\}\) on a \(x*y^{-1} = e_G\). Par conséquent \((x*y^{-1})*y = e_G*y\) et par associativité et grâce aux qualités du neutre on a \(x=y\). Alors \(f\) est injective.
+  Supposons que \(\Ker(f)=\{e_G\}\). Soit \((x,y) \in G^2\) tels que 
+  \(f(x)=f(y)\) alors \(f(x)\#f(y)^{-1}=f(y)\#f(y)^{-1} = e_H\). Comme \(f\) est 
+  un morphisme on a \(f(x)\#f(y)^{-1} = f(x*y^{-1})\). Alors \(f(x*y^{-1}) = 
+  e_H\) et donc \(x*y^{-1} \in \Ker(f)\). Comme \(\Ker(f)=\{e_G\}\) on a 
+  \(x*y^{-1} = e_G\). Par conséquent \((x*y^{-1})*y = e_G*y\) et par 
+  associativité et grâce aux qualités du neutre on a \(x=y\). Alors \(f\) est 
+  injective.
 \end{proof}
 
 \subsubsection{Exemples}
 
-La fonction logarithme est un isomorphisme de groupes de \((\R^{*}_+,\times)\) sur \((\R,+)\), c'est-à-dire
+La fonction logarithme est un isomorphisme de groupes de \((\R^{*}_+,\times)\) 
+sur \((\R,+)\), c'est-à-dire
 \begin{equation}
   \forall (x,y) \in {\Rplusetoile}^2 \quad \ln(xy) = \ln x + \ln y.
 \end{equation}
-La fonction exponentielle est un isomorphisme de groupes de \((\R,+)\) sur \((\R^{*}_+,\times)\), c'est-à-dire
+La fonction exponentielle est un isomorphisme de groupes de \((\R,+)\) sur 
+\((\R^{*}_+,\times)\), c'est-à-dire
 \begin{equation}
   \forall (x,y) \in \R^2 \quad \e^{x+y} = \e^x \times \e^y.
 \end{equation}
-La fonction \(\fonction{\psi}{\Rplusetoile \times \R}{\C^{*}}{(r,\theta)}{r\e^{\ii \theta}}\) est un morphisme de groupes du groupe produit des groupes \((\Rplusetoile,\times)\) et \((\R,+)\) sur le groupe \((\C^{*},\times)\)
+La fonction \(\fonction{\psi}{\Rplusetoile \times 
+\R}{\C^{*}}{(r,\theta)}{r\e^{\ii \theta}}\) est un morphisme de groupes du 
+groupe produit des groupes \((\Rplusetoile,\times)\) et \((\R,+)\) sur le groupe 
+\((\C^{*},\times)\)
 \begin{equation}
-  \forall (r,r') \in {\Rplusetoile}^2 \ \forall \theta \in \R \quad \psi(rr',\theta+\theta')=\psi(r,\theta) \times \psi(r',\theta').
+  \forall (r,r') \in {\Rplusetoile}^2 \ \forall \theta \in \R \quad 
+  \psi(rr',\theta+\theta')=\psi(r,\theta) \times \psi(r',\theta').
 \end{equation}
-C'est un morphisme surjectif, \(\Image(f)=\C^{*}\) mais non injectif puisque \(\Ker(f)=\{1\}\times 2\pi \Z\)~\footnote{cf.\ chapitre~
+C'est un morphisme surjectif, \(\Image(f)=\C^{*}\) mais non injectif puisque 
+\(\Ker(f)=\{1\}\times 2\pi \Z\)~\footnote{cf.\ chapitre~
 \ref{chap:complexes}}.
 
 \section{Anneau et corps}
@@ -432,36 +589,47 @@ C'est un morphisme surjectif, \(\Image(f)=\C^{*}\) mais non injectif puisque \(\
 \subsubsection{Définition}
 
 \begin{defdef}
-  On appelle anneau tout triplet \((A,+,\times)\) où \(+\) et \(\times\) deux lois de composition internes sur \(A\) telles que
+  On appelle anneau tout triplet \((A,+,\times)\) où \(+\) et \(\times\) deux 
+  lois de composition internes sur \(A\) telles que
   \begin{enumerate}
     \item \((A,+)\) est un groupe abélien;
     \item \(\times\) est associative;
     \item \(\times\) admet un élément neutre noté \(1\);
     \item \(\times\) est distributive sur \(+\) :
       \begin{equation}
-        \forall (a,b,c) \in A^3 \qquad a \times (b+c)= a \times b + a \times c \quad (a+b) \times c = a \times c + b \times c.
+        \forall (a,b,c) \in A^3 \qquad a \times (b+c)= a \times b + a \times c 
+        \quad (a+b) \times c = a \times c + b \times c.
       \end{equation}
   \end{enumerate}
-  Si de plus la loi \(\times\) est commutative, on dira que l'anneau \((A,+,\times)\) est commutatif.
+  Si de plus la loi \(\times\) est commutative, on dira que l'anneau 
+  \((A,+,\times)\) est commutatif.
 \end{defdef}
 
 \subsubsection{Propriétés}
 
 Soit \((A,+,\times)\) un anneau. Déjà \((A,+)\) est un groupe abélien, donc
 \begin{itemize}
-  \item il existe un unique élément neutre pour la loi \(+\) noté \(0\) et appelé élément nul de A;
-  \item tous les éléments de A admettent un unique symétrique pour \(+\) dans A noté \(-x\);
+  \item il existe un unique élément neutre pour la loi \(+\) noté \(0\) et 
+    appelé élément nul de A;
+  \item tous les éléments de A admettent un unique symétrique pour \(+\) dans A 
+    noté \(-x\);
   \item tous les éléments de A sont réguliers pour \(+\);
-  \item il existe un unique élément neutre pour \(\times\) noté \(1\) et c'est l'élément unité de A.
+  \item il existe un unique élément neutre pour \(\times\) noté \(1\) et c'est 
+    l'élément unité de A.
 \end{itemize}
 
-Mais \((A,\times)\) n'est pas un groupe. Les éléments de \(A\) n'admettent pas en général d'inverse pour \(\times\). Les éléments de \(A\) ne sont en général pas réguliers pour \(\times\).
+Mais \((A,\times)\) n'est pas un groupe. Les éléments de \(A\) n'admettent pas 
+en général d'inverse pour \(\times\). Les éléments de \(A\) ne sont en général 
+pas réguliers pour \(\times\).
 
 \subsection{Exemples d'anneaux}
 
 \subsubsection{Anneaux usuels de nombres}
 
-Les quatre anneaux suivants sont commutatifs : \((\Z,+,\times)\), \((\Q,+,\times)\), \((\R,+,\times)\), \((\C,+,\times)\). Pour \(\Z\) les éléments inversibles sont 1 et \(-1\) et sont non nuls pour \(\Q\), \(\R\) et \(\C\).
+Les quatre anneaux suivants sont commutatifs : \((\Z,+,\times)\), 
+\((\Q,+,\times)\), \((\R,+,\times)\), \((\C,+,\times)\). Pour \(\Z\) les 
+éléments inversibles sont 1 et \(-1\) et sont non nuls pour \(\Q\), \(\R\) et 
+\(\C\).
 
 \subsubsection{Ensemble quelconque}
 
@@ -469,36 +637,49 @@ Soit \(E\) un ensemble quelconque, \((P(E), \Delta, \bigcap)\) est un anneau.
 
 \subsubsection{Anneau produit}
 
-Soient \((A,+_1,\times_1)\) et \((B,+_2,\times_2)\) deux anneaux. On munit \(A_1 \times A_2\) des lois produits \(+\) et \(\times\) définies par
+Soient \((A,+_1,\times_1)\) et \((B,+_2,\times_2)\) deux anneaux. On munit \(A_1 
+\times A_2\) des lois produits \(+\) et \(\times\) définies par
 \begin{align}
-  \forall (a_1,b_1) \in A_1^2 \ \forall (a_2,b_2) \in A_2^2 \quad (a_1,a_2)+(b_1,b_2) = (a_1 +_1 b_1, a_2 +_2 b_2);\\
-  \forall (a_1,b_1) \in A_1^2 \ \forall (a_2,b_2) \in A_2^2 \quad (a_1,a_2) \times (b_1,b_2) = (a_1 \times_1 b_1, a_2 \times_2 b_2).
+  \forall (a_1,b_1) \in A_1^2 \ \forall (a_2,b_2) \in A_2^2 \quad 
+  (a_1,a_2)+(b_1,b_2) = (a_1 +_1 b_1, a_2 +_2 b_2);\\
+  \forall (a_1,b_1) \in A_1^2 \ \forall (a_2,b_2) \in A_2^2 \quad (a_1,a_2) 
+  \times (b_1,b_2) = (a_1 \times_1 b_1, a_2 \times_2 b_2).
 \end{align}
-Alors \((A_1 \times A_2, +, \times)\) est un anneau commutatif appelé anneau produit des anneaux \(A_1\) et \(A_2\). S'ils sont commutatifs alors \(A_1 \times A_2\) est commutatif.
+Alors \((A_1 \times A_2, +, \times)\) est un anneau commutatif appelé anneau 
+produit des anneaux \(A_1\) et \(A_2\). S'ils sont commutatifs alors \(A_1 
+\times A_2\) est commutatif.
 
 \subsubsection{Anneau nul}
 
-Soit \(A=\{a\}\). Alors \(a+a=a\) et \(a \times a=a\) alors \(0=1=a\) donc \(A=\{0\}\). \(A\) est un anneau commutatif appelé anneau nul.
+Soit \(A=\{a\}\). Alors \(a+a=a\) et \(a \times a=a\) alors \(0=1=a\) donc 
+\(A=\{0\}\). \(A\) est un anneau commutatif appelé anneau nul.
 
 \subsubsection{Anneau de fonctions}
 
-Soient \(X\) un ensemble non nul, \((A,+,\times)\) un anneau. On munit \(A^X\) de deux lois de composition internes :
+Soient \(X\) un ensemble non nul, \((A,+,\times)\) un anneau. On munit \(A^X\) 
+de deux lois de composition internes :
 \begin{itemize}
   \item une addition définie par
     \begin{equation}
-      \forall (f,g) \in \left(A^X\right)^2 \ \forall x \in X \quad (f+g)(x)=f(x)+g(x);
+      \forall (f,g) \in \left(A^X\right)^2 \ \forall x \in X \quad 
+      (f+g)(x)=f(x)+g(x);
     \end{equation}
   \item une multiplication définie par
     \begin{equation}
-      \forall (f,g) \in \left(A^X\right)^2 \ \forall x \in X \quad (f \times g)(x)=f(x) \times g(x).
+      \forall (f,g) \in \left(A^X\right)^2 \ \forall x \in X \quad (f \times 
+      g)(x)=f(x) \times g(x).
     \end{equation}
 \end{itemize}
-Alors \((A^X,+,\times)\) est un anneau. Si \(A\) est commutatif alors \(A^X\) est aussi commutatif. L'élément nul est l'application nulle et l'élément unité est la fonction constante égale à 1.
+Alors \((A^X,+,\times)\) est un anneau. Si \(A\) est commutatif alors \(A^X\) 
+est aussi commutatif. L'élément nul est l'application nulle et l'élément unité 
+est la fonction constante égale à 1.
 
 \subsection{Anneau intègre}
 
 \begin{defdef}
-  Soit \((A,+,\times)\) un anneau. S'il existe \((a,b) \in A^2\) tous non nuls tels que \(ab=0\). On dit alors que \((a,b)\) est un couple diviseur de zéro dans A.
+  Soit \((A,+,\times)\) un anneau. S'il existe \((a,b) \in A^2\) tous non nuls 
+  tels que \(ab=0\). On dit alors que \((a,b)\) est un couple diviseur de zéro 
+  dans A.
 \end{defdef}
 Comme \(A\) n'est pas commutatif, on peut avoir \(ab=0\) et \(ba \neq 0\).
 \begin{defdef}
@@ -516,26 +697,37 @@ Comme \(A\) n'est pas commutatif, on peut avoir \(ab=0\) et \(ba \neq 0\).
   \end{equation}
 \end{theo}
 \begin{proof}
-  l'anneau \(A\) n'admet pas de diviseurs de zéro, alors il n'existe pas de couple \((a,b)\) tel que \(a \neq 0\) et \(b \neq 0\) et \(ab=0\). Alors lorsqu'on prend la négation de cette assertion, on a bien
+  l'anneau \(A\) n'admet pas de diviseurs de zéro, alors il n'existe pas de 
+  couple \((a,b)\) tel que \(a \neq 0\) et \(b \neq 0\) et \(ab=0\). Alors 
+  lorsqu'on prend la négation de cette assertion, on a bien
   \begin{equation}
     \forall (a,b) \in A^2 \quad ab=0 \implies a=0 \text{~ou~} b=0.
   \end{equation}
 \end{proof}
 \begin{theo}
-  Dans un anneau intègre, tout élément non nul est simplifiable par la multiplication
+  Dans un anneau intègre, tout élément non nul est simplifiable par la 
+  multiplication
 \end{theo}
 \begin{proof}
   Soient \(a \in A^*\) et \((x,y) \in A^2\) alors
   \begin{align}
     ax=ay &\implies ax + (-ay) = ay - ay \\
-          &\implies a(x-y)=0.
+    &\implies a(x-y)=0.
   \end{align}
-  Alors \(a=0\) ou \(x=y\) puisque A est intègre. Cependant \(a\) n'est pas nul donc \(x=y\).
+  Alors \(a=0\) ou \(x=y\) puisque A est intègre. Cependant \(a\) n'est pas nul 
+  donc \(x=y\).
 
-  On a montré que \(a\) est simplifiable à gauche. On peut faire de même pour montrer qu'il est simplifiable à droite. Alors \(a\) est simplifiable.
+  On a montré que \(a\) est simplifiable à gauche. On peut faire de même pour 
+  montrer qu'il est simplifiable à droite. Alors \(a\) est simplifiable.
 \end{proof}
 
-Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont intègres. Si l'ensemble \(X\) a au moins deux éléments, l'anneau \(\R^X\) n'est pas intègre. Il existe deux éléments différents \(a,b \in A\) tel que \(f\) est nulle partout sauf en \(a\) et \(g\) est nulle partout sauf en \(b\). Alors \(f\) et \(g\) sont non nulles et pourtant \(fg\) est nulle. De la même manière l'ensemble des suites réelles \(\R^N\) n'est pas intègre. L'anneau \((\R^2,+,\cdot)\) n'est pas intègre puisque \((1,0) \cdot (0,1)=(0,0)\).
+Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont 
+intègres. Si l'ensemble \(X\) a au moins deux éléments, l'anneau \(\R^X\) n'est 
+pas intègre. Il existe deux éléments différents \(a,b \in A\) tel que \(f\) est 
+nulle partout sauf en \(a\) et \(g\) est nulle partout sauf en \(b\). Alors 
+\(f\) et \(g\) sont non nulles et pourtant \(fg\) est nulle. De la même manière 
+l'ensemble des suites réelles \(\R^N\) n'est pas intègre. L'anneau 
+\((\R^2,+,\cdot)\) n'est pas intègre puisque \((1,0) \cdot (0,1)=(0,0)\).
 
 \subsection{Règles de calcul dans un anneau}
 
@@ -545,12 +737,17 @@ Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont intèg
     \forall x \in A \quad x \cdot 0 = 0 \cdot x = 0; \\
     \forall (x,y) \in A^2 \qquad x(-y)=-(xy) \quad (-y)x=-(yx); \\
     \forall (x,y,y') \in A^3 \qquad x(y-y')=xy-xy' \quad (y-y')x=yx-y'x; \\
-    \forall (x,y) \in A^2 \ \forall k \in \Z \qquad x(ky)=k(xy) \quad (ky)x=k(xy); \\
-    \forall n \in \N^* \forall (x, y_1, \ldots, y_n) \in A^{n+1} \qquad x \sum_{i=1}^n y_i = \sum_{i=1}^n xy_i \quad \left(\sum_{i=1}^n y_i\right)x = \sum_{i=1}^n y_ix.
+    \forall (x,y) \in A^2 \ \forall k \in \Z \qquad x(ky)=k(xy) \quad 
+    (ky)x=k(xy); \\
+    \forall n \in \N^* \forall (x, y_1, \ldots, y_n) \in A^{n+1} \qquad x 
+    \sum_{i=1}^n y_i = \sum_{i=1}^n xy_i \quad \left(\sum_{i=1}^n y_i\right)x = 
+    \sum_{i=1}^n y_ix.
   \end{gather}
 \end{theo}
 \begin{proof}
-  Soit \(x \in A\), on définit \(\fonction{f}{A}{A}{y}{xy}\). La fonction \(f\) est bien définie puisque \((A,+,\cdot)\) est un anneau donc il est stable. De plus \(f\) est un endomorphisme du groupe \((A,+)\)
+  Soit \(x \in A\), on définit \(\fonction{f}{A}{A}{y}{xy}\). La fonction \(f\) 
+  est bien définie puisque \((A,+,\cdot)\) est un anneau donc il est stable. De 
+  plus \(f\) est un endomorphisme du groupe \((A,+)\)
   \begin{equation}
     \forall (y,y') \in A^2 \quad f(y+y')=x(y+y')=xy+xy'=f(y)+f(y').
   \end{equation}
@@ -564,30 +761,40 @@ Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont intèg
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  Si \(0=1\) alors pour tout \(x \in A\) on a \(x=x\cdot 1=x\cdot 0=0\), alors l'anneau serait nul. Contradiction.
+  Si \(0=1\) alors pour tout \(x \in A\) on a \(x=x\cdot 1=x\cdot 0=0\), alors 
+  l'anneau serait nul. Contradiction.
 
-  Pour tout \(x \in A\) \(x \cdot 0=0 \neq 1\) alors \(0\) n'est pas inversible dans A pour la multiplication.
+  Pour tout \(x \in A\) \(x \cdot 0=0 \neq 1\) alors \(0\) n'est pas inversible 
+  dans A pour la multiplication.
 \end{proof}
 
 \begin{lemme}
-  Soit \((A,+,\cdot)\) un anneau. Pour un couple d'éléments \((a,b) \in A^2\) qui commutent, c'est-à-dire tels que \(ab=ba\), on a \(\forall p,q \in \N \quad a^pb^q=b^qa^p\).
+  Soit \((A,+,\cdot)\) un anneau. Pour un couple d'éléments \((a,b) \in A^2\) 
+  qui commutent, c'est-à-dire tels que \(ab=ba\), on a \(\forall p,q \in \N 
+  \quad a^pb^q=b^qa^p\).
 \end{lemme}
 \begin{proof}
-  On démontre ce résultat par récurrence sur \(p \in \N\) la propriété \(\P(p) "\forall (a,b) \in A^2 \quad ab=ba \implies a^pb=ba^p"\).
+  On démontre ce résultat par récurrence sur \(p \in \N\) la propriété \(\P(p) 
+  "\forall (a,b) \in A^2 \quad ab=ba \implies a^pb=ba^p"\).
 
-  L'initialisation est vraie. Soit \(p \in \N\) supposons \(\P(p)\) alors pour tout \(a,b \in A\) tels que \(ab=ba\). Alors
+  L'initialisation est vraie. Soit \(p \in \N\) supposons \(\P(p)\) alors pour 
+  tout \(a,b \in A\) tels que \(ab=ba\). Alors
   \begin{align}
     a^{p+1}b=(a \cdot a^p)b&=a(a^p \cdot b) \\
-                           &=a(b\cdot a^p)\\
-                           &=(ab) \cdot a^p\\
-                           &=(ba) \cdot a^p\\
-                           &=b(a \cdot a^p)\\
-                           &=b a^{p+1}.
+    &=a(b\cdot a^p)\\
+    &=(ab) \cdot a^p\\
+    &=(ba) \cdot a^p\\
+    &=b(a \cdot a^p)\\
+    &=b a^{p+1}.
   \end{align}
-  Ainsi \(\P(p+1)\) est vraie. Alors par théorème de récurrence La propriété \(\P\) est vraie pour tout \(p\). Les éléments \(a^p\) et \(b\) commutent. Il suffit d'appliquer ce résultat en posant \(p=q\), \(a=b\) et \(b=a^p\) et on obtient le résultat \(b^qa^p=a^pb^q\).
+  Ainsi \(\P(p+1)\) est vraie. Alors par théorème de récurrence La propriété 
+  \(\P\) est vraie pour tout \(p\). Les éléments \(a^p\) et \(b\) commutent. Il 
+  suffit d'appliquer ce résultat en posant \(p=q\), \(a=b\) et \(b=a^p\) et on 
+  obtient le résultat \(b^qa^p=a^pb^q\).
 \end{proof}
 \begin{theo}[Formule du binôme de Newton]
-  Soit \((A,+,\cdot)\) un anneau. Pour deux éléments \((a,b) \in A^2\) qui commutent on a
+  Soit \((A,+,\cdot)\) un anneau. Pour deux éléments \((a,b) \in A^2\) qui 
+  commutent on a
   \begin{equation}
     \forall n \in \N^* \quad (a+b)^n=\sum_{k=0}^n \binom{n}{k} a^k b^{n-k}.
   \end{equation}
@@ -597,19 +804,21 @@ Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont intèg
   \ref{chap:naturels}.
 \end{proof}
 \begin{theo}
-  Soient \((A,+,\cdot)\) un anneau, \(n \in \N\) et \(a,b \in A\) commutant alors
+  Soient \((A,+,\cdot)\) un anneau, \(n \in \N\) et \(a,b \in A\) commutant 
+  alors
   \begin{equation}
     a^{n+1}-b^{n+1}=(a-b)\sum_{k=0}^n a^kb^{n-k}.
   \end{equation}
 \end{theo}
 \begin{proof}
   \begin{align}
-    (a-b)\sum_{k=0}^n a^kb^{n-k} &= a \sum_{k=0}^n a^kb^{n-k} - b \sum_{k=0}^n a^kb^{n-k}\\
-                                 &=\sum_{k=0}^n a^{k+1}b^{n-k} - \sum_{k=0}^n ba^kb^{n-k}\\
-                                 &=\sum_{j=1}^n a^jb^{n+1-j} - \sum_{k=0}^n b^{n-k+1}a^k \\
-                                 &=\sum_{j=1}^n b^{n+1-j}a^j - \sum_{k=0}^n b^{n-k+1}a^k \\
-                                 &=b^0a^{n+1}-b^{n+1}a^0\\
-                                 &=a^{n+1}-b^{n+1}.
+    (a-b)\sum_{k=0}^n a^kb^{n-k} &= a \sum_{k=0}^n a^kb^{n-k} - b \sum_{k=0}^n 
+    a^kb^{n-k}\\
+    &=\sum_{k=0}^n a^{k+1}b^{n-k} - \sum_{k=0}^n ba^kb^{n-k}\\
+    &=\sum_{j=1}^n a^jb^{n+1-j} - \sum_{k=0}^n b^{n-k+1}a^k \\
+    &=\sum_{j=1}^n b^{n+1-j}a^j - \sum_{k=0}^n b^{n-k+1}a^k \\
+    &=b^0a^{n+1}-b^{n+1}a^0\\
+    &=a^{n+1}-b^{n+1}.
   \end{align}
 \end{proof}
 \begin{corth}
@@ -622,47 +831,68 @@ Les anneaux \(\Z\), \(\Q\), \(\R\) et \(\C\) munis des lois usuelles sont intèg
     \sum_{j=0}^n a^j = (1-a)^{-1}(1-a^{n+1}).
   \end{equation}
 \end{corth}
-Dans un corps, tous les éléments non nuls sont réguliers. Le corollaire sera valable pour tout \(a\) différent de 1.
+Dans un corps, tous les éléments non nuls sont réguliers. Le corollaire sera 
+valable pour tout \(a\) différent de 1.
 
 \begin{theo}[Distributivité généralisée]
-  Soit \((A,+,\cdot)\) un anneau. pour tout \(I\) et \(J\) des ensembles finis non vides, toutes familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) d'éléments de \(A\) on a
+  Soit \((A,+,\cdot)\) un anneau. pour tout \(I\) et \(J\) des ensembles finis 
+  non vides, toutes familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) 
+  d'éléments de \(A\) on a
   \begin{equation}
-    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = \sum_{(i,j)\in I\times J} x_iy_j.
+    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = 
+    \sum_{(i,j)\in I\times J} x_iy_j.
   \end{equation}
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-  On pose par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\)~: quelque soient les ensembles \(I\) fini de cardinal \(n\) et \(J\) fini et non vide et pour toute famille d'éléments de A \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) on a
-  \begin{equation} 
-    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = \sum_{(i,j)\in I\times J} x_iy_j.
+  On pose par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\)~: quelque 
+  soient les ensembles \(I\) fini de cardinal \(n\) et \(J\) fini et non vide et 
+  pour toute famille d'éléments de A \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) 
+  on a
+  \begin{equation} \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j 
+    \right) = \sum_{(i,j)\in I\times J} x_iy_j.
   \end{equation}
 
   L'initialisation est vraie puisque
   \begin{equation}
-    \forall x \in A \ \forall (y_j)_{j \in J} \in A^J \quad x \left(\sum_{j \in J} y_j \right) = \sum_{j \in J} xy_j.
+    \forall x \in A \ \forall (y_j)_{j \in J} \in A^J \quad x \left(\sum_{j \in 
+    J} y_j \right) = \sum_{j \in J} xy_j.
   \end{equation}
 
-  Supposons ensuite que la propriété est vraie au rang \(n\), montrons la au rang \(n+1\). Soient \(I\) fini de cardinal \(n+1\) et \(J\) fini non vide, soient aussi deux familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) d'éléments de \(A\). Soit \(i_0 \in I\) et \(I'=I\setminus\{i_0\}\) alors \(I'\) est de cardinal \(n\). Alors
+  Supposons ensuite que la propriété est vraie au rang \(n\), montrons la au 
+  rang \(n+1\). Soient \(I\) fini de cardinal \(n+1\) et \(J\) fini non vide, 
+  soient aussi deux familles \((x_i)_{i \in I}\) et \((y_j)_{j \in J}\) 
+  d'éléments de \(A\). Soit \(i_0 \in I\) et \(I'=I\setminus\{i_0\}\) alors 
+  \(I'\) est de cardinal \(n\). Alors
   \begin{align}
-    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) &=x_{i_0} \sum_{j \in J} y_j + \left(\sum_{i \in I'} x_i \right)\left(\sum_{j \in J} y_j \right) \\
-                                                                     &=\sum_{j \in J} x_{i_0}y_j +  \sum_{(i,j)\in I'\times J} x_iy_j.
+    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) &=x_{i_0} 
+    \sum_{j \in J} y_j + \left(\sum_{i \in I'} x_i \right)\left(\sum_{j \in J} 
+    y_j \right) \\
+    &=\sum_{j \in J} x_{i_0}y_j +  \sum_{(i,j)\in I'\times J} x_iy_j.
   \end{align}
   Puisque \(\P(1)\) et \(\P(n)\) sont vraies. Alors en regroupant
   \begin{equation}
-    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = \sum_{(i,j)\in I\times J} x_iy_j.
+    \left(\sum_{i \in I} x_i \right)\left(\sum_{j \in J} y_j \right) = 
+    \sum_{(i,j)\in I\times J} x_iy_j.
   \end{equation}
-  Donc \(\P(n+1)\) est vraie. Le théorème de récurrence nous affirme donc que \(\P(n)\) est vraie pour tout naturel non nul \(n\).
+  Donc \(\P(n+1)\) est vraie. Le théorème de récurrence nous affirme donc que 
+  \(\P(n)\) est vraie pour tout naturel non nul \(n\).
 \end{proof}
 \begin{theo}\label{theo:uinversible}
-  Soit \((A,+,\cdot)\) un anneau. On note 
-  \begin{equation}
-    \uinv{A}=\enstq{a \in A}{a \text{~inversible pour la loi~} \cdot}. 
+  Soit \((A,+,\cdot)\) un anneau. On note \begin{equation}
+  \uinv{A}=\enstq{a \in A}{a \text{~inversible pour la loi~} \cdot}. 
   \end{equation}
-  Alors \((\uinv{A},\cdot)\) est un groupe appelé groupe des inversibles (ou des unités) de \(A\).
+  Alors \((\uinv{A},\cdot)\) est un groupe appelé groupe des inversibles (ou des 
+  unités) de \(A\).
 \end{theo}
 \begin{proof}
-  La loi \(\cdot\) est une loi de composition interne sur \(\uinv{A}\) puisque si \(a\) et \(b\) sont des éléments de A inversibles, leur produit \(ab\) est inversible d'inverse \(b^{-1}a^{-1}\). La loi \(\cdot\) est associative car A est un anneau. On a \(1 \in \uinv{A}\), donc il est non vide. Soit \(a \in \uinv{A}\) et notons \(a^{-1}\) l'inverse de A, alors \(a^{-1} \in \uinv{A}\).
+  La loi \(\cdot\) est une loi de composition interne sur \(\uinv{A}\) puisque 
+  si \(a\) et \(b\) sont des éléments de A inversibles, leur produit \(ab\) est 
+  inversible d'inverse \(b^{-1}a^{-1}\). La loi \(\cdot\) est associative car A 
+  est un anneau. On a \(1 \in \uinv{A}\), donc il est non vide. Soit \(a \in 
+  \uinv{A}\) et notons \(a^{-1}\) l'inverse de A, alors \(a^{-1} \in \uinv{A}\).
 
-  Tout élément de \(\uinv{A}\) admet un inverse dans \(\uinv{A}\). Donc finalement \((\uinv{A},\cdot)\) est un groupe.
+  Tout élément de \(\uinv{A}\) admet un inverse dans \(\uinv{A}\). Donc 
+  finalement \((\uinv{A},\cdot)\) est un groupe.
 \end{proof}
 
 \subsection{Sous-anneau}
@@ -670,7 +900,8 @@ Dans un corps, tous les éléments non nuls sont réguliers. Le corollaire sera 
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soit \((A,+,\cdot)\) un anneau. On appelle sous-anneau de \(A\), toute partie \(B\) de \(A\) telle que~:
+  Soit \((A,+,\cdot)\) un anneau. On appelle sous-anneau de \(A\), toute partie 
+  \(B\) de \(A\) telle que~:
   \begin{enumerate}
     \item \(B\) est stable pour les lois \(+\) et \(\cdot\);
     \item muni des lois induites, \(B\) est un anneau;
@@ -684,30 +915,50 @@ Soit \((A,+,\cdot)\) un anneau et \(B\) un sous-anneau de \(A\), alors
 \begin{enumerate}
   \item \(B\) et \(A\) ont le même \(0\);
   \item \(B\) et \(A\) ont le même \(1\);
-  \item Si \((A,+,\cdot)\) est un anneau commutatif, alors \(B\) est aussi commutatif;
+  \item Si \((A,+,\cdot)\) est un anneau commutatif, alors \(B\) est aussi 
+    commutatif;
   \item Si \((A,+,\cdot)\) est un anneau intègre, alors \(B\) est aussi intègre.
 \end{enumerate}
 
 \begin{proof}
-  \((B,+)\) est un sous-groupe de \((A,+)\). \((B,+,\cdot)\) est un anneau, il admet donc un neutre pour \(\cdot\). C'est aussi un neutre pour la loi \(\cdot\) de \(A\). Alors a fortiori par unicité du neutre ils sont égaux. Idem pour \(0\). Si la loi sur \(A\) est commutative, alors elle est commutative sur B. Si maintenant A est intègre, alors il est commutatif, donc \(B\) est commutatif. \(A\) est un anneau non nul donc \(0 \neq A\) sur \(A\). Comme ils ont le même zéro et le même un on a \(O \neq 1\) sur \(B\). Si on considère un couple \((a,b)\) diviseur de zéro dans \(B\) alors c'est aussi un couple diviseurs de zéro dans \(A\), et comme \(A\) est intègre, il n'en a pas donc le couple \((a,b)\) en question n'existe pas et alors \(B\) n'en a pas non plus. Finalement \(B\) est un anneau intègre.
+  \((B,+)\) est un sous-groupe de \((A,+)\). \((B,+,\cdot)\) est un anneau, il 
+  admet donc un neutre pour \(\cdot\). C'est aussi un neutre pour la loi 
+  \(\cdot\) de \(A\). Alors a fortiori par unicité du neutre ils sont égaux. 
+  Idem pour \(0\). Si la loi sur \(A\) est commutative, alors elle est 
+  commutative sur B. Si maintenant A est intègre, alors il est commutatif, donc 
+  \(B\) est commutatif. \(A\) est un anneau non nul donc \(0 \neq A\) sur \(A\). 
+  Comme ils ont le même zéro et le même un on a \(O \neq 1\) sur \(B\). Si on 
+  considère un couple \((a,b)\) diviseur de zéro dans \(B\) alors c'est aussi un 
+  couple diviseurs de zéro dans \(A\), et comme \(A\) est intègre, il n'en a pas 
+  donc le couple \((a,b)\) en question n'existe pas et alors \(B\) n'en a pas 
+  non plus. Finalement \(B\) est un anneau intègre.
 \end{proof}
 
 \subsubsection{Caractérisation des sous-anneaux}
 
 \begin{theo}
-  Soit \((A,+,\cdot)\) un anneau et \(B\) une partie de \(A\). Alors il y a équivalence entre
+  Soit \((A,+,\cdot)\) un anneau et \(B\) une partie de \(A\). Alors il y a 
+  équivalence entre
   \begin{enumerate}
     \item \(B\) est un sous-anneau de \(A\);
-    \item \((B,+)\) est un sous-groupe de \((A,+)\), \(B\) est stable pour \(\cdot\) et \(1 \in B\);
-    \item \(B \subset A\) et \(\forall (x,y) \in B^2 \quad x-y \in B\)  et  \(xy \in B\) et \(1 \in B\).
+    \item \((B,+)\) est un sous-groupe de \((A,+)\), \(B\) est stable pour 
+      \(\cdot\) et \(1 \in B\);
+    \item \(B \subset A\) et \(\forall (x,y) \in B^2 \quad x-y \in B\)  et  \(xy 
+      \in B\) et \(1 \in B\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  2 et 3 sont équivalents grâce à la caractérisation des sous-groupes. 1 entraîne 2 par définition. Montrons ensuite que 1 entraîne 2. \(B\) est stable par \(\cdot\) par hypothèse et comme \((B,+)\) est un sous-groupe de \((A,+)\) il est stable par \(+\). On a \(1 \in B\). Il reste à montrer que B, muni des lois induites, est un anneau
+  2 et 3 sont équivalents grâce à la caractérisation des sous-groupes. 1 
+  entraîne 2 par définition. Montrons ensuite que 1 entraîne 2. \(B\) est stable 
+  par \(\cdot\) par hypothèse et comme \((B,+)\) est un sous-groupe de \((A,+)\) 
+  il est stable par \(+\). On a \(1 \in B\). Il reste à montrer que B, muni des 
+  lois induites, est un anneau
   \begin{itemize}
     \item \((B,+)\) est un groupe abélien car c'est un sous-groupe de \(A\);
-    \item \(\cdot\) sur \(B\) est un restriction de la loi associative \(\cdot\) sur \(A\), donc elle est associative;
-    \item \(\cdot\) est aussi distributive sur \(+\) sur \(B\) puisqu'elle l'est sur \(A\);
+    \item \(\cdot\) sur \(B\) est un restriction de la loi associative \(\cdot\) 
+      sur \(A\), donc elle est associative;
+    \item \(\cdot\) est aussi distributive sur \(+\) sur \(B\) puisqu'elle l'est 
+      sur \(A\);
     \item \(1 \in B\).
   \end{itemize}
   Alors \(B\) est un anneau.
@@ -715,14 +966,18 @@ Soit \((A,+,\cdot)\) un anneau et \(B\) un sous-anneau de \(A\), alors
 
 \subsection{Exemples}
 
-Si \((A,+,\cdot)\) est un anneau, alors \(A\) est un sous-anneau mais en général \(\{0\}\) n'est pas un sous-anneau de \(A\).
+Si \((A,+,\cdot)\) est un anneau, alors \(A\) est un sous-anneau mais en général 
+\(\{0\}\) n'est pas un sous-anneau de \(A\).
 
-\((\Z,+,\cdot)\) est un sous-anneau de \((\R,+,\cdot)\). \(\Z[\sqrt{2}]=\{a+b\sqrt{2}, (a,b) \in \Z^2\}\) est un sous-anneau de \(\R\).
+\((\Z,+,\cdot)\) est un sous-anneau de \((\R,+,\cdot)\). 
+\(\Z[\sqrt{2}]=\{a+b\sqrt{2}, (a,b) \in \Z^2\}\) est un sous-anneau de \(\R\).
 
 \subsection{Morphisme d'anneaux}
 
 \begin{defdef}
-  Soient \((A,+,\cdot)\) et \((B,+,\cdot)\) deux anneaux. On appelle morphisme d'anneaux de \(A\) sur \(B\) toute application \(\fonctionR{f}{A}{B}\) telle que
+  Soient \((A,+,\cdot)\) et \((B,+,\cdot)\) deux anneaux. On appelle morphisme 
+  d'anneaux de \(A\) sur \(B\) toute application \(\fonctionR{f}{A}{B}\) telle 
+  que
   \begin{enumerate}
     \item \(\forall (a,b) \in A^2 \quad f(a+b)=f(a)+f(b)\);
     \item \(\forall (a,b )\in A^2 \quad f(a \cdot b)=f(a) \cdot f(b)\);
@@ -730,14 +985,16 @@ Si \((A,+,\cdot)\) est un anneau, alors \(A\) est un sous-anneau mais en génér
   \end{enumerate}
 \end{defdef}
 
-Si \(f\) est un morphisme d'anneaux de \((A,+,\cdot)\) et \((B,+,\cdot)\) alors c'est un morphisme de groupe de \((A,+)\) sur \((B,+)\).
+Si \(f\) est un morphisme d'anneaux de \((A,+,\cdot)\) et \((B,+,\cdot)\) alors 
+c'est un morphisme de groupe de \((A,+)\) sur \((B,+)\).
 
 \subsection{Corps et sous-corps}
 
 \subsubsection{Corps}
 
 \begin{defdef}
-  On appelle corps tout anneau \((\K,+,\cdot)\) commutatif, non nul, dans lequel tous les éléments non nul admettent un inverse pour \(\cdot\).
+  On appelle corps tout anneau \((\K,+,\cdot)\) commutatif, non nul, dans lequel 
+  tous les éléments non nul admettent un inverse pour \(\cdot\).
 \end{defdef}
 \begin{prop}
   Soit \((\K,+,\cdot)\) un corps. Alors
@@ -749,41 +1006,67 @@ Si \(f\) est un morphisme d'anneaux de \((A,+,\cdot)\) et \((B,+,\cdot)\) alors 
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  Par définition tous les éléments non nuls sont inversibles. Attention à la notation étoilé. \(A^*\) peut signifier \(\uinv{A}\) ou \(A\setminus\{0\}\) qui peuvent être différents. Comme par exemple \(\uinv{\Z}=\{-1,1\}\) et \(\Z^*=\Z\setminus\{0\}\)
+  Par définition tous les éléments non nuls sont inversibles. Attention à la 
+  notation étoilé. \(A^*\) peut signifier \(\uinv{A}\) ou \(A\setminus\{0\}\) 
+  qui peuvent être différents. Comme par exemple \(\uinv{\Z}=\{-1,1\}\) et 
+  \(\Z^*=\Z\setminus\{0\}\)
   Puisque \(\K\setminus\{0\} = \uinv{\K}\) alors c'est un groupe. 
 
-  Soit \(a,b \in K\) tous non nuls. Si \(ab=0\) et comme \(a\) est non nul alors il est inversible donc \(b=0\) (Contradiction). Donc \(\K\) n'admet pas de diviseur de zéro. En plus il est commutatif et non nul donc il est intègre.
+  Soit \(a,b \in K\) tous non nuls. Si \(ab=0\) et comme \(a\) est non nul alors 
+  il est inversible donc \(b=0\) (Contradiction). Donc \(\K\) n'admet pas de 
+  diviseur de zéro. En plus il est commutatif et non nul donc il est intègre.
 \end{proof}
 
 \subsubsection{Sous-corps}
 
 \begin{defdef}
-  Soit \((\K,+,\cdot)\) un corps. On appelle sous-corps de \(\K\) tout sous-anneau \(\L\) de \(\K\) qui, muni des lois induites par celles de \(\K\), est un corps.
+  Soit \((\K,+,\cdot)\) un corps. On appelle sous-corps de \(\K\) tout 
+  sous-anneau \(\L\) de \(\K\) qui, muni des lois induites par celles de \(\K\), 
+  est un corps.
 \end{defdef}
 \begin{theo}[Caractérisation des sous-corps]
-  Soit \((\K,+,\cdot)\) un corps. Soit \(\L\) une partie de \(\K\). Il y a équivalence entre
+  Soit \((\K,+,\cdot)\) un corps. Soit \(\L\) une partie de \(\K\). Il y a 
+  équivalence entre
   \begin{enumerate}
     \item \(\L\) est un sous-corps de \(\K\);
-    \item \(\L\) est un sous-anneau de \(\K\) et pour tout élément non nul \(x \in \L\) on a \(x^{-1} \in \L\).
+    \item \(\L\) est un sous-anneau de \(\K\) et pour tout élément non nul \(x 
+      \in \L\) on a \(x^{-1} \in \L\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  Si \(\L\) est un sous-corps de \(\K\) alors \(\L\) est un sous-anneau de \(\K\). Muni des lois induites, \(\L\) est un corps et dans un corps tous les éléments non nuls sont inversibles.
+  Si \(\L\) est un sous-corps de \(\K\) alors \(\L\) est un sous-anneau de 
+  \(\K\). Muni des lois induites, \(\L\) est un corps et dans un corps tous les 
+  éléments non nuls sont inversibles.
 
-  Si \(\L\) est un sous-anneau de \(\K\), il faut juste vérifier que, muni des lois induites par celles de \(\K\), c'est un corps. Déjà \(\L\) est un sous-anneau commutatif, ensuite c'est un sous-anneau de \(\K\) donc \(0 \in \L\) et \(1 \in \L\). Comme \(\K\) est un corps \(0 \neq 1\). Donc \(\L\) n'est pas réduit à \(\{0\}\). Tout \(x\) non nul dans \(\L\) admet un inverse dans \(\K\) et c'est le même dans \(\L\). \(\L\) muni des lois induites est un corps. C'est donc un sous-corps de \(\K\). 
-\end{proof}
+Si \(\L\) est un sous-anneau de \(\K\), il faut juste vérifier que, muni des 
+lois induites par celles de \(\K\), c'est un corps. Déjà \(\L\) est un 
+sous-anneau commutatif, ensuite c'est un sous-anneau de \(\K\) donc \(0 \in \L\) 
+et \(1 \in \L\). Comme \(\K\) est un corps \(0 \neq 1\). Donc \(\L\) n'est pas 
+réduit à \(\{0\}\). Tout \(x\) non nul dans \(\L\) admet un inverse dans \(\K\) 
+et c'est le même dans \(\L\). \(\L\) muni des lois induites est un corps. C'est 
+donc un sous-corps de \(\K\). \end{proof}
 
 \subsubsection{Exemples}
 
-Les ensembles de nombres \(\Q\), \(\R\) et \(\C\) sont des corps. Un corps à deux éléments est \(\K=\{0,1\}\) tel que \(0+0=0\), \(0+1=1+0=1\),  \(1+1=0\), \(0 \cdot 0= 1 \cdot 0=0 \cdot 1=0\) et \(1 \cdot 1=1\).
+Les ensembles de nombres \(\Q\), \(\R\) et \(\C\) sont des corps. Un corps à 
+deux éléments est \(\K=\{0,1\}\) tel que \(0+0=0\), \(0+1=1+0=1\),  \(1+1=0\), 
+\(0 \cdot 0= 1 \cdot 0=0 \cdot 1=0\) et \(1 \cdot 1=1\).
 
 \subsubsection{Corps des fractions d'un anneau intègre}
 
 \begin{theo}[Admis]
-  Soit \((A,+,\cdot)\) un anneau intègre. Il existe un corps \(\K\), unique à isomorphisme près, tel que \(A\) soit un sous-anneau de \(\K\) et tel que les éléments de \(\K\) soient de la forme \(\frac{a}{b}\), avec \(a,b \in A\) et \(b \neq 0\). Ce corps \(\K\) est appelé corps des fractions de l'anneau intègre \(A\).
+  Soit \((A,+,\cdot)\) un anneau intègre. Il existe un corps \(\K\), unique à 
+  isomorphisme près, tel que \(A\) soit un sous-anneau de \(\K\) et tel que les 
+  éléments de \(\K\) soient de la forme \(\frac{a}{b}\), avec \(a,b \in A\) et 
+  \(b \neq 0\). Ce corps \(\K\) est appelé corps des fractions de l'anneau 
+  intègre \(A\).
 \end{theo}
 
-``Unique à isomorphisme près'' signifie que si deux corps \(\K\) et \(\K'\) vérifient ces hypothèses alors ils sont isomorphes. Comme par exemple, \(\Q\) est le corps des fractions de l'anneau intègre \(\Z\). \(\K(X)\), l'ensemble des fractions rationnelles, est le corps des fractions de l'anneau des polynômes \(K[X]\).
+``Unique à isomorphisme près'' signifie que si deux corps \(\K\) et \(\K'\) 
+vérifient ces hypothèses alors ils sont isomorphes. Comme par exemple, \(\Q\) 
+est le corps des fractions de l'anneau intègre \(\Z\). \(\K(X)\), l'ensemble des 
+fractions rationnelles, est le corps des fractions de l'anneau des polynômes 
+\(K[X]\).
 
 \section{Arithmétique dans \(\Z\)}
 
@@ -791,21 +1074,28 @@ Les ensembles de nombres \(\Q\), \(\R\) et \(\C\) sont des corps. Un corps à de
 
 \subsubsection{Anneau \((\Z,+,\cdot)\)}
 
-Les éléments de \(\Z\) sont les entiers relatifs. On admet les résultats suivants
+Les éléments de \(\Z\) sont les entiers relatifs. On admet les résultats 
+suivants
 
 \paragraph{Structure de \(\Z\)}
 
-\((\Z,+,\cdot)\) est un anneau intègre. L'ensemble des inversibles de \(\Z\), \(\uinv{\Z}=\{-1,1\}\), muni de la multiplication est un groupe.
+\((\Z,+,\cdot)\) est un anneau intègre. L'ensemble des inversibles de \(\Z\), 
+\(\uinv{\Z}=\{-1,1\}\), muni de la multiplication est un groupe.
 
 \paragraph{Ordre sur \(\Z\)}
 
-Muni de l'ordre usuel \(\leqslant\), \(\Z\) est un ensemble totalement ordonné. L'ordre est compatible avec la structure d'anneau de \(\Z\).
+Muni de l'ordre usuel \(\leqslant\), \(\Z\) est un ensemble totalement ordonné. 
+L'ordre est compatible avec la structure d'anneau de \(\Z\).
 \begin{align}
-  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ q \leqslant q' \implies p+q \leqslant p'+q';\\
-  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ 0 \leqslant q \implies pq \leqslant p'q.
+  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ q \leqslant q' \implies 
+  p+q \leqslant p'+q';\\
+  \forall (p,p',q,q') \in \Z^4 &\quad p \leqslant p' \ 0 \leqslant q \implies pq 
+  \leqslant p'q.
 \end{align}
 
-Toute partie non vide et majorée de \(\Z\) admet un plus grand élément. De la même manière, toute partie non vide et minorée de \(\Z\) admet un plus petit élément. \(\Z\) n'admet ni de plus petit ni de plus grand élément.
+Toute partie non vide et majorée de \(\Z\) admet un plus grand élément. De la 
+même manière, toute partie non vide et minorée de \(\Z\) admet un plus petit 
+élément. \(\Z\) n'admet ni de plus petit ni de plus grand élément.
 
 \paragraph{\(\Z\) est archimédien}
 
@@ -814,21 +1104,27 @@ C'est-à-dire que
   \forall a \in \Z \ \forall b \in \N^* \ \exists n \in \N \quad a \neq nb.
 \end{equation}
 \begin{proof}
-  Si \(a \leqslant 0\) on peut prendre \(n=0\) puisque \(0 \cdot b = 0 \geqslant a\). Sinon \(a \geqslant 1\) et \(b \in \N^*\) donc \(b \geqslant 1\) alors \(ab \geqslant a\). On peut prendre \(n=a \in \N\).
+  Si \(a \leqslant 0\) on peut prendre \(n=0\) puisque \(0 \cdot b = 0 \geqslant 
+  a\). Sinon \(a \geqslant 1\) et \(b \in \N^*\) donc \(b \geqslant 1\) alors 
+  \(ab \geqslant a\). On peut prendre \(n=a \in \N\).
 \end{proof}
 
 \subsubsection{Division euclidienne}
 
-La division euclidienne d'un entier relatif par un entier relatif non nul est telle que
+La division euclidienne d'un entier relatif par un entier relatif non nul est 
+telle que
 \begin{theo}
-  Pour tout couple \((a,b) \in \Z \times \N\) avec \(b \neq 0\). Il existe un unique couple \((q,r) \in \Z^2\) tel que
+  Pour tout couple \((a,b) \in \Z \times \N\) avec \(b \neq 0\). Il existe un 
+  unique couple \((q,r) \in \Z^2\) tel que
   \begin{equation}
     \begin{cases}
       a=bq+r \\ 0 \leqslant r < b
     \end{cases}.
   \end{equation}
 \end{theo}
-L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \(b\). L'entier \(r\) est appelé le reste de la division euclidienne de \(a\) par \(b\). 
+L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par 
+\(b\). L'entier \(r\) est appelé le reste de la division euclidienne de \(a\) 
+par \(b\). 
 
 \begin{proof}[Unicité]
   Soient \((q,r)\) et \((q',r')\) deux couples de \(\Z^2\) tels que
@@ -840,22 +1136,35 @@ L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \
       a=bq'+r' \\ 0 \leqslant r' < b
     \end{cases}.
   \end{equation}
-  Alors \(bq+r=bq'+r'\) et donc \(b(q-q')=r'-r\). De plus \(\abs{r'-r} < b\). Supposons que \(q-q' \neq 0\), alors \(\abs{q-q'} \geqslant 1\) alors \(\abs{r'-r}=b\abs{q-q'} \geqslant b\). Contradiction. Donc \(q=q'\). Par conséquent \(r=r'\).
+  Alors \(bq+r=bq'+r'\) et donc \(b(q-q')=r'-r\). De plus \(\abs{r'-r} < b\). 
+  Supposons que \(q-q' \neq 0\), alors \(\abs{q-q'} \geqslant 1\) alors 
+  \(\abs{r'-r}=b\abs{q-q'} \geqslant b\). Contradiction. Donc \(q=q'\). Par 
+  conséquent \(r=r'\).
 \end{proof}
 \begin{proof}[Existence]
-  Soit l'ensemble \(A=\enstq{k \in \Z}{bk \leqslant a}\). Alors 
-  \begin{itemize}
+  Soit l'ensemble \(A=\enstq{k \in \Z}{bk \leqslant a}\). Alors \begin{itemize}
     \item \(A\) est une partie de \(\Z\);
     \item \(A\) est non vide~:
       \begin{itemize}
         \item si \(a \geqslant 0\) alors \(0b \leqslant a\) donc \(0 \in A\);
-        \item si \(a < 0\) alors pour tout \(k \in \Z\) \(bk \leqslant a \iff -a \leqslant b(-k)\);
-        \item \(\Z\) est archimédien et \(b>0\) donc il existe \(m \in \N\) tel que \(-a \leqslant bm\) on pose \(k=-m \in \Z\) alors \(bk \leqslant a\) donc \(k \in A\).
+        \item si \(a < 0\) alors pour tout \(k \in \Z\) \(bk \leqslant a \iff -a 
+          \leqslant b(-k)\);
+        \item \(\Z\) est archimédien et \(b>0\) donc il existe \(m \in \N\) tel 
+          que \(-a \leqslant bm\) on pose \(k=-m \in \Z\) alors \(bk \leqslant 
+          a\) donc \(k \in A\).
       \end{itemize}
-    \item \(A\) est majorée, puisque pour tout \(k \in \Z\), \(bk \leqslant a \leqslant \abs{a} \leqslant b \abs{a}\) car \(b \geqslant 1\). Alors \(b(k-\abs{a}) \leqslant 0\) or \(b \geqslant 0\) donc \(k-\abs{a} \geqslant 0\) alors \(k \leqslant \abs{a}\). Donc \(\abs{a}\) est un majorant de \(A\).
+    \item \(A\) est majorée, puisque pour tout \(k \in \Z\), \(bk \leqslant a 
+      \leqslant \abs{a} \leqslant b \abs{a}\) car \(b \geqslant 1\). Alors 
+      \(b(k-\abs{a}) \leqslant 0\) or \(b \geqslant 0\) donc \(k-\abs{a} 
+      \geqslant 0\) alors \(k \leqslant \abs{a}\). Donc \(\abs{a}\) est un 
+      majorant de \(A\).
   \end{itemize}
 
-  Finalement \(A\) est une partie non vide et majorée de \(\Z\) donc \(A\) admet un plus grand élément et on le note \(q\). On pose \(z=ab-q\). Alors \((q,r) \in \Z^2\) par définition. L'élément \(q\) est le plus grand de \(A\) donc \(q \in A\) et \(q+1 \notin A\). Ainsi \(bq \leqslant a\) et \(b(q+1) > a\). Alors \(0 \leqslant r < b\). 
+  Finalement \(A\) est une partie non vide et majorée de \(\Z\) donc \(A\) admet 
+  un plus grand élément et on le note \(q\). On pose \(z=ab-q\). Alors \((q,r) 
+  \in \Z^2\) par définition. L'élément \(q\) est le plus grand de \(A\) donc \(q 
+  \in A\) et \(q+1 \notin A\). Ainsi \(bq \leqslant a\) et \(b(q+1) > a\). Alors 
+  \(0 \leqslant r < b\). 
 
   Le couple \((q,r)\) convient.
 \end{proof}
@@ -863,7 +1172,8 @@ L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \
 \paragraph{Division euclidienne dans \(\N\)}
 
 \begin{theo}
-  Pour tout couple \((a,b) \in \N^2\) avec \(b \neq 0\). Il existe un unique couple \((q,r) \in \N^2\) tel que
+  Pour tout couple \((a,b) \in \N^2\) avec \(b \neq 0\). Il existe un unique 
+  couple \((q,r) \in \N^2\) tel que
   \begin{equation}
     \begin{cases}
       a=bq+r \\ 0 \leqslant r < b
@@ -871,13 +1181,17 @@ L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \
   \end{equation}
 \end{theo}
 \begin{proof}
-  On applique le théorème précédent. La seule chose à vérifier est alors \(q \in \N\). Supposons que \(q \notin \N\) alors \(q \leqslant -1\). Puisque \(b>0\) donc \(bq \leqslant -b\). Alors \(a=bq+r \leqslant r-b <0\), ce qui contredit l'hypothèse de départ. Donc \(q \in \N\).
+  On applique le théorème précédent. La seule chose à vérifier est alors \(q \in 
+  \N\). Supposons que \(q \notin \N\) alors \(q \leqslant -1\). Puisque \(b>0\) 
+  donc \(bq \leqslant -b\). Alors \(a=bq+r \leqslant r-b <0\), ce qui contredit 
+  l'hypothèse de départ. Donc \(q \in \N\).
 \end{proof}
 
 \paragraph{Autre division euclidienne dans \(\Z\)}
 
 \begin{theo}
-  Pour tout couple \((a,b) \in \Z^2\) avec \(b \neq 0\). Il existe un unique couple \((q,r) \in \Z^2\) tel que
+  Pour tout couple \((a,b) \in \Z^2\) avec \(b \neq 0\). Il existe un unique 
+  couple \((q,r) \in \Z^2\) tel que
   \begin{equation}
     \begin{cases}
       a=bq+r \\ 0 \leqslant r < \abs{b}
@@ -885,7 +1199,8 @@ L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \
   \end{equation}
 \end{theo}
 \begin{proof}[Existence]
-  Si \(b>0\), on applique le premier théorème et on a \(b=|b|\). Si \(b<0\), on applique le premier théorème à \((a,-b) \in \Z \times \N\) et
+  Si \(b>0\), on applique le premier théorème et on a \(b=|b|\). Si \(b<0\), on 
+  applique le premier théorème à \((a,-b) \in \Z \times \N\) et
   \begin{equation}
     \exists (q^*, r^*) \in \Z^2 \
     \begin{cases}
@@ -909,22 +1224,30 @@ L'entier \(q\) est appelé le quotient de la division euclidienne de \(a\) par \
       a=bq' + r' \\ 0 \leqslant r' < b
     \end{cases}.
   \end{equation}
-  On a \(b(q-q')=r'-r\) et on a \(\abs{r'-r} < \abs{b}\). Si \(q \neq q'\) alors \(\abs{q-q'} \geqslant 1\) et donc \(\abs{r'-r}=\abs{b}\abs{q-q'} \geqslant \abs{b}\). On a une contradiction donc \(q=q'\) et alors \(r=r'\).
+  On a \(b(q-q')=r'-r\) et on a \(\abs{r'-r} < \abs{b}\). Si \(q \neq q'\) alors 
+  \(\abs{q-q'} \geqslant 1\) et donc \(\abs{r'-r}=\abs{b}\abs{q-q'} \geqslant 
+  \abs{b}\). On a une contradiction donc \(q=q'\) et alors \(r=r'\).
 \end{proof}
 
 \paragraph{Algorithme de la division euclidienne dans \(\N\)}
 
-Soit \(a,b \in \N\) avec \(b \neq 0\). On notera \(q(a,b)\) et \(r(a,b)\) le quotient et le reste de la division euclidienne de \(a\) par \(b\).
+Soit \(a,b \in \N\) avec \(b \neq 0\). On notera \(q(a,b)\) et \(r(a,b)\) le 
+quotient et le reste de la division euclidienne de \(a\) par \(b\).
 
 \begin{prop}
-  Si \(a \leqslant b\) alors \(q(a,b)=0\) et \(r(a,b)=a\). Si \(a \geqslant b\) alors \(q(a,b)=q(a-b,b)+1\) et \(r(a,b)=r(a-b,b)\).
+  Si \(a \leqslant b\) alors \(q(a,b)=0\) et \(r(a,b)=a\). Si \(a \geqslant b\) 
+  alors \(q(a,b)=q(a-b,b)+1\) et \(r(a,b)=r(a-b,b)\).
 \end{prop}
 \begin{proof}
-  Si \(a < b\) alors \(a=0 \cdot b + a\). On a \(0 \in \N\) et \(a \in \N\) et \(0 \leqslant a <b\) par unicité du reste et du quotient \(q(a,b)=0\) et \(r(a,b)=a\).
+  Si \(a < b\) alors \(a=0 \cdot b + a\). On a \(0 \in \N\) et \(a \in \N\) et 
+  \(0 \leqslant a <b\) par unicité du reste et du quotient \(q(a,b)=0\) et 
+  \(r(a,b)=a\).
 
-  Si \(a > b\) alors \(a=q(a,b)b+r(a,b)\) et donc \(a-b=q(a,b)b+r(a,b)-b=(q(a,b)-1)b+r(a,b)\).
+  Si \(a > b\) alors \(a=q(a,b)b+r(a,b)\) et donc 
+  \(a-b=q(a,b)b+r(a,b)-b=(q(a,b)-1)b+r(a,b)\).
 
-  On sait que \(q(a,b)-1 \in \N\) puisque sinon on aurait \(q(a,b) =0\) et alors on aurait \(a=r(a,b) \leqslant b\) ce qui contredit l'hypothèse.
+  On sait que \(q(a,b)-1 \in \N\) puisque sinon on aurait \(q(a,b) =0\) et alors 
+  on aurait \(a=r(a,b) \leqslant b\) ce qui contredit l'hypothèse.
 
   Par unicité de la division euclidienne de \(a-b\) par \(b\).
   \begin{equation}
@@ -937,32 +1260,46 @@ Soit \(a,b \in \N\) avec \(b \neq 0\). On notera \(q(a,b)\) et \(r(a,b)\) le quo
 \subsubsection{Divisibilité}
 
 \begin{prop}
-  Pour tout entier \(a\), l'ensemble \(a\Z=\enstq{b \in \Z}{\exists q \in \Z b=aq}\) est un sous-groupe de \((\Z,+)\).
+  Pour tout entier \(a\), l'ensemble \(a\Z=\enstq{b \in \Z}{\exists q \in \Z 
+  b=aq}\) est un sous-groupe de \((\Z,+)\).
 \end{prop}
 \begin{proof}
   \begin{enumerate}
     \item \(a\Z \subset \Z\);
     \item \(0 \in a\Z\) donc \(a\Z\) est non vide;
-    \item soient \((x,y) \in a\Z^2\) alors il existe deux entiers relatifs \(q,q'\) tels que \(x=aq\) et \(y=aq'\), alors \(x-y=a(q-q')\) et comme \(q-q' \in \Z\) on a \(x-y \in a\Z\).
+    \item soient \((x,y) \in a\Z^2\) alors il existe deux entiers relatifs 
+      \(q,q'\) tels que \(x=aq\) et \(y=aq'\), alors \(x-y=a(q-q')\) et comme 
+      \(q-q' \in \Z\) on a \(x-y \in a\Z\).
   \end{enumerate}
-  Par caractérisation des sous-groupes, \(a\Z\) est un sous-groupe de \((\Z,+)\).
+  Par caractérisation des sous-groupes, \(a\Z\) est un sous-groupe de 
+  \((\Z,+)\).
 \end{proof}
 
 \paragraph{Divisibilité dans \(\Z\)}
 
 \begin{defdef}
-  Soient \((a,b) \in \Z^2\), on dit que \(b\) divise \(a\) dans \(\Z\), ou que \(b\) est un multiple de \(a\) dans \(\Z\) et on note \(b\mid a\) si et seulement s'il existe \(q \in \Z\) tel que \(a=bq\).
+  Soient \((a,b) \in \Z^2\), on dit que \(b\) divise \(a\) dans \(\Z\), ou que 
+  \(b\) est un multiple de \(a\) dans \(\Z\) et on note \(b\mid a\) si et 
+  seulement s'il existe \(q \in \Z\) tel que \(a=bq\).
   \begin{equation}
     b\mid a \iff a \in b\Z.
   \end{equation}
 \end{defdef}
-On a \(0\mid 0\) puisque pour tout \(q \in \Z\), \(0=0 \times q\). Pour tout \(q \in \Z\) \(q\mid 0\) car \(0=0 \times q\). Pour tout \(q \in \Z\), si \(0\mid q\) alors \(q=0\).
+On a \(0\mid 0\) puisque pour tout \(q \in \Z\), \(0=0 \times q\). Pour tout \(q 
+\in \Z\) \(q\mid 0\) car \(0=0 \times q\). Pour tout \(q \in \Z\), si \(0\mid 
+q\) alors \(q=0\).
 
 \begin{prop}
-  La relation de divisibilité est réflexive et transitive, cependant elle n'est ni symétrique ni antisymétrique.
+  La relation de divisibilité est réflexive et transitive, cependant elle n'est 
+  ni symétrique ni antisymétrique.
 \end{prop}
 \begin{proof}
-  Pour tout entier \(a \in \Z\), on a \(a\mid a\). Soient \((a,b,c) \in \Z^2\) tels que \(a\mid b\) et \(b\mid c\) alors il existe \(k\) et \(l\) dans \(\Z\) tels que \(b=ak\) \(c=lb\) donc \(c=(lk)a\) donc \(a\mid c\). Ainsi la relation de divisibilité est transitive. Elle ,n'est pas symétrique puisque 2 divise 4 mais 4 ne divise pas 2. Elle n'est pas antisymétrique puisque \(5\mid -5\) et \(-5[5\) mais \(5 \neq -5\).
+  Pour tout entier \(a \in \Z\), on a \(a\mid a\). Soient \((a,b,c) \in \Z^2\) 
+  tels que \(a\mid b\) et \(b\mid c\) alors il existe \(k\) et \(l\) dans \(\Z\) 
+  tels que \(b=ak\) \(c=lb\) donc \(c=(lk)a\) donc \(a\mid c\). Ainsi la 
+  relation de divisibilité est transitive. Elle ,n'est pas symétrique puisque 2 
+  divise 4 mais 4 ne divise pas 2. Elle n'est pas antisymétrique puisque \(5\mid 
+  -5\) et \(-5[5\) mais \(5 \neq -5\).
 \end{proof}
 \begin{prop}
   \begin{equation}
@@ -971,8 +1308,12 @@ On a \(0\mid 0\) puisque pour tout \(q \in \Z\), \(0=0 \times q\). Pour tout \(q
 \end{prop}
 \begin{proof}
   \begin{itemize}
-    \item[\(\impliedby\)] Si \(a\Z \subset b\Z\) alors \(a \in b\Z\) donc \(b\mid a\).
-    \item[\(\implies\)] Si \(b\mid a\) alors il existe \(k \in \Z\) tel que \(a=bk\). Soit \(n \in a\Z\), alors il existe \(q \in \Z\) tel que \(n=aq\). Alors \(n=aq=b(kq)\) donc \(n \in b\Z\). Alors \(a\Z \subset b\Z\).
+    \item[\(\impliedby\)] Si \(a\Z \subset b\Z\) alors \(a \in b\Z\) donc 
+      \(b\mid a\).
+    \item[\(\implies\)] Si \(b\mid a\) alors il existe \(k \in \Z\) tel que 
+      \(a=bk\). Soit \(n \in a\Z\), alors il existe \(q \in \Z\) tel que 
+      \(n=aq\). Alors \(n=aq=b(kq)\) donc \(n \in b\Z\). Alors \(a\Z \subset 
+      b\Z\).
   \end{itemize}
 \end{proof}
 \begin{prop}
@@ -982,38 +1323,56 @@ On a \(0\mid 0\) puisque pour tout \(q \in \Z\), \(0=0 \times q\). Pour tout \(q
 \end{prop}
 \begin{proof}
   \begin{itemize}
-    \item[\(\implies\)] Si \(b\mid a\) alors il existe \(q \in \Z\) tel que \(a=bq+0\) et on a \(0\leqslant \abs{b}\) donc par unicité de la division euclidienne \(r(a,b)=0\).
-    \item[\(\impliedby\)] Si \(r(a,b)=0\) alors \(a=q(a,b) b+r(a,b)\) avec \(q(a,b) \in \Z\) et \(r(a,b)=0\) et \(q=q(a,b)\) par définition \(b|a\).
+    \item[\(\implies\)] Si \(b\mid a\) alors il existe \(q \in \Z\) tel que 
+      \(a=bq+0\) et on a \(0\leqslant \abs{b}\) donc par unicité de la division 
+      euclidienne \(r(a,b)=0\).
+    \item[\(\impliedby\)] Si \(r(a,b)=0\) alors \(a=q(a,b) b+r(a,b)\) avec 
+      \(q(a,b) \in \Z\) et \(r(a,b)=0\) et \(q=q(a,b)\) par définition \(b|a\).
   \end{itemize}
 \end{proof}
 
-Si \(b \neq 0\) et si \(b\mid a\), le quotient \(q\) de la division euclidienne de \(a\) par \(b\) alors \(a=bq\). Il est appelé le quotient exact de \(a\) par \(b\) et noté parfois \(q=\frac{a}{b}\). Cependant cette notation est un peu abusive et elle est à éviter.
+Si \(b \neq 0\) et si \(b\mid a\), le quotient \(q\) de la division euclidienne 
+de \(a\) par \(b\) alors \(a=bq\). Il est appelé le quotient exact de \(a\) par 
+\(b\) et noté parfois \(q=\frac{a}{b}\). Cependant cette notation est un peu 
+abusive et elle est à éviter.
 
 \paragraph{Entiers relatifs associés}
 
 \begin{defdef}
-  Pour tout couple \((a,b) \in \Z^2\) on dit que \(a\) et \(b\) sont associés si et seulement si \(a\mid b\) et \(b\mid a\).
+  Pour tout couple \((a,b) \in \Z^2\) on dit que \(a\) et \(b\) sont associés si 
+  et seulement si \(a\mid b\) et \(b\mid a\).
 \end{defdef}
 \begin{prop}
-  Pour tout \(a,b \in \Z\), \(a\) et \(b\) sont associés si et seulement si \(a\Z=b\Z\), c'est à dire si et seulement si \(a=b\) ou \(a=-b\).
+  Pour tout \(a,b \in \Z\), \(a\) et \(b\) sont associés si et seulement si 
+  \(a\Z=b\Z\), c'est à dire si et seulement si \(a=b\) ou \(a=-b\).
 \end{prop}
 \begin{proof}
-  On a déjà vu que \(a\mid b \iff b\Z \subset a\Z\). Alors \(a\) et \(b\) sont associés si et seulement si \(a\mid b\) et \(b\mid a\) donc si et seulement si (par double inclusion) \(a\Z=b\Z\).
+  On a déjà vu que \(a\mid b \iff b\Z \subset a\Z\). Alors \(a\) et \(b\) sont 
+  associés si et seulement si \(a\mid b\) et \(b\mid a\) donc si et seulement si 
+  (par double inclusion) \(a\Z=b\Z\).
 
-  Il faut monter la deuxième équivalence. Si \(a=b\) ou \(a=-b\), on a clairement \(a\Z=b\Z\). Si \(a\) et \(b\) sont associées alors \(b\mid a\) et \(a\mid b\) donc il existe \(k\) et \(l\) dans \(\Z\) tels que \(b=ak\) et \(a=bl\). donc \(b=blk\) donc \(b(1-lk)=0\). L'anneau \(\Z\) est intègre, donc \(b=0\) ou \(1-lk=0\).
+  Il faut monter la deuxième équivalence. Si \(a=b\) ou \(a=-b\), on a 
+  clairement \(a\Z=b\Z\). Si \(a\) et \(b\) sont associées alors \(b\mid a\) et 
+  \(a\mid b\) donc il existe \(k\) et \(l\) dans \(\Z\) tels que \(b=ak\) et 
+  \(a=bl\). donc \(b=blk\) donc \(b(1-lk)=0\). L'anneau \(\Z\) est intègre, donc 
+  \(b=0\) ou \(1-lk=0\).
 
-  Si \(b=0\) alors \(a=bl=0\) donc \(a=b\). Sinon alors \(1-lk=0\) alors \((l,k)=(1,1)\) ou \((l,k)=(-1,-1)\). Alors \(a=b\) ou \(a=-b\).
+  Si \(b=0\) alors \(a=bl=0\) donc \(a=b\). Sinon alors \(1-lk=0\) alors 
+  \((l,k)=(1,1)\) ou \((l,k)=(-1,-1)\). Alors \(a=b\) ou \(a=-b\).
 \end{proof}
 
-La relation d'association dans \(\Z\) est une relation d'équivalence. En effet, elle est réflexive, \(a\) est associé à \(a\)~:
+La relation d'association dans \(\Z\) est une relation d'équivalence. En effet, 
+elle est réflexive, \(a\) est associé à \(a\)~:
 \begin{equation}
   \forall a \in \Z \quad a\Z=a\Z;
 \end{equation}
-elle est symétrique, si \(a\) est associé à \(b\) alors \(b\) est associé à \(a\)~:
+elle est symétrique, si \(a\) est associé à \(b\) alors \(b\) est associé à 
+\(a\)~:
 \begin{equation}
   \forall a,b \in \Z \quad a\Z=b\Z \iff b\Z=a\Z;
 \end{equation}
-elle est transitive, si \(a\) est associé à \(b\) et si \(b\) est associé à \(c\) alors \(a\) est associé à \(c\)~:
+elle est transitive, si \(a\) est associé à \(b\) et si \(b\) est associé à 
+\(c\) alors \(a\) est associé à \(c\)~:
 \begin{equation}
   \forall a,b,c \in \Z \quad a\Z=b\Z \ b\Z=c\Z \iff a\Z=c\Z.
 \end{equation}
@@ -1021,26 +1380,50 @@ elle est transitive, si \(a\) est associé à \(b\) et si \(b\) est associé à 
 \subsubsection{Sous groupes additifs de \(\Z\)}
 
 \begin{theo}
-  les sous-groupes additifs de \((\Z,+)\) sont les parties de la forme \(a\Z\), \(a \in \N\). De plus si \(H\) est un sous-groupe de \((\Z,+)\), il existe un unique entier \(a \in \N\) tel que \(H=a\Z\).
+  les sous-groupes additifs de \((\Z,+)\) sont les parties de la forme \(a\Z\), 
+  \(a \in \N\). De plus si \(H\) est un sous-groupe de \((\Z,+)\), il existe un 
+  unique entier \(a \in \N\) tel que \(H=a\Z\).
 \end{theo}
 \begin{proof}
-  Les \(a\Z\) \(a \in \N\) sont des sous-groupes de \((\Z,+)\). Soit \(H\) un sous-groupe de \((\Z,+)\). Si \(H\) est le sous-groupe nul alors c'est un \(a\Z\) avec \(a=0\). Sinon, il y a dans \(H\) au moins un entier relatif \(n_0\) non nul. Soit alors \(A=\enstq{\abs{h}}{h \in H\setminus\{0\}}\), alors c'est une partie de \(\N\) qui est non vide (puisque \(\abs{n_0} \in A\)). Alors \(A\) admet un plus petit élément noté \(a\). Alors \(a \in \N\) donc \(\abs{a}=a\) et \(a \in H\setminus\{0\}\). Montrons que \(H=a\Z\), par double inclusion. Déjà \(a \in H\). Puisque \(H\) est un sous-groupe, alors il est stable par addition. Ainsi par récurrence on obtient
+  Les \(a\Z\) \(a \in \N\) sont des sous-groupes de \((\Z,+)\). Soit \(H\) un 
+  sous-groupe de \((\Z,+)\). Si \(H\) est le sous-groupe nul alors c'est un 
+  \(a\Z\) avec \(a=0\). Sinon, il y a dans \(H\) au moins un entier relatif 
+  \(n_0\) non nul. Soit alors \(A=\enstq{\abs{h}}{h \in H\setminus\{0\}}\), 
+  alors c'est une partie de \(\N\) qui est non vide (puisque \(\abs{n_0} \in 
+  A\)). Alors \(A\) admet un plus petit élément noté \(a\). Alors \(a \in \N\) 
+  donc \(\abs{a}=a\) et \(a \in H\setminus\{0\}\). Montrons que \(H=a\Z\), par 
+  double inclusion. Déjà \(a \in H\). Puisque \(H\) est un sous-groupe, alors il 
+  est stable par addition. Ainsi par récurrence on obtient
   \begin{equation}
     \forall n \in \N^* \quad na \in H.
   \end{equation}
-  Si \(n=0\) alors \(na=0 \in H\) puisque c'est un sous-groupe de \((\Z,+)\). %Il est aussi stable par passage au symétrique alors
+  Si \(n=0\) alors \(na=0 \in H\) puisque c'est un sous-groupe de \((\Z,+)\). 
+  %Il est aussi stable par passage au symétrique alors
   \begin{equation}
     \forall n \in \Z\setminus\N \quad na=-(-na) \quad -n \in \N,
   \end{equation}
-  comme \(-na \in H\) d'après le premier point et comme \(H\) est stable par passage au symétrique \(na \in H\). Alors
+  comme \(-na \in H\) d'après le premier point et comme \(H\) est stable par 
+  passage au symétrique \(na \in H\). Alors
   \begin{equation}
     \forall n \in \Z \quad na \in H.
   \end{equation}
-  On vient de montrer que \(a\Z \subset H\). Soit \(h \in H\), montrons que \(h \in a\Z\). On sait que \(a \neq 0\) donc on peut effectuer la division euclidienne de \(h\) par \(a\)
+  On vient de montrer que \(a\Z \subset H\). Soit \(h \in H\), montrons que \(h 
+  \in a\Z\). On sait que \(a \neq 0\) donc on peut effectuer la division 
+  euclidienne de \(h\) par \(a\)
   \begin{equation}
-    \exists! (q,r) \in \Z^2 \quad \begin{cases} h=aq+r \\ 0 \leqslant r < a \end{cases}.
+    \exists! (q,r) \in \Z^2 \quad \begin{cases} h=aq+r \\ 0 \leqslant r < a 
+    \end{cases}.
   \end{equation}
-  Déjà \(h \in H\) et comme \(aq \in a\Z \subset H\) on a \(r=h-aq \in H\) puisque \(H\) est un sous-groupe de \((\Z,+)\). Or \(0 \leqslant r < a\), si \(r \neq 0\) alors \(r \in H\setminus\{0\}\) donc \(\abs{r}=r \in A\) or \(r < a\) et \(a\) est le plus petit élément de \(H\), c'est impossible. Nécessairement \(r=0\). Donc \(a\mid h\) et \(h \in a\Z\). Ainsi \(H \subset a\Z\). Finalement par double inclusion \(H=a\Z\). Soit \((a,b) \in \N^2\) tels que \(a\Z=b\Z\) alors \(a\) et \(b\) sont associés alors \(a=b\) ou \(a=-b\). Or \(a \geqslant 0\) et \(b \geqslant 0\) donc \(a=b\). Si \(H\) est un sous-groupe de \((\Z,+)\) alors il existe un unique naturel \(a\) tel que \(H=a\Z\).
+  Déjà \(h \in H\) et comme \(aq \in a\Z \subset H\) on a \(r=h-aq \in H\) 
+  puisque \(H\) est un sous-groupe de \((\Z,+)\). Or \(0 \leqslant r < a\), si 
+  \(r \neq 0\) alors \(r \in H\setminus\{0\}\) donc \(\abs{r}=r \in A\) or \(r < 
+  a\) et \(a\) est le plus petit élément de \(H\), c'est impossible. 
+  Nécessairement \(r=0\). Donc \(a\mid h\) et \(h \in a\Z\). Ainsi \(H \subset 
+  a\Z\). Finalement par double inclusion \(H=a\Z\). Soit \((a,b) \in \N^2\) tels 
+  que \(a\Z=b\Z\) alors \(a\) et \(b\) sont associés alors \(a=b\) ou \(a=-b\). 
+  Or \(a \geqslant 0\) et \(b \geqslant 0\) donc \(a=b\). Si \(H\) est un 
+  sous-groupe de \((\Z,+)\) alors il existe un unique naturel \(a\) tel que 
+  \(H=a\Z\).
 \end{proof}
 
 \subsection{PGCD \& PPCM}
@@ -1052,14 +1435,16 @@ elle est transitive, si \(a\) est associé à \(b\) et si \(b\) est associé à 
 \begin{defdef}
   Soit \(a \in \Z\), on pose
   \begin{equation}
-    \Div(a)=\enstq{b \in \Z}{b\mid a}=\enstq{b \in \Z}{\exists k \in \Z \quad a=bk}.
+    \Div(a)=\enstq{b \in \Z}{b\mid a}=\enstq{b \in \Z}{\exists k \in \Z \quad 
+    a=bk}.
   \end{equation}
 \end{defdef}
 \begin{prop}
   \begin{equation}
     \forall a \in \Z \quad \{1,-1,a,-a\} \subset \Div(a).
   \end{equation}
-  Ce sont les diviseurs triviaux. S'il existe d'autres diviseurs, ils sont appelés les diviseurs propres de \(a\).
+  Ce sont les diviseurs triviaux. S'il existe d'autres diviseurs, ils sont 
+  appelés les diviseurs propres de \(a\).
   \begin{align}
     \forall a \in \Z &\quad \Div(a)=\Div(-a)=\Div(\abs{a}); \\
     \forall (a,x) \in \Z^2 &\quad -x \in \Div(a) \iff x \in \Div(a).
@@ -1068,34 +1453,46 @@ elle est transitive, si \(a\) est associé à \(b\) et si \(b\) est associé à 
 \begin{prop}
   \begin{align}
     \forall (a,b) \in \Z^2 &\quad b\in \Div(a) \iff b\mid a \iff a \in b\Z;\\
-    \forall (a,b) \in \Z^2 &\quad \Div(b) \subset \Div(a) \iff b\mid a \iff a\Z \subset b\Z; \\
-    \forall (a,b) \in \Z^2 &\quad \Div(a)=\Div(b) \iff a\mid b \text{~et~} b \mid a \iff a=b \text{~et~} a=-b.
+    \forall (a,b) \in \Z^2 &\quad \Div(b) \subset \Div(a) \iff b\mid a \iff a\Z 
+    \subset b\Z; \\
+    \forall (a,b) \in \Z^2 &\quad \Div(a)=\Div(b) \iff a\mid b \text{~et~} b 
+    \mid a \iff a=b \text{~et~} a=-b.
   \end{align}
 \end{prop}
 
-\(b\Z\) est un sous-groupe de \((\Z,+)\) mais pas \(\Div(a)\). En effet, par exemple \(\Div(1)=\{-1,1\}\) n'est pas un sous-groupe puisque \(0 \notin \Div(1)\) et puisqu'il n'est pas stable par l'addition.
+\(b\Z\) est un sous-groupe de \((\Z,+)\) mais pas \(\Div(a)\). En effet, par 
+exemple \(\Div(1)=\{-1,1\}\) n'est pas un sous-groupe puisque \(0 \notin 
+\Div(1)\) et puisqu'il n'est pas stable par l'addition.
 
 \begin{prop}
-  \(\Div(0)=\Z\) et \(b \in \Div(0) \iff \exists k \in \Z \ 0=bk \quad \forall b \in \Z \ 0=b\cdot 0\).
+  \(\Div(0)=\Z\) et \(b \in \Div(0) \iff \exists k \in \Z \ 0=bk \quad \forall b 
+  \in \Z \ 0=b\cdot 0\).
 \end{prop}
-Si \(a \neq 0\), \(\abs{a}\) est le plus grand élément de \(\Div(a)\) pour l'ordre usuel (et \(-\abs{a}\) est le plus petit).
+Si \(a \neq 0\), \(\abs{a}\) est le plus grand élément de \(\Div(a)\) pour 
+l'ordre usuel (et \(-\abs{a}\) est le plus petit).
 \begin{gather}
   \forall a \in \Z^* \quad (a,-a) \in \Div(a)^2 \\
   \forall x \in \Div(a) \quad x\mid a \text{~et~} x\mid -a.
 \end{gather}
-\(a\) et \(-a\) sont deux plus grand éléments pour la relation de divisibilité. La relation de divisibilité n'est pas une relation d'ordre dans \(\Z\) car elle n'est pas antisymétrique, c'est pourquoi il n'y a pas unicité du plus grand élément.
+\(a\) et \(-a\) sont deux plus grand éléments pour la relation de divisibilité. 
+La relation de divisibilité n'est pas une relation d'ordre dans \(\Z\) car elle 
+n'est pas antisymétrique, c'est pourquoi il n'y a pas unicité du plus grand 
+élément.
 
 Si \(a=0\); \(0\) est le plus grand élément de \(\Z\) qui divise \(a\).
 
 \paragraph{Diviseurs communs de deux entiers}
 
-Étant donnés deux entiers relatifs \(a\) et \(b\). L'ensemble des diviseurs communs de \(a\) et \(b\) est \(\Div(a) \cap \Div(b)\),
+Étant donnés deux entiers relatifs \(a\) et \(b\). L'ensemble des diviseurs 
+communs de \(a\) et \(b\) est \(\Div(a) \cap \Div(b)\),
 \begin{equation}
   \forall (a,b) \in \Z^2 \quad \{-1,1\} \subset \Div(a) \cap \Div(b).
 \end{equation}
 
 \begin{defdef}\label{def:premiersentreeux}
-  Soit \((a,b) \in \Z^2\). Si \(\Div(a) \cap \Div(b) = \{-1, 1\}\). On dit que \(a\) et \(b\) sont premiers entre eux. Cela signifie que les seuls diviseurs communs de \(a\) et \(b\) sont \(1\) et \(-1\).
+  Soit \((a,b) \in \Z^2\). Si \(\Div(a) \cap \Div(b) = \{-1, 1\}\). On dit que 
+  \(a\) et \(b\) sont premiers entre eux. Cela signifie que les seuls diviseurs 
+  communs de \(a\) et \(b\) sont \(1\) et \(-1\).
 \end{defdef}
 
 \subsubsection{PGCD de deux entiers}
@@ -1107,7 +1504,8 @@ Soit \((a,b) \in \Z^2\).
 \begin{defdef}
   On définit
   \begin{equation}
-    a\Z+b\Z = \enstq{ak+bl}{(k,l) \in \Z^2} = \enstq{n \in \Z}{\exists (k,l) \in \Z^2 \quad n=ak+bl}.
+    a\Z+b\Z = \enstq{ak+bl}{(k,l) \in \Z^2} = \enstq{n \in \Z}{\exists (k,l) \in 
+    \Z^2 \quad n=ak+bl}.
   \end{equation}
 \end{defdef}
 \begin{theo}
@@ -1117,43 +1515,62 @@ Soit \((a,b) \in \Z^2\).
   \begin{itemize}
     \item Déjà \(a\Z+b\Z \subset \Z\) par définition;
     \item \(a\Z+b\Z\) n'est pas vide et il contient \(0\);
-    \item soient \((x,y) \in (a\Z+b\Z)^2\), alors il existe des entiers relatifs \(k,l,m,n\) tels que \(x=ak+bl\) et \(y=am+bn\); alors \(x-y=a(k-m) +b(l-n)\) donc \(x-y \in a\Z+b\Z\).
+    \item soient \((x,y) \in (a\Z+b\Z)^2\), alors il existe des entiers relatifs 
+      \(k,l,m,n\) tels que \(x=ak+bl\) et \(y=am+bn\); alors \(x-y=a(k-m) 
+      +b(l-n)\) donc \(x-y \in a\Z+b\Z\).
   \end{itemize}
-  Par caractérisation des sous-groupes, \(a\Z+b\Z\) est un sous-groupe de \((\Z,+)\).
+  Par caractérisation des sous-groupes, \(a\Z+b\Z\) est un sous-groupe de 
+  \((\Z,+)\).
 \end{proof}
 \begin{corth}
-  Il existe un unique naturel \(d\) tel que \(a\Z+b\Z=d\Z\). On l'appelle le PGCD de \(a\) et de \(b\). On note \(d=a \wedge b = \pgcd(a,b)\).
+  Il existe un unique naturel \(d\) tel que \(a\Z+b\Z=d\Z\). On l'appelle le 
+  PGCD de \(a\) et de \(b\). On note \(d=a \wedge b = \pgcd(a,b)\).
 \end{corth}
 \begin{theo}\label{th:presqueBezout}
-  Quelque soient les relatifs \(a\) et \(b\), il existe deux entiers relatifs \(u_0,v_0\) tels que \(\pgcd(a,b)=au_0+bv_0\).
+  Quelque soient les relatifs \(a\) et \(b\), il existe deux entiers relatifs 
+  \(u_0,v_0\) tels que \(\pgcd(a,b)=au_0+bv_0\).
 \end{theo}
 \begin{proof}
-  On sait que \(\pgcd(a,b) \in \pgcd(a,b) \Z =a\Z+b\Z\), alors il existe deux entiers relatifs \(u_0,v_0\) tels que \(\pgcd(a,b)=au_0+bv_0\).
+  On sait que \(\pgcd(a,b) \in \pgcd(a,b) \Z =a\Z+b\Z\), alors il existe deux 
+  entiers relatifs \(u_0,v_0\) tels que \(\pgcd(a,b)=au_0+bv_0\).
 \end{proof}
 
-Si \(a=b=0\) alors \(a\Z+b\Z=\{0\}\) alors \(\pgcd(a,b)=0\). Si \(a \neq 0\) ou \(b\neq 0\) alors \(a\) et \(b\) sont dans \(a\Z+b\Z\) et donc \(a\Z+b\Z \neq \{0\}\) alors \(\pgcd(a,b) \neq 0\).
+Si \(a=b=0\) alors \(a\Z+b\Z=\{0\}\) alors \(\pgcd(a,b)=0\). Si \(a \neq 0\) ou 
+\(b\neq 0\) alors \(a\) et \(b\) sont dans \(a\Z+b\Z\) et donc \(a\Z+b\Z \neq 
+\{0\}\) alors \(\pgcd(a,b) \neq 0\).
 
 \begin{theo}
-  Quelque soient \(a,b \in \Z\), on a 
-  \begin{equation}
+  Quelque soient \(a,b \in \Z\), on a \begin{equation}
     \Div(a) \cap \Div(b) = \Div(\pgcd(a,b)).
   \end{equation}
 \end{theo}
 \begin{proof}
-  On montre cette égalité par deux inclusions. On sait qu'il existe \(u_0, v_0 \in \Z\) tels que \(\pgcd(a,b)=au_0+bv_0\). 
+  On montre cette égalité par deux inclusions. On sait qu'il existe \(u_0, v_0 
+  \in \Z\) tels que \(\pgcd(a,b)=au_0+bv_0\). 
 
-  Soit \(x \in \Div(a) \cap \Div(b)\). Alors \(x\mid a\) et \(x\mid b\). Alors \(x \mid au_0\) et \(x\mid bv_0\) et donc \(x\mid au_0+bv_0\). Finalement \(x\mid \pgcd(a,b)\) et donc \(x \in \Div(\pgcd(a,b))\). Alors \(\Div(a) \cap \Div(b) \subset \Div(\pgcd(a,b))\).
+  Soit \(x \in \Div(a) \cap \Div(b)\). Alors \(x\mid a\) et \(x\mid b\). Alors 
+  \(x \mid au_0\) et \(x\mid bv_0\) et donc \(x\mid au_0+bv_0\). Finalement 
+  \(x\mid \pgcd(a,b)\) et donc \(x \in \Div(\pgcd(a,b))\). Alors \(\Div(a) \cap 
+  \Div(b) \subset \Div(\pgcd(a,b))\).
 
-  Soit \(x \in \Div(\pgcd(a,b))\). On sait que \(a\Z+b\Z=\pgcd(a,b)\Z\) et comme \(a \in a\Z+b\Z\) alors \(a \in \pgcd(a,b)\Z\) et donc \(\pgcd(a,b) \mid a\). De la même manière \(\pgcd(a,b) \mid b\). Or \(x\mid \pgcd(a,b)\), alors par transitivité \(x\mid a\) et \(x\mid b\), donc \(x \in \Div(a) \cap \Div(b)\). Au final \(\Div(\pgcd(a,b)) \subset \Div(a) \cap \Div(b)\).
+  Soit \(x \in \Div(\pgcd(a,b))\). On sait que \(a\Z+b\Z=\pgcd(a,b)\Z\) et comme 
+  \(a \in a\Z+b\Z\) alors \(a \in \pgcd(a,b)\Z\) et donc \(\pgcd(a,b) \mid a\). 
+  De la même manière \(\pgcd(a,b) \mid b\). Or \(x\mid \pgcd(a,b)\), alors par 
+  transitivité \(x\mid a\) et \(x\mid b\), donc \(x \in \Div(a) \cap \Div(b)\). 
+  Au final \(\Div(\pgcd(a,b)) \subset \Div(a) \cap \Div(b)\).
 
   Finalement par double inclusion, \(\Div(a) \cap \Div(b) = \Div(\pgcd(a,b))\).
 \end{proof}
 
 \paragraph{Interprétation}
 
-Les diviseurs communs de \(a\) et \(b\) sont les diviseurs de \(\pgcd(a,b)\). L'entier \(\pgcd(a,b)\) est le plus grand naturel au sens de la divisibilité de l'ensemble des diviseurs communs de \(a\) et \(b\). D'où son nom de ``Plus Grand Commun Diviseur''.
+Les diviseurs communs de \(a\) et \(b\) sont les diviseurs de \(\pgcd(a,b)\). 
+L'entier \(\pgcd(a,b)\) est le plus grand naturel au sens de la divisibilité de 
+l'ensemble des diviseurs communs de \(a\) et \(b\). D'où son nom de ``Plus Grand 
+Commun Diviseur''.
 
-On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a,b)}\). Elle vérifie les propriétés suivantes
+On définit l'application \(\fonction{\bigwedge}{\Z\times 
+\Z}{\Z}{(a,b)}{\pgcd(a,b)}\). Elle vérifie les propriétés suivantes
 \begin{enumerate}
   \item \(\bigwedge\) est une loi de composition interne sur \(\Z\);
   \item \(\bigwedge\) est commutative et commutative;
@@ -1161,7 +1578,8 @@ On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a
     \begin{equation}
       \forall (a,b,c) \in \Z^2 \quad \pgcd(ca,cb) = \abs{c} \pgcd(a,b);
     \end{equation}
-  \item Pour tout relatif \(a\), \(a \wedge a=\abs{a}\), \(a \wedge 0=\abs{a}\) et \(a \wedge 1=1\);
+  \item Pour tout relatif \(a\), \(a \wedge a=\abs{a}\), \(a \wedge 0=\abs{a}\) 
+    et \(a \wedge 1=1\);
   \item Quelque soient \(a,b \in \Z\)
     \begin{equation}
       b\mid a \iff \pgcd(a,b)=\abs{b}.
@@ -1171,19 +1589,29 @@ On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a
 \begin{proof}
   \begin{enumerate}
     \item En effet, le PGCD de deux entiers relatifs est un entier relatif;
-    \item Comme \(+\) est commutative \(a\Z+b\Z=b\Z+a\Z\) donc \(\pgcd(a,b)=\pgcd(b,a)\);
+    \item Comme \(+\) est commutative \(a\Z+b\Z=b\Z+a\Z\) donc 
+      \(\pgcd(a,b)=\pgcd(b,a)\);
     \item
       \begin{align}
         \Div((a \wedge b) \wedge c)&= (\Div(a) \cap \Div(b)) \cap \Div(c)\\
-                                   &=\Div(a) \cap (\Div(b) \cap \Div(c))\\
-                                   &=\Div(a \wedge (b \wedge c)),
+        &=\Div(a) \cap (\Div(b) \cap \Div(c))\\
+        &=\Div(a \wedge (b \wedge c)),
       \end{align}
       donc \((a \wedge b) \wedge c=a \wedge (b \wedge c)\);
-    \item Soient \(d= a \wedge b\) et \(\delta=(ca) \wedge (cb)\), alors \(d\mid a\) et \(d\mid b\). Ainsi \(\abs{c}d\mid ca\) et \(\abs{c}d\mid cb\). L'entier \(\abs{c}d\) est un diviseur commun de \(ca\) et de \(cb\) donc \(\abs{c}d\mid \delta\).
+    \item Soient \(d= a \wedge b\) et \(\delta=(ca) \wedge (cb)\), alors \(d\mid 
+      a\) et \(d\mid b\). Ainsi \(\abs{c}d\mid ca\) et \(\abs{c}d\mid cb\). 
+      L'entier \(\abs{c}d\) est un diviseur commun de \(ca\) et de \(cb\) donc 
+      \(\abs{c}d\mid \delta\).
 
-      Il existe deux relatifs tels que \(d=au_0+bv_0\) alors \(\abs{c}d=acu_0+bcv_0\). Puisque \(\delta = (ca) \wedge (cb)\) on a \(\delta \mid ca\) et \(\delta \mid  bc\). Ainsi \(\delta\mid acu_0\) et \(\delta \mid  bcv_0\). D'où \(\delta \mid  acu_0+bcv_0 =cd\). Alors \(\delta \mid  \abs{c}d\).
+      Il existe deux relatifs tels que \(d=au_0+bv_0\) alors 
+      \(\abs{c}d=acu_0+bcv_0\). Puisque \(\delta = (ca) \wedge (cb)\) on a 
+      \(\delta \mid ca\) et \(\delta \mid  bc\). Ainsi \(\delta\mid acu_0\) et 
+      \(\delta \mid  bcv_0\). D'où \(\delta \mid  acu_0+bcv_0 =cd\). Alors 
+      \(\delta \mid  \abs{c}d\).
 
-      Puisque \(\abs{c}d\mid \delta\) et \(\delta \mid  \abs{c}d\) donc ils sont associés et comme ils sont tous les deux positifs ou nul on a \(\abs{c}d=\delta\);
+      Puisque \(\abs{c}d\mid \delta\) et \(\delta \mid  \abs{c}d\) donc ils sont 
+      associés et comme ils sont tous les deux positifs ou nul on a 
+      \(\abs{c}d=\delta\);
     \item On a
       \begin{align}
         \Div(a) \cap \Div(a) &= \Div(a) = \Div(\abs{a}) \\
@@ -1193,8 +1621,8 @@ On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a
     \item
       \begin{align}
         b\mid a &\iff \Div(b) \subset \Div(a) \\
-                &\iff \Div(b) \cap \Div(a) = \Div(b) = \Div(\abs{b})\\
-                &\iff a \wedge b = \abs{b}.
+        &\iff \Div(b) \cap \Div(a) = \Div(b) = \Div(\abs{b})\\
+        &\iff a \wedge b = \abs{b}.
       \end{align}
   \end{enumerate}
 \end{proof}
@@ -1202,10 +1630,15 @@ On définit l'application \(\fonction{\bigwedge}{\Z\times \Z}{\Z}{(a,b)}{\pgcd(a
 \subsubsection{Algorithme d'Euclide pour la détermination du PGCD}
 
 
-Nous savons que pour tout relatifs \(a\) et \(b\) on a \(a \wedge 0 = \abs{a}\) et \(\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)\). Alors on peut supposer, sans perte de généralité, que \((a,b) \in \left(\N^{*}\right)^{2}\). De plus \(\pgcd(a,b) =\pgcd(b,a)\), alors on peut supposer de plus que \(a \geqslant b\).
+Nous savons que pour tout relatifs \(a\) et \(b\) on a \(a \wedge 0 = \abs{a}\) 
+et \(\pgcd(a,-b) = \pgcd(-a,-b) = \pgcd(a,b)\). Alors on peut supposer, sans 
+perte de généralité, que \((a,b) \in \left(\N^{*}\right)^{2}\). De plus 
+\(\pgcd(a,b) =\pgcd(b,a)\), alors on peut supposer de plus que \(a \geqslant 
+b\).
 
 \begin{lemme}
-  Soit \(r(a,b)\) le reste de la division euclidienne de \(a\) par \(b\), \(b \neq 0\), alors
+  Soit \(r(a,b)\) le reste de la division euclidienne de \(a\) par \(b\), \(b 
+  \neq 0\), alors
   \begin{equation}
     \pgcd(a,b) = \pgcd(b,r(a,b)).
   \end{equation}
@@ -1213,29 +1646,50 @@ Nous savons que pour tout relatifs \(a\) et \(b\) on a \(a \wedge 0 = \abs{a}\) 
 \begin{proof}
   Soit \(q\) le quotient de la division et \(r\) le reste, alors \(a=bq+r\).
   \begin{itemize}
-    \item Si \(x \in \Div(b) \cap \Div(r)\) alors \(x \mid b\) et donc \(x \mid bq\) et \(x \mid r\), \(x \mid a\) et alors \(x \in \Div(a)\); ainsi \(x \in \Div(a) \cap \Div(b)\) et finalement \(\Div(b) \cap \Div(r) \subset \Div(a) \cap \Div(b)\);
-    \item Si \(x \in \Div(a) \cap \Div(b)\) alors comme \(r=a-bq\), \(x \mid a\) et \(x \mid b\) donc \(x \mid r\); alors \(x \in \Div(r)\); ainsi \(x \in \Div(r) \cap \Div(b)\) et finalement \(\Div(a) \cap \Div(b) \subset \Div(b) \cap \Div(r)\).
+    \item Si \(x \in \Div(b) \cap \Div(r)\) alors \(x \mid b\) et donc \(x \mid 
+      bq\) et \(x \mid r\), \(x \mid a\) et alors \(x \in \Div(a)\); ainsi \(x 
+      \in \Div(a) \cap \Div(b)\) et finalement \(\Div(b) \cap \Div(r) \subset 
+      \Div(a) \cap \Div(b)\);
+    \item Si \(x \in \Div(a) \cap \Div(b)\) alors comme \(r=a-bq\), \(x \mid a\) 
+      et \(x \mid b\) donc \(x \mid r\); alors \(x \in \Div(r)\); ainsi \(x \in 
+      \Div(r) \cap \Div(b)\) et finalement \(\Div(a) \cap \Div(b) \subset 
+      \Div(b) \cap \Div(r)\).
   \end{itemize}
-  Alors par double inclusion \(\Div(a) \cap \Div(b)= \Div(b) \cap \Div(r)\). Donc \(\Div(\pgcd(a,b)) = \Div(\pgcd(b,r))\) et alors \(\pgcd(a,b) = \pgcd(b,r)\).
+  Alors par double inclusion \(\Div(a) \cap \Div(b)= \Div(b) \cap \Div(r)\). 
+  Donc \(\Div(\pgcd(a,b)) = \Div(\pgcd(b,r))\) et alors \(\pgcd(a,b) = 
+  \pgcd(b,r)\).
 \end{proof}
 
 \paragraph{Algorithme d'Euclide}
 
-Soit \(a \geqslant b\) on pose \(r_0=a\), \(r_1=b\) et \(r_2=r(a,b)\). Alors \(\pgcd(a,b) = \pgcd(r_0, r_1) = \pgcd(r_1,r_2)\). Tant que \(r_k \neq 0\) on effectue la division euclidienne de \(r_{k-1}\) par \(r_k\) et on pose \(r_{k+1}=r(r_{k-1},r_k)\). Alors \(r_{k+1} < r_k\).
+Soit \(a \geqslant b\) on pose \(r_0=a\), \(r_1=b\) et \(r_2=r(a,b)\). Alors 
+\(\pgcd(a,b) = \pgcd(r_0, r_1) = \pgcd(r_1,r_2)\). Tant que \(r_k \neq 0\) on 
+effectue la division euclidienne de \(r_{k-1}\) par \(r_k\) et on pose 
+\(r_{k+1}=r(r_{k-1},r_k)\). Alors \(r_{k+1} < r_k\).
 
-La suite \((r_k)_{k \in \N}\) est strictement décroissante, à valeurs dans \(\N\). La suite s'annule forcément à partir d'un certain rang. Donc il existe un naturel \(n\) tel que \(r_n \neq 0\) et \(r_{n+1}=0\). Alors \(\pgcd(a,b)\) est égal au dernier reste non nul dans la suite des division euclidiennes de l'algorithme d'Euclide.
+La suite \((r_k)_{k \in \N}\) est strictement décroissante, à valeurs dans 
+\(\N\). La suite s'annule forcément à partir d'un certain rang. Donc il existe 
+un naturel \(n\) tel que \(r_n \neq 0\) et \(r_{n+1}=0\). Alors \(\pgcd(a,b)\) 
+est égal au dernier reste non nul dans la suite des division euclidiennes de 
+l'algorithme d'Euclide.
 
 \subsubsection{PPCM de deux entiers}
 
-Soient \(a\) et \(b\) deux entiers relatifs. L'ensemble \(a\Z \cap b\Z\) est l'ensemble des entiers multiples communs de \(a\) et \(b\).
+Soient \(a\) et \(b\) deux entiers relatifs. L'ensemble \(a\Z \cap b\Z\) est 
+l'ensemble des entiers multiples communs de \(a\) et \(b\).
 \begin{theo}
-  pour tout relatifs \(a\) et \(b\), \(a\Z \cap b\Z\) est un sous-groupe de \((\Z,+)\).
+  pour tout relatifs \(a\) et \(b\), \(a\Z \cap b\Z\) est un sous-groupe de 
+  \((\Z,+)\).
 \end{theo}
 \begin{proof}
-  On sait que \(a\Z\) et \(b\Z\) sont des sous-groupes de \((\Z,+)\) et comme l'intersection de deux sous-groupes est un sous-groupe alors \(a\Z \cap b\Z\) est un sous-groupe.
+  On sait que \(a\Z\) et \(b\Z\) sont des sous-groupes de \((\Z,+)\) et comme 
+  l'intersection de deux sous-groupes est un sous-groupe alors \(a\Z \cap b\Z\) 
+  est un sous-groupe.
 \end{proof}
 \begin{corth}
-  pour tout relatifs \(a\) et \(b\) il existe un unique naturel \(m\) tel que \(a\Z \cap b\Z= m \Z\). L'entier \(m\) est appelé le PPCM de \(a\) et de \(b\), on le note \(a \vee b = \ppcm(a,b)\).
+  pour tout relatifs \(a\) et \(b\) il existe un unique naturel \(m\) tel que 
+  \(a\Z \cap b\Z= m \Z\). L'entier \(m\) est appelé le PPCM de \(a\) et de 
+  \(b\), on le note \(a \vee b = \ppcm(a,b)\).
 \end{corth}
 \begin{theo}
   Quelque soient les relatifs \(a\) et \(b\)
@@ -1246,18 +1700,26 @@ Soient \(a\) et \(b\) deux entiers relatifs. L'ensemble \(a\Z \cap b\Z\) est l'e
 
 \paragraph{Interprétation}
 
-Les multiples communs de \(a\) et de \(b\) sont exactement les multiples de \(\ppcm(a,b)\). \(\ppcm(a,b)\) est le plus petit naturel, au sens de la divisibilité, de l'ensemble des multiples communs de \(a\) et de \(b\). D'où le nom de Plus Petit Commun Multiple.
+Les multiples communs de \(a\) et de \(b\) sont exactement les multiples de 
+\(\ppcm(a,b)\). \(\ppcm(a,b)\) est le plus petit naturel, au sens de la 
+divisibilité, de l'ensemble des multiples communs de \(a\) et de \(b\). D'où le 
+nom de Plus Petit Commun Multiple.
 
-Si \(a=0\) ou \(b=0\) alors \(a\Z \cap b\Z = \{0\}=0\Z\) donc \(\ppcm(a,b)=0\). Si \(a\) et \(b\) sont tous les deux non nuls alors \(\ppcm(a,b)\) est non nul car \(ab \neq 0\) et \(ab \in a\Z \cap b\Z\).
+Si \(a=0\) ou \(b=0\) alors \(a\Z \cap b\Z = \{0\}=0\Z\) donc \(\ppcm(a,b)=0\). 
+Si \(a\) et \(b\) sont tous les deux non nuls alors \(\ppcm(a,b)\) est non nul 
+car \(ab \neq 0\) et \(ab \in a\Z \cap b\Z\).
 
 \begin{prop}
-  Comme le PPCM est défini de manière unique, on peut définir une application \(\fonction{\bigvee}{\Z\times\Z}{\Z}{(a,b)}{\ppcm(a,b)}\). Cette application vérifie les propriétés suivantes
+  Comme le PPCM est défini de manière unique, on peut définir une application 
+  \(\fonction{\bigvee}{\Z\times\Z}{\Z}{(a,b)}{\ppcm(a,b)}\). Cette application 
+  vérifie les propriétés suivantes
   \begin{enumerate}
     \item c'est une loi de composition interne;
     \item elle est commutative, \(\ppcm(a,b)=\ppcm(b,a)\);
     \item elle est associative, \(\ppcm((\ppcm(a,b),c)=\ppcm(a,\ppcm(b,c))\);
     \item elle est pseudo-distributive, \(\ppcm(ca,cb)=\abs{c}\ppcm(a,b)\);
-    \item \(\forall a \in \Z \quad \ppcm(a,a)=\abs{a} \ \ppcm(a,0) = 0 \ \ppcm(a,1)=\abs{a}\);
+    \item \(\forall a \in \Z \quad \ppcm(a,a)=\abs{a} \ \ppcm(a,0) = 0 \ 
+      \ppcm(a,1)=\abs{a}\);
     \item \(\forall (a,b) \in \Z^2 \quad b\mid a \iff \ppcm(a,b)=\abs{a}\).
   \end{enumerate}
 \end{prop}
@@ -1269,45 +1731,74 @@ Si \(a=0\) ou \(b=0\) alors \(a\Z \cap b\Z = \{0\}=0\Z\) donc \(\ppcm(a,b)=0\). 
     \item \(a\Z \cap b\Z = b\Z \cap a\Z\);
     \item
       \begin{align}
-        \ppcm((\ppcm(a,b),c) \Z &= a\Z \cap \ppcm(b,c) \Z \\ &= a\Z \cap (b\Z \cap c\Z)\\ &= (a\Z \cap b\Z) \cap c\Z \\ &= \ppcm(a,b) \Z \cap c\Z \\ &=\ppcm(\ppcm(a,b),c) \Z
+        \ppcm((\ppcm(a,b),c) \Z &= a\Z \cap \ppcm(b,c) \Z \\ &= a\Z \cap (b\Z 
+        \cap c\Z)\\ &= (a\Z \cap b\Z) \cap c\Z \\ &= \ppcm(a,b) \Z \cap c\Z \\ 
+        &=\ppcm(\ppcm(a,b),c) \Z
       \end{align}
       d'où \(\ppcm((\ppcm(a,b),c)=\ppcm(a,\ppcm(b,c))\).
-    \item On note \(m=\ppcm(a,b)\) et \(\mu=\ppcm(ca,cb)\). Alors \(a \mid m\) et \(b \mid m\). Par conséquent \(ca \mid \abs{c}m\) et \(cb \mid \abs{c}m\). Alors \(\abs{c}m\) est un multiple commun de \(ca\) et \(cb\). D'où \(\mu=\ppcm(ca,cb)\) divise \(\abs{c}m\).
+    \item On note \(m=\ppcm(a,b)\) et \(\mu=\ppcm(ca,cb)\). Alors \(a \mid m\) 
+      et \(b \mid m\). Par conséquent \(ca \mid \abs{c}m\) et \(cb \mid 
+      \abs{c}m\). Alors \(\abs{c}m\) est un multiple commun de \(ca\) et \(cb\). 
+      D'où \(\mu=\ppcm(ca,cb)\) divise \(\abs{c}m\).
 
-      On sait que \(ca \mid \mu\) et \(cb \mid \mu\). Alors il existe deux relatifs \(p\) et \(q\) tels que \(\mu = cap\) et \(\mu=cbq\). Alors \(cap=cbq\) et donc \(c(ap-bq)=0\). Comme \(\Z\) est intègre donc soit \(c=0\) ou soit \(ap-bq=0\).
+      On sait que \(ca \mid \mu\) et \(cb \mid \mu\). Alors il existe deux 
+      relatifs \(p\) et \(q\) tels que \(\mu = cap\) et \(\mu=cbq\). Alors 
+      \(cap=cbq\) et donc \(c(ap-bq)=0\). Comme \(\Z\) est intègre donc soit 
+      \(c=0\) ou soit \(ap-bq=0\).
       \begin{itemize}
         \item Si \(c=0\) alors \(\mu=0=\abs{c}=m\);
-        \item Si \(c \neq 0\) alors \(ap-bq=0\) donc \(ap=bq\) est un multiple commun de \(a\) et de \(b\). C'est donc un multiple du PPCM \(m\). Alors \(m \mid ap=bq\) et \(\abs{c}m \mid cap = bqc=\mu\). 
-      \end{itemize}
-      On a montré que \(\mu \mid \abs{c}m\) et \(\abs{c} m \mid \mu\), or ce sont des naturels donc ils sont égaux. \(\mu=\abs{c} m\), soit \(\ppcm(ca,cb)=\abs{c}\ppcm(a,b)\).
-    \item \(a\Z \cap a\Z = a\Z\), \(a\Z \cap 0\Z = 0\Z\) et \(a\Z \cap 1\Z = a\Z \cap \Z=a\Z=|a|\Z\).
+      \item Si \(c \neq 0\) alors \(ap-bq=0\) donc \(ap=bq\) est un multiple 
+      commun de \(a\) et de \(b\). C'est donc un multiple du PPCM \(m\). Alors 
+      \(m \mid ap=bq\) et \(\abs{c}m \mid cap = bqc=\mu\). \end{itemize}
+      On a montré que \(\mu \mid \abs{c}m\) et \(\abs{c} m \mid \mu\), or ce 
+      sont des naturels donc ils sont égaux. \(\mu=\abs{c} m\), soit 
+      \(\ppcm(ca,cb)=\abs{c}\ppcm(a,b)\).
+    \item \(a\Z \cap a\Z = a\Z\), \(a\Z \cap 0\Z = 0\Z\) et \(a\Z \cap 1\Z = a\Z 
+      \cap \Z=a\Z=|a|\Z\).
     \item \(b \mid a \iff a\Z \subset b\Z \iff a\Z \cap b\Z = a\Z=|a|\Z\).
   \end{enumerate}
 \end{proof}
 
 \subsection{Entiers premiers entre eux}
 
-Soient \(a\) et \(b\) deux entiers relatifs. On a défini plus tôt dans ce cours, cf.\ définition~
-\ref{def:premiersentreeux}, que \(a\) et \(b\) sont premiers entre eux si et seulement si \(\Div(a) \cap \Div(b)=\{-1,1\}\) or \(\Div(a) \cap \Div(b) = \Div(\pgcd(a,b))\). Donc \(a\) et \(b\) sont premiers entre eux si et seulement si leur PGCD vaut \(1\).
+Soient \(a\) et \(b\) deux entiers relatifs. On a défini plus tôt dans ce cours, 
+cf.\ définition~
+\ref{def:premiersentreeux}, que \(a\) et \(b\) sont premiers entre eux si et 
+seulement si \(\Div(a) \cap \Div(b)=\{-1,1\}\) or \(\Div(a) \cap \Div(b) = 
+\Div(\pgcd(a,b))\). Donc \(a\) et \(b\) sont premiers entre eux si et seulement 
+si leur PGCD vaut \(1\).
 
 \begin{theo}[Théorème de Bezout]
-  Étant donnés deux relatifs \(a\) et \(b\). Ils sont premiers entre eux si et seulement s'il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\).
+  Étant donnés deux relatifs \(a\) et \(b\). Ils sont premiers entre eux si et 
+  seulement s'il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\).
 \end{theo}
 \begin{proof}
-  Si \(a\) et \(b\) sont premiers entre eux alors \(\pgcd(a,b) =1\). %D'après le théorème~
+  Si \(a\) et \(b\) sont premiers entre eux alors \(\pgcd(a,b) =1\). %D'après le 
+  théorème~
   \ref{th:presqueBezout}
-  On sait que \(a\Z+b\Z=\pgcd(a,b)\Z=\Z\). On a \(1 \in \Z\) donc \(1 \in a\Z+b\Z\) donc il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\).
+  On sait que \(a\Z+b\Z=\pgcd(a,b)\Z=\Z\). On a \(1 \in \Z\) donc \(1 \in 
+  a\Z+b\Z\) donc il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\).
 
-  S'il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\). Si \(d \in \Div(a) \cap \Div(b)\) alors \(d \mid au\) et \(d \mid bv\) donc \(d \mid au+bv=1\) donc \(d \in \{-1,1\}\). Alors \(\Div(a) \cap \Div(b) \subset \{-1,1\}\). L'autre inclusion est vraie aussi. Alors \(a\) et \(b\) sont premiers entre eux.
+  S'il existe deux relatifs \(u\) et \(v\) tels que \(au+bv=1\). Si \(d \in 
+  \Div(a) \cap \Div(b)\) alors \(d \mid au\) et \(d \mid bv\) donc \(d \mid 
+  au+bv=1\) donc \(d \in \{-1,1\}\). Alors \(\Div(a) \cap \Div(b) \subset 
+  \{-1,1\}\). L'autre inclusion est vraie aussi. Alors \(a\) et \(b\) sont 
+  premiers entre eux.
 \end{proof}
 
 \begin{defdef}
-  Soient \(a\) et \(b\) deux entiers relatifs premiers entre eux. Tout couple \((u,v)\) de relatifs tel que \(au+bv=1\) est un couple de coefficients de Bezout de \((a,b)\).
+  Soient \(a\) et \(b\) deux entiers relatifs premiers entre eux. Tout couple 
+  \((u,v)\) de relatifs tel que \(au+bv=1\) est un couple de coefficients de 
+  Bezout de \((a,b)\).
 \end{defdef}
 
 \paragraph{Algorithme de Bezout}
 
-On tente de trouver le couple de Bezout de \((a,b)\). Il s'agit de ``remonter'' l'algorithme d'Euclide. Soient deux naturels \(a\) et \(b\) non nuls avec \(a>b\). On pose \(r_0=a\), \(r_1=b\) et \(r_2=r(a,b)\) et par récurrence \(r_k=r(r_{k-1}, r_{k-2})\) tant que \(r_k \neq 0\). Il existe alors un naturel \(n\) tel que \(r_n \neq 0\) et \(r_{n+1}=0\). On a \(r_n=\pgcd(a,b)=1\).
+On tente de trouver le couple de Bezout de \((a,b)\). Il s'agit de ``remonter'' 
+l'algorithme d'Euclide. Soient deux naturels \(a\) et \(b\) non nuls avec 
+\(a>b\). On pose \(r_0=a\), \(r_1=b\) et \(r_2=r(a,b)\) et par récurrence 
+\(r_k=r(r_{k-1}, r_{k-2})\) tant que \(r_k \neq 0\). Il existe alors un naturel 
+\(n\) tel que \(r_n \neq 0\) et \(r_{n+1}=0\). On a \(r_n=\pgcd(a,b)=1\).
 
 Il existe une suite \((q_k)_{k \in \llbracket 0, n \rrbracket}\) telle que
 \begin{align}
@@ -1316,38 +1807,49 @@ Il existe une suite \((q_k)_{k \in \llbracket 0, n \rrbracket}\) telle que
   \vdots &= \vdots \notag \\
   r_{n-3} &=r_{n-2} q_{n-2}+ r_{n-1} \\
   r_{n-2} &=r_{n-1} q_{n-1}+ r_{n} \\
-  r_{n-1} &=r_{n} q_{n}+ r_{n+1}. 
-\end{align}
+r_{n-1} &=r_{n} q_{n}+ r_{n+1}. \end{align}
 Alors
 \begin{align}
   1=r_n&=r_{n-2} -r_{n-1}q_{n-1} \\
-       &=r_{n-2} - (r_{n-3} -r_{n-2}q_{n-2})q_{n-1}\\
-       &= \vdots \notag \\
-       &=ur_0 + vr_1\\
-       &=au+bv.
+  &=r_{n-2} - (r_{n-3} -r_{n-2}q_{n-2})q_{n-1}\\
+  &= \vdots \notag \\
+  &=ur_0 + vr_1\\
+  &=au+bv.
 \end{align}
 
 \begin{theo}[Théorème de Gau\ss{}]
-  pour tout relatifs \(a,b\) et \(c\), si \(a \mid bc\) et \(\pgcd(a,b)=1\) alors \(a \mid c\).
+  pour tout relatifs \(a,b\) et \(c\), si \(a \mid bc\) et \(\pgcd(a,b)=1\) 
+  alors \(a \mid c\).
 \end{theo}
 \begin{proof}[Première démonstration]
-  Les entiers \(a\) et \(b\) sont premiers entre eux alors on peut définir un couple de coefficients de Bezout \((u,v)\) tel que \(au+bv=1\) donc \(cau+cbv=c\). Par hypothèse \(a \mid bc\) donc \(a \mid bcv\) et de plus \(a \mid acu\) donc \(a \mid acu+bcv =c\).
+  Les entiers \(a\) et \(b\) sont premiers entre eux alors on peut définir un 
+  couple de coefficients de Bezout \((u,v)\) tel que \(au+bv=1\) donc 
+  \(cau+cbv=c\). Par hypothèse \(a \mid bc\) donc \(a \mid bcv\) et de plus \(a 
+  \mid acu\) donc \(a \mid acu+bcv =c\).
 \end{proof}
 \begin{proof}[Deuxième démonstration]
-  Comme \(\pgcd(a,b)=1\) alors \(\pgcd(ca,cb)=\abs{c}\). Or \(a \mid bc\), par hypothèse et \(a \mid ac\) donc \(a \mid \abs{c}\) soit \(a \mid c\).
+  Comme \(\pgcd(a,b)=1\) alors \(\pgcd(ca,cb)=\abs{c}\). Or \(a \mid bc\), par 
+  hypothèse et \(a \mid ac\) donc \(a \mid \abs{c}\) soit \(a \mid c\).
 \end{proof}
 
 \paragraph{Propriétés}
 
 \begin{prop}\label{prop:prop1}
-  Soient \(n \in \N^*\) et \(a\), \(b_1\), \ldots, \(b_n\) des entiers relatifs. On suppose que \(a\) est premier avec chacun des \(b_i\) (pour \(i\) variant de \(1\) à \(n\)). Alors \(a\) est premiers avec \(b_1 \dotsm b_n\).
+  Soient \(n \in \N^*\) et \(a\), \(b_1\), \ldots, \(b_n\) des entiers relatifs. 
+  On suppose que \(a\) est premier avec chacun des \(b_i\) (pour \(i\) variant 
+  de \(1\) à \(n\)). Alors \(a\) est premiers avec \(b_1 \dotsm b_n\).
 \end{prop}
 \begin{proof}
-  On démontre par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\) ``\(\pgcd(a,b_1 \dotsm  b_n)=1\)''.
+  On démontre par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\) 
+  ``\(\pgcd(a,b_1 \dotsm  b_n)=1\)''.
 
   \emph{Initialisation}. Pour \(n=1\) le résultat est évident.
 
-  \emph{Hérédité}. Soit \(n \in \N^*\). Supposons que \(\P(n)\) soit vraie alors par hypothèse de récurrence il existe un couple de coefficients de Bezout \((u,v)\) tel que \(au + (b_1 \dotsm b_n) v=1\). On sait aussi que \(b_{n+1}\) et \(a\) sont premiers entre eux alors il existe un deuxième couple de coefficients de Bezout \((w,z)\) tel que \(aw+b_{n+1}z=1\).
+  \emph{Hérédité}. Soit \(n \in \N^*\). Supposons que \(\P(n)\) soit vraie alors 
+  par hypothèse de récurrence il existe un couple de coefficients de Bezout 
+  \((u,v)\) tel que \(au + (b_1 \dotsm b_n) v=1\). On sait aussi que \(b_{n+1}\) 
+  et \(a\) sont premiers entre eux alors il existe un deuxième couple de 
+  coefficients de Bezout \((w,z)\) tel que \(aw+b_{n+1}z=1\).
 
   En multipliant les deux relations on a
   \begin{align}
@@ -1355,63 +1857,99 @@ Alors
     1&=a^2uw +aub_{n+1}z+ (b_1\dotsm b_n)vaw + (b_1\dotsm b_{n+1})vz\\
     1&=a[auw +ub_{n+1}z+(b_1\dotsm b_n)vw] + (b_1\dotsm b_{n+1})vz
   \end{align}
-  On pose \(\mathfrak{U}=auw +ub_{n+1}z+(b_1\dotsm b_n)vw \in \Z\) et \(\mathfrak{V}=vz \in \Z\) donc
+  On pose \(\mathfrak{U}=auw +ub_{n+1}z+(b_1\dotsm b_n)vw \in \Z\) et 
+  \(\mathfrak{V}=vz \in \Z\) donc
   \begin{equation}
     1=a\mathfrak{U} + (b_1\dotsm b_n) \mathfrak{V}
   \end{equation}
   Alors d'après le théorème de Bezout, \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion}. La propriété \(\P\) est donc vraie pour tout naturel \(n\) non nul.
+  \emph{Conclusion}. La propriété \(\P\) est donc vraie pour tout naturel \(n\) 
+  non nul.
 \end{proof}
 \begin{prop}[Généralisation du théorème de Gau\ss{}]\label{prop:gengauss}
-  Soient un naturel \(n\) non nul et des relatifs \(a\), \(c\), \(b_1\), \ldots, \(b_n\). On suppose que \(a \mid b_1\dotsm b_n\cdot c\) et que pour tout \(i \in \intervalleentier{1}{n}\), \(a\) et \(b_i\) sont premiers, alors \(a \mid c\).
+  Soient un naturel \(n\) non nul et des relatifs \(a\), \(c\), \(b_1\), \ldots, 
+  \(b_n\). On suppose que \(a \mid b_1\dotsm b_n\cdot c\) et que pour tout \(i 
+  \in \intervalleentier{1}{n}\), \(a\) et \(b_i\) sont premiers, alors \(a \mid 
+  c\).
 \end{prop}
 \begin{proof}
   D'après la proposition~
-  \ref{prop:prop1} on sait que \(\pgcd(a, b_1 \dotsm b_n)=1\) et d'après le théorème de Gau\ss{} on a \(a \mid c\).
+  \ref{prop:prop1} on sait que \(\pgcd(a, b_1 \dotsm b_n)=1\) et d'après le 
+  théorème de Gau\ss{} on a \(a \mid c\).
 \end{proof}
 
 \begin{prop}\label{prop:prop3}
-  Soient un naturel \(n\) non nul un relatif \(a\) et \(b_1, \dotsc, b_n\) des diviseurs de \(a\). On suppose que les \(b_i\) sont premiers entre eux deux à deux. Alors \(b_1 \dotsm b_n \mid a\).
+  Soient un naturel \(n\) non nul un relatif \(a\) et \(b_1, \dotsc, b_n\) des 
+  diviseurs de \(a\). On suppose que les \(b_i\) sont premiers entre eux deux à 
+  deux. Alors \(b_1 \dotsm b_n \mid a\).
 \end{prop}
 \begin{proof}
-  On montre par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\) ``\(\forall a \in \Z \quad \forall b_1, \ldots b_n\) diviseurs de \(a\) premiers antre eux deux à deux, \(b_1 \dotsm b_n \mid a\)''
+  On montre par récurrence sur \(n \in \N^*\) la propriété \(\P(n)\) ``\(\forall 
+  a \in \Z \quad \forall b_1, \ldots b_n\) diviseurs de \(a\) premiers antre eux 
+  deux à deux, \(b_1 \dotsm b_n \mid a\)''
 
   \emph{Initialisation}. Pour \(n=1\) c'est évident.
 
-  \emph{Hérédité}. Soit \(n \in \N^*\) et on suppose que \(\P(n)\) est vraie. Montrons que \(\P(n+1)\) est vraie. Soient des relatifs \(a, b_1, \dotsc, b_{n+1}\) tels que les \(b_i\) divisent \(a\) et sont premiers entre eux deux à deux. D'après l'hypothèse de récurrence \(b_1 \dotsm b_n  \mid a\). Il existe un relatif \(q\) tel que \(a=b_1 \ldots b_n q\). Or \(b_{n+1} \mid a\) donc \(b_{n+1} \mid b_1 \dotsm b_n q\). Cependant \(\forall i \in \llbracket 1,n \rrbracket \ \pgcd(b_{n+1}, b_i)=1\). Donc d'après la proposition~
-  \ref{prop:gengauss} on a \(b_{n+1} \mid q\). Il existe donc un relatif \(r\) tel que \(q=b_{n+1} r\). Alors \(a=b_1 \dotsm b_n q=b_1 \dotsm b_{n+1} r\). Alors \(b_1 \ldots b_{n+1} \mid a\). \(\P(n+1)\) est donc vraie.
+  \emph{Hérédité}. Soit \(n \in \N^*\) et on suppose que \(\P(n)\) est vraie. 
+  Montrons que \(\P(n+1)\) est vraie. Soient des relatifs \(a, b_1, \dotsc, 
+  b_{n+1}\) tels que les \(b_i\) divisent \(a\) et sont premiers entre eux deux 
+  à deux. D'après l'hypothèse de récurrence \(b_1 \dotsm b_n  \mid a\). Il 
+  existe un relatif \(q\) tel que \(a=b_1 \ldots b_n q\). Or \(b_{n+1} \mid a\) 
+  donc \(b_{n+1} \mid b_1 \dotsm b_n q\). Cependant \(\forall i \in \llbracket 
+  1,n \rrbracket \ \pgcd(b_{n+1}, b_i)=1\). Donc d'après la proposition~
+  \ref{prop:gengauss} on a \(b_{n+1} \mid q\). Il existe donc un relatif \(r\) 
+  tel que \(q=b_{n+1} r\). Alors \(a=b_1 \dotsm b_n q=b_1 \dotsm b_{n+1} r\). 
+  Alors \(b_1 \ldots b_{n+1} \mid a\). \(\P(n+1)\) est donc vraie.
 
-  \emph{Conclusion} Par théorème de récurrence, la propriété \(\P\) est vraie pour tout naturel \(n\) non nul.
+  \emph{Conclusion} Par théorème de récurrence, la propriété \(\P\) est vraie 
+  pour tout naturel \(n\) non nul.
 \end{proof}
 
 \paragraph{Retour sur le PPCM et le PGCD}
 
-Soient deux relatifs \(a\) et \(b\). Si \(x\) est un diviseur non nul de \(a\) il existe un unique entier relatif \(q\) tel que \(a=xq\) \(\left("\frac{a}{x}"\right)\).
+Soient deux relatifs \(a\) et \(b\). Si \(x\) est un diviseur non nul de \(a\) 
+il existe un unique entier relatif \(q\) tel que \(a=xq\) 
+\(\left("\frac{a}{x}"\right)\).
 
 \begin{prop}\label{prop:premiereprop}
   Soient deux relatifs \(a\) et \(b\) et un naturel non nul \(d\). Alors
   \begin{equation}
-    \pgcd(a,b)=d \iff d \mid a \ \text{~et~} \ d \mid b \ \text{~et~} \ \pgcd\left("\frac{a}{b}", "\frac{b}{a}" \right) =1
+    \pgcd(a,b)=d \iff d \mid a \ \text{~et~} \ d \mid b \ \text{~et~} \ 
+    \pgcd\left("\frac{a}{b}", "\frac{b}{a}" \right) =1
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si \(\pgcd(a,b)=d\) alors \(d\mid a\), \(d\mid b\) et il existe deux relatifs \(a_1\) et \(b_1\) tels que \(a=a_1d\) et \(b=b_1d\). Or \(\pgcd(a,b)=d\) donc \(\pgcd(a_1d,b_1d)=d\). Donc comme \(d \in \N^*\) alors \(\pgcd(a_1,b_1)=1\).
+  Si \(\pgcd(a,b)=d\) alors \(d\mid a\), \(d\mid b\) et il existe deux relatifs 
+  \(a_1\) et \(b_1\) tels que \(a=a_1d\) et \(b=b_1d\). Or \(\pgcd(a,b)=d\) donc 
+  \(\pgcd(a_1d,b_1d)=d\). Donc comme \(d \in \N^*\) alors \(\pgcd(a_1,b_1)=1\).
 
-  Si on suppose que \(d \mid a\) et \(d \mid b\) alors il existe deux relatifs \(a_1\) et \(b_1\) tels que \(a=a_1d\) et \(b=b_1d\). De plus par hypothèse ils sont premiers entre eux. Alors \(\pgcd(a,b)=\abs{d}\pgcd(a_1,b_1)=d\), puisque \(d \in \N^*\) et puisque \(a_1\) et \(b_1\) sont premiers entre eux.
+  Si on suppose que \(d \mid a\) et \(d \mid b\) alors il existe deux relatifs 
+  \(a_1\) et \(b_1\) tels que \(a=a_1d\) et \(b=b_1d\). De plus par hypothèse 
+  ils sont premiers entre eux. Alors \(\pgcd(a,b)=\abs{d}\pgcd(a_1,b_1)=d\), 
+  puisque \(d \in \N^*\) et puisque \(a_1\) et \(b_1\) sont premiers entre eux.
 \end{proof}
 \begin{prop}
-  Soient deux entiers relatifs \(a\) et \(b\), alors \(\pgcd(a,b) \cdot \ppcm(a,b)= \abs{ab}\)
+  Soient deux entiers relatifs \(a\) et \(b\), alors \(\pgcd(a,b) \cdot 
+  \ppcm(a,b)= \abs{ab}\)
 \end{prop}
 \begin{proof}
   \begin{itemize}
-    \item Cas 1, \(\pgcd(a,b)=1\). Comme \(ab\) est un multiple commun de \(a\) et de \(b\) on a \(\ppcm(a,b) \mid ab\). De plus \(a \mid \ppcm(a,b)\), \(b \mid \ppcm(a,b)\) et \(\pgcd(a,b)=1\) alors d'après la proposition~
-      \ref{prop:prop3} on a \(ab \mid \ppcm(a,b)\). Ainsi \(\ppcm(a,b)\) et \(ab\) sont associés, c'est-à-dire que \(\ppcm(a,b)=\abs{ab}\). Finalement  \(\ppcm(a,b)\pgcd(a,b)=\abs{ab}\).
+    \item Cas 1, \(\pgcd(a,b)=1\). Comme \(ab\) est un multiple commun de \(a\) 
+      et de \(b\) on a \(\ppcm(a,b) \mid ab\). De plus \(a \mid \ppcm(a,b)\), 
+      \(b \mid \ppcm(a,b)\) et \(\pgcd(a,b)=1\) alors d'après la proposition~
+      \ref{prop:prop3} on a \(ab \mid \ppcm(a,b)\). Ainsi \(\ppcm(a,b)\) et 
+      \(ab\) sont associés, c'est-à-dire que \(\ppcm(a,b)=\abs{ab}\). Finalement  
+      \(\ppcm(a,b)\pgcd(a,b)=\abs{ab}\).
     \item Cas 2, \(\pgcd(a,b) \neq 1\)~:
       \begin{itemize}
         \item si \(\pgcd(a,b) = 0\) alors \(a=b=0\) donc \(ab=0=\pgcd(a,b)\);
-        \item si \(\pgcd(a,b)=d \in \N\setminus\{0,1\}\), en utilisant la proposition~
-          \ref{prop:premiereprop}, comme \(d  \mid a\) et \(d \mid b\) alors il existe deux entiers relatifs \(a_1\) et \(b_1\) tels que \(a=a_1 d\) et \(b=b_1d\) et \(\pgcd(a_1,b_1)=1\); si on applique le premier cas au couple \((a_1,b_1)\) on obtient
+        \item si \(\pgcd(a,b)=d \in \N\setminus\{0,1\}\), en utilisant la 
+          proposition~
+          \ref{prop:premiereprop}, comme \(d  \mid a\) et \(d \mid b\) alors il 
+          existe deux entiers relatifs \(a_1\) et \(b_1\) tels que \(a=a_1 d\) 
+          et \(b=b_1d\) et \(\pgcd(a_1,b_1)=1\); si on applique le premier cas 
+          au couple \((a_1,b_1)\) on obtient
           \begin{equation}
             \pgcd(a_1,b_1) \ppcm(a_1,b_1) = \abs{a_1b_1},
           \end{equation}
@@ -1436,16 +1974,20 @@ Soient deux relatifs \(a\) et \(b\). Si \(x\) est un diviseur non nul de \(a\) i
 \subsubsection{Notion de nombre premier}
 
 \begin{defdef}
-  Un naturel \(n\) est dit nombre premier lorsqu'il a exactement deux diviseurs distincts (\(1\) et lui-même) dans \(\N\).
+  Un naturel \(n\) est dit nombre premier lorsqu'il a exactement deux diviseurs 
+  distincts (\(1\) et lui-même) dans \(\N\).
 \end{defdef}
 
-\emph{Remarque}~: Le nombre \(1\) n'est pas premier, puisqu'il n'a qu'un seul diviseur~: lui-même.
+\emph{Remarque}~: Le nombre \(1\) n'est pas premier, puisqu'il n'a qu'un seul 
+diviseur~: lui-même.
 
 \begin{defdef}
-  Un entier relatif \(n \in \Z\) est dit premier ou irréductible si et seulement si
+  Un entier relatif \(n \in \Z\) est dit premier ou irréductible si et seulement 
+  si
   \begin{itemize}
     \item \(n\) n'est pas une unité de \(\Z\) (\(n \notin \{-1,1\}\));
-    \item \(n\) n'a pas de diviseurs propres dans \(\Z\) (\(\Div(n) = \{-1, 1, -n, n\}\)).
+    \item \(n\) n'a pas de diviseurs propres dans \(\Z\) (\(\Div(n) = \{-1, 1, 
+      -n, n\}\)).
   \end{itemize}
   Autrement dit, \(n\) admet exactement quatre diviseurs dans \(\Z\).
 \end{defdef}
@@ -1459,38 +2001,59 @@ Soient deux relatifs \(a\) et \(b\). Si \(x\) est un diviseur non nul de \(a\) i
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si \(p \mid a\) alors \(\pgcd(a,p)=\abs{p} \neq 1\) car \(p\) est premier. Alors par contraposée on a montré \(\pgcd(a,p)=1 \implies p \nmid a\).
+  Si \(p \mid a\) alors \(\pgcd(a,p)=\abs{p} \neq 1\) car \(p\) est premier. 
+  Alors par contraposée on a montré \(\pgcd(a,p)=1 \implies p \nmid a\).
 
-  Si \(p \nmid a\) alors \(\pgcd(a,p)\) divise \(p\) or \(p\) est premier donc \(\pgcd(a,p) \in \{1, \abs{p}\}\). Si on avait \(\pgcd(a,p)=\abs{p}\) alors on aurait \(\abs{p} \mid a\), ce qui contredit l'hypothèse. Donc \(\pgcd(a,p)=1\).
+  Si \(p \nmid a\) alors \(\pgcd(a,p)\) divise \(p\) or \(p\) est premier donc 
+  \(\pgcd(a,p) \in \{1, \abs{p}\}\). Si on avait \(\pgcd(a,p)=\abs{p}\) alors on 
+  aurait \(\abs{p} \mid a\), ce qui contredit l'hypothèse. Donc 
+  \(\pgcd(a,p)=1\).
 \end{proof}
 \begin{cor}
-  Deux entiers relatifs premiers \(p\) et \(q\) sont premiers entre eux dès que \(\abs{p} \neq \abs{q}\).
+  Deux entiers relatifs premiers \(p\) et \(q\) sont premiers entre eux dès que 
+  \(\abs{p} \neq \abs{q}\).
 \end{cor}
 \begin{prop}
-  Soit \(p\) un entier premier, \(n\) un naturel et \(a_1, \dotsc, a_n\) des entiers relatifs quelconques. Alors
+  Soit \(p\) un entier premier, \(n\) un naturel et \(a_1, \dotsc, a_n\) des 
+  entiers relatifs quelconques. Alors
   \begin{equation}
-    p \mid a_1\dotsm a_n \iff \exists k \in \intervalleentier{1}{n} \quad p \mid a_k.
+    p \mid a_1\dotsm a_n \iff \exists k \in \intervalleentier{1}{n} \quad p \mid 
+    a_k.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si \(p\) divise l'un des \(a_k\) alors il divise le produit des \(a_k\), c'est évident. 
+  Si \(p\) divise l'un des \(a_k\) alors il divise le produit des \(a_k\), c'est 
+  évident. 
 
-  Sinon alors pour tout \(k \in \intervalleentier{1}{n}\), \(p \nmid a_k\). Alors d'après la proposition~
-  \ref{prop:prepoa1} pour tout \(k \in \intervalleentier{1}{n}\), on a \(\pgcd(p,a_k)=1\). D'après la proposition~
-  \ref{prop:prop1}, pour tout \(k \in \intervalleentier{1}{n}\), \(\pgcd(p, a_1 \dotsm a_k)=1\). On a montré par contraposée
+  Sinon alors pour tout \(k \in \intervalleentier{1}{n}\), \(p \nmid a_k\). 
+  Alors d'après la proposition~
+  \ref{prop:prepoa1} pour tout \(k \in \intervalleentier{1}{n}\), on a 
+  \(\pgcd(p,a_k)=1\). D'après la proposition~
+  \ref{prop:prop1}, pour tout \(k \in \intervalleentier{1}{n}\), \(\pgcd(p, a_1 
+  \dotsm a_k)=1\). On a montré par contraposée
   \begin{equation}
-    p \mid a_1 \dotsm a_n \implies \exists k \in \intervalleentier{1}{n} \quad p \mid a_k.
+    p \mid a_1 \dotsm a_n \implies \exists k \in \intervalleentier{1}{n} \quad p 
+    \mid a_k.
   \end{equation}
 \end{proof}
 \begin{prop}\label{prop:distinctsunites}
-  Tout entier relatif distinct d'une unité admet parmi ses diviseurs au moins un nombre premier.
+  Tout entier relatif distinct d'une unité admet parmi ses diviseurs au moins un 
+  nombre premier.
 \end{prop}
 \begin{proof}
-  Soit \(a \in \Z \setminus \{-1,1\}\). Si \(a\) est nul alors \(a=2 \times 0\) et \(2\) est premier. S'il est non nul alors \(\abs{a} \geqslant 2\). On définit \(\epsilon(a)=\enstq{\abs{b}}{b \mid a \text{~et~} b\notin \{0,1,-1\}}\). Alors \(\epsilon(a) \subset \N\) et il est non vide (\(a \in \epsilon(a)\)). Alors \(\epsilon(a)\) admet un plus petit élément noté \(p\). 
+  Soit \(a \in \Z \setminus \{-1,1\}\). Si \(a\) est nul alors \(a=2 \times 0\) 
+  et \(2\) est premier. S'il est non nul alors \(\abs{a} \geqslant 2\). On 
+  définit \(\epsilon(a)=\enstq{\abs{b}}{b \mid a \text{~et~} b\notin 
+  \{0,1,-1\}}\). Alors \(\epsilon(a) \subset \N\) et il est non vide (\(a \in 
+  \epsilon(a)\)). Alors \(\epsilon(a)\) admet un plus petit élément noté \(p\). 
 
-  Alors \(p \in \N\), \(p \mid a\) et \(p \geqslant 2\). Soit \(q \in \N\) tel que \(q \mid p\). Alors par transitivité \(q \mid a\).
+  Alors \(p \in \N\), \(p \mid a\) et \(p \geqslant 2\). Soit \(q \in \N\) tel 
+  que \(q \mid p\). Alors par transitivité \(q \mid a\).
 
-  Si \(q<p\) alors \(q \notin \epsilon(a)\) car \(p\) est le plus petit élément de \(\epsilon(a)\). Alors au final \(q \notin \epsilon(a)\), \(q \mid a\) et \(q \in \N\) alors \(q=1\). Les seuls diviseurs de \(p\) dans \(\N\) sont donc \(1\) et \(p\). Alors \(p\) est un nombre premier.
+  Si \(q<p\) alors \(q \notin \epsilon(a)\) car \(p\) est le plus petit élément 
+  de \(\epsilon(a)\). Alors au final \(q \notin \epsilon(a)\), \(q \mid a\) et 
+  \(q \in \N\) alors \(q=1\). Les seuls diviseurs de \(p\) dans \(\N\) sont donc 
+  \(1\) et \(p\). Alors \(p\) est un nombre premier.
 
   On a trouvé un nombre premier parmi les diviseurs de \(a\).
 \end{proof}
@@ -1498,301 +2061,441 @@ Soient deux relatifs \(a\) et \(b\). Si \(x\) est un diviseur non nul de \(a\) i
   L'ensemble des nombres premiers est infini.
 \end{prop}
 \begin{proof}
-  Notons \(\P\) l'ensemble des nombres premiers. Si \(\P\) est fini, alors on peut écrire pour tout naturel non nul \(N\) \(\P=\enstq{p_i}{i \in \intervalleentier{1}{N}}\). Il est non vide puisque \(2\) est premier. Soit \(a=p_1 \dotsm  p_N +1\) et comme \(\P\) est non vide on a \(a \in \N \setminus \{0,1\}\). D'après la proposition~
-  \ref{prop:distinctsunites} \(a\) admet au moins un nombre premier parmi ses diviseurs. Ce qui s'écrit \(\exists k \in \intervalleentier{1}{n} \quad p_k \mid a\). Alors \(p_k \mid a\) et \(p_k \mid p_1 \dotsm p_N\) ce qui implique que \(p_k \mid 1\). Ce qui est absurde puisque le seul diviseur de 1 est 1 lui-même, alors \(p_k\) est premier. Donc \(\P\) est infini.
+  Notons \(\P\) l'ensemble des nombres premiers. Si \(\P\) est fini, alors on 
+  peut écrire pour tout naturel non nul \(N\) \(\P=\enstq{p_i}{i \in 
+  \intervalleentier{1}{N}}\). Il est non vide puisque \(2\) est premier. Soit 
+  \(a=p_1 \dotsm  p_N +1\) et comme \(\P\) est non vide on a \(a \in \N 
+  \setminus \{0,1\}\). D'après la proposition~
+  \ref{prop:distinctsunites} \(a\) admet au moins un nombre premier parmi ses 
+  diviseurs. Ce qui s'écrit \(\exists k \in \intervalleentier{1}{n} \quad p_k 
+  \mid a\). Alors \(p_k \mid a\) et \(p_k \mid p_1 \dotsm p_N\) ce qui implique 
+  que \(p_k \mid 1\). Ce qui est absurde puisque le seul diviseur de 1 est 1 
+  lui-même, alors \(p_k\) est premier. Donc \(\P\) est infini.
 \end{proof}
 
 \begin{prop}[Crible d'Ératosthéne]
-  Tout naturel \(n \geqslant 4\) non premier admet au moins un diviseur \(q\) compris entre \(2\) et \(E(\sqrt{n})\) (partie entière).
+  Tout naturel \(n \geqslant 4\) non premier admet au moins un diviseur \(q\) 
+  compris entre \(2\) et \(E(\sqrt{n})\) (partie entière).
 \end{prop}
 \begin{proof}
-  Soit un naturel \(n \geqslant 4\) non  premier. Il admet des diviseurs propres, donc il existe \((x,y) \in \N^2\) tels que \(n=xy\) avec \(x \geqslant 2\) et \(y \geqslant 2\).
+  Soit un naturel \(n \geqslant 4\) non  premier. Il admet des diviseurs 
+  propres, donc il existe \((x,y) \in \N^2\) tels que \(n=xy\) avec \(x 
+  \geqslant 2\) et \(y \geqslant 2\).
 
-  Quitte à intervertir les rôles de \(x\) et \(y\), on peut supposer que \(x \leqslant y\). D'où \(x^2 \leqslant n\) et donc \(x \leqslant \sqrt{n}\). Or \(x \in \N\) donc \(x \leqslant E(\sqrt{n})\). On a donc trouvé un diviseur \(x\) de \(n\) compris entre \(2\) et \(E(\sqrt{n})\).
+  Quitte à intervertir les rôles de \(x\) et \(y\), on peut supposer que \(x 
+  \leqslant y\). D'où \(x^2 \leqslant n\) et donc \(x \leqslant \sqrt{n}\). Or 
+  \(x \in \N\) donc \(x \leqslant E(\sqrt{n})\). On a donc trouvé un diviseur 
+  \(x\) de \(n\) compris entre \(2\) et \(E(\sqrt{n})\).
 \end{proof}
 
-Pour l'application pratique du crible, on utilise la contraposée. Si \(n\) est un entier plus grand que \(4\) qui n'admet pas de diviseurs compris entre 2 et \(\sqrt{n}\) alors \(n\) est un nombre premier.
+Pour l'application pratique du crible, on utilise la contraposée. Si \(n\) est 
+un entier plus grand que \(4\) qui n'admet pas de diviseurs compris entre 2 et 
+\(\sqrt{n}\) alors \(n\) est un nombre premier.
 
-Soit \(n \geqslant 4\). Supposons connus tous les nombres premiers inférieurs à \(E(\sqrt{n})\). Pour chaque \(p\) premier tel que \(p \leqslant E(\sqrt{n})\), on garde \(p\) et on barre tous les multiples de \(p\) inférieur ou égaux à \(n\).
+Soit \(n \geqslant 4\). Supposons connus tous les nombres premiers inférieurs à 
+\(E(\sqrt{n})\). Pour chaque \(p\) premier tel que \(p \leqslant E(\sqrt{n})\), 
+on garde \(p\) et on barre tous les multiples de \(p\) inférieur ou égaux à 
+\(n\).
 
-Les nombres restants sont les nombres premiers inférieurs à \(n\). Par exemple pour \(n=100\) \(E(\sqrt{n})=10\). L'ensemble des nombres premiers inférieurs à 10 est \(\{2,3,5,7\}\). Alors on barre tous les multiples de 2, de 3, de 5 et de 7. Au final l'ensemble des nombres premiers inférieurs à 100 est 
-\begin{align}
+Les nombres restants sont les nombres premiers inférieurs à \(n\). Par exemple 
+pour \(n=100\) \(E(\sqrt{n})=10\). L'ensemble des nombres premiers inférieurs à 
+10 est \(\{2,3,5,7\}\). Alors on barre tous les multiples de 2, de 3, de 5 et de 
+7. Au final l'ensemble des nombres premiers inférieurs à 100 est \begin{align}
   \P_{\leqslant 100}&=\{2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53, \notag \\
-                    & \phantom{=} 61,67,71,73,79,83,89,97\}.
-  \end{align}
+  & \phantom{=} 61,67,71,73,79,83,89,97\}.
+\end{align}
 
-  \subsubsection{Décomposition d'un entier en produit de nombres premiers}
+\subsubsection{Décomposition d'un entier en produit de nombres premiers}
 
-  On suppose que \(n\) est un entier naturel.
+On suppose que \(n\) est un entier naturel.
 
-  \begin{theo}
-    Soit \(n \in \N\), \(n \geqslant 2\). Il existe \(m \in \N^*\), \(p_1, \dotsc, p_m\) des nombres premiers distincts, \(k_1, \dotsc, k_m\) des naturels non nuls tels que
-    \begin{equation}
-      n = \prod_{i=1}^m p_i^{k_i}.
-    \end{equation}
-    De plus cette décomposition est unique à l'ordre des facteurs près. On dit que c'est la décomposition primaire du naturel \(n\). L'ensemble \(\enstq{p_i}{i \in \intervalleentier{1}{m}}\) est appelé le support primaire de \(n\).
-  \end{theo}
-  \begin{proof}[Existence]
-    On démontre par récurrence forte sur \(n \geqslant 2\) la propriété \(\P(n)\) ``\(n\) est produit de facteurs premiers''.
+\begin{theo}
+  Soit \(n \in \N\), \(n \geqslant 2\). Il existe \(m \in \N^*\), \(p_1, \dotsc, 
+  p_m\) des nombres premiers distincts, \(k_1, \dotsc, k_m\) des naturels non 
+  nuls tels que
+  \begin{equation}
+    n = \prod_{i=1}^m p_i^{k_i}.
+  \end{equation}
+  De plus cette décomposition est unique à l'ordre des facteurs près. On dit que 
+  c'est la décomposition primaire du naturel \(n\). L'ensemble \(\enstq{p_i}{i 
+  \in \intervalleentier{1}{m}}\) est appelé le support primaire de \(n\).
+\end{theo}
+\begin{proof}[Existence]
+  On démontre par récurrence forte sur \(n \geqslant 2\) la propriété \(\P(n)\) 
+  ``\(n\) est produit de facteurs premiers''.
 
-    \emph{Initialisation}. Pour \(n=2\). \(2=2\), \(m=1\), \(p_1=2\) et \(k_1=1\). Donc \(\P(2)\) est vraie.
+  \emph{Initialisation}. Pour \(n=2\). \(2=2\), \(m=1\), \(p_1=2\) et \(k_1=1\). 
+  Donc \(\P(2)\) est vraie.
 
-    \emph{Hérédité}. Soit \(n \geqslant 2\) et on suppose que \(\P(2), \dotsc, \P(n)\) sont vraies. Alors \(n+1\) admet au moins un diviseur de \(p\) qui est un nombre premier. Deux cas se présentent
-    \begin{enumerate}
-      \item \(p=n+1\). Alors \(n+1\) est premier, il est égal à un produit de facteurs premiers, \(m=1\), \(p_1=n+1\) et \(k_1=1\).
-      \item \(p \neq n+1\) et alors \(p < n+1\). Il existe un naturel \(q\) tel que \(n+1=pq\). Le nombre \(p\) est premier donc \(p \geqslant 2\). Alors \(2 \leqslant q \leqslant n\). Comme \(\P(q)\) est vraie alors \(q\) est égal à un produit de nombres premiers.
-
-        Alors \(n+1=pq\) est lui aussi égal à un produit de facteurs premiers, puisque \(p\) est premier. Donc \(\P(n+1)\) est vraie.
-    \end{enumerate}
-
-    \emph{Conclusion}. Par théorème de récurrence forte, la propriété \(\P\) est vraie pour tout naturel \(n \geqslant 2\).
-
-    Il reste à mettre le produit sous la bonne forme.
-  \end{proof}
-  \begin{proof}[Unicité]
-    Soient deux décompositions primaires de \(n\)
-    \begin{equation}
-      n=\prod_{i=1}^m p_i^{k_i} = \prod_{j=1}^r q_j^{l_j}.
-    \end{equation}
-    Soit \(i \in \intervalleentier{1}{m}\), alors \(p_i \mid n\) et \(p_i\) est premier donc il existe un naturel \(j \in \intervalleentier{1}{r}\) tel que \(p_i \mid q_j\). Le nombre \(q_j\) est premier et c'est un naturel donc \(p_i=1\) ou \(p_i=q_j\). Or \(p_i\) est aussi premier donc \(p_i=q_j\). on vient de montrer que \(\{p_1, \ldots, p_m\} \subset \{q_1, \ldots q_r\}\). Par symétrie des rôle on a l'autre inclusion et donc l'égalité \(\{p_1, \ldots, p_m\} = \{q_1, \ldots q_r\}\) et \(m=r\).
-
-    Quitte à ré-indexer les \(q_j\), on peut supposer que pour tout \(i \in \intervalleentier{1}{m}\), \(p_i=q_i\). Alors
-    \begin{equation}
-      n=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i}.
-    \end{equation}
-    Montrons que pour tout \(i \in \intervalleentier{1}{m}\), \(k_i=l_i\). S'il existe \(i_0 \intervalleentier{1}{m}\) tel que \(k_{i_0} \neq l_{i_0}\) (par exemple \(k_{i_0} > l_{i_0}\)) alors \(p_{i_0}^{k_{i_0}} \geqslant p_{i_0}^{k_{i_0}-l_{i_0}}\). Alors
-    \begin{align}
-      n&=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i} \\
-       &p_{i_0}^{l_{i_0}} \cdot p_{i_0}^{k_{i_0}-l_{i_0}} \prod_{i \neq i_0}^m p_i^{k_i} = p_{i_0}^{l_{i_0}} \cdot \prod_{i \neq i_0}^m p_i^{k_i}\\
-       &p_{i_0}^{k_{i_0}-l_{i_0}} \prod_{i \neq i_0}^m p_i^{k_i} =\prod_{i \neq i_0}^m p_i^{k_i},
-    \end{align}
-    puisque \(p_{i_0}^{l_{i_0}} \neq 0\). Alors \(p_{i_0}\) divise le membre de gauche mais pas celui de droite. C'est absurde. Donc pour tout \(i \in \intervalleentier{1}{m}\),  \(k_i=l_i\).
-  \end{proof}
-  \begin{corth}
-    Soit \(n=\prod_{i=1}^m p_i^{k_i}\) une décomposition primaire. Alors
-    \begin{enumerate}
-      \item pour \(i \in \intervalleentier{1}{m}\) alors \(k_i\) est le plus grand entier \(k\) tel que \(p_i^k \mid n\);
-      \item les diviseurs de \(n\) dans \(\N\) sont les \(\prod_{i=1}^m p_i^{l_i}\) avec \(0 \leqslant l_i \leqslant k_i\) (pas tout à fait une décomposition primaire);
-      \item Soient deux naturels \(a\) et \(b\) et leurs décompositions primaires
-        \begin{equation}
-          a=\prod_{i=1}^m p_i^{k_i}, \quad b=\prod_{i=1}^m p_i^{l_i},
-        \end{equation}
-        ce sont des décompositions primaires dans lesquelles on autorise les puissances \(k_i\) et \(l_i\) à être nulles. 
-
-        Alors
-        \begin{equation}
-          \pgcd(a,b) = \prod_{i=1}^m p_i^{\min(k_i,l_i)}, \quad \ppcm(a,b) = \prod_{i=1}^m p_i^{\max(k_i,l_i)}.
-        \end{equation}
-    \end{enumerate}
-  \end{corth}
-  \begin{proof}
-    \begin{enumerate}
-      \item Déjà \(p_i^{k_i} \mid n\). Ensuite, si \(k > k_i\) et si \(p_i^k\) divisait \(n\) alors il existerait \(q \in \N\) tel que \(n=q p_i^k\). Alors
-        \begin{equation}
-          qp_i^k = \prod_{j=1}^m p_j^{k_j} = p_i^{k_i} \prod_{j \neq i} p_j^{k_j},
-        \end{equation}
-        donc
-        \begin{equation}
-          qp_i^{k-k_i}p_i^{k_i} =  p_i^{k_i} \prod_{j \neq i} p_j^{k_j},
-        \end{equation}
-        et comme \(p_i^{k_i} \neq 0\) on simplifie et on obtient
-        \begin{equation}
-          qp_i^{k-k_i} = \prod_{j \neq i} p_j^{k_j}.
-        \end{equation}
-        Alors \(p_i\) diviserait le terme de gauche mais pas celui de droite, c'est absurde donc \(p_i^k\) ne divise pas \(n\).
-      \item Déjà les \(p_i^{k_i}\) sont bien des diviseurs de \(n\). Soit \(q \in \N\) qui divise \(n\). Si \(p\) est un nombre premier qui divise \(q\), alors par transitivité \(p\) divise \(n\). Puisque \(n=\prod_{i=1}^m p_i^{k_i}\) il existe \(i \in \intervalleentier{1}{m}\) tel que \(p=p_i\).
-
-        Les diviseurs premiers de \(q\) sont donc à choisir dans \(\{p_1, \ldots, p_m\}\). On peut alors écrire \(q=\prod_{i=1}^m p_i^{l_i}\) avec \(\forall i \in \intervalleentier{1}{m}\), \(l_i \in \N\). Donc pour tout \(i\in \intervalleentier{1}{m}\), \(p_i^{l_i} \mid q\) donc \(p_i^{l_i} \mid n\) et d'après le premier point \(l_i \leqslant k_i\).
-      \item On pose \(d= \pgcd(a,b)\) et \(\delta = \prod_{i=1}^m p_i^{\min(k_i,l_i)}\). Comme \(\min(k_i, l_i) \leqslant k_i\) alors d'après le deuxième point \(\delta \mid a\) et de la même manière \(\min(k_i, l_i) \leqslant l_i\) donc \(\delta \mid b\). Alors \(\delta \mid d\).
-
-        D'autre part \(d \mid a\) et \(d \mid b\) donc on peut écrire, d'après le deuxième point, \(d\) sous la forme
-        \begin{equation}
-          d = \prod_{i=1}^m p_i^{\alpha_i} \quad \alpha_i \leqslant k_i \text{~et~} \alpha_i \leqslant l_i.
-        \end{equation}
-        Alors \(\alpha_i \leqslant \min(k_i,l_i)\) et donc, toujours d'après le deuxième point, \(d \mid \prod_{i=1}^m p_i ^{\min(l_i,k_i)}=\delta\). Finalement \(d\) et \(\delta\) sont associés et comme ils sont positifs \(d=\delta\). On sait que
-        \begin{equation}
-          ab=\abs{ab} = \pgcd(a,b) \cdot \ppcm(a,b),
-        \end{equation}
-        alors
-        \begin{equation}
-          ab = \prod_{i=1}^m p_i^{l_i+k_i}= \prod_{i=1}^m p_i^{\min(k_i,l_i)+\max(k_i,l_i)} = \pgcd(a,b) \prod_{i=1}^m p_i^{\max(k_i,l_i)},
-        \end{equation}
-        et comme le PPCM est unique, on en conclue que la formule est vraie.
-    \end{enumerate}
-  \end{proof}
-
-  \subsection{Nombres rationnels}
-
-  \subsubsection{Corps des nombres rationnels : \(\Q\)}
-
-  \begin{defdef}
-    On appelle \(\Q\) le corps des fractions de l'anneau intègre \(\Z\). \(\Q\) est appelé le corps des rationnels, les éléments de \(\Q\) sont les nombres rationnels. Par définition, les éléments de \(\Q\) s'écrivent sous la forme \(\frac{a}{b}\) avec \(a\) et \(b\) des relatifs et \(b\) non nul. Par définition, pour tout relatifs \(a\) et \(a'\) et tous relatifs non nuls \(b\) et \(b'\) on a
-    \begin{equation}
-      \frac{a}{b} = \frac{a'}{b'} \iff ab'=ba'.
-    \end{equation}
-  \end{defdef}
-  \begin{defdef}
-    Soit \(x \in \Q\). Si \((a,b) \in \Z \times \Z^*\) vérifie \(x=\frac{a}{b}\), on dit que \(\frac{a}{b}\) est une représentation du rationnel \(x\).
-  \end{defdef}
-
-  On peut toujours trouver un représentant tel que \(a \in \Z\) et \(b \in \N^*\). Si \(b <0\) alors \(\frac{a}{b}=\frac{-a}{-b}\).
-
-  \((\Q, +, \cdot)\) est un corps où pour tout relatifs \((a,a')\) et tout relatifs non nul \((b,b')\) on a
-  \begin{align}
-    \frac{a}{b}+\frac{a'}{b'} &= \frac{ab'+ba'}{bb'}; \\
-    \frac{a}{b} \cdot \frac{a'}{b'} &= \frac{aa'}{bb'}.
-  \end{align}
-
-  \paragraph{Immersion de \(\Z\) dans \(\Q\)}
-
-  L'application \(\fonction{j}{\Z}{\Q}{a}{\frac{a}{1}}\) est un morphisme injectif d'anneaux. \(j\) induit un isomorphisme de \(\Z\) sur \(\Image{j}\) et on choisit d'identifier \(\Z\) et \(\Image{j}\). Autrement dit, pour tout \(a \in \Z\), on identifie \(a\) avec le rationnel \(\frac{a}{1}\).
-
-  Ainsi \(\Z\) est un sous-anneau de \(\Q\).
-
-  \subsubsection{Relation d'ordre sur \(\Q\)}
-
-  \begin{defdef}
-    Soient \(\frac{a}{b}\) et \(\frac{c}{d}\) deux éléments de \(\Q\). On définit \(\frac{a}{b} \leqslant \frac{c}{d}\) par \((ad-bc)bd \leqslant 0\).
-  \end{defdef}
-
-  C'est légitime car~:
+  \emph{Hérédité}. Soit \(n \geqslant 2\) et on suppose que \(\P(2), \dotsc, 
+  \P(n)\) sont vraies. Alors \(n+1\) admet au moins un diviseur de \(p\) qui est 
+  un nombre premier. Deux cas se présentent
   \begin{enumerate}
-    \item Le signe de \((ad-bc)bd\) ne dépend pas du choix du représentants des rationnels \(\frac{a}{b}\) et \(\frac{c}{d}\) : si \(\frac{a}{b}=\frac{a'}{b'}\) et \(\frac{c}{d} = \frac{c'}{d'}\) alors \(ab'=b'a\) et \(c'd=cd'\) et
-      \begin{align}
-        (a'd'-b'c')(b'd')(bd)^2&=(a'd'bd -b'c'bd)(b'd')(bd)\\
-                               &=(ab'dd'-cd'b'b)(b'd')(bd)\\
-                               &=(ad-bc)(b'd')^2(bd),
-      \end{align}
-      les relatifs \((bd)^2\) et \((b'd')^2\) sont positifs ou nuls donc \((a'd'-b'c')(b'd')\) a le même signe que \((ad-bc)(bd)\);
-    \item soient \(a\) et \(c\) deux relatifs (ce sont aussi des rationnels) et \(a \leqslant c\) dans \(\Q\) est équivalent à \(\frac{a}{1} \leqslant \frac{c}{1}\) qui est équivalent à \((a\cdot 1-c \cdot 1)\cdot 1 \cdot 1 \leqslant 0\) dans \(\Z\) qui est équivalent à \(a \leqslant c\) dans \(\Z\).
+    \item \(p=n+1\). Alors \(n+1\) est premier, il est égal à un produit de 
+      facteurs premiers, \(m=1\), \(p_1=n+1\) et \(k_1=1\).
+    \item \(p \neq n+1\) et alors \(p < n+1\). Il existe un naturel \(q\) tel 
+      que \(n+1=pq\). Le nombre \(p\) est premier donc \(p \geqslant 2\). Alors 
+      \(2 \leqslant q \leqslant n\). Comme \(\P(q)\) est vraie alors \(q\) est 
+      égal à un produit de nombres premiers.
+
+      Alors \(n+1=pq\) est lui aussi égal à un produit de facteurs premiers, 
+      puisque \(p\) est premier. Donc \(\P(n+1)\) est vraie.
   \end{enumerate}
 
-  La relations d'ordre définie sur \(\Q\) prolonge la relation définie sur \(\Z\).
+  \emph{Conclusion}. Par théorème de récurrence forte, la propriété \(\P\) est 
+  vraie pour tout naturel \(n \geqslant 2\).
 
-  \paragraph{Propriétés}
+  Il reste à mettre le produit sous la bonne forme.
+\end{proof}
+\begin{proof}[Unicité]
+  Soient deux décompositions primaires de \(n\)
+  \begin{equation}
+    n=\prod_{i=1}^m p_i^{k_i} = \prod_{j=1}^r q_j^{l_j}.
+  \end{equation}
+  Soit \(i \in \intervalleentier{1}{m}\), alors \(p_i \mid n\) et \(p_i\) est 
+  premier donc il existe un naturel \(j \in \intervalleentier{1}{r}\) tel que 
+  \(p_i \mid q_j\). Le nombre \(q_j\) est premier et c'est un naturel donc 
+  \(p_i=1\) ou \(p_i=q_j\). Or \(p_i\) est aussi premier donc \(p_i=q_j\). on 
+  vient de montrer que \(\{p_1, \ldots, p_m\} \subset \{q_1, \ldots q_r\}\). Par 
+  symétrie des rôle on a l'autre inclusion et donc l'égalité \(\{p_1, \ldots, 
+  p_m\} = \{q_1, \ldots q_r\}\) et \(m=r\).
 
-  \begin{prop}
-    Pour tout relatif \(a\) et tout relatif non nul \(b\)
-    \begin{equation}
-      \frac{a}{b} \geqslant 0 \iff ab \geqslant_\Z 0.
-    \end{equation}
-  \end{prop}
-  \begin{proof}
+  Quitte à ré-indexer les \(q_j\), on peut supposer que pour tout \(i \in 
+  \intervalleentier{1}{m}\), \(p_i=q_i\). Alors
+  \begin{equation}
+    n=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i}.
+  \end{equation}
+  Montrons que pour tout \(i \in \intervalleentier{1}{m}\), \(k_i=l_i\). S'il 
+  existe \(i_0 \intervalleentier{1}{m}\) tel que \(k_{i_0} \neq l_{i_0}\) (par 
+  exemple \(k_{i_0} > l_{i_0}\)) alors \(p_{i_0}^{k_{i_0}} \geqslant 
+  p_{i_0}^{k_{i_0}-l_{i_0}}\). Alors
+  \begin{align}
+    n&=\prod_{i=1}^m p_i^{k_i} = \prod_{i=1}^m p_i^{l_i} \\
+    &p_{i_0}^{l_{i_0}} \cdot p_{i_0}^{k_{i_0}-l_{i_0}} \prod_{i \neq i_0}^m 
+    p_i^{k_i} = p_{i_0}^{l_{i_0}} \cdot \prod_{i \neq i_0}^m p_i^{k_i}\\
+    &p_{i_0}^{k_{i_0}-l_{i_0}} \prod_{i \neq i_0}^m p_i^{k_i} =\prod_{i \neq 
+    i_0}^m p_i^{k_i},
+  \end{align}
+  puisque \(p_{i_0}^{l_{i_0}} \neq 0\). Alors \(p_{i_0}\) divise le membre de 
+  gauche mais pas celui de droite. C'est absurde. Donc pour tout \(i \in 
+  \intervalleentier{1}{m}\),  \(k_i=l_i\).
+\end{proof}
+\begin{corth}
+  Soit \(n=\prod_{i=1}^m p_i^{k_i}\) une décomposition primaire. Alors
+  \begin{enumerate}
+    \item pour \(i \in \intervalleentier{1}{m}\) alors \(k_i\) est le plus grand 
+      entier \(k\) tel que \(p_i^k \mid n\);
+    \item les diviseurs de \(n\) dans \(\N\) sont les \(\prod_{i=1}^m 
+      p_i^{l_i}\) avec \(0 \leqslant l_i \leqslant k_i\) (pas tout à fait une 
+      décomposition primaire);
+    \item Soient deux naturels \(a\) et \(b\) et leurs décompositions primaires
+      \begin{equation}
+        a=\prod_{i=1}^m p_i^{k_i}, \quad b=\prod_{i=1}^m p_i^{l_i},
+      \end{equation}
+      ce sont des décompositions primaires dans lesquelles on autorise les 
+      puissances \(k_i\) et \(l_i\) à être nulles. 
+
+      Alors
+      \begin{equation}
+        \pgcd(a,b) = \prod_{i=1}^m p_i^{\min(k_i,l_i)}, \quad \ppcm(a,b) = 
+        \prod_{i=1}^m p_i^{\max(k_i,l_i)}.
+      \end{equation}
+  \end{enumerate}
+\end{corth}
+\begin{proof}
+  \begin{enumerate}
+    \item Déjà \(p_i^{k_i} \mid n\). Ensuite, si \(k > k_i\) et si \(p_i^k\) 
+      divisait \(n\) alors il existerait \(q \in \N\) tel que \(n=q p_i^k\). 
+      Alors
+      \begin{equation}
+        qp_i^k = \prod_{j=1}^m p_j^{k_j} = p_i^{k_i} \prod_{j \neq i} p_j^{k_j},
+      \end{equation}
+      donc
+      \begin{equation}
+        qp_i^{k-k_i}p_i^{k_i} =  p_i^{k_i} \prod_{j \neq i} p_j^{k_j},
+      \end{equation}
+      et comme \(p_i^{k_i} \neq 0\) on simplifie et on obtient
+      \begin{equation}
+        qp_i^{k-k_i} = \prod_{j \neq i} p_j^{k_j}.
+      \end{equation}
+      Alors \(p_i\) diviserait le terme de gauche mais pas celui de droite, 
+      c'est absurde donc \(p_i^k\) ne divise pas \(n\).
+    \item Déjà les \(p_i^{k_i}\) sont bien des diviseurs de \(n\). Soit \(q \in 
+      \N\) qui divise \(n\). Si \(p\) est un nombre premier qui divise \(q\), 
+      alors par transitivité \(p\) divise \(n\). Puisque \(n=\prod_{i=1}^m 
+      p_i^{k_i}\) il existe \(i \in \intervalleentier{1}{m}\) tel que \(p=p_i\).
+
+      Les diviseurs premiers de \(q\) sont donc à choisir dans \(\{p_1, \ldots, 
+      p_m\}\). On peut alors écrire \(q=\prod_{i=1}^m p_i^{l_i}\) avec \(\forall 
+      i \in \intervalleentier{1}{m}\), \(l_i \in \N\). Donc pour tout \(i\in 
+      \intervalleentier{1}{m}\), \(p_i^{l_i} \mid q\) donc \(p_i^{l_i} \mid n\) 
+      et d'après le premier point \(l_i \leqslant k_i\).
+    \item On pose \(d= \pgcd(a,b)\) et \(\delta = \prod_{i=1}^m 
+      p_i^{\min(k_i,l_i)}\). Comme \(\min(k_i, l_i) \leqslant k_i\) alors 
+      d'après le deuxième point \(\delta \mid a\) et de la même manière 
+      \(\min(k_i, l_i) \leqslant l_i\) donc \(\delta \mid b\). Alors \(\delta 
+      \mid d\).
+
+      D'autre part \(d \mid a\) et \(d \mid b\) donc on peut écrire, d'après le 
+      deuxième point, \(d\) sous la forme
+      \begin{equation}
+        d = \prod_{i=1}^m p_i^{\alpha_i} \quad \alpha_i \leqslant k_i 
+        \text{~et~} \alpha_i \leqslant l_i.
+      \end{equation}
+      Alors \(\alpha_i \leqslant \min(k_i,l_i)\) et donc, toujours d'après le 
+      deuxième point, \(d \mid \prod_{i=1}^m p_i ^{\min(l_i,k_i)}=\delta\). 
+      Finalement \(d\) et \(\delta\) sont associés et comme ils sont positifs 
+      \(d=\delta\). On sait que
+      \begin{equation}
+        ab=\abs{ab} = \pgcd(a,b) \cdot \ppcm(a,b),
+      \end{equation}
+      alors
+      \begin{equation}
+        ab = \prod_{i=1}^m p_i^{l_i+k_i}= \prod_{i=1}^m 
+        p_i^{\min(k_i,l_i)+\max(k_i,l_i)} = \pgcd(a,b) \prod_{i=1}^m 
+        p_i^{\max(k_i,l_i)},
+      \end{equation}
+      et comme le PPCM est unique, on en conclue que la formule est vraie.
+  \end{enumerate}
+\end{proof}
+
+\subsection{Nombres rationnels}
+
+\subsubsection{Corps des nombres rationnels : \(\Q\)}
+
+\begin{defdef}
+  On appelle \(\Q\) le corps des fractions de l'anneau intègre \(\Z\). \(\Q\) 
+  est appelé le corps des rationnels, les éléments de \(\Q\) sont les nombres 
+  rationnels. Par définition, les éléments de \(\Q\) s'écrivent sous la forme 
+  \(\frac{a}{b}\) avec \(a\) et \(b\) des relatifs et \(b\) non nul. Par 
+  définition, pour tout relatifs \(a\) et \(a'\) et tous relatifs non nuls \(b\) 
+  et \(b'\) on a
+  \begin{equation}
+    \frac{a}{b} = \frac{a'}{b'} \iff ab'=ba'.
+  \end{equation}
+\end{defdef}
+\begin{defdef}
+  Soit \(x \in \Q\). Si \((a,b) \in \Z \times \Z^*\) vérifie \(x=\frac{a}{b}\), 
+  on dit que \(\frac{a}{b}\) est une représentation du rationnel \(x\).
+\end{defdef}
+
+On peut toujours trouver un représentant tel que \(a \in \Z\) et \(b \in \N^*\). 
+Si \(b <0\) alors \(\frac{a}{b}=\frac{-a}{-b}\).
+
+\((\Q, +, \cdot)\) est un corps où pour tout relatifs \((a,a')\) et tout 
+relatifs non nul \((b,b')\) on a
+\begin{align}
+  \frac{a}{b}+\frac{a'}{b'} &= \frac{ab'+ba'}{bb'}; \\
+  \frac{a}{b} \cdot \frac{a'}{b'} &= \frac{aa'}{bb'}.
+\end{align}
+
+\paragraph{Immersion de \(\Z\) dans \(\Q\)}
+
+L'application \(\fonction{j}{\Z}{\Q}{a}{\frac{a}{1}}\) est un morphisme injectif 
+d'anneaux. \(j\) induit un isomorphisme de \(\Z\) sur \(\Image{j}\) et on 
+choisit d'identifier \(\Z\) et \(\Image{j}\). Autrement dit, pour tout \(a \in 
+\Z\), on identifie \(a\) avec le rationnel \(\frac{a}{1}\).
+
+Ainsi \(\Z\) est un sous-anneau de \(\Q\).
+
+\subsubsection{Relation d'ordre sur \(\Q\)}
+
+\begin{defdef}
+  Soient \(\frac{a}{b}\) et \(\frac{c}{d}\) deux éléments de \(\Q\). On définit 
+  \(\frac{a}{b} \leqslant \frac{c}{d}\) par \((ad-bc)bd \leqslant 0\).
+\end{defdef}
+
+C'est légitime car~:
+\begin{enumerate}
+  \item Le signe de \((ad-bc)bd\) ne dépend pas du choix du représentants des 
+    rationnels \(\frac{a}{b}\) et \(\frac{c}{d}\) : si 
+    \(\frac{a}{b}=\frac{a'}{b'}\) et \(\frac{c}{d} = \frac{c'}{d'}\) alors 
+    \(ab'=b'a\) et \(c'd=cd'\) et
     \begin{align}
-      \frac{a}{b} \geqslant 0 &\iff \frac{a}{b} \geqslant \frac{0}{1} \\
-                              & \iff (a \cdot 1 - 0 \cdot b)\cdot b \cdot 1 \geqslant 0 \\
-                              & \iff ab \geqslant 0.
+      (a'd'-b'c')(b'd')(bd)^2&=(a'd'bd -b'c'bd)(b'd')(bd)\\
+      &=(ab'dd'-cd'b'b)(b'd')(bd)\\
+      &=(ad-bc)(b'd')^2(bd),
     \end{align}
-  \end{proof}
-  \begin{prop}
-    La relation \(\leqslant\) définie sur \(\Q\) est bien une relation d'ordre, c'est-à-dire qu'elle est réflexive, antisymétrique et transitive.
-  \end{prop}
-  \begin{proof}
-    \begin{equation}
-      \forall \frac{a}{b} \in \Q \quad \frac{a}{b} \leqslant \frac{a}{b},
-    \end{equation}
-    puisque \((ab-ba)b^2=0 \leqslant 0\). La relation d'ordre sur \(\Q\) est réflexive.
-    \begin{equation}
-      \forall (r,s) \in \Q^2 \ \exists (a,c) \in \Z^2 \ \exists (b,d) \in (\Z^*)^2 \quad r=\frac{a}{b} \ s=\frac{c}{d}.
-    \end{equation}
-    Si \(r\leqslant s\) et \(s \leqslant r\) alors \((ad-bc)bd \leqslant 0\) et \((ad-bc)bd \geqslant 0\) et comme \(\leqslant\) est antisymétrique sur \(\Z\) alors \((ad-bc)bd=0\) or \(b\) et \(d\) sont non nuls et comme \(\Z\) est intègre alors \(ad=bc\) donc \(r=s\). La relation d'ordre sur \(\Q\) est antisymétrique.
+    les relatifs \((bd)^2\) et \((b'd')^2\) sont positifs ou nuls donc 
+    \((a'd'-b'c')(b'd')\) a le même signe que \((ad-bc)(bd)\);
+  \item soient \(a\) et \(c\) deux relatifs (ce sont aussi des rationnels) et 
+    \(a \leqslant c\) dans \(\Q\) est équivalent à \(\frac{a}{1} \leqslant 
+    \frac{c}{1}\) qui est équivalent à \((a\cdot 1-c \cdot 1)\cdot 1 \cdot 1 
+    \leqslant 0\) dans \(\Z\) qui est équivalent à \(a \leqslant c\) dans 
+    \(\Z\).
+\end{enumerate}
 
-    Soient trois rationnels \(r,s\) et \(t\) et leur représentants \(r=\frac{a}{b}\), \(s=\frac{d}{c}\) et \(t=\frac{e}{f}\) tels que \(r \leqslant s\) et \(s \leqslant t\). Alors
-    \begin{align}
-      (ad-bc)bd \leqslant 0, \\
-      (cf-ed)df \leqslant 0.
-    \end{align}
-    Comme \(f^2\) et \(b^2\) sont positifs alors
-    \begin{align}
-      abd^2f^2 \leqslant cdb^2f^2, \\
-      cdf^2b^2 \leqslant efd^2b^2.
-    \end{align}
-    Par transitivité de la relation d'ordre sur \(\Z\)
-    \begin{align}
-      abd^2f^2 \leqslant efd^2b^2, \\
-      (af-eb)bd^2f \leqslant 0, \\
-      (af-eb)bf \leqslant 0.
-    \end{align}
-    Donc \(\frac{a}{b} \leqslant \frac{e}{f}\). La relation d'ordre sur \(\Q\) est transitive.
-  \end{proof}
-  \begin{prop}
-    L'ordre \(\leqslant \) est total sur \(\Q\).
-  \end{prop}
-  \begin{proof}
-    L'ordre \(\leqslant \) est un ordre total sur \(\Z\) donc \(\forall \left( \frac{a}{b}, \frac{c}{d} \right) \in \Q^2\) on a soit \((ad-bc)bd \geqslant 0\) ou soit \((ad-bc)bd \leqslant 0\). Donc soit \(\frac{a}{b} \leqslant \frac{c}{d}\) ou soit \(\frac{a}{b} \geqslant \frac{c}{d}\).
-  \end{proof}
-  \begin{prop}
-    \((\Q,+,\cdot, \leqslant)\) est un corps totalement ordonné, c'est-à-dire que
-    \begin{itemize}
-      \item \(\Q\) est un corps;
-      \item l'ordre \(\leqslant\) est total sur \(\Q\);
-      \item l'ordre \(\leqslant\) est compatible avec les lois \(+\) et \(\cdot\) de \(\Q\).
-    \end{itemize}
-  \end{prop}
-  \begin{proof}
-    Soient \(r,r'\) et \(s\) des rationnels. Soient \((a,b)\), \((c,d)\) et \((a',b')\) des représentants respectifs de \(r\), \(s\) et \(r'\). On suppose que \(r \leqslant r'\). Alors \((ab'-a'b)bb' \leqslant 0\). On sait aussi que \(r+s = \frac{ad+cb}{bd}\) et \(r'+s=\frac{a'd+cb'}{b'd}\). Alors
-    \begin{align}
-      [(ad+bc)b'd-(a'd+cb')bd](bdb'd) &= (ab'd^2+bb'cd-a'bd^2-bb'cd)(bb'd^2) \\
-                                      &=(ab'-a'b)(bb')d^4 \leqslant 0,
-    \end{align}
-    puisque \(d^4 \leqslant 0\) et \((ab'-a'b)bb' \leqslant 0\). Donc \(r+r' \leqslant r'+s\).
+La relations d'ordre définie sur \(\Q\) prolonge la relation définie sur \(\Z\).
 
-    On suppose maintenant que \(s \geqslant 0\), c'est à dire \(cd \geqslant 0\). Alors \(rs = \frac{ac}{bd}\) et \(r's = \frac{a'c}{b'd}\). Donc
-    \begin{equation}
-      (acb'd-a'cbd)(bdb'd) = (ab'-a'b)(bb')(cd)d^2 \leqslant 0,
-    \end{equation}
-    puisque \(cd \geqslant 0\), \(d^2 \geqslant 0\) et \((ab'-a'b)bb' \leqslant 0\). D'où \(rs \leqslant r's\).
-  \end{proof}
-  \begin{prop}
-    Le corps totalement ordonné \(\Q\) est archimédien. C'est-à-dire que
-    \begin{equation}
-      \forall r \in \Q \ \forall s \in \Q^*_+ \ \exists n \in \N \quad r \leqslant ns
-    \end{equation}
-  \end{prop}
-  \begin{proof}
-    Soient \(\frac{a}{b}\) et \(\frac{c}{d}\) des représentants respectifs de \(r\) et \(s\). Comme \(s \geqslant 0\) on a \(cd \geqslant 0\). Soit un naturel \(n\) alors
-    \begin{align}
-      r \leqslant ns &\iff \frac{a}{b} \leqslant \frac{nc}{d} \\
-                     &\iff (ad-bnc)bd \leqslant 0 \\
-                     &\iff abd^2 \leqslant n(b^2cd).
-    \end{align}
-    Or l'anneau \((\Z,+,\cdot)\) est archimédien, \(b^2cd \in \Z^*_+\) donc le naturel \(n\) existe bien. Alors \(\Q\) est archimédien.
-  \end{proof}
+\paragraph{Propriétés}
 
-  \subsubsection{Représentation irréductible d'un rationnel}
+\begin{prop}
+  Pour tout relatif \(a\) et tout relatif non nul \(b\)
+  \begin{equation}
+    \frac{a}{b} \geqslant 0 \iff ab \geqslant_\Z 0.
+  \end{equation}
+\end{prop}
+\begin{proof}
+  \begin{align}
+    \frac{a}{b} \geqslant 0 &\iff \frac{a}{b} \geqslant \frac{0}{1} \\
+    & \iff (a \cdot 1 - 0 \cdot b)\cdot b \cdot 1 \geqslant 0 \\
+    & \iff ab \geqslant 0.
+  \end{align}
+\end{proof}
+\begin{prop}
+  La relation \(\leqslant\) définie sur \(\Q\) est bien une relation d'ordre, 
+  c'est-à-dire qu'elle est réflexive, antisymétrique et transitive.
+\end{prop}
+\begin{proof}
+  \begin{equation}
+    \forall \frac{a}{b} \in \Q \quad \frac{a}{b} \leqslant \frac{a}{b},
+  \end{equation}
+  puisque \((ab-ba)b^2=0 \leqslant 0\). La relation d'ordre sur \(\Q\) est 
+  réflexive.
+  \begin{equation}
+    \forall (r,s) \in \Q^2 \ \exists (a,c) \in \Z^2 \ \exists (b,d) \in (\Z^*)^2 
+    \quad r=\frac{a}{b} \ s=\frac{c}{d}.
+  \end{equation}
+  Si \(r\leqslant s\) et \(s \leqslant r\) alors \((ad-bc)bd \leqslant 0\) et 
+  \((ad-bc)bd \geqslant 0\) et comme \(\leqslant\) est antisymétrique sur \(\Z\) 
+  alors \((ad-bc)bd=0\) or \(b\) et \(d\) sont non nuls et comme \(\Z\) est 
+  intègre alors \(ad=bc\) donc \(r=s\). La relation d'ordre sur \(\Q\) est 
+  antisymétrique.
 
-  \begin{defdef}
-    Soit un rationnel \(r\). On appelle représentant irréductible du rationnel \(r\) tout couple \((a,b) \in \Z \times \Z^*\) tel que
-    \begin{enumerate}
-      \item \(r=\frac{a}{b}\);
-      \item \(\pgcd(a,b)=1\).
-    \end{enumerate}
-  \end{defdef}
-  \begin{theo}
-    Tout rationnel admet au moins un représentant irréductible.
-  \end{theo}
-  \begin{proof}
-    Soit un rationnel \(r\). Il existe alors \((c,d) \in \Z \times \Z^*\) tel que \(r = \frac{a}{b}\). Soit \(d= \pgcd(a,b)\) comme \(b \neq 0\) on a \(\pgcd(a,b) \neq 0\). Soient \(a_1\) et \(b_1\) les quotients exacts de \(a\) et de \(b\) par \(d\). C'est-à-dire que \(a=a_1d\) et \(b=b_1d\). On sait alors que \(\pgcd(a_1,b_1)=1\). Alors \(ab_1=a_1b_1d=a_1b\). D'où \(\frac{a}{b}=\frac{a_1}{b_1}\).
+  Soient trois rationnels \(r,s\) et \(t\) et leur représentants 
+  \(r=\frac{a}{b}\), \(s=\frac{d}{c}\) et \(t=\frac{e}{f}\) tels que \(r 
+  \leqslant s\) et \(s \leqslant t\). Alors
+  \begin{align}
+    (ad-bc)bd \leqslant 0, \\
+    (cf-ed)df \leqslant 0.
+  \end{align}
+  Comme \(f^2\) et \(b^2\) sont positifs alors
+  \begin{align}
+    abd^2f^2 \leqslant cdb^2f^2, \\
+    cdf^2b^2 \leqslant efd^2b^2.
+  \end{align}
+  Par transitivité de la relation d'ordre sur \(\Z\)
+  \begin{align}
+    abd^2f^2 \leqslant efd^2b^2, \\
+    (af-eb)bd^2f \leqslant 0, \\
+    (af-eb)bf \leqslant 0.
+  \end{align}
+  Donc \(\frac{a}{b} \leqslant \frac{e}{f}\). La relation d'ordre sur \(\Q\) est 
+  transitive.
+\end{proof}
+\begin{prop}
+  L'ordre \(\leqslant \) est total sur \(\Q\).
+\end{prop}
+\begin{proof}
+  L'ordre \(\leqslant \) est un ordre total sur \(\Z\) donc \(\forall \left( 
+  \frac{a}{b}, \frac{c}{d} \right) \in \Q^2\) on a soit \((ad-bc)bd \geqslant 
+  0\) ou soit \((ad-bc)bd \leqslant 0\). Donc soit \(\frac{a}{b} \leqslant 
+  \frac{c}{d}\) ou soit \(\frac{a}{b} \geqslant \frac{c}{d}\).
+\end{proof}
+\begin{prop}
+  \((\Q,+,\cdot, \leqslant)\) est un corps totalement ordonné, c'est-à-dire que
+  \begin{itemize}
+    \item \(\Q\) est un corps;
+    \item l'ordre \(\leqslant\) est total sur \(\Q\);
+    \item l'ordre \(\leqslant\) est compatible avec les lois \(+\) et \(\cdot\) 
+      de \(\Q\).
+  \end{itemize}
+\end{prop}
+\begin{proof}
+  Soient \(r,r'\) et \(s\) des rationnels. Soient \((a,b)\), \((c,d)\) et 
+  \((a',b')\) des représentants respectifs de \(r\), \(s\) et \(r'\). On suppose 
+  que \(r \leqslant r'\). Alors \((ab'-a'b)bb' \leqslant 0\). On sait aussi que 
+  \(r+s = \frac{ad+cb}{bd}\) et \(r'+s=\frac{a'd+cb'}{b'd}\). Alors
+  \begin{align}
+    [(ad+bc)b'd-(a'd+cb')bd](bdb'd) &= (ab'd^2+bb'cd-a'bd^2-bb'cd)(bb'd^2) \\
+    &=(ab'-a'b)(bb')d^4 \leqslant 0,
+  \end{align}
+  puisque \(d^4 \leqslant 0\) et \((ab'-a'b)bb' \leqslant 0\). Donc \(r+r' 
+  \leqslant r'+s\).
 
-    On a trouvé un représentant irréductible de \(r\). On dit que \(r\) est mis sous forme irréductible.
-  \end{proof}
+  On suppose maintenant que \(s \geqslant 0\), c'est à dire \(cd \geqslant 0\). 
+  Alors \(rs = \frac{ac}{bd}\) et \(r's = \frac{a'c}{b'd}\). Donc
+  \begin{equation}
+    (acb'd-a'cbd)(bdb'd) = (ab'-a'b)(bb')(cd)d^2 \leqslant 0,
+  \end{equation}
+  puisque \(cd \geqslant 0\), \(d^2 \geqslant 0\) et \((ab'-a'b)bb' \leqslant 
+  0\). D'où \(rs \leqslant r's\).
+\end{proof}
+\begin{prop}
+  Le corps totalement ordonné \(\Q\) est archimédien. C'est-à-dire que
+  \begin{equation}
+    \forall r \in \Q \ \forall s \in \Q^*_+ \ \exists n \in \N \quad r \leqslant 
+    ns
+  \end{equation}
+\end{prop}
+\begin{proof}
+  Soient \(\frac{a}{b}\) et \(\frac{c}{d}\) des représentants respectifs de 
+  \(r\) et \(s\). Comme \(s \geqslant 0\) on a \(cd \geqslant 0\). Soit un 
+  naturel \(n\) alors
+  \begin{align}
+    r \leqslant ns &\iff \frac{a}{b} \leqslant \frac{nc}{d} \\
+    &\iff (ad-bnc)bd \leqslant 0 \\
+    &\iff abd^2 \leqslant n(b^2cd).
+  \end{align}
+  Or l'anneau \((\Z,+,\cdot)\) est archimédien, \(b^2cd \in \Z^*_+\) donc le 
+  naturel \(n\) existe bien. Alors \(\Q\) est archimédien.
+\end{proof}
 
-  \begin{theo}
-    Soient \((a,b) \in \Z \times \Z^*\) et \((p,q) \in \Z \times \Z^*\) tels que \(\pgcd(p,q)=1\). Alors
-    \begin{equation}
-      \frac{a}{b} = \frac{p}{q} \iff \exists d \in \Z^* \ a=dp \text{~et~} b=dp \text{~et~} \abs{d}=\pgcd(a,b).
-    \end{equation}
-  \end{theo}
-  \begin{proof}
-    \begin{enumerate}
-      \item[\(\impliedby\)] Soit \(d=\pgcd(a,b)\) tel que \(a=dp\) et \(b=dq\) alors \(aq=dpq=bp\) donc \(\frac{a}{b} = \frac{p}{q}\).
-      \item[\(\implies\)] Si \(\frac{a}{b} = \frac{p}{q}\) alors \(aq=bp\) dans \(\Z\) et \(\pgcd(p,q)=1\). Le théorème de Gau\ss{} nous affirme donc que \(q \mid b\). Il existe donc \(d \in \Z^*\) tel que \(b=dq\). Alors \(aq=bp=dpq\) donc \((a-dp)q=0\) or \(q \neq 0\) donc \(a=dp\) puisque \(\Z\) est intègre. Ainsi \(\pgcd(a,b)=\pgcd(dp,dq)=\abs{d}\pgcd(p,q)=\abs{d}\).
-    \end{enumerate}
-  \end{proof}
-  \begin{corth}
-    Pour tout \((p,q) \in \Z \times \Z^*\) et \((p',q') \in \Z \times \Z^*\) tels que \(\pgcd(p,q)=1\) et \(\pgcd(p',q')=1\), on a
-    \begin{equation}
-      \frac{p}{q} = \frac{p'}{q'} \iff \exists \mu \in \{-1, 1\} \ \begin{cases} p'=\mu p \\ q' =\mu q\end{cases}.
-    \end{equation}
-  \end{corth}
-  Tout rationnel admet exactement deux représentants irréductibles et un unique représentant irréductible dont le dénominateur est un naturel non nul.
+\subsubsection{Représentation irréductible d'un rationnel}
+
+\begin{defdef}
+  Soit un rationnel \(r\). On appelle représentant irréductible du rationnel 
+  \(r\) tout couple \((a,b) \in \Z \times \Z^*\) tel que
+  \begin{enumerate}
+    \item \(r=\frac{a}{b}\);
+    \item \(\pgcd(a,b)=1\).
+  \end{enumerate}
+\end{defdef}
+\begin{theo}
+  Tout rationnel admet au moins un représentant irréductible.
+\end{theo}
+\begin{proof}
+  Soit un rationnel \(r\). Il existe alors \((c,d) \in \Z \times \Z^*\) tel que 
+  \(r = \frac{a}{b}\). Soit \(d= \pgcd(a,b)\) comme \(b \neq 0\) on a 
+  \(\pgcd(a,b) \neq 0\). Soient \(a_1\) et \(b_1\) les quotients exacts de \(a\) 
+  et de \(b\) par \(d\). C'est-à-dire que \(a=a_1d\) et \(b=b_1d\). On sait 
+  alors que \(\pgcd(a_1,b_1)=1\). Alors \(ab_1=a_1b_1d=a_1b\). D'où 
+  \(\frac{a}{b}=\frac{a_1}{b_1}\).
+
+  On a trouvé un représentant irréductible de \(r\). On dit que \(r\) est mis 
+  sous forme irréductible.
+\end{proof}
+
+\begin{theo}
+  Soient \((a,b) \in \Z \times \Z^*\) et \((p,q) \in \Z \times \Z^*\) tels que 
+  \(\pgcd(p,q)=1\). Alors
+  \begin{equation}
+    \frac{a}{b} = \frac{p}{q} \iff \exists d \in \Z^* \ a=dp \text{~et~} b=dp 
+    \text{~et~} \abs{d}=\pgcd(a,b).
+  \end{equation}
+\end{theo}
+\begin{proof}
+  \begin{enumerate}
+    \item[\(\impliedby\)] Soit \(d=\pgcd(a,b)\) tel que \(a=dp\) et \(b=dq\) 
+      alors \(aq=dpq=bp\) donc \(\frac{a}{b} = \frac{p}{q}\).
+    \item[\(\implies\)] Si \(\frac{a}{b} = \frac{p}{q}\) alors \(aq=bp\) dans 
+      \(\Z\) et \(\pgcd(p,q)=1\). Le théorème de Gau\ss{} nous affirme donc que 
+      \(q \mid b\). Il existe donc \(d \in \Z^*\) tel que \(b=dq\). Alors 
+      \(aq=bp=dpq\) donc \((a-dp)q=0\) or \(q \neq 0\) donc \(a=dp\) puisque 
+      \(\Z\) est intègre. Ainsi 
+      \(\pgcd(a,b)=\pgcd(dp,dq)=\abs{d}\pgcd(p,q)=\abs{d}\).
+  \end{enumerate}
+\end{proof}
+\begin{corth}
+  Pour tout \((p,q) \in \Z \times \Z^*\) et \((p',q') \in \Z \times \Z^*\) tels 
+  que \(\pgcd(p,q)=1\) et \(\pgcd(p',q')=1\), on a
+  \begin{equation}
+    \frac{p}{q} = \frac{p'}{q'} \iff \exists \mu \in \{-1, 1\} \
+    \begin{cases}
+      p'=\mu p \\
+      q' =\mu q
+    \end{cases}.
+  \end{equation}
+\end{corth}
+Tout rationnel admet exactement deux représentants irréductibles et un unique 
+représentant irréductible dont le dénominateur est un naturel non nul.

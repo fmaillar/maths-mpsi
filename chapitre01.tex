@@ -434,11 +434,11 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
 \begin{prop}
   Soient deux réels \(\alpha\) et \(\beta\), puis deux réels strictement 
   positifs \(x\) et \(y\). Les formules suivantes sont vraies
-  \begin{align}
+  \begin{align*}
     x^{\alpha+\beta} &= x^\alpha x^\beta;\\
     (xy)^\alpha &= x^\alpha y^\alpha;\\
     (x^\alpha)^\beta &= x^{\alpha\beta}.
-  \end{align}
+  \end{align*}
 \end{prop}
 
 \begin{proof}
@@ -455,13 +455,13 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
       \end{proof}
 
       Les fonctions puissances admettent les limites suivantes~:
-      \begin{align}
+      \begin{align*}
         \alpha = 0 &\quad f_0 = \tilde{1} \\
         \alpha>0 &\quad \lim\limits_{x \to +\infty} f_\alpha(x) = +\infty \quad 
         \lim\limits_{x \to 0^{+}} f_\alpha(x) = 0;\\
         \alpha<0 &\quad \lim\limits_{x \to +\infty} f_\alpha(x) = 0 \quad 
         \lim\limits_{x \to 0^{+}} f_\alpha(x) = +\infty.
-      \end{align}
+      \end{align*}
 
       \begin{prop}
         Pour tout \(\alpha \in \R\), la fonction \(f_\alpha\) est dérivable sur 
@@ -642,7 +642,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
       Les fonctions cosinus et sinus sont définies respectivement comme la 
       partie réelle et imaginaire de l'exponentielle complexe, pour tout réel 
       \(x\)
-      \begin{empheq}[box = \shadowbox*]{align}
+      \begin{empheq}[box = \shadowbox*]{align*}
         \cos x &= \Re(\e^{\ii x}) = \frac{\e^{\ii x}+\e^{-\ii x}}{2} \\
         \sin x & = \Im(\e^{\ii x}) = \frac{\e^{\ii x}-\e^{\ii x}}{2\ii}
       \end{empheq}
@@ -703,7 +703,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
   \end{figure}
 
   Soit un réel \(x\), un réel \(y \in D_2\) et un réel \(z \in D_1\), alors
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \cos^2 x+\sin^2 x & = 1;\\
     \sin \left(\frac{\pi}{2}-x\right) = \cos x& = \sin 
     \left(\frac{\pi}{2}+x\right) & \sin(\pi+x) &= -\sin x \\    \cos 
@@ -728,11 +728,11 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
 
 Les fonctions sinus, cosinus, tangente et cotangente sont dérivables sur leurs 
 ensembles de définition, et on a:
-\begin{align}
+\begin{align*}
   \forall x \in \R \quad \sin'x & = \cos x \ \cos'x = -\sin x; \\
   \forall x \in D_1 \quad \tan'x & = \frac{1}{\cos^2 x} = 1+\tan^2 x; \\
   \forall x \in D_2 \quad \cot'x & = \frac{-1}{\sin^2 x} = -1-\cot^2 x.
-\end{align}
+\end{align*}
 
 \begin{defdef}[Congruence]
   Pour tout réels, \(x, y, z\), on dit que \(x\) est congru à \(y\) modulo \(z\) 
@@ -745,13 +745,13 @@ ensembles de définition, et on a:
 
 \begin{prop}
   Les fonctions trigonométriques vérifient les équivalences suivantes~:
-  \begin{align}
+  \begin{align*}
     \forall x, y \in \R \quad \cos x = \cos y &\iff \congru{x}{\pm y}{2\pi}\\
     \forall x, y \in \R \quad \sin x = \sin y &\iff \congru{x}{y}{2\pi} 
     \text{~ou~} \congru{x}{\pi-y}{2\pi}\\
     \forall x, y \in D_1 \quad \tan x = \tan y &\iff \congru{x}{y}{\pi}\\
     \forall x, y \in D_2 \quad \cot x = \cot y &\iff \congru{x}{y}{\pi}
-  \end{align}
+  \end{align*}
 \end{prop}
 
 \section{Fonctions circulaires réciproque}
@@ -804,7 +804,7 @@ ensembles de définition, et on a:
 \begin{prop}
   La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et pour tout 
   \(y \in \intervalleoo{-1}{1}\)
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \arcsin'y = \frac{1}{\sqrt{1-y^2}}.
   \end{empheq}
 \end{prop}
@@ -866,7 +866,7 @@ ensembles de définition, et on a:
 \begin{prop}
   La fonction arcsinus est dérivable sur \(\intervalleoo{-1}{1}\) et pour tout 
   \(y \in \intervalleoo{-1}{1}\)
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \arccos'y = -\frac{1}{\sqrt{1-y^2}}.
   \end{empheq}
 \end{prop}
@@ -891,7 +891,7 @@ ensembles de définition, et on a:
 
 \begin{prop}
   Soit un réel \(x\) de \(\intervalleff{-1}{1}\), alors on a
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \cos(\arcsin x) = \sin(\arccos x)& = \sqrt{1-x^2}; \\
     \arccos x + \arcsin x &= \frac{\pi}{2};\\
     \arccos(-x) = \pi &- \arccos x.
@@ -926,7 +926,7 @@ ensembles de définition, et on a:
 
 \begin{prop}
   Soit un réel \(x\) quelconque et un réel \(y\) non nul. Alors
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \cos(\arctan x)& = \frac{1}{\sqrt{1+x^2}};\\
     \sin(\arctan x)& = \frac{x}{\sqrt{1+x^2}};\\
     \arctan y + \arctan \frac{1}{y} &= \sgn(y) \frac{\pi}{2}.
@@ -1007,7 +1007,7 @@ ensembles de définition, et on a:
   On définit les applications de \(\R\) dans \(\R\), appelées respectivement 
   sinus et cosinus hyperbolique, notée \(\hsin\) et \(\hcos\), pour tout réel 
   \(x\)
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \hsin x &= \frac{\e^x - \e^{-x}}{2}, \\
     \hcos x &= \frac{\e^x + \e^{-x}}{2}.
   \end{empheq}
@@ -1027,7 +1027,7 @@ ensembles de définition, et on a:
 \end{proof}
 
 \begin{prop} Soit un réel \(x\), alors
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \hcos x + \hsin x &= \e^x, \\
     \hcos x - \hsin x &= \e^{-x}, \\
     \hcos^2 x - \hsin^2 x &= 1.
@@ -1057,7 +1057,7 @@ t\end{cases} \epsilon \in \intervalleff{-1}{1}\), d'où le nom de ces fonctions.
   On définit la tangente hyperbolique, noté \(\htan\), et la cotangente 
   hyperbolique, notée \(\hcotan\), pour tout réel \(x\) et tout réel non nul 
   \(y\) par
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \htan(x)& = \frac{\hsin x}{\hcos x} = \frac{\e^x - \e^{-x}}{\e^x+\e^{-x}}, 
     \\
     \hcotan(y)& = \frac{\hcos y}{\hsin y} = \frac{\e^y + \e^{-y}}{\e^y-\e^{-y}}.
@@ -1068,7 +1068,7 @@ t\end{cases} \epsilon \in \intervalleff{-1}{1}\), d'où le nom de ces fonctions.
   Les fonctions tangente et cotangente hyperbolique sont impaires. Elles sont 
   dérivables sur leurs ensembles de définition respectifs et on a pour tout réel 
   \(x\) et tout réel non nul \(y\)
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     \htan' x &= 1-\htan^2 x = \frac{1}{\hcos^2 x}; \\
     \hcotan' y& = 1-\hcotan^2 y = -\frac{1}{\hsin^2 y}.
   \end{empheq}
@@ -1243,7 +1243,7 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
 \begin{prop}
   pour tout réel \(x\) et \(y\) de \(\intervalleoo{-1}{1}\), on a
-  \begin{empheq}[box = \shadowbox*]{align}
+  \begin{empheq}[box = \shadowbox*]{align*}
     y = \htan x \iff x&= \argth x, \\
     \argth(\htan x)& = x, \\
     \htan(\argth y)& = y.
@@ -1344,12 +1344,12 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
 \begin{exercice}
   Résoudre dans \(\R\) les équations suivantes~:
-  \begin{align}
+  \begin{align*}
     (\sqrt{x})^x &= x^{\sqrt{x}} \\
     2\ln x + \ln(2x-1) &= \ln(2x+8) + 2\ln(x-1) \\
     \e^{2x} -2\e^x-3 & = 0 \\
     \sqrt{x+4-4\sqrt{x}} + \sqrt{x+9-6\sqrt{x}} &= 1
-  \end{align}
+  \end{align*}
 \end{exercice}
 
 \subsection{Fonctions circulaires, hyperboliques et leurs réciproques}
@@ -1402,10 +1402,10 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
 \begin{exercice}
   Déterminer si elles existent les limites~:
-  \begin{align}
+  \begin{align*}
     \lim\limits_{x \to +\infty} 2\cosh^2x-\sinh 2x \\
     \lim\limits_{x \to +\infty} \e^{2x}(2\cosh^2x-\sinh 2x)
-  \end{align}
+  \end{align*}
 \end{exercice}
 
 \begin{exercice}
@@ -1431,12 +1431,12 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
 \begin{exercice}
   Étudier et représenter graphiquement les fonctions \(f\) suivantes~:
-  \begin{align}
+  \begin{align*}
     f(x) &= \arcsin \sin x \\
     f(x) &= \argch \sqrt{\frac{1+\cosh x}{2}} \\
     f(x) &= \arccos(4x^3-3x) \\
     f(x) &= \argth\sqrt{\frac{\cosh x - 1}{\cosh x + 1}}
-  \end{align}
+  \end{align*}
 \end{exercice}
 
 \begin{exercice}

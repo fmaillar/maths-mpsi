@@ -2,286 +2,416 @@
 \label{chap:DS1}
 
 \begin{exercice}
-    Résoudre dans \(\R\) les équations suivantes~:
-    \begin{align}
-        \sqrt{x-4\sqrt{x-4}} + \sqrt{x+5-6\sqrt{x-4}}  & = 1 \label{eq:DS1eq1}\\
-                                                \cos x & = \sqrt{3} \sin x \label{eq:DS1eq2}\\
-                       2 \ln(x+1) + \ln(3x+5) + \ln(2) & = \ln(6x+1)+\ln(x-2)+\ln(x+2) \label{eq:DS1eq3}\\
-                              5^x - 5^{x+1} + 2^{3x-1} & = 0 \label{eq:DS1eq4}\\
-                                   \argch x + \argsh x & = 1 \label{eq:DS1eq5}
-    \end{align}
+  Résoudre dans \(\R\) les équations suivantes~:
+  \begin{align}
+    \sqrt{x-4\sqrt{x-4}} + \sqrt{x+5-6\sqrt{x-4}}  & = 1 \label{eq:DS1eq1}\\
+    \cos x & = \sqrt{3} \sin x \label{eq:DS1eq2}\\
+    2 \ln(x+1) + \ln(3x+5) + \ln(2) & = \ln(6x+1)+\ln(x-2)+\ln(x+2) 
+    \label{eq:DS1eq3}\\
+    5^x - 5^{x+1} + 2^{3x-1} & = 0 \label{eq:DS1eq4}\\
+    \argch x + \argsh x & = 1 \label{eq:DS1eq5}
+  \end{align}
 \end{exercice}
 
 \begin{exercice}
-    Pour tout naturel \(n\) non nul et tout réel \(x\), on définit la quantité~:
-    \begin{align}
-        S_n(x) &= \sum_{k=1}^n \ln\left(1+ \tanh^2\left(\frac{x}{2^k}\right)\right) \\
-               &= \ln\left(1+ \tanh^2\left(\frac{x}{2}\right)\right) + \ln\left(1+ \tanh^2\left(\frac{x}{2^2}\right)\right) + \ldots + \ln\left(1+ \tanh^2\left(\frac{x}{2^n}\right)\right) 
-    \end{align}
-    \begin{enumerate}
-        \item Rappeler (en justifiant rapidement) la valeur de la limite suivante~: \(\lim\limits_{x\to 0} \frac{e^x-1}{x}\). En déduire la valeur de \(\lim\limits_{x\to 0} \frac{\tanh x}{x}\).
-        \item Démontrer les deux formules suivantes~: pour tout réel \(t\),
-            \begin{equation}
-                \cosh(2t) = \cosh^2(t) + \sinh^2(t) \quad \sinh(2t) = 2\sinh(t)\cosh(t).
-            \end{equation}
-            En déduire une expression de \(\tanh(2t)\) en fonction de \(\tanh(t)\), puis une expression de \(1+\tanh^2(t)\) en fonction de \(\tanh(2t)\) et \(\tanh(t)\).
-        \item Calculer \(S_n(0)\).
-        \item Soit \(x >0\). Montrer que~:
-            \begin{equation}
-                S_n(x) = \ln\left(2^n \tanh\left(\frac{x}{2^n}\right)\right) - \ln \tanh x.
-            \end{equation}
-        \item Étudier la parité de \(\fonctionL{S_n}{\R}{\R}{x}{S_n(x)}\) En déduire une expression de \(S_n(x)\) pour \(x<0\). 
-        \item 
-            \begin{enumerate}
-                \item Soit \(x>0\) fixé. Déterminer \(\lim\limits_{n\to\infty} S_n(x)\).
-                \item Soit un naturel \(n \geq 1\). Déterminer \(\lim\limits_{x\to 0} S_n(x)\).
-            \end{enumerate}
+  Pour tout naturel \(n\) non nul et tout réel \(x\), on définit la quantité~:
+  \begin{align}
+    S_n(x) &= \sum_{k=1}^n \ln\left(1+ \tanh^2\left(\frac{x}{2^k}\right)\right) 
+    \\
+    &= \ln\left(1+ \tanh^2\left(\frac{x}{2}\right)\right) + \ln\left(1+ 
+    \tanh^2\left(\frac{x}{2^2}\right)\right) + \ldots + \ln\left(1+ 
+  \tanh^2\left(\frac{x}{2^n}\right)\right) \end{align}
+  \begin{enumerate}
+    \item Rappeler (en justifiant rapidement) la valeur de la limite suivante~: 
+      \(\lim\limits_{x\to 0} \frac{e^x-1}{x}\). En déduire la valeur de 
+      \(\lim\limits_{x\to 0} \frac{\tanh x}{x}\).
+    \item Démontrer les deux formules suivantes~: pour tout réel \(t\),
+      \begin{equation}
+        \cosh(2t) = \cosh^2(t) + \sinh^2(t) \quad \sinh(2t) = 2\sinh(t)\cosh(t).
+      \end{equation}
+      En déduire une expression de \(\tanh(2t)\) en fonction de \(\tanh(t)\), 
+      puis une expression de \(1+\tanh^2(t)\) en fonction de \(\tanh(2t)\) et 
+      \(\tanh(t)\).
+    \item Calculer \(S_n(0)\).
+    \item Soit \(x >0\). Montrer que~:
+      \begin{equation}
+        S_n(x) = \ln\left(2^n \tanh\left(\frac{x}{2^n}\right)\right) - \ln \tanh 
+        x.
+      \end{equation}
+    \item Étudier la parité de \(\fonctionL{S_n}{\R}{\R}{x}{S_n(x)}\) En déduire 
+    une expression de \(S_n(x)\) pour \(x<0\). \item \begin{enumerate}
+        \item Soit \(x>0\) fixé. Déterminer \(\lim\limits_{n\to\infty} S_n(x)\).
+        \item Soit un naturel \(n \geq 1\). Déterminer \(\lim\limits_{x\to 0} 
+          S_n(x)\).
     \end{enumerate}
+  \end{enumerate}
 \end{exercice}
 
 \begin{exercice}[Problème]
-    On considère la fonction \(f\) définie sur \(I = \intervalleff{0}{\pi}\) par~:
+  On considère la fonction \(f\) définie sur \(I = \intervalleff{0}{\pi}\) par~:
+  \begin{equation}
+    \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
+  \end{equation}
+  \begin{enumerate}
+    \item \begin{enumerate}
+        \item Vérifier que \(f\) est bien définie sur \(I\)
+        \item Montrer que pour tous réels \(a, b\) strictement positifs, 
+          \(\sqrt{a} - \sqrt{b} = \frac{a-b}{\sqrt{a}+\sqrt{b}}\), puis étudier 
+          le signe de \(f(x) - \sin x\) sur l'intervalle \(I\).
+        \item Montrer que pour tout \(x \in \intervalleof{0}{\pi}\), \(\sin x < 
+          x\).
+        \item En déduire les solutions de l'équation \(f(x) = x\) sur 
+          l'intervalle \(I\).
+    \end{enumerate}
+  \item Étudier les variations de \(f\) sur l'intervalle \(I\) et tracer son 
+    graphe. On calculera en particulier \(f(0), f(\pi/3), f(\pi), f'(0), 
+    f'(\pi)\).
+  \item On considère maintenant la fonction \(g\) définie sur \(I\) par~:
     \begin{equation}
-        \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
+      \forall x \in I \quad g(x) = \arccos\left(\frac{4-5\cos x}{5-4\cos 
+      x}\right)
+    \end{equation}
+    et la fonction \(\Phi\) définie sur \(\intervalleff{-1}{1}\) par~:
+    \begin{equation}
+      \forall x \in \intervalleff{-1}{1} \quad \Phi(t) = \frac{4-5t}{5-4t}
     \end{equation}
     \begin{enumerate}
-        \item 
-            \begin{enumerate}
-                \item Vérifier que \(f\) est bien définie sur \(I\)
-                \item Montrer que pour tous réels \(a, b\) strictement positifs, \(\sqrt{a} - \sqrt{b} = \frac{a-b}{\sqrt{a}+\sqrt{b}}\), puis étudier le signe de \(f(x) - \sin x\) sur l'intervalle \(I\).
-                \item Montrer que pour tout \(x \in \intervalleof{0}{\pi}\), \(\sin x < x\).
-                \item En déduire les solutions de l'équation \(f(x) = x\) sur l'intervalle \(I\).
-            \end{enumerate}
-        \item Étudier les variations de \(f\) sur l'intervalle \(I\) et tracer son graphe. On calculera en particulier \(f(0), f(\pi/3), f(\pi), f'(0), f'(\pi)\).
-        \item On considère maintenant la fonction \(g\) définie sur \(I\) par~:
-            \begin{equation}
-                \forall x \in I \quad g(x) = \arccos\left(\frac{4-5\cos x}{5-4\cos x}\right)
-            \end{equation}
-            et la fonction \(\Phi\) définie sur \(\intervalleff{-1}{1}\) par~:
-            \begin{equation}
-                \forall x \in \intervalleff{-1}{1} \quad \Phi(t) = \frac{4-5t}{5-4t}
-            \end{equation}
-            \begin{enumerate}
-                \item Étudier les variations de la fonction \(\Phi\)
-                \item Soit la fonction \(\psi\) définie sur \(I\) par~:
-                    \begin{equation}
-                        \forall x \in I \quad \psi(x) = \Phi(\cos x) = \frac{4-5\cos x}{5-4\cos x}
-                    \end{equation}
-                    Étudier la dérivabilité de \(\psi\) et calculer sa dérivée. Donner son tableau de variations.
-                \item En remarquant que, pour tout \(x \in I\), \(g(x) = \arccos(\psi(x))\), montrer que \(g\) est dérivable sur \(\intervalleoo{0}{\pi}\) et calculer sa dérivée.
-                \item Tracer le graphe de \(g\). On admettra que \(g\) est dérivable en \(0\) et \(\pi\) avec \(g'(0) = -3\) et \(g'(\pi) = -1/3\).
-            \end{enumerate}
-        \item Soit \(x \in \intervalleff{0}{\pi/3}\)
-            \begin{enumerate}
-                \item Montrer qu'il existe un unique \(z \in \intervalleff{\pi/3}{\pi}\) tel que \(f(x) = f(z)\). On utilisera l'étude de \(f\) réalisée à la question 2.
-                \item Calculer \(\cos(g(x))\) et \(\sin(g(x))\).
-                \item Calculer \(f(g(x))\) et en déduire que \(z = g(x)\).
-            \end{enumerate}
-        \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(z = g(x)\)
-            \begin{enumerate}
-                \item Exprimer \(\cos(x+z), \cos(x-z)\) en fonction de \(cos x\).
-                \item Étudier les variations des fonctions~:
-                    \[ \fonction{\varphi_1}{\intervalleff{0}{\pi/3}}{\R}{t}{t+g(t)} \qquad \fonction{\varphi_2}{\intervalleff{0}{\pi/3}}{\R}{t}{t-g(t)} \]
-                    En déduire le signe de \(\cos\left(\frac{x+z}{2}\right)\) et \(\cos\left(\frac{x-z}{2}\right)\)
-                \item Exprimer\(\cos\left(\frac{x+z}{2}\right)\) et \(\cos\left(\frac{x-z}{2}\right)\) en fonction de \(\cos(x+z\) et \(\cos(x-z)\), puis en fonction de \(\cos x\) et enfin en fonction de \(f(x)\).
-            \end{enumerate}
-        \item 
-            \begin{enumerate}
-                \item En utilisant l'étude réalisée à la question 2, prouver que la restriction de \(f\) à l'intervalle \(\intervalleff{0}{\pi/3}\) est bijective à valeurs dans un intervalle \(J\) à préciser. On notera \(\fonctionR{h}{J}{\intervalleff{0}{\pi/3}}\) sa bijection réciproque.
-                    \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(y=f(x)\). En utilisant la question 5, exprimer \(\frac{x+g(x)}{2}\) et \(\frac{x-g(x)}{2}\), puis \(x\) en fonction de \(y\) et en déduire la fonction \(h\).
-            \end{enumerate}
+      \item Étudier les variations de la fonction \(\Phi\)
+      \item Soit la fonction \(\psi\) définie sur \(I\) par~:
+        \begin{equation}
+          \forall x \in I \quad \psi(x) = \Phi(\cos x) = \frac{4-5\cos 
+          x}{5-4\cos x}
+        \end{equation}
+        Étudier la dérivabilité de \(\psi\) et calculer sa dérivée. Donner son 
+        tableau de variations.
+      \item En remarquant que, pour tout \(x \in I\), \(g(x) = 
+        \arccos(\psi(x))\), montrer que \(g\) est dérivable sur 
+        \(\intervalleoo{0}{\pi}\) et calculer sa dérivée.
+      \item Tracer le graphe de \(g\). On admettra que \(g\) est dérivable en 
+        \(0\) et \(\pi\) avec \(g'(0) = -3\) et \(g'(\pi) = -1/3\).
     \end{enumerate}
+  \item Soit \(x \in \intervalleff{0}{\pi/3}\)
+    \begin{enumerate}
+      \item Montrer qu'il existe un unique \(z \in \intervalleff{\pi/3}{\pi}\) 
+        tel que \(f(x) = f(z)\). On utilisera l'étude de \(f\) réalisée à la 
+        question 2.
+      \item Calculer \(\cos(g(x))\) et \(\sin(g(x))\).
+      \item Calculer \(f(g(x))\) et en déduire que \(z = g(x)\).
+    \end{enumerate}
+  \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(z = g(x)\)
+    \begin{enumerate}
+      \item Exprimer \(\cos(x+z), \cos(x-z)\) en fonction de \(cos x\).
+      \item Étudier les variations des fonctions~:
+        \[ \fonction{\varphi_1}{\intervalleff{0}{\pi/3}}{\R}{t}{t+g(t)} \qquad 
+        \fonction{\varphi_2}{\intervalleff{0}{\pi/3}}{\R}{t}{t-g(t)} \]
+        En déduire le signe de \(\cos\left(\frac{x+z}{2}\right)\) et 
+        \(\cos\left(\frac{x-z}{2}\right)\)
+      \item Exprimer\(\cos\left(\frac{x+z}{2}\right)\) et 
+        \(\cos\left(\frac{x-z}{2}\right)\) en fonction de \(\cos(x+z\) et 
+        \(\cos(x-z)\), puis en fonction de \(\cos x\) et enfin en fonction de 
+        \(f(x)\).
+    \end{enumerate}
+  \item \begin{enumerate}
+      \item En utilisant l'étude réalisée à la question 2, prouver que la 
+        restriction de \(f\) à l'intervalle \(\intervalleff{0}{\pi/3}\) est 
+        bijective à valeurs dans un intervalle \(J\) à préciser. On notera 
+        \(\fonctionR{h}{J}{\intervalleff{0}{\pi/3}}\) sa bijection réciproque.
+      \item Soient \(x \in \intervalleff{0}{\pi/3}\) et \(y=f(x)\). En 
+        utilisant la question 5, exprimer \(\frac{x+g(x)}{2}\) et 
+        \(\frac{x-g(x)}{2}\), puis \(x\) en fonction de \(y\) et en déduire la 
+        fonction \(h\).
+  \end{enumerate}
+\end{enumerate}
 \end{exercice}
 
 \begin{corrige}
-    Les deux membres de l'équation~\eqref{eq:DS1eq1} ont un sens si et seulement si \(x \geq 4\), \(x-4\sqrt{x-4} \geq 0\) et \(x-6\sqrt{x-4}+5\geq 0\). Pour \(x \geq 4\),
-    \[x - 4\sqrt{x-4} = (\sqrt{x-4}-2)^2 \text{~et~} x-6\sqrt{x-4}+5 = (\sqrt{x-4}-3)^2.\]
-    On cherche donc les solutions éventuelles dans l'intervalle \(\intervallefo{4}{+\infty}\). Pour tout réel \(x\) de cet intervalle, on pose \(t = \sqrt{x-4}\). Ainsi, \(x = t^2+4\) et l'équation~\eqref{eq:DS1eq1} devient~:
-    \[\abs{t-2} + \abs{t-3} = 1.\] Le réel \(t\) varie dans \(\R+\), donc trois cas de figure se présentent~:
-    \begin{itemize}
-        \item \(0 \leq t < 2\), c'est-à-dire \(4\leq x \leq 8\),  alors l'équation s'écrit \(2-t+3-t=1\), soit \(t=2\), il n'y a pas de solutions dans cet intervalle;
-        \item \(2 \leq t \leq 3\), c'est-à-dire \(8\leq x \leq 13\), alors l'équation s'écrit \(t-2+3-t=1\), et l'égalité est toujours vraie ;
-        \item \(t > 3\), c'est-à-dire \(x > 13\), alors l'équation s'écrit \(t-2+t-3=1\), soit \(t=3\), il n'y a donc pas de solutions dans cet intervalle.
-    \end{itemize}
-    L'ensemble des solutions de~\eqref{eq:DS1eq1} est \(\S_1 = \intervalleff{8}{13}\).
+  Les deux membres de l'équation~\eqref{eq:DS1eq1} ont un sens si et seulement 
+  si \(x \geq 4\), \(x-4\sqrt{x-4} \geq 0\) et \(x-6\sqrt{x-4}+5\geq 0\). Pour 
+  \(x \geq 4\),
+  \[x - 4\sqrt{x-4} = (\sqrt{x-4}-2)^2 \text{~et~} x-6\sqrt{x-4}+5 = 
+  (\sqrt{x-4}-3)^2.\]
+  On cherche donc les solutions éventuelles dans l'intervalle 
+  \(\intervallefo{4}{+\infty}\). Pour tout réel \(x\) de cet intervalle, on pose 
+  \(t = \sqrt{x-4}\). Ainsi, \(x = t^2+4\) et l'équation~\eqref{eq:DS1eq1} 
+  devient~:
+  \[\abs{t-2} + \abs{t-3} = 1.\] Le réel \(t\) varie dans \(\R+\), donc trois 
+  cas de figure se présentent~:
+  \begin{itemize}
+    \item \(0 \leq t < 2\), c'est-à-dire \(4\leq x \leq 8\),  alors l'équation 
+      s'écrit \(2-t+3-t=1\), soit \(t=2\), il n'y a pas de solutions dans cet 
+      intervalle;
+    \item \(2 \leq t \leq 3\), c'est-à-dire \(8\leq x \leq 13\), alors 
+      l'équation s'écrit \(t-2+3-t=1\), et l'égalité est toujours vraie ;
+    \item \(t > 3\), c'est-à-dire \(x > 13\), alors l'équation s'écrit 
+      \(t-2+t-3=1\), soit \(t=3\), il n'y a donc pas de solutions dans cet 
+      intervalle.
+  \end{itemize}
+  L'ensemble des solutions de~\eqref{eq:DS1eq1} est \(\S_1 = 
+  \intervalleff{8}{13}\).
 
-    On cherche une solution de l'équation~\eqref{eq:DS1eq2} sur \(\R\). Pour tout réel \(x\),
-    \begin{align*}
-        \cos x = \sqrt{3}\sin x &\iff \cos x = \tan\frac{\pi}{3} \sin x \\
-                                &\iff \cos x \cos \frac{\pi}{3} = \sin x \sin\frac{\pi}{3} \\
-                                &\iff \cos\left(x+\frac{\pi}{3}\right) = 0 \\
-                                &\iff \exists k \in \Z x +\frac{\pi}{3} = \frac{\pi}{2}+k\pi.
-    \end{align*}
-    L'ensemble des solution de l'équation~\eqref{eq:DS1eq2} est \(\S_2 = \frac{\pi}{6}+\pi\Z = \enstq{\frac{\pi}{6}+k\pi}{k \in \Z}\).
+  On cherche une solution de l'équation~\eqref{eq:DS1eq2} sur \(\R\). Pour tout 
+  réel \(x\),
+  \begin{align*}
+    \cos x = \sqrt{3}\sin x &\iff \cos x = \tan\frac{\pi}{3} \sin x \\
+    &\iff \cos x \cos \frac{\pi}{3} = \sin x \sin\frac{\pi}{3} \\
+    &\iff \cos\left(x+\frac{\pi}{3}\right) = 0 \\
+    &\iff \exists k \in \Z x +\frac{\pi}{3} = \frac{\pi}{2}+k\pi.
+  \end{align*}
+  L'ensemble des solution de l'équation~\eqref{eq:DS1eq2} est \(\S_2 = 
+  \frac{\pi}{6}+\pi\Z = \enstq{\frac{\pi}{6}+k\pi}{k \in \Z}\).
 
-    On commence par déterminer l'ensemble des réels \(x\) pour lesquels les deux membres de l'équation~\eqref{eq:DS1eq3} son définis. Le premier membre est défini si et seulement si \(x>-1\) et \(x>-5/3\) ; le second si et seulement si \(x>-1/6\), \(x>2\) et \(x>-2\). On cherche donc les solutions dans l'intervalle \(\intervalleoo{2}{+\infty}\). Pour tout \(x > 2\)~:
-    \begin{align*}
-        2\ln(x+1) + \ln(3x+5)+\ln(2)    & = \ln(2(x+1)^2(3x+5)) \\
-                                        & = \ln(6x^3+22x^2+26x+10) \\
-        \ln(6x+1)+\ln(x-2)+\ln(x+2)     & = \ln((6x+1)(x-2)(x+2)) \\
-                                        & = \ln(6x^3+x^2-24x-4)
-    \end{align*}
-    L'équation~\eqref{eq:DS1eq3} est équivalente à~:
-    \begin{equation*}
-         \ln(6x^3+22x^2+26x+10) = \ln(6x^3+x^2-24x-4).
-    \end{equation*}
-    Comme la fonction logarithme est bijective, c'est aussi équivalent à~:
-    \begin{equation*}
-         6x^3+22x^2+26x+10 = 6x^3+x^2-24x-4 \iff 21x^2+50x+14 = 0.
-    \end{equation*}
-Le déterminant de cette équation du deuxième degré vaut~:\(\Delta = 50^2-4\times 14 \times 21 = 1324 = (2\sqrt{331})^2\). Les racines sont donc \(x_{1,2} = \frac{-50 \pm 2\sqrt{331}}{42} = \frac{-25 \pm \sqrt{331}}{21}\). Ces deux racines sont négatives : c'est clair pour la racine avec le signe moins devant la racine carrée et pour l'autre il suffit de voir que le produit \(x_1 x_2 = ac = 21 \times 14 >0\) donc la deuxième racine est du même signe que la première. Aucune des racines n'est supérieure ou égale à 2, donc l'équation n'a pas de solutions \(\S_3 = \emptyset\).
+  On commence par déterminer l'ensemble des réels \(x\) pour lesquels les deux 
+  membres de l'équation~\eqref{eq:DS1eq3} son définis. Le premier membre est 
+  défini si et seulement si \(x>-1\) et \(x>-5/3\) ; le second si et seulement 
+  si \(x>-1/6\), \(x>2\) et \(x>-2\). On cherche donc les solutions dans 
+  l'intervalle \(\intervalleoo{2}{+\infty}\). Pour tout \(x > 2\)~:
+  \begin{align*}
+    2\ln(x+1) + \ln(3x+5)+\ln(2)    & = \ln(2(x+1)^2(3x+5)) \\
+    & = \ln(6x^3+22x^2+26x+10) \\
+    \ln(6x+1)+\ln(x-2)+\ln(x+2)     & = \ln((6x+1)(x-2)(x+2)) \\
+    & = \ln(6x^3+x^2-24x-4)
+  \end{align*}
+  L'équation~\eqref{eq:DS1eq3} est équivalente à~:
+  \begin{equation*}
+    \ln(6x^3+22x^2+26x+10) = \ln(6x^3+x^2-24x-4).
+  \end{equation*}
+  Comme la fonction logarithme est bijective, c'est aussi équivalent à~:
+  \begin{equation*}
+    6x^3+22x^2+26x+10 = 6x^3+x^2-24x-4 \iff 21x^2+50x+14 = 0.
+  \end{equation*}
+  Le déterminant de cette équation du deuxième degré vaut~:\(\Delta = 
+  50^2-4\times 14 \times 21 = 1324 = (2\sqrt{331})^2\). Les racines sont donc 
+  \(x_{1,2} = \frac{-50 \pm 2\sqrt{331}}{42} = \frac{-25 \pm \sqrt{331}}{21}\). 
+  Ces deux racines sont négatives : c'est clair pour la racine avec le signe 
+  moins devant la racine carrée et pour l'autre il suffit de voir que le produit 
+  \(x_1 x_2 = ac = 21 \times 14 >0\) donc la deuxième racine est du même signe 
+  que la première. Aucune des racines n'est supérieure ou égale à 2, donc 
+  l'équation n'a pas de solutions \(\S_3 = \emptyset\).
 
-    L'équation~\eqref{eq:DS1eq4} a un sens pour tout réel \(x\) et elle est équivalente à~:
-    \begin{align*}
-        5^x - 5^{x+1} + 2^{3x-1} = 0    & \iff 5^x(1-5)+\frac{1}{2}8^x = 0 \\
-                                        & \iff 8 \times 5^x = 8^x \\
-                                        & \iff \ln(8) + x\ln(5) = x\ln(8) \\
-                                        & \iff x = \frac{3\ln 2}{3\ln 2 -\ln 5}
-    \end{align*}
-    L'ensemble des solutions de l'équation~\eqref{eq:DS1eq4} est \(\S_4 = \left\{\frac{3\ln 2}{3\ln 2 -\ln 5}\right\}\).
+  L'équation~\eqref{eq:DS1eq4} a un sens pour tout réel \(x\) et elle est 
+  équivalente à~:
+  \begin{align*}
+    5^x - 5^{x+1} + 2^{3x-1} = 0    & \iff 5^x(1-5)+\frac{1}{2}8^x = 0 \\
+    & \iff 8 \times 5^x = 8^x \\
+    & \iff \ln(8) + x\ln(5) = x\ln(8) \\
+    & \iff x = \frac{3\ln 2}{3\ln 2 -\ln 5}
+  \end{align*}
+  L'ensemble des solutions de l'équation~\eqref{eq:DS1eq4} est \(\S_4 = 
+  \left\{\frac{3\ln 2}{3\ln 2 -\ln 5}\right\}\).
 
-    Les fonctions argument sinus hyperboliques et argument cosinus hyperboliques sont définies respectivement sur \(\intervallefo{1}{+\infty}\) et \(\R\) donc on cherche les solutions de l'équation~\eqref{eq:DS1eq5} dans \(\intervallefo{1}{+\infty}\). La fonction sinus hyperbolique, donc en l'appliquant à l'équation, elle est équivalente~:
-    \begin{align*}
-        \sinh(\argch x + \argsh x) &= \sinh(1) \\
-        \sinh\argch x \times \cosh\argsh x + \sinh\argsh x \times \cosh\argch x  &= \frac{\e+\e^{-1}}{2} \\
-        \sqrt{\sinh^2 \argch x}\sqrt{\cosh^2 \argsh x} + x^2 &= \frac{\e^2-1}{2\e} \\
-        \sqrt{\cosh^2 \argch x - 1}\sqrt{1+\sinh^2 \argsh x} + x^2 &= \frac{\e^2-1}{2\e} \\
-        \sqrt{x^2-1}\sqrt{1+x^2} &= \frac{\e^2-1}{2\e}-x^2\\
-    \end{align*}
-    La troisième équivalence est vraie car \(\argch x \geq 0\) donc \(\sinh\argch x \geq 0\) et car \(\cosh x \geq 0\). La dernière équivalence montre que \(x^2 \leq \frac{\e^2-1}{2\e}\) et en élevant au carré~:
-    \begin{align*}
-        x^4-1   &= \left(\frac{\e^2-1}{2\e}-x^2\right)^2 \\
-                &= \frac{(\e^2-1)^2}{4\e^2} + x^4 - \frac{\e^2-1}{\e}x^2\\
-        \frac{\e^2-1}{\e}x^2 &= \frac{(\e^2-1)^2}{4\e^2} + 1 \\
-        x^2 &= \frac{(\e^2-1)^2}{4\e^2} \frac{\e}{\e^2-1} + \frac{\e}{\e^2-1}\\
-        x^2 &= \frac{\e^4+1-2\e^2+4\e^2}{4\e(\e^2-1)} \\
-        x^2 &= \frac{(1+\e^2)^2}{4\e(\e^2-1)}
-    \end{align*}
-    Or,
-    \begin{align*}
-        \frac{(1+\e^2)^2}{4\e(\e^2-1)} - \frac{\e^2-1}{2\e} &= \frac{(1+\e^2)^2-2(\e^2-1)^2}{4\e(\e^2-1)} \\
-                                                            &= \frac{-\e^4+6\e^2-1}{4\e(\e^2+1)} \\
-                                                            &= \frac{-(\e^2+2\e-1)(\e^2-2\e-1)}{4\e(\e^2+1)} \leq 0.
-    \end{align*}
-    Comme on cherche une solution dans \(\intervallefo{1}{+\infty}\), l'équation \eqref{eq:DS1eq5} admet une unique solution et l'ensemble des solutions de cette équation est~: \(\S_5 = \left\{\frac{1+\e^2}{2\sqrt{\e(\e^2-1)}}\right\}\).
+  Les fonctions argument sinus hyperboliques et argument cosinus hyperboliques 
+  sont définies respectivement sur \(\intervallefo{1}{+\infty}\) et \(\R\) donc 
+  on cherche les solutions de l'équation~\eqref{eq:DS1eq5} dans 
+  \(\intervallefo{1}{+\infty}\). La fonction sinus hyperbolique, donc en 
+  l'appliquant à l'équation, elle est équivalente~:
+  \begin{align*}
+    \sinh(\argch x + \argsh x) &= \sinh(1) \\
+    \sinh\argch x \times \cosh\argsh x + \sinh\argsh x \times \cosh\argch x  &= 
+    \frac{\e+\e^{-1}}{2} \\
+    \sqrt{\sinh^2 \argch x}\sqrt{\cosh^2 \argsh x} + x^2 &= \frac{\e^2-1}{2\e} 
+    \\
+    \sqrt{\cosh^2 \argch x - 1}\sqrt{1+\sinh^2 \argsh x} + x^2 &= 
+    \frac{\e^2-1}{2\e} \\
+    \sqrt{x^2-1}\sqrt{1+x^2} &= \frac{\e^2-1}{2\e}-x^2\\
+  \end{align*}
+  La troisième équivalence est vraie car \(\argch x \geq 0\) donc \(\sinh\argch 
+  x \geq 0\) et car \(\cosh x \geq 0\). La dernière équivalence montre que \(x^2 
+  \leq \frac{\e^2-1}{2\e}\) et en élevant au carré~:
+  \begin{align*}
+    x^4-1   &= \left(\frac{\e^2-1}{2\e}-x^2\right)^2 \\
+    &= \frac{(\e^2-1)^2}{4\e^2} + x^4 - \frac{\e^2-1}{\e}x^2\\
+    \frac{\e^2-1}{\e}x^2 &= \frac{(\e^2-1)^2}{4\e^2} + 1 \\
+    x^2 &= \frac{(\e^2-1)^2}{4\e^2} \frac{\e}{\e^2-1} + \frac{\e}{\e^2-1}\\
+    x^2 &= \frac{\e^4+1-2\e^2+4\e^2}{4\e(\e^2-1)} \\
+    x^2 &= \frac{(1+\e^2)^2}{4\e(\e^2-1)}
+  \end{align*}
+  Or,
+  \begin{align*}
+    \frac{(1+\e^2)^2}{4\e(\e^2-1)} - \frac{\e^2-1}{2\e} &= 
+    \frac{(1+\e^2)^2-2(\e^2-1)^2}{4\e(\e^2-1)} \\
+    &= \frac{-\e^4+6\e^2-1}{4\e(\e^2+1)} \\
+    &= \frac{-(\e^2+2\e-1)(\e^2-2\e-1)}{4\e(\e^2+1)} \leq 0.
+  \end{align*}
+  Comme on cherche une solution dans \(\intervallefo{1}{+\infty}\), l'équation 
+  \eqref{eq:DS1eq5} admet une unique solution et l'ensemble des solutions de 
+  cette équation est~: \(\S_5 = 
+  \left\{\frac{1+\e^2}{2\sqrt{\e(\e^2-1)}}\right\}\).
 \end{corrige}
 
 \begin{corrige}
-    \begin{enumerate}
-        \item La fonction exponentielle est dérivable sur \(\R\), et particulièrement en \(0\) et sa fonction dérivée est elle-même, donc comme \(\frac{\e^x-1}{x} = \frac{\e^x-\e^0}{x-0}\) est le taux d'accroissement de la fonction exponentielle en \(0\), sa limite lorsque l'accroissement \(x\) tend vers \(0\) vaut la valeur de la fonction dérivée de l'exponentielle en zéro, c'est-à-dire \(\e^0 = 1\).
-            Pour tout réel \(x\) non nul~:
-            \begin{equation*}
-                \frac{\tanh x}{x} = \frac{\e^{2x}-1}{\e^{2x}+1} \times \frac{1}{x} = \frac{\e^{2x}-1}{2x} \times \frac{2}{\e^{2x}+1},
-            \end{equation*}
-            lorsque \(x\) tend vers zéro, \(2x\) tend vers zéro aussi et donc \(\lim\limits_{x \to 0}\frac{\e^{2x}-1}{2x} = 1\). De plus, \(\lim\limits_{x \to 0} \frac{2}{\e^{2x}+1} = 1\), car l'exponentielle est continue en zéro et vaut un en zéro. Par conséquent, \(\lim\limits_{x \to 0} \frac{\tanh x}{x} = 1\).
-        \item Pour tout réel \(t\),
-            \begin{align*}
-                \cosh^2 t + \sinh^2 t   &= \frac{(\e^t+\e^{-t})^2}{4} + \frac{(\e^t-\e^{-t})^2}{4} \\
-                                        &= \frac{2(\e^{2t}+\e^{-2t}) +2 -2}{4} \\
-                                        &= \cosh(2t),
-            \end{align*}
-            et
-            \begin{align*}
-                2\sinh(t)\cosh(t)   &= 2 \frac{\e^t - \e^{-t}}{2} \times \frac{\e^t + \e^{-t}}{2} \\
-                                    &= \frac{\e^{2t}+1-1-\e^{-2t}}{2} \\
-                                    &= \sinh(2t).
-            \end{align*}
-            Par conséquent, pour tout réel \(t\),
-            \begin{align*}
-                \tanh(2t)   &= \frac{\sinh(2t)}{\cosh(2t)} \\
-                            &= \frac{2\sinh(t)\cosh(t)}{\cosh^2 t + \sinh^2 t} \\
-                            &= \frac{2\tanh t}{1+\tanh^2 t} \qquad \text{en divisant par~} \cosh^2 t>0.
-            \end{align*}
-            Il vient alors, pour tout réel \(t\)~:
-            \begin{equation*}
-                1+\tanh^2 t = \frac{2\tanh t}{\tanh 2t}.
-            \end{equation*}
-        \item
-            \begin{equation*}
-                S_n(0) = \sum_{k=1}^{n} \ln\left(1+\tanh^2\left(\frac{0}{2^k}\right)\right) = \sum_{k=1}^{n}\ln(1) = 0.
-            \end{equation*}
-        \item Soit un réel \(x>0\). D'après la question 2, et en utilisant les propriétés du logarithme,
-            \begin{align*}
-                S_n(x)  &= \sum_{k=1}^{n} \ln\left(\frac{2\tanh \frac{x}{2^k}}{\tanh 2\frac{x}{2^k}}\right) \\
-                        &= \sum_{k=1}^{n} \ln 2 + \sum_{k=1}^{n} \ln\left(\tanh\left(\frac{x}{2^k}\right)\right) - \sum_{k=1}^{n} \ln\left(\tanh\left(\frac{x}{2^{k-1}}\right)\right) \\
-                        &=  \sum_{k=1}^{n} \ln 2 + \sum_{k=1}^{n} \ln\left(\tanh\left(\frac{x}{2^k}\right)\right) - \sum_{j=0}^{n-1} \ln\left(\tanh\left(\frac{x}{2^{j}}\right)\right) \qquad j=k-1 \\
-                        &= n\ln 2 + \ln\left(\tanh\left(\frac{x}{2^n}\right)\right) - \ln\left(\tanh\left(\frac{x}{2^0}\right)\right) \qquad \text{\emph{(télescopage)}}\\
-                        &= \ln\left(2^n\tanh\left(\frac{x}{2^n}\right)\right) - \ln\tanh x
-            \end{align*}
-        \item \(\R\) est centré en zéro et pour tout réel \(x\)~:
-            \begin{align*}
-                S_n(-x) &= \sum_{k=1}^{n}\ln\left(1+\tanh^2\left(\frac{-x}{2^k}\right)\right) \\
-                        &= \sum_{k=1}^{n}\ln\left(1+\left(-\tanh\left(\frac{x}{2^k}\right)\right)^2\right) \\
-                        &= \sum_{k=1}^{n}\ln\left(1+\tanh^2\left(\frac{x}{2^k}\right)\right) \\
-                        &= S_n(x).
-            \end{align*}
-            Alors l'application \(\fonctionL{S_n}{\R}{\R}{x}{S_n(x)}\) est paire. Par suite, pour tout \(x < 0\),
-            \begin{align*}
-                S_n(x)  &= S_n(-x) \\
-                        &= \ln\left(2^n\tanh\left(\frac{-x}{2^n}\right)\right) - \ln(\tanh(-x)) \qquad (-x>0)\\
-                        &= \ln\left(-2^n\tanh\left(\frac{x}{2^n}\right)\right) - \ln(-\tanh(x))
-            \end{align*}
-        \item 
-            \begin{enumerate}
-                \item Soit un réel \(x>0\) fixé, alors~:
-                    \begin{align*}
-                        S_n(x)  &= \ln\left(2^n\tanh\left(\frac{x}{2^n}\right)\right) - \ln\tanh x\\
-                        &= \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} \times x \right) - \ln\tanh x\\
-                        &= \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} \right) + \ln x - \ln\tanh x\\
-                    \end{align*}
-                        Lorsque \(n\) tend vers l'infini, \(\frac{x}{2^n}\) tend vers zéro (car \(2>1\) et donc \(2^n\) tend aussi vers l'infini). On en déduit à l'aide du résultat de la question 1 que~: \(\lim\limits_{n\to \infty} \frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} = 1\). D'où, en utilisant la continuité de la fonction logarithme au point \(1\),
-                    \begin{equation*}
-                        \lim\limits_{n\to\infty} S_n(x) = \ln(1) + \ln(x) - \ln(\tanh(x)).
-                    \end{equation*}
-                \item Soient un naturel \(n \in \N^*\) et un réel \(x>0\). D'après le point précédent, on a~:
-                    \begin{equation*}
-                        S_n(x)= \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} \right) + \ln\left(\frac{x}{\tanh x}\right)
-                    \end{equation*}
-                    Lorsque \(x\) tend vers zéro par valeurs positives (\emph{à droite}), \(\frac{x}{2^n}\) tend vers zéro. En appliquant à nouveau le résultat de la question 1, on obtient~:
-                    \begin{equation*}
-                        \lim\limits_{x \to 0^+} \frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} = 1 \quad \lim\limits_{x \to 0^+} \frac{x}{\tanh x} = 1.
-                    \end{equation*}
-                    Par continuité du logarithme en 1, on en déduit~:
-                    \begin{equation*}
-                        \lim\limits_{x \to 0^+} S_n(x) = \ln(1) + \ln(1) = 0.
-                    \end{equation*}
-                    De plus on a vu que \(S_n\) est une fonction paire, donc~:
-                    \begin{equation*}
-                        \lim\limits_{x \to 0^-} S_n(x) = \lim\limits_{y \to 0^+} S_n(-y) = \lim\limits_{y \to 0^+} S_n(y) = 0 
-                    \end{equation*}
-                    Donc on peut conclure que \(\lim\limits_{x \to 0} S_n(x) = 0 = S_n(0)\).
-            \end{enumerate}
+  \begin{enumerate}
+    \item La fonction exponentielle est dérivable sur \(\R\), et 
+      particulièrement en \(0\) et sa fonction dérivée est elle-même, donc comme 
+      \(\frac{\e^x-1}{x} = \frac{\e^x-\e^0}{x-0}\) est le taux d'accroissement 
+      de la fonction exponentielle en \(0\), sa limite lorsque l'accroissement 
+      \(x\) tend vers \(0\) vaut la valeur de la fonction dérivée de 
+      l'exponentielle en zéro, c'est-à-dire \(\e^0 = 1\).
+      Pour tout réel \(x\) non nul~:
+      \begin{equation*}
+        \frac{\tanh x}{x} = \frac{\e^{2x}-1}{\e^{2x}+1} \times \frac{1}{x} = 
+        \frac{\e^{2x}-1}{2x} \times \frac{2}{\e^{2x}+1},
+      \end{equation*}
+      lorsque \(x\) tend vers zéro, \(2x\) tend vers zéro aussi et donc 
+      \(\lim\limits_{x \to 0}\frac{\e^{2x}-1}{2x} = 1\). De plus, 
+      \(\lim\limits_{x \to 0} \frac{2}{\e^{2x}+1} = 1\), car l'exponentielle est 
+      continue en zéro et vaut un en zéro. Par conséquent, \(\lim\limits_{x \to 
+      0} \frac{\tanh x}{x} = 1\).
+    \item Pour tout réel \(t\),
+      \begin{align*}
+        \cosh^2 t + \sinh^2 t   &= \frac{(\e^t+\e^{-t})^2}{4} + 
+        \frac{(\e^t-\e^{-t})^2}{4} \\
+        &= \frac{2(\e^{2t}+\e^{-2t}) +2 -2}{4} \\
+        &= \cosh(2t),
+      \end{align*}
+      et
+      \begin{align*}
+        2\sinh(t)\cosh(t)   &= 2 \frac{\e^t - \e^{-t}}{2} \times \frac{\e^t + 
+        \e^{-t}}{2} \\
+        &= \frac{\e^{2t}+1-1-\e^{-2t}}{2} \\
+        &= \sinh(2t).
+      \end{align*}
+      Par conséquent, pour tout réel \(t\),
+      \begin{align*}
+        \tanh(2t)   &= \frac{\sinh(2t)}{\cosh(2t)} \\
+        &= \frac{2\sinh(t)\cosh(t)}{\cosh^2 t + \sinh^2 t} \\
+        &= \frac{2\tanh t}{1+\tanh^2 t} \qquad \text{en divisant par~} \cosh^2 
+        t>0.
+      \end{align*}
+      Il vient alors, pour tout réel \(t\)~:
+      \begin{equation*}
+        1+\tanh^2 t = \frac{2\tanh t}{\tanh 2t}.
+      \end{equation*}
+    \item
+      \begin{equation*}
+        S_n(0) = \sum_{k=1}^{n} 
+        \ln\left(1+\tanh^2\left(\frac{0}{2^k}\right)\right) = 
+        \sum_{k=1}^{n}\ln(1) = 0.
+      \end{equation*}
+    \item Soit un réel \(x>0\). D'après la question 2, et en utilisant les 
+      propriétés du logarithme,
+      \begin{align*}
+        S_n(x)  &= \sum_{k=1}^{n} \ln\left(\frac{2\tanh \frac{x}{2^k}}{\tanh 
+        2\frac{x}{2^k}}\right) \\
+        &= \sum_{k=1}^{n} \ln 2 + \sum_{k=1}^{n} 
+        \ln\left(\tanh\left(\frac{x}{2^k}\right)\right) - \sum_{k=1}^{n} 
+        \ln\left(\tanh\left(\frac{x}{2^{k-1}}\right)\right) \\
+        &=  \sum_{k=1}^{n} \ln 2 + \sum_{k=1}^{n} 
+        \ln\left(\tanh\left(\frac{x}{2^k}\right)\right) - \sum_{j=0}^{n-1} 
+        \ln\left(\tanh\left(\frac{x}{2^{j}}\right)\right) \qquad j=k-1 \\
+        &= n\ln 2 + \ln\left(\tanh\left(\frac{x}{2^n}\right)\right) - 
+        \ln\left(\tanh\left(\frac{x}{2^0}\right)\right) \qquad 
+        \text{\emph{(télescopage)}}\\
+        &= \ln\left(2^n\tanh\left(\frac{x}{2^n}\right)\right) - \ln\tanh x
+      \end{align*}
+    \item \(\R\) est centré en zéro et pour tout réel \(x\)~:
+      \begin{align*}
+        S_n(-x) &= 
+        \sum_{k=1}^{n}\ln\left(1+\tanh^2\left(\frac{-x}{2^k}\right)\right) \\
+        &= 
+        \sum_{k=1}^{n}\ln\left(1+\left(-\tanh\left(\frac{x}{2^k}\right)\right)^2\right) 
+        \\
+        &= \sum_{k=1}^{n}\ln\left(1+\tanh^2\left(\frac{x}{2^k}\right)\right) \\
+        &= S_n(x).
+      \end{align*}
+      Alors l'application \(\fonctionL{S_n}{\R}{\R}{x}{S_n(x)}\) est paire. Par 
+      suite, pour tout \(x < 0\),
+      \begin{align*}
+        S_n(x)  &= S_n(-x) \\
+        &= \ln\left(2^n\tanh\left(\frac{-x}{2^n}\right)\right) - \ln(\tanh(-x)) 
+        \qquad (-x>0)\\
+        &= \ln\left(-2^n\tanh\left(\frac{x}{2^n}\right)\right) - \ln(-\tanh(x))
+      \end{align*}
+    \item \begin{enumerate}
+        \item Soit un réel \(x>0\) fixé, alors~:
+          \begin{align*}
+            S_n(x)  &= \ln\left(2^n\tanh\left(\frac{x}{2^n}\right)\right) - 
+            \ln\tanh x\\
+            &= \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} 
+            \times x \right) - \ln\tanh x\\
+            &= \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} 
+            \right) + \ln x - \ln\tanh x\\
+          \end{align*}
+          Lorsque \(n\) tend vers l'infini, \(\frac{x}{2^n}\) tend vers zéro 
+          (car \(2>1\) et donc \(2^n\) tend aussi vers l'infini). On en déduit à 
+          l'aide du résultat de la question 1 que~: \(\lim\limits_{n\to \infty} 
+          \frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} = 1\). D'où, en 
+          utilisant la continuité de la fonction logarithme au point \(1\),
+          \begin{equation*}
+            \lim\limits_{n\to\infty} S_n(x) = \ln(1) + \ln(x) - \ln(\tanh(x)).
+          \end{equation*}
+        \item Soient un naturel \(n \in \N^*\) et un réel \(x>0\). D'après le 
+          point précédent, on a~:
+          \begin{equation*}
+            S_n(x)= 
+            \ln\left(\frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} 
+            \right) + \ln\left(\frac{x}{\tanh x}\right)
+          \end{equation*}
+          Lorsque \(x\) tend vers zéro par valeurs positives (\emph{à droite}), 
+          \(\frac{x}{2^n}\) tend vers zéro. En appliquant à nouveau le résultat 
+          de la question 1, on obtient~:
+          \begin{equation*}
+            \lim\limits_{x \to 0^+} 
+            \frac{\tanh\left(\frac{x}{2^n}\right)}{\frac{x}{2^n}} = 1 \quad 
+            \lim\limits_{x \to 0^+} \frac{x}{\tanh x} = 1.
+          \end{equation*}
+          Par continuité du logarithme en 1, on en déduit~:
+          \begin{equation*}
+            \lim\limits_{x \to 0^+} S_n(x) = \ln(1) + \ln(1) = 0.
+          \end{equation*}
+          De plus on a vu que \(S_n\) est une fonction paire, donc~:
+          \begin{equation*}
+            \lim\limits_{x \to 0^-} S_n(x) = \lim\limits_{y \to 0^+} S_n(-y) = 
+          \lim\limits_{y \to 0^+} S_n(y) = 0 \end{equation*}
+          Donc on peut conclure que \(\lim\limits_{x \to 0} S_n(x) = 0 = 
+          S_n(0)\).
     \end{enumerate}
+  \end{enumerate}
 \end{corrige}
 
 \begin{corrige}[Problème]
-    On considère la fonction \(f\) définie sur l'intervalle \(I = \intervalleff{0}{\pi}\) par~:
-    \begin{equation*}
-        \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
-    \end{equation*}
-    \begin{enumerate}
-        \item
-            \begin{enumerate}
-                \item Pour tout \(x \in I\), \(\cos x \in I\), donc \(5-4\cos x \in \intervalleff{1}{9}\). En particulier, \(5-4\cos x >0\) donc le dénominateur de \(f\) est bien défini, strictement positif. Donc \(f\) est bien défini sur \(I\).
-                \item Soient \(a, b\) deux réels strictement positifs. Alors, \(\sqrt{a}+\sqrt{b} >0\), donc~:
-                    \begin{equation*}
-                        \sqrt{a}-\sqrt{b} = \frac{(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})}{\sqrt{a}+\sqrt{b}} = \frac{a-b}{\sqrt{a}+\sqrt{b}}.
-                    \end{equation*}
-                Pour tout \(x \in I\), \(\sqrt{5-4\cos x}>0\) donc~:
-                \begin{align*}
-                    f(x)-\sin x &=\frac{\sin x}{\sqrt{5-4\cos x}} - \sin x \\
-                                &=\frac{\sin x}{\sqrt{5-4\cos x}}(\sqrt{1}- \sqrt{5-4\cos x}) \\
-                                &=\frac{\sin x}{\sqrt{5-4\cos x}} \times \frac{1-(5-4\cos x)}{\sqrt{1}+\sqrt{5-4\cos x}} \\
-                                &=\frac{4\sin x (\cos x -1)}{\sqrt{5-4\cos x}(1+\sqrt{5-4\cos x})}.
-                \end{align*}
-                \(f(x)-\sin x\) est du signe de \(\sin x (\cos x -1)\), donc de \(-\sin x\). Comme, pour tout \(x \in I\), \(\sin x \geq 0\), alors il vient
-                \begin{equation*}
-                    \forall x \in I \qquad f(x)-\sin x \leq 0.
-                \end{equation*}
-            \item Soit \(\fonctionL{k}{I}{\R}{x}{x-\sin x}\). La fonction \(k\) est dérivable sur \(I\) et \[\forall x \in I \qquad k'(x) = 1-\cos x.\]
-                Pour tout \(x \in \intervalleof{0}{\pi}\), \(k'(x)>0\) donc \(k\) est strictement croissante sur \(I\). Or \(k(0)=0\), donc pour tout \(x \in \intervalleof{0}{\pi}\), \(\sin x < x\).
-            \item Déjà, \(f(0)=0\) donc \(0\) est une solution de \(f(x)=x\) sur \(I\). Pour tout \(x \in I\setminus\{0\}\), on a \(f(x) \leq \sin x < x\), donc il n'y a pas d'autres solutions. L'équation \(f(x)=x\) admet exactement une solution, \(0\), sur l'intervalle \(I\).
-            \end{enumerate}
-        \item 
-    \end{enumerate}    
+  On considère la fonction \(f\) définie sur l'intervalle \(I = 
+  \intervalleff{0}{\pi}\) par~:
+  \begin{equation*}
+    \forall x \in I \qquad f(x) = \frac{\sin x}{\sqrt{5-4\cos x}}
+  \end{equation*}
+  \begin{enumerate}
+    \item
+      \begin{enumerate}
+        \item Pour tout \(x \in I\), \(\cos x \in I\), donc \(5-4\cos x \in 
+          \intervalleff{1}{9}\). En particulier, \(5-4\cos x >0\) donc le 
+          dénominateur de \(f\) est bien défini, strictement positif. Donc \(f\) 
+          est bien défini sur \(I\).
+        \item Soient \(a, b\) deux réels strictement positifs. Alors, 
+          \(\sqrt{a}+\sqrt{b} >0\), donc~:
+          \begin{equation*}
+            \sqrt{a}-\sqrt{b} = 
+            \frac{(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})}{\sqrt{a}+\sqrt{b}} = 
+            \frac{a-b}{\sqrt{a}+\sqrt{b}}.
+          \end{equation*}
+          Pour tout \(x \in I\), \(\sqrt{5-4\cos x}>0\) donc~:
+          \begin{align*}
+            f(x)-\sin x &=\frac{\sin x}{\sqrt{5-4\cos x}} - \sin x \\
+            &=\frac{\sin x}{\sqrt{5-4\cos x}}(\sqrt{1}- \sqrt{5-4\cos x}) \\
+            &=\frac{\sin x}{\sqrt{5-4\cos x}} \times \frac{1-(5-4\cos 
+            x)}{\sqrt{1}+\sqrt{5-4\cos x}} \\
+            &=\frac{4\sin x (\cos x -1)}{\sqrt{5-4\cos x}(1+\sqrt{5-4\cos x})}.
+          \end{align*}
+          \(f(x)-\sin x\) est du signe de \(\sin x (\cos x -1)\), donc de 
+          \(-\sin x\). Comme, pour tout \(x \in I\), \(\sin x \geq 0\), alors il 
+          vient
+          \begin{equation*}
+            \forall x \in I \qquad f(x)-\sin x \leq 0.
+          \end{equation*}
+        \item Soit \(\fonctionL{k}{I}{\R}{x}{x-\sin x}\). La fonction \(k\) est 
+          dérivable sur \(I\) et \[\forall x \in I \qquad k'(x) = 1-\cos x.\]
+          Pour tout \(x \in \intervalleof{0}{\pi}\), \(k'(x)>0\) donc \(k\) est 
+          strictement croissante sur \(I\). Or \(k(0)=0\), donc pour tout \(x 
+          \in \intervalleof{0}{\pi}\), \(\sin x < x\).
+        \item Déjà, \(f(0)=0\) donc \(0\) est une solution de \(f(x)=x\) sur 
+          \(I\). Pour tout \(x \in I\setminus\{0\}\), on a \(f(x) \leq \sin x < 
+          x\), donc il n'y a pas d'autres solutions. L'équation \(f(x)=x\) admet 
+          exactement une solution, \(0\), sur l'intervalle \(I\).
+      \end{enumerate}
+  \item
+  \end{enumerate}
 \end{corrige}

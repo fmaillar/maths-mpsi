@@ -5,46 +5,65 @@
 
 \section{Comparaison des fonctions au voisinage d'un point}
 
-Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point de \(A\) ou une borne de \(A\). On s'intéresse à des fonctions de \(A\) vers \(\R\) définies au voisinage de \(a\).
+Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
+de \(A\) ou une borne de \(A\). On s'intéresse à des fonctions de \(A\) vers 
+\(\R\) définies au voisinage de \(a\).
 \begin{defdef}
-  Soit \(a \in \Rbar\) et \(U\) une partie de \(\R\). On dit que \(U\) est un voisinage de \(a\)
+  Soit \(a \in \Rbar\) et \(U\) une partie de \(\R\). On dit que \(U\) est un 
+  voisinage de \(a\)
   \begin{itemize}
-    \item si \(a \in \R\), s'il existe \(h > 0\) tel que \(U=\intervalleff{a-h}{a+h}\) ou \(U=\intervallefo{a-h}{a}\) ou \(U=\intervalleof{a}{a+h}\);
-    \item si \(a=+\infty\), s'il existe \(A \in \R\) tel que \(U=\intervallefo{A}{+\infty}\);
-    \item si \(a=-\infty\), s'il existe \(B \in \R\) tel que \(U=\intervalleof{-\infty}{B}\).
+    \item si \(a \in \R\), s'il existe \(h > 0\) tel que 
+      \(U=\intervalleff{a-h}{a+h}\) ou \(U=\intervallefo{a-h}{a}\) ou 
+      \(U=\intervalleof{a}{a+h}\);
+    \item si \(a=+\infty\), s'il existe \(A \in \R\) tel que 
+      \(U=\intervallefo{A}{+\infty}\);
+    \item si \(a=-\infty\), s'il existe \(B \in \R\) tel que 
+      \(U=\intervalleof{-\infty}{B}\).
   \end{itemize}
 \end{defdef}
 \begin{prop}
-  Si \(U\) et \(V\) sont deux voisinages de \(a\), alors \(U \cap V\) est aussi un voisinage de \(a\).
+  Si \(U\) et \(V\) sont deux voisinages de \(a\), alors \(U \cap V\) est aussi 
+  un voisinage de \(a\).
 \end{prop}
 
 \subsection{Relation de domination}
 
 \begin{defdef}
-  Soient \(f\) et \(g\) deux fonctions de \(A\) vers \(\R\). On dit que \(f\) est dominée par \(g\) au voisinage de \(a\) et on note \(f=\grandOf{a}{g}\) si et seulement s'il existe un voisinage \(U\) de \(a\) et une application \(\Lambda:U\cap A \longrightarrow \R\) tels que~:
+  Soient \(f\) et \(g\) deux fonctions de \(A\) vers \(\R\). On dit que \(f\) 
+  est dominée par \(g\) au voisinage de \(a\) et on note \(f=\grandOf{a}{g}\) si 
+  et seulement s'il existe un voisinage \(U\) de \(a\) et une application 
+  \(\Lambda:U\cap A \longrightarrow \R\) tels que~:
   \begin{itemize}
     \item pour tout \(x \in U\cap A\) \(f(x)=\Lambda(x)g(x)\);
     \item la fonction \(\Lambda\) est bornée.
   \end{itemize}
 \end{defdef}
 \begin{prop}
-  Dans le cas où \(g\) ne s'annule pas au voisinage de \(a\), alors \(f\) est dominée par \(g\) au voisinage de \(a\) si et seulement si \(\frac{f}{g}\) est bornée au voisinage de \(a\).
+  Dans le cas où \(g\) ne s'annule pas au voisinage de \(a\), alors \(f\) est 
+  dominée par \(g\) au voisinage de \(a\) si et seulement si \(\frac{f}{g}\) est 
+  bornée au voisinage de \(a\).
 \end{prop}
 
 \emph{Cas particuliers importants}~:
 \begin{itemize}
-  \item \(f\) est dominée par l'application constante égale à 1 au voisinage de \(a\) signifie que \(f\) est bornée au voisinage de \(a\);
-  \item \(f\) est dominée par l'application nulle au voisinage de \(a\) signifie que \(f\) est idetiquement nulle au voisinage de \(a\).
+  \item \(f\) est dominée par l'application constante égale à 1 au voisinage de 
+    \(a\) signifie que \(f\) est bornée au voisinage de \(a\);
+  \item \(f\) est dominée par l'application nulle au voisinage de \(a\) signifie 
+    que \(f\) est identiquement nulle au voisinage de \(a\).
 \end{itemize}
 
 \begin{prop}[Transitivité]
-  Soient \(f\), \(g\) et \(h\) des applications de \(A\) vers \(\R\), alors si au voisinage de \(a\) \(f\) est dominée par \(g\) et \(g\) est dominée par \(h\) alors \(f\) est dominée par \(h\) au voisinage de \(a\).
+  Soient \(f\), \(g\) et \(h\) des applications de \(A\) vers \(\R\), alors si 
+  au voisinage de \(a\) \(f\) est dominée par \(g\) et \(g\) est dominée par 
+  \(h\) alors \(f\) est dominée par \(h\) au voisinage de \(a\).
   \begin{equation}
     f=\grandOf{a}{g} \ g=\grandOf{a}{h} \implies f=\grandOf{a}{h}.
   \end{equation}
 \end{prop}
 \begin{proof}
-  D'après les hypothèses il existe deux voisinage de \(U_1\) et \(U_2\) de \(a\) et deux fonctions bornées \(\Lambda_1:U_1 \cap A \rightarrow \R\) et \(\Lambda_2:U_2 \cap A \rightarrow \R\) telles que~:
+  D'après les hypothèses il existe deux voisinage de \(U_1\) et \(U_2\) de \(a\) 
+  et deux fonctions bornées \(\Lambda_1:U_1 \cap A \rightarrow \R\) et 
+  \(\Lambda_2:U_2 \cap A \rightarrow \R\) telles que~:
   \begin{gather}
     \forall x \in U_1\cap A \quad f(x)=\Lambda_1(x)g(x);\\
     \forall x \in U_2\cap A \quad g(x)=\Lambda_2(x)h(x).
@@ -56,46 +75,67 @@ Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
   La fonction \(\Lambda_1 \Lambda_2\) est bornée donc \(f=\grandOf{a}{h}\).
 \end{proof}
 \begin{prop}
-  Soit \(g \in \R^A\). On note \(F=\enstq{f \in \R^A}{f=\grandOf{a}{g}}\). L'ensemble \(F\) est un sous-espace vectoriel de \(\R^A\), c'est-à-dire qu'il est non vide et stable par combinaison linéaire.
+  Soit \(g \in \R^A\). On note \(F=\enstq{f \in \R^A}{f=\grandOf{a}{g}}\). 
+  L'ensemble \(F\) est un sous-espace vectoriel de \(\R^A\), c'est-à-dire qu'il 
+  est non vide et stable par combinaison linéaire.
 \end{prop}
 \begin{proof}
-  Il est non vide, puisque l'application nulle lui appartient. Pour toutes fonctions \(f\) et \(h\) de \(F\) et tous réels \(\lambda\) et \(\mu\) il existe deux voisinages de \(a\) \(U_1\), \(U_2\) et deux  applications bornées \(\Lambda_1:U_1 \cap A \longrightarrow \R\) et \(\Lambda_2:U_2 \cap A \longrightarrow \R\)  telles que~:
+  Il est non vide, puisque l'application nulle lui appartient. Pour toutes 
+  fonctions \(f\) et \(h\) de \(F\) et tous réels \(\lambda\) et \(\mu\) il 
+  existe deux voisinages de \(a\) \(U_1\), \(U_2\) et deux  applications bornées 
+  \(\Lambda_1:U_1 \cap A \longrightarrow \R\) et \(\Lambda_2:U_2 \cap A 
+  \longrightarrow \R\)  telles que~:
   \begin{gather}
     \forall x \in U_1\cap A \quad f(x)=\Lambda_1(x)g(x),\\
     \forall x \in U_2\cap A \quad h(x)=\Lambda_2(x)g(x).\\
   \end{gather}
-  Soit \(U_0=U_1 \cap U_2\), c'est aussi un voisinage de \(a\) et pour tout \(x\) de \(U_0 \cap A\) on a \((\lambda f +\mu g)(x)=(\lambda\Delta_1(x)+\mu\Delta_2(x))g(x)\). L'application \(\lambda\Delta_1+\mu\Delta_2\) est bornée donc \(\lambda f + \mu g\) est dominée par \(g\) au voisinage de \(a\). Donc \(F\) est stable par combinaison linéaire. C'est donc au final un sous-espace vectoriel.
+  Soit \(U_0=U_1 \cap U_2\), c'est aussi un voisinage de \(a\) et pour tout 
+  \(x\) de \(U_0 \cap A\) on a \((\lambda f +\mu 
+  g)(x)=(\lambda\Delta_1(x)+\mu\Delta_2(x))g(x)\). L'application 
+  \(\lambda\Delta_1+\mu\Delta_2\) est bornée donc \(\lambda f + \mu g\) est 
+  dominée par \(g\) au voisinage de \(a\). Donc \(F\) est stable par combinaison 
+  linéaire. C'est donc au final un sous-espace vectoriel.
 \end{proof}
 \begin{prop}[Compatibilité avec la multiplication]
-  Soient \(f_1\), \(f_2\), \(g_1\) et \(g_2\) des applications de \(A\) dans \(\R\). Alors
+  Soient \(f_1\), \(f_2\), \(g_1\) et \(g_2\) des applications de \(A\) dans 
+  \(\R\). Alors
   \begin{equation}
-    f_1=\grandOf{a}{g_1} \text{~et~} f_2=\grandOf{a}{g_2} \Longrightarrow f_1f_2 = \grandOf{a}{g_1g_2}.
+    f_1=\grandOf{a}{g_1} \text{~et~} f_2=\grandOf{a}{g_2} \Longrightarrow f_1f_2 
+    = \grandOf{a}{g_1g_2}.
   \end{equation}
 \end{prop}
 \begin{proof}
-  D'après les hypothèse il existe deux voisinage de \(U_1\) et \(U_2\) de \(a\) et deux fonctions bornées \(\Lambda_1:U_1 \cap A \rightarrow \R\) \(\Lambda_2:U_2 \cap A \rightarrow \R\) telles que
+  D'après les hypothèse il existe deux voisinage de \(U_1\) et \(U_2\) de \(a\) 
+  et deux fonctions bornées \(\Lambda_1:U_1 \cap A \rightarrow \R\) 
+  \(\Lambda_2:U_2 \cap A \rightarrow \R\) telles que
   \begin{align}
     \forall x \in U_1\cap A \quad f_1(x)=\Lambda_1(x)g_1(x)\\
     \forall x \in U_2\cap A \quad f_2(x)=\Lambda_2(x)g_2(x)
   \end{align}
   Soit \(U_0=U_1 \cap U_2\), c'est aussi un voisinage de \(a\) et
   \begin{equation}
-    \forall x \in U_0 \cap A \quad f_1(x)f_2(x) = (\Lambda_1(x) \Lambda_2(x)) g_1(x)g_2
+    \forall x \in U_0 \cap A \quad f_1(x)f_2(x) = (\Lambda_1(x) \Lambda_2(x)) 
+    g_1(x)g_2
   \end{equation}
-  La fonction \(\Lambda_1 \Lambda_2\) est bornée, donc \(f_1f_2 = \grandOf{a}{g_1g_2}\).
+  La fonction \(\Lambda_1 \Lambda_2\) est bornée, donc \(f_1f_2 = 
+  \grandOf{a}{g_1g_2}\).
 \end{proof}
 
 \subsection{Relation de négligeabilité}
 
 \begin{defdef}
-  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). On dit que \(f\) est négligeable devant \(g\) au voisinage de \(a\) et on note \(f=\petitof{a}{g}\) si et seulement s'il existe un voisinage de U de \(a\) et une application \(\epsilon : U\cap A \longrightarrow \R\) tels que
+  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). On dit que \(f\) 
+  est négligeable devant \(g\) au voisinage de \(a\) et on note 
+  \(f=\petitof{a}{g}\) si et seulement s'il existe un voisinage de U de \(a\) et 
+  une application \(\epsilon : U\cap A \longrightarrow \R\) tels que
   \begin{itemize}
     \item \(\forall x \in U \cap A \ f(x)=g(x)\epsilon(x)\);
     \item \(\lim\limits_{a} \epsilon =0\).
   \end{itemize}
 \end{defdef}
 \begin{prop}
-  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). Dans le cas où la fonction \(g\) ne s'annule pas au voisinage de \(a\),
+  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). Dans le cas où 
+  la fonction \(g\) ne s'annule pas au voisinage de \(a\),
   \begin{equation}
     f=\petitof{a}{g} \iff \lim\limits_{a} \frac{f}{g}=0.
   \end{equation}
@@ -103,8 +143,10 @@ Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
 
 \emph{Cas particuliers}~:
 \begin{itemize}
-  \item si une fonction \(f\) est négligeable devant la fonction constante égale à \(1\) en \(a\) alors elle tend vers zéro en \(a\);
-  \item si une fonction \(f\) est négligeable devant la fonction nulle au voisinage de \(a\) alors elle est identiquement nulle au voisinage de \(a\).
+  \item si une fonction \(f\) est négligeable devant la fonction constante égale 
+    à \(1\) en \(a\) alors elle tend vers zéro en \(a\);
+  \item si une fonction \(f\) est négligeable devant la fonction nulle au 
+    voisinage de \(a\) alors elle est identiquement nulle au voisinage de \(a\).
 \end{itemize}
 
 \subsection{Propriétés et relations de domination et de négligeabilité}
@@ -116,12 +158,16 @@ Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
   \end{equation}
 \end{prop}
 \begin{proof}
-  Il existe un voisinage \(U\) de \(a\) et une application \(\epsilon : U\cap A \rightarrow \R\) telle que 
-  \begin{itemize}
+  Il existe un voisinage \(U\) de \(a\) et une application \(\epsilon : U\cap A 
+  \rightarrow \R\) telle que \begin{itemize}
     \item \(\forall x \in U \cap A \ f(x)=g(x)\epsilon(x)\);
     \item \(\lim\limits_{a} \epsilon =0\).
   \end{itemize}
-  La fonction \(\epsilon\) est bornée au voisinage de \(a\). On note \(V\) un voisinage de \(a\) telle que \(\epsilon\) soit bornée dessus. Soit \(U_0=U \cap V\), qui est aussi un voisinage de \(A\), alors \(\epsilon\) est bornée sur \(U_0\) et \(\forall x \in U_0 \cap A\),  \(f(x)=g(x)\epsilon(x)\). Alors \(f=\grandOf{a}{g}\).
+  La fonction \(\epsilon\) est bornée au voisinage de \(a\). On note \(V\) un 
+  voisinage de \(a\) telle que \(\epsilon\) soit bornée dessus. Soit \(U_0=U 
+  \cap V\), qui est aussi un voisinage de \(A\), alors \(\epsilon\) est bornée 
+  sur \(U_0\) et \(\forall x \in U_0 \cap A\),  \(f(x)=g(x)\epsilon(x)\). Alors 
+  \(f=\grandOf{a}{g}\).
 \end{proof}
 \begin{prop}[Transitivité]
   Pour toutes fonctions \(f\), \(g\), et \(h\) de \(\R^A\), on a~:
@@ -131,7 +177,10 @@ Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
   \end{align}
 \end{prop}
 \begin{proof}
-  Montrons la première implication, il existe deux voisinage de \(a\) \(U_1\), \(U_2\). Il existe aussi une fonction bornée \(\Lambda : U_1\cap A \rightarrow \R\) et une fonction de limite nulle en \(a\) \(\epsilon : U_2\cap A \rightarrow \R\) telles que
+  Montrons la première implication, il existe deux voisinage de \(a\) \(U_1\), 
+  \(U_2\). Il existe aussi une fonction bornée \(\Lambda : U_1\cap A \rightarrow 
+  \R\) et une fonction de limite nulle en \(a\) \(\epsilon : U_2\cap A 
+  \rightarrow \R\) telles que
   \begin{align}
     \forall x \in U_1 \cap A \quad f(x)=\epsilon(x)g(x)\\
     \forall x \in U_2 \cap A \quad g(x)=\Lambda(x) h(x)
@@ -140,120 +189,195 @@ Soient \(A\) une partie de \(\R\) et \(a \in \Rbar\) tel que \(a\) est un point 
   \begin{equation}
     \forall x \in U_0 \cap A \quad f(x)=\epsilon(x) \Lambda(x) h(x)
   \end{equation}
-  La fonction \(\epsilon \Lambda\) tend vers zéro en \(a\), donc \(f=\petitof{a}{h}\).
+  La fonction \(\epsilon \Lambda\) tend vers zéro en \(a\), donc 
+  \(f=\petitof{a}{h}\).
 
-  La deuxième implication se montre de la même façon en inversant. La transitivité découle de la proposition précédente, mais ce qu'on a montré est plus général.
+  La deuxième implication se montre de la même façon en inversant. La 
+  transitivité découle de la proposition précédente, mais ce qu'on a montré est 
+  plus général.
 \end{proof}
 
 \begin{prop}
-  Soit \(g \in \R^A\), on note \(G=\enstq{f \in \R^A}{f=\petitof{a}{g}}\). Alors \(G\) est un sous-espace vectoriel de \(\R^A\). C'est-à-dire qu'il est non vide est stable par combinaison linéaire.
+  Soit \(g \in \R^A\), on note \(G=\enstq{f \in \R^A}{f=\petitof{a}{g}}\). Alors 
+  \(G\) est un sous-espace vectoriel de \(\R^A\). C'est-à-dire qu'il est non 
+  vide est stable par combinaison linéaire.
 \end{prop}
 \begin{proof}
-  L'ensemble \(G\) n'est pas vide puisque la fonction nulle lui appartient. Pour toute fonction \(f,h \in G\) et tous réels \(\lambda, \mu\) il existe deux voisinages \(U_1\) et \(U_2\) et deux fonctions de limite nulle en \(a\), \(\epsilon_1 : A \cap U_1 \rightarrow \R\) et \(\epsilon_2 : A \cap U_2 \rightarrow \R\) telles que
+  L'ensemble \(G\) n'est pas vide puisque la fonction nulle lui appartient. Pour 
+  toute fonction \(f,h \in G\) et tous réels \(\lambda, \mu\) il existe deux 
+  voisinages \(U_1\) et \(U_2\) et deux fonctions de limite nulle en \(a\), 
+  \(\epsilon_1 : A \cap U_1 \rightarrow \R\) et \(\epsilon_2 : A \cap U_2 
+  \rightarrow \R\) telles que
   \begin{align}
     \forall x \in U_1 \cap A \quad f(x)=\epsilon_1(x)g(x);\\
     \forall x \in U_2 \cap A \quad h(x)=\epsilon_2(x)g(x).
   \end{align}
-  Soit \(U_0=U_1\cap U_2\), qui est un voisinage de \(a\). Pour tout réel \(x \in U_0 \cap A\), on a \((\lambda f+\mu h)(x)=(\lambda\epsilon_1+\mu\epsilon_2)(x)g(x)\). La fonction \(\lambda\epsilon_1+\mu\epsilon_2\) tend vers zéro en \(a\), donc \((\lambda f+\mu h)=\petitof{a}{g}\) et donc \(\lambda f+\mu h \in G\).
+  Soit \(U_0=U_1\cap U_2\), qui est un voisinage de \(a\). Pour tout réel \(x 
+  \in U_0 \cap A\), on a \((\lambda f+\mu 
+  h)(x)=(\lambda\epsilon_1+\mu\epsilon_2)(x)g(x)\). La fonction 
+  \(\lambda\epsilon_1+\mu\epsilon_2\) tend vers zéro en \(a\), donc \((\lambda 
+  f+\mu h)=\petitof{a}{g}\) et donc \(\lambda f+\mu h \in G\).
 \end{proof}
 
 \begin{prop}[Compatibilité avec la multiplication]
-  Soient \(f_1\), \(f_2\), \(g_1\), et \(g_2\) des applications de \(A\) vers \(\R\). Alors
+  Soient \(f_1\), \(f_2\), \(g_1\), et \(g_2\) des applications de \(A\) vers 
+  \(\R\). Alors
   \begin{equation}
-    f_1=\petitof{a}{g_1} \text{~et~} f_2=\petitof{a}{g_2} \implies f_1f_2 = \petitof{a}{g_1g_2}.
+    f_1=\petitof{a}{g_1} \text{~et~} f_2=\petitof{a}{g_2} \implies f_1f_2 = 
+    \petitof{a}{g_1g_2}.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Il existe deux voisinage \(U_1\), \(U_2\) de \(a\). Il existe aussi une fonction bornée \(\Lambda : U_1\cap A \rightarrow \R\) et une fonction de limite nulle en \(a\) \(\epsilon : U_2\cap A \rightarrow \R\) telles que
+  Il existe deux voisinage \(U_1\), \(U_2\) de \(a\). Il existe aussi une 
+  fonction bornée \(\Lambda : U_1\cap A \rightarrow \R\) et une fonction de 
+  limite nulle en \(a\) \(\epsilon : U_2\cap A \rightarrow \R\) telles que
   \begin{align}
     \forall x \in U_1 \cap A \quad f_1(x)=\Lambda(x)g_1(x),\\
     \forall x \in U_2 \cap A \quad f_2(x)=\epsilon(x)g_2(x).
   \end{align}
-  Soit \(U_0=U_1\cap U_2\), c'est aussi un voisinage de \(a\). Pour tout \(x \in U_0 \cap A\) \((f_1 f_2)(x)=(\Lambda \epsilon)(x) (g_1g_2)(x)\). La fonction \(\Lambda \epsilon\) tend vers zéro en \(a\), alors \(f_1f_2 = \petitof{a}{g_1g_2}\). Alors puisque si la fonction \(f\) est négligeable par rapport à \(g\), elle est dominée par \(g\) donc
+  Soit \(U_0=U_1\cap U_2\), c'est aussi un voisinage de \(a\). Pour tout \(x \in 
+  U_0 \cap A\) \((f_1 f_2)(x)=(\Lambda \epsilon)(x) (g_1g_2)(x)\). La fonction 
+  \(\Lambda \epsilon\) tend vers zéro en \(a\), alors \(f_1f_2 = 
+  \petitof{a}{g_1g_2}\). Alors puisque si la fonction \(f\) est négligeable par 
+  rapport à \(g\), elle est dominée par \(g\) donc
   \begin{equation}
-    f_1=\petitof{a}{g_1} \text{~et~} f_2=\petitof{a}{g_2} \implies f_1f_2 = \petitof{a}{g_1g_2}.
+    f_1=\petitof{a}{g_1} \text{~et~} f_2=\petitof{a}{g_2} \implies f_1f_2 = 
+    \petitof{a}{g_1g_2}.
   \end{equation}
 \end{proof}
 
 \subsection{Relation d'équivalence}
 
 \begin{defdef}
-  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). On dit que \(f\) est équivalente à \(g\) et on note \(f \sim_{a} g\) si et seulement si \(f-g=\petitof{a}{g}\).
+  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). On dit que \(f\) 
+  est équivalente à \(g\) et on note \(f \sim_{a} g\) si et seulement si 
+  \(f-g=\petitof{a}{g}\).
 \end{defdef}
 \begin{prop}
-  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). La fonction \(f\) est équivalente à \(g\) au voisinage de \(a\) si et seulement s'il existe un voisinage \(U\) de \(a\) et une application \(\varphi : U\cap A \rightarrow \R\) tels que pour tout \(x \in U \cap A\) \(f(x)=\varphi(x)g(x)\) et \(\lim\limits_{a}\varphi =1\).
+  Soient \(f\) et \(g\) deux applications de \(A\) dans \(\R\). La fonction 
+  \(f\) est équivalente à \(g\) au voisinage de \(a\) si et seulement s'il 
+  existe un voisinage \(U\) de \(a\) et une application \(\varphi : U\cap A 
+  \rightarrow \R\) tels que pour tout \(x \in U \cap A\) \(f(x)=\varphi(x)g(x)\) 
+  et \(\lim\limits_{a}\varphi =1\).
 \end{prop}
 \begin{proof}
   En effet,
   \begin{align}
     f \sim_a g &\iff f-g = \petitof{a}{g}\\
-               &\iff \exists U \in v(a) \exists \epsilon:U\cap A \rightarrow \R \lim\limits_{a}\epsilon = 0 \notag \\
-               &\phantom{\iff} \text{~et~} \forall x \in U\cap A \ f(x)=(\epsilon(x)+1)g(x) \\
-               &\iff \exists U \in v(a) \exists \varphi:U\cap A \rightarrow \R \lim\limits_{a}\varphi = 1 \notag \\
-               &\phantom{\iff} \text{~et~} \forall x \in U\cap A \ f(x)=\varphi(x)g(x) 
+    &\iff \exists U \in v(a) \exists \epsilon:U\cap A \rightarrow \R 
+    \lim\limits_{a}\epsilon = 0 \notag \\
+    &\phantom{\iff} \text{~et~} \forall x \in U\cap A \ f(x)=(\epsilon(x)+1)g(x) 
+    \\
+    &\iff \exists U \in v(a) \exists \varphi:U\cap A \rightarrow \R 
+    \lim\limits_{a}\varphi = 1 \notag \\
+    &\phantom{\iff} \text{~et~} \forall x \in U\cap A \ f(x)=\varphi(x)g(x) 
   \end{align}
 \end{proof}
 \begin{prop}
-  Soient \(f\) et \(g\) deux applications de A dans \(\R\). Dans le cas où la fonction \(g\) ne s'annule pas au voisinage de \(a\),
+  Soient \(f\) et \(g\) deux applications de A dans \(\R\). Dans le cas où la 
+  fonction \(g\) ne s'annule pas au voisinage de \(a\),
   \begin{equation}
     f \sim_a g \iff \lim\limits_a\frac{f}{g}=1.
   \end{equation}
   En particulier
   \begin{equation}
-    \forall x \in \R\setminus\{0\} \quad f(x) \sim_a \ell \iff \lim\limits_{x \to a} f(x) =\ell.
+    \forall x \in \R\setminus\{0\} \quad f(x) \sim_a \ell \iff \lim\limits_{x 
+    \to a} f(x) =\ell.
   \end{equation}
-  \(f \sim_a 0\) signifie que \(f\) est constante nulle au voisinage de zéro, à ne pas utiliser.
+  \(f \sim_a 0\) signifie que \(f\) est constante nulle au voisinage de zéro, à 
+  ne pas utiliser.
 \end{prop}
 \begin{prop}
-  La relation d'équivalence est une ``vraie'' relation d'équivalence, c'est à dire qu'elle est :
+  La relation d'équivalence est une ``vraie'' relation d'équivalence, c'est à 
+  dire qu'elle est :
   \begin{itemize}
     \item réflexive, \(\forall f \in \R^A \ f \sim_a f\);
     \item symétrique, \(\forall f,g \in \R^A \ f \sim_a g \implies g \sim_a f\);
-    \item transitive, \(\forall f,g,h \in \R^A \ (f \sim_a g \text{~et~} g\sim_a h) \implies f \sim_a h\).
+    \item transitive, \(\forall f,g,h \in \R^A \ (f \sim_a g \text{~et~} g\sim_a 
+      h) \implies f \sim_a h\).
   \end{itemize}
 \end{prop}
 \begin{proof}
   \begin{itemize}
     \item \(\forall f \in \R^A \ f=\tilde{1} f \text{~et~} \tilde{1} \to 1\);
-    \item On suppose que \(f \sim_a g\), il existe un voisinage \(U\) de \(a\) et une application \(\varphi : U\cap A \longrightarrow \R\) telle que \(\lim\limits_{a} \varphi =1\) et telles que pour tout \(x \in U \cap A\) \(f(x)=\varphi(x) g(x)\). Il existe donc un voisinage \(V\) tel que pour tout \(x \in V\) \(\varphi(x) \neq 0\). 
+    \item On suppose que \(f \sim_a g\), il existe un voisinage \(U\) de \(a\) 
+      et une application \(\varphi : U\cap A \longrightarrow \R\) telle que 
+      \(\lim\limits_{a} \varphi =1\) et telles que pour tout \(x \in U \cap A\) 
+      \(f(x)=\varphi(x) g(x)\). Il existe donc un voisinage \(V\) tel que pour 
+      tout \(x \in V\) \(\varphi(x) \neq 0\). 
 
-      Soit \(U_0=V \cap U\), c'est aussi un voisinage de \(a\) et pour tout \(x \in U_0 \cap A\) \(g(x)=\frac{1}{\varphi(x)} f(x)\) et \(\lim\limits_{a} \frac{1}{\varphi} =1\). Donc \(g \sim_a f\).
-    \item Il existe deux voisinage de \(a\) \(U_1\), \(U_2\). Il existe aussi deux fonctions de limite égale à 1 en \(a\) \(\varphi_1 : U_1\cap A \rightarrow \R\) et \(\varphi_2 : U_2\cap A \rightarrow \R\)  telles que
+      Soit \(U_0=V \cap U\), c'est aussi un voisinage de \(a\) et pour tout \(x 
+      \in U_0 \cap A\) \(g(x)=\frac{1}{\varphi(x)} f(x)\) et \(\lim\limits_{a} 
+      \frac{1}{\varphi} =1\). Donc \(g \sim_a f\).
+    \item Il existe deux voisinage de \(a\) \(U_1\), \(U_2\). Il existe aussi 
+      deux fonctions de limite égale à 1 en \(a\) \(\varphi_1 : U_1\cap A 
+      \rightarrow \R\) et \(\varphi_2 : U_2\cap A \rightarrow \R\)  telles que
       \begin{align}
         \forall x \in U_1 \cap A \quad f(x)=\varphi_1(x)g_1(x),\\
         \forall x \in U_2 \cap A \quad g(x)=\varphi_2(x)h(x).
       \end{align}
-      Soit \(U_0=U_1\cap U_2\), c'est aussi un voisinage de \(a\). Pour tout \(x \in U_0 \cap A\), \(f(x)= \varphi_1(x)\varphi_2(x)h(x)\). La fonction \(\varphi_1 \varphi_2\) est de limite égale à 1 en \(a\). Donc \(f\sim_a h\).
+      Soit \(U_0=U_1\cap U_2\), c'est aussi un voisinage de \(a\). Pour tout \(x 
+      \in U_0 \cap A\), \(f(x)= \varphi_1(x)\varphi_2(x)h(x)\). La fonction 
+      \(\varphi_1 \varphi_2\) est de limite égale à 1 en \(a\). Donc \(f\sim_a 
+      h\).
   \end{itemize}
 \end{proof}
 \begin{prop}
-  Soient \(f\) et \(g\) dans \(\R^A\) et \(\ell \in \Rbar\). Si \(f \sim_a g\) et \(\lim\limits_{a}g=\ell\) alors \(\lim\limits_a f = \ell\). La réciproque est fausse.
+  Soient \(f\) et \(g\) dans \(\R^A\) et \(\ell \in \Rbar\). Si \(f \sim_a g\) 
+  et \(\lim\limits_{a}g=\ell\) alors \(\lim\limits_a f = \ell\). La réciproque 
+  est fausse.
 \end{prop}
 \begin{proof}
-  Au voisinage de \(a\), \(f=\varphi g\) où \(\varphi\) tend vers 1 en \(a\). Si \(g\) tend vers \(\ell\) en \(a\), alors \(f=\varphi g\) tend aussi vers \(\ell\) en \(a\).
+  Au voisinage de \(a\), \(f=\varphi g\) où \(\varphi\) tend vers 1 en \(a\). Si 
+  \(g\) tend vers \(\ell\) en \(a\), alors \(f=\varphi g\) tend aussi vers 
+  \(\ell\) en \(a\).
 \end{proof}
 
-Contre exemple de la réciproque : Soient \(A=\intervalleoo{0}{+\infty}\), \(a=+\infty\) et \(\fonction{f}{A}{\R}{x}{x}\) puis \(\fonction{g}{A}{\R}{x}{\ln x}\). Ces deux fonctions ont la même limite en \(a\), c'est à dire \(+\infty\), cependant elles ne sont pas équivalentes puisque \(\lim\limits_{a}\frac{g}{f}=0\)
+Contre exemple de la réciproque : Soient \(A=\intervalleoo{0}{+\infty}\), 
+\(a=+\infty\) et \(\fonction{f}{A}{\R}{x}{x}\) puis \(\fonction{g}{A}{\R}{x}{\ln 
+x}\). Ces deux fonctions ont la même limite en \(a\), c'est à dire \(+\infty\), 
+cependant elles ne sont pas équivalentes puisque 
+\(\lim\limits_{a}\frac{g}{f}=0\)
 
 \begin{prop}
-  Soient deux fonctions \(f\) et \(g\) de \(\R^A\). Si \(f\sim_a g\) alors \(fg\) est positive au voisinage de \(a\). De plus si \(f\) est à valeurs strictement positives au voisinage de \(a\), alors \(g\) aussi.
+  Soient deux fonctions \(f\) et \(g\) de \(\R^A\). Si \(f\sim_a g\) alors 
+  \(fg\) est positive au voisinage de \(a\). De plus si \(f\) est à valeurs 
+  strictement positives au voisinage de \(a\), alors \(g\) aussi.
 \end{prop}
 \begin{proof}
-  Il existe une fonction \(\varphi\) de limite égale à 1 en \(a\) telle qu'au voisinage de \(a\) on a \(f=\varphi g\). Alors au voisinage de \(a\) \(fg=\varphi g^2\). Au voisinage de \(a\), \(\varphi\) est à valeurs strictement positives donc \(\varphi g^2 \geqslant 0\) et ainsi \(fg \geqslant 0\). Si \(g\) est à valeurs strictement positives au voisinage de \(a\), alors \(f=\varphi g\) est à valeurs strictement positives au voisinage de \(a\).
+  Il existe une fonction \(\varphi\) de limite égale à 1 en \(a\) telle qu'au 
+  voisinage de \(a\) on a \(f=\varphi g\). Alors au voisinage de \(a\) 
+  \(fg=\varphi g^2\). Au voisinage de \(a\), \(\varphi\) est à valeurs 
+  strictement positives donc \(\varphi g^2 \geqslant 0\) et ainsi \(fg \geqslant 
+  0\). Si \(g\) est à valeurs strictement positives au voisinage de \(a\), alors 
+  \(f=\varphi g\) est à valeurs strictement positives au voisinage de \(a\).
 \end{proof}
 \begin{prop}[Compatibilités]
-  Soient \(f\), \(g\), \(f_1\), \(g_1\), \(f_2\), et \(g_2\) des fonctions de \(\R^A\), alors~:
+  Soient \(f\), \(g\), \(f_1\), \(g_1\), \(f_2\), et \(g_2\) des fonctions de 
+  \(\R^A\), alors~:
   \begin{gather}
     f_1 \sim_a g_1 \text{~et~} f_2 \sim_a g_2 \implies f_1 f_2 \sim_a g_1 g_2;\\
-    f \sim_a g \text{~et~} g \neq_{v(a)} 0 \implies \frac{1}{f} \sim_a \frac{1}{g} \text{~et~} f \neq_{v(a)} 0;\\
-    f_1 \sim_a g_1 \text{~et~} f_2 \sim_a g_2 \text{~et~} g_2 \neq_{v(a)} 0 \implies \frac{f_1}{f_2} \sim_a \frac{g_1}{g_2} \text{~et~} f_2 \neq_{v(a)} 0; \\
+    f \sim_a g \text{~et~} g \neq_{v(a)} 0 \implies \frac{1}{f} \sim_a 
+    \frac{1}{g} \text{~et~} f \neq_{v(a)} 0;\\
+    f_1 \sim_a g_1 \text{~et~} f_2 \sim_a g_2 \text{~et~} g_2 \neq_{v(a)} 0 
+    \implies \frac{f_1}{f_2} \sim_a \frac{g_1}{g_2} \text{~et~} f_2 \neq_{v(a)} 
+    0; \\
     f \sim_a g \implies \forall n \in \N^{*} f^n \sim_a g^n.
   \end{gather}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-    \item Au voisinage de \(a\), il existe \(\varphi_1\) et \(\varphi_2\) de limite égale à 1 en \(a\) telles que \(f_1=\varphi_1 g_1\) et \(f_2=\varphi_2 g_2\). Au voisinage de \(a\), \(f_1f_2 = \varphi_ 1\varphi_2 g_1 g_2\) et la limite du produit \(\varphi_1 \varphi_2\) vaut 1 en \(a\), donc on a bien \(f_1 f_2 \sim_a g_1 g_2\).
-    \item Au voisinage de \(a\), il existe \(\varphi\) de limite égale à 1 en \(a\) telle que \(g=\varphi f\) et comme \(f\) ne s'annule pas (et \(\varphi\) non plus) au voisinage de \(a\), on écrit \(\frac{1}{g}=\frac{1}{\varphi}\frac{1}{f}\) et on a \(\frac{1}{\varphi}\) qui tend vers \(1\) en \(a\). Donc on a bien \(\frac{1}{f} \sim_a \frac{1}{g}\).
+    \item Au voisinage de \(a\), il existe \(\varphi_1\) et \(\varphi_2\) de 
+      limite égale à 1 en \(a\) telles que \(f_1=\varphi_1 g_1\) et 
+      \(f_2=\varphi_2 g_2\). Au voisinage de \(a\), \(f_1f_2 = \varphi_ 
+      1\varphi_2 g_1 g_2\) et la limite du produit \(\varphi_1 \varphi_2\) vaut 
+      1 en \(a\), donc on a bien \(f_1 f_2 \sim_a g_1 g_2\).
+    \item Au voisinage de \(a\), il existe \(\varphi\) de limite égale à 1 en 
+      \(a\) telle que \(g=\varphi f\) et comme \(f\) ne s'annule pas (et 
+      \(\varphi\) non plus) au voisinage de \(a\), on écrit 
+      \(\frac{1}{g}=\frac{1}{\varphi}\frac{1}{f}\) et on a \(\frac{1}{\varphi}\) 
+      qui tend vers \(1\) en \(a\). Donc on a bien \(\frac{1}{f} \sim_a 
+      \frac{1}{g}\).
     \item Ce point est la conséquence des deux précédents.
     \item S'obtient par récurrence immédiate d'après le premier point.
   \end{enumerate}
@@ -261,42 +385,58 @@ Contre exemple de la réciproque : Soient \(A=\intervalleoo{0}{+\infty}\), \(a=+
 
 \section{Pratique de la comparaison locale de fonctions}
 
-\subsection{Exemples fondamentaux d'équivalents -- comparaison de fonctions usuelles}
+\subsection{Exemples fondamentaux d'équivalents -- comparaison de fonctions 
+usuelles}
 
 \subsubsection{Polynômes}
-Soit \(f\) une fonction polynomiale de \(\R\) dans \(\R\). Il existe deux entiers naturels \(p, n\) avec \(p \leqslant n\) et des réels \(a_p, \ldots, a_n\) avec \(a_p \neq 0\) et \(a_n \neq 0\) tels que
+Soit \(f\) une fonction polynomiale de \(\R\) dans \(\R\). Il existe deux 
+entiers naturels \(p, n\) avec \(p \leqslant n\) et des réels \(a_p, \ldots, 
+a_n\) avec \(a_p \neq 0\) et \(a_n \neq 0\) tels que
 \begin{equation}
-  \forall x \in \R \quad f(x)=\sum_{k=p}^{n} a_k x^k = a_p x^P + \dotsb + a_n x^n
+  \forall x \in \R \quad f(x)=\sum_{k=p}^{n} a_k x^k = a_p x^P + \dotsb + a_n 
+  x^n
 \end{equation}
 L'entier \(n\) est le degré du polynôme et \(p\) est sa valuation.
 \begin{prop}[Voisinage de l'infini]
-  Soit \(a \in \{-\infty, +\infty\}\), alors \(f(x) \sim_a a_n X^n\), le polynôme est équivalent à son terme de plus haut degré en l'infini.
+  Soit \(a \in \{-\infty, +\infty\}\), alors \(f(x) \sim_a a_n X^n\), le 
+  polynôme est équivalent à son terme de plus haut degré en l'infini.
 \end{prop}
 \begin{proof}
   Soit \(x \neq 0\), alors
   \begin{equation}
-    f(x)=a_n x^n \left( \frac{a_p}{a_n} x^{p-n} + \dotsb + \frac{a_{n-1}}{a_n} x^{-1} + 1\right).
+    f(x)=a_n x^n \left( \frac{a_p}{a_n} x^{p-n} + \dotsb + \frac{a_{n-1}}{a_n} 
+    x^{-1} + 1\right).
   \end{equation}
-  On pose \(\varphi(x) = \left( \frac{a_p}{a_n} x^{p-n} + \dotsb + \frac{a_{n-1}}{a_n} x^{-1} + 1\right)\). Lorsque \(x\) tend vers \(a\) alors \(\varphi(x)\) tend vers \(1\), alors \(f(x) \sim_a a_n x^n\).
+  On pose \(\varphi(x) = \left( \frac{a_p}{a_n} x^{p-n} + \dotsb + 
+  \frac{a_{n-1}}{a_n} x^{-1} + 1\right)\). Lorsque \(x\) tend vers \(a\) alors 
+  \(\varphi(x)\) tend vers \(1\), alors \(f(x) \sim_a a_n x^n\).
 \end{proof}
 \begin{prop}[Voisinage de zéro]
-  Soit \(a=0\), alors \(f(x) \sim_a a_p X^p\), le polynôme est équivalent à son terme de plus bas degré en zéro.
+  Soit \(a=0\), alors \(f(x) \sim_a a_p X^p\), le polynôme est équivalent à son 
+  terme de plus bas degré en zéro.
 \end{prop}
 \begin{proof}
   Soit \(x \in \R\), alors
   \begin{equation}
     f(x) = a_p x^p \left(1+ \sum_{k=1}^{n-p} \frac{a_{p+k}}{a_p} x^k\right).
   \end{equation}
-  On pose \(\varphi(x)=\left(1+ \sum_{k=1}^{n-p} \frac{a_{p+k}}{a_p} x^k\right)\) et on a \(\lim\limits_{a} \varphi = 1\). Donc on a bien \(f(x) \sim_a a_p X^p\).
+  On pose \(\varphi(x)=\left(1+ \sum_{k=1}^{n-p} \frac{a_{p+k}}{a_p} 
+  x^k\right)\) et on a \(\lim\limits_{a} \varphi = 1\). Donc on a bien \(f(x) 
+  \sim_a a_p X^p\).
 \end{proof}
 
 \subsubsection{Fonctions continues en un point}
-Soient I un intervalle réel, \(a \in I\) et \(f \in \R^I\). Si \(f\) est continue en \(a\) et si \(f(a) \neq 0\) alors \(f \sim_a f(a)\).
+Soient I un intervalle réel, \(a \in I\) et \(f \in \R^I\). Si \(f\) est 
+continue en \(a\) et si \(f(a) \neq 0\) alors \(f \sim_a f(a)\).
 
 \subsubsection{Fonctions dérivables en un point}
-Soient I un intervalle réel, \(a \in I\) et \(f \in \R^I\). Si \(f\) est dérivable en \(a\) et si \(f'(a) \neq 0\) alors \(f \sim_a f'(a)(x-a)\).
+Soient I un intervalle réel, \(a \in I\) et \(f \in \R^I\). Si \(f\) est 
+dérivable en \(a\) et si \(f'(a) \neq 0\) alors \(f \sim_a f'(a)(x-a)\).
 \begin{proof}
-  Soit la fonction \(\fonction{\varphi}{I}{\R}{x}{\begin{cases}\frac{1}{f'(a)} \frac{f(x)-f(a)}{x-a} & x \neq a \\ 1 & x=a\end{cases}}\). Par définition de la dérivée de \(f\) en \(a\), \(\lim\limits_{a} \varphi = \varphi(a)=1\) et donc
+  Soit la fonction \(\fonction{\varphi}{I}{\R}{x}{\begin{cases}\frac{1}{f'(a)} 
+  \frac{f(x)-f(a)}{x-a} & x \neq a \\ 1 & x=a\end{cases}}\). Par définition de 
+  la dérivée de \(f\) en \(a\), \(\lim\limits_{a} \varphi = \varphi(a)=1\) et 
+  donc
   \begin{equation}
     \forall x \in I \quad f(x)-f(a) = \varphi(x)f'(a)(x-a).
   \end{equation}
@@ -305,144 +445,222 @@ Soient I un intervalle réel, \(a \in I\) et \(f \in \R^I\). Si \(f\) est dériv
 
 \paragraph{Conséquences, équivalents usuels en zéro}
 
-D'après ce qui précéde, on a les équivalents en zéro des fonctions suivantes sur la table~
+D'après ce qui précéde, on a les équivalents en zéro des fonctions suivantes sur 
+la table~
 \ref{tab:equiv}.
 \begin{table}[!h]
   \centering
   \begin{tabular}{|c|c|c|}\hline
     \(\sin x \sim x\) & \(\sinh x \sim x\) & \(\ln(1+x) \sim x\) \\
     \(\tan x \sim x\) & \(\tanh x \sim x\) & \(\e^x -1 \sim x\) \\
-    \(\arcsin x \sim x\) & \(\arctan x \sim x\) & \((1+x)^\alpha -1 \sim \alpha x\) \(\alpha \neq 0\) \\ \hline
+    \(\arcsin x \sim x\) & \(\arctan x \sim x\) & \((1+x)^\alpha -1 \sim \alpha 
+    x\) \(\alpha \neq 0\) \\ \hline
   \end{tabular}
   \caption{Équivalents usuels en zéro}
   \label{tab:equiv}
 \end{table}
-Cette méthode ne permet pas d'obtenir d'équivalent pour \(\cos\) ou \(\cosh\) car leurs dérivées sont nulles en zéro. On peut cependant écrire que pour tout réel \(x\)
+Cette méthode ne permet pas d'obtenir d'équivalent pour \(\cos\) ou \(\cosh\) 
+car leurs dérivées sont nulles en zéro. On peut cependant écrire que pour tout 
+réel \(x\)
 \begin{align}
   \cos x -1 &= \cos x - \cos 0 = -2\sin^2 \left(\frac{x}{2}\right);\\
   \sin \left(\frac{x}{2}\right) &\sim_0 \frac{x}{2};\\
   \cos x -1 &\sim_0 -2\left(\frac{x}{2}\right)^2=-\frac{x^2}{2};\\
   \cosh x -1 &\sim_0 2\sinh^2 \left(\frac{x}{2}\right)\sim_0 \frac{x^2}{2}.
 \end{align}
-Tous les équivalents sont à connaître par c\oe{}ur. On peut par exemple les appliquer pour trouver la limite d'une forme indéterminée. Trouvons par exemple la limite de la fonction suivante en zéro. Soit la fonction définie sur \(\Def{f}=\intervalleoo{-1}{0} \cup \intervalleoo{0}{+\infty}\) par
+Tous les équivalents sont à connaître par c\oe{}ur. On peut par exemple les 
+appliquer pour trouver la limite d'une forme indéterminée. Trouvons par exemple 
+la limite de la fonction suivante en zéro. Soit la fonction définie sur 
+\(\Def{f}=\intervalleoo{-1}{0} \cup \intervalleoo{0}{+\infty}\) par
 \begin{equation}
   f(x) = \frac{\ln(1+x)\sin x}{\cosh x -1}.
 \end{equation}
 Alors en zéro, on a les équivalent suivants
 \begin{align}
-  \ln(1+x) &\sim x \\ 
-  \sin x &\sim x \\ 
-  \cosh x -1 \sim \frac{x^2}{2}.
+  \ln(1+x) &\sim x \\ \sin x &\sim x \\ \cosh x -1 \sim \frac{x^2}{2}.
 \end{align}
-La fonction \(x \longmapsto \cosh x -1\) ne s'annule pas au voisinage de zéro, donc on peut faire le quotient et on obtient \(f\sim_0 2\) donc \(\lim\limits_{0} f =2\).
+La fonction \(x \longmapsto \cosh x -1\) ne s'annule pas au voisinage de zéro, 
+donc on peut faire le quotient et on obtient \(f\sim_0 2\) donc 
+\(\lim\limits_{0} f =2\).
 
 \subsubsection{Logarithmes, puissances \& exponentielles}
 
-Soient \(\alpha\), \(\alpha'\), \(\beta\), \(\beta'\), \(\gamma\), \(\gamma'\) des réels strictement positifs tels que \(0 < \alpha < \alpha'\), \(0 < \beta < \beta'\) et \(0 < \gamma < \gamma'\).
+Soient \(\alpha\), \(\alpha'\), \(\beta\), \(\beta'\), \(\gamma\), \(\gamma'\) 
+des réels strictement positifs tels que \(0 < \alpha < \alpha'\), \(0 < \beta < 
+\beta'\) et \(0 < \gamma < \gamma'\).
 \begin{prop}[Voisinage de l'infini]
   \begin{align}
-    \ln^\alpha x &= \petitof{+\infty}{\ln^{\alpha'} x} & x^\beta &= \petitof{+\infty}{x^{\beta'}}& \e^{\gamma x} = \petitof{+\infty}{\e^{\gamma' x}} \\
-    \ln^\alpha x &= \petitof{+\infty}{x^\beta} & x^\beta &= \petitof{+\infty}{\e^{\gamma x}}
+    \ln^\alpha x &= \petitof{+\infty}{\ln^{\alpha'} x} & x^\beta &= 
+    \petitof{+\infty}{x^{\beta'}}& \e^{\gamma x} = \petitof{+\infty}{\e^{\gamma' 
+    x}} \\
+    \ln^\alpha x &= \petitof{+\infty}{x^\beta} & x^\beta &= 
+    \petitof{+\infty}{\e^{\gamma x}}
   \end{align}
 \end{prop}
 \begin{prop}[Voisinage de zéro plus]
   \begin{align}
-    |\ln|^\alpha x &= \petitof{0}{|\ln|^{\alpha'} x} & x^{-\beta} &= \petitof{0}{x^{-\beta'}} \\
-    |\ln|^\alpha x &= \petitof{0}{x^{-\beta}} & x^{\beta'} &= \petitof{0}{\e^{\gamma x}}
+    |\ln|^\alpha x &= \petitof{0}{|\ln|^{\alpha'} x} & x^{-\beta} &= 
+    \petitof{0}{x^{-\beta'}} \\
+    |\ln|^\alpha x &= \petitof{0}{x^{-\beta}} & x^{\beta'} &= 
+    \petitof{0}{\e^{\gamma x}}
   \end{align}
 \end{prop}
 
 \subsection{Équivalence et changement de variable}
 
 \begin{theo}
-  Soient \(A\) une partie de \(\R\), \(a \in A\) (ou une borne de \(A\)) et deux applications \(f\) et \(g\) de \(\R^A\). Soient \(X\) une partie de \(\R\), \(\alpha \in X\) et \(u \in \R^X\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in A\) (ou une borne de \(A\)) et deux 
+  applications \(f\) et \(g\) de \(\R^A\). Soient \(X\) une partie de \(\R\), 
+  \(\alpha \in X\) et \(u \in \R^X\). Alors
   \begin{equation}
     \left.
-      \begin{array}{l}
-        f \sim_a g \\ \lim\limits_{\alpha}u=a \\ u(X) \subset A
-      \end{array}
+    \begin{array}{l}
+      f \sim_a g \\ \lim\limits_{\alpha}u=a \\ u(X) \subset A
+    \end{array}
     \right \}
     \implies f\circ u \sim_a g \circ u.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Il existe un voisinage \(U\) de \(a\) et une application \(\varphi : A \cap U \rightarrow \R\) telles que \(\lim\limits_{a} \varphi =1\) et \(\forall x \in A \cap U f(x)=\varphi(x) g(x)\). \(U\) est un voisinage de \(a\) et puisque \(u\) admet \(a\) pour limite en \(\alpha\), il existe un voisinage \(V\) de \(\alpha\) tel que \(x \in V \implies u(x) \in U\). \(V\) est un voisinage de \(\alpha\), donc pour tout \(x \in V \cap X\), \(u(x) \in U \cap A\) (car \(u(X) \subset A\)). Alors \(f(u(x))=\varphi(u(x))g(u(x))\) et si on pose \(\psi = \varphi \circ u\) alors \(f \circ u = \psi \cdot g \circ u\). Finalement, on a \(\lim\limits_{\alpha} \psi =1\) (par définition de \(\psi\)) et ainsi \(f\circ u \sim_a g \circ u\).
+  Il existe un voisinage \(U\) de \(a\) et une application \(\varphi : A \cap U 
+  \rightarrow \R\) telles que \(\lim\limits_{a} \varphi =1\) et \(\forall x \in 
+  A \cap U f(x)=\varphi(x) g(x)\). \(U\) est un voisinage de \(a\) et puisque 
+  \(u\) admet \(a\) pour limite en \(\alpha\), il existe un voisinage \(V\) de 
+  \(\alpha\) tel que \(x \in V \implies u(x) \in U\). \(V\) est un voisinage de 
+  \(\alpha\), donc pour tout \(x \in V \cap X\), \(u(x) \in U \cap A\) (car 
+  \(u(X) \subset A\)). Alors \(f(u(x))=\varphi(u(x))g(u(x))\) et si on pose 
+  \(\psi = \varphi \circ u\) alors \(f \circ u = \psi \cdot g \circ u\). 
+  Finalement, on a \(\lim\limits_{\alpha} \psi =1\) (par définition de \(\psi\)) 
+  et ainsi \(f\circ u \sim_a g \circ u\).
 \end{proof}
 
-En pratique on connaît les équivalents des fonctions usuelles au voisinage de zéro. Si on cherche un équivalent au voisinage de \(a\) d'une fonction \(f\), on peut se ramener à la recherche d'un équivalent en zéro grâce au changement de variable \(t=x-a\).
+En pratique on connaît les équivalents des fonctions usuelles au voisinage de 
+zéro. Si on cherche un équivalent au voisinage de \(a\) d'une fonction \(f\), on 
+peut se ramener à la recherche d'un équivalent en zéro grâce au changement de 
+variable \(t=x-a\).
 \begin{equation}
   g(t)=g(x-a)=f(x)=f(a+t).
 \end{equation}
-On détermine un équivalent en zéro de \(g\) puis on revient à \(f\) en faisant le changement de variable \(x=a+t\).
+On détermine un équivalent en zéro de \(g\) puis on revient à \(f\) en faisant 
+le changement de variable \(x=a+t\).
 
-\emph{Application}~: Soient \(X\) une partie de \(\R\), \(\alpha \in X\) et \(u,v\) deux applications de \(\R^X\) telles que \(\lim\limits_{\alpha} u = 0 = \lim\limits_{\alpha} v\). Que peut on dire de \(\e^u-\e^v\)?
+\emph{Application}~: Soient \(X\) une partie de \(\R\), \(\alpha \in X\) et 
+\(u,v\) deux applications de \(\R^X\) telles que \(\lim\limits_{\alpha} u = 0 = 
+\lim\limits_{\alpha} v\). Que peut on dire de \(\e^u-\e^v\)?
 
-Soit \(x \in X\), alors \(\e^{u(x)}-\e^{v(x)}=\e^{v(x)}(\e^{u(x)-v(x)}-1)\) et on sait que \(\lim\limits_{\alpha}u-v=0\) et que \(\e^y-1 \sim_0 y\). Alors par théorème sur le changement de variable, \(\e^{u-v} \sim_\alpha u-v\). On a d'ailleurs \(\lim\limits_{\alpha} \e^v =1\) donc \(\e^v \sim_\alpha 1\). Par produit d'équivalents, \(\e^u-\e^v \sim_\alpha u-v\).
+Soit \(x \in X\), alors \(\e^{u(x)}-\e^{v(x)}=\e^{v(x)}(\e^{u(x)-v(x)}-1)\) et 
+on sait que \(\lim\limits_{\alpha}u-v=0\) et que \(\e^y-1 \sim_0 y\). Alors par 
+théorème sur le changement de variable, \(\e^{u-v} \sim_\alpha u-v\). On a 
+d'ailleurs \(\lim\limits_{\alpha} \e^v =1\) donc \(\e^v \sim_\alpha 1\). Par 
+produit d'équivalents, \(\e^u-\e^v \sim_\alpha u-v\).
 
 \subsection{Équivalence et composition}
 
-Retenir qu'en général on ne peut pas composer les équivalents. \(f \sim g\) n'implique pas \(h \circ f \sim h \circ g\). Cependant, il existe des exceptions et on peut les écrire dans les propositions suivantes.
+Retenir qu'en général on ne peut pas composer les équivalents. \(f \sim g\) 
+n'implique pas \(h \circ f \sim h \circ g\). Cependant, il existe des exceptions 
+et on peut les écrire dans les propositions suivantes.
 
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de \(\R^A\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de 
+  \(\R^A\). Alors
   \begin{equation}
     f \sim_a g \implies |f| \sim_a |g|.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Au voisinage de \(a\), il existe une fonction \(\varphi\) de limite égale à \(1\) en \(a\) telle que \(f=\varphi g\), alors au voisinage de \(a\), \(\varphi\) est à valeur positives. Au voisinage de \(a\), \(|f|=|\varphi| |g|=\varphi |g|\) donc \(|f| \sim_a |g|\).
+  Au voisinage de \(a\), il existe une fonction \(\varphi\) de limite égale à 
+  \(1\) en \(a\) telle que \(f=\varphi g\), alors au voisinage de \(a\), 
+  \(\varphi\) est à valeur positives. Au voisinage de \(a\), \(|f|=|\varphi| 
+  |g|=\varphi |g|\) donc \(|f| \sim_a |g|\).
 \end{proof}
 %
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(\alpha \in \R\),  \(a \in A\) et \(f, g\) deux application de \(\R^A\) telles que \(g\) est à valeur strictement positives au voisinage de \(a\). Alors
+  Soient \(A\) une partie de \(\R\), \(\alpha \in \R\),  \(a \in A\) et \(f, g\) 
+  deux application de \(\R^A\) telles que \(g\) est à valeur strictement 
+  positives au voisinage de \(a\). Alors
   \begin{equation}
     f \sim_a g \implies f^\alpha \sim_a g^\alpha.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Il existe une fonction \(\varphi\) de limite égale à 1 en \(a\) telle qu'au voisinage de \(a\), \(f=\varphi g\) et que \(f\), \(g\) et \(\varphi\) sont à valeurs strictement positives. Alors au voisinage de \(a\)
+  Il existe une fonction \(\varphi\) de limite égale à 1 en \(a\) telle qu'au 
+  voisinage de \(a\), \(f=\varphi g\) et que \(f\), \(g\) et \(\varphi\) sont à 
+  valeurs strictement positives. Alors au voisinage de \(a\)
   \begin{equation}
-    f^\alpha=\e^{\alpha \ln f}=\e^{\alpha \ln \varphi} \e^{\alpha \ln g}=\e^{\alpha \ln \varphi} g^\alpha.
+    f^\alpha=\e^{\alpha \ln f}=\e^{\alpha \ln \varphi} \e^{\alpha \ln 
+    g}=\e^{\alpha \ln \varphi} g^\alpha.
   \end{equation}
-  Lorsque \(x\) tend vers \(a\), \(\varphi\) tend vers \(1\) et donc \(\psi=\e^{\alpha \ln \varphi}\) tend vers \(1\). Au voisinage de \(a\), \(f^\alpha = \psi g^\alpha\) avec \(\lim\limits_{a} \psi =1\). Donc \(f^\alpha \sim_a g^\alpha\).
+  Lorsque \(x\) tend vers \(a\), \(\varphi\) tend vers \(1\) et donc 
+  \(\psi=\e^{\alpha \ln \varphi}\) tend vers \(1\). Au voisinage de \(a\), 
+  \(f^\alpha = \psi g^\alpha\) avec \(\lim\limits_{a} \psi =1\). Donc \(f^\alpha 
+  \sim_a g^\alpha\).
 \end{proof}
 
 Attention, ici \(\alpha\) est une constante et elle ne dépend pas de \(x\).
 
 \subsubsection{Composition par le logarithme}
 
-Retenir qu'en général on ne peut pas composer par le logarithme. On montre un contre-exemple :
+Retenir qu'en général on ne peut pas composer par le logarithme. On montre un 
+contre-exemple :
 
-Soit \(A=\intervalleoo{\frac{-1}{2}}{\frac{1}{2}}\), \(a=0\) \(f: x \longmapsto 1+x\) et \(g: x \longmapsto 1+2x\). On sait que \(f \sim_0 g\). Cependant \(\ln(f(x)) \sim_0 x\) et \(\ln(g(x)) \sim_0 2x\), donc \(\ln(f)\) et \(\ln(g)\) ne sont pas équivalents en zéro. La composition par le logarithme n'a pas conservé l'équivalence. Cependant, il existe des cas particulier ou la composition par le logarithme conserve l'équivalence. On en montre par les propositions suivantes.
+Soit \(A=\intervalleoo{\frac{-1}{2}}{\frac{1}{2}}\), \(a=0\) \(f: x \longmapsto 
+1+x\) et \(g: x \longmapsto 1+2x\). On sait que \(f \sim_0 g\). Cependant 
+\(\ln(f(x)) \sim_0 x\) et \(\ln(g(x)) \sim_0 2x\), donc \(\ln(f)\) et \(\ln(g)\) 
+ne sont pas équivalents en zéro. La composition par le logarithme n'a pas 
+conservé l'équivalence. Cependant, il existe des cas particulier ou la 
+composition par le logarithme conserve l'équivalence. On en montre par les 
+propositions suivantes.
 
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de \(\R^A\). On suppose que \(g\) admet une limite \(\ell\) en \(a\) avec \(\ell \in \intervallefo{0}{1} \cup \intervalleof{1}{+\infty}\) et que \(g\) est à valeurs strictement positives au voisinage de \(a\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de 
+  \(\R^A\). On suppose que \(g\) admet une limite \(\ell\) en \(a\) avec \(\ell 
+  \in \intervallefo{0}{1} \cup \intervalleof{1}{+\infty}\) et que \(g\) est à 
+  valeurs strictement positives au voisinage de \(a\). Alors
   \begin{equation}
     f \sim_a g \implies \ln(f) \sim_a \ln(g).
   \end{equation}
 \end{prop}
 \begin{proof}
-  La fonction \(g\) est à valeurs strictement positives au voisinage de \(a\) et comme \(f\) est équivalente à \(g\) en \(a\), \(f\) est à valeurs strictement positives au voisinage de \(a\). Comme \(\ell \neq 1\), alors \(\lim\limits_{a} \ln g \neq 0\). Au voisinage de \(a\), \(\ln g\) ne s'annule pas et donc
+  La fonction \(g\) est à valeurs strictement positives au voisinage de \(a\) et 
+  comme \(f\) est équivalente à \(g\) en \(a\), \(f\) est à valeurs strictement 
+  positives au voisinage de \(a\). Comme \(\ell \neq 1\), alors 
+  \(\lim\limits_{a} \ln g \neq 0\). Au voisinage de \(a\), \(\ln g\) ne s'annule 
+  pas et donc
   \begin{equation}
     \frac{\ln(f)}{\ln(g)}-1=\frac{\ln\left(\frac{f}{g}\right)}{\ln(g)}.
   \end{equation}
-  Puisque \(f \sim_a g\), on a \(\frac{f}{g} \to 1\), donc \(\ln\left(\frac{f}{g}\right) \to 0\). Au dénominateur, trois cas sont possibles
+  Puisque \(f \sim_a g\), on a \(\frac{f}{g} \to 1\), donc 
+  \(\ln\left(\frac{f}{g}\right) \to 0\). Au dénominateur, trois cas sont 
+  possibles
   \begin{itemize}
-    \item si \(\ell =0\) alors \(\ln g\) tend vers \(-\infty\) et donc \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\);
-    \item si \(\ell \in \intervalleoo{0}{1} \cup \intervalleoo{1}{+\infty}\) alors \(\ln g\) tend vers \(\ln \ell \neq 0\) et donc \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\);
-    \item si \(\ell = +\infty\) alors \(\ln g\) tend vers \(+\infty\) et \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\).
+    \item si \(\ell =0\) alors \(\ln g\) tend vers \(-\infty\) et donc 
+      \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\);
+    \item si \(\ell \in \intervalleoo{0}{1} \cup \intervalleoo{1}{+\infty}\) 
+      alors \(\ln g\) tend vers \(\ln \ell \neq 0\) et donc 
+      \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\);
+    \item si \(\ell = +\infty\) alors \(\ln g\) tend vers \(+\infty\) et 
+      \(\frac{\ln(f)}{\ln(g)}-1\) tend vers \(0\).
   \end{itemize}
-  Dans tous les cas \(\frac{\ln f}{\ln g}\) tend vers \(1\), donc \(\ln f \sim_a \ln g\).
+  Dans tous les cas \(\frac{\ln f}{\ln g}\) tend vers \(1\), donc \(\ln f \sim_a 
+  \ln g\).
 \end{proof}
 
-Il faut faire très attention aux hypothèses, il faut que \(g\) admette une limite et elle doit être différente de \(1\). Sinon l'équivalence n'est pas forcèment vérifiée lors du passage au logarithme.
+Il faut faire très attention aux hypothèses, il faut que \(g\) admette une 
+limite et elle doit être différente de \(1\). Sinon l'équivalence n'est pas 
+forcèment vérifiée lors du passage au logarithme.
 
 \subsubsection{Composition par l'exponentielle}
 
-On ne peut pas composer des équivalences avec la fonction exponentielle. On peut exhiber un contre-exemple. Soit \(A=\R\) et \(a=+\infty\) avec \(\fonction{f}{A}{\R}{x}{x}\) et \(\fonction{g}{A}{\R}{x}{x+1}\). Ces deux fonctions sont équivalentes en l'infini mais \(\frac{\e^{f}}{\e^{g}} =\frac{1}{e}\) qui ne tend pas vers 1 donc \(\e^{f}\) et \(\e^{g}\) ne sont pas équivalentes.
+On ne peut pas composer des équivalences avec la fonction exponentielle. On peut 
+exhiber un contre-exemple. Soit \(A=\R\) et \(a=+\infty\) avec 
+\(\fonction{f}{A}{\R}{x}{x}\) et \(\fonction{g}{A}{\R}{x}{x+1}\). Ces deux 
+fonctions sont équivalentes en l'infini mais \(\frac{\e^{f}}{\e^{g}} 
+=\frac{1}{e}\) qui ne tend pas vers 1 donc \(\e^{f}\) et \(\e^{g}\) ne sont pas 
+équivalentes.
 
 \begin{theo}
-  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de \(\R^A\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f, g\) deux application de 
+  \(\R^A\). Alors
   \begin{equation}
     \e^{f} \sim_a \e^{g} \iff \lim\limits_{a}f-g=0.
   \end{equation}
@@ -450,111 +668,162 @@ On ne peut pas composer des équivalences avec la fonction exponentielle. On peu
 \begin{proof}
   \begin{align}
     \e^{f} \sim_a \e^{g} &\iff \frac{\e^f}{\e^g} = \e^{f-g} \to 1 \\
-                         &\iff f-g \to 0.
+    &\iff f-g \to 0.
   \end{align}
 \end{proof}
 
 \subsection{Équivalence et somme}
 
-Retenir qu'en général, on ne peut pas sommer les équivalents. Prenons par exemple \(A=\R\) \(a=0\), \(\fonction{f_1}{A}{\R}{x}{\sin x}\), \(\fonction{g_1}{A}{\R}{x}{-x}\), \(\fonction{f_2}{A}{\R}{x}{-x}\) et \(\fonction{g_2}{A}{\R}{x}{-x}\). Alors \(f_1 \sim_a g_1\) et \(f_2 \sim_a g_2\). Cependant \(f_1+f_2\) n'est pas équivalente à \(g_1+g_2=0\) au voisinage de zéro, puisque \(f_1+f_2\) n'est pas constante nulle au voisinage de zéro.
+Retenir qu'en général, on ne peut pas sommer les équivalents. Prenons par 
+exemple \(A=\R\) \(a=0\), \(\fonction{f_1}{A}{\R}{x}{\sin x}\), 
+\(\fonction{g_1}{A}{\R}{x}{-x}\), \(\fonction{f_2}{A}{\R}{x}{-x}\) et 
+\(\fonction{g_2}{A}{\R}{x}{-x}\). Alors \(f_1 \sim_a g_1\) et \(f_2 \sim_a 
+g_2\). Cependant \(f_1+f_2\) n'est pas équivalente à \(g_1+g_2=0\) au voisinage 
+de zéro, puisque \(f_1+f_2\) n'est pas constante nulle au voisinage de zéro.
 
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f_1,f_2, g_1, g_2\) des applications de \(\R^A\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in A\) et \(f_1,f_2, g_1, g_2\) des 
+  applications de \(\R^A\). Alors
   \begin{equation}
     \left.
-      \begin{array}{l}
-        f_1 \sim_a g_1 \\ f_2 \sim_a g_2 \\ g_1 = \petitof{a}{g_2}
-      \end{array}
+    \begin{array}{l}
+      f_1 \sim_a g_1 \\ f_2 \sim_a g_2 \\ g_1 = \petitof{a}{g_2}
+    \end{array}
     \right \}
     \implies f_1+f_2 \sim_a g_2.
   \end{equation}
 \end{prop}
 \begin{proof}
-  On a \(f_1+f_2-g_2=(f_1-g_1) + (f_2-g_2) + g_1\) avec \(f_1-g_1 = \petitof{a}{g_1}\), \(f_2-g_2=\petitof{a}{g_2}\) et \(g_1=\petitof{a}{g_2}\) alors forcèment \(f_1-g_1 = \petitof{a}{g_2}\). La somme de trois fonctions qui sont négligeable devant \(g_2\) est une fonction négligeable devant \(g_2\). Donc \(f_1+f_2-g_2 = \petitof{a}{g_2}\). Par définition de l'équivalence on a \(f_1+f_2 \sim_a g_2\).
+  On a \(f_1+f_2-g_2=(f_1-g_1) + (f_2-g_2) + g_1\) avec \(f_1-g_1 = 
+  \petitof{a}{g_1}\), \(f_2-g_2=\petitof{a}{g_2}\) et \(g_1=\petitof{a}{g_2}\) 
+  alors forcèment \(f_1-g_1 = \petitof{a}{g_2}\). La somme de trois fonctions 
+  qui sont négligeable devant \(g_2\) est une fonction négligeable devant 
+  \(g_2\). Donc \(f_1+f_2-g_2 = \petitof{a}{g_2}\). Par définition de 
+  l'équivalence on a \(f_1+f_2 \sim_a g_2\).
 \end{proof}
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(a \in \Rbar\) et \(f_1, f_2, g\)  des applications de \(\R^A\) puis des réels non nuls \(\lambda_1\) et \(\lambda_2\). On suppose que \(f \sim_a \lambda_1 g\) et que \(f_2 \sim_a \lambda_2 g\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in \Rbar\) et \(f_1, f_2, g\)  des 
+  applications de \(\R^A\) puis des réels non nuls \(\lambda_1\) et 
+  \(\lambda_2\). On suppose que \(f \sim_a \lambda_1 g\) et que \(f_2 \sim_a 
+  \lambda_2 g\). Alors
   \begin{itemize}
     \item si \(\lambda_1+ \lambda_2 =0\), \(f_1+f_2=\petitof{a}{g}\);
     \item sinon \(f_1+f_2 \sim_a (\lambda_1+\lambda_2)g\).
   \end{itemize}
 \end{prop}
 \begin{proof}
-  Il existe deux fonctions \(\varphi_1\) et \(\varphi_2\) de limite égale à \(1\) en \(a\), telles qu'au voisinage de \(a\)
+  Il existe deux fonctions \(\varphi_1\) et \(\varphi_2\) de limite égale à 
+  \(1\) en \(a\), telles qu'au voisinage de \(a\)
   \begin{align}
-    f_1 = \varphi_1 (\lambda_1 g), \\ 
-    f_2 = \varphi_2 (\lambda_2 g).
+    f_1 = \varphi_1 (\lambda_1 g), \\ f_2 = \varphi_2 (\lambda_2 g).
   \end{align}
-  Alors au voisinage de \(a\), \(f_1+f_2 = (\lambda_1 \varphi_1+ \lambda_2 \varphi_2) g\).
+  Alors au voisinage de \(a\), \(f_1+f_2 = (\lambda_1 \varphi_1+ \lambda_2 
+  \varphi_2) g\).
   \begin{itemize}
-    \item si \(lambda_1+\lambda_2=0\) alors \(f_1+f_2=\lambda_1(\varphi_1-\varphi_2)g\) au voisinage de \(a\), avec \(\lim\limits_{a}\varphi_1=1\) et \(\lim\limits_{a}\varphi_2=1\) donc \(f_1+f_2\) est de limite nulle en \(a\). Ainsi par définition, \(f_1+f_2 =\petitof{a}(g)\).
-    \item sinon, au voisinage de \(a\), \(f_1+f_2=\left(\frac{\lambda_1 \varphi_1+\lambda_2 \varphi_2}{\lambda_1+\lambda_2}\right) (\lambda_1+\lambda_2)g\). On pose \(\psi=\frac{\lambda_1 \varphi_1+\lambda_2 \varphi_2}{\lambda_1+\lambda_2}\). Ainsi \(\lim\limits_{a} \psi=1\)  et \(f_1+f_2 = \psi (\lambda_1+\lambda_2)g\), alors \(f_1+f_2 \sim_a (\lambda_1+\lambda_2)g\).
+    \item si \(lambda_1+\lambda_2=0\) alors 
+      \(f_1+f_2=\lambda_1(\varphi_1-\varphi_2)g\) au voisinage de \(a\), avec 
+      \(\lim\limits_{a}\varphi_1=1\) et \(\lim\limits_{a}\varphi_2=1\) donc 
+      \(f_1+f_2\) est de limite nulle en \(a\). Ainsi par définition, \(f_1+f_2 
+      =\petitof{a}(g)\).
+    \item sinon, au voisinage de \(a\), \(f_1+f_2=\left(\frac{\lambda_1 
+      \varphi_1+\lambda_2 \varphi_2}{\lambda_1+\lambda_2}\right) 
+      (\lambda_1+\lambda_2)g\). On pose \(\psi=\frac{\lambda_1 
+      \varphi_1+\lambda_2 \varphi_2}{\lambda_1+\lambda_2}\). Ainsi 
+      \(\lim\limits_{a} \psi=1\)  et \(f_1+f_2 = \psi (\lambda_1+\lambda_2)g\), 
+      alors \(f_1+f_2 \sim_a (\lambda_1+\lambda_2)g\).
   \end{itemize}
 \end{proof}
 \begin{prop}
-  Soient \(A\) une partie de \(\R\), \(a \in \Rbar\) et \(f_1\), \(f_2\), \(g_1\), \(g_2\) des applications de \(\R^A\). On suppose que \(g_1\) et \(g_2\) sont à valeurs strictement positives au voisinage de \(a\). Alors
+  Soient \(A\) une partie de \(\R\), \(a \in \Rbar\) et \(f_1\), \(f_2\), 
+  \(g_1\), \(g_2\) des applications de \(\R^A\). On suppose que \(g_1\) et 
+  \(g_2\) sont à valeurs strictement positives au voisinage de \(a\). Alors
   \begin{equation}
     \left.
-      \begin{array}{l}
-        f_1 \sim_a g_1 \\ f_2 \sim_a g_2
-      \end{array}
+    \begin{array}{l}
+      f_1 \sim_a g_1 \\ f_2 \sim_a g_2
+    \end{array}
     \right \}
     \implies f_1+f_2 \sim_a g_1+g_2.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Il existe deux voisinages \(U,V\) de \(a\) et deux application \(\varphi_1\) et \(\varphi_2\) de limite égale à 1 en \(a\) telles que
+  Il existe deux voisinages \(U,V\) de \(a\) et deux application \(\varphi_1\) 
+  et \(\varphi_2\) de limite égale à 1 en \(a\) telles que
   \begin{align}
     \forall x \in A\cap U & f_1(x)=\varphi_1(x) g_1(x); \\
     \forall x \in A\cap V & f_2(x)=\varphi_2(x) g_2(x).
   \end{align}
-  Il existe un voisinage \(W\) de \(a\) dans lequel \(g_1\) et \(g_2\) sont strictements positives. Soit le voisinage de \(a\), \(U_0=U \cap V \cap W\), alors
+  Il existe un voisinage \(W\) de \(a\) dans lequel \(g_1\) et \(g_2\) sont 
+  strictements positives. Soit le voisinage de \(a\), \(U_0=U \cap V \cap W\), 
+  alors
   \begin{align}
-    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} & =\frac{\abs{(\varphi_1(x)-1)g_1(x) + (\varphi_2(x)-1)g_2(x)}}{g_1(x)+g_2(x)}\\
-                                                                          & \leqslant \frac{g_1(x)\abs{\varphi_1(x) -1}}{g_1(x)+g_2(x)} + \frac{g_2(x)\abs{\varphi_2(x) -1}}{g_1(x)+g_2(x)}
+    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} & 
+    =\frac{\abs{(\varphi_1(x)-1)g_1(x) + 
+    (\varphi_2(x)-1)g_2(x)}}{g_1(x)+g_2(x)}\\
+    & \leqslant \frac{g_1(x)\abs{\varphi_1(x) -1}}{g_1(x)+g_2(x)} + 
+    \frac{g_2(x)\abs{\varphi_2(x) -1}}{g_1(x)+g_2(x)}
   \end{align}
   De plus
   \begin{equation}
-    \forall x \in W \ \frac{g_1(x)}{g_1(x)+g_2(x)} \leqslant 1 \quad \frac{g_2(x)}{g_1(x)+g_2(x)} \leqslant 1.
+    \forall x \in W \ \frac{g_1(x)}{g_1(x)+g_2(x)} \leqslant 1 \quad 
+    \frac{g_2(x)}{g_1(x)+g_2(x)} \leqslant 1.
   \end{equation}
   Alors
   \begin{equation}
-    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} \leqslant \abs{\varphi_1(x) -1} + \abs{\varphi_2(x) -1}.
+    \forall x \in U_0 \quad \abs{\frac{f_1(x)+f_2(x)}{g_1(x)+g_2(x)} - 1} 
+    \leqslant \abs{\varphi_1(x) -1} + \abs{\varphi_2(x) -1}.
   \end{equation}
-  On sait que \(\varphi_1\) et \(\varphi_2\) tendent vers \(1\) en \(a\). Donc par théorème d'encadrement \(\frac{f_1+f_2}{g_1+g_2}\) tend vers 1 en \(a\). C'est-à-dire que \(f_1+f_2 \sim_a g_1+g_2\).
+  On sait que \(\varphi_1\) et \(\varphi_2\) tendent vers \(1\) en \(a\). Donc 
+  par théorème d'encadrement \(\frac{f_1+f_2}{g_1+g_2}\) tend vers 1 en \(a\). 
+  C'est-à-dire que \(f_1+f_2 \sim_a g_1+g_2\).
 \end{proof}
 
 \section{Développement limité au voisinage d'un point}
 
 \subsection{Notion de développement limite}
 
-Soient \(I\) un intervalle réel, \(a \in I\) et \(A=I\) ou \(A=I\setminus\{a\}\). On s'intéresse à des fonctions définies sur \(A\), donc définies au voisinage de \(a\).
+Soient \(I\) un intervalle réel, \(a \in I\) et \(A=I\) ou 
+\(A=I\setminus\{a\}\). On s'intéresse à des fonctions définies sur \(A\), donc 
+définies au voisinage de \(a\).
 
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soit \(f \in \R^A\) et un naturel \(n\). On dit que \(f\) admet un développement limité à l'ordre \(n\) au voisinage de \(a\) s'il existe :
+  Soit \(f \in \R^A\) et un naturel \(n\). On dit que \(f\) admet un 
+  développement limité à l'ordre \(n\) au voisinage de \(a\) s'il existe :
   \begin{itemize}
-    \item une application polynomiale \(P_n\) de degré inférieur ou égal à \(n\);
+    \item une application polynomiale \(P_n\) de degré inférieur ou égal à 
+      \(n\);
     \item une application \(\epsilon \in \R^A\).
   \end{itemize}
-  telles que \(\lim\limits_{a}\epsilon = 0\) et \(\forall x \in A \ f(x)=P_n(x-a) + (x-a)^n\epsilon(x)\). Le polynôme \(P_n\) est de degré inférieur ou égal à \(n\), donc il existe des réels \(\alpha_0, \ldots, \alpha_n\) tels que
+  telles que \(\lim\limits_{a}\epsilon = 0\) et \(\forall x \in A \ 
+  f(x)=P_n(x-a) + (x-a)^n\epsilon(x)\). Le polynôme \(P_n\) est de degré 
+  inférieur ou égal à \(n\), donc il existe des réels \(\alpha_0, \ldots, 
+  \alpha_n\) tels que
   \begin{equation}
-    \forall x \in A \quad f(x) = \sum_{k=0}^n \alpha_k(x-a)^k + (x-a)^n\epsilon(x).
+    \forall x \in A \quad f(x) = \sum_{k=0}^n \alpha_k(x-a)^k + 
+    (x-a)^n\epsilon(x).
   \end{equation}
 \end{defdef}
-La partie polynomiale s'appelle la partie régulière du développement limité et \((x-a)^n\epsilon(x)\) est le reste (à ne pas oublier).
+La partie polynomiale s'appelle la partie régulière du développement limité et 
+\((x-a)^n\epsilon(x)\) est le reste (à ne pas oublier).
 
 \subsubsection{Autre notation pour le reste}
 
-La fonction \(x \longmapsto (x-a)^n \epsilon(x)\) avec \(\lim\limits_{a}\epsilon = 0\) est négligeable au voisinage de \(a\) devant la fonction \(x \longmapsto (x-a)^n\). On écrira les développements limités sous la forme
+La fonction \(x \longmapsto (x-a)^n \epsilon(x)\) avec \(\lim\limits_{a}\epsilon 
+= 0\) est négligeable au voisinage de \(a\) devant la fonction \(x \longmapsto 
+(x-a)^n\). On écrira les développements limités sous la forme
 \begin{equation}
-  \forall x \in A \quad f(x) = \sum_{k=0}^n \alpha_k(x-a)^k + \petitof{a}{(x-a)^n}.
+  \forall x \in A \quad f(x) = \sum_{k=0}^n \alpha_k(x-a)^k + 
+  \petitof{a}{(x-a)^n}.
 \end{equation}
 
 \subsubsection{Exemples}
 
-Soit \(I=\intervalleoo{-\infty}{1}\), \(a=0\) \(A=I\) et \(\fonction{f}{A}{\R}{x}{\frac{1}{1-x}}\). On va montrer que pour tout naturel \(n\), la fonction \(f\) admet un développement limité à l'ordre \(n\) en zéro, noté \(DL_n(0)\). Soit un naturel \(n\) et un réel \(x \in A\),
+Soit \(I=\intervalleoo{-\infty}{1}\), \(a=0\) \(A=I\) et 
+\(\fonction{f}{A}{\R}{x}{\frac{1}{1-x}}\). On va montrer que pour tout naturel 
+\(n\), la fonction \(f\) admet un développement limité à l'ordre \(n\) en zéro, 
+noté \(DL_n(0)\). Soit un naturel \(n\) et un réel \(x \in A\),
 \begin{equation}
   1+x+ \dotsb + x^n = \frac{1-x^{n+1}}{1-x},
 \end{equation}
@@ -562,44 +831,66 @@ puisque \(x \neq 1\). Donc
 \begin{equation}
   f(x) = \frac{1}{1-x}=1+x+ \dotsb + x^n + x^n \cdot \frac{x}{1-x}.
 \end{equation}
-Soit \(\fonction{\epsilon}{A}{\R}{x}{\frac{x}{1-x}}\) et lorsque \(x \to 0\) alors \(\epsilon \to 0\). Ainsi
+Soit \(\fonction{\epsilon}{A}{\R}{x}{\frac{x}{1-x}}\) et lorsque \(x \to 0\) 
+alors \(\epsilon \to 0\). Ainsi
 \begin{equation}
-  \forall x \in A \quad f(x) = \frac{1}{1-x}=1+x+ \dotsb + x^n + x^n \epsilon(x).
+  \forall x \in A \quad f(x) = \frac{1}{1-x}=1+x+ \dotsb + x^n + x^n 
+  \epsilon(x).
 \end{equation}
 La fonction \(f\) admet donc le \(DL_n(0)\) suivant
 \begin{equation}
   \frac{1}{1-x} = 1+x+ \dotsb + x^n + x^n \epsilon(x).
 \end{equation}
 
-Soit \(I=\R\), \(a=0\), \(A=\R^*\) et \(\fonction{f}{A}{\R}{x}{\exp(-\frac{1}{x^2})}\). Montrons que \(f\) admet un \(DL_n(0)\) pour tout naturel \(n\), on va montrer que pour tout naturel \(n\) et pour tout réel \(x \in A\), \(f(x)=o_0(x^n)\). En effet, soit \(n \in \N\) et \(x \in A\), alors
+Soit \(I=\R\), \(a=0\), \(A=\R^*\) et 
+\(\fonction{f}{A}{\R}{x}{\exp(-\frac{1}{x^2})}\). Montrons que \(f\) admet un 
+\(DL_n(0)\) pour tout naturel \(n\), on va montrer que pour tout naturel \(n\) 
+et pour tout réel \(x \in A\), \(f(x)=o_0(x^n)\). En effet, soit \(n \in \N\) et 
+\(x \in A\), alors
 \begin{equation}
   \frac{f(x)}{x^n}=\frac{\e^{-1/x^2}}{x^n}.
 \end{equation}
-Si on effectue le changement de variable \(y=x^{-2}\) (lorsque \(x \to 0\), \(y \to + \infty\)) alors \(\frac{f(x)}{x^n}=y^{n/2}\e^{-y}\). Comme \(\lim\limits_{y \to \infty} y^{n/2}\e^{-y} =0\) alors \(\lim\limits_{x \to 0} \frac{f(x)}{x^n} =0\). Donc pour tout naturel \(n\), \(f\) admet un \(DL_n(0)\) telle que la partie régulière est nulle.
+Si on effectue le changement de variable \(y=x^{-2}\) (lorsque \(x \to 0\), \(y 
+\to + \infty\)) alors \(\frac{f(x)}{x^n}=y^{n/2}\e^{-y}\). Comme 
+\(\lim\limits_{y \to \infty} y^{n/2}\e^{-y} =0\) alors \(\lim\limits_{x \to 0} 
+\frac{f(x)}{x^n} =0\). Donc pour tout naturel \(n\), \(f\) admet un \(DL_n(0)\) 
+telle que la partie régulière est nulle.
 \begin{equation}
   \forall n \in \N \ \forall x \in A \quad \e^{-1/x^2}=o(x^n).
 \end{equation}
 
-Soit \(I=\Rplus\), \(A=\Rplusetoile\), \(a=0\) et \(\fonction{f}{A}{\R}{x}{\ln x}\). Quelque soit le naturel \(n\), la fonction \(f\) n'admet pas de \(DL_n(0)\). Démontrons le par l'absurde. Supposons que \(f\) admette un \(DL_n\) pour tout naturel \(n\). Alors il existe des réels \(\alpha_0, \cdots, \alpha_n\) et une application \(\epsilon \in \R^A\) de limite nulle en zéro telles que
+Soit \(I=\Rplus\), \(A=\Rplusetoile\), \(a=0\) et \(\fonction{f}{A}{\R}{x}{\ln 
+x}\). Quelque soit le naturel \(n\), la fonction \(f\) n'admet pas de 
+\(DL_n(0)\). Démontrons le par l'absurde. Supposons que \(f\) admette un 
+\(DL_n\) pour tout naturel \(n\). Alors il existe des réels \(\alpha_0, \cdots, 
+\alpha_n\) et une application \(\epsilon \in \R^A\) de limite nulle en zéro 
+telles que
 \begin{equation}
   \forall x \in A \quad \ln x =\sum_{k=0}^n \alpha_k x^k + x^n\epsilon(x).
 \end{equation}
-On sait que \(\lim_0 f = -\infty\) et que \(\lim_{x \to 0} \sum_{k=0}^n \alpha_k x^k + x^n\epsilon(x) = \alpha_0\). Or \(\alpha_0\) est fini donc il y a une contradiction.
+On sait que \(\lim_0 f = -\infty\) et que \(\lim_{x \to 0} \sum_{k=0}^n \alpha_k 
+x^k + x^n\epsilon(x) = \alpha_0\). Or \(\alpha_0\) est fini donc il y a une 
+contradiction.
 
-Ce résultat est généralisable à toute fonction n'admettant pas de limite finie en zéro, voire même en n'importe quel point \(a \in A\).
+Ce résultat est généralisable à toute fonction n'admettant pas de limite finie 
+en zéro, voire même en n'importe quel point \(a \in A\).
 
 \subsection{Unicité du développement limité}
 
 \begin{prop}
-  Soit \(f \in \R^A\) et un naturel \(n\). On suppose qu'il existe deux applications polynomiales \(P_n\), et \(Q_n\) de degré inférieur ou égal à \(n\) et deux fonctions de limite nulle en zéro \(\epsilon_1,\) et  \(\epsilon_2\) telles que
+  Soit \(f \in \R^A\) et un naturel \(n\). On suppose qu'il existe deux 
+  applications polynomiales \(P_n\), et \(Q_n\) de degré inférieur ou égal à 
+  \(n\) et deux fonctions de limite nulle en zéro \(\epsilon_1,\) et  
+  \(\epsilon_2\) telles que
   \begin{align}
     \forall x \in A \quad f(x)&=P_n(x-a)+(x-a)^n \epsilon_1(x) \\
-                              &=Q_n(x-a)+(x-a)^n \epsilon_2(x).
+    &=Q_n(x-a)+(x-a)^n \epsilon_2(x).
   \end{align}
   Alors \(P_n=Q_n\) et \(\epsilon_1=\epsilon_2\).
 \end{prop}
 \begin{proof}
-  Il existe des réels \(\alpha_0, \cdots, \alpha_n\) et \(\beta_0, \cdots, \beta_n\) tels que
+  Il existe des réels \(\alpha_0, \cdots, \alpha_n\) et \(\beta_0, \cdots, 
+  \beta_n\) tels que
   \begin{align}
     \forall x \in \R \quad P_n(x) & = \sum_{k=0}^n \alpha_k x^k, \\
     \forall x \in \R \quad Q_n(x) & = \sum_{k=0}^n \beta_k x^k.
@@ -607,22 +898,27 @@ Ce résultat est généralisable à toute fonction n'admettant pas de limite fin
   Alors
   \begin{align}
     \forall x \in A \quad f(x) & =P_n(x-a) + (x-a)^n \epsilon_1(x)\\
-                               & = Q_n(x-a) + (x-a)^n \epsilon_2(x).
+    & = Q_n(x-a) + (x-a)^n \epsilon_2(x).
   \end{align}
   Donc
   \begin{align}
     P_n(x-a)-Q_n(x-a)+ (x-a)^n (\epsilon_1(x)- \epsilon_2(x)) &=0 \\
-    (\alpha_0-\beta_0)+\sum_{k=1}^n (\alpha_k - \beta_k) x^k + (x-a)^n (\epsilon_1(x)- \epsilon_2(x)) &=0.
+    (\alpha_0-\beta_0)+\sum_{k=1}^n (\alpha_k - \beta_k) x^k + (x-a)^n 
+    (\epsilon_1(x)- \epsilon_2(x)) &=0.
   \end{align}
-  Lorsque \(x\) tend vers \(0\), on trouve que \(\alpha_0=\beta_0\). Pour tout \(x \in A\)
+  Lorsque \(x\) tend vers \(0\), on trouve que \(\alpha_0=\beta_0\). Pour tout 
+  \(x \in A\)
   \begin{equation}
-    (\alpha_1-\beta_1)(x-a) +\sum_{k=2}^n (\alpha_k - \beta_k) x^k + (x-a)^n (\epsilon_1(x)- \epsilon_2(x)) =0,
+    (\alpha_1-\beta_1)(x-a) +\sum_{k=2}^n (\alpha_k - \beta_k) x^k + (x-a)^n 
+    (\epsilon_1(x)- \epsilon_2(x)) =0,
   \end{equation}
   pour \(x \neq a\), on peut simplifer l'équation et alors
   \begin{equation}
-    (\alpha_1-\beta_1) +\sum_{k=2}^n (\alpha_k - \beta_k) x^{k-1} + (x-a)^{n-1} (\epsilon_1(x)- \epsilon_2(x)) =0.
+    (\alpha_1-\beta_1) +\sum_{k=2}^n (\alpha_k - \beta_k) x^{k-1} + (x-a)^{n-1} 
+    (\epsilon_1(x)- \epsilon_2(x)) =0.
   \end{equation}
-  Cette égalité est vraie au voisinage de \(a\), lorsqu'on passe à la limite on a \(\alpha_1=\beta_1\).
+  Cette égalité est vraie au voisinage de \(a\), lorsqu'on passe à la limite on 
+  a \(\alpha_1=\beta_1\).
 
   En itérant ce processus on arrive à ce que pour tout \(x \neq a\)
   \begin{equation}
@@ -632,18 +928,27 @@ Ce résultat est généralisable à toute fonction n'admettant pas de limite fin
   \begin{equation}
     \alpha_n - \beta_n = \epsilon_2(x)-\epsilon_1(x).
   \end{equation}
-  Alors l'application \(\epsilon_2 - \epsilon_1\) est constante sur \(A\) ou sur \(A\setminus\{a\}\) et par hypothèse les limites en \(a\) de ces deux fonctions sont nulles donc en passant à la limite on a \(\lim\limits_{a} \epsilon_2 - \epsilon_1 =0\) et donc obtient \(\alpha_n = \beta_n\).
+  Alors l'application \(\epsilon_2 - \epsilon_1\) est constante sur \(A\) ou sur 
+  \(A\setminus\{a\}\) et par hypothèse les limites en \(a\) de ces deux 
+  fonctions sont nulles donc en passant à la limite on a \(\lim\limits_{a} 
+  \epsilon_2 - \epsilon_1 =0\) et donc obtient \(\alpha_n = \beta_n\).
 
-  On a prouvé que \(P_n=Q_n\). Il reste à montrer que si \(a \in A\), alors \(\epsilon_1(a)=\epsilon_2(a)\). Si \(a \in A\), que dit l'hypothèse \(\lim\limits_{a} \epsilon_1=0=\lim\limits_{a} \epsilon_2\)?
+  On a prouvé que \(P_n=Q_n\). Il reste à montrer que si \(a \in A\), alors 
+  \(\epsilon_1(a)=\epsilon_2(a)\). Si \(a \in A\), que dit l'hypothèse 
+  \(\lim\limits_{a} \epsilon_1=0=\lim\limits_{a} \epsilon_2\)?
 
-  \(\epsilon_1\) et \(\epsilon_2\) sont continues en \(a\) et \(\epsilon_1(a)=0=\epsilon_2(a)\). C'était déjà vrai. Donc les deux développements limités sont égaux.
+  \(\epsilon_1\) et \(\epsilon_2\) sont continues en \(a\) et 
+  \(\epsilon_1(a)=0=\epsilon_2(a)\). C'était déjà vrai. Donc les deux 
+  développements limités sont égaux.
 \end{proof}
 
-Le réel \(a\) appartient ou pas à \(A\). Mais si \(a \in A\), alors \(\epsilon\) est continue en \(a\). Sinon, \(\epsilon(a)\) n'est pas défini.
+Le réel \(a\) appartient ou pas à \(A\). Mais si \(a \in A\), alors \(\epsilon\) 
+est continue en \(a\). Sinon, \(\epsilon(a)\) n'est pas défini.
 
 \subsubsection{Application au fonctions paires et impaires}
 \begin{prop}
-  Soit \(I\) un intervalle réel symétrique en zéro (\(\forall x \in I, -x \in I\)). Soit \(f \in \R^I\) admettant le \(DL_n(0)\) suivant
+  Soit \(I\) un intervalle réel symétrique en zéro (\(\forall x \in I, -x \in 
+  I\)). Soit \(f \in \R^I\) admettant le \(DL_n(0)\) suivant
   \begin{equation}
     \forall x \in I \quad f(x)=\sum_{k=0}^n \alpha_k x^k + x^n \epsilon(x).
   \end{equation}
@@ -655,18 +960,33 @@ Le réel \(a\) appartient ou pas à \(A\). Mais si \(a \in A\), alors \(\epsilon
     \forall x \in I \quad f(x)&= P_n(x)+ x^n\epsilon(x)\\
     f(-x)&= P_n(-x) + x^n [(-1)^n \epsilon(-x)]
   \end{align}
-  On définit \(Q_n : x \longmapsto P_n(-x)\), c'est une fonction polynomiale de degré inférieur ou égal à \(n\). On définit aussi \(\epsilon_1 :x \longmapsto (-1)^n \epsilon(-x)\) elle tend aussi vers zéro en zéro. Comme \(f\) est paire on a alors \(P_n = Q_n\) et \(\epsilon = \epsilon_1\). Deux polynômes sont égaux si et seulement s'ils ont les même coefficient donc
+  On définit \(Q_n : x \longmapsto P_n(-x)\), c'est une fonction polynomiale de 
+  degré inférieur ou égal à \(n\). On définit aussi \(\epsilon_1 :x \longmapsto 
+  (-1)^n \epsilon(-x)\) elle tend aussi vers zéro en zéro. Comme \(f\) est paire 
+  on a alors \(P_n = Q_n\) et \(\epsilon = \epsilon_1\). Deux polynômes sont 
+  égaux si et seulement s'ils ont les même coefficient donc
   \begin{equation}
     \forall k \in \intervalleentier{0}{n} \quad \alpha_k = (-1)^k \alpha_k.
   \end{equation}
-  Si \(k\) est pair c'est tout le temps vrai, sinon \(k\) est impair et alors là \(\alpha_k=0\). Alors les termes de puissance impaires du polynôme \(P_n\) sont nuls. Donc \(P_n\) est paire. La démonstration est analogue pour le cas où \(f\) est impaire.
+  Si \(k\) est pair c'est tout le temps vrai, sinon \(k\) est impair et alors là 
+  \(\alpha_k=0\). Alors les termes de puissance impaires du polynôme \(P_n\) 
+  sont nuls. Donc \(P_n\) est paire. La démonstration est analogue pour le cas 
+  où \(f\) est impaire.
 \end{proof}
 
-Cependant, la réciproque est fausse. Une fonction peut très bien être ni paire ni impaire et avoir un \(DL_n\) pair ou impaire.  Comme par exemple la fonction \(x \longmapsto \sin x +x^2\). Elle n'est ni paire ni impaire et pourtant \(DL_1(0)=x+\petitof{0}{x}\). Sa partie régulière est impaire.
+Cependant, la réciproque est fausse. Une fonction peut très bien être ni paire 
+ni impaire et avoir un \(DL_n\) pair ou impaire.  Comme par exemple la fonction 
+\(x \longmapsto \sin x +x^2\). Elle n'est ni paire ni impaire et pourtant 
+\(DL_1(0)=x+\petitof{0}{x}\). Sa partie régulière est impaire.
 
 \subsection{Lien entre \(DL_n(a)\) et \(DL_n(0)\)}
 
-En pratique on connaît les développements limités des fonctions usuelles en zéro. Si d'aventure on voudrait calculer un développement limité en un réel \(a\), il faudrait se ramener en zéro. Soit \(I\) un intervalle de \(\R\), \(a \in I\) et \(A=I\) ou \(A=I\setminus\{a\}\), on pose \(J=\enstq{t \in \R}{t+a \in I}\) et \(B=J\) ou \(B=J\setminus\{0\}\). Soit \(f \in \R^A\) et \(\fonction{g}{B}{\R}{t}{f(a+t)}\). Alors \(f\) admet le \(DL_n(a)\) suivant
+En pratique on connaît les développements limités des fonctions usuelles en 
+zéro. Si d'aventure on voudrait calculer un développement limité en un réel 
+\(a\), il faudrait se ramener en zéro. Soit \(I\) un intervalle de \(\R\), \(a 
+\in I\) et \(A=I\) ou \(A=I\setminus\{a\}\), on pose \(J=\enstq{t \in \R}{t+a 
+\in I}\) et \(B=J\) ou \(B=J\setminus\{0\}\). Soit \(f \in \R^A\) et 
+\(\fonction{g}{B}{\R}{t}{f(a+t)}\). Alors \(f\) admet le \(DL_n(a)\) suivant
 \begin{equation}
   f(x)=\sum_{k=0}^n \alpha_k (x-a)^k +\petitof{a}{(x-a)^n}
 \end{equation}
@@ -685,7 +1005,8 @@ En pratique si on cherche le \(DL_n(a)\) de \(f\),
 
 On conserve les mêmes notations.
 \begin{theo}
-  Soient \(p\) et \(n\) deux naturels tels que \(p \leqslant n\). Si \(f\) admet le \(DL_n(a)\) suivant
+  Soient \(p\) et \(n\) deux naturels tels que \(p \leqslant n\). Si \(f\) admet 
+  le \(DL_n(a)\) suivant
   \begin{equation}
     f(x)=\sum_{k=0}^n \alpha_k (x-a)^k +\petitof{a}{(x-a)^n},
   \end{equation}
@@ -693,34 +1014,42 @@ On conserve les mêmes notations.
   \begin{equation}
     f(x)=\sum_{k=0}^p \alpha_k (x-a)^k +\petitof{a}{(x-a)^p}.
   \end{equation}
-  La réciproque est fausse : une fonction peut admettre un développement limité à un ordre \(p\) mais pas de développement limité aux ordres supérieurs
+  La réciproque est fausse : une fonction peut admettre un développement limité 
+  à un ordre \(p\) mais pas de développement limité aux ordres supérieurs
 \end{theo}
 \begin{proof}
   Il existe \(\epsilon \in \R^A\) de limite nulle telle que
   \begin{align}
-    \forall x \in A \quad f(x) &=\sum_{k=0}^n \alpha_k (x-a)^k +\epsilon(x)(x-a)^n) \\
-                               & = \sum_{k=0}^p \alpha_k (x-a)^k + \sum_{k=p+1}^n \alpha_k (x-a)^k +\epsilon(x)(x-a)^n\\
-                               & = \sum_{k=0}^p \alpha_k (x-a)^k \\
-                               & \phantom{=} + (x-a)^p\left[\sum_{k=p+1}^n \alpha_k (x-a)^{k-p} +\epsilon(x)(x-a)^{n-p}\right],
+    \forall x \in A \quad f(x) &=\sum_{k=0}^n \alpha_k (x-a)^k 
+    +\epsilon(x)(x-a)^n) \\
+    & = \sum_{k=0}^p \alpha_k (x-a)^k + \sum_{k=p+1}^n \alpha_k (x-a)^k 
+    +\epsilon(x)(x-a)^n\\
+    & = \sum_{k=0}^p \alpha_k (x-a)^k \\
+    & \phantom{=} + (x-a)^p\left[\sum_{k=p+1}^n \alpha_k (x-a)^{k-p} 
+    +\epsilon(x)(x-a)^{n-p}\right],
   \end{align}
   comme tous les entiers \(k \geqslant p+1\) dans la deuxième somme alors 
   \begin{equation}
-    \lim\limits_{x \to a} \sum_{k=p+1}^n \alpha_k (x-a)^{k-p} +\epsilon(x)(x-a)^{n-p} =0.
+    \lim\limits_{x \to a} \sum_{k=p+1}^n \alpha_k (x-a)^{k-p} 
+    +\epsilon(x)(x-a)^{n-p} =0.
   \end{equation}
   On note pour tout \(x \in A\), \(\epsilon_1(x)\) le terme du dessus alors
   \begin{equation}
-    \forall x \in A \quad f(x) = \sum_{k=0}^p \alpha_k (x-a)^k + (x-a)^p \epsilon_1(x),
+    \forall x \in A \quad f(x) = \sum_{k=0}^p \alpha_k (x-a)^k + (x-a)^p 
+    \epsilon_1(x),
   \end{equation}
   avec \(\lim\limits_{a} \epsilon_1=0\). Donc \(f\) admet un \(DL_p(a)\). 
 \end{proof}
 
 \subsubsection{Application à la recherche d'équivalents}
 
-Soit \(f \in \R^A\) admettant un \(DL_n(a)\) dont la partie régulière est non nulle. Alors il existe des réels \(\alpha_k\) tels que
+Soit \(f \in \R^A\) admettant un \(DL_n(a)\) dont la partie régulière est non 
+nulle. Alors il existe des réels \(\alpha_k\) tels que
 \begin{equation}
   f(x)=\sum_{k=0}^n \alpha_k (x-a)^k+\petitof{a}{(x-a)^n}.
 \end{equation}
-Soit \(p=\min\enstq{k \in \intervalleentier{0}{n}}{\alpha_k \neq 0}\) qui existe puisque la partie régulière est non nulle. Alors
+Soit \(p=\min\enstq{k \in \intervalleentier{0}{n}}{\alpha_k \neq 0}\) qui existe 
+puisque la partie régulière est non nulle. Alors
 \begin{equation}
   f(x)=\sum_{k=p}^n \alpha_k (x-a)^k +\petitof{a}{(x-a)^n}.
 \end{equation}
@@ -735,22 +1064,32 @@ Alors au voisinage de \(a\), \(f(x) \sim_a \alpha_p(x-a)^p\).
 
 \subsection{Lien entre \(DL_0(a)\) et limite et continuité en \(a\)}
 
-Soit I un intervale réel, \(f \in \R^I\) et \(a \in I\) et \(A=I\) ou \(A=I\setminus\{a\}\)
+Soit I un intervale réel, \(f \in \R^I\) et \(a \in I\) et \(A=I\) ou 
+\(A=I\setminus\{a\}\)
 \begin{prop}
-  On suppose que \(f\) est continue en \(a\). Alors \(f\) admet le \(DL_0(a)\) suivant \(f(x)=f(a)+\petitof{a}{1}\). Pour la réciproque, on doit distinguer deux cas selon que \(a \in A\) ou pas.
+  On suppose que \(f\) est continue en \(a\). Alors \(f\) admet le \(DL_0(a)\) 
+  suivant \(f(x)=f(a)+\petitof{a}{1}\). Pour la réciproque, on doit distinguer 
+  deux cas selon que \(a \in A\) ou pas.
 \end{prop}
 \begin{prop}
-  Si on suppose que \(f\) admet le \(DL_0(a)\) suivant \(f(x)=\alpha+\petitof{a}{1}\). Alors \(f\) est continue en \(a\) et \(f(a)=\alpha\). 
-\end{prop}
+  Si on suppose que \(f\) admet le \(DL_0(a)\) suivant 
+  \(f(x)=\alpha+\petitof{a}{1}\). Alors \(f\) est continue en \(a\) et 
+\(f(a)=\alpha\). \end{prop}
 \begin{prop}
-  Soit \(A=I\setminus\{a\}\) et \(g \in \R^A\). On suppose que \(g\) admet le \(DL_0(a)\) suivant \(g(x)= \alpha +\petitof{a}{1}\) alors \(g\) admet une limite finie en \(a\) et elle est prolongeable par continuité en \(a\) par \(\fonction{\tilde{g}}{I}{\R}{x}{\begin{cases} g(x) & x \in A \\ \alpha & x=a\end{cases}}\).
+  Soit \(A=I\setminus\{a\}\) et \(g \in \R^A\). On suppose que \(g\) admet le 
+  \(DL_0(a)\) suivant \(g(x)= \alpha +\petitof{a}{1}\) alors \(g\) admet une 
+  limite finie en \(a\) et elle est prolongeable par continuité en \(a\) par 
+  \(\fonction{\tilde{g}}{I}{\R}{x}{\begin{cases} g(x) & x \in A \\ \alpha & 
+  x=a\end{cases}}\).
 \end{prop}
 
 \subsection{Opérations algébriques}
 
 \subsubsection{Notations}
 
-On note \(DL_{n,a}(A,\R)\) l'ensemble des fonctions de \(\R^A\) qui admettent un \(DL_n(a)\). Si \(f \in DL_{n,a}(A,\R)\), on note \(p_n(f)\) la partie régulière de son développement limité à l'ordre \(n\)
+On note \(DL_{n,a}(A,\R)\) l'ensemble des fonctions de \(\R^A\) qui admettent un 
+\(DL_n(a)\). Si \(f \in DL_{n,a}(A,\R)\), on note \(p_n(f)\) la partie régulière 
+de son développement limité à l'ordre \(n\)
 \begin{equation}
   f(x)=p_n(f)(x-a)+\petitof{a}{(x-a)^n}.
 \end{equation}
@@ -758,49 +1097,65 @@ On dispose d'une application
 \begin{equation}
   \fonction{p_n}{DL_{n,a}(A,\R)}{DL_{n,a}(A,\R)}{f}{p_n(f)},
 \end{equation}
-pour tout \(f \in DL_{n,a}(A,\R)\), \(p_n(f)\) est une fonction polynomiale en \((x-a)\) de degré inférieur ou égal à \(n\). Elle admet un \(DL_n(a)\) dont le reste est nul. L'ensemble \(DL_{n,a}(A,\R)\) est un sous-espace vectoriel et un sous-anneau de \(\R^A\).
+pour tout \(f \in DL_{n,a}(A,\R)\), \(p_n(f)\) est une fonction polynomiale en 
+\((x-a)\) de degré inférieur ou égal à \(n\). Elle admet un \(DL_n(a)\) dont le 
+reste est nul. L'ensemble \(DL_{n,a}(A,\R)\) est un sous-espace vectoriel et un 
+sous-anneau de \(\R^A\).
 
 \subsubsection{Somme}
 
 \begin{prop}[Linéarité]
-  Soient \(f,g \in DL_{n,a}(A,\R)\) et \(\lambda \in \R\). Alors \(\lambda f + g \in DL_{n,a}(A,\R)\) et \(p_n(\lambda f +g)= \lambda p_n(f) +p_n(g)\).   
+  Soient \(f,g \in DL_{n,a}(A,\R)\) et \(\lambda \in \R\). Alors \(\lambda f + g 
+  \in DL_{n,a}(A,\R)\) et \(p_n(\lambda f +g)= \lambda p_n(f) +p_n(g)\).   
 \end{prop}
 \begin{proof}
-  Il existe deux fonctions \(\epsilon_1\) et \(\epsilon_2\) tendant vers zéro en \(a\) telles que pour tout \(x\) au voisinage de \(a\)
+  Il existe deux fonctions \(\epsilon_1\) et \(\epsilon_2\) tendant vers zéro en 
+  \(a\) telles que pour tout \(x\) au voisinage de \(a\)
   \begin{align}
     f(x) &= p_n(f)(x-a)+\epsilon_1(x)(x-a)^n, \\
-    g(x) &= p_n(g)(x-a)+\epsilon_2(x)(x-a)^n. 
-  \end{align}
+  g(x) &= p_n(g)(x-a)+\epsilon_2(x)(x-a)^n. \end{align}
   Alors
   \begin{equation}
-    f(x)+\mu g(x) = (\lambda p_n(f)+p_n(g))(x-a)+(\lambda \epsilon_1(x) + \epsilon_2(x)).
+    f(x)+\mu g(x) = (\lambda p_n(f)+p_n(g))(x-a)+(\lambda \epsilon_1(x) + 
+    \epsilon_2(x)).
   \end{equation}
-  De plus \(\lambda p_n(f)+p_n(g)\) est une fonction polynomiale de degré inférieur ou égal à \(n\) et \(\lim\limits_{a} \lambda \epsilon_1 + \epsilon_2 =0\) donc c'est un \(DL_n(a)\) de \(\lambda f +g\). L'application \(p_n\) est linéaire, de plus c'est un projecteur et  \(p_n \circ p_n =p_n\).
+  De plus \(\lambda p_n(f)+p_n(g)\) est une fonction polynomiale de degré 
+  inférieur ou égal à \(n\) et \(\lim\limits_{a} \lambda \epsilon_1 + \epsilon_2 
+  =0\) donc c'est un \(DL_n(a)\) de \(\lambda f +g\). L'application \(p_n\) est 
+  linéaire, de plus c'est un projecteur et  \(p_n \circ p_n =p_n\).
 \end{proof}
 
 \subsubsection{Produit}
 \begin{theo}
-  Soient \(f, g \in DL_{n,a}(A, \R)\) alors \(fg \in DL_{n,a}(A, \R)\) et \(p_n(fg)=p_n(p_n(f)p_n(g))\)
+  Soient \(f, g \in DL_{n,a}(A, \R)\) alors \(fg \in DL_{n,a}(A, \R)\) et 
+  \(p_n(fg)=p_n(p_n(f)p_n(g))\)
 \end{theo}
 \begin{proof}
-  Il existe deux application \(\epsilon_1\) et \(\epsilon_2\) de limite nulle en \(a\) telles que
+  Il existe deux application \(\epsilon_1\) et \(\epsilon_2\) de limite nulle en 
+  \(a\) telles que
   \begin{align}
     \forall x \in A \quad f(x) &=p_n(f)(x-a)+\epsilon_1(x)(x-a)^n, \\
     g(x) &= p_n(g)(x-a)+\epsilon_2(x)(x-a)^n.
   \end{align}
   Alors
   \begin{align}
-    \forall x \in A \quad f(x)g(x) &=p_n(f)(x-a) p_n(g)(x-a) + p_n(f)(x-a)\epsilon_2(x)(x-a)^n \\
-                                   & + p_n(g)(x-a)\epsilon_1(x)(x-a)^n + \epsilon_1(x)(x-a)^n\epsilon_2(x)(x-a)^n \\
-                                   & = p_n(f)(x-a) p_n(g)(x-a) + (x-a)^n \varphi(x).
+    \forall x \in A \quad f(x)g(x) &=p_n(f)(x-a) p_n(g)(x-a) + 
+    p_n(f)(x-a)\epsilon_2(x)(x-a)^n \\
+    & + p_n(g)(x-a)\epsilon_1(x)(x-a)^n + 
+    \epsilon_1(x)(x-a)^n\epsilon_2(x)(x-a)^n \\
+    & = p_n(f)(x-a) p_n(g)(x-a) + (x-a)^n \varphi(x).
   \end{align}
-  avec \(\lim\limits_a \varphi =0\). La fonction \(p_n(f)(x-a) p_n(g)(x-a)\) est polynomiale mais pas forcément de degré inférieur ou égale à \(n\). On doit prendre sa partie régulière
+  avec \(\lim\limits_a \varphi =0\). La fonction \(p_n(f)(x-a) p_n(g)(x-a)\) est 
+  polynomiale mais pas forcément de degré inférieur ou égale à \(n\). On doit 
+  prendre sa partie régulière
   \begin{equation}
-    \forall x \in A \quad p_n(f)(x-a) p_n(g)(x-a) = p_n(p_n(f)p_n(g))(x-a) +\petitof{a}{(x-a)^n}.
+    \forall x \in A \quad p_n(f)(x-a) p_n(g)(x-a) = p_n(p_n(f)p_n(g))(x-a) 
+    +\petitof{a}{(x-a)^n}.
   \end{equation}
   Du coup pour \(fg\), on a bien
   \begin{equation}
-    \forall x \in A \quad f(x)g(x) = p_n(p_n(f)p_n(g))(x-a) +\petitof{a}{(x-a)^n} + (x-a)^n \varphi(x).
+    \forall x \in A \quad f(x)g(x) = p_n(p_n(f)p_n(g))(x-a) 
+    +\petitof{a}{(x-a)^n} + (x-a)^n \varphi(x).
   \end{equation}
 \end{proof}
 
@@ -808,39 +1163,60 @@ En clair, on enlève les termes de degré trop élevé lorsqu'on fait le produit
 
 \subsubsection{Quotient}
 \begin{theo}
-  Soit \(u \in \R^A\) telle que \(u\) est de limite nulle en \(a\) et admet un \(DL_n(a)\). Alors la fonction \(x \longrightarrow \frac{1}{1-u(x)}\) est définie au voisinage de \(a\) et admet un \(DL_n(a)\).
+  Soit \(u \in \R^A\) telle que \(u\) est de limite nulle en \(a\) et admet un 
+  \(DL_n(a)\). Alors la fonction \(x \longrightarrow \frac{1}{1-u(x)}\) est 
+  définie au voisinage de \(a\) et admet un \(DL_n(a)\).
 \end{theo}
 \begin{proof}
-  Il existe des réels \(\alpha_0, \ldots, \alpha_n\) et une application \(\epsilon_1 \in \R^A\) de limite nulle en \(a\) telle que
+  Il existe des réels \(\alpha_0, \ldots, \alpha_n\) et une application 
+  \(\epsilon_1 \in \R^A\) de limite nulle en \(a\) telle que
   \begin{equation}
-    \forall x \in A \quad u(x) = \sum_{k=0}^n \alpha_k (x-a)^k + (x-a)^n \epsilon_1(x).
+    \forall x \in A \quad u(x) = \sum_{k=0}^n \alpha_k (x-a)^k + (x-a)^n 
+    \epsilon_1(x).
   \end{equation}
-  Comme \(\lim\limits_{a} u =0\) alors \(\alpha_0= 0\). On sait que la fonction \(y \longmapsto \frac{1}{1-y}\) admet le développement limité à l'ordre \(n\) en \(a\) suivant avec \(\epsilon_2\) une fonction de limite nulle en zéro
+  Comme \(\lim\limits_{a} u =0\) alors \(\alpha_0= 0\). On sait que la fonction 
+  \(y \longmapsto \frac{1}{1-y}\) admet le développement limité à l'ordre \(n\) 
+  en \(a\) suivant avec \(\epsilon_2\) une fonction de limite nulle en zéro
   \begin{equation}
-    \forall y \in v(0) \quad \frac{1}{1-y}= 1+y+y^2+ \dotsb +y^n + y^n \epsilon_2(x).
+    \forall y \in v(0) \quad \frac{1}{1-y}= 1+y+y^2+ \dotsb +y^n + y^n 
+    \epsilon_2(x).
   \end{equation}
-  Au voisinage de \(a\), \(u\) est bien définie de zéro donc \(x \longmapsto \frac{1}{1-u(x)}\) est bien définie et
+  Au voisinage de \(a\), \(u\) est bien définie de zéro donc \(x \longmapsto 
+  \frac{1}{1-u(x)}\) est bien définie et
   \begin{equation}
-    \forall x \in A \quad \frac{1}{1-u(x)} = 1 + u(x) + \dotsb + u(x)^n +u(x)^n \epsilon_2(u(x)).
+    \forall x \in A \quad \frac{1}{1-u(x)} = 1 + u(x) + \dotsb + u(x)^n +u(x)^n 
+    \epsilon_2(u(x)).
   \end{equation}
   De plus au voisinage de zéro
   \begin{align}
-    u(x)^n &= \left(\sum_{k=0}^n \alpha_k (x-a)^k + (x-a)^n \epsilon_1(x) \right)^n \\
-           & =(x-a)^n \left(\sum_{k=0}^n \alpha_k (x-a)^{k-1} + (x-a)^{n-1} \epsilon_1(x) \right)^n \\
-    u(x)^n \epsilon_2(u(x)) &= (x-a)^n \underbrace{\left(\sum_{k=0}^n \alpha_k (x-a)^{k-1} + (x-a)^{n-1} \epsilon_1(x) \right)^n \epsilon_2(u(x))}_{\epsilon_3(x)}.
+    u(x)^n &= \left(\sum_{k=0}^n \alpha_k (x-a)^k + (x-a)^n \epsilon_1(x) 
+    \right)^n \\
+    & =(x-a)^n \left(\sum_{k=0}^n \alpha_k (x-a)^{k-1} + (x-a)^{n-1} 
+    \epsilon_1(x) \right)^n \\
+    u(x)^n \epsilon_2(u(x)) &= (x-a)^n \underbrace{\left(\sum_{k=0}^n \alpha_k 
+    (x-a)^{k-1} + (x-a)^{n-1} \epsilon_1(x) \right)^n 
+    \epsilon_2(u(x))}_{\epsilon_3(x)}.
   \end{align}
-  On sait que \(\lim\limits_{a} u =0\) donc \(\lim\limits_a\epsilon_2(u(x))=0\). De plus \(\lim\limits_{x \to a} \sum_{k=0}^n \alpha_k (x-a)^{k-1} + (x-a)^{n-1} \epsilon_1(x) =\alpha_1\). Aisni donc \(\lim_{a}\epsilon_3=0\).
+  On sait que \(\lim\limits_{a} u =0\) donc \(\lim\limits_a\epsilon_2(u(x))=0\). 
+  De plus \(\lim\limits_{x \to a} \sum_{k=0}^n \alpha_k (x-a)^{k-1} + 
+  (x-a)^{n-1} \epsilon_1(x) =\alpha_1\). Aisni donc \(\lim_{a}\epsilon_3=0\).
 
-  La fonction \(x \longmapsto \sum_{k=0}^n u(x)^k\) admet un développement limité à l'ordre \(n\) en \(a\) par produit et somme de développements limité. Donc \(\frac{1}{1-u}\) admet un développement limité à l'ordre \(n\) en \(a\).
+  La fonction \(x \longmapsto \sum_{k=0}^n u(x)^k\) admet un développement 
+  limité à l'ordre \(n\) en \(a\) par produit et somme de développements limité. 
+  Donc \(\frac{1}{1-u}\) admet un développement limité à l'ordre \(n\) en \(a\).
 \end{proof}
 
 \subsubsection{Application}
 
-On peut obtenir des \(DL_n(a)\) de fonctions de la forme \(g=\frac{1}{f}\) avec comme hypothèse que \(f\) admet un \(DL_n(a)\) et que \(\lim\limits_{a} f = \ell \neq 0\).
+On peut obtenir des \(DL_n(a)\) de fonctions de la forme \(g=\frac{1}{f}\) avec 
+comme hypothèse que \(f\) admet un \(DL_n(a)\) et que \(\lim\limits_{a} f = \ell 
+\neq 0\).
 \begin{equation}
   g=\frac{1}{f}=\frac{1}{\ell} \frac{1}{1 - (1-\frac{f}{\ell})}.
 \end{equation}
-On pose \(u=1-\frac{f}{\ell}\) et donc \(\lim\limits_{a} u =0\). On peut alors obtenir des \(DL_n(a)\) pour des quotients \(\frac{f}{g}\) tels que \(f\) et \(g\) admettent des \(DL_n(a)\) et que \(\lim\limits_{a} g \neq 0\).
+On pose \(u=1-\frac{f}{\ell}\) et donc \(\lim\limits_{a} u =0\). On peut alors 
+obtenir des \(DL_n(a)\) pour des quotients \(\frac{f}{g}\) tels que \(f\) et 
+\(g\) admettent des \(DL_n(a)\) et que \(\lim\limits_{a} g \neq 0\).
 
 \subsection{Développement limité d'une fonction composée}
 
@@ -852,65 +1228,87 @@ La fonction sinus admet le \(DL_2(0)\) suivant
 \begin{equation}
   \sin x = x + x^2\epsilon_1(x),
 \end{equation}
-avec \(\epsilon_1\) tendant vers zéro en zéro. La fonction exponentielle admet le \(DL_2(0)\) suivant
+avec \(\epsilon_1\) tendant vers zéro en zéro. La fonction exponentielle admet 
+le \(DL_2(0)\) suivant
 \begin{equation}
   \e^y = 1+y+\frac{y^2}{2} +y^2\epsilon_2(x).
 \end{equation}
 Alors en substituant \(y\) par \(\sin x\) on obtient
 \begin{align}
-  \e^{\sin x} &= 1+\sin x +\frac{1}{2} \sin^2(x) + \sin^2(x) \epsilon_2(\sin(x)) \\
-              &= 1+ (x + x^2\epsilon_1(x)) + \frac{1}{2} (x + x^2\epsilon_1(x))^2 + (x + x^2\epsilon_1(x))^2 \epsilon_2(\sin(x)) \\
-              &= 1 + x + x^2 \epsilon_1(x) + \frac{1}{2}(x^2+x^4\epsilon_1(x)+2x^3\epsilon_1(x))\\ &  + x^2(1+x\epsilon_1(x))^2\epsilon_2(\sin(x)) \\
-              &= 1 + x + \frac{x^2}{2} + x^2 \epsilon_3(x).
+  \e^{\sin x} &= 1+\sin x +\frac{1}{2} \sin^2(x) + \sin^2(x) \epsilon_2(\sin(x)) 
+  \\
+  &= 1+ (x + x^2\epsilon_1(x)) + \frac{1}{2} (x + x^2\epsilon_1(x))^2 + (x + 
+  x^2\epsilon_1(x))^2 \epsilon_2(\sin(x)) \\
+  &= 1 + x + x^2 \epsilon_1(x) + 
+  \frac{1}{2}(x^2+x^4\epsilon_1(x)+2x^3\epsilon_1(x))\\ &  + 
+  x^2(1+x\epsilon_1(x))^2\epsilon_2(\sin(x)) \\
+  &= 1 + x + \frac{x^2}{2} + x^2 \epsilon_3(x).
 \end{align}
 avec \(\epsilon_3\) qui tend vers zéro en zéro.
 %
 \subsubsection{\(DL_2(0)\) de \(x \longmapsto \e^{\cos x}\)}
-On sait que pour tout réel \(x\), \(\e^{\cos x}=\e{} \e^{\cos x -1}\). La fonction \(x \longmapsto \cos x -1\) admet le \(DL_2(0)\) suivant
+On sait que pour tout réel \(x\), \(\e^{\cos x}=\e{} \e^{\cos x -1}\). La 
+fonction \(x \longmapsto \cos x -1\) admet le \(DL_2(0)\) suivant
 \begin{equation}
   \cos x - 1 = -\frac{x^2}{2} + x^2\epsilon_1(x).
 \end{equation}
-On pose \(y=\cos x-1\). Les puissances de \(y\) supérieures ou égales à 2 sont des multiples de puissance supérieure ou égale à 4. On a seulement besoin du \(DL_1(0)\) de l'exponentielle
+On pose \(y=\cos x-1\). Les puissances de \(y\) supérieures ou égales à 2 sont 
+des multiples de puissance supérieure ou égale à 4. On a seulement besoin du 
+\(DL_1(0)\) de l'exponentielle
 \begin{equation}
   \e^y=1+y +y\epsilon_2(y).
 \end{equation}
 Alors
 \begin{align}
   \e^{\cos x -1} &= 1 + (\cos x - 1) +(\cos x -1)\epsilon_2(\cos x -1) \\
-                 &= 1 - \frac{x^2}{2} x^2\epsilon_1(x) + \left(\frac{-x^2}{2} + x^2\epsilon_1(x)\right)\epsilon_2(\cos x -1) \\
-                 &= 1 - \frac{x^2}{2} +x^2\underbrace{\left( \epsilon_1(x) -\left(\frac{1}{2} - \epsilon_1(x)\right) \epsilon_2(\cos x -1)\right)}_{\epsilon_3(x)},
+  &= 1 - \frac{x^2}{2} x^2\epsilon_1(x) + \left(\frac{-x^2}{2} + 
+  x^2\epsilon_1(x)\right)\epsilon_2(\cos x -1) \\
+  &= 1 - \frac{x^2}{2} +x^2\underbrace{\left( \epsilon_1(x) -\left(\frac{1}{2} - 
+  \epsilon_1(x)\right) \epsilon_2(\cos x -1)\right)}_{\epsilon_3(x)},
 \end{align}
-avec \(\epsilon_3\) qui tend vers zéro en zéro. Donc \(\e^{\cos x} = \e -\frac{\e}{2}x^2 + o(x^2)\).
+avec \(\epsilon_3\) qui tend vers zéro en zéro. Donc \(\e^{\cos x} = \e 
+-\frac{\e}{2}x^2 + o(x^2)\).
 
 \subsubsection{\(DL_7(0)\) de \(x \longmapsto \ln(\cos x)\)}
 
-La fonction cosinus est strictement positive sur \(A=\intervalleoo{\frac{-\pi}{2}}{\frac{\pi}{2}}\) alors \(\ln(\cos x)\) est bien définie au voisinage de zéro. De plus
+La fonction cosinus est strictement positive sur 
+\(A=\intervalleoo{\frac{-\pi}{2}}{\frac{\pi}{2}}\) alors \(\ln(\cos x)\) est 
+bien définie au voisinage de zéro. De plus
 \begin{equation}
   \forall x \in A \quad \ln(\cos(x))=\ln(1+(\cos x-1)).
 \end{equation}
 L'application \(x \longmapsto \cos x -1\) admet le \(DL_7(0)\) suivant
 \begin{equation}
-  \cos x -1 = \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!} + \petitof{0}{x^7}.
+  \cos x -1 = \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!} + 
+  \petitof{0}{x^7}.
 \end{equation}
-En posant \(y= \cos x-1\), on voit que les puissances de \(y\) supérieures ou égales à 4 sont des multiples de puissances de \(x\) supérieures ou égales à 8. On peut donc se contenter du \(DL_3(0)\) de \(y \longmapsto \ln(1+y)\)
+En posant \(y= \cos x-1\), on voit que les puissances de \(y\) supérieures ou 
+égales à 4 sont des multiples de puissances de \(x\) supérieures ou égales à 8. 
+On peut donc se contenter du \(DL_3(0)\) de \(y \longmapsto \ln(1+y)\)
 \begin{align}
   \ln(1+y) &= y-\frac{y^2}{2} +\frac{y^3}{3} + \petitof{0}{y^3} \\
-  \ln(\cos(x)) &=\left( \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!}\right) -\frac{1}{2} \left( \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!} \right)^2 \\
-               &+ \frac{1}{3} \left(\frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!}\right)^3 +\petitof{0}{x^7}\\
-               &=\frac{-x^2}{2} -\frac{x^4}{12}-\frac{x^6}{45} + \petitof{0}{x^7}.
+  \ln(\cos(x)) &=\left( \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!}\right) 
+  -\frac{1}{2} \left( \frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!} \right)^2 
+  \\
+  &+ \frac{1}{3} \left(\frac{-x^2}{2} + \frac{x^4}{4!} - \frac{x^6}{6!}\right)^3 
+  +\petitof{0}{x^7}\\
+  &=\frac{-x^2}{2} -\frac{x^4}{12}-\frac{x^6}{45} + \petitof{0}{x^7}.
 \end{align}
 
 \subsection{Remarques}
 
-On verra plus tard qu'il est possible d'intégrer des développements limités. Retenir dès maintenant qu'il est interdit de dériver les développements limités.
+On verra plus tard qu'il est possible d'intégrer des développements limités. 
+Retenir dès maintenant qu'il est interdit de dériver les développements limités.
 \begin{theo}[Formule de Taylor-Young]
-  Soit \(I\) un intervalle réel, \(a \in I\) et \(f \in \R^I\) une fonction de classe \(\classe{n}\). Alors \(f\) admet le \(DL_n(a)\) suivant
+  Soit \(I\) un intervalle réel, \(a \in I\) et \(f \in \R^I\) une fonction de 
+  classe \(\classe{n}\). Alors \(f\) admet le \(DL_n(a)\) suivant
   \begin{equation}
     f(x) = \sum_{k=0}^n \frac{f^{(n)}(a)}{k!} (x-a)^k + \petitof{a}{(x-a)^n}.
   \end{equation}
 \end{theo}
 On l'admet pour l'instant, elle sera démontrée au chapitre~
-\ref{chap:integration} sur l'intégration. On peut l'utiliser dès maintenant. Elle permet de trouver les développements limités de nombreuses fonctions.
+\ref{chap:integration} sur l'intégration. On peut l'utiliser dès maintenant. 
+Elle permet de trouver les développements limités de nombreuses fonctions.
 
 \subsection{Applications aux études locales}
 
@@ -920,42 +1318,73 @@ On suppose que \(f\) admet le \(DL_n(a)\) suivant
 \begin{equation}
   f(x) = \sum_{k=0}^n \alpha_k (x-a)^k + \petitof{a}{(x-a)^n}.
 \end{equation}
-Alors \(f(x) \sim_a \sum_{k=0}^n \alpha_k (x-a)^k\) en supposant qu'il existe \(k \leqslant n-1\) tel que \(\alpha_k \neq 0\) alors
+Alors \(f(x) \sim_a \sum_{k=0}^n \alpha_k (x-a)^k\) en supposant qu'il existe 
+\(k \leqslant n-1\) tel que \(\alpha_k \neq 0\) alors
 \begin{equation}
   f(x) - \sum_{k=0}^{n-1} \alpha_k (x-a)^k \sim_a \alpha_n (x-a)^n.
 \end{equation}
 En particulier
 \begin{enumerate}
-  \item si \(n=1\) \(\alpha_0 \neq 0\) et \(\alpha_1=0\) alors \(f(x) \sim_a \alpha_0\). Et de plus \(f(x) -\alpha_0 \sim_a \alpha_1(x-a)\). Si par exemple \(\alpha_1 >0\) alors la courbe de \(f\) est sous la droite d'équation \(y=\alpha_0\) avant \(a\) et au-dessus après \(a\).
-  \item si \(n=2\) \((\alpha_0, \alpha_1) \neq (0,0)\) et \(\alpha_2 \neq 0\), alors \(f(x)-\alpha_0 - \alpha_1(x-a) \sim_a \alpha_2 (x-a)^2\). La droite d'équation \(y = \alpha_0 + \alpha_1(x-a)\) est tangente à la courbe représentative de \(f\) en \(a\). On connaît la position relative de la courbe par rapport à sa tangente en fonction du signe de \(\alpha_2\). S'il est positif la courbe est au-dessus de la tangente sinon elle est sous la tangente.
+  \item si \(n=1\) \(\alpha_0 \neq 0\) et \(\alpha_1=0\) alors \(f(x) \sim_a 
+    \alpha_0\). Et de plus \(f(x) -\alpha_0 \sim_a \alpha_1(x-a)\). Si par 
+    exemple \(\alpha_1 >0\) alors la courbe de \(f\) est sous la droite 
+    d'équation \(y=\alpha_0\) avant \(a\) et au-dessus après \(a\).
+  \item si \(n=2\) \((\alpha_0, \alpha_1) \neq (0,0)\) et \(\alpha_2 \neq 0\), 
+    alors \(f(x)-\alpha_0 - \alpha_1(x-a) \sim_a \alpha_2 (x-a)^2\). La droite 
+    d'équation \(y = \alpha_0 + \alpha_1(x-a)\) est tangente à la courbe 
+    représentative de \(f\) en \(a\). On connaît la position relative de la 
+    courbe par rapport à sa tangente en fonction du signe de \(\alpha_2\). S'il 
+    est positif la courbe est au-dessus de la tangente sinon elle est sous la 
+    tangente.
 \end{enumerate}
 
 \subsubsection{Au voisinage de \(+\infty\) ou \(-\infty\)}
 
-Pour travailler au voisinage de l'infini on doit généraliser la notion de développement limité. On parlera de développement asymptotique. Au voisinage de \(+\infty\). Soit \(A \in \R\) et \(f:\intervallefo{A}{+\infty} \longrightarrow \R\). On suppose qu'il existe des réels \(\alpha_0, \ldots, \alpha_n\) tels qu'au voisinage de \(+\infty\) on ait
+Pour travailler au voisinage de l'infini on doit généraliser la notion de 
+développement limité. On parlera de développement asymptotique. Au voisinage de 
+\(+\infty\). Soit \(A \in \R\) et \(f:\intervallefo{A}{+\infty} \longrightarrow 
+\R\). On suppose qu'il existe des réels \(\alpha_0, \ldots, \alpha_n\) tels 
+qu'au voisinage de \(+\infty\) on ait
 \begin{equation}
   \label{eq:DA}
-  f(t) = \sum_{k=0}^n \alpha_k \frac{1}{t^k} + \frac{1}{t^n}\epsilon\left(\frac{1}{t}\right),
+  f(t) = \sum_{k=0}^n \alpha_k \frac{1}{t^k} + 
+  \frac{1}{t^n}\epsilon\left(\frac{1}{t}\right),
 \end{equation}
-où \(\epsilon\) tend vers zéro en zéro. On dira que \(f\) admet un développement asymptotique à l'ordre \(n\) en \(+\infty\) et on définit \(\fonction{g}{\intervalleof{0}{\frac{1}{A}}}{\R}{x}{f\left(\frac{1}{x}\right)}\). Alors \(f\) admet le développement asymptotique~\eqref{eq:DA} si et seulement si \(g\) admet le \(DL_n(0)\) suivant
+où \(\epsilon\) tend vers zéro en zéro. On dira que \(f\) admet un développement 
+asymptotique à l'ordre \(n\) en \(+\infty\) et on définit 
+\(\fonction{g}{\intervalleof{0}{\frac{1}{A}}}{\R}{x}{f\left(\frac{1}{x}\right)}\). 
+Alors \(f\) admet le développement asymptotique~\eqref{eq:DA} si et seulement si 
+\(g\) admet le \(DL_n(0)\) suivant
 \begin{equation}
   g(x)= \sum_{k=0}^n \alpha_k x^k + \petitof{0}{x^n}.
 \end{equation}
-Pour travailler en \(+\infty\) on fera le changement de variabel \(x=\frac{1}{t}\) afin de se ramener en zéro et de pouvoir utiliser les résultats sur les fonctions usuelles. On peut généraliser encore la notion de développement asymptotique. Si \(\gamma \in \R\), si \(t \longmapsto t^\gamma f(t)\) admet le développement asymptotique
+Pour travailler en \(+\infty\) on fera le changement de variabel 
+\(x=\frac{1}{t}\) afin de se ramener en zéro et de pouvoir utiliser les 
+résultats sur les fonctions usuelles. On peut généraliser encore la notion de 
+développement asymptotique. Si \(\gamma \in \R\), si \(t \longmapsto t^\gamma 
+f(t)\) admet le développement asymptotique
 \begin{align}
-  t^\gamma f(t) &= \sum_{k=0}^n \alpha_k \frac{1}{t^k} + \petitof{+\infty}{\frac{1}{t^n}} \\
-  f(t)&= \sum_{k=0}^n \alpha_k \frac{1}{t^{\gamma +k}} + \petitof{+\infty}{\frac{1}{t^{n+\gamma}}}
+  t^\gamma f(t) &= \sum_{k=0}^n \alpha_k \frac{1}{t^k} + 
+  \petitof{+\infty}{\frac{1}{t^n}} \\
+  f(t)&= \sum_{k=0}^n \alpha_k \frac{1}{t^{\gamma +k}} + 
+  \petitof{+\infty}{\frac{1}{t^{n+\gamma}}}
 \end{align}
 Par exemple avec \(\gamma=-1\)
 \begin{align}
-  \frac{f(t)}{t} &= \alpha_0 + \frac{\alpha_1}{t} + \dotsb + \frac{\alpha_n}{t^n} + \petitof{+\infty}{\frac{1}{t^n}} \\
-  f(t) &= \alpha_0 t +\alpha_1 + \dotsb + \frac{\alpha_n}{t^{n-1}} + \petitof{+\infty}{\frac{1}{t^{n-1}}}
+  \frac{f(t)}{t} &= \alpha_0 + \frac{\alpha_1}{t} + \dotsb + 
+  \frac{\alpha_n}{t^n} + \petitof{+\infty}{\frac{1}{t^n}} \\
+  f(t) &= \alpha_0 t +\alpha_1 + \dotsb + \frac{\alpha_n}{t^{n-1}} + 
+  \petitof{+\infty}{\frac{1}{t^{n-1}}}
 \end{align}
-La droite d'équation \(y=\alpha_0 x +\alpha_1\) est asymptote à la courbe représentative de \(f\) en \(+\infty\) et
+La droite d'équation \(y=\alpha_0 x +\alpha_1\) est asymptote à la courbe 
+représentative de \(f\) en \(+\infty\) et
 \begin{equation}
   f(t)-\alpha_0 t -\alpha_1 \sim_\infty \frac{\alpha_2}{t},
 \end{equation}
-avec \(\alpha_2 \neq 0\). La position de la courbe par rapport à l'asymptote est donnée par le signe de \(\alpha_2\). S'il est positif, la courbe est au-dessus.
+avec \(\alpha_2 \neq 0\). La position de la courbe par rapport à l'asymptote est 
+donnée par le signe de \(\alpha_2\). S'il est positif, la courbe est au-dessus.
 
-Ceci est généralisable à \(f(t) = \alpha_0 + \alpha_1 t + \frac{\alpha_p}{t^{p-1}} + \petitof{+\infty}{\frac{1}{t^{p-1}}}\) avec \(\alpha_p \neq 0\). La position de la courbe par rapport à l'asymptote sera donnée par le signe de \(\alpha_p\).
-
+Ceci est généralisable à \(f(t) = \alpha_0 + \alpha_1 t + 
+\frac{\alpha_p}{t^{p-1}} + \petitof{+\infty}{\frac{1}{t^{p-1}}}\) avec 
+\(\alpha_p \neq 0\). La position de la courbe par rapport à l'asymptote sera 
+donnée par le signe de \(\alpha_p\).

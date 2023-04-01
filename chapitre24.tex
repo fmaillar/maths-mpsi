@@ -8,34 +8,50 @@
 
 \subsection{Groupes \((\S(E),\circ)\)}
 
-\emph{Rappel}~: Soit un ensemble fini \(E\). On note \(\S(E)\) l'ensemble des permutations de \(E\). Nous avons vu que \((\S(E),\circ)\) était un groupe.
+\emph{Rappel}~: Soit un ensemble fini \(E\). On note \(\S(E)\) l'ensemble des 
+permutations de \(E\). Nous avons vu que \((\S(E),\circ)\) était un groupe.
 
-Soient deux ensembles finis \(E\) et \(F\) de même cardinal. Il existe alors une bijection \(f: E \rightarrow F\). Montrons que \((\S(E),\circ)\) et \((\S(F),\circ)\) sont isomorphes. Soit \(\fonction{\varphi}{\S(E)}{\S(F)}{\sigma}{f \circ \sigma \circ f^{-1}}\). Pour toute permutation \(\sigma\) de \(\S(E)\), comme \(f\), \(f^{-1}\) sont bijective alors \(\varphi(\sigma)\) est bijective. L'application \(\varphi\) est bien définie.
+Soient deux ensembles finis \(E\) et \(F\) de même cardinal. Il existe alors une 
+bijection \(f: E \rightarrow F\). Montrons que \((\S(E),\circ)\) et 
+\((\S(F),\circ)\) sont isomorphes. Soit 
+\(\fonction{\varphi}{\S(E)}{\S(F)}{\sigma}{f \circ \sigma \circ f^{-1}}\). Pour 
+toute permutation \(\sigma\) de \(\S(E)\), comme \(f\), \(f^{-1}\) sont 
+bijective alors \(\varphi(\sigma)\) est bijective. L'application \(\varphi\) est 
+bien définie.
 
 Pour toutes permutations \(\sigma \in \S(E)\) et \(\sigma' \in \S(F)\) on a
 \begin{align}
   \varphi(\sigma) = \sigma' &\iff f \circ \sigma \circ f^{-1} = \sigma' \\
-                            & \iff \sigma =f^{-1} \circ \sigma' \circ f.
+  & \iff \sigma =f^{-1} \circ \sigma' \circ f.
 \end{align}
-Tout élément de \(\S(F)\) admet un et un seul antécédent par \(\varphi\)~: \(\varphi\) est bijective.
+Tout élément de \(\S(F)\) admet un et un seul antécédent par \(\varphi\)~: 
+\(\varphi\) est bijective.
 
 Pour toutes permutations \(\sigma, \zeta\) de \(E\), on a
 \begin{align}
-  \varphi(\sigma) \circ \varphi(\zeta) &= (f \circ \sigma \circ f^{-1}) \circ (f \circ \zeta \circ f^{-1}) \\
-                                       & = f \circ \sigma \circ (f^{-1} \circ f) \circ \zeta \circ f^{-1} \\
-                                       & = \varphi(\sigma \circ \zeta).
+  \varphi(\sigma) \circ \varphi(\zeta) &= (f \circ \sigma \circ f^{-1}) \circ (f 
+  \circ \zeta \circ f^{-1}) \\
+  & = f \circ \sigma \circ (f^{-1} \circ f) \circ \zeta \circ f^{-1} \\
+  & = \varphi(\sigma \circ \zeta).
 \end{align}
-Alors \(\varphi\) est un isomorphisme du groupe \((\S(E),\circ)\) sur \((\S(F),\circ)\).
+Alors \(\varphi\) est un isomorphisme du groupe \((\S(E),\circ)\) sur 
+\((\S(F),\circ)\).
 
-\emph{Conséquence}~: Pour tout naturel non nul \(n\), si \(E\) est fini de cardinal \(n\) alors \((\S(E),\circ)\) est isomorphe à  \((\S(\intervalleentier{1}{n}),\circ)\).
+\emph{Conséquence}~: Pour tout naturel non nul \(n\), si \(E\) est fini de 
+cardinal \(n\) alors \((\S(E),\circ)\) est isomorphe à  
+\((\S(\intervalleentier{1}{n}),\circ)\).
 
 \subsection{Définition de \(\sigma_n\)}
 
 \begin{defdef}
-  Pour tout naturel non nul \(n\), on appelle groupe symétrique de type \(n\), noté \(\sigma_n\), le groupe des permutations de l'ensemble \(\intervalleentier{1}{n}\). Son cardinal vaut \(n\)!.
+  Pour tout naturel non nul \(n\), on appelle groupe symétrique de type \(n\), 
+  noté \(\sigma_n\), le groupe des permutations de l'ensemble 
+  \(\intervalleentier{1}{n}\). Son cardinal vaut \(n\)!.
 \end{defdef}
 
-\emph{Vocabulaire}~: Si \(\sigma\) et \(\zeta\) sont deux éléments de \(\sigma_n\), on parlera du ``produit'' de \(\sigma\) par \(\zeta\) pour désigner la composée \(\sigma \circ \zeta\).
+\emph{Vocabulaire}~: Si \(\sigma\) et \(\zeta\) sont deux éléments de 
+\(\sigma_n\), on parlera du ``produit'' de \(\sigma\) par \(\zeta\) pour 
+désigner la composée \(\sigma \circ \zeta\).
 
 \danger \(\sigma_n\) n'est pas commutatif.
 
@@ -44,9 +60,12 @@ Alors \(\varphi\) est un isomorphisme du groupe \((\S(E),\circ)\) sur \((\S(F),\
 \subsubsection{Transpositions (\(n\geqslant 2\))}
 
 \begin{defdef}
-  On appelle transposition de \(\intervalleentier{1}{n}\) toute permutation \(t \in \sigma_n\) telle qu'il existe un couple \((i,j) \in \intervalleentier{1}{n}^2\) avec \(i\neq j\) vérifiant
+  On appelle transposition de \(\intervalleentier{1}{n}\) toute permutation \(t 
+  \in \sigma_n\) telle qu'il existe un couple \((i,j) \in 
+  \intervalleentier{1}{n}^2\) avec \(i\neq j\) vérifiant
   \begin{equation}
-    t(i) = j \quad t(j) = i \quad \forall k \in \intervalleentier{1}{n} \setminus\{i,j\} \ t(k) = k.
+    t(i) = j \quad t(j) = i \quad \forall k \in \intervalleentier{1}{n} 
+    \setminus\{i,j\} \ t(k) = k.
   \end{equation}
 \end{defdef}
 
@@ -55,29 +74,42 @@ Alors \(\varphi\) est un isomorphisme du groupe \((\S(E),\circ)\) sur \((\S(F),\
 \subsubsection{Cycles}
 
 \begin{defdef}
-  Soit un entier \(p\) tel que \(2 \leqslant p \leqslant n\). On appelle cycle de longueur \(p\) tout \(c \in \sigma_n\) vérifiant~: il existe \(a_1, \ldots, a_p\) dans \(\intervalleentier{1}{n}\), deux à deux distincts, tels que
+  Soit un entier \(p\) tel que \(2 \leqslant p \leqslant n\). On appelle cycle 
+  de longueur \(p\) tout \(c \in \sigma_n\) vérifiant~: il existe \(a_1, \ldots, 
+  a_p\) dans \(\intervalleentier{1}{n}\), deux à deux distincts, tels que
   \begin{equation}
     \begin{cases}
       \forall i \in \intervalleentier{1}{p-1} \quad c(a_i) = a_{i+1} \\
       c(a_p) = a_1\\
-      \forall k \in \intervalleentier{1}{n} \setminus \{a_1, \ldots, a_p\} \quad c(k) = k
+      \forall k \in \intervalleentier{1}{n} \setminus \{a_1, \ldots, a_p\} \quad 
+      c(k) = k
     \end{cases}.
   \end{equation}
 \end{defdef}
 
 \emph{Notation}~: Un tel cycle \(c\) est noté \(c = (a_1, \ldots, a_p)\).
 
-\emph{Remarque}~: Un cycle de longueur 2 est une transposition et un cycle de longueur \(n\) est une permutation circulaire.
+\emph{Remarque}~: Un cycle de longueur 2 est une transposition et un cycle de 
+longueur \(n\) est une permutation circulaire.
 
 \subsubsection{Conséquences}
 
-Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = (1,2)\) et \(t_2 = (1,3)\). Alors \(t_1 \circ t_2 = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2\end{pmatrix}\) (c'est une permutation circulaire) et \(t_2 \circ t_1 = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 3 & 1\end{pmatrix}\) (c'est une autre permutation circulaire) et \(t_1 \circ t_2 \neq t_2 \circ t_1\).
+Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = 
+(1,2)\) et \(t_2 = (1,3)\). Alors \(
+t_1 \circ t_2 = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2
+\end{pmatrix}
+\) (c'est une permutation circulaire) et \(t_2 \circ t_1 = \begin{pmatrix} 1 & 2 
+  & 3 \\ 2 & 3 & 1
+\end{pmatrix}
+\) (c'est une autre permutation circulaire) et \(t_1 \circ t_2 \neq t_2 \circ 
+t_1\).
 
 \emph{Exemples}~:
 \begin{enumerate}
   \item si \(n = 1\) alors \(\sigma_1 = \{\Id\}\);
   \item si \(n = 2\) alors \(\sigma_2 = \{\Id, (1,2)\}\);
-  \item si \(n = 3\) alors \(\sigma_2 = \{\Id, (1,2), (1,3), (2,3), (1,2,3), (1,3,2)\}\).
+  \item si \(n = 3\) alors \(\sigma_2 = \{\Id, (1,2), (1,3), (2,3), (1,2,3), 
+    (1,3,2)\}\).
 \end{enumerate}
 
 \section{Signature d'une permutation}
@@ -85,15 +117,22 @@ Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = (
 \subsection{Première définition}
 
 \begin{defdef}
-  Soit \(n\geqslant 2\) et \(\sigma \in \sigma_n\). Soit \((i,j) \in \intervalleentier{1}{n}^2\) tel que \(i<j\). On dit que le couple \((i,j)\) présente une \emph{inversion} pour \(\sigma\) si et seulement si \(\sigma(i)>\sigma(j)\).
+  Soit \(n\geqslant 2\) et \(\sigma \in \sigma_n\). Soit \((i,j) \in 
+  \intervalleentier{1}{n}^2\) tel que \(i<j\). On dit que le couple \((i,j)\) 
+  présente une \emph{inversion} pour \(\sigma\) si et seulement si 
+  \(\sigma(i)>\sigma(j)\).
 
-  On note \(I(\sigma)\) le nombre d'inversion de la permutation \(\sigma\) et on pose que la signature de \(\sigma\) vaut
+  On note \(I(\sigma)\) le nombre d'inversion de la permutation \(\sigma\) et on 
+  pose que la signature de \(\sigma\) vaut
   \begin{equation}
     \epsilon(\sigma) = (-1)^{I(\sigma)}.
   \end{equation}
 \end{defdef}
 
-\emph{Exemple}~: Soit la permutation \(\sigma = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 1 & 2\end{pmatrix}\). Alors~:
+\emph{Exemple}~: Soit la permutation \(\sigma = \begin{pmatrix} 1 & 2 & 3 \\ 3 & 
+  1 & 2
+\end{pmatrix}
+\). Alors~:
 \begin{itemize}
   \item \((1,2)\) est une inversion puisque \(3>1\);
   \item \((1,3)\) est une inversion puisque \(3>2\);
@@ -102,9 +141,12 @@ Si \(n\geqslant 3\), le groupe \(\sigma_n\) n'est pas commutatif. Soit \(t_1 = (
 Ainsi la signature de \(\sigma\) vaut \(1\).
 
 \begin{defdef}
-  Soit \(\sigma \in \sigma_n\). On dit que \(\sigma\) est paire si sa signature vaut \(1\) et impaire si elle vaut \(-1\).
+  Soit \(\sigma \in \sigma_n\). On dit que \(\sigma\) est paire si sa signature 
+  vaut \(1\) et impaire si elle vaut \(-1\).
 \end{defdef}
-\danger Ne pas confondre la parité d'une permutation avec la parité d'une application. D'ailleurs ça n'a aucun sens puisque \(\intervalleentier{1}{n}\) n'est pas centré en zéro.
+\danger Ne pas confondre la parité d'une permutation avec la parité d'une 
+application. D'ailleurs ça n'a aucun sens puisque \(\intervalleentier{1}{n}\) 
+n'est pas centré en zéro.
 %
 \begin{theo}
   Les transpositions sont des permutations impaires.
@@ -112,19 +154,23 @@ Ainsi la signature de \(\sigma\) vaut \(1\).
 \begin{proof}
   Soit \((i,j) \in \intervalleentier{1}{n} ^2\) tel que \(i<j\), alors
   \begin{equation}
-    t = \begin{pmatrix} 1 & \ldots & i-1 & i & i+1& \ldots& j-1& j& j+1 &\ldots& n \\ 1 & \ldots & i-1 & j & i+1& \ldots& j-1& i& j+1 &\ldots& n\end{pmatrix}
+    t = \begin{pmatrix} 1 & \ldots & i-1 & i & i+1& \ldots& j-1& j& j+1 &\ldots& 
+    n \\ 1 & \ldots & i-1 & j & i+1& \ldots& j-1& i& j+1 &\ldots& n\end{pmatrix}
   \end{equation}
   Inversions~:
   \begin{itemize}
     \item \((i,i+1)\) \ldots \((i,j)\);
     \item \((i+1,j)\) \ldots \((j-1,j)\).
   \end{itemize}
-  Alors au final on a \(I(\sigma)=[j-(i+1)+1]+[(j-1)-(i+1)+1] = 2(j-i)-1\) qui est un nombre impair donc la signature vaut \(\epsilon(\sigma) = -1\) et donc \(t\) est une permutation impaire.
+  Alors au final on a \(I(\sigma)=[j-(i+1)+1]+[(j-1)-(i+1)+1] = 2(j-i)-1\) qui 
+  est un nombre impair donc la signature vaut \(\epsilon(\sigma) = -1\) et donc 
+  \(t\) est une permutation impaire.
 \end{proof}
 
 \subsection{Deuxième définition}
 
-La signature d'une permutation peut également être définie de la façon suivante~:
+La signature d'une permutation peut également être définie de la façon 
+suivante~:
 \begin{defdef}
   Soit \(\sigma \in \sigma_n\), la signature de \(\sigma\) est
   \begin{equation}
@@ -133,22 +179,29 @@ La signature d'une permutation peut également être définie de la façon suiva
 \end{defdef}
 Montrons que cette définition est équivalente à la première.
 \begin{proof}
-  Notons \(A = \enstq{(i,j) \in \intervalleentier{1}{n}^2}{i<j}\), \(N = \prod_{i<j}\sigma(j)-\sigma(i)\) et \(D = \prod_{i<j} j-i\). Soit \((i,j) \in A\) et posons \(h = \min(\sigma(i),\sigma(j)) \in A\) et \(k = \max(\sigma(i),\sigma(j))\in A\). L'application \(\fonction{\psi}{A}{A}{(i,j)}{(h,k)}\) est une bijection. On a
+  Notons \(A = \enstq{(i,j) \in \intervalleentier{1}{n}^2}{i<j}\), \(N = 
+  \prod_{i<j}\sigma(j)-\sigma(i)\) et \(D = \prod_{i<j} j-i\). Soit \((i,j) \in 
+  A\) et posons \(h = \min(\sigma(i),\sigma(j)) \in A\) et \(k = 
+  \max(\sigma(i),\sigma(j))\in A\). L'application 
+  \(\fonction{\psi}{A}{A}{(i,j)}{(h,k)}\) est une bijection. On a
   \begin{equation}
     \sigma(j)-\sigma(i) = \epsilon_{ij} (k-h),
   \end{equation}
-  avec \(\epsilon_{ij} = 1\) si \((i,j)\) n'est pas une inversion pour \(\sigma\) et \(-1\) si c'est une inversion pour \(\sigma\). Ainsi
+  avec \(\epsilon_{ij} = 1\) si \((i,j)\) n'est pas une inversion pour 
+  \(\sigma\) et \(-1\) si c'est une inversion pour \(\sigma\). Ainsi
   \begin{align}
-    \frac{N}{D} &= \frac{\prod_{(i,j) \in A}\epsilon_{ij}\prod_{(i,j) \in A}(k-h)}{\prod_{(i,j) \in A}(j-i)}\\
-                & = \prod_{(i,j) \in A}\epsilon_{ij}\\
-                & = (-1)^{I(\sigma)}.  
-  \end{align}
+    \frac{N}{D} &= \frac{\prod_{(i,j) \in A}\epsilon_{ij}\prod_{(i,j) \in 
+    A}(k-h)}{\prod_{(i,j) \in A}(j-i)}\\
+    & = \prod_{(i,j) \in A}\epsilon_{ij}\\
+  & = (-1)^{I(\sigma)}.  \end{align}
 \end{proof}
 
 \subsection{Morphisme \(\epsilon\)}
 
 \begin{theo}
-  Soit \(n\geqslant 2\). L'application \(\fonction{\epsilon}{(\sigma_n,\circ)}{(\{-1,1\},\times)}{\sigma}{\epsilon(\sigma)}\) est un morphisme de groupes surjectif.
+  Soit \(n\geqslant 2\). L'application 
+  \(\fonction{\epsilon}{(\sigma_n,\circ)}{(\{-1,1\},\times)}{\sigma}{\epsilon(\sigma)}\) 
+  est un morphisme de groupes surjectif.
 \end{theo}
 \begin{proof}
   L'application \(\epsilon\) est bien définie. Ensuite~:
@@ -160,9 +213,12 @@ Montrons que cette définition est équivalente à la première.
 
   Soient \(\sigma\) et \(s\) deux éléments de \(\sigma_n\). Alors
   \begin{align}
-    \epsilon(\sigma \circ s) &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{j-i} \\
-                             & = \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)} \prod_{(i,j)\in A} \frac{s(j)-s(i)}{j-i}\\
-                             &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)}\epsilon(s).
+    \epsilon(\sigma \circ s) &= \prod_{(i,j)\in A} \frac{\sigma\circ 
+    s(j)-\sigma\circ s(i)}{j-i} \\
+    & = \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ s(i)}{s(j)-s(i)} 
+    \prod_{(i,j)\in A} \frac{s(j)-s(i)}{j-i}\\
+    &= \prod_{(i,j)\in A} \frac{\sigma\circ s(j)-\sigma\circ 
+    s(i)}{s(j)-s(i)}\epsilon(s).
   \end{align}
   On note \(h = \min(s(i),s(j))\) et \(k = \max(s(i),s(j))\), l'application
   \begin{equation}
@@ -170,22 +226,27 @@ Montrons que cette définition est équivalente à la première.
   \end{equation}
   est une bijection. D'où
   \begin{equation}
-    \epsilon(\sigma \circ s) = \prod_{(i,j)\in A} \frac{\sigma(k)-\sigma(h)}{k-h}\epsilon(s) = \epsilon(\sigma)\epsilon(s).
+    \epsilon(\sigma \circ s) = \prod_{(i,j)\in A} 
+    \frac{\sigma(k)-\sigma(h)}{k-h}\epsilon(s) = \epsilon(\sigma)\epsilon(s).
   \end{equation}
   L'application \(\epsilon\) est bien un morphisme.
 \end{proof}
 
-\emph{Remarque}~: L'hypothèse \(n \geqslant 2\) ne sert à démontrer que la surjectivité.
+\emph{Remarque}~: L'hypothèse \(n \geqslant 2\) ne sert à démontrer que la 
+surjectivité.
 
 \begin{corth}
-  Pour tout \(\sigma \in \sigma_n\), \(\epsilon(\sigma^{-1})=\epsilon(\sigma)^{-1} = \epsilon(\sigma)\).
+  Pour tout \(\sigma \in \sigma_n\), 
+  \(\epsilon(\sigma^{-1})=\epsilon(\sigma)^{-1} = \epsilon(\sigma)\).
 \end{corth}
-Le produit de deux permutations de même parité est paire et le produit de deux permutations de parités différentes est impaire.
+Le produit de deux permutations de même parité est paire et le produit de deux 
+permutations de parités différentes est impaire.
 
 \subsection{Groupe alterné \(\A_n\)}
 
 \begin{defdef}
-  On appelle groupe alterné de type \(n\) l'ensemble des permutations paires de \(\intervalleentier{1}{n}\),
+  On appelle groupe alterné de type \(n\) l'ensemble des permutations paires de 
+  \(\intervalleentier{1}{n}\),
   \begin{equation}
     \A_n = \enstq{\sigma \in \sigma_n}{\epsilon(\sigma) = 1}.
   \end{equation}
@@ -194,10 +255,12 @@ Le produit de deux permutations de même parité est paire et le produit de deux
   \((\A_n,\circ)\) est un sous-groupe de \((\sigma_n,\circ)\).
 \end{prop}
 \begin{proof}
-  Il suffit de voir que \(\A_n = \ker \sigma\). Le noyau d'un morphisme est un sous-groupe.
+  Il suffit de voir que \(\A_n = \ker \sigma\). Le noyau d'un morphisme est un 
+  sous-groupe.
 \end{proof}
 
-Par contre l'ensemble des permutations impaires n'est pas stable. On ne peut donc pas définir de groupe des permutations impaires.
+Par contre l'ensemble des permutations impaires n'est pas stable. On ne peut 
+donc pas définir de groupe des permutations impaires.
 
 \begin{prop}
   Soit \(n \geqslant 2\). Soit \(\tau_0\) une permutation impaire fixée. Alors
@@ -210,7 +273,12 @@ Par contre l'ensemble des permutations impaires n'est pas stable. On ne peut don
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit l'application \(\fonction{\varphi}{\A_n}{\sigma_n \setminus \A_n}{\sigma}{\sigma \circ \tau_0}\). Elle est bien définie puisque pour toute \(\sigma \in \A_n\) on a\(\epsilon(\sigma \circ \tau_0) = -1\). Soit aussi l'application \(\fonction{\varphi}{\sigma_n \setminus \A_n}{\A_n}{\sigma}{\sigma \circ \tau_0^{-1}}\) (qui est aussi bien défini puisque le produit de deux permutations impaires est paire).
+  Soit l'application \(\fonction{\varphi}{\A_n}{\sigma_n \setminus 
+  \A_n}{\sigma}{\sigma \circ \tau_0}\). Elle est bien définie puisque pour toute 
+  \(\sigma \in \A_n\) on a\(\epsilon(\sigma \circ \tau_0) = -1\). Soit aussi 
+  l'application \(\fonction{\varphi}{\sigma_n \setminus 
+  \A_n}{\A_n}{\sigma}{\sigma \circ \tau_0^{-1}}\) (qui est aussi bien défini 
+  puisque le produit de deux permutations impaires est paire).
 
   Pour toute \(\sigma \in \A_n\), on a
   \begin{equation}
@@ -222,7 +290,9 @@ Par contre l'ensemble des permutations impaires n'est pas stable. On ne peut don
   \end{equation}
   Par caractérisation des bijections, l'application \(\varphi\) est bijective.
 
-  \(\A_n\) et \(\sigma_n \setminus \A_n\) sont des ensembles finis et il existe une bijection de \(\A_n\) sur \(\sigma_n \setminus \A_n\). Donc ils ont le même cardinal et comme ils forment une partition de \(\sigma_n\) on a bien
+  \(\A_n\) et \(\sigma_n \setminus \A_n\) sont des ensembles finis et il existe 
+  une bijection de \(\A_n\) sur \(\sigma_n \setminus \A_n\). Donc ils ont le 
+  même cardinal et comme ils forment une partition de \(\sigma_n\) on a bien
   \begin{equation}
     \Card \A_n = \Card \sigma_n \setminus \A_n = \frac{n!}{2}.
   \end{equation}
@@ -231,25 +301,44 @@ Par contre l'ensemble des permutations impaires n'est pas stable. On ne peut don
 \section{Décomposition d'une permutation en produits de transpositions}
 
 \begin{theo}
-  Soit \(n \geqslant 2\). Toute permutation \(\sigma \in \sigma_n\) peut s'écrire comme un produit fini de transpositions. Cette décomposition n'est pas unique
+  Soit \(n \geqslant 2\). Toute permutation \(\sigma \in \sigma_n\) peut 
+  s'écrire comme un produit fini de transpositions. Cette décomposition n'est 
+  pas unique
 \end{theo}
 \begin{proof}
-  On montre par réccurence sur \(n\geqslant 2\) l'assertion \(\P(n)\) ``Toute \(\sigma \in \sigma_n\) peut s'écrire comme un produit fini de transpositions''.
+  On montre par réccurence sur \(n\geqslant 2\) l'assertion \(\P(n)\) ``Toute 
+  \(\sigma \in \sigma_n\) peut s'écrire comme un produit fini de 
+  transpositions''.
 
-  \emph{Initialisation}~: \(n = 2\). Déja \(\sigma_n = \{\Id, (1,2)\}\) et \(\Id = (1,2) \circ (1,2)\). \(\P(2)\) est vraie.
+  \emph{Initialisation}~: \(n = 2\). Déja \(\sigma_n = \{\Id, (1,2)\}\) et \(\Id 
+  = (1,2) \circ (1,2)\). \(\P(2)\) est vraie.
 
-  \emph{Hérédité}~: Soit \(n\geqslant 2\) et on suppose \(\P(n)\). Soit \(\sigma \in \sigma_{n+1}\). On distingue deux cas.
+  \emph{Hérédité}~: Soit \(n\geqslant 2\) et on suppose \(\P(n)\). Soit \(\sigma 
+  \in \sigma_{n+1}\). On distingue deux cas.
 
-  \emph{Premier cas}~: Si \(\sigma(n+1) = n+1\), alors \(\sigma(\intervalleentier{1}{n}) = \intervalleentier{1}{n}\). On peut définir \(\tau\) comme la restriction au départ et à l'arrivée à \(\intervalleentier{1}{n}\), \(\tau \in \sigma_n\). En lui appliquant \(\P(n)\), on trouve qu'il existe \(p \in \N^*\), \(\tau_1, \ldots, \tau_p\) des transpositions de \(\sigma_n\) telles que \(\tau = \tau_1 \circ \ldots \circ \tau_p\). On prolonge les \(\tau_i\) en \(n+1\) en posant \(\tau_i(n+1) = n+1\). Alors \(\tau(n+1) = n+1\). Finalement \(\sigma = \tau_1 \circ \ldots \circ \tau_p\).
+  \emph{Premier cas}~: Si \(\sigma(n+1) = n+1\), alors 
+  \(\sigma(\intervalleentier{1}{n}) = \intervalleentier{1}{n}\). On peut définir 
+  \(\tau\) comme la restriction au départ et à l'arrivée à 
+  \(\intervalleentier{1}{n}\), \(\tau \in \sigma_n\). En lui appliquant 
+  \(\P(n)\), on trouve qu'il existe \(p \in \N^*\), \(\tau_1, \ldots, \tau_p\) 
+  des transpositions de \(\sigma_n\) telles que \(\tau = \tau_1 \circ \ldots 
+  \circ \tau_p\). On prolonge les \(\tau_i\) en \(n+1\) en posant \(\tau_i(n+1) 
+  = n+1\). Alors \(\tau(n+1) = n+1\). Finalement \(\sigma = \tau_1 \circ \ldots 
+  \circ \tau_p\).
 
-  \emph{Deuxième cas}~: Si \(\sigma(n+1)\neq n+1\) on pose \(t_0 = (\sigma(n+1),n+1)\) et \(s = t_0 \circ \sigma\) et on applique le premier cas à \(s\).
+  \emph{Deuxième cas}~: Si \(\sigma(n+1)\neq n+1\) on pose \(t_0 = 
+  (\sigma(n+1),n+1)\) et \(s = t_0 \circ \sigma\) et on applique le premier cas 
+  à \(s\).
 
   Finalement \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion}~: On a montré que \(\P(2)\) est vraie et que pour tout \(n\geqslant 2\) \(\P(n) \implies \P(n+1)\). Alors le théorème de récurrence nous dit que \(\P\) est vraie pour tout \(n\geqslant 2\).
+  \emph{Conclusion}~: On a montré que \(\P(2)\) est vraie et que pour tout 
+  \(n\geqslant 2\) \(\P(n) \implies \P(n+1)\). Alors le théorème de récurrence 
+  nous dit que \(\P\) est vraie pour tout \(n\geqslant 2\).
 \end{proof}
 
-\emph{Exemple}~: On considère un cycle \(c = (a_1, \ldots, a_p)\) alors \(c = (a_1,a_2) \circ (a_2,a_3) \circ \ldots \circ (a_{p-1},a_p)\). Ainsi
+\emph{Exemple}~: On considère un cycle \(c = (a_1, \ldots, a_p)\) alors \(c = 
+(a_1,a_2) \circ (a_2,a_3) \circ \ldots \circ (a_{p-1},a_p)\). Ainsi
 \begin{equation}
   \epsilon(c) = \epsilon(t_1) \ldots \epsilon(t_{p-1}) = (-1)^{p-1}.
 \end{equation}

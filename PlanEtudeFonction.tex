@@ -1,16 +1,28 @@
 \chapter{Plan d'étude d'une fonction}
 
-Soient \(I\) un intervalle réel contenant au moins deux points (ou éventuellement une réunion d'intervalles) et \(f : I \longmapsto \R\) une application. On note \(\courbe_f\) sa courbe représentative dans un repère orthonormal du plan.
+Soient \(I\) un intervalle réel contenant au moins deux points (ou 
+éventuellement une réunion d'intervalles) et \(f : I \longmapsto \R\) une 
+application. On note \(\courbe_f\) sa courbe représentative dans un repère 
+orthonormal du plan.
 
 \section{Domaine de définition}
 
-Si nécessaire, on étudie le domaine de définition de l'application \(f\). On détermine ensuite les éventuelles symétries de la fonctions \(f\) (périodicité, parité). Si \(f\) est paire, impaire et/ou périodique, on peut se placer sur un sous-intervalle de \(I\) bien choisi pour la suite de l'étude.
+Si nécessaire, on étudie le domaine de définition de l'application \(f\). On 
+détermine ensuite les éventuelles symétries de la fonctions \(f\) (périodicité, 
+parité). Si \(f\) est paire, impaire et/ou périodique, on peut se placer sur un 
+sous-intervalle de \(I\) bien choisi pour la suite de l'étude.
 
 \section{Étude des variations}
 
-Si \(f\) est dérivable sur \(I\), ce qu'on justifies succinctement, on calcule la dérivée de \(f\) et on étudie son signe. Sinon, il faudra étudier les variations ``à la main''. C'est un cas rare, en général seuls quelques points posent d'éventuels problèmes.
+Si \(f\) est dérivable sur \(I\), ce qu'on justifies succinctement, on calcule 
+la dérivée de \(f\) et on étudie son signe. Sinon, il faudra étudier les 
+variations ``à la main''. C'est un cas rare, en général seuls quelques points 
+posent d'éventuels problèmes.
 
-On établit ensuite un tableau de variations sur l'intervalle considéré, où l'on précisera les valeurs exactes remarquables, les limites, les prolongements par continuité éventuels, pour lesquels on étudiera alors la dérivabilité de la fonction prolongée.
+On établit ensuite un tableau de variations sur l'intervalle considéré, où l'on 
+précisera les valeurs exactes remarquables, les limites, les prolongements par 
+continuité éventuels, pour lesquels on étudiera alors la dérivabilité de la 
+fonction prolongée.
 
 \section{Étude aux bornes}
 
@@ -20,22 +32,33 @@ Notons que si \(I\) est un segment, il n'y a rien à faire ici.
 
 On suppose que \(I=[c, +\infty[\) avec \(c \in \R\).
 \begin{defdef}
-  On dit que la droite d'équation \(y=ax+b\) est asymptote à la courbe \(\courbe_f\) en \(+\infty\) si et seulement si
+  On dit que la droite d'équation \(y=ax+b\) est asymptote à la courbe 
+  \(\courbe_f\) en \(+\infty\) si et seulement si
   \begin{equation}
     \lim\limits_{x \to \infty} f(x)-[ax+b]=0
   \end{equation}
 \end{defdef}
 \begin{enumerate}
-\item Si \(f\) admet une limite finie \(\ell\) en \(+\infty\), la courbe \(\courbe_f\) admet pour asymptote la droite d'équation \(y=\ell\);
-\item Si \(f\) admet une limite infinie en \(+\infty\), on recherche l'existence d'une direction asymptotique en étudiant la quantité \(\frac{f(x)}{x}\) en \(+\infty\)
-  \begin{enumerate}
-  \item Si \(\frac{f(x)}{x}\) tend vers \(\pm \infty\) alors la courbe \(\courbe_f\) admet une branche parabolique de direction verticale;
-  \item Si \(\frac{f(x)}{x}\) tend vers une limite réelle \(a\) alors la courbe \(\courbe_f\) admet la direction asymptotique d'équation \(y=ax\). On détermine l'éventuelle existence d'une asymptote en étudiant la quantité \(f(x)-ax\)
+  \item Si \(f\) admet une limite finie \(\ell\) en \(+\infty\), la courbe 
+    \(\courbe_f\) admet pour asymptote la droite d'équation \(y=\ell\);
+  \item Si \(f\) admet une limite infinie en \(+\infty\), on recherche 
+    l'existence d'une direction asymptotique en étudiant la quantité 
+    \(\frac{f(x)}{x}\) en \(+\infty\)
     \begin{enumerate}
-    \item Si \(f(x)-ax\) tend vers une limite \(b\) réelle alors la courbe \(\courbe_f\) admet pour asymptote la droite d'équation \(y=ax+b\);
-    \item Si \(f(x)-ax\) tend vers une limite infinie alors la courbe \(\courbe_f\) admet une branche parabolique de direction asymptotique la droite \(y=ax\).
+      \item Si \(\frac{f(x)}{x}\) tend vers \(\pm \infty\) alors la courbe 
+        \(\courbe_f\) admet une branche parabolique de direction verticale;
+      \item Si \(\frac{f(x)}{x}\) tend vers une limite réelle \(a\) alors la 
+        courbe \(\courbe_f\) admet la direction asymptotique d'équation 
+        \(y=ax\). On détermine l'éventuelle existence d'une asymptote en 
+        étudiant la quantité \(f(x)-ax\)
+        \begin{enumerate}
+          \item Si \(f(x)-ax\) tend vers une limite \(b\) réelle alors la courbe 
+            \(\courbe_f\) admet pour asymptote la droite d'équation \(y=ax+b\);
+          \item Si \(f(x)-ax\) tend vers une limite infinie alors la courbe 
+            \(\courbe_f\) admet une branche parabolique de direction 
+            asymptotique la droite \(y=ax\).
+        \end{enumerate}
     \end{enumerate}
-  \end{enumerate}
 \end{enumerate}
 
 \subsection{Étude à gauche d'un réel \(d\)}
@@ -43,12 +66,18 @@ On suppose que \(I=[c, +\infty[\) avec \(c \in \R\).
 On suppose que \(I=[c, d[\) avec \(c,d \in \R\) tels que \(c<d\).
 
 \begin{enumerate}
-\item Si \(f\) admet une limite en \(d\) finie \(\ell\), on peut prolonger \(f\) par continuité en \(d\);
-\item Si \(f\) admet une limite en \(d\) infinie, alors la courbe \(\courbe_f\) admet pour asymptote la droite d'équation \(x=d\).
+  \item Si \(f\) admet une limite en \(d\) finie \(\ell\), on peut prolonger 
+    \(f\) par continuité en \(d\);
+  \item Si \(f\) admet une limite en \(d\) infinie, alors la courbe 
+    \(\courbe_f\) admet pour asymptote la droite d'équation \(x=d\).
 \end{enumerate}
 
 \section{Tracé}
 
 \section{Placement de deux courbes l'une par rapport à l'autre}
 
-Si on doit tracer les courbes représentatives \(\courbe_f\) et \(\courbe_g\) de deux applications \(f\) et \(g\) définies sur le même intervalle I, il faut étudier le signe de la différence \(f-g\). Dans le cas où \(f\) et \(g\) sont à valeurs strictement positives, on pourra également former le quotient \(\frac{f}{g}\) et le comparer à \(1\).
+Si on doit tracer les courbes représentatives \(\courbe_f\) et \(\courbe_g\) de 
+deux applications \(f\) et \(g\) définies sur le même intervalle I, il faut 
+étudier le signe de la différence \(f-g\). Dans le cas où \(f\) et \(g\) sont à 
+valeurs strictement positives, on pourra également former le quotient 
+\(\frac{f}{g}\) et le comparer à \(1\).
