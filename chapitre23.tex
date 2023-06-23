@@ -25,13 +25,13 @@ ligne \(i_0\) et la colonne \(h_0\) qui vaut \(1\).
 
 Notons \((E'_{ij})_{1\leqslant i \leqslant n, 1\leqslant j \leqslant p}\) la 
 base canonique de \(\Mnp{n}{p}{\K}\). Alors
-\begin{align}
+\begin{align*}
   E_{i_0h_0} A &= E_{i_0h_0} \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} E'_{ij} \\
                &= \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} (E_{i_0h_0}E'_{ij})\\
                &= \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} \delta_{h_0 i} E'_{i_0j} 
                \\
                &= \sum_{i = 1}^na_{h_0j} E'_{i_0j}.
-\end{align}
+\end{align*}
 \( E_{i_0h_0} A\) est la matrice à \(n\) lignes et \(p\) colonnes dans laquelle 
 la ligne \(i_0\) est égale à la ligne \(h_0\) de \(A\). Toutes les autres lignes 
 sont nulle.
@@ -53,7 +53,7 @@ L_i+\lambda L_h\).
   Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de 
   \(\intervalleentier{1}{n}\), on définit la matrice de transvection 
   \(T_{i,h}(\lambda)\) par
-  \begin{align}
+  \begin{align*}
     T_{i,h}(\lambda) &= I_n +\lambda E_{ih}\\
                      &= \begin{pmatrix}
                        1 &        &        &         &   \\
@@ -62,7 +62,7 @@ L_i+\lambda L_h\).
                          &        &        &\ddots   &   \\
                          &        &        &         & 1
                      \end{pmatrix}.
-  \end{align}
+  \end{align*}
 \end{defdef}
 %
 \begin{prop}
@@ -71,12 +71,12 @@ L_i+\lambda L_h\).
   \(T_{i,h}(\lambda)^{-1} = T_{i,h}(-\lambda)\).
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     T_{i,h}(-\lambda) \cdot T_{i,h}(\lambda) &= (I_n + \lambda E_{ih}) (I_n - 
     \lambda E_{ih})\\
                                              &= I_n -\lambda E_{ih} + \lambda 
                                              E_{ih} - \lambda^2 E_{ih}E_{ih}.
-  \end{align}
+  \end{align*}
   Comme \(i \neq h\) alors \(E_{ih}E_{ih} = 0\). Finalement \(T_{i,h}(-\lambda) 
   \cdot T_{i,h}(\lambda) = I_n\).
 \end{proof}
@@ -109,7 +109,7 @@ L_i\).
   Pour tout réel non nul \(\mu\) et tout naturel \(i\) de 
   \(\intervalleentier{1}{n}\), on définit la matrice de dilatation \(D_i(\mu)\) 
   par
-  \begin{align}
+  \begin{align*}
     D_i(\mu) &= I_n +(\mu-1)E_{ii} \\
              &=
              \begin{pmatrix}
@@ -121,7 +121,7 @@ L_i\).
                  & & & & & \ddots & \\
                  & & & & & &1
              \end{pmatrix}.
-  \end{align}
+  \end{align*}
 \end{defdef}
 %
 \begin{prop}
@@ -164,7 +164,7 @@ opération est notée \(L_i \leftrightarrow L_h\).
 \begin{defdef}
   Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\), 
   on définit la matrice de permutation \(P_{ih}\) telle que
-  \begin{align}
+  \begin{align*}
     P_{ih} &= I_n - E_{ii}-E_{hh} +E_{ih}+E_{hi}\\
            & = \begin{pmatrix}
              1&        &  &        &   &        &        &   &   &        & \\
@@ -179,7 +179,7 @@ opération est notée \(L_i \leftrightarrow L_h\).
               &        &  &        &   &        &        &   &   & \ddots & \\
               &        &  &        &   &        &        &   &   &        & 1
            \end{pmatrix}.
-  \end{align}
+  \end{align*}
 \end{defdef}
 %
 \begin{prop}
@@ -190,11 +190,11 @@ opération est notée \(L_i \leftrightarrow L_h\).
   \end{equation}
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     P_{ih} \cdot P_{ih} &= (I_n - E_{ii}-E_{hh} +E_{ih}+E_{hi})\cdot (I_n - 
     E_{ii}-E_{hh} +E_{ih}+E_{hi})\\
                         & = I_n.
-  \end{align}
+  \end{align*}
 \end{proof}
 %
 \begin{prop}
@@ -265,29 +265,29 @@ système homogène associé à \((L)\).
 Soient une matrice \(A = (a_{ij}) \in \Mnp{n}{p}{\K}\) et un vecteur \(B = 
 (b_{i}) \in \Mnp{n}{1}{\K}\). Pour tout vecteur \(X = (x_i)_{1\leqslant i 
 \leqslant p} \in \K^p\), on a
-\begin{align}
+\begin{align*}
   X \in E(L) &\iff AX = B, \\
   X \in E(H) &\iff AX = 0.
-\end{align}
+\end{align*}
 %
 \subsubsection{Traduction fonctionelle}
 Soit \(u\) l'application linéaire canoniquement associée à \(A\), \(u \in 
 \Lin{\K^p}{\K^n}\). On note \(b \in \K^p\) le vecteur de coordonnées \((b_1, 
 \ldots, b_n)\) dans la base canonique. Pour tout vecteur \(x = (x_i)_{1\leqslant 
 i \leqslant p} \in \K^p\), on a
-\begin{align}
+\begin{align*}
   x \in E(L) &\iff u(x) = B, \\
   x \in E(H) &\iff x\in\Ker(u).
-\end{align}
+\end{align*}
 
 \subsubsection{Traduction vectorielle}
 
 Soit pour tout \(j \in \intervalleentier{1}{p}\) \(C_j\) la \(j\)\ieme{} colonne 
 de \(A\). Pour tout vecteur \((x_1,\ldots,x_p) \in \K^p\), on a
-\begin{align}
+\begin{align*}
   (x_1,\ldots,x_p) \in E(L) &\iff x_1C_1+\dotsb+x_pC_p = B, \\
   (x_1,\ldots,x_p) \in E(H) &\iff x_1C_1+\dotsb+x_pC_p = 0.
-\end{align}
+\end{align*}
 Cela signifie que \((x_1,\ldots,x_p)\) est une relation de dépendance linéaire 
 de la famille des colonnes.
 
@@ -298,11 +298,11 @@ linéaire \begin{equation}
   \fonction{\varphi_i}{\K^p}{\K}{(x_1,\ldots,x_p)}{a_{i1}x_1+ \dotsb 
   +a_{ip}x_p}.
 \end{equation} Pour tout vecteur \(x \in \K^p\), on a
-\begin{align}
+\begin{align*}
   x \in E(L) &\iff \forall i \in \intervalleentier{1}{n} \quad \varphi_i(x) = 
   b_i, \\
   x \in E(H) &\iff x\in\bigcap_{i = 1}^n\ker \varphi_i.
-\end{align}
+\end{align*}
 
 \subsection{Rang d'un système linéaire}
 
@@ -377,10 +377,10 @@ Il en résulte
 \begin{proof}
   La matrice \(A\) associée à \((L)\) est inversible, donc l'application \(u\) 
   associée est bijective alors
-  \begin{align}
+  \begin{align*}
     u(x) = b &\iff x = u^{-1}(b) \\
     u(x) = 0 &\iff x = 0.
-  \end{align}
+  \end{align*}
 \end{proof}
 %
 \section{Applications des opérations élémentaires}
@@ -513,7 +513,7 @@ lignes qui permettent de passer de \(A\) à \(I_n\).
 
 \emph{Exemple}~: Il s'agit d'inverser \(A =\begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 
 & 1\\ -1 & 2 & 0\end{pmatrix}\).
-\begin{align}
+\begin{align*}
   \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ -1 & 2 & 0\end{pmatrix} & 
   \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} \\
   \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 2 & -1\end{pmatrix} & 
@@ -525,15 +525,15 @@ lignes qui permettent de passer de \(A\) à \(I_n\).
   \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 0 & 1\end{pmatrix} & 
   \begin{pmatrix}  1 & 0 & 0 \\ -1 & -1 & -1\\ 1 & 2 & 1\end{pmatrix} && L_2 
   \leftarrow L_2-L_3\\
-  %\end{align}
-  %\begin{align}
+  %\end{align*}
+  %\begin{align*}
   \begin{pmatrix}  1 & 0 & 0 \\ 0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix} & 
   \begin{pmatrix}2 & 2 & 1 \\ -1 & -1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_1 
   \leftarrow L_1+L_3\\
   \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} & 
   \begin{pmatrix} 2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_2 
   \leftarrow -L_2
-\end{align}
+\end{align*}
 
   On vient de montrer que \(A\) est inversible et que \(A^{-1} = \begin{pmatrix} 
   2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix}\).

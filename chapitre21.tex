@@ -32,14 +32,14 @@ connaît une}
 \end{theo}
 \begin{proof}
   Soit une fonction \(G \in \R^I\). Alors
-  \begin{align}
+  \begin{align*}
     G \text{~est une primitive de~} f &\iff \begin{cases} G \in \Dr(I,\R) \\ 
     G'=f \end{cases} \\
     &\iff \begin{cases} G \in \Dr(I,\R) \\ G'=F' \end{cases} \\ &\iff 
       \begin{cases} G \in \Dr(I,\R) \\ \exists c \in \R \quad G=F+\tilde{c} 
       \end{cases} \\
       &\iff \exists c \in \R \quad G=F+\tilde{c}.
-  \end{align}
+  \end{align*}
   La première équivalence est la définition d'une primitive. La deuxième est 
   claire par définition de \(F\). La troisième est due à l'intégration. Enfin la 
   quatrième est vraie puisque pour toute constante \(c\), \(F+\tilde{c}\) est 
@@ -69,12 +69,12 @@ t}\).
 \end{prop}
 \begin{proof}
   Soit \((x_1,x_2)\in I^2\) tel que \(x_1<x_2\). Alors
-  \begin{align}
+  \begin{align*}
     \Phi_f(x_2)-\Phi_f(x_1) &= \int_a^{x_2} f(t)\,\diff t - \int_a^{x_1} 
     f(t)\,\diff t \\
     &= \int_a^{x_2} f(t)\,\diff t + \int_{x_1}^a f(t)\,\diff t \\
     &= \int_{x_1}^{x_2} f(t)\,\diff t
-  \end{align}
+  \end{align*}
   et comme \(f\) est positive alors \(\Phi_f(x_2)-\Phi_f(x_1) \geqslant 0\) par 
   positivité de l'intagrale. Finalement \(\Phi_f\) est croissante.
 \end{proof}
@@ -143,12 +143,12 @@ Ce qui montre que \(\Phi\) est lipschitzienne. \end{proof}
     \lim\limits_{x_0} \epsilon =0 \end{cases}.
   \end{equation}
   Alors pour tout \(x \in I \setminus\{x_0\}\), on a
-  \begin{align}
+  \begin{align*}
     \frac{\Phi_f(x)-\Phi_f(x_0)}{x-x_0} &= \frac{1}{x-x_0} \int_{x_0}^x 
     (f(x_0)+\epsilon(t))\,\diff t \\
     &=  \frac{1}{x-x_0} \int_{x_0}^x f(x_0)\,\diff t + \frac{1}{x-x_0} 
     \int_{x_0}^x\epsilon(t)\,\diff t.
-  \end{align}
+  \end{align*}
 
   Comme la fonction \(f\) est continue en \(x_0\), on a par définition
   \begin{equation}
@@ -266,11 +266,11 @@ continue,  et si \(F\) une primitive de \(F\) sur l'intervalle \(I\), alors on
 \begin{proof}
   Comme les applications \(u\) et \(v\) sont de classe \(\classe{1}\), 
   l'application \(uv\) est de classe \(\classe{1}\). Alors
-  \begin{align}
+  \begin{align*}
     [u(t)v(t)]_a^b = u(b)v(b)-u(a)v(a) &=\int_a^b (uv)'(t)\,\diff t \\
     &=\int_a^b[u'(t)v(t)u(t)v'(t)]\,\diff t \\
     &=\int_a^b u'(t)v(t)\,\diff t + \int_a^b u(t)v'(t)\,\diff t.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 En pratique, on utilise l'intégration par parties pour~:
@@ -302,12 +302,12 @@ En pratique, on utilise l'intégration par parties pour~:
   Comme \(\varphi \in \classe{1}(J,I)\) et \(F \in \classe{1}(J,\R)\), alors \(F 
   \circ \varphi\) est dans  \(\classe{1}(J,\R)\) et \((F\circ \varphi)'=\varphi' 
   \cdot f \circ \varphi\). Alors
-  \begin{align}
+  \begin{align*}
     \int_a^b f(\varphi(t)) \varphi'(t)\,\diff t &= \int_a^b (F\circ 
     \varphi)'\,\diff t\\
     &=F\circ \varphi(b) - F\circ \varphi(a) \\
     &=\int_{\varphi(a)}^{\varphi(b)}f(u)\,\diff u.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \danger \emph{Il ne faut pas oublier les hypothèses, c-à-d \(\varphi\) est 
@@ -337,12 +337,12 @@ l'application \(\varphi\) est de la forme \(\varphi : x \longmapsto ax+b\) avec
   \item Les fonctions paires et les fonctions impaires. Soit un réel \(a\) 
     positif strictement et une application \(f : \intervalleff{-a}{a} 
     \longmapsto \R\) continue. Alors
-    \begin{align}
+    \begin{align*}
       \int_{-a}^a f(t)\,\diff t &=\int_{-a}^0 f(t)\,\diff t + \int_{0}^a 
       f(t)\,\diff t \\
       &=\int_a^0 f(-s)(-\diff s) + \int_{0}^a f(t)\,\diff t \\
       &=\int_0^a f(-s)\,\diff s + \int_{0}^a f(t)\,\diff t \\
-    \end{align}
+    \end{align*}
     Si \(f\) est pair alors \(\int_{-a}^a f(t)\,\diff t = 2 \int_{0}^a 
     f(t)\,\diff t\). Si \(f\) est impaire alors l'intégrale est nulle.
 
@@ -408,10 +408,10 @@ Si \(0 \in I\) et si \(a=0\) on parle de développement de Mac-Laurin.
 Soit un naturel \(n\). On pose \(n'=E\left(\frac{n}{2}\right)\) et 
 \(n''=E\left(\frac{n-1}{2}\right)\). C'est-à-dire que ce sont les entiers tels 
 que
-\begin{align}
+\begin{align*}
   2n' \leqslant n \leqslant 2n'+2 \\
   2n'' +1 \leqslant n \leqslant 2n''+3
-\end{align}
+\end{align*}
 \(2n'\) est le plus grand entier pair inférieur à \(n\) et \(2n''+1\) est le 
 plus grand entier impair inférieur à \(n\). Alors la table~
 \ref{tab:MacLaurin} donne les développements.
@@ -501,12 +501,12 @@ plus grand entier impair inférieur à \(n\). Alors la table~
     u'(t) = f^{(n+2)}(t) \quad v'(t)=\frac{(x-t)^n}{n!},
   \end{equation}
   alors pour tout \(x \in I\), en intégrant par parties on a
-  \begin{align}
+  \begin{align*}
     R_{n+1}(x)& = \left[ -\frac{(x-t)^{n+1}}{(n+1)!}f^{(n+1)}(t)\right]_a^x - 
     \int_a^x f^{(n+2)}(t)\left(-\frac{(x-t)^{n+1}}{(n+1)!}\right)\,\diff t \\ &- 
     \frac{f^{(n+1)}(a)}{(n+1)!}(x-a)^{n+1} \notag \\
     &= \int_a^x f^{(n+2)}(t) \frac{(x-t)^{n+1}}{(n+1)!}\,\diff t
-  \end{align}
+  \end{align*}
   donc \(\P(n+1)\) est vraie.
 
   \emph{Conclusion}~: On a montré \(\P(0)\) et pour tout naturel \(n\), \(\P(n) 
@@ -537,23 +537,23 @@ plus grand entier impair inférieur à \(n\). Alors la table~
   Deux cas se présentent~:
   \begin{enumerate}
     \item Si \(x \geqslant a\) alors
-      \begin{align}
+      \begin{align*}
         \abs{R_n(x)} &\leqslant \int_a^x 
         \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
         &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x 
         \frac{(x-t)^n}{n!}\,\diff t\\
         &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} 
         \frac{(x-a)^{n+1}}{(n+1)!};
-      \end{align}
+      \end{align*}
     \item Si \(x \leqslant a\) alors
-      \begin{align}
+      \begin{align*}
         \abs{R_n(x)} &\leqslant \int_x^a 
         \frac{\abs{x-t}^n}{n!}\abs{f^{(n+1)}(t)}\,\diff t  \\
         &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} \int_a^x 
         \frac{(t-x)^n}{n!}\,\diff t\\
         &\leqslant \sup\limits_{\intervalleff{a}{x}}\abs{f^{(n+1)}} 
         \frac{(a-x)^{n+1}}{(n+1)!}.
-      \end{align}
+      \end{align*}
   \end{enumerate}
   Dans les deux cas,
   \begin{equation}
@@ -604,12 +604,12 @@ plus grand entier impair inférieur à \(n\). Alors la table~
   \end{equation}
   \(F-B_{n+1}\) est continue sur \([(a,x)]\) et dérivable sur \(](a,x)[\) alors 
   d'après le théorème de Rolle, il existe un réel \(c_x \in [(a,x)]\) tel que
-  \begin{align}
+  \begin{align*}
     F(x)-B_{n+1}(x) &= (F-B_{n+1})'(c_x)(x-a)\\
     & = (f(c_x)-A_n(c_x))(x-a)\\
     &=(c_x-a)^n\epsilon(c_x)(x-a)\\
     &=(x-a)^{n+1} \left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x).
-  \end{align}
+  \end{align*}
   On note \(\epsilon_1(x)=\left(\frac{c_x-a}{x-a}\right)^n \epsilon(c_x)\). 
   Puisque \(c_x \in [(a,x)]\), le théorème des gendarmes nous dit que 
   \(\lim\limits_{x \to a} c_x =a\). De plus on sait que \(\lim\limits_{x \to 
@@ -700,21 +700,21 @@ limité d'une fonction \(\classe{n}\), Taylor-Young}
     \end{cases}
   \end{equation}
   Alors pour tout \(x \in I\), on a
-  \begin{align}
+  \begin{align*}
     f(x) &= T_{n-1,f,a}(x) + f^{(n)}(a) \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} 
     f^{(n)}(t)\,\diff t + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff 
     t \\
     &= T_{n-1,f,a}(x) + f^{(n)}(a) \frac{(x-a)^n}{n!} + \int_a^x 
     \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t \\
     &= T_{n,f,a}(x) + \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} \epsilon(t)\,\diff t.
-  \end{align}
+  \end{align*}
   Du coup pour tout \(x \in I\setminus\{a\}\) on a
-  \begin{align}
+  \begin{align*}
     f(x) - T_{n,f,a}(x) &= \int_a^x \frac{(x-t)^{n-1}}{(n-1)!} 
     \epsilon(t)\,\diff t \\
     &= (x-a)^{n-1} \int_a^x \left(\frac{x-t}{x-a}\right)^{n-1} \frac{1}{(n-1)!} 
     \epsilon(t)\,\diff t.
-  \end{align}
+  \end{align*}
   Au voisinage de \(a\), on a \(\left(\frac{x-t}{x-a}\right)^{n-1} 
   \frac{1}{(n-1)!} \epsilon(t) = o(1)\). Donc au voisinage de \(a\),
   \begin{equation}
@@ -751,11 +751,11 @@ ou que l'arc \((I,f)\) est régulier en \(t_0\), si \(\derived{\vect{OM}}{t} \ne
 \end{prop}
 \begin{proof}
   On note \(M_0=M(t_0)\). Ainsi pour tout \(t \in I\setminus\{t_0\}\) on a
-  \begin{align}
+  \begin{align*}
     \vect{M_0M(t)} &= (x(t)-x_0)\vi + (y(t)-y_0)\vj \\
     &= (x'(t_0)(t-t_0) +o(t-t_0))\vi + (y'(t_0)(t-t_0) +o(t-t_0))\vj\\
     &=(t-t_0)\vect{f'(t_0)} +(t-t_0)o(1)(\vi+\vj)
-  \end{align}
+  \end{align*}
   Ainsi
   \begin{equation}
     \frac{\vect{M_0M(t)}}{||\vect{M_0M(t)}||} = \pm \frac{\vect{f'(t_0)} 
@@ -767,10 +767,10 @@ ou que l'arc \((I,f)\) est régulier en \(t_0\), si \(\derived{\vect{OM}}{t} \ne
 
 Les fonctions \(x\) et \(y\) sont de classe \(\classe{n}\) et admettent les 
 \(DL_n(t_0)\) suivants~:
-\begin{align}
+\begin{align*}
   x(t) &= \sum_{i=0}^n \frac{x^{(i)}(t_0)}{i!} (t-t_0)^i + o((t-t_0)^n) \\
 y(t) &= \sum_{i=0}^n \frac{y^{(i)}(t_0)}{i!} (t-t_0)^i + o((t-t_0)^n) 
-\end{align}
+\end{align*}
 Si on note pour tout \(i \in \llbracket 0,n \rrbracket\) 
 \(x_i=\frac{x^{(i)}(t_0)}{i!}\) et \(y=\frac{y^{(i)}(t_0)}{i!}\), et 
 \(\vect{A_i}(x_i,y_i)\).
@@ -783,11 +783,11 @@ Alors pour tout \(t\) au voisinage de \(t_0\) on a
 
 Supposons qu'il existe au moins deux vecteurs non colinéaires parmi les 
 \(\vect{A_i}\). Cela permet de définir
-\begin{align}
+\begin{align*}
   p &= \min \{i \in \llbracket 1,n \rrbracket \vect{A_i} \neq \vect{0} \} \\
   q &= \min \{i \in \llbracket p+1,n \rrbracket (\vect{A_i},\vect{A_p}) 
   \text{~est libre}\}
-\end{align}
+\end{align*}
 
 Ainsi~: pour tout \(i \in \llbracket 1, p-1 \rrbracket\), 
 \(\vect{A_i}=\vect{0}\) et pour tout \(i \in \llbracket p+1, q-1 \rrbracket\) il 
@@ -795,12 +795,12 @@ existe un réel \(\alpha_i\) tel que \(\vect{A_i}=\alpha_i \vect{A_p}\).
 
 Le couple \((\vect{Ap}, \vect{A_q})\) est libre, c'est donc une base du plan. 
 Alors
-\begin{align}
+\begin{align*}
   \vect{M_0M}(t) &= (t-t_0)^p \vect{A_p} + \sum_{i=p+1}^{q-1} (t-t_0)^i \alpha_i 
   \vect{A_p} +(t-t_0)^q \vect{A_q} +\vect{o}((t-t_0)^q) \\
   &=[(t-t_0)^q + \sum_{i=p+1}^{q-1} (t-t_0)^i \alpha_i]\vect{A_p} + (t-t_0)^q 
   \vect{A_q} +\vect{o}((t-t_0)^q)
-\end{align}
+\end{align*}
 
 Soit \((X(t),Y(t))\) les coordonnées de \(M(t)\) le repère 
 \((M_0,\vect{A_p},\vect{A_q})\). Alors
@@ -880,12 +880,12 @@ mêmes valeurs que \(f\) en \(a\) et en \(b\), c'est-à-dire
   +\frac{f(b)-f(a)}{b-a}(x-a).
 \end{equation}
 On approche \(I\) par \(T_1=\int_a^bg(x)\,\diff x\). Lorsqu'on calcule on a
-\begin{align}
+\begin{align*}
   T_1&=\int_a^bg(x)\,\diff x = (b-a)f(a) + \frac{f(b)-f(a)}{b-a} \int_a^b 
   (x-a)\,\diff x \\
   &=(b-a)f(a) + (f(b)-f(a))\left(\frac{b-a}{2}\right)\\
   &=(b-a) \frac{f(a)+f(b)}{2}.
-\end{align}
+\end{align*}
 
 En \(n\) pas, \(n \in \N\setminus\{0,1\}\). On considère la subdivision 
 régulière \(\sigma\) de \(\intervalleff{a}{b}\) à \(n+1\) points.
@@ -903,13 +903,13 @@ C'est-à-dire
 \end{equation}
 
 On approche \(I\) par le réel
-\begin{align}
+\begin{align*}
   T_n &= \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} g_k(x)\,\diff x \\
   &= \sum_{k=0}^{n-1} \frac{a_{k+1}-a_k}{2}(f(a_k)+f(a_{k+1}))\\
   &=\frac{b-a}{2n}  \sum_{k=0}^{n-1}(f(a_k)+f(a_{k+1})) \\
   &=\frac{b-a}{n} \left(\frac{f(a)+f(b)}{2} + 
   \sum_{k=1}^{n-1}(f(a_k)+f(a_{k+1})) \right).
-\end{align}
+\end{align*}
 
 \subsection{Majoration de l'erreur lorsque \(f\) est \(\classe{2}\)}
 
@@ -978,7 +978,7 @@ On cherche à majorer la quantité \(\int_a^bf(x)\,\diff x -T_n\). Lorsque
 
 Pour démontrer plus génralement cette majoration, suppososn que \(n \in 
 \N\setminus\{0,1\}\). Alors
-\begin{align}
+\begin{align*}
   \left|\int_a^b f(x)\,\diff x-T_{n}\right| &= \left| \sum_{k=0}^{n-1} 
   \int_{a_k}^{a_{k+1}} f(x)\,\diff x -  \sum_{k=0}^{n-1} \int_{a_k}^{a_{k+1}} 
   g_k(x)\,\diff x \right| \\
@@ -989,7 +989,7 @@ Pour démontrer plus génralement cette majoration, suppososn que \(n \in
   &\leqslant \sum_{k=0}^{n-1} \frac{M_2}{12} (a_{k+1}-a_k)^3 \\
   &\leqslant \frac{M_2}{12} \sum_{k=0}^{n-1} \left(\frac{b-a}{n}\right)^3 \\
   &\leqslant \frac{M_2}{12} \frac{(b-a)^3}{n^2}.
-\end{align}
+\end{align*}
 
 On a ainsi montré que si \(f\) est de classe \(\classe{2}\) sur 
 \(\intervalleff{a}{b}\) alors
@@ -1006,12 +1006,12 @@ Soit \(n \in \N\setminus\{0,1\}\), alors \(T_n =
 calculer \(T_n\), on a besoin de calculer la valeur de \(f\) en \(n+1=2+(n-1)\) 
 points. Pour passer de \(T_n\) à \(T_{n+1}\), on a besoin de calculer \(f\) en 
 \(n\) nouveaux points.
-\begin{align}
+\begin{align*}
   T_{2n} &= \frac{b-a}{2n}\left(\frac{f(a)+f(b)}{2} + \sum_{k=1}^{2n-1}f(a+k 
   \frac{b-a}{2n}\right)\\
   &=\frac{T_n}{2} + \frac{b-a}{2n}  
   \sum_{k=1}^{n-1}f\left(a+(2k+1)\frac{b-a}{2n}\right).
-\end{align}
+\end{align*}
 Donc pour passer de \(T_n\) à \(T_{2n}\), il suffit de calculer la valeur de 
 \(f\) en \(n\) nouveaux points. C'est donc plus intéressant de considérer des 
 subdivisions dichotomiques, c'est-à-dire en divisant l'intervalle en deux 
@@ -1080,20 +1080,20 @@ On commence par donner une table, la table~
 
   \emph{Hérédité}~: Soit \(n \in \N\) et on suppose \(\P(n)\). Soit \(P \in 
   \R_{n+1}[X]\). En intégrant par parties, pour tout \(x \in \R\),
-  \begin{align}
+  \begin{align*}
     \int_a^x P(t)\e^{at}\,\diff t &= \left[P(t)\frac{\e^{at}}{a}\right]_0^x - 
     \int_0^x \frac{P'(t)\e^{at}}{a}\,\diff t \\
     & = \frac{1}{a}(P(x)\e^{ax} -P(0) - \int_0^x P'(t)\e^{at}\,\diff t ).
-  \end{align}
+  \end{align*}
   Comme \(P'\in\R_n[X]\), d'après l'hypothèse de récurrence, il existe un 
   polynôme \(Q_0 \in \R_n[X]\) tel que \(\deg(Q_0)=\deg(P)\) et tel que \(x 
   \longmapsto Q_0(x)\e^{ax}\) est une primitive de \(P'(x)\e^{ax}\). Pour tout 
   réel \(x \in \R\), on a donc
-  \begin{align}
+  \begin{align*}
     \int_a^x P(t)\e^{at}\,\diff t &= \frac{1}{a}(P(x)\e^{ax} -P(0) - 
     (Q_0(x)\e^{ax}-Q_0(0))\\
     &=(P(x)-Q_0(x))\frac{\e^{ax}}{a} - \frac{P(0)-Q_0(0)}{a}.
-  \end{align}
+  \end{align*}
   On pose \(Q = \frac{P-Q_0}{a}\) et on a \(\deg(Q)=\deg(P)\) et \(x\longmapsto 
   Q(x)\e^{ax}\) est une primitive de \(x\longmapsto P(x)\e^{ax}\). \(\P(n+1)\) 
   est vraie.
@@ -1322,11 +1322,11 @@ L'application \(\theta\) est donc une primitive de l'application \(t \longmapsto
   \(\fonction{\psi}{I}{\C}{t}{f(t)\e^{-\ii\theta(t)}}\). Par produit et 
   composée, \(\psi\) est de classe \(\classe{k}\) et donc au moins de classe 
   \(\classe{1}\). Alors pour tout \(t \in I\), on a
-  \begin{align}
+  \begin{align*}
     \psi'(t) &= f'(t)\e^{-\ii \theta(t)}-\ii \theta'(t)f(t) \e^{-\ii\theta(t)} 
     \\
     &=\left(f'(t)-\ii f(t) \frac{f'(t)}{\ii f(t)} \right)\e^{-\ii \theta(t)} =0.
-  \end{align}
+  \end{align*}
   Donc \(\psi\) est constante sur \(I\) et comme \(\psi(t_0)=f(t_0)\e^{-\ii 
   \theta_0}=1\) (puisque \(f(t_0)=\e^{\ii \theta_0}\). Donc pour tout \(t \in 
   I\), \(\psi(t)=1\), c'est-à-dire que \(f(t)=\e^{\ii \theta(t)}\).

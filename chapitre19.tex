@@ -46,19 +46,19 @@ Ces définitions sont légitimes puisque \(AC\) et \(BD\) sont des polynômes (d
 \(AC+BD\) en est un aussi). De plus \(BD \neq 0\). Vérifions que ces définitions 
 ne dépendent pas du représentant choisi. Si \(\frac{A}{B}=\frac{A^{*}}{B^{*}}\) 
 et \(\frac{C}{D}=\frac{C^{*}}{D^{*}}\) alors
-\begin{align}
+\begin{align*}
   & (A^{*}D^{*}+B^{*}C^{*})BD - (AD+BC)B^{*}D^{*} \\
   &= A^{*}BDD^{*}+BB^{*}C^{*}D-AB^{*}DD^{*}-BB^{*}CD^{*} \\
   &=(A^{*}B-AB^{*})DD^{*} - BB^{*}(C^{*}D-CD^{*}) =0.
-\end{align}
+\end{align*}
 Alors la définition de l'addition ne dépend pas du représentant. Vérifions le 
 aussi pour le produit. Si \(\frac{A}{B}=\frac{A^{*}}{B^{*}}\) et 
 \(\frac{C}{D}=\frac{C^{*}}{D^{*}}\) alors
-\begin{align}
+\begin{align*}
   & A^{*}C^{*}BD-ACB^{*}D^{*} \\
   &= AB^{*}(C^{*}D-CD^{*}) \quad (A^{*}B=B^{*}A) \\
   &=0 \quad (C^{*}D=CD^{*}).
-\end{align}
+\end{align*}
 Alors la définition du produit ne dépend pas du représentant.
 
 \emph{Éléments neutres}~: Pour l'addition, l'élément neutre est 
@@ -139,13 +139,13 @@ C'est légitime puisque~:
       A'B_1 +AB_1' - A_1'B-A_1B'=0\label{eq:bidulezz2}
     \end{align}
     on a dérivé la première égalité. Ensuite
-    \begin{align}
+    \begin{align*}
       &(A'B-AB')B_1^{2}-(A_1'B_1-A_1B_1')B^2\\
       &=A'BB_1^{2} - AB'B_1^{2} - A_1'B_1B^{2} -A_1B_1'B^{2} \\
       &=(A'B-A_1'B)BB_1 - (AB_1)B'B_1 +(A_1B)B_1'B\\
       &=(A_1B'-AB_1')BB_1 - (A_1B)B'B_1 +(AB_1)B_1'B\\
       &=0.
-    \end{align}
+    \end{align*}
     d'après les équations \eqref{eq:bidulezz1} et \eqref{eq:bidulezz2}. Donc
     \begin{equation}
       \frac{A'B-AB'}{B^2}=\frac{A_1'B_1-A_1B_1'}{B_1^{2}}.
@@ -160,30 +160,30 @@ C'est légitime puisque~:
 
 \begin{theo}
   Pour toutes fractions rationnelle \(F\) et \(G\) de \(\K(X)\) on a
-  \begin{align}
+  \begin{align*}
     (F+G)'&=F'+G' \\
     (FG)&=F'G+FG'.
-  \end{align}
+  \end{align*}
 \end{theo}
 \begin{proof}
   On note \(F=\frac{A}{B}\) et \(G=\frac{C}{D}\) avec \(A,B,C\) et \(D\) quatre 
   polynômes et \(B\) et \(D\) tous les deux non nuls. Alors 
   \(F+G=\frac{AD+BC}{BD}\) et \(FG=\frac{AC}{BD}\). Lorsqu'on dérive on a~:
-  \begin{align}
+  \begin{align*}
     (F+G)' &= \frac{(AD+BC)'BD-(AD+BC)(BD)'}{(BD)^2}\\
     &=\frac{A'BD^2+ABDD'+BB'CD+B^2C'D}{B^2D^2}\\
     &\phantom{=}-\frac{AD^2B'+ABDD'+BB'CD+B^2CD'}{B^2D^2}\\
     &=\frac{(A'B-AB')D^2}{B^2D^2} +\frac{B^2(C'D-CD')}{B^2D^2} \\
     &=\frac{A'B-AB'}{B^2} +\frac{C'D-CD'}{D^2}\\
     &=F'+G'.
-  \end{align}
+  \end{align*}
   Pour le produit
-  \begin{align}
+  \begin{align*}
     (FG)' &= \frac{(AC)'BD-(AC)(BD)'}{(BD)^2}\\
     &=\frac{A'BCD+ABC'D-AB'CD-ABCD'}{B^2D^2}\\
     &=\frac{(A'B-AB')CD}{B^2D^2} + \frac{AB(C'D-CD')}{B^2D^2}\\
     &=F'G +FG'.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Degré d'une fonction rationnelle}
@@ -211,27 +211,27 @@ C'est légitime puisque~:
 
 \begin{prop}
   Soient \(F\) et \(G\) dans \(\K(X)\), alors
-  \begin{align}
+  \begin{align*}
     \deg(F+G) \leqslant \max(\deg(F),\deg(G)) \\
     \deg(FG) = \deg(F)+\deg(G).
-  \end{align}
+  \end{align*}
 \end{prop}
 \begin{proof}
   Soient \((A,B)\) et \((C,D)\) deux représentants respectifs de \(F\) et \(G\). 
   Alors \(F+G=\frac{AD+BC}{BD}\) et \(FG=\frac{AC}{BD}\). Leurs degrés valent~:
-  \begin{align}
+  \begin{align*}
     \deg(F+G) &= \deg(AD+BC)-\deg(BD) \\ & \leqslant 
     \max(\deg(AB),\deg(BC))-\deg(B)-\deg(D) \\
     & \leqslant \max(\deg(A)+\deg(D),\deg(B)+\deg(C))-\deg(B)-\deg(D)\\
     & \leqslant \max(\deg(A)-\deg(B),\deg(C)-\deg(D))\\
     & \leqslant \max(\deg(F),\deg(G));
-  \end{align}
+  \end{align*}
   et pour le produit
-  \begin{align}
+  \begin{align*}
     \deg(FG) &= \deg(AC)-\deg(BD) \\
     &= \deg(A)+\deg(C)-\deg(B)-\deg(D)\\
     &=\deg(F)+\deg(G).
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Représentants  irréductibles d'une fraction rationnelle}
@@ -274,21 +274,21 @@ C'est légitime puisque~:
     B_1=1\) donc le théorème de Gar\ss{} affirme que \(B_1\mid{}B\). Il existe 
     alors un polynôme \(D \in \K[X]\) non nul (puisque \(B\) est non nul) tel 
     que \(B=B_1D\). Alors
-    \begin{align}
+    \begin{align*}
       AB_1=A_1B=A_1B_1D \\
       B_1(A-A_1D)=0
-    \end{align}
+    \end{align*}
     comme \(B_1\) et non nul et que l'anneau \(\K[X]\) est intègre on a 
     \(A=A_1D\). Puisque \(D\) est non nul soit son coefficient dominant \(\alpha 
     \neq 0\). On pose \(\widetilde{D}=\frac{D}{\alpha}\) (\(\widetilde{D}\) est 
     unitaire). Alors
-    \begin{align}
+    \begin{align*}
       A \wedge B &= (A_1D) \wedge (B_1D) \\
       & = (\alpha A_1 \widetilde{D}) \wedge (\alpha B_1 \widetilde{D}) \\
       & = \widetilde{D} (\alpha A_1) \wedge (\alpha B_1) && \widetilde{D} 
       \text{~unitaire}\\
       & = \widetilde{D} = \frac{D}{\alpha}.
-    \end{align}
+    \end{align*}
     Ainsi \(A \wedge B\) et \(D\) sont associés.
 \end{proof}
 
@@ -419,11 +419,11 @@ Donc  \(\widetilde{F}=\widetilde{P}\). \end{itemize}
   Soient \(F\) et \(G\) dans \(\K(X)\), \(\P_F\) (resp \(\P_G\)) l'ensemble des 
   pôles de \(F\) (resp de \(G\)). Pour tout scalaire \(\lambda\) et tout \(x \in 
   \K\setminus(\P_F \cup \P_G)\) on a
-  \begin{align}
+  \begin{align*}
     \widetilde{F+G}(x) &= \widetilde{F}(x) + \widetilde{G}(x) \\
     (\widetilde{FG})(x)&= \widetilde{F}(x) \cdot \widetilde{G}(x) \\
     (\widetilde{\lambda F})(x)&=\lambda \widetilde{F}(x)
-  \end{align}
+  \end{align*}
 \end{prop}
 \begin{proof}
   Évident d'après la définition.
@@ -437,13 +437,13 @@ Donc  \(\widetilde{F}=\widetilde{P}\). \end{itemize}
 \begin{proof}
   Soir \(F=\frac{A}{B}\) et \(G=\frac{C}{D}\) deux représentants irréductibles. 
   Alors
-  \begin{align}
+  \begin{align*}
     \courbe &=\{x \in \K, \widetilde{F}(x)=\widetilde{G}(x)\} \\
     &=\{x \in \K, 
     \frac{\widetilde{A}(x)}{\widetilde{B}(x)}=\frac{\widetilde{C}(x)}{\widetilde{D}(x)}\} 
     \\
     &=\{x \in \K, \widetilde{AD-BC}(x)=0 \}\\
-  \end{align}
+  \end{align*}
   Comme \(\courbe\) est infini, on en déduit par la dernière égalité que le 
   polynôme \(AD-BC\) est nul et par conséquent \(F=G\).
 \end{proof}
@@ -461,11 +461,11 @@ C'est légitime, puisque~:
   \item \(P \circ R\) et \(Q \circ R\) sont dans \(\K[X]\) et \(Q \circ R\) est 
     non nul car \(Q\) et \(P\) sont non nuls;
   \item Si \(F=\frac{P}{Q}=\frac{P_1}{Q_1}\) alors
-    \begin{align}
+    \begin{align*}
       PQ_1&=P_1Q \\
       (PQ_1) \circ R &= (P_1Q) \circ R\\
       (P\circ R)(Q_1\circ R) &= (P_1\circ R)(Q\circ R)
-    \end{align}
+    \end{align*}
     donc \(\frac{P \circ R}{Q \circ R}=\frac{P_1 \circ R}{Q_1 \circ R}\). La 
     définition ne dépend pas du représentant choisi;
   \item Si \(P \in \K[X]\), \(F=\frac{P}{1}\) est identifiée à \(P\) et
@@ -484,13 +484,13 @@ C'est légitime, puisque~:
 \end{prop}
 \begin{proof}
   Soit \(F=\frac{P}{Q}\), alors
-  \begin{align}
+  \begin{align*}
     \deg(F \circ R) = \deg\left(\frac{P \circ R}{Q \circ R}\right) &= 
     \deg(P\circ R) - \deg(Q\circ R) \\
     &=\deg(P)\deg(R)-\deg(Q)\deg(R)\\
     &=\deg(R)(\deg(P)-\deg(Q))\\
     &=\deg(R)\deg(F).
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \emph{Remarque}~: De la même manière que pour les polynômes, on note 
@@ -564,17 +564,17 @@ sous corps de \(\K(X)\).
 
   Effectuons les divisions euclidiennes de \(A\) par \(B\) et de \(C\) par 
   \(D\)~:
-  \begin{align}
+  \begin{align*}
     \exists! (Q_1,R_1) \in \K[X]^2 \quad \begin{cases} A = BQ_1+R_1 \\ \deg(R_1) 
       < \deg(B) \end{cases} \\ \exists! (Q_2,R_2) \in \K[X]^2 \quad 
       \begin{cases} C = DQ_2+R_2 \\ \deg(R_2) < \deg(D) \end{cases}
-  \end{align}
+  \end{align*}
   alors \(\psi(F)=Q_1\) et \(\psi(G)=Q_2\). On calcule \(H\)~:
-  \begin{align}
+  \begin{align*}
     H = \lambda F+G &= 
     \lambda\left(Q_1+\frac{R_1}{B}\right)+\left(Q_2+\frac{R_2}{D}\right) \\
     &=(\lambda Q_1 +Q_2) +\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right).
-  \end{align}
+  \end{align*}
   De plus
   \begin{equation}
     \deg\left(\lambda \frac{R_1}{B} +\frac{R_2}{D} \right) \leqslant 
@@ -654,10 +654,10 @@ sous corps de \(\K(X)\).
     \end{cases}.
   \end{equation}
   On reporte cette équation dans l'expression de \(F\)~:
-  \begin{align}
+  \begin{align*}
     F&=\frac{AU}{C} + \frac{(X-a)^nQ+R}{(X-a)^n}\\
     &=\frac{R}{(X-a)^n} + \left(\frac{AU}{C}+Q\right)
-  \end{align}
+  \end{align*}
   avec \(R \in \K[X]\) (\(\deg(R)<n\)) et \(\frac{AU}{C}+Q \in \K(X)\). Comme 
   \(C(a)\neq 0\), le couple \((R,\frac{AU}{C}+Q)\) convient.
 \end{proof}
@@ -682,10 +682,10 @@ sous corps de \(\K(X)\).
   S'il existe \((\alpha_1, \ldots, \alpha_n) \in \K^n\) et \(G_1 \in \K(X)\) 
   tels que \(F=\sum_{i=1}^n \frac{\alpha_i}{(X-a)^i} + G_1\) et \(a\) n'est pas 
   un pôle de \(G_1\) alors
-  \begin{align}
+  \begin{align*}
     F &= \sum_{i=1}^n \frac{\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1\\
     &= \frac{\sum_{i=1}^n\alpha_i(X-a)^{n-i}}{(X-a)^n} + G_1
-  \end{align}
+  \end{align*}
   avec \(\deg\left(\sum_{i=1}^n\alpha_i(X-a)^{n-i}\right)\leqslant n-1 <n\). 
   D'après l'unicité du lemme, on a forcément
   \begin{equation}
@@ -710,11 +710,11 @@ sous corps de \(\K(X)\).
     R = \sum_{k=0}^{n-1} \beta_k (X-a)^k.
   \end{equation}
   Ainsi, la fraction rationnelle s'écrit
-  \begin{align}
+  \begin{align*}
     F &= \frac{\sum_{k=0}^{n-1} \beta_k (X-a)^k}{(X-a)^n}+G \\
     &=\sum_{k=0}^{n-1} \frac{\beta_k}{(X-a)^{n-k}} +G \\
     &=\sum_{i=1}^{n} \frac{\beta_{n-i}}{(X-a)^{i}} +G.
-  \end{align}
+  \end{align*}
   Posons pour tout naturel \(i \in \intervalleentier{1}{n}\) 
   \(\alpha_i=\beta_{n-i}\) donc
   \begin{equation}
@@ -838,24 +838,24 @@ Alors en synthétisant
 
 Posons \(F = \frac{A}{B}=\frac{A}{C(X-a)^2}\) irréductible et tel que \(C(a)\neq 
 0\). On a déjà vu que \(\alpha=\frac{A(a)}{C(a)}=\frac{2A(a)}{B''(a)}\). On a
-\begin{align}
+\begin{align*}
   (X-a)^2F&=\frac{A}{C}\\
   [(X-a)^2F]' &=\frac{A'C-C'A}{C^2}
-\end{align}
+\end{align*}
 d'où \(\beta = \frac{A'(a)C(a)-C'(a)A(a)}{C(a)^2}\) et en dérivant trois fois~:
-\begin{align}
+\begin{align*}
   B&=(X-a)^2C \\
   B'&=2(X-a)C+(X-a)^2C'\\
   B''&=2C+4(X-a)C'+(X-a)^2C''\\
   B^{(3)}&=6C'+6(X-a)C''+(X-a)^2C^{(3)}
-\end{align}
+\end{align*}
 et en prenant la valeur en \(a\)~: \(C(a)=\frac{B''(a)}{2}\) et 
 \(C'(a)=\frac{B^{(3)}}{6}\). Ainsi
-\begin{align}
+\begin{align*}
   \beta &= 
   \frac{A'(a)\frac{B''(a)}{2}-A(a)\frac{B^{(3)}(a)}{6}}{\frac{B''(a)^2}{4}}\\
   &=\frac{2A'(a)B''(a)-\frac{2}{3}A(a)B^{(3)}(a)}{B''(a)^2}
-\end{align}
+\end{align*}
 
 \subsection[Décomposition en éléments simples]{Décomposition en éléments simples 
 d'une fraction rationnelle}
@@ -1006,11 +1006,11 @@ Il existe alors de façon unique cinq complexes \(\alpha,\beta,\gamma,\delta\) e
   +\frac{\delta}{X+\ii} +\frac{\epsilon}{(X+\ii)^2}
 \end{equation}
 Alors
-\begin{align}
+\begin{align*}
   \alpha &= \widetilde{(X-3)F}(3)=\frac{1}{(1+3^2)^2}=\frac{1}{100} \\
   \gamma &= \widetilde{(X-\ii)^2F}(\ii) = 
   \frac{1}{(\ii-3)(\ii+\ii)^2}=\frac{3+\ii}{40}.
-\end{align}
+\end{align*}
 Comme \(F \in \R[X]\) alors \(\bar{F}=F\) et donc
 \begin{equation}
   \bar{F} = \frac{\bar{\alpha}}{X-3} + \frac{\bar{\beta}}{X+\ii} + 
@@ -1018,31 +1018,31 @@ Comme \(F \in \R[X]\) alors \(\bar{F}=F\) et donc
   +\frac{\bar{\epsilon}}{(X-\ii)^2}
 \end{equation}
 et par unicité
-\begin{align}
+\begin{align*}
   \alpha=\bar{\alpha}\\
   \bar{\beta}=\delta\\
   \bar{\gamma}=\epsilon
-\end{align}
+\end{align*}
 d'où \(\epsilon = \frac{3-\ii}{40}\). Il ne reste qu'un coefficient à trouver.
 
 \emph{Valeur en zéro}
-\begin{align}
+\begin{align*}
   F(0)=-\frac{1}{3}\\
   -\frac{99}{300} = \ii(\beta-\bar{\beta})-\frac{3}{20}\\
   \beta-\bar{\beta}=\frac{9}{50}\ii
-\end{align}
+\end{align*}
 \emph{Limite}
 \begin{equation}
   0 = \lim\limits_{+\infty}\widetilde{XF(X)}=\alpha+\beta+\delta
 \end{equation}
 d'où \(\beta+\bar{\beta}=-\frac{1}{100}\). Alors \(\beta = 
 \frac{-1}{200}+\frac{9}{100}\ii\). Finalement~:
-\begin{align}
+\begin{align*}
   F = &\frac{-1}{100(X-3)} + \left(\frac{-1}{200}+\frac{9}{100}\ii\right) 
   \frac{1}{X-\ii} + \left(\frac{3+\ii}{40}\right)\frac{1}{(X-\ii)^2} \\ & + 
   \left(\frac{-1}{200}-\frac{9}{100}\ii\right)\frac{1}{X+\ii} + 
   \left(\frac{3-\ii}{40}\right)\frac{1}{(X+\ii)^2}
-\end{align}
+\end{align*}
 
 \emph{DES sur \(\R[X]\)}
 
@@ -1058,15 +1058,15 @@ De la même manière, on trouve \(a=\frac{1}{100}\). On a
   \frac{1}{X-3} = (X^2+1)^2F = \frac{a(X^2+1)^2}{X-3} + (bX+c)(X^2+1)+dX+e
 \end{equation}
 en prenant les valeurs en \(\ii\) et en \(-\ii\) on a
-\begin{align}
+\begin{align*}
   \frac{1}{\ii-3}&=di+e \\
   \frac{1}{-\ii-3}&=-di+e
-\end{align}
+\end{align*}
 alors \(2e=-\frac{6}{10}\) et donc \(e=-\frac{3}{10}\). Ensuite
-\begin{align}
+\begin{align*}
   d =&\frac{1}{\ii}\left(\frac{1}{\ii-3}-e\right)\\
   =&-\frac{1}{10}
-\end{align}
+\end{align*}
 en zéro on a
 \begin{equation}
   F(0)=-\frac{1}{3} = -\frac{1}{300}+c+e
@@ -1099,7 +1099,7 @@ Dérivons \(P\)~:
   \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} k_i
 \end{equation}
 Alors
-\begin{align}
+\begin{align*}
   \frac{P'}{P} &= \frac{\lambda \sum_{i=1}^n \prod_{j \in 
   \intervalleentier{1}{n} \setminus \{i\}} (X-a_j)^{k_j}(X-a_i)^{k_i-1} 
   k_i}{\lambda \prod_{i=1}^n (X-a_i)^{k_i}} \\
@@ -1108,4 +1108,4 @@ Alors
   \\
   &=\sum_{i=1}^n \frac{k_i(X-a_i)^{k_i-1}}{(X-a_i)^{k_i}} \\
   \frac{P'}{P} &= \sum_{i=1}^n \frac{k_i}{X-a_i}
-\end{align}
+\end{align*}

@@ -1,4 +1,4 @@
-\chapter{Automorphismes orthogonaux}
+\Statementchapter{Automorphismes orthogonaux}
 \label{chap:automorphismesorthogonaux}
 \minitoc
 \minilof
@@ -36,24 +36,24 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
 \begin{proof}
   \(1 \implies 2\). L'application est déjà linéaire. Montrons qu'elle conserve 
   le produit scalaire. Soit \((x,y) \in E^2\), alors
-  \begin{align}
+  \begin{align*}
     \prodscal{u(x)}{u(y)} &= \frac{1}{2}\left(\norme{u(x)+u(y)}^2 - 
     \norme{u(x)}^2 - \norme{u(y)}^2\right) && \text{Polarisation} \\
     &=\frac{1}{2}\left(\norme{u(x+y)}^2 - \norme{u(x)}^2 - \norme{u(y)}^2\right) 
     && u \in \Endo{E} \\
     &=\frac{1}{2}\left(\norme{x+y}^2 - \norme{x}^2 - \norme{y}^2\right) && u 
     \text{~conserve la norme} \\    &=\prodscal{x}{y}.
-  \end{align}
+  \end{align*}
   Ainsi \(u\) conserve le produit scalaire.
 
   \(2 \implies 3\). Trivial
 
   \(3 \implies 1\). Soit \(x \in E\). On a
-  \begin{align}
+  \begin{align*}
     \norme{u(x)} &= \sqrt{\prodscal{u(x)}{u(x)}}\\
     &=\sqrt{\prodscal{x}{x}} && u\text{~conserve le produit scalaire}\\
     &=\norme{x}.
-  \end{align}
+  \end{align*}
   Alors \(u\) conserve la norme. 
 
   Montrons qu'elle est linéaire. Soient \((x,x') \in E^2\) et \(\lambda \in 
@@ -65,7 +65,7 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
   \(p\) est nul.
 
   En effet,
-  \begin{align}
+  \begin{align*}
     p^2 &=\prodscal{u(\lambda x+x')-\lambda u(x)-u(x')}{u(\lambda x+x')-\lambda 
     u(x)-u(x')} \\
     &=\prodscal{u(\lambda x+x')}{u(\lambda x+x')} - \lambda\prodscal{u(\lambda 
@@ -73,9 +73,9 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
     &- \lambda\prodscal{u(x)}{u(\lambda x+x')} +\lambda^2\prodscal{u(x)}{u(x)} 
     +\lambda\prodscal{u(x)}{u(x')} \notag \\
   &-\prodscal{u(x')}{u(\lambda 
-  x+x')}+\lambda\prodscal{u(x)}{u(x)}+\prodscal{u(x')}{u(x')}.    \end{align}
+  x+x')}+\lambda\prodscal{u(x)}{u(x)}+\prodscal{u(x')}{u(x')}.    \end{align*}
   L'application \(u\) conserve le produit scalaire, alors
-  \begin{align}
+  \begin{align*}
     p^2&=\prodscal{\lambda x+x'}{\lambda x+x'} - \lambda\prodscal{\lambda 
     x+x'}{x} - \prodscal{\lambda x+x'}{x'} \notag \\
     &- \lambda\prodscal{x}{\lambda x+x'} +\lambda^2\prodscal{x}{x} 
@@ -85,7 +85,7 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
     \prodscal{x}{-(\lambda x+x')+\lambda x+x'} \notag\\
     & +\prodscal{x'}{-(\lambda x+x')+\lambda x+x'} \\
     &=0.
-  \end{align}
+  \end{align*}
   Donc \(p=0\), alors \( u(\lambda x+x')=\lambda u(x)+u(x')\). L'application 
   \(u\) est linéaire.
 \end{proof}
@@ -124,12 +124,12 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
   démontrer qu'elle est bijective.
 
   Soit \(x \in E\), alors
-  \begin{align}
+  \begin{align*}
     x \in \Ker(u) &\iff u(x)=0 \\
     &\iff \norme{u(x)} = 0 \\
     &\iff \norme{x}=0 \\
     &\iff x=0.
-  \end{align}
+  \end{align*}
   Donc le noyau est nul, l'application \(u\) est donc injective. Comme \(E\) est 
   de dimension finie, \(u\) est bijective.
 
@@ -189,11 +189,11 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \in \N^*\).
 
   Soit \(x \in F^\perp\), montrons que \(u(x) \in F^\perp\). Soit \(y \in F\), 
   il existe \(z \in F\) tel que \(y=u(z)\) (car \(u(F)=F\)). Alors
-  \begin{align}
+  \begin{align*}
     \prodscal{u(x)}{y} &= \prodscal{u(x)}{u(z)} \\
     &= \prodscal{x}{z} && u \in \Orth{E} \\
     &=0. && x \in F^\perp \ z \in F
-  \end{align}
+  \end{align*}
   Donc \(u(x) \perp y\) et \(y \in F\), alors \(u(x) \in F^\perp\).
 \end{proof}
 
@@ -234,23 +234,23 @@ sera notée \(s_F\) et appelée symétrie orthogonlae par rapport à \(F\).
 \begin{proof}
   \(S_0 \implies S_1\). Par définition, \(s \in \Endo{E}\) et \(s \circ s=\Id\). 
   Posons \(p=\frac{1}{2}(s+\Id)\). Pour tout couple \((x,y) \in E^2\) on a
-  \begin{align}
+  \begin{align*}
     \prodscal{s(x)}{y} = \prodscal{2p(x)-x}{y} & = 
     2\prodscal{p(x)}{y}-\prodscal{x}{y} && \text{bilinéarité}\\
     &=2\prodscal{x}{p(y)}-\prodscal{x}{y} && p\text{~est un projecteur 
     orthogonal}\\
     &=\prodscal{x}{2p(y)-y} && \text{bilinéarité}\\
     &=\prodscal{x}{s(y)}.
-  \end{align}
+  \end{align*}
 
   \(S_1 \implies S_2\). On a déjà \(s \in \Endo{E}\) et \(s \circ s=\Id\). Soit 
   \(x \in E\), alors
-  \begin{align}
+  \begin{align*}
     \norme{s(x)}^2 &=\prodscal{s(x)}{s(x)} \\
     &=\prodscal{x}{s\circ s(x)} &&\text{d'après~} S_1 \\
     &=\prodscal{x}{x} && s\circ s=\Id \\
     &\norme{x}^2.
-  \end{align}
+  \end{align*}
   Comme les normes sont positives, on a bien \(\norme{s(x)}=\norme{x}\).
 
   \(S_2 \implies S_3\). On a déjà \(s \in \Endo{E}\) et \(s \circ s=\Id\). Comme 
@@ -259,12 +259,12 @@ sera notée \(s_F\) et appelée symétrie orthogonlae par rapport à \(F\).
   \(S_3 \implies S_0\). On a déjà \(s \in \Endo{E}\) et \(s \circ s=\Id\). 
   Montrons que \(\Inv(s)\perp \Opp(s)\). Soit \((x,y) \in \Opp(s) \times 
   \Inv(s)\). Alors
-  \begin{align}
+  \begin{align*}
     \prodscal{x}{y} &= \prodscal{s(x)}{-s(y)} && (x,y) \in \Opp(s) \times 
     \Inv(s) \\
     &=-\prodscal{s(x)}{-s(y)} && \text{bilinéarité} \\
     &=-\prodscal{x}{y}. && S_3
-  \end{align}
+  \end{align*}
   Donc \(\prodscal{x}{y}=0\). Finalement \(\Inv(s)\perp \Opp(s)\), \(s\) est une 
   symétrie orthogonale.
 
@@ -288,12 +288,12 @@ sera notée \(s_F\) et appelée symétrie orthogonlae par rapport à \(F\).
 \begin{proof}
   On a \(H^\perp = \VectEngendre(k)\), et on a vu que 
   \(p_{H^\perp}(x)=\prodscal{x}{k}k\), alors
-  \begin{align}
+  \begin{align*}
     s_{H}(x)&=2p_H(x)-x\\
     &=2(x-p_{H^\perp}(x))-x\\
     &=x-2p_{H^\perp}(x)\\
     &=x-2\prodscal{x}{k}k.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \begin{theo}
@@ -332,13 +332,13 @@ sera notée \(s_F\) et appelée symétrie orthogonlae par rapport à \(F\).
   \end{equation}
   Calculons \(s(a)\)~: \(s(a) = a -2 
   \frac{\prodscal{a}{b-a}}{\norme{b-a}^2}(b-a)\). Alors
-  \begin{align}
+  \begin{align*}
     s(a)-b &=(a-b)\left(1+2\frac{\prodscal{a}{b-a}}{\norme{b-a}^2}\right) \\
     &=\frac{a-b}{\norme{b-a}^2}(\norme{b}^2+\norme{a}^2-2\prodscal{b}{a}+2\prodscal{a}{b}-2\prodscal{a}{a}) 
     \\
     &=\frac{a-b}{\norme{b-a}^2}(2\norme{a}^2-2\norme{a}^2)\\
     &=0.
-  \end{align}
+  \end{align*}
   Donc \(s(a)=b\). D'où \(a=s\circ s(a)=s(b)\). L'application \(s\) convient.
 \end{proof}
 
@@ -352,14 +352,14 @@ sera notée \(s_F\) et appelée symétrie orthogonlae par rapport à \(F\).
 \end{defdef}
 \begin{proof}
   Soit \(x \in E\). Alors
-  \begin{align}
+  \begin{align*}
     d(x,a)=d(x,b) &\iff \norme{x-a}=\norme{x-b} \\
     &\iff \norme{x-a}^2=\norme{x-b}^2 \\
     &\iff \norme{x}+\norme{a}^2-2\prodscal{x}{a}= 
     \norme{x}+\norme{b}^2-2\prodscal{x}{b}\\
     &\iff \prodscal{x}{b-a}=0\\
     &\iff x \in H=\VectEngendre(b-a)^\perp.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Groupes \(\Orth{E}\) et \(\SOrth{E}\)}
@@ -375,19 +375,19 @@ est l'ensemble des automorphismes de \(E\) qui conservent le produit scalaire.
   \(\Id \in \Orth{E}\). Soient \(u\) et \(v\) dans \(\Orth{E}\), alors on peut 
   définir \(u\circ v\) et \(u \circ v \in \GL{E}\). Montrons que \(u \circ v\) 
   conserve le produit scalaire~: Pour tout \((x,y) \in E^2\), on a
-  \begin{align}
+  \begin{align*}
     \prodscal{u\circ v(x)}{u\circ v(y)} &= \prodscal{u(v(x))}{u(v(y))} \\
     &=\prodscal{v(x)}{v(y)} && u \in \Orth{E}
     &=\prodscal{x}{y}. && v \in \Orth{E}
-  \end{align}
+  \end{align*}
   Donc \(u \circ v \in \Orth{E}\). Soit \(u \in \Orth{E}\), alors \(u\) est 
   inversible et \(u^{-1} \in \GL{E}\). Montrons que \(u^{-1}\) conserve le 
   produit scalaire~: Pour tout \((x,y) \in E^2\), on a
-  \begin{align}
+  \begin{align*}
     \prodscal{u^{-1}(x)}{u^{-1}(y)}&= \prodscal{u(u^{-1}(x))}{u(u^{-1}(y))} && u 
     \in \Orth{E} \\
     &=\prodscal{x}{y}.
-  \end{align}
+  \end{align*}
   Donc \(u^{-1} \in \Orth{E}\).
 
   Par caractérisation, \((\Orth{E}, \circ)\) est un sous-groupe de 
@@ -457,11 +457,11 @@ On note \(A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}\), \(A^\top A=
   De manière évidente, on voit que \(1 \iff 2 \iff 3\). Ensuite~:
 
   \(2 \iff 5\). En effet, on a
-  \begin{align}
+  \begin{align*}
     A A^\top = I_n &\iff \forall (i,j) \in \intervalleentier{1}{n}^2 \quad 
     \prodscal{\Lb_i}{\Lb_j}=\delta_{ij} \\
     &\iff \Lb_A \text{~BON de~} \R^n.
-  \end{align}
+  \end{align*}
 
   \(5 \implies 6\). Soit \(\E_c\) la base canonique de \(\R^n\). L'application 
   \(u\) est canoniquement associée à \(A\), donc \(u(\E_c)=\courbe_A\). Les 
@@ -487,11 +487,11 @@ On note \(A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}\), \(A^\top A=
   seulement si \(A^\top\) est orthogonale.
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     A \in \Orth{n} &\iff A^\top A = I_n \\
     & \iff A^\top (A^\top)^\top = I_n^\top=I_n \\
     & \iff A^\top \in \Orth{n}.
-  \end{align}
+  \end{align*}
 \end{proof}
 \begin{prop}
   \begin{equation}
@@ -538,10 +538,10 @@ On note \(A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}\), \(A^\top A=
   orthonormée de E. On note \(A=\Mat_\B(u)\), \(X=\Mat_\B(x)\) er 
   \(Y=\Mat_\B(y)\). Alors \(\prodscal{x}{y}=\X^\top Y\) et 
   \(\prodscal{u(x)}{u(y)} = (AX)^\top AY = X^\top A^\top A Y\). Alors
-  \begin{align}
+  \begin{align*}
     X^\top Y &= X^\top A^\top A Y\\
     X^\top(I_n - A^\top A)Y &=0.
-  \end{align}
+  \end{align*}
   Cette égalité est vrai pour tout couple \((x,y) \in E^2\) donc \(A^\top A= 
   I_n\), alors \(A \in \Orth{n}\).
 
@@ -552,7 +552,7 @@ On note \(A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}\), \(A^\top A=
   matrice est carrée. On sait que \(A=\Mat_{\B_0}(u)\) est orthogonale. On 
   pose que \(\B_0 = (b_1, \ldots, b_n)\) et pour tout \((i,j) \in 
   \intervalleentier{1}{n}^2\) on a
-  \begin{align}
+  \begin{align*}
     \prodscal{u(b_i)}{u(b_j)} &=\prodscal{\sum_{k=1}^n a_{ki}b_k}{\sum_{l=1}^n 
     a_{lj}b_l} \\
     &=\sum_{k=1}^n \sum_{l=1}^n a_{ki} a_{lj} \prodscal{b_k}{b_l} && 
@@ -560,7 +560,7 @@ On note \(A^\top = (\alpha_{ij})_{1\leqslant i,j \leqslant n}\), \(A^\top A=
     &=\sum_{k=1}^n a_{ki}a_{kj} && \B_0 \text{~est une BON} \\
     &=(A^\top A)_{ij} \\
     &=\delta_{ij}. && A \in \Orth{n}
-  \end{align}
+  \end{align*}
   La base \(u(\B_0)\) est orthonormée, donc \(u \in \Orth{E}\).
 \end{proof}
 
@@ -644,12 +644,12 @@ Soit \((E,\varphi)\) un espace euclidien de dimension \(n \in \N^*\). Soit
   \SOrth{n}\).
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     \E \text{~est directe} &\iff \E \text{~est une base de~} E \text{~et~} 
     \Det_\B(\E) > 0 \\
     &\iff \P_{\B\E} \in \Orth{n} \text{~et~} \Det_\B(\E) > 0 \\
     &\iff \P_{\B\E} \in \SOrth{n}.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Groupes \(\Orth{n}\) et \(\SOrth{n}\)}
@@ -742,7 +742,7 @@ Soit \(A =
 \begin{proof}
   Soit \(A=\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Mn{2}{\R}\). 
     Alors
-    \begin{align}
+    \begin{align*}
       A \in \Orth{2} &\iff \courbe_A \text{~est une BON} \\
       &\iff \begin{cases} a^2+c^2=1 \\ b^2+d^2=1 \\ ab+cd=0 \end{cases}\\
         &\iff \exists (\alpha, \beta) \in \R^2 \quad \begin{cases} 
@@ -763,7 +763,7 @@ Soit \(A =
         &\iff \exists (\alpha, \epsilon) \in \R \times \{-1; 1\} \quad 
         A=\begin{pmatrix} \cos \alpha & -\epsilon\sin\alpha \\ \sin\alpha 
         & \epsilon\cos\alpha\end{pmatrix}
-    \end{align}
+    \end{align*}
 \end{proof}
 \begin{theo}
   \begin{equation}
@@ -851,7 +851,7 @@ réflexions de \(E_2\).
   \(\B\) est \(S_\varphi\). On cherche \(\Inv(u)=\enstq{x \in 
   E_2}{(u-\Id)(x)=0}\). On travaille matriciellement~: soit 
   \(X=\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}=\Mat_\B(x)\).
-    \begin{align}
+    \begin{align*}
       x \in \Inv(u) &\iff (S_\varphi-I_2)x=0 \\
       &\iff \begin{cases} (\cos \varphi -1)x_1 +\sin\varphi x_2 = 0 \\ 
       \sin\varphi x_1 -(\cos\varphi+1)x_2=0 \end{cases} \\
@@ -864,7 +864,7 @@ réflexions de \(E_2\).
         \\ \cos\frac{\varphi}{2} \left(\sin\frac{\varphi}{2}x_1 - 
       \cos\frac{\varphi}{2}x_2\right) = 0\end{cases} \\
       &\iff \cos\frac{\varphi}{2} x_2 = \sin\frac{\varphi}{2}x_1.
-    \end{align}
+    \end{align*}
 \end{proof}
 \begin{prop}
   La réflexion \(u\) traduite par la matrice \(S_\varphi\) dans la base 
@@ -896,13 +896,13 @@ Il existe une réflexion \(s'\) de \(E_2\) telle que \(r \circ s=s'\), donc
 réels \(\theta\), \(\varphi\) et \(\varphi'\) tels que 
 \(\Mat_\B(r)=R_\theta\), \(\Mat_\B(s)=S_\varphi\) et 
 \(\Mat_\B(s')=S_{\varphi'}\). Ainsi
-\begin{align}
+\begin{align*}
   r = s' \circ s &\iff  R_\theta = S_\varphi 
   S_{\varphi'}=R_{\varphi'-\varphi} \\
   &\iff \begin{cases} \cos \theta = \cos(\varphi'-\varphi) \\\sin \theta = 
   \sin(\varphi'-\varphi) \end{cases}\\
   &\iff \congru{\theta}{\varphi'-\varphi}{2\pi}.
-\end{align}
+\end{align*}
 Si on connait \(\varphi\) et \(\theta\), il suffit de prendre 
 \(\varphi'=\theta +\varphi\).
 
@@ -947,11 +947,11 @@ que
 \end{equation}
 De plus pour tout \(x \in E_2\), on note \(X=\Mat_\B(x)=\begin{pmatrix} x_1 
 \\ x_2 \end{pmatrix}\). Alors
-\begin{align}
+\begin{align*}
   x \in \Inv(u) &\iff (R_\theta-I_2)X=0 \\
   &\iff \begin{cases} (\cos\theta -1)x_1 -\sin\theta x_2 = 0 \\ \sin\theta 
   x_1 +(\cos\theta -1)x_2=0 \end{cases}.
-\end{align}
+\end{align*}
 Le déterminant du système vaut \(\begin{vmatrix} \cos\theta -1 & -\sin\theta 
 \\ \sin\theta & \cos\theta -1\end{vmatrix} = 2(1-\cos\theta)\neq 0\). Alors 
 c'est un système de Cramer homogène~: il n'y a qu'une solution, c'est la 
@@ -973,24 +973,24 @@ Soit \(P=\P_{\B,\B'}\) la matrice de passage de \(\B\) à \(\B'\)~:
 \begin{itemize}
   \item \(\B\) et \(\B'\) ont la même orientation et alors \(P \in 
     \SOrth{2}\). Il existe un réel \(\alpha\) tel que \(P=R_\alpha\). Alors
-    \begin{align}
+    \begin{align*}
       R_{\theta'}=P^{-1} R_{\theta} P &\iff 
       R_{\theta'}=R_{-\alpha}R_{\theta}R_{\alpha} \\
       &\iff R_{\theta'} = R_{-\alpha+\theta+\alpha}\\
       &\iff R_{\theta'} =R_{\theta}\\
       &\iff \congru{\theta}{\theta'}{2\pi}.
-    \end{align}
+    \end{align*}
   \item \(\B\) et \(\B'\) n'ont pas la même orientation et alors \(P \in 
     \Orthmin{2}\). Il existe un réel \(\varphi\) tel que \(P=S_\varphi\). 
     Alors
-    \begin{align}
+    \begin{align*}
       R_{\theta'}=P^{-1} R_{\theta} P &\iff 
       R_{\theta'}=S_{\varphi}R_{\theta}S_{\varphi} \\
       &\iff R_{\theta'} = S_{\varphi}S_{\varphi+\theta}\\
       &\iff R_{\theta'} = R_{\varphi-\varphi-\theta}\\    &\iff R_{\theta'} 
       =R_{-\theta}\\
       &\iff \congru{\theta}{-\theta'}{2\pi}.
-    \end{align}
+    \end{align*}
 \end{itemize}
 On en déduit le théorème suivant~:
 \begin{theo}
@@ -1008,13 +1008,13 @@ de la base \(\B\) mais elle dépend quand même de l'orientation de l'espace.
 
 Soient \(E_2\) le plan euclidien orienté, \(r \in \SOrth{E_2}\) et 
 \(\theta\) l'angle de la rotation \(r\). Pour toute base orthonormée directe 
-\(\B\) de \(E_2\), \(\Mat_\B(r) = \begin{bmatrix} \cos\theta & -\sin\theta 
-\\ \sin\theta & \cos\theta \end{bmatrix}\). Soit \(a\) un vecteur unitaire 
+\(\B\) de \(E_2\), \(\Mat_\B(r) = \begin{vmatrix} \cos\theta & -\sin\theta 
+\\ \sin\theta & \cos\theta \end{vmatrix}\). Soit \(a\) un vecteur unitaire 
 quelconque. On peut compléter \(a\) en une base orthonormée directe 
 \((a,b)\). Comme on a
 \begin{gather}
-  \Mat_{(a,b)}(r)=\begin{bmatrix} \cos \theta & -\sin \theta \\ \sin\theta & 
-  \cos\theta \end{bmatrix} \\
+  \Mat_{(a,b)}(r)=\begin{vmatrix} \cos \theta & -\sin \theta \\ \sin\theta & 
+  \cos\theta \end{vmatrix} \\
   \Det(a,r(a))= \Det_{(a,b)}(a,r(a)) = \begin{vmatrix} 1 & \cos \theta \\ 0 
   & \sin\theta \end{vmatrix}=\sin\theta,
 \end{gather}
@@ -1032,7 +1032,7 @@ alors
   \(r(a)=b\).
 \end{prop}
 \begin{proof}
-  Comme dans la sous-sous-section précédente, le vecteur \(a\) est unitaire; 
+  Comme dans la sous sous-section précédente, le vecteur \(a\) est unitaire; 
   alors il existe un vecteur \(c \in E_2\) tel que \((a,c)\) soit une base 
   orthonormée directe de \(E_2\). Alors il existe un unique couple \((b_1, 
   b_2) \in \R^2\) tel que \(b=b_1 a+b_2 c\). \(1=\norme{b}^2=b_1^2+b_2^2\). 
@@ -1041,13 +1041,13 @@ alors
 
   Soit \(r \in \SOrth{E_2}\) d'angle \(\theta \in \R\). Comme \((a,c)\) est 
   une base orthonormée directe, on a \(\Mat_{(a,c)}(r)=R_\theta\). Et
-  \begin{align}
+  \begin{align*}
     \Mat_{(a,c)}(a) &= \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
       \Mat_{(a,c)}(b) &= \begin{pmatrix} \cos\alpha\\ \sin\alpha 
       \end{pmatrix}.
-  \end{align}
+  \end{align*}
   Alors
-  \begin{align}
+  \begin{align*}
     r(a) = b &\iff R_\theta \Mat_{(a,c)}(a) = \Mat_{(a,c)}(b) \\
     &\iff R_\theta \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 
   \cos\alpha\\ \sin\alpha \end{pmatrix} \\
@@ -1055,7 +1055,7 @@ alors
   \end{cases} \\
   &\iff \congru{\theta}{\alpha}{2\pi} \\
   &\iff R_\theta = R_\alpha.
-\end{align}
+\end{align*}
 Il existe donc une unique rotation \(r\) telle que \(r(a)=b\), c'est la 
 rotation d'angle \(\alpha\).
 \end{proof}
@@ -1083,10 +1083,10 @@ Soit \(E_3\) l'espace euclidien supposé orienté.
 \(E_3\), il existe une unique réflexion \(s\) telle que \(s(a)=b\) et 
 \(s(b)=a\). C'est la réflexion par rapport à l'hyperplan médiateur \(H\) de 
 \(a\) et \(b\)~:
-\begin{align}
+\begin{align*}
   H &=\VectEngendre(b-a)^\perp \\
   &=\enstq{x \in E_3}{\norme{a-x}=\norme{b-x}}.
-\end{align}
+\end{align*}
 
 \begin{theo}
   \label{theo:orthreflexions}
@@ -1125,22 +1125,22 @@ Soit \(E_3\) l'espace euclidien supposé orienté.
       \end{equation}
       Soit \(s\) la réflexion par rapport à \(H\)\footnote{\(s(b)=c\) et 
       \(s(c)=b\)}. Alors
-      \begin{align}
+      \begin{align*}
         \prodscal{a}{u(b)-b} &=\prodscal{a}{u(b)} - \prodscal{a}{b} \\
         &=\prodscal{u(a)}{b} - \prodscal{a}{b} && u \in \Orth{E_3}\\
         &=\prodscal{a}{b} - \prodscal{a}{b} && a \in \Inv(u)=F \\
         &=0.
-      \end{align}
+      \end{align*}
       Donc \(a \in H\), \(a=s(a)\). Soit \(v=s \circ u\), alors 
       \(v(a)=s(u(a))=s(a)=a\) et \(v(b)=s(u(b))=s(c)=b\). Comme 
       \(F=\VectEngendre(a)\) et \(b \notin F\) alors \((a,b)\) est une famille 
       libre. \(\Dim \VectEngendre(a,b)=2\) alors \(\VectEngendre(a,b) \subset 
       \Inv(v)\) et donc \(\Dim\Inv(v) \in \{2,3\}\). D'après les deux premiers 
       cas, \(v\) est le produit d'au plus une réflexion.
-      \begin{align}
+      \begin{align*}
         v &=s \circ u \\
         u &=(s \circ s) \circ v = s \circ v.
-      \end{align}
+      \end{align*}
       Alors \(u\) est le produit d'au plus deux réflexions.
     \item Cas 4~: \(\Dim F=0\), soit \(a \in E_3 \setminus \{0\}\) tel que 
       \(\norme{a}=1\) et soit \(b=u(a)\neq a\). Alors \(\norme{b}=1\), car 
@@ -1187,11 +1187,11 @@ déterminant de \(r\) vaut \(\Det r =1=(-1)^p\). Alors \(p\) est pair, \(p \in
 
   Comme \(p \neq H\) alors \(\Dim \Dr \leqslant 1\). \(P+H\) est un 
   sous-espace vectoriel de \(E_3\), donc
-  \begin{align}
+  \begin{align*}
     3 &\geqslant \Dim(P+H) = \Dim P +\Dim H -\Dim(Dr) \\
     3 &\geqslant 4 - \Dim Dr
     \Dim \Dr &\geqslant 1.
-  \end{align}
+  \end{align*}
   Alors \(\Dr\) est de dimension 1, c'est un droite. Soit \(k \in E_3\) 
   unitaire tel que \(\Dr = \VectEngendre(k)\).
   \begin{equation}
@@ -1229,26 +1229,26 @@ déterminant de \(r\) vaut \(\Det r =1=(-1)^p\). Alors \(p\) est pair, \(p \in
   tel que \((x, y)\) soit une base orthonormée directe de \(F\). Ainsi \((x, 
   y, k)\) est une base orthonormée directe de \(E_3\) puisque \(k \wedge 
   x=y\). Alors
-  \begin{align}
+  \begin{align*}
     \Mat_{(x, y)}(r_{|F}^{|F}) &=R_\theta \\
     &=\begin{pmatrix} \cos \theta & -\sin\theta \\ \sin\theta & \cos\theta 
     \end{pmatrix},
-  \end{align}
+  \end{align*}
   alors on a bien \(r(x) = \cos\theta x+ \sin\theta y=\cos\theta x+ \sin\theta 
   k\wedge x\)
 
   D'après la première égalité~:
-  \begin{align}
+  \begin{align*}
     \prodscal{x}{r(x)} &= \prodscal{x}{\cos\theta x+ \sin\theta k\wedge x} \\
     &=\cos\theta \norme{x}^2+\sin\theta \prodscal{x}{k\wedge x}\\
     &=\cos\theta.
-  \end{align}
+  \end{align*}
   Et
-  \begin{align}
+  \begin{align*}
     \Det(x, r(x), k) &= \Det_{(x, y, k)}(x, r(x), k) \\
     &= \begin{vmatrix} 1 & \cos\theta & 0 \\ 0 &\sin\theta & 0 \\ 0 & 0 & 
     1\end{vmatrix} =\sin\theta.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Classification des éléments de \(\Orth{E_3}\)}
@@ -1280,13 +1280,13 @@ C_2, C_3)\) est une base orthonormale, \(M \in \Orth{3}\). De plus \(C_1
 \wedge C_2=C_3\) et \(\Det M=1\).
 
 Cherchons \(\Inv(u)\).
-\begin{align}
+\begin{align*}
   X \in \Inv(u) &\iff MX = X \\
   &\iff (M-\Id)X =0 \\
   &\iff \begin{cases} -17x_1 +4x_2 +x_3 =0 \\ 4x_1 -2x_2 +4x_3=0 \\ x_1 +4x_2 
   -17 x_3=0 \end{cases}\\
   &\iff \begin{cases} x_1 = x_3 \\ x_2=4x_3 \end{cases}.
-\end{align}
+\end{align*}
 Donc \(\Inv(u) = \VectEngendre(1, 4, 1)\), \(k = \frac{1}{3\sqrt{2}}(1, 4, 
 1)\).
 
@@ -1313,13 +1313,13 @@ bien
   C_1 \wedge C_2 = -C_3.
 \end{gather}
 Alors \(M \in \Orthmin{3}\). Trouvons \(\Inv(M)\)~:
-\begin{align}
+\begin{align*}
   X \in \Inv(M) &\iff  MX=X \\
   &\iff (M-I_3) X=0 \\
   &\iff \begin{pmatrix} -3 & \sqrt{3} & 2\sqrt{3} \\ \sqrt{3} & -1 & -2 \\ 
   2\sqrt{3} & -2 & 4 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 
   \end{pmatrix} =0 \\
-&\iff x_2 = \sqrt{3} x_1 -2 x_2 \end{align}
+&\iff x_2 = \sqrt{3} x_1 -2 x_2 \end{align*}
 \begin{equation}
   \Inv(u) = \VectEngendre((1, \sqrt{3}, 0), (0, -2, 1)).
 \end{equation}

@@ -309,7 +309,7 @@ ils ne sont pas égaux en général. En effet si on note \(A=E_{12}=\begin{pmatr
   E'_{ij} E_{kl} =(e_{\alpha \beta}) \in \Mnp{m}{p}{\K}.
 \end{equation}
 Alors
-\begin{align}
+\begin{align*}
   e_{\alpha \beta} &=\sum_{\gamma=1}^n (E'_{ij})_{\alpha \gamma} 
   (E_{kl})_{\gamma \beta}\\
   &=\sum_{\gamma=1}^n \delta_{i\alpha} \delta_{j\gamma} \delta_{k\gamma} 
@@ -317,7 +317,7 @@ Alors
   &= \delta_{i\alpha} \delta_{jk} \delta_{l\beta}\\
   &= \delta_{jk} (\delta_{i\alpha} \delta_{l\beta})\\
   &= \delta_{jk} (E''_{il})_{\alpha\beta}.
-\end{align}
+\end{align*}
 Donc
 \begin{equation}
   E'_{ij} E_{kl} = \delta_{jk} E''_{il}.
@@ -340,12 +340,12 @@ base canonique de \(\K^p\).
   Soient \(A= (a_{ij})=\Mat_{\G_c,\E_c}(u)\) et \(B=(b_{ij})= 
   \Mat_{\E_c,\F_c}(v)\). On note \(C=BA\). Soit un naturel \(j \in 
   \intervalleentier{1}{p}\) et alors
-  \begin{align}
+  \begin{align*}
     v \circ u (g_j) &= v\left( \sum_{i=1}^n a_{ij} e_i\right) \\
     &=\sum_{i=1}^n a_{ij} v(e_i) \\
     &=\sum_{i=1}^n a_{ij} \sum_{k=1}^m b_{ki} f_k \\
     &=\sum_{k=1}^m c_{kj} f_k
-  \end{align}
+  \end{align*}
   D'où \(BA=C=\Mat_{\G_c,\F_c}(v \circ u)\).
 \end{proof}
 
@@ -368,13 +368,13 @@ vecteur}
     \(A=(a_{ij})\) et \(Y=\begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix}\). 
       Pour tout \(i \in \intervalleentier{1}{n}\) on a \((AX)_i=\sum_{k=1}^p 
       a_{ik}x_k\). Alors
-      \begin{align}
+      \begin{align*}
         y&=u\left(\sum_{j=1}^p x_je_j \right)\\
         &=\sum_{j=1}^p x_j u(e_j)\\
         &=\sum_{j=1}^p x_j \sum_{i=1}^n a_{ij}f_i \\
         &=\sum_{i=1}^n \left( \sum_{j=1}^p x_j a_{ij}\right)f_i \\
         &=\sum_{j=1}^p (AX)_i f_i
-      \end{align}
+      \end{align*}
       Donc \(Y=AX\).
 \end{proof}
 
@@ -398,12 +398,12 @@ vecteur}
   Démontrons par exemple le deuxième point. Soient \(u\), \(u'\) et \(v\) les 
   applications linéaires canoniquement respectiviements associées à \(A\), 
   \(A'\) et \(B\). Alors
-  \begin{align}
+  \begin{align*}
     B(A+A') =& \Mat(v) \cdot (\Mat(u)+\Mat(u')) \\
     &=\Mat(v \circ (u+u')) \\
     &=\Mat(v \circ u) + \Mat(v \circ u') \\
     &=BA +BA'.
-  \end{align}
+  \end{align*}
 
   Les autres se démontrent de manière analogue.
 \end{proof}
@@ -524,11 +524,11 @@ On en déduit
 
 Soit \(A \in \Mnp{n}{k}{\K}\) et \(u\) l'endomorphisme canoniquement associé. 
 D'après ce qui précéde,
-\begin{align}
+\begin{align*}
   A \in \GLn{n}{\K} & \iff u \text{~est surjectif}\\
   & \iff \forall y \in \K^n \ \exists x \in \K^n \quad y=u(x)\\
   & \iff \forall Y \in \Mnp{n}{1}{\K} \ \exists X \in \Mnp{n}{1}{\K} \quad Y=AX.
-\end{align}
+\end{align*}
 C'est un système d'équations linéaires à \(n\) équations et \(n\) inconnues.
 \begin{equation}
   Y=AX \iff \begin{cases} y_1 = \sum_{k=1}^n a_{1k} x_k \\ \ldots \\ y_n = 
@@ -631,24 +631,24 @@ Idem pour \(T_n^s(\K)\).
 \end{prop}
 \begin{proof}
   Dans le premier cas, on suppose que \(\mathcal{A}=\Dr_n(\K)\). Alors
-  \begin{align}
+  \begin{align*}
     A \text{~est inversible dans } \Dr_n(\K) &\iff \exists B \in \Dr_n(\K) \ 
     AB=BA=I_n \\
     &\iff \exists B = \text{diag}(b_{11}, \ldots, b_{nn}) \ \forall i \in 
     \intervalleentier{1}{n} \ a_{ii}b_{ii}=1\\
     &\iff \forall i \in \intervalleentier{1}{n} \ a_{ii} \in \uinv{\K}\\
     &\iff \forall i \in \intervalleentier{1}{n} \ a_{ii} \neq 0.
-  \end{align}
+  \end{align*}
 
   Dans un deuxième cas, on suppose que \(\mathcal{A}=T_n^s(\K)\). Alors si on 
   suppose que \(A\) est inversible dans \(T_n^s(\K)\) alors il existe une 
   matrice triangulaire supérieure \(B\) telle que \(AB=BA=I_n\). Alors pour tout 
   \(i \in \intervalleentier{1}{n}\)
-  \begin{align}
+  \begin{align*}
     1=\sum_{k=1}^n a_{ik}b_{ki} &= \sum_{k=1}^{i-1}a_{ik}b_{ki} + a_{ii}b_{ii} + 
     \sum_{k=i+1}^{n}a_{ik}b_{ki} \\
     &=a_{ii}b_{ii}
-  \end{align}
+  \end{align*}
   Alors \(a_{ii} \in \uinv{\K}\) et donc \(a_{ii} \neq 0\).
 
   Supposons maintenant que pour tout \(i \in \intervalleentier{1}{n}\), 
@@ -658,11 +658,11 @@ Idem pour \(T_n^s(\K)\).
 
   Alors pour tout \(j \in \intervalleentier{1}{n}\), on a \(u(e_j) = 
   \sum_{i=1}^n a_{ij}e_i\). C'est-à-dire
-  \begin{align}
+  \begin{align*}
     u(e_1) &=a_{11} e_{1} \\
     u(e_2) &=a_{11} e_{1} + a_{22} e_2\\     \ldots \\
     u(e_n) &= a_{1n}e_1 + \dotsb + a_{nn}e_n.
-  \end{align}
+  \end{align*}
   Alors comme les \(a_{ii}\) sont non nuls, on peut inverser le système 
   d'équation et trouver les \(e_i\) en fonction des \(u(e_i)\). Alors pour tout 
   \(j \in \intervalleentier{1}{n}\) on a \(e_j \in \VectEngendre(u(e_1), \ldots, 
@@ -772,10 +772,10 @@ L'ensemble des matrices de \(\Mn{n}{\K}\) symétriques est noté
   \(\SN{n}{\K}=\Image(p)\) et \(\AN{n}{\K}=\Ker(p)=Image(q)\).
 
   Soit une matrice \(A \in \Mn{n}{\K}\). Alors
-  \begin{align}
+  \begin{align*}
     A&= p(A)+ (A-p(A))\\
     &= p(A)+q(A)
-  \end{align}
+  \end{align*}
   La famille \(p(E_{ij})_{1\leqslant i,j \leqslant n}\) est génératrice de 
   \(\Image(p)\) et pour tout \((i,j) \in \intervalleentier{1}{n}^2\) on a 
   \(p(E_{ij})=p(E_{ji})\). Alors \(p(E_{ij})_{1\leqslant i \leqslant j 
@@ -992,12 +992,12 @@ bases de \(E\) \(\E=(e_1, \ldots, e_n)\) \(\E'=(e'_1, \ldots, e'_n)\).
       \end{equation}
       \begin{proof}
         On sait que \(\P_{\E,\E''} = \Mat_{\E'',\E}(\Id_E)\), alors
-        \begin{align}
+        \begin{align*}
           \P_{\E,\E'} \cdot \P_{\E',\E''} &= \Mat_{\E',\E}(\Id_E) 
           \Mat_{\E'',\E'}(\Id_E) \\
           &= \Mat_{\E'',\E}(\Id_E \circ \Id_E) \\
           &=\P_{\E,\E''}
-        \end{align}
+        \end{align*}
       \end{proof}
     \item \((\P_{\E,\E'})^{-1} = \P_{\E',\E}\).
       \begin{proof}
@@ -1079,11 +1079,11 @@ vecteurs colonnes de la matrice \(A\) est \(\courbe_A=(c_j)_{1 \leqslant j
 
 On en déduit que \(\rg(A) \leqslant \min(n,p)\) car \(\courbe_A\) est une 
 famille de \(p\) vecteurs de \(\K^n\). De plus,
-\begin{align}
+\begin{align*}
   \rg(A) = 0 &\iff \dim \VectEngendre(\courbe_A)=0 \\
   &\iff \forall j \in \intervalleentier{1}{p} c_j = 0_{\K^n} \\
   \iff A=0
-\end{align}
+\end{align*}
 
 \begin{prop}
   Soit un \(\K\)-espace vectoriel \(E\) de dimension finie \(p\) non nulle, 
@@ -1123,12 +1123,12 @@ famille de \(p\) vecteurs de \(\K^n\). De plus,
 \end{theo}
 \begin{proof}
   On a
-  \begin{align}
+  \begin{align*}
     \rg(u) = \dim\Image(u) &= \dim \VectEngendre u(\E) \\
     &= \rg(u(\E))\\
     &=\rg(\Mat_{\F}(u(\E))\\
     &=\rg(\Mat_{\E,\F}(u)).
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \begin{corth}[Deuxième interprétation]
@@ -1142,13 +1142,13 @@ famille de \(p\) vecteurs de \(\K^n\). De plus,
 \end{corth}
 \begin{proof}
   Soit \(u\) l'endomorphisme canoniquement associé à \(A\). Alors
-  \begin{align}
+  \begin{align*}
     A \in \GLn{n}{\K} &\iff u \text{~bijectif}\\
     &\iff u \text{~surjectif}\\
     &\iff \Image(u)=E\\
     &\iff \rg(u) = n\\
     &\iff \rg(A) = n.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Matrice \(J_r\)}
@@ -1189,13 +1189,13 @@ nul \(r\) tel que \(r \leqslant \min(n,p)\). Posons
   famille libre de \(\K^p\) en base de \(\K^p\) : \((e_1, \ldots, e_r, 
   e_{r+1}, \ldots, e_p)\). Pour tout \(i \in \intervalleentier{1}{r}\), on 
   pose \(f_i = u(e_i)\). Alors
-  \begin{align}
+  \begin{align*}
     \rg(f_i)_{1 \leqslant i \leqslant r} &= \rg(u(e_i))_{1 \leqslant i 
     \leqslant r}\\
     &= \rg(u(e_i))_{1 \leqslant i \leqslant p}\\
     &= \rg(u(\E))\\
     &=\rg(u)=r.
-  \end{align}
+  \end{align*}
   Donc \((f_i)_{1\leqslant i\leqslant r}\) est une famille libre de \(\K^p\) 
   (voir proposition~
   \ref{prop:caracrangbase}). On peut donc compléter cette famille en une 
@@ -1220,10 +1220,10 @@ nul \(r\) tel que \(r \leqslant \min(n,p)\). Posons
 
   Soit \(u\) l'unique application linéaire de \(E\) vers \(F\) telle que 
   \(\Mat_{\E,\F}(u)=J_{n,p,r}\). On voit déjà que \(\rg(u)=r\). Ensuite on a
-  \begin{align}
+  \begin{align*}
     A = U J_{n,p,r} V &= \P_{\F_c,\F} \Mat_{\E,\F}(u) (\P_{\E_c,\E})^{-1} \\
     &=(\P_{\F,\F_c})^{-1} \Mat_{\E,\F}(u) \P_{\E,\E_c}.
-  \end{align}
+  \end{align*}
   La matrice \(A\) est donc représentative de l'application \(u\). Donc 
   d'après la deuxième interprétation du rang on a \(\rg(A)=\rg(u)=r\).
 \end{proof}

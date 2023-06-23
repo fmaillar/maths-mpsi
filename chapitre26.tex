@@ -103,7 +103,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
   \end{equation}
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     \abs{\prodscal{x}{y}}=\norme{x}\norme{y}
     &\iff
     \begin{cases}
@@ -127,7 +127,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
       x\neq 0 \text{~et~}  \exists \lambda_0 \in \R \quad x=-\lambda_0 y
     \end{cases}\\
     &\iff (x,y) \text{~est liée}.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsubsection{Inégalité de Minkowski}
@@ -140,12 +140,12 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
 \end{theo}
 \begin{proof}
   Soit un couple de  vecteurs \((x,y) \in E\), alors en appliquant le théorème 
-  de Cauchy-Schwarz on a \begin{align}
+  de Cauchy-Schwarz on a \begin{align*}
     \norme{x+y}^2 &= \norme{x}^2 + \norme{y}^2 + 2\prodscal{x}{y} \\
     & \leqslant \norme{x}^2 + \norme{y}^2 + 2\abs{\prodscal{x}{y}} \\
     & \leqslant \norme{x}^2 + \norme{y}^2 + 
     2\norme{x}\norme{y}=(\norme{x}+\norme{y})^2.
-  \end{align}
+  \end{align*}
   Comme \(\norme{x+y} \geqslant 0\), \(\norme{x}\geqslant 0\) et \(\norme{y}\ge 
   0\), le sens de l'inégalité est conservé en passant à la racine carrée et on a 
   bien
@@ -163,7 +163,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
 \end{prop}
 \begin{proof}
   Soit un couple de  vecteurs \((x,y) \in E\), alors
-  \begin{align}
+  \begin{align*}
     \norme{x+y} = \norme{x}+\norme{y} &\iff
     \begin{cases}
       \prodscal{x}{y} = \abs{\prodscal{x}{y}} \\ 
@@ -198,7 +198,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
       \text{~ou~} \\ 
       x \neq 0 \text{~et~} \exists \lambda \in \Rpluss \quad y=\lambda x 
     \end{cases}
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \emph{Conséquences~:} Soit un couple de  vecteurs \((x,y) \in E\), alors
@@ -384,11 +384,11 @@ Le seul vecteur orthogonal à tous les vecteurs de l'espace est le vecteur nul.
   \end{equation}
 \end{theo}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     x \perp y &\iff \prodscal{x}{y}=0 \\
     &\iff \frac{1}{2} (\norme{x+y}^2-\norme{x}^2-\norme{y}^2)=0 \\
     &\iff \norme{x+y}^2 = \norme{x}^2 + \norme{y}^2.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsubsection{Familles orthogonales, familles orthonormales}
@@ -417,12 +417,12 @@ Le seul vecteur orthogonal à tous les vecteurs de l'espace est le vecteur nul.
   Soit \(\X=(x_i)_{i \in I}\) une famille orthogonale finie de \(E\) et 
   \((\alpha_i)_{i \in I} \in \R^I\) telle que \(\sum_{i \in I}\alpha_i 
   x_i=0\). Soit \(i_0 \in I\), alors \(\prodscal{x_{i_0}}{0}=0\). Alors
-  \begin{align}
+  \begin{align*}
     0 &=\prodscal{\sum_{i \in I}\alpha_i x_i}{x_{i_0}} \\
     &=\sum_{i \in I}\alpha_i \prodscal{x_i}{x_{i_0}} && \text{linéarité à 
     gauche}\\
     &=\alpha_{i_0} \norme{x_{i_0}}^2. && \text{famille orthogonale}
-  \end{align}
+  \end{align*}
   Comme tous les vecteurs sont non nuls on a \(x_{i_0}\neq 0\) et donc 
   \(\norme{x_{i_0}} \neq 0\). Si bien que \(\alpha_{i_0}=0\), qui est vrai 
   pour tout \(i_0\), alors la famille \(\X\) est libre.
@@ -445,18 +445,18 @@ Le seul vecteur orthogonal à tous les vecteurs de l'espace est le vecteur nul.
     \norme{\sum_{i=1}^{n+1}x_i}^2 =  \norme{\sum_{i=1}^{n}x_i+x_{n+1}}^2.
   \end{equation}
   Or
-  \begin{align}
+  \begin{align*}
     \prodscal{\sum_{i=1}^{n}x_i}{x_{n+1}} 
     &=\sum_{i=1}^{n}\prodscal{x_i}{x_{n+1}} && \text{linéarité} \\
     &=0 && \text{famille orthogonale}.
-  \end{align}
+  \end{align*}
   Alors \(x_{n+1} \perp \sum_{i=1}^n x_i\). Donc
-  \begin{align}
+  \begin{align*}
     \norme{\sum_{i=1}^{n+1}x_i}^2 &=  \norme{\sum_{i=1}^{n}x_i+x_{n+1}}^2 \\
     &=\norme{\sum_{i=1}^{n}x_i}^2 + \norme{x_{n+1}}^2 && x_{n+1} \perp 
     \sum_{i=1}^n x_i \\
     &=\sum_{i=1}^{n+1}\norme{x_i}^2 &&  \text{Hypothèse de récurrence}.
-  \end{align}
+  \end{align*}
   L'assertion au rang \(n+1\) est vraie. Par théorème de récurrence, le 
   résultat est vraie pour tout naturel \(n \geqslant 2\).
 \end{proof}
@@ -672,12 +672,12 @@ infinité de supplémentaire.}
       on a \(\prodscal{x}{f_i}=0\). Pour tout \(y \in F\), il existe un unique 
       \(p\)-uplet de scalaire \((\alpha_1, \ldots, \alpha_p)\) tel que \(y = 
       \sum_{k=1}\alpha_k f_k\). Alors
-      \begin{align}
+      \begin{align*}
         \prodscal{x}{y} &= \sum_{k=1}\alpha_k \prodscal{x}{f_k} && 
         \text{linéarité} \\
         &=\sum_{k=1}\alpha_k 0 && x \in \Ker(u) \\
         &=0,
-      \end{align}
+      \end{align*}
       alors \(x \in F^\perp\). Alors \(\Ker(u) \subset F^\perp\).
     \item Soit \(x \in F^\perp\). Pour tout \(i \in \intervalleentier{1}{p}\), 
       on a \(x\perp f_i\). Donc \(\prodscal{x}{f_i}=0\), et alors \(u(x)=0\). 
@@ -889,13 +889,13 @@ du produit scalaire canonique.
   \leqslant p} \in \R^p\) et \((\beta_i)_{p+1 \leqslant i \leqslant n}\in 
   \R^{n-p}\) telles que \(x = \sum_{i=1}^p \alpha_i b_i\) et \(y = 
   \sum_{i=p+1}^n \beta_i b_i\). Leur produit scalaire vaut
-  \begin{align}
+  \begin{align*}
     \prodscal{x}{y} &= \prodscal{\sum_{i=1}^p \alpha_i b_i}{\sum_{j=p+1}^n 
     \beta_j b_j}\\
     &= \sum_{i=1}^p \alpha_i \sum_{j=p+1}^n \beta_j 
     \underbrace{\prodscal{b_i}{b_j}}_{=0 \text{~car~} i\neq j}\\
     &=0.
-  \end{align}
+  \end{align*}
   Donc \(F_1 \perp F_2\), et puisque \(E = F_1 \oplus F_2\), alors \(F_2 = 
   F_1^\perp\), d'après le corollaire~
   \ref{corth:supportho}.
@@ -964,7 +964,7 @@ Gram-Schmidt}
 
   \emph{Unicité (Analyse)~:} Si les \(\alpha_{i n+1}\) existent alors pour 
   tout \(j \in \intervalleentier{1}{n}\), on a
-  \begin{align}
+  \begin{align*}
     0 &= \prodscal{b_{n+1}}{b_j} \\
     0 &= \prodscal{\sum_{i=1}^{n} \alpha_{i n+1}b_i  + e_{n+1}}{b_j}\\
     0 &= \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} + 
@@ -973,7 +973,7 @@ Gram-Schmidt}
     (b_j)_{1 \leqslant j \leqslant n} \text{~est orthogonale}\\
     \alpha_{j n+1} &= -\frac{\prodscal{e_{n+1}}{b_j}}{\norme{b_j}^2}. && b_j 
     \neq 0
-  \end{align}
+  \end{align*}
   On a montré l'unicité sous réserve d'existence et on a trouvé la seule 
   valeur possible des \(\alpha_{i n+1}\).
 
@@ -987,14 +987,14 @@ Gram-Schmidt}
     \item Pour tout \((i,j) \in \intervalleentier{1}{n}^2\) si \(i \neq j\) 
       alors \(\prodscal{b_i}{b_j}=0\) car \((b_j)_{1 \leqslant j \leqslant 
       n}\) est une base orthogonale de \(E\). Ensuite
-      \begin{align}
+      \begin{align*}
         \prodscal{b_i}{b_{n+1}} &= \prodscal{b_i}{\sum_{i=1}^{n} \alpha_{i 
         n+1}b_i  + e_{n+1}} \\
         & = \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} + 
         \prodscal{b_i}{e_{n+1}} \\
         &=\alpha_{i n+1} \norme{b_i}^2 + \prodscal{b_i}{e_{n+1}} \\
         &=0.
-      \end{align}
+      \end{align*}
       Alors \((b_j)_{1 \leqslant j \leqslant n+1}\)  est une famille 
       orthogonale. Montrons que c'est une base~:
       \begin{itemize}
@@ -1040,11 +1040,11 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \geqslant
 Soit \(x \in E\), \(\B\) une base de \(E\). Il existe un unitque \(n\)-uplet 
 \((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) tel que \(x = \sum_{i=1}^n 
 x_ib_i\). Pour tout \(j \in \intervalleentier{1}{n}\), on a
-\begin{align}
+\begin{align*}
   \prodscal{x}{b_j} &=\sum_{i=1}^n x_i\prodscal{b_i}{b_j} && \text{linéarité} 
   \\
   &=x_j. && \B \text{~est une BON}
-\end{align}
+\end{align*}
 
 Alors pour tout \(x \in E\), on a \(x = \sum_{i=1}^n \prodscal{x}{b_i}b_i\).
 
@@ -1053,17 +1053,17 @@ Alors pour tout \(x \in E\), on a \(x = \sum_{i=1}^n \prodscal{x}{b_i}b_i\).
 Soient \(x\) et \(y\) des vecteurs de \(E\). Il existe deux uniques familles 
 de scalaire \((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) et \((y_i)_{1 
 \leqslant i \leqslant n}\in\R^n\) telles que
-\begin{align}
+\begin{align*}
   x &= \sum_{i=1}^n x_ib_i \\
   y &= \sum_{i=1}^n y_ib_i.
-\end{align}
+\end{align*}
 Ainsi le produit scalaire s'écrit
-\begin{align}
+\begin{align*}
   \prodscal{x}{y} &=\prodscal{\sum_{i=1}^n x_ib_i}{\sum_{j=1}^n y_jb_j} \\
   &=\sum_{i=1}^n  \sum_{j=1}^n x_i y_j \prodscal{b_i}{b_j} && 
   \text{bilinéarité} \\
   &=\sum_{i=1}^n  x_i y_i. && \B \text{~est une BON}
-\end{align}
+\end{align*}
 
 Finalement pour tout \((x,y) \in E^2\), on a \(\prodscal{x}{y} = \sum_{i=1}^n 
 \prodscal{x}{b_i}\prodscal{y}{b_i}\).
@@ -1109,7 +1109,7 @@ b_i\). On note \(X = \Mat_{\B}(x)\). Alors
     x = \sum_{i=1}^n x_i b_i, \quad y = \sum_{i=1}^n y_i b_i.
   \end{equation}
   Alors
-  \begin{align}
+  \begin{align*}
     \prodscal{u(x)}{u(y)} &=\prodscal{\sum_{i=1}^n x_i u(b_i)}{\sum_{j=1}^n 
     y_j u(b_j)} && u \in \Lin{E}{\R^n} \\
     &=\prodscal{\sum_{i=1}^n x_i e_i}{\sum_{j=1}^n y_j e_j} && 
@@ -1118,7 +1118,7 @@ b_i\). On note \(X = \Mat_{\B}(x)\). Alors
     \text{bilinéarité} \\
     &=\sum_{i=1}^n x_i y_i && \E_c \text{~est une  BOG} \\
     &=\varphi(x,y)=\prodscal{x}{y}.
-  \end{align}
+  \end{align*}
 \end{proof}
 \begin{theo}
   Soit \(E\) un espace vectoriel euclidien de dimension \(n \geqslant 1\). 
@@ -1143,12 +1143,12 @@ b_i\). On note \(X = \Mat_{\B}(x)\). Alors
   \end{equation}
   L'application \(\varphi\) est symétrique puisque \(\prodscal{.}{.}\) l'est. 
   Pour tout réel \(\lambda\) et tout triplet \((x,x',y) \in E^3\) on a
-  \begin{align}
+  \begin{align*}
     \varphi(\lambda x+x',y) &= \prodscal{u(\lambda x+x')}{u(y)} \\
     &=\lambda \prodscal{u(x)}{u(y)}+ \prodscal{u(x')}{u(y)} && \text{linéarité 
     de } u \text{~et~} \prodscal{.}{.} \\
     &=\lambda \varphi(x,y)+ \varphi(x,y').
-  \end{align}
+  \end{align*}
   \(\varphi\) est linéaire à gauche. Elle est aussi linéaire à droite et 
   symétrique.
 
@@ -1160,11 +1160,11 @@ b_i\). On note \(X = \Mat_{\B}(x)\). Alors
 
   Il reste à vérifier que \(\B\) est une base orthonormale pour \(\varphi\). 
   Pour tout \((i,j) \in \intervalleentier{1}{n}^2\), on a
-  \begin{align}
+  \begin{align*}
     \varphi(b_i,b_j) &= \prodscal{u(b_i)}{u(b_j)} \\
     &= \prodscal{e_i}{e_j} && u(\B)=\E_c\\
     &=\delta_{ij}. && \E_c \text{~est une BON}
-  \end{align}
+  \end{align*}
   Alors \(\B\) est une base orthonormale.
 \end{proof}
 
@@ -1201,12 +1201,12 @@ orthogonal.
 \begin{proof}
   \(1 \implies 2\). Comme \(p\) est un projecteur, alors \(p \in \Endo{E}\) et 
   \(p \circ p =p\). Soient \((x,y) \in E^2\) alors
-  \begin{align}
+  \begin{align*}
     \prodscal{p(x)}{y} &=  \prodscal{p(x)}{y-p(y)+p(y)} \\
     &= \prodscal{\underbrace{p(x)}_{\in \Image(p)}}{\underbrace{y-p(y)}_{\in 
     \Ker(p)}}+\prodscal{p(x)}{p(y)} \\
     &=  \prodscal{p(x)}{p(y)} && \Image(p) \perp \Ker(p)
-  \end{align}
+  \end{align*}
   De la même manière, par symétrie des rôles de \(x\) et \(y\) on a 
   \(\prodscal{x}{p(y)}=\prodscal{p(x)}{p(y)}\). Donc 
   \(\prodscal{x}{p(y)}=\prodscal{p(x)}{y}\).
@@ -1215,11 +1215,11 @@ orthogonal.
   \(p\) est un projecteur de \(E\).
 
   Soit \(x \in \Ker(p)\) et \(y \in \Image(p)\). Alors
-  \begin{align}
+  \begin{align*}
     \prodscal{x}{y} &= \prodscal{x}{p(y)} \\
     &=\prodscal{p(x)}{y} \\
     &=\prodscal{0}{y}=0.
-  \end{align}
+  \end{align*}
   Donc \(\Image(p) \perp \Ker(p)\). Alors le projecteur \(p\) est orthogonal.
 \end{proof}
 
@@ -1231,11 +1231,11 @@ f_p)\) de \(F\). On veut obtenir une expression de \(p_F(x)\) pour tout
 vecteur \(x\) de \(E\).
 
 Soit \(x \in E\), alors \(p_F(x) \in F\) et
-\begin{align}
+\begin{align*}
   p_F(x) &=\sum_{k=1}^n \prodscal{p_F(x)}{f_k}f_k \\
   &=\sum_{k=1}^n \prodscal{x}{p_F(f_k)}f_k \\
   &=\sum_{k=1}^n \prodscal{x}{f_k}f_k. && f_k \in F=\Image(p_F)
-\end{align}
+\end{align*}
 
 \emph{Remarque~:} Pour tout \(x \in E\), \(x = p_F(x) +(x-p_F(x)) = p_F(x) + 
 p_{F^\perp}(x)\). Parfois c'est plus intéressant de calculer \(p_{F^\perp}\), 
@@ -1256,11 +1256,11 @@ Soit \(A=\Mat_\B(p_F)\). Calculons pour tout \(i \in \intervalleentier{1}{n}\)
 
 Il faut les coordonnées de \(p_F(b_j)\) dans la base \(\B\)~: ce sont les 
 \(\prodscal{p_F(b_j)}{b_i}\).
-\begin{align}
+\begin{align*}
   a_{ij} &= \prodscal{p_F(b_j)}{b_i} \\
   &= \prodscal{\sum_{k=1}^p \prodscal{b_j}{f_k}f_k}{b_i} \\
   &= \sum_{k=1}^p \prodscal{b_j}{f_k} \prodscal{b_i}{f_k}.
-\end{align}
+\end{align*}
 
 La matrice \(A\) est symétrique.
 
@@ -1289,11 +1289,11 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
 \end{theo}
 \begin{proof}
   Soit \(y \in F\), alors
-  \begin{align}
+  \begin{align*}
     \norme{x-y}^2 &=\norme{\underbrace{x-p_F(x)}_{\in F^\perp} + 
     \underbrace{p_F(x)-y}_{\in F}}\\
     &=\norme{x-p_F(x)}^2 + \norme{p_F(x)-y}^2. && \text{Pythagore}
-  \end{align}
+  \end{align*}
 
   Donc \(\norme{x-p_F(x)} \leqslant \norme{x-y}\), et
   \begin{equation}
@@ -1342,27 +1342,27 @@ L'application \(\psi\) est bien définie car pour tout vecteur \(x \in E\),
 \(\varphi_x \in E^*\). Montrons que \(\psi\) est linéaire~: Soit \((x,x') \in 
 E^2\) et \(\lambda \in \R\), alors \(\psi(\lambda x+x') = \varphi_{\lambda 
 x+x'}\). Soit \(y \in E\), alors
-\begin{align}
+\begin{align*}
   \psi(\lambda x+x')(y) &= \varphi_{\lambda x+x'}(y) \\
   &=\prodscal{\lambda x+x'}{y} \\
   &=\lambda \prodscal{x}{y} + \prodscal{x'}{y} && \text{linéarité à gauche}\\
   &=\lambda \varphi_x(y)+ \varphi_{x'}(y) \\
   &=\lambda \psi(x)(y)+\psi(x')(y)\\
   &=[\lambda \psi(x)+\psi(x')](y).
-\end{align}
+\end{align*}
 Comme l'égalité est vraie pour tout \(y \in E\), on a \(\psi(\lambda 
 x+x')=\lambda \psi(x)+\psi(x')\), donc \(\psi \in \Lin{E}{E^*}\).
 
 Trouvons le noyau de \(\psi\).
 
 Soit \(x \in E\), alors
-\begin{align}
+\begin{align*}
   x \in \Ker(\psi) &\iff \psi(x) = 0_{E^*} \\
   &\iff \forall y \in E \quad \psi(x)(y)=0_{\R} \\
   &\iff \forall y \in E \quad \varphi_x(y)=0_{\R} \\
   &\iff \forall y \in E \quad \prodscal{x}{y}=0_\R \\
   &\iff x=0_E.
-\end{align}
+\end{align*}
 Donc \(\Ker \psi = \{0_E\}\). L'application \(\psi\) est injective et \(\Dim 
 E= \Dim E^*\) donc \(\psi\) est bijective. On en déduit le théorème suivant
 \begin{theo}
@@ -1411,11 +1411,11 @@ vecteur normal de \(\lambda f\) est \(\lambda a\).
 
 Soit \(H\) un hyperplan de \(E\). Il existe une forme linéaire \(f\) non nulle 
 telle que \(H= \Ker(f)\). Soit un vecteur \(x \in E\), alors
-\begin{align}
+\begin{align*}
   x \in H &\iff f(x) = 0 \\
   &\iff \prodscal{x}{a}=0\\
   &\iff a \in H^\perp.
-\end{align}
+\end{align*}
 De plus \(\Dim H^\perp =1\) et \(a\) est non nul, donc c'est une base de 
 \(H^\perp\). Ainsi \(\left(\frac{a}{\norme{a}}\right)\) est une base 
 orthonormée de \(H^\perp\).
@@ -1479,25 +1479,25 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   Notons \(\B=(b_1, \ldots, b_n)\), \(\B'=(b'_1, \ldots, b'_n)\), \(A=\P_{\B 
   \B'}=\Mat_\B(\B')\). Alors pour tout \(j \in \intervalleentier{1}{n}\), on a
   \begin{equation}
-    b'_j = \sum_{i=1}^na_{ij}b_i.
+    b'_j = \sum_{i=1}^na_{ij}b_i. \label{eq:defBONdeltaij}
   \end{equation}
   Comme ce sont des bases orthonormées, on a pour tout \((j,k) \in 
   \intervalleentier{1}{n}^2\)
   \begin{align}
     \prodscal{b_j}{b_k} &= \delta_{jk} \\
-    \prodscal{b'_j}{b'_k} &= \delta_{jk} \label{eq:defBONdeltaij}.
+    \prodscal{b'_j}{b'_k} &= \delta_{jk}.
   \end{align}
   Alors
-  \begin{align}
+  \begin{align*}
     \delta_{jk} &= \prodscal{b'_j}{b'_k} && \text{BON}\\
-    &=\prodscal{\sum_{i=1}^na_{ij}b_i}{\sum_{l=1}^na_{lk}b_l} && \text{eq.} 
+    &=\prodscal{\sum_{i=1}^na_{ij}b_i}{\sum_{l=1}^na_{lk}b_l} && \text{équation} 
     \eqref{eq:defBONdeltaij}\\
     &=\sum_{i=1}^n\sum_{l=1}^n a_{ij}a_{kl} \prodscal{b_i}{b_l} && 
     \text{bilinéarité}\\
     &=\sum_{i=1}^na_{ij}a_{il} && \text{BON}\\
     &=\sum_{i=1}^n (A^\top)_{ji}A_{ik} \\
     &=(A^\top A)_{jk}.
-  \end{align}
+  \end{align*}
   Alors \(A^\top A=I_n\). Lorsqu'on passe au déterminant \(\Det(A) \in \{-1; 
   1\}\). De plus \(\B\) et \(\B'\) ont la même orientation si et seulement si 
   \(\Det(A)>0\) c'est-à-dire \(\Det(A)=1\).
@@ -1556,10 +1556,10 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   contraires. On note \(\Det_1\) le déterminant dans \(\B_1\) et \(\Det_2\) le 
   déterminant dans \(\B_2\). Pour toute famille \(\X\) de \(n\) vecteurs de 
   \(E\), on a
-  \begin{align}
+  \begin{align*}
     \Det_1(\X) &= \Det_{\B_1}(\X) \\
     \Det_2(\X) &= \Det_{\B_2}(\X).
-  \end{align}
+  \end{align*}
   Donc
   \begin{equation}
     \Det_1(\X) = \Det_{\B_1}(\X) = 
@@ -1581,18 +1581,18 @@ tel que \(y=y_\Dr +y_{\Dr^\perp}\). Le vecteur \(x\) est non nul, alors on
 peut poser \(i=\frac{x}{\norme{x}}\). On compléte \(i\) en une base 
 orthonormale directe \((i,j)\) de \(E\).
 
-\begin{align}
+\begin{align*}
   \Det(x,y) &= \Det(x,y_\Dr +y_{\Dr^\perp}) \\
   &=\Det(x,y_\Dr) + \Det(x,y_{\Dr^\perp}) && \text{linéarité à droite} \\
   &=\Det(x,y_{\Dr^\perp}). && (y_\Dr,x) \text{~est liée}
-\end{align}
+\end{align*}
 On a \(x=\norme{x}i\) et il existe \(\epsilon \in \{-1;1\}\) tel que 
 \(y_{\Dr^\perp}=\epsilon\norme{y_{\Dr^\perp}}j\). Alors
-\begin{align}
+\begin{align*}
   \Det(x,y) &=\Det(\norme{x}i, \epsilon\norme{y_{\Dr^\perp}}j) \\
   &=\norme{x} \epsilon\norme{y_{\Dr^\perp}} \Det(i,j) && \text{bilinéarité} \\
   &=\norme{x} \epsilon\norme{y_{\Dr^\perp}}.
-\end{align}
+\end{align*}
 Donc \(\abs{\Det(x,y)}=\norme{x}\norme{y_{\Dr^\perp}}\) et c'est l'aire du 
 parallélogramme formé par \(x\) et \(y\). D'où la proposition suivante.
 
@@ -1620,13 +1620,13 @@ La famille \((x,y,z)\) est libre donc \(z \notin \P\) et donc \(z_{\P^\perp}
 \neq 0\). On pose \(k=\frac{z_{\P^\perp}}{\norme{z_{\P^\perp}}}\). On compléte 
 \(k\) en une base orthonormale \((i,j,k)\) de \(E\). \((i,j)\) est une base 
 orthonormale de \(\P\). Alors on a
-\begin{align}
+\begin{align*}
   \Det(x,y,z) &= \Det(x,y,k\norme{z_{\P^\perp}}) \\
   &=\norme{z_{\P^\perp}}\Det(x,y,k) && \text{trilinéarité}\\
   &=\norme{z_{\P^\perp}}\Det_{(i,j,k)}(x,y,k)\\
   &=\norme{z_{\P^\perp}}\Det_{(i,j)}(x,y) && \norme{k}=1\\
   &=\norme{z_{\P^\perp}}\Det(x,y).
-\end{align}
+\end{align*}
 Alors
 \begin{equation}
   \abs{\Det(x,y,z)} = \norme{z_{\P^\perp}}\abs{\Det(x,y)}.
@@ -1671,17 +1671,17 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
 \begin{proof}
   La première égalit'' est due à la définition du produit vectoriel. On montre 
   la deuxième~:
-  \begin{align}
+  \begin{align*}
     \prodscal{y\wedge x}{z} &=\Det(y,x,z)\\
     &=-\Det(x,y,z)&& \text{antisymétrie}\\
     &=-\prodscal{x\wedge y}{z}.
-  \end{align}
+  \end{align*}
   La deuxième~:
-  \begin{align}
+  \begin{align*}
     \prodscal{y\wedge z}{x} &=\Det(y,z,x) \\
     &=\Det(x,y,z)\\
     &=\prodscal{x\wedge y}{z}.
-  \end{align}
+  \end{align*}
   Idem pour le reste.
 \end{proof}
 \begin{prop}[Effet d'un changement d'orientation de \(E\)]
@@ -1712,11 +1712,11 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
       \wedge y \perp x\). Idem pour \(y\).
     \item \(\impliedby\). Si \((x,y)\) est liée, alors \((x,y,x\wedge y)\) est 
       liée aussi et donc
-      \begin{align}
+      \begin{align*}
         \Det(x,y,x\wedge y) &= 0\\
         \prodscal{x\wedge y}{x\wedge y} &= 0 \\
         \norme{x\wedge y}^2=0,
-      \end{align}
+      \end{align*}
       et donc \(x \wedge y=0\).
 
       \(\implies\). Par contraposée. Supposons que \('x,y)\) est libre. Alors 
@@ -1739,24 +1739,24 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
   Soient \((x,x',y) \in E^3\) et \(\lambda \in \R\). On note \(p_1=(\lambda 
   x+x')\wedge y\) et \(p_2=\lambda x\wedge y+x'\wedge y\). Pour tout vecteur 
   \(z \in E\), on a
-  \begin{align}
+  \begin{align*}
     \prodscal{p_1}{z} &=\prodscal{(\lambda x+x')\wedge y}{z} \\
     &=\Det(\lambda x +x',y,z) && \text{définition}\\
     &=\lambda \Det(x,y,z) +\Det(x',y,z) && \text{trilinéarité}\\
     &=\lambda \prodscal{x \wedge y}{z} + \prodscal{x' \wedge y}{z} \\
     &=\prodscal{\lambda x\wedge y +x'\wedge y}{z}\\
     &=\prodscal{p_2}{z}.
-  \end{align}
+  \end{align*}
   Alors \(\prodscal{p_1-p_2}{z}=0\) et comme c'est vrai pour tout \(z\) alors 
   \(p_1=p_2\). C'est la linéarité à gauche.
 
   Soient \((x,y) \in E^2\). Pour tout \(z \in E\), on a
-  \begin{align}
+  \begin{align*}
     \prodscal{y \wedge x}{z} &= \Det(y,x,z) \\
     &=-\Det(x,y,z) && \text{antisymétrie} \\
     &=-\prodscal{x \wedge y}{z}\\
     &=\prodscal{-x \wedge y}{z}.
-  \end{align}
+  \end{align*}
   Alors \(\prodscal{y \wedge x+x \wedge y}{z}=0\) et comme c'est vrai pour 
   tout \(z \in E\) on a bien \(x \wedge y = -y\wedge x\). C'est 
   l'antisymétrie.
@@ -1774,11 +1774,11 @@ et \(y\) dans \(E\) de coordonnées respectives \((x_1,x_2,x_3)\) et
   x \wedge y = \sum_{i=1}^3 \prodscal{x \wedge y}{b_i}b_i.
 \end{equation}
 Car \(\B\) est une base orthonormée. Alors on a
-\begin{align}
+\begin{align*}
   \prodscal{x \wedge y}{b_1} &=\Det(x,y,b_1) \\
   &=\Det_{b_1,b_2,b_3}(x,y,b_1)\\
   &=\begin{vmatrix} x_2 & y_2 \\ x_3 & y_3 \end{vmatrix}.
-\end{align}
+\end{align*}
 De la même manière on trouve
 \begin{equation}
   \prodscal{x \wedge y}{b_2} = - \begin{vmatrix} x_1 & y_1 \\ x_3 & y_3 
@@ -1802,14 +1802,14 @@ D'où la proposition suivante
 \end{prop}
 \begin{proof}
   La base \((i,j,k)\) est orthonormée donc
-  \begin{align}
+  \begin{align*}
     i \wedge j &= \prodscal{i \wedge j}{i}i + \prodscal{i \wedge j}{j}j + 
     \prodscal{i \wedge j}{k}k \\
     &=\prodscal{i \wedge j}{k}k\\
     &=\Det(i,j,k)k\\
     &=\Det_{(i,j,k)}(i,j,k)k\\
     &=k.
-  \end{align}
+  \end{align*}
   Idem pour les autres.
 \end{proof}
 \begin{prop}

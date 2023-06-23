@@ -394,10 +394,10 @@ en escalier}
       \(I(f,\sigma')=I(f,\sigma)\);
     \item sinon alors \(c \in \intervalleoo{a_{i_0}}{a_{i_0+1}}\). la 
       subdivision \(\sigma'\) est plus fine que \(\sigma\) et alors
-      \begin{align}
+      \begin{align*}
         \sigma &= (a_0, \ldots, a_n) \\
         \sigma' &= (a_0, \ldots, a_{i_0},c,a_{i_0+1}, \ldots, a_n),
-      \end{align}
+      \end{align*}
       donc
       \begin{equation}
         I(f,\sigma')= \sum_{i=1}^{i_0}(a_i-a_{i-1})\lambda_i + 
@@ -405,11 +405,11 @@ en escalier}
         \sum_{i=i_0+1}^{n}(a_i-a_{i-1})\lambda_i,
       \end{equation}
       et finalement en retranchant
-      \begin{align}
+      \begin{align*}
         I(f,\sigma')-I(f,\sigma)&= (a_{i_0+1}-a_{i_0})\lambda_{i_0+1} - 
         (c-a_{i_0})\lambda_{i_0+1} - (a_{i_0+1}-c)\lambda_{i_0+1} \\
         &=0.
-      \end{align}
+      \end{align*}
   \end{itemize}
   On en déduit alors par récurrence ``immédiate''  que si on rajoute un nombre 
   fini de points à \(\sigma\) pour former une subdivision \(\sigma'\) alors 
@@ -485,7 +485,7 @@ En particulier, une fonction constante égale à \(k \in \R\) sur
   fonction \(f_{|\intervalleff{a}{c}}\) (resp. \(f_{|\intervalleff{c}{b}}\)) est 
   constante sur les intervalles ouverts de \(\sigma_1'\) (resp. \(\sigma_2'\)). 
   Alors ces deux fonctions sont en escaliers.
-  \begin{align}
+  \begin{align*}
     \int_a^c f_{|\intervalleff{a}{c}} +\int_c^b f_{|\intervalleff{c}{b}} &= 
     I(f_{|\intervalleff{a}{c}},\sigma_1')+I(f_{|\intervalleff{c}{b}},\sigma_2') 
     \\
@@ -496,7 +496,7 @@ En particulier, une fonction constante égale à \(k \in \R\) sur
     (a_i-a_{i-1})\lambda_i\\
     &=\sum_{i=1}^{n} (a_i-a_{i-1})\lambda_i\\
     &=I(f,\sigma)=\int_a^bf
-  \end{align}
+  \end{align*}
 
   Supposons désormais que \(f_{|\intervalleff{a}{c}} \in 
   \E(\intervalleff{a}{c})\) et \( f_{|\intervalleff{c}{b}} \in 
@@ -536,12 +536,12 @@ On a vu que \(\E(\intervalleff{a}{b})\) est un \(\R\)-espace vectoriel.
 
   Alors \(\lambda f+g\) est constante sur chaque intervalle ouvert 
   \(\intervalleoo{a_{i-1}}{a_i}\) égale à \(\lambda \alpha_i +\beta_i\). Ainsi
-  \begin{align}
+  \begin{align*}
     I(\lambda f+g,s) &= \sum_{i=1}^n (a_i-a_{i-1})(\lambda \alpha_i+\beta_i) \\
     &=\lambda \sum_{i=1}^n (a_i-a_{i-1}) \alpha_i + \sum_{i=1}^n 
     (a_i-a_{i-1})\beta_i \\
     &=\lambda I(f,s)+ I(g,s)
-  \end{align}
+  \end{align*}
   d'où la linéarité de \(\varphi\).
 \end{proof}
 
@@ -595,10 +595,10 @@ Cependant on peut avoir \(\int_a^b f \geqslant 0\) sans que \(f \geqslant
     \int_a^b \abs{f} = \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}.
   \end{equation}
   De plus
-  \begin{align}
+  \begin{align*}
     \abs{\int_a^b f} &= \abs{\sum_{i=1}^n (a_i-a_{i-1})\lambda_i}\\
     &\leqslant \sum_{i=1}^n (a_i-a_{i-1})\abs{\lambda_i}
-  \end{align}
+  \end{align*}
   puisque \(a_{i-1} < a_i\). Donc on a bien la majoration
   \begin{equation}
     \abs{\int_a^b f} \leqslant \int_a^b \abs{f}.
@@ -634,10 +634,10 @@ et \(M\) tels que \begin{equation}
 \end{equation}
 et comme ces fonctions sont en escalier, on a bien \(\tilde{m} \in \E^{-}(f)\) 
 et \(\tilde{M} \in \E^{+}(f)\). Les ensembles \(\E^{-}(f)\) et \(\E^{+}(f)\) 
-sont non vides. On définit \begin{align}
+sont non vides. On définit \begin{align*}
   I^{-}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{-}(f)}, \\
   I^{+}(f)=\enstq{\int_a^b \varphi}{\varphi \in \E^{+}(f)}.
-\end{align}
+\end{align*}
 Ces deux ensembles sont non vides puisque \(\E^{-}(f)\) et \(\E^{+}(f)\) sont 
 non vides. Comme la fonction \(\tilde{M}\) majore l'ensemble \(\E^{-}(f)\), 
 \(I^{-}(f)\) est majoré par \(M(b-a)\). De la même manière comme la fonction 
@@ -731,13 +731,13 @@ représente l'aire entre l'axe des abscisses et la courbe représentative de
   (\lambda f) = \lambda \int_a^b f\).
 
   Montrons le premier point. Par définition,
-  \begin{align}
+  \begin{align*}
     \int_a^b (-f) &= \sup\limits_{\varphi \leqslant -f \in 
     \E(\intervalleff{a}{b})} \int_a^b \varphi ,\\
     &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi 
     ,\\
   &= \sup\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} \int_a^b -\psi 
-  \end{align}
+  \end{align*}
   car \(\psi\) est une fonction en escalier et on a montré la linéarité. Ensuite
   \begin{equation}
     \int_a^b (-f) = -\inf\limits_{\psi \geqslant f \in \E(\intervalleff{a}{b})} 
@@ -797,7 +797,7 @@ représente l'aire entre l'axe des abscisses et la courbe représentative de
   \end{equation}
 
   Si \(\lambda>0\) on a
-  \begin{align}
+  \begin{align*}
     \int_a^b (\lambda f) &= \sup\limits_{\varphi \leqslant \lambda f \in 
     \E(\intervalleff{a}{b})} \int_a^b \varphi \\
     &= \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} \int_a^b 
@@ -807,12 +807,12 @@ représente l'aire entre l'axe des abscisses et la courbe représentative de
     &= \lambda \sup\limits_{\psi \leqslant f \in \E(\intervalleff{a}{b})} 
     \int_a^b \psi \\
     &=\lambda \int_a^b f.
-  \end{align}
+  \end{align*}
   Si \(\lambda=0\), alors l'égalité est vérifié. Si \(\lambda<0\) alors
-  \begin{align}
+  \begin{align*}
     \int_a^b (\lambda f) = \int_a^b (-\lambda)(-f) = -\lambda \int_a^b(-f) = 
     \lambda \int_a^b f.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsection{Positivité et croissance -- Majoration de la valeur absolue de 
@@ -1008,23 +1008,23 @@ morceaux}.
   \(f_{|\intervalleff{a}{c}} \in \CM(\intervalleff{a}{c})\) et 
   \(f_{|\intervalleff{c}{b}} \in \CM(\intervalleff{c}{b})\). Soit 
   \(\epsilon>0\), alors
-  \begin{align}
+  \begin{align*}
     \exists (\varphi_1, \psi_1) \in \E(\intervalleff{a}{c})^2 \ \begin{cases} 
       \varphi_1 \leqslant f_{|\intervalleff{a}{c}} \\ \psi_1 - \varphi_1 
     \leqslant \tilde{\epsilon} \end{cases} \\
     \exists (\varphi_2, \psi_2) \in \E(\intervalleff{c}{b})^2 \ \begin{cases} 
       \varphi_2 \leqslant f_{|\intervalleff{c}{b}} \\ \psi_2- \varphi_2 
     \leqslant \tilde{\epsilon} \end{cases}
-  \end{align}
+  \end{align*}
   Soient deux fonctions \(\psi\) et \(\varphi\) de \(\intervalleff{a}{b}\) 
   vers \(\R\) définies par
-  \begin{align}
+  \begin{align*}
     \forall x \in \intervallefo{a}{c} \quad \varphi(x)=\varphi_1(x) 
     \text{~et~} \psi(x)=\psi_1(x) \\
     \varphi(c)=\psi(c)=f(c) \\
     \forall x \in \intervalleof{c}{b} \quad \varphi(x)=\varphi_2(x) 
     \text{~et~} \psi(x)=\psi_2(x).
-  \end{align}
+  \end{align*}
   Les fonction \(\psi\) et \(\varphi\) sont en escalier sur 
   \(\intervalleff{a}{b}\) et vérifient \(\varphi \leqslant f \leqslant \psi\). 
   De plus \(\psi-\varphi \leqslant \tilde{\epsilon}\).
@@ -1035,11 +1035,11 @@ morceaux}.
     \int_a^c \psi_1 + \int_c^b \psi_2,
   \end{equation}
   par croissance de l'intégrale on a
-  \begin{align}
+  \begin{align*}
     \int_a^b f & \leqslant \int_a^c (\psi_1 + \tilde{\epsilon})  + \int_c^b 
     (\psi_2 + \tilde{\epsilon}) \\
     \leqslant \int_a^c f + \int_c^b f + \epsilon(b-a)
-  \end{align}
+  \end{align*}
   et comme c'est vrai pour tout \(\epsilon >0\), lorsqu'on fait tendre 
   \(\epsilon\) vers zéro, on obtient~:
   \begin{equation}
@@ -1125,10 +1125,10 @@ morceaux}.
 Soient \(f \in \R^\R\) et \(T>0\) tel que \(f\) soit \(T\)-périodique. 
 Supposons que \(f\) est continue par morceaux sur tous les segments de \(\R\). 
 Alors
-\begin{align}
+\begin{align*}
   \forall a,b \in \R^2 \quad \int_{a+T}^{b+T} f = \int_a^b f \\
   \forall a,b \in \R^2 \quad \int_a^{a+T} f =\int_b^{b+T} f
-\end{align}
+\end{align*}
 
 \begin{proof}
   Pour la première égalité, on applique directement le résultat de la 
@@ -1314,12 +1314,12 @@ L'inégalité devient \(\abs{\prodscal{f}{g}} \leqslant \norme{f}_2
 \begin{proof}
   Pour toutes fonctions \(f\) et \(g\) continues par morceaux sur 
   \(\intervalleff{a}{b}\), on a
-  \begin{align}
+  \begin{align*}
     \int_a^b (f+g)^2 & = \int_a^b f^2 + \int_a^b g^2 +2 \int_a^b fg \\
     &\leqslant \int_a^b f^2 + \int_a^b g^2 +2 \sqrt{\int_a^b f^2 \int_a^b g^2} 
     \\
     &\leqslant \left(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2}\right)^2.
-  \end{align}
+  \end{align*}
   La première inégalité est issue de l'inégalité de Cauchy-Schwarz. Cependant 
   \(\sqrt{\int_a^b f^2}+\sqrt{\int_a^b g^2} \geqslant 0\) et \(\int_a^b 
   (f+g)^2 \geqslant 0\) alors en passant à la racine on a bien l'inégalité de 
@@ -1388,11 +1388,11 @@ continues}
   \(\intervalleff{a}{b}\) telle que pour tout \(i \in 
   \intervalleentier{0}{n-1}\) on a \(\alpha_i \in 
   \intervalleff{a_i}{a_{i+1}}\), on a
-  \begin{align}
+  \begin{align*}
     R(f,\sigma,\alpha)- \int_a^b f &= \sum_{i=0}^{n-1}(a_{i+1}-a_i)f(\alpha_i) 
     - \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} f \\
     &=\sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} (f(\alpha_i)-f).
-  \end{align}
+  \end{align*}
   Comme \(f\) est continue sur \(\intervalleff{a}{b}\), grâce au théorème de 
   Heine, elle est uniformément continue~:
   \begin{equation}
@@ -1415,12 +1415,12 @@ continues}
     \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a}.
   \end{equation}
   Alors
-  \begin{align}
+  \begin{align*}
     \abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leqslant \sum_{i=0}^{n-1} 
     \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f} \\
     &\leqslant \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}}\frac{\epsilon}{b-a} = 
     \int_a^b \frac{\epsilon}{b-a}=\epsilon.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \begin{cor}
@@ -1464,14 +1464,14 @@ soit \(k\)-lipschitzienne sur \(\intervalleff{a}{b}\). Soit \(\sigma=(a_i)_{0
 famille de points de \(\intervalleff{a}{b}\) telle que pour tout \(i \in 
 \intervalleentier{0}{n-1}\) on a \(\alpha_i \in \intervalleff{a_i}{a_{i+1}}\). 
 Alors
-\begin{align}
+\begin{align*}
   \abs{R(f,\sigma,\alpha)- \int_a^b f~} &\leqslant \sum_{i=0}^{n-1} 
   \int_{a_i}^{a_{i+1}} \abs{f(\alpha_i)-f(x)}\,\diff x \\
   &\leqslant k \sum_{i=0}^{n-1} \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x
-\end{align}
+\end{align*}
 
 Soit \(i \in \intervalleentier{0}{n-1}\), alors
-\begin{align}
+\begin{align*}
   \int_{a_i}^{a_{i+1}} \abs{\alpha_i-x}\,\diff x &= \int_{a_i}^{\alpha_i} 
   \abs{\alpha_i-x}\,\diff x + \int_{\alpha_i}^{a_{i+1}} 
   \abs{\alpha_i-x}\,\diff x \\
@@ -1480,7 +1480,7 @@ Soit \(i \in \intervalleentier{0}{n-1}\), alors
   &= \frac{(\alpha_i-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
   & \leqslant \frac{(a_{i+1}-a_i)^2}{2} + \frac{(a_{i+1}-\alpha_i)^2}{2} \\
   & \leqslant \delta(\sigma)^2
-\end{align}
+\end{align*}
 Alors
 \begin{equation}
   \abs{R(f,\sigma,\alpha)- \int_a^b f~} \leqslant kn \delta(\sigma)^2.
@@ -1556,26 +1556,26 @@ est une forme linéaire sur le \(\C\)-espace vectoriel
 \begin{proof}
   Soient \((f,g) \in \CM(\intervalleff{a}{b},\C)^2\) et un complexe 
   \(\lambda\). On note
-  \begin{align}
+  \begin{align*}
     f_1 = \Re(f) \quad & f_2 = \Im(f) \\
     g_1 = \Re(g) \quad & g_2 = \Im(g) \\
-  u = \Re(\lambda) \quad & v = \Im(\lambda) \end{align}
+  u = \Re(\lambda) \quad & v = \Im(\lambda) \end{align*}
   alors~:
-  \begin{align}
+  \begin{align*}
     \int_a^b (f+g) &= \int_a^b (f_1+g_1) + \ii \int_a^b (f_2+g_2) \\
     &=\int_a^b f_1 + \ii \int_a^b f_2 + \int_a^b g_1 + \ii \int_a^b g_2 \\
     &=\int_a^b f+ \int_a^b g
-  \end{align}
+  \end{align*}
   et comme
   \begin{equation}
     \lambda f = (uf_1-vf_2)+ \ii(vf_1+uf_2)
   \end{equation}
   alors on a
-  \begin{align}
+  \begin{align*}
     \int_a^b(\lambda f) &= \int_a^b (uf_1-vf_2)+ \ii \int_a^b (cf_1+uf_2) \\
     &= (u+\ii v) \int_a^b f_1 + (\ii u-v) \int_a f_2\\
     &=\lambda \int_a^b f_1 + \ii \lambda \int_a^b f_2 = \lambda \int_a^b f
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \subsubsection{Relation de Chasles}
@@ -1634,12 +1634,12 @@ est une forme linéaire sur le \(\C\)-espace vectoriel
       \end{equation}
       Soit \(g=\int_a^b \e^{-\ii \theta}f\) alors \(\int_a^b g=\rho \in 
       \Rpluss\). Donc on peut lui ppliquer le premier point~:
-      \begin{align}
+      \begin{align*}
         \abs{\int_a^b g} &\leqslant \int_a^b \abs{g} \\
         \abs{\int_a^b \e^{-\ii \theta} f~} &\leqslant \int_a^b \abs{\e^{-\ii 
         \theta} f} \\
         \abs{\int_a^b f} &\leqslant \int_a^b \abs{f} \\
-      \end{align}
+      \end{align*}
   \end{enumerate}
 \end{proof}
 

@@ -39,12 +39,12 @@ l'application affine \(f\), on a~:
   \end{equation}
   avec \(A_1\) un point de \(W_1\) et \(E_1\) un sous-espace vectoriel de \(E\). 
   Ainsi
-  \begin{align}
+  \begin{align*}
     f(W_1) &= \enstq{f(M)}{M \in W_1} \\
     &= \enstq{f(A_1+\vect{x_1})}{\vect{x_1} \in E_1} \\
     &= \enstq{f(A_1)+f(\vect{x_1})}{\vect{x_1} \in E_1} \\
     &=f(A_1) + \vect{f}(E_1).
-  \end{align}
+  \end{align*}
   \(E_1\) est un sous-espace vectoriel de \(E\) et \(\vect{f}\) est linéaire 
   donc \(\vect{f}(E_1)\) est un sous-espace vectoriel de \(F\). Par conséquent 
   \(f(W_1)\) est un sous-espace affine de \(F\).
@@ -94,11 +94,11 @@ l'application affine \(f\), on a~:
 \end{prop}
 \begin{proof}
   pour tout \(A\) et \(B\) de \(E\), on a
-  \begin{align}
+  \begin{align*}
     \vect{g\circ f(A) g\circ f(B)} &= \vect{g} (\vect{f(A)f(B)} \\
     &=\vect{g}(\vect{f}(\vect{AB})) \\
     &=\vect{g}\circ \vect{f} (\vect{AB}).
-  \end{align}
+  \end{align*}
   Si \(\vect{g}\) et \(\vect{f}\) sont linéaires, alors \(\vect{g}\circ 
   \vect{f}\) est linéaire. On a montré que \(g \circ f\) est affine et que sa 
   partie linéaire vérifie \(\vect{g \circ f}=\vect{g}\circ \vect{f}\).
@@ -114,10 +114,10 @@ l'application affine \(f\), on a~:
   \(\implies\). On prend \(u=\vect{f}\) et \(A=f(0)\).
 
   \(\impliedby\). Pour tout couple \((M, N) \in E^2\) on a
-  \begin{align}
+  \begin{align*}
     \vect{f(M)f(N)} &= A+u(\vect{ON}) - (A+u(\vect{OM})) \\
     &=u(\vect{MN}).
-  \end{align}
+  \end{align*}
   Donc \(f\) est affine et \(\vect{f}=u\).
 \end{proof}
 
@@ -136,12 +136,12 @@ l'application affine \(f\), on a~:
   \(E\) et \((\alpha_i)_{i \in \intervalleentier{1}{n}} \in \R^n\) tel que 
   \(\sum_{i=1}^n\alpha_i\neq 0\). On note \(G=\Bary((A_i,\alpha_i)_{i \in 
   \intervalleentier{1}{n}})\). Alors
-  \begin{align}
+  \begin{align*}
     \sum_{i=1}^n \alpha_i \vect{f(G)f(A_i)} &= \sum_{i=1}^n \alpha_i 
     \vect{f}(\vect{GA_i}) \\
     &=\vect{f}\left(\sum_{i=1}^n \alpha_i \vect{GA_i}\right) \\
     &=\vect{f}(0)=0.
-  \end{align}
+  \end{align*}
   Donc on a bien \(f(G)=\Bary((f(A_i),\alpha_i)_{i \in 
   \intervalleentier{1}{n}})\).
 \end{proof}
@@ -158,20 +158,20 @@ l'application affine \(f\), on a~:
 \end{prop}
 \begin{proof}
   \(\implies\) Pour tout couple \((\vx, \vy)\in E^2\) on a
-  \begin{align}
+  \begin{align*}
     \vy= \vect{f}(\vx) &\iff f(0)+\vy = f(0)+\vx \\
     &\iff f(0)+\vy = f(0+\vx)\\
     &\iff f^{-1}(f(0)+\vy)=0+\vx.
-  \end{align}
+  \end{align*}
   Il existe un unique \(\vx \in E\) tel que \(\vy=\vect{f}(\vx)\), alors 
   \(\vect{f}\) est bijective.
 
   \(\impliedby\) Soit \((M, N) \in E^2\) alors
-  \begin{align}
+  \begin{align*}
     N = f(M) &\iff \vect{f(O)N} = \vect{f(O)f(M)} \\
     &\iff \vect{f(O)N} = \vect{f}(\vect{OM}) \\
     &\iff \vect{f}^{-1}(\vect{f(O)N}) = \vect{OM}. && \vect{f} \in \GL{E}\\
-  \end{align}
+  \end{align*}
   Il existe un unique point \(M \in E\) tel que \(f(M)=N\), donc \(f\) est 
   bijective.
 \end{proof}
@@ -190,11 +190,11 @@ l'application affine \(f\), on a~:
   \(f\) et \(g\) deux transformations affines. Il s'agit de montrer que \(f 
   \circ g^{-1}\) est une transformation affine. Montrons d'abord que \(g^{-1}\) 
   est affine. Soient deux points \(M\) et \(N\) de \(E\). Alors
-  \begin{align}
+  \begin{align*}
     \vect{MN} &= \vect{g\circ g^{-1}(M) g\circ g^{-1}(N)} \\
     \vect{MN} &=\vect{g} (\vect{g^{-1}(M) g^{-1}(N)}) && g \in \Ga{E}\\
     \vect{g}^{-1}(\vect{MN}) &= \vect{g^{-1}(M) g^{-1}(N)}.
-  \end{align}
+  \end{align*}
   Donc \(g^{-1}\) est une transformation affine et \(\vect{g^{-1}} = 
   \vect{g}^{-1}\). Par composition \(f \circ g^{-1}\) est une application affine 
   et elle est bijective. Finalement \(f \circ g^{-1} \in \Ga{E}\).
@@ -209,13 +209,13 @@ l'application affine \(f\), on a~:
   partie linéaire est l'identité.
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     f \text{~est une translation} &\iff \forall (A,B) \in E^2 \quad \vect{Af(A)} 
     = \vect{Bf(B)} \\
     &\iff \forall (A,B) \in E^2 \quad \vect{f(A)f(B)} = \vect{AB} \\
     &\iff \forall (A,B) \in E^2 \quad \vect{f}(\vect{AB}) = \vect{AB} \\
     &\iff f=\Id.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \begin{defdef}
@@ -230,19 +230,19 @@ l'application affine \(f\), on a~:
 \end{prop}
 \begin{proof}
   L'application \(h\) admet elle un point fixe ? Vérifions le~:
-  \begin{align}
+  \begin{align*}
     \forall M \in \quad h(M) = M &\iff \vect{h(O)h(M)} = \vect{h(O)M} \\
     &\iff \alpha \vect{OM} =\vect{h(O)O} +\vect{OM} \\
     &\iff (1-\alpha) \vect{OM} = \vect{Oh(O)} \\
     &\iff \vect{OM} = \frac{\vect{Oh(O)}}{1-\alpha}. && \alpha \neq 1
-  \end{align}
+  \end{align*}
   L'application \(f\) admet un seul point fixe, c'est le centre de l'homothétie 
   \(h\). Cette application est l'homothétie de centre \(\Omega\) et de rapport 
   \(\alpha\). Et finalement
-  \begin{align}
+  \begin{align*}
     \forall M \in E \quad h(M) &= h(\Omega)+\vect{h}(\vect{\Omega M}) \\
     h(M) &=  \Omega +\alpha \vect{\Omega M}.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 Finalement les transformation affines dont les parties linéaires s'écrivent sous 
@@ -345,12 +345,12 @@ respectives les sous-espaces vectoriels \(F\) et \(G\). On suppose que \(E=F
 \end{prop}
 \begin{proof}
   Soient \(A\) et \(B\) deux points de \(E\). Alors
-  \begin{align}
+  \begin{align*}
     \vect{s(A)s(B)} &= s(B)-s(A) \\
     &= 2p(B)-B-2p(A)+A \\
     &= 2\vect{p}(\vect{AB}) - \vect{AB} \\
     &= (2\vect{p}-\Id)(\vect{AB}).
-  \end{align}
+  \end{align*}
   Donc \(s\) est affine, et \(\vect{s}=2\vect{p}-\Id\). Comme \(\vect{p}\) est 
   la projection sur \(F\) parallèlement à \(G\), \(\vect{s}\) est la symétrie 
   par rapport à \(F\) parallèlement à \(G\).
@@ -394,28 +394,28 @@ Soit \(E\) un espace vectoriel euclidien.
 \begin{proof}[Existence]
   Soient \(\vu = \vect{0t(0)}\), \(t=t_{\vu}\) et \(g=t^{-1}\circ f\). Il faut 
   montrer que \(g\) est orthogonale. Soient \((x,y) \in E^2\), alors
-  \begin{align}
+  \begin{align*}
     \norme{g(x)-g(y)} &= \norme{f(x)-f(y)} && t \text{~est une translation} \\
     &=\norme{x-y}. && f \text{~est une isométrie} \\
-  \end{align}
+  \end{align*}
   Avec \(y=0\), on a \(g(0) = t^{-1}(f(0))=0\), donc \(\norme{g(x)}=\norme{x}\). 
   Montrons que \(g\) conserve le produit scalaire~: pour tout \((x,y) \in E^2\) 
   on a
-  \begin{align}
+  \begin{align*}
     \prodscal{g(x)}{g(y)} &= -\frac{1}{2} 
     \left(\norme{g(x)-g(y)}^2-\norme{g(x)}^2-\norme{g(y)}^2\right)\\
     &= -\frac{1}{2} \left(\norme{x-y}^2-\norme{x}^2-\norme{y}^2\right)\\
     &=\prodscal{x}{y}.
-  \end{align}
+  \end{align*}
   C'est donc un automorphisme orthogonal. 
 
   Il reste à montrer que \(f\) est affine~: Soient \(A\) et \(B\) deux points de 
   \(E\), alors
-  \begin{align}
+  \begin{align*}
     \vect{f(A)f(B)} &= \vect{t(g(A))t(g(B))}\\
     &=\vect{g(A)g(B)} && t \text{~est une translation} \\
     &= g(\vect{AB}). && g \in \Endo{E}
-  \end{align}
+  \end{align*}
   Cela signifie que \(f\) est affine avec \(\vect{f}=g\).
 \end{proof}
 \begin{prop}
@@ -428,10 +428,10 @@ Soit \(E\) un espace vectoriel euclidien.
 
   \(\impliedby\)~: Si \(f^{-1} \in \Orth{E}\), alors pour tout couple \((A,B) 
   \in E^2\), on a
-  \begin{align}
+  \begin{align*}
     \norme{\vect{f(A)f(B)}} &= \norme{\vect{f}(\vect{AB})} \\
     &=\norme{\vect{AB}} && \vect{f} \in \Orth{E}.
-  \end{align}
+  \end{align*}
   Donc \(f\) est une isométrie.
 \end{proof}
 
@@ -583,12 +583,12 @@ rapport à un hyperplan vectoriel. Donc c'est une réflexion vectorielle.
     \frac{\vect{AB}}{\norme{\vect{AB}}}.
   \end{equation}
   Alors pour tout point \(M \in E\) on a
-  \begin{align}
+  \begin{align*}
     s(M) &= s(I) + s(\vect{IM}) = I + \vect{IM} 
     -2\prodscal{\vect{IM}}{\frac{\vect{AB}}{\norme{\vect{AB}}}} 
     \frac{\vect{AB}}{\norme{\vect{AB}}} \\
     &=M -\frac{2}{\norme{\vect{AB}}^2}\prodscal{\vect{IM}}{\vect{AB}} \vect{AB}.
-  \end{align}
+  \end{align*}
   Ce qui montre l'unicité de \(s\).
 \end{proof}
 \begin{proof}[Existence]
@@ -600,23 +600,23 @@ rapport à un hyperplan vectoriel. Donc c'est une réflexion vectorielle.
   Vérifions que \(s\) est une réflexion affine. En effet, puisque 
   \(-2\vect{IA}=\vect{AB}\), on a bien \(s(A)=B\) et \(s(B)=A\). Et pour tout 
   point \(M \in E\)
-  \begin{align}
+  \begin{align*}
     s(M)=M &\iff 
     \frac{-2}{\norme{\vect{AB}}^2}\prodscal{\vect{IM}}{\vect{AB}}\vect{AB} = 
     \vect{0} \\
     &\iff \prodscal{\vect{IM}}{\vect{AB}}=0\\
     &\iff \vect{IM} \in \VectEngendre{\vect{AB}}^\perp \\
     &\iff M \in I+\VectEngendre{\vect{AB}}^\perp.
-  \end{align}
+  \end{align*}
   \(s\) est la réflexion par rapport à \(\H=I+\VectEngendre{\vect{AB}}^\perp\).
 
-  \begin{align}
+  \begin{align*}
     \forall M \in E \quad AM=BM &\iff \norme{\vect{AM}}^2=\norme{\vect{BM}}^2 \\
     &\iff \prodscal{\vect{AM}}{\vect{AM}} = \prodscal{\vect{BM}}{\vect{BM}}\\
     &\iff \prodscal{\vect{AI}}{\vect{IM}} = \prodscal{\vect{BI}}{\vect{IM}}\\
     &\iff \prodscal{\vect{AB}}{\vect{IM}} =0\\
     &\iff M \in \H.
-  \end{align}
+  \end{align*}
   Finalement \(\H=\enstq{M\in E}{AM=BM}\).
 \end{proof}
 
@@ -636,18 +636,18 @@ invariant. \end{theo}
 \begin{proof}
   Soit \(f \in \Is{E_2}\), alors \(\vect{f}\in \SOrth{E_2}\setminus\{\Id\}\). 
   Alors \(\Inv(\vect{f})=\{0\}\). Pour tout point \(M\) du plan, on a
-  \begin{align}
+  \begin{align*}
     f(M)=M &\iff \vect{f(O)f(M)} = \vect{f(O)M} \\
     &\iff \vect{f}{\vect{OM}} = \vect{f(O)O} + \vect{OM} \\
     &\iff (\vect{f}-\Id)(\vect{OM}) = \vect{f(O)O}.
-  \end{align}
+  \end{align*}
   On pose \(\vect{g}=\vect{f}-\Id\). Alors \(\Inv(\vect{f})=\Ker(\vect{g})\). Du 
   coup \(\vect{g}\) est injective. De plus \(g \in \Endo{E_2}\) avec \(\Dim 
   E_2=2 <\infty\) donc \(\vect{g}\) est bijective. Finalement
-  \begin{align}
+  \begin{align*}
     f(M)=M &\iff \vect{g}(\vect{OM}) = \vect{f(O)O} \\
     &\iff \vect{OM} = \vect{g}^{-1}(\vect{f(O)O}).
-  \end{align}
+  \end{align*}
   L'équation admet une unique solution.
 \end{proof}
 \begin{defdef}
@@ -741,13 +741,13 @@ Soit \(E_3\) l'espace vectoriel euclidien, et soit \(f\) un déplacement de
   Soit \(r=\vect{f} \in\SOrth{E_3}\), \(\Inv(r)=\Dr\), et \(\theta\) l'angle de 
   la rotation \(r\). Soit \(I \in \Inv(r)\). Pour tout point \(M\) de l'espace 
   on a
-  \begin{align}
+  \begin{align*}
     M \in \Inv(r) &\iff f(M)=M \\
     &\iff \vect{f(I)f(M)} = \vect{f(I)M} \\
     &\iff \vect{f}(\vect{IM}) = \vect{IM} \\
     &\iff \vect{IM} \in \Inv(r)\\
     &\iff M \in I+\Dr.
-  \end{align}
+  \end{align*}
   Alors \(\Inv(f)\) est la droite affine \(I+\Dr\).
 \end{proof}
 
@@ -786,10 +786,10 @@ précédentes, on dit que \(f\) est la rotation d'axe \(\Inv(f)\) et d'angle
   \(\Inv{\vect{r}}=\Inv{\vect{f}}=\VectEngendre{\vk}\). Le vecteur \(\vk\) est 
   connu à la multiplication par un scalaire près. Pour tout point \(M\) de 
   l'espace, on a
-  \begin{align}
+  \begin{align*}
     \vect{Mf(M)}&=\vect{Mt(M)}+\vect{t(M)f(M)} \\
     &=\lambda \vk +\vect{t(M)t(r(M))}.
-  \end{align}
+  \end{align*}
   Comme le vecteur \(\vk\) dirige l'axe de la rotation, on a \(\vk \perp 
   \vect{Mr(M)}\). Ainsi \(\prodscal{\vect{Mf(M)}}{\vk}=\lambda \norme{\vk}^2\). 
 
@@ -822,19 +822,19 @@ précédentes, on dit que \(f\) est la rotation d'axe \(\Inv(f)\) et d'angle
   \(\vect{IJ}=\va\) et \(\vect{g}=\vect{t}\). 
 
   Trouvons \(\Inv(g)\). Pour tout point \(M \in E_3\),
-  \begin{align}
+  \begin{align*}
     M = g(M) &\iff \vect{g(I)M} = \vect{g(I)g(M)} \\
     &\iff \vect{JM} = \vect{g}(\vect{IM}) \\
     &\iff (\vect{g}-\vect{\Id})(\vect{IM}) = \vect{JI}=-\va.
-  \end{align}
+  \end{align*}
   Alors \(r\) est la rotation d'axe de \(D\) et \(D\) est invariante par \(r\), 
   donc stable par \(\vect{r}\). \(D^\perp\) est aussi stable par \(\vect{r}\). 
   Soit \(\vect{r_0}\) la restriction de \(\vect{r}\) à \(D^\perp\). Alors 
   \(\vect{r_0}\) est une rotation du plan \(D^\perp\). Alors
-  \begin{align}
+  \begin{align*}
     \Inv(\vect{r_0}) &= \{0\}\\
     \ker(\vect{r_0}-\Id_{D^\perp}) &=\{0\}.
-  \end{align}
+  \end{align*}
   \(\vect{r_0}-\Id_{D^\perp}\) est un endomorphisme injectif du plan \(D^\perp\) 
   , donc \(\vect{r_0}-\Id_{D^\perp}\) est bijectif. Alors, a fortiori, 
   \(\vect{r_0}-\Id_{D^\perp}\) est surjectif.
@@ -844,11 +844,11 @@ précédentes, on dit que \(f\) est la rotation d'axe \(\Inv(f)\) et d'angle
   -\va\)\footnote{\(\vect{r_0}-\Id_{D^\perp}\) est surjectif}. De plus on a 
   \(\vect{r}=\vect{g}\), alors \((\vect{r}-\Id_{E_3})(\vb)=-\va\). Si on revient 
   à \(\Inv(g)\) alors on a
-  \begin{align}
+  \begin{align*}
     M = g(M) &\iff (\vect{r}-\vect{\Id})(\vect{IM}) = (\vect{r}-\Id)(\vb) \\
     &\iff (\vect{r}-\vect{\Id})(\vect{IM}-\vb)=\vect{0} \\
     &\iff \vect{IM}-\vb \in \Ker(\vect{r}-\vect{\Id})=\Inv(\vect{r})=D\\
-  &\iff M \in I+D+\vb=\Dr.    \end{align}
+  &\iff M \in I+D+\vb=\Dr.    \end{align*}
   De plus \(\vb \perp \Dr'=\Dr+\vb\)\footnote{droite affine parallèle à 
   \(\Dr\)}, donc \(g\) est une rotation d'axe \(\Dr'\).
 \end{proof}
@@ -870,10 +870,10 @@ précédentes, on dit que \(f\) est la rotation d'axe \(\Inv(f)\) et d'angle
       rotation vectorielle d'axe \(\Dr\) et d'angle \(\theta\).
   \end{itemize}
   Dans le deuxième cas, pour tout point \(M \in E_3\), on a
-  \begin{align}
+  \begin{align*}
     f(M) = f(O) +\vect{f}(\vect{OM}) \\
     Of(\vect{M}) = Of(\vect{O}) +\vect{f}(\vect{OM}).
-  \end{align}
+  \end{align*}
   \(f=t_{\vect{Of(O)}} \circ \vect{f}\) est bien une rotation composée avec une 
   translation, mais ce n'est pa un vissage car le vecteur de la translation 
   n'est pas colinéaire à l'axe de la rotation.
@@ -979,10 +979,10 @@ Les homothéties sont un exemple pertinent de similitude affine du plan.
   \(h'\) est une homothétie de rapport \(\lambda\), \(f=\sigma \circ h'^{-1}\) 
   est une isométrie. 
 
-  Si de plus \(\sigma\) est une similitude directe, alors \begin{align}
+  Si de plus \(\sigma\) est une similitude directe, alors \begin{align*}
     \Det(\vect{f}) &= \Det(h^{-1})\Det(\vect{\sigma}) \\
     &=\left(\frac{1}{\lambda}\right)^2 \Det(\sigma)>0.
-  \end{align}
+  \end{align*}
   Donc \(\vect{f}\in \SOrth{E_2}\) et donc \(f\) est un déplacement. On démontre 
   de la même manière que \(f'\) est aussi un déplacement.
 \end{proof}
@@ -1037,12 +1037,12 @@ orientés.
   \end{itemize}
 
   Vérifions les invariants~:
-  \begin{align}
+  \begin{align*}
     \forall M(z) \in E_2 \quad \sigma(M) = M &\iff z(1-a)=b \\
     a=1, b=0 &\quad \Inv(\sigma)=\emptyset\\
     a=1, b\neq 0 &\quad \Inv(\sigma)=E_2 \\
     a\neq 1 &\quad \Inv(\sigma) = \Omega\left(\frac{b}{1-a}\right).
-  \end{align}
+  \end{align*}
 \end{proof}
 Soit \(\sigma\) une similitude directe qui n'est pas une translation. Le point 
 \(\Omega\) est son unique point fixe et \(\lambda\) est son rapport. Soit \(h\) 
@@ -1073,12 +1073,12 @@ Notons \(\theta\) l'angle  de \(f\) et \(\Omega\) le centre de \(\sigma\).
   \end{equation}
   Si on note \(a\), \(a'\), \(b\) et \(b'\) les affixes respectives de \(A\), 
   \(A'\), \(B\) et \(B'\) on a
-  \begin{align}
+  \begin{align*}
     \begin{cases} \sigma(A)=A' \\ \sigma(B)=B'\end{cases}&\iff \begin{cases} 
   \lambda\e^{\ii \theta}a+c=a' \\ \lambda\e^{\ii \theta}b+c=b'\end{cases}\\
   &\iff \begin{cases} \lambda\e^{\ii\theta}=\frac{a'-b'}{a-b} \\ 
   c=\frac{ba'-ab'}{b-a}\end{cases}.
-\end{align}
+\end{align*}
 Le complexe \(c\) est unique, \(\lambda=\abs{\frac{a'-b'}{a-b}}\) est unique et 
 \(\theta=\arg\left(\frac{a'-b'}{a-b}\right)\) est unique. Donc la similitude est 
 unique.

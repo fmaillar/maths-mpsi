@@ -45,12 +45,12 @@
   euclidienne associée au produit scalaire sur \(\R^2\). Pour 
   \(\norme{}_\infty\), la positivité, la séparation, l'homogénéité sont faciles 
   à démontrer. Pour montrer l'inégalité triangulaire il suffit de remarquer~:
-  \begin{align}
+  \begin{align*}
     \abs{x_1+x_2} \leqslant \abs{x_1}+\abs{x_2} \leqslant \norme{x}_\infty + 
     \norme{y}_\infty, \\
     \abs{y_1+y_2} \leqslant \abs{y_1}+\abs{y_2} \leqslant \norme{x}_\infty + 
     \norme{y}_\infty,
-  \end{align}
+  \end{align*}
   alors \(\norme{x+y}_\infty = \max(\abs{x_1+x_2}, \abs{y_1+y_2}) \leqslant 
   \norme{x}_\infty + \norme{y}_\infty\).
 \end{proof}
@@ -300,21 +300,21 @@ toujours \(A \subset \bar{A}\).
   Soit \(F \in \P(E)\), \(F\) est fermé si et seulement si \(F=\bar{F}\).
 \end{prop}
 \begin{proof}
-  \begin{align}
+  \begin{align*}
     F \notin \F(E) &\iff E\setminus F \notin \Oouvert(E) \\
     &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, 
     r) \not\subset E\setminus F \\
     &\iff \exists a \in E\setminus F \ \forall r \in \Rplusetoile \quad B(a, 
     r) \cap F \neq \emptyset \\
     &\iff \exists a \in E\setminus F \ a \text{~est adhérent à~} F.
-  \end{align}
+  \end{align*}
   On a montré que \(F\) est non fermé si et seulement s'il existe un point 
   adhérent à \(F\) qui n'est pas dans \(F\), c'est-à-dire \(\bar{F} 
   \not\subset F\). Par contraposée,
-  \begin{align}
+  \begin{align*}
     F \text{~est fermé} &\iff \bar{F} \subset F \\
     &\iff \bar{F}=F.
-  \end{align}
+  \end{align*}
 \end{proof}
 
 \section{Limites et continuité des fonctions de deux variables réelles}
@@ -367,18 +367,18 @@ seule variable réelle~: Par l'absurde supposons que \(f\) admet en \(a\)
 deux limites distinctes \(\ell_1\) et \(\ell_2\). Soit \(\epsilon = 
 \frac{\abs{\ell_1 - \ell_2}}{3}\). Alors il existe \(\eta_1\) et \(\eta_2\) 
 strictement positif tels que pour tout \(x \in A\)~:
-\begin{align}
+\begin{align*}
   \norme{x-a} \leqslant \eta_1 &\implies \abs{f(x)-\ell_1}\leqslant 
   \epsilon, \\
   \norme{x-a} \leqslant \eta_2 &\implies \abs{f(x)-\ell_2}\leqslant 
   \epsilon.
-\end{align}
+\end{align*}
 On définit \(\eta_0=\min(\eta_1, \eta_2)\) et soit \(x \in A \cap 
 B(a,\eta_0)\), alors
-\begin{align}
+\begin{align*}
   \abs{\ell_1-\ell_2} &\leqslant \abs{\ell_1-f(x)} + \abs{f(x)-\ell_2} \\
   &\leqslant 2\epsilon = \frac{2}{3}\abs{\ell_1-\ell_2}.
-\end{align}
+\end{align*}
 Ce qui est absurde. Donc \(\ell_1=\ell_2\).
 
 \emph{Remarque}~: On peut montrer que si \(N_1\) et \(N_2\) sont deux normes 
@@ -430,12 +430,12 @@ montrer qu'une fonction n'est pas continue en un point.
 \end{prop}
 \begin{proof}
   Écrivons la définition de la continuité en \(a\) avec \(\epsilon=1\)~:
-  \begin{align}
+  \begin{align*}
     \exists \eta \in \Rplusetoile \ \forall x \in A &\quad 
     \norme{x-a}\leqslant \eta \implies \abs{f(x)-f(a)}\leqslant 1 \\
     \exists \eta \in \Rplusetoile \ \forall x \in A &\quad x \in B(a, \eta) 
     \implies \abs{f(x)} \leqslant 1+\abs{f(a)}.
-  \end{align}
+  \end{align*}
   En posant \(M=f(a)+1\), alors \(f\) est bornée par \(M\).
 \end{proof}
 
@@ -556,11 +556,11 @@ au voisinage de \(a\).
 Pour tout \(t\) au voisinage de \(0\), \(a+th\) est au voisinage de \(a\) 
 donc \(t \longmapsto f(a+th)\) est définie au voisinage de zéro. Plus 
 concrètement, il existe \(r>0\) tel que \(B(a, r) \subset U\).
-\begin{align}
+\begin{align*}
   \forall t \in \R \quad a+th \in B(a, r) &\iff \norme{(a+th)-a} \leqslant r 
   \\
   &\iff \abs{t} \norme{h} \leqslant r.
-\end{align}
+\end{align*}
 Si \(h=(0, 0)\), alors \(t \longmapsto f(a+th)\) est définie sur \(\R\). 
 Sinon, \(a+th \in B(a, r) \iff \abs{t} \leqslant \frac{r}{\norme{h}}\). 
 L'application \(t \longmapsto f(a+th)\) est définie au moins sur 
@@ -588,20 +588,20 @@ Soient \(U\) un ouvert de \(\R^2\), \(a \in U\) et \(f \in \R^U\). Notons
 \begin{defdef}
   Sous réserve d'existence de \(D_h f(a)\) pou \(h \in \{e_1, e_2\}\), on 
   pose~:
-  \begin{align}
+  \begin{align*}
     \derivep{f}{x_1}(a) &= D_{e_1}f(a); \\
     \derivep{f}{x_2}(a) &= D_{e_2}f(a). \\
-  \end{align}
+  \end{align*}
 \end{defdef}
 
 \emph{Interprétation~:}
-\begin{align}
+\begin{align*}
   D_{e_1}f(a) &= \lim\limits_{t \to 0}\frac{f(a+te_1)-f(a)}{t} \\
   &= \lim\limits_{t \to 0}\frac{f(a_1+t, a_2)-f(a_1, a_2)}{t}\\
   &= \lim\limits_{t \to 0}\frac{\varphi_{a, 1}(a_1+t)-\varphi_{a, 
   1}(a_1)}{t}\\
   &= \varphi_{a, 1}'(a_1).
-\end{align}
+\end{align*}
 Alors \(\derivep{f}{x_1}(a)\) existe si et seulement si l'application 
 partielle \(\varphi_{1, 1}\) est dérivable en \(a_1\). Auquel cas~:
 \begin{equation}
@@ -694,17 +694,17 @@ Soient \(U\) un ouvert de \(\R^2\) et \(f \in \R^U\).
 x_2)}{x_1}\) et \(\fonction{p_2}{\R^2}{\R}{(x_1, x_2)}{x_2}\). \(p_1\) et 
 \(p_2\) sont de classe \(\classe{1}\). Pour tout \(a\) et \(h\) de 
 \(\R^2\) on a
-\begin{align}
+\begin{align*}
   D_h p_1(a) &= h_1 \derivep{p_1}{x_1}(a) + h_2 \derivep{p_1}{x_2}(a) =h_1 
   \\
   D_h p_2(a) &= h_1 \derivep{p_2}{x_1}(a) + h_2 \derivep{p_2}{x_2}(a) 
   =h_2.
-\end{align}
+\end{align*}
 Ainsi
-\begin{align}
+\begin{align*}
   D_h f(a) &= h_1 \derivep{f}{x_1}(a) + h_2 \derivep{f}{x_2}(a) \\
   &= D_h p_1(a) \derivep{f}{x_1}(a) + D_h p_2(a) \derivep{f}{x_2}(a),  
-\end{align}
+\end{align*}
 et comme c'est vrai pour tout vecteur \(h\) on a
 \begin{equation}
   D f(a) = D p_1(a) \derivep{f}{x_1}(a) + D p_2(a) \derivep{f}{x_2}(a),
@@ -731,10 +731,10 @@ f(a)}\) est une forme linéaire.
 \end{defdef}
 
 D'après l'expression de \(\D f_a\) on a
-\begin{align}
+\begin{align*}
   \grad f(a) &= \left(\derivep{f}{x_1}(a), \derivep{f}{x_2}(a)\right) \\
   &= \derivep{f}{x_1}(a) \vect{e_1} + \derivep{f}{x_2}(a) \vect{e_2}.
-\end{align}
+\end{align*}
 
 \emph{Remarque}~: L'application \(\grad : a \longmapsto \grad f(a)\) est 
 appelée champ de vecteurs.
@@ -758,18 +758,18 @@ appelée champ de vecteurs.
   premières applications partielles respectives de \(f\), \(g\) et 
   \(fg\) en \(a\). Alors \(\alpha\) et \(\beta\) sont dérivable en 
   \(a_1\)~:
-  \begin{align}
+  \begin{align*}
     \alpha'(a_1) &= \derivep{f}{x_1}(a) \\
     \beta'(a_1) &= \derivep{g}{x_1}(a).
-  \end{align}
+  \end{align*}
   On a \(\gamma = \alpha \beta\), donc \(\gamma\) est dérivable en 
   \(a_1\) et
-  \begin{align}
+  \begin{align*}
     \gamma'(a_1) &= \alpha(a_1) \beta'(a_1) + \beta(a_1) \alpha'(a_1) \\
     &=\alpha(a_1) \derivep{g}{x_1}(a) + \beta(a_1) \derivep{f}{x_1}(a_1) 
     \\
     &=f(a) \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a).
-  \end{align}
+  \end{align*}
   Alors \(\derivep{fg}{x_1}(a)\) existe et vaut \(f(a) 
   \derivep{g}{x_1}(a) + g(a)\derivep{f}{x_1}(a)\). Ce qui est vrai pour 
   tout \(a \in U\), donc \(\derivep{fg}{x_1}\) est défini sur \(U\) et 
@@ -859,12 +859,12 @@ appelée champ de vecteurs.
   Pour \(t\) au voisinage de \(t_0\), \(\varphi(t)\) est au voisinage de 
   \(\varphi(t_0)\). On l'applique avec \(a = \varphi(t_0)\) et 
   \(h=\varphi(t)-\varphi(t_0)\)~:
-  \begin{align}
+  \begin{align*}
     f\circ \varphi(t) = f\circ \varphi(t_0)  + 
     \derivep{f}{x_1}(\varphi(t_0))(\varphi_1(t)-\varphi_1(t_0)) \notag 
     \\ + \derivep{f}{x_2}(\varphi(t_0))(\varphi_2(t)-\varphi_2(t_0)) + 
     \norme{\varphi(t)-\varphi(t_0)}\epsilon(\norme{\varphi(t)-\varphi(t_0)}),
-  \end{align}
+  \end{align*}
   avec \(\lim\limits_{0}\epsilon=0\).
 
   Les fonctions \(\varphi_1\) et \(\varphi_2\) sont donc de classe 
@@ -876,7 +876,7 @@ appelée champ de vecteurs.
     (t-t_0)\petito{1}.
   \end{gather}
   Au voisinage de \(t_0\),
-  \begin{align}
+  \begin{align*}
     f \circ \varphi(t) &= f \circ \varphi(t_0) + 
     \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0)(t-t_0) + 
     \derivep{f}{x_1}(\varphi(t_0))(t-t_0)\petito{1} \notag \\
@@ -887,7 +887,7 @@ appelée champ de vecteurs.
     &= f \circ \varphi(t_0) + (t-t_0)\left[ 
     \derivep{f}{x_1}(\varphi(t_0))\varphi_1'(t_0) 
     \derivep{f}{x_2}(\varphi(t_0))\varphi_2'(t_0)\right] +\petito{t-t_0}. 
-  \end{align}
+  \end{align*}
   Alors \(f \circ \varphi\) admet un développement limité à l'ordre 
   \(1\) en \(t_0\).
   \begin{equation}
