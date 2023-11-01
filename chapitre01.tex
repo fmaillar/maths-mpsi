@@ -1,30 +1,24 @@
-\chapter{Fonctions usuelles}
-\label{chap:fonctionsusuelles}
-\minitoc
-\minilof
-\minilot
+\chapter{Fonctions usuelles}\label{chap:fonctionsusuelles}
+\minitoc%
+\minilof%
+\minilot%
 
 Vous connaissez depuis la classe de Terminale les fonctions trigonométriques, 
 l’exponentielle et le logarithme népérien. Notre premier objectif sera de 
 démontrer rigoureusement leurs propriétés. Nous introduirons aussi les fonctions 
 hyperboliques ainsi que les fonctions réciproques des fonctions trigonométriques 
 et hyperboliques. Pour comprendre quelques démonstrations, vous aurez besoin des 
-notions de base de l’analyse~: limites, continuité, dérivabilité et convexité.  
+notions de base de l'analyse~: limites, continuité, dérivabilité et convexité.  
 Quelques théorèmes sont donnés dans l'annexe~\ref{chap:theogen}.
 
-\section{Logarithmes \& exponentielles}
-\label{sec:chap1-logetexp}
-
-\subsection{Logarithme népérien}
-\label{subsec:chap1-lognep}
-
-\begin{defdef}
-  \label{def:chap1-deflognep}
+\section{Logarithmes \& exponentielles}\label{sec:chap1-logetexp}
+\subsection{Logarithme népérien}\label{subsec:chap1-lognep}
+\begin{defdef}\label{def:chap1-deflognep}
   On appelle la fonction logarithme népérien l'unique primitive de la fonction 
   inverse, continue sur \(\Rplusetoile\), qui s'annule en \(1\). On a donc pour 
   tout \(x\) strictement positif
   \begin{empheq}[box = \shadowbox*]{equation}
-    \ln x = \int_{1}^{x} \frac{\diff t}{t}.
+    \ln{x} = \int_{1}^{x} \frac{\diff{}t}{t}.
   \end{empheq}
 \end{defdef}
 
@@ -38,8 +32,7 @@ Ainsi, par définition, on a~:
 
 Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 
-\begin{theo}
-  \label{theo:lognep1}
+\begin{theo}\label{theo:lognep1}
   Pour tout \(x, y \in \Rplusetoile\), on a
   \begin{empheq}[box = \shadowbox*]{equation}
     \ln(x y) = \ln x + \ln y.
@@ -85,8 +78,7 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
   \end{enumerate}
 \end{proof}
 
-\begin{theo}
-  \label{theo:limln}
+\begin{theo}\label{theo:limln}
   La fonction logarithme népérien vérifie les limites suivantes~:
   \begin{empheq}[box = \shadowbox*]{equation}
     \lim\limits_{x \to + \infty} \ln x = +\infty \qquad \lim\limits_{x \to 
@@ -115,15 +107,13 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
 \begin{figure}
   \centering
   \includegraphics[scale = 1.0]{lognep.png}
-  \caption{Tracé du logarithme népérien}
-  \label{fig:traceln}
+  \caption{Tracé du logarithme népérien}\label{fig:traceln}
 \end{figure}
 
 \begin{theo}
   L'ensemble \(E\) des fonctions dérivables de \(\R^{\Rplusetoile}\) telles que 
   pour tout \(x,y>0\)~:
-  \begin{equation}
-    \label{eq:fonclog}
+  \begin{equation}\label{eq:fonclog}
     f(xy) = f(x)+f(y)
   \end{equation}
   est la droite vectorielle engendrée par le logarithme népérien, c'est-à-dire 
@@ -147,8 +137,7 @@ Le logarithme népérien est indéfiniment dérivable et strictement croissant.
   au théorème~\ref{theo:lognep1}.
 \end{proof}
 
-\subsection{Logarithmes de base a}
-\label{subsec:chap1-loga}
+\subsection{Logarithmes de base a}\label{subsec:chap1-loga}
 
 \begin{defdef}
   Soit un réel \(a\) de \(\Rplusetoile\setminus\{1\}\), appelé la \emph{base}.  
@@ -192,12 +181,10 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \begin{figure}
   \centering
   \includegraphics[scale = 1.0]{logbase.png}
-  \caption{Tracé des logarithmes de bases quelconque}
-  \label{fig:traceloga}
+  \caption{Tracé des logarithmes de bases quelconque}\label{fig:traceloga}
 \end{figure}
 
-\subsection{Exponentielle}
-\label{subsec:chap1-exp}
+\subsection{Exponentielle}\label{subsec:chap1-exp}
 
 \begin{defdef}
   L'application logarithme népérien est continue sur \(\Rplusetoile\) et 
@@ -287,15 +274,13 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \begin{figure}
   \centering
   \includegraphics[scale = 1.0]{exp.png}
-  \caption{Tracé de l'exponentielle}
-  \label{fig:traceexp}
+  \caption{Tracé de l'exponentielle}\label{fig:traceexp}
 \end{figure}
 
 \begin{theo}
   L'ensemble \(E\) des fonctions de \(\R^{\R}\) dérivables qui vérifient 
   l'équation pour tout réels \(x\) et \(y\)
-  \begin{equation}
-    \label{eq:foncexp}
+  \begin{equation}\label{eq:foncexp}
     f(x+y) = f(x) \cdot f(y)
   \end{equation}
   est \(E = \left\{0\right\} \cup 
@@ -305,8 +290,7 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
 \begin{proof}
   Soit une fonction \(f \in \R^{\R}\) dérivable qui vérifie l'équation 
   \eqref{eq:foncexp}, alors en dérivant cette équation on obtient~:
-  \begin{equation}
-    \label{eq:foncexpun}
+  \begin{equation}\label{eq:foncexpun}
     f'(x+y) = f'(x)f(y) = f(x)f'(y).
   \end{equation}
   Deux cas sont possibles~:
@@ -316,8 +300,7 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
       \(f(x_0) \neq 0\). Alors pour tout réel \(y\) \(f(x_0)= f(x_0-y)f(y)\), 
       donc \(f(y) \neq 0\), donc la fonction \(f\) ne s'annule jamais. Sachant 
       cela, on peut reprendre l'Eq.~\eqref{eq:foncexpun} et pour tout réel \(x\) 
-      écrire que           \begin{equation}
-        \label{eq:foncexpdeux}
+      écrire que           \begin{equation}\label{eq:foncexpdeux}
         \frac{f'(x)}{f(x)} = \frac{f'(0)}{f(0)}.
       \end{equation}
 
@@ -332,8 +315,7 @@ Le logarithme décimal en base \(10\) et le logarithme binaire en base \(2\).
   La réciproque est due à la proposition~\ref{prop-chap1:addexp}.
 \end{proof}
 
-\subsection{Exponentielles de base a}
-\label{subsec:chap1-expa}
+\subsection{Exponentielles de base a}\label{subsec:chap1-expa}
 
 \begin{defdef}
   Soit une base \(a\) de logarithme dans \(\Rplusetoile\setminus\{1\}\).  Comme 
@@ -401,15 +383,12 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
 \begin{figure}
   \centering
   \includegraphics[scale = 1.0]{expa.png}
-  \caption{Tracé des exponentielles de base quelconque}
-  \label{fig:traceexpa}
+  \caption{Tracé des exponentielles de base quelconque}\label{fig:traceexpa}
 \end{figure}
 
-\section{Puissances}
-\label{sec:chap1-puissances}
+\section{Puissances}\label{sec:chap1-puissances}
 
-\subsection{Les fonctions puissances}
-\label{subsec:chap1-fonctionspuissances}
+\subsection{Les fonctions puissances}\label{subsec:chap1-fonctionspuissances}
 
 \begin{defdef}
   Soit un réel \(\alpha\). On appelle fonction puissance d'exposant \(\alpha\) 
@@ -511,15 +490,13 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
       \begin{figure}
         \centering
         \includegraphics[scale = 1.0]{puiss.png}
-        \caption{Tracé de quelques fonctions puissance}
-        \label{figtracepuissance}
+        \caption{Tracé de quelques fonctions puissance}\label{figtracepuissance}
       \end{figure}
 
       Si \(\alpha \neq 0\), les fonctions \(f_{\frac{1}{\alpha}}\) et 
       \(f_\alpha\) sont réciproques l'une de l'autre.
 
-      \subsection{Dérivation des fonctions de la forme exponentielle}
-      \label{subsec:chap1-derivationdesfonctionsdelaformeexponentielle}
+      \subsection{Dérivation des fonctions de la forme exponentielle}\label{subsec:chap1-derivationdesfonctionsdelaformeexponentielle}
 
       \begin{prop}
         Soient \(I\) un intervalle réel, \(u\) et \(v\) des fonctions dérivables 
@@ -536,8 +513,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
           \end{align*}
         \end{proof}
 
-        \section{Croissances comparées}
-        \label{sec:chap1-croissancescomparees}
+        \section{Croissances comparées}\label{sec:chap1-croissancescomparees}
 
         \begin{theo}
           On dit que le logarithme est négligeable devant l'identité en 
@@ -564,8 +540,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
           obtient la limite en zéro.
         \end{proof}
 
-        \begin{prop}
-          \label{prop-chap1:croissancecomparelnpuissance}
+        \begin{prop}\label{prop-chap1:croissancecomparelnpuissance}
           Soient \(\alpha\) et \(\beta\) deux réels strictement positifs, alors
           \begin{empheq}[box = \shadowbox*]{equation}
           \lim\limits_{x \to +\infty} \frac{(\ln x)^\alpha}{x^\beta} = 0^+  
@@ -635,8 +610,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
       (-x)}} = \lim\limits_{x \to -\infty} \e^{\alpha x} \abs{x}^\beta = 0^+\).
     \end{proof}
 
-    \section{Trigonométrie circulaire}
-    \label{sec:chap1-trigocirc}
+    \section{Trigonométrie circulaire}\label{sec:chap1-trigocirc}
 
     \begin{defdef}[Formule d'Euler]
       Les fonctions cosinus et sinus sont définies respectivement comme la 
@@ -671,8 +645,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
         \hline
       \(\cos x\) & \(1\) &\(\frac{\sqrt{3}}{2}\)  &\(\frac{1+\sqrt{5}}{4}\) & 
     \(\frac{\sqrt{2}}{2}\) & \(\frac{1}{2}\) & \(0\)\\ \hline    \end{tabular}
-    \caption{Valeurs particulières de cosinus}
-    \label{tab:valeurpart}
+    \caption{Valeurs particulières de cosinus}\label{tab:valeurpart}
   \end{table}
   \renewcommand{\arraystretch}{1}
 
@@ -691,15 +664,13 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
       \(\pi\) \\
       cotangente & \(D_2 = \R\setminus\{\pi \Z\}\) & impaire & \(\pi\) \\ \hline
     \end{tabular}
-    \caption{Fonctions trigonométriques de base}
-    \label{tab:fonctiontrigo}
+    \caption{Fonctions trigonométriques de base}\label{tab:fonctiontrigo}
   \end{table}
 
   \begin{figure}
     \centering
     \includegraphics[scale = 0.8]{./CercleTrigo.png}
-    \caption{Cercle trigonométrique}
-    \label{fig:cercletrigo}
+    \caption{Cercle trigonométrique}\label{fig:cercletrigo}
   \end{figure}
 
   Soit un réel \(x\), un réel \(y \in D_2\) et un réel \(z \in D_1\), alors
@@ -720,8 +691,7 @@ tout réel \(x\), \(1^x = 1\). Donc pour tout réel \(x\) et toute base \(a\)
     \includegraphics[scale = 0.8]{trig.png}
     \caption[Tracé de quelques fonctions trigonométriques]{Tracé de quelques 
     fonctions trigonométriques. En rouge sinus, en bleu cosinus, en vert 
-  tangente et en rose cotangente}
-  \label{fig:tracetrigo}
+  tangente et en rose cotangente}\label{fig:tracetrigo}
 \end{figure}
 
 \paragraph{Dérivées}
@@ -754,11 +724,9 @@ ensembles de définition, et on a:
   \end{align*}
 \end{prop}
 
-\section{Fonctions circulaires réciproque}
-\label{sec:chap1-fonctionscircréciproques}
+\section{Fonctions circulaires réciproque}\label{sec:chap1-fonctionscircréciproques}
 
-\subsection{Fonction arcsinus}
-\label{subsec:chap1-fonctionarcsinus}
+\subsection{Fonction arcsinus}\label{subsec:chap1-fonctionarcsinus}
 
 \begin{defdef}
   La fonction 
@@ -823,12 +791,10 @@ ensembles de définition, et on a:
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{arcsin.png}
-  \caption{Tracé de arcsinus}
-  \label{fig:tracearcsinus}
+  \caption{Tracé de arcsinus}\label{fig:tracearcsinus}
 \end{figure}
 
-\subsection{Fonction arccosinus}
-\label{subsec:chap1-fonctionarccos}
+\subsection{Fonction arccosinus}\label{subsec:chap1-fonctionarccos}
 
 \begin{defdef}
   La fonction 
@@ -885,8 +851,7 @@ ensembles de définition, et on a:
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{arccos.png}
-  \caption{Tracé de arccosinus}
-  \label{fig:tracearccosinus}
+  \caption{Tracé de arccosinus}\label{fig:tracearccosinus}
 \end{figure}
 
 \begin{prop}
@@ -914,8 +879,7 @@ ensembles de définition, et on a:
   \end{enumerate}
 \end{proof}
 
-\subsection{Fonction arctangente}
-\label{subsec:chap1-fonctionarctangente}
+\subsection{Fonction arctangente}\label{subsec:chap1-fonctionarctangente}
 
 \begin{defdef}
   La restriction de la fonction tangente à l'intervalle 
@@ -955,12 +919,10 @@ ensembles de définition, et on a:
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{arctan.png}
-  \caption{Tracé de arctangente et de ses asymptotes}
-  \label{fig:tracearctangente}
+  \caption{Tracé de arctangente et de ses asymptotes}\label{fig:tracearctangente}
 \end{figure}
 
-\begin{theo}
-  \label{chap1-theo:thetasin}
+\begin{theo}\label{chap1-theo:thetasin}
   Soient des réels \(x\) et \(y\) tels que \(x^2+y^2 = 1\), alors il existe un 
   unique réel \(\theta\) dans \(\intervalleof{-\pi}{\pi}\) tel que \(x = \cos 
   \theta\) et \(y = \sin \theta\).
@@ -997,11 +959,9 @@ ensembles de définition, et on a:
   \end{enumerate}
 \end{proof}
 
-\section{Trigonométrie hyperbolique}
-\label{sec:chap1-trigohyper}
+\section{Trigonométrie hyperbolique}\label{sec:chap1-trigohyper}
 
-\subsection{Fonctions sinus et cosinus hyperbolique}
-\label{subsec:chap1-sinushetcosh}
+\subsection{Fonctions sinus et cosinus hyperbolique}\label{subsec:chap1-sinushetcosh}
 
 \begin{defdef}
   On définit les applications de \(\R\) dans \(\R\), appelées respectivement 
@@ -1041,8 +1001,7 @@ ensembles de définition, et on a:
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{trigh.png}
-  \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\hcos\)}
-  \label{fig:tracesinhcosh}
+  \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\hcos\)}\label{fig:tracesinhcosh}
 \end{figure}
 
 Les fonctions \(\hsin\) et \(\hcos\) permettent de paramétrer l'hyperbole 
@@ -1050,8 +1009,7 @@ Les fonctions \(\hsin\) et \(\hcos\) permettent de paramétrer l'hyperbole
 \(\begin{cases} x(t) = a \epsilon \hcos t \\ y(t) = b \epsilon \hsin 
 t\end{cases} \epsilon \in \intervalleff{-1}{1}\), d'où le nom de ces fonctions.
 
-\subsection{Fonctions tangente et cotangente hyperbolique}
-\label{subsec:chap1-tanhetcotanh}
+\subsection{Fonctions tangente et cotangente hyperbolique}\label{subsec:chap1-tanhetcotanh}
 
 \begin{defdef}
   On définit la tangente hyperbolique, noté \(\htan\), et la cotangente 
@@ -1094,22 +1052,18 @@ décroît sur \(\Rmoinsetoile\) et sur \(\Rplusetoile\).
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{tanh.png}
-  \caption{Tracé de fonctions hyperbolique \(\htan\) et \(\hcotan\)}
-  \label{fig:tracetanhcoth}
+  \caption{Tracé de fonctions hyperbolique \(\htan\) et \(\hcotan\)}\label{fig:tracetanhcoth}
 \end{figure}
 
-\subsection{Formulaire de trigonométrie hyperbolique}
-\label{subsec:chap1-formulairetrigohyp}
+\subsection{Formulaire de trigonométrie hyperbolique}\label{subsec:chap1-formulairetrigohyp}
 
 En théorie la seule formule exigible est \(\hcos^2-\hsin^2 = 1\) mais les autres 
 existent, elles peuvent se retrouver à partir du formulaire de trigonométrie 
 circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
-\section{Fonctions hyperboliques réciproques}
-\label{sec:chap1-fonctionshyprec}
+\section{Fonctions hyperboliques réciproques}\label{sec:chap1-fonctionshyprec}
 
-\subsection{Fonction argument sinus hyperbolique}
-\label{subsec:chap1-fonctionargsinh}
+\subsection{Fonction argument sinus hyperbolique}\label{subsec:chap1-fonctionargsinh}
 
 \begin{defdef}
   La fonction sinus hyperbolique est une bijection de \(\R\) sur lui-même et 
@@ -1170,12 +1124,10 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{argsinh.png}
-  \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\argsh\)}
-  \label{fig:tracesinhargsh}
+  \caption{Tracé de fonctions hyperbolique \(\hsin\) et \(\argsh\)}\label{fig:tracesinhargsh}
 \end{figure}
 
-\subsection{Fonction argument cosinus hyperbolique}
-\label{subsec:chap1-fonctionargcosh}
+\subsection{Fonction argument cosinus hyperbolique}\label{subsec:chap1-fonctionargcosh}
 
 \begin{defdef}
   La fonction cosinus hyperbolique induit une bijection de \(\Rplus\) sur 
@@ -1228,12 +1180,10 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{argcosh.png}
-  \caption{Tracé de fonctions hyperbolique \(\hcos\) et \(\argch\)}
-  \label{fig:tracecoshargcosh}
+  \caption{Tracé de fonctions hyperbolique \(\hcos\) et \(\argch\)}\label{fig:tracecoshargcosh}
 \end{figure}
 
-\subsection{Fonction argument tangente hyperbolique}
-\label{subsec:chap1-fonctionargtanh}
+\subsection{Fonction argument tangente hyperbolique}\label{subsec:chap1-fonctionargtanh}
 
 \begin{defdef}
   La fonction tangente hyperbolique induit une bijection de \(\R\) sur 
@@ -1289,8 +1239,7 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
   \centering
   \includegraphics[scale = 0.8]{argtanh.png}
   \caption{Tracé des fonctions hyperbolique \(\htan\) et \(\argth\) et de leurs 
-  asymptotes}
-  \label{fig:tracetanhargth}
+  asymptotes}\label{fig:tracetanhargth}
 \end{figure}
 
 \section{Exercices}
@@ -1301,8 +1250,7 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
   \begin{itemize}
     \item Discuter le nombre de racines sur \(\intervalleoo{0}{+\infty}\) de 
       l'équation~:
-      \begin{equation}
-        \label{eq:fiche1-1}
+      \begin{equation}\label{eq:fiche1-1}
         a^x = x^\alpha
       \end{equation}
     \item Démontrer que l'équation~:
@@ -1331,7 +1279,7 @@ circulaire en remplaçant \(\cos\) par \(\hcos\) et \(\sin\) par \(\ii \hsin\).
 
 \begin{exercice}
   Soit, pour tout réel \(\alpha\) et tout naturel \(n\) non nul la fonction 
-  \(f_{alpha, n}\), notée par la suite $f$, définie pour tout \(x>0\), 
+  \(f_{alpha, n}\), notée par la suite \(f\), définie pour tout \(x>0\), 
   \(f_{\alpha, n}(x) = x^\alpha (\ln x)^n \).
   \begin{enumerate}
     \item Étudier la fonction \(f\) au voisinage de ses bornes

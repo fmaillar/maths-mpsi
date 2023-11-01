@@ -44,33 +44,41 @@ p2 = [(M2.xabs, M2.yord), (N2.xabs, N2.yord)]
 p3 = [(M3.xabs, M3.yord), (N3.xabs, N3.yord)]
 p4 = [(M4.xabs, M4.yord), (N4.xabs, N4.yord)]
 
-pZ = [(N1.xabs, N1.yord), (N2.xabs, N2.yord), (N3.xabs, N3.yord),
-      (N4.xabs, N4.yord), (N1.xabs, N1.yord)]
+pZ = [
+    (N1.xabs, N1.yord),
+    (N2.xabs, N2.yord),
+    (N3.xabs, N3.yord),
+    (N4.xabs, N4.yord),
+    (N1.xabs, N1.yord),
+]
 
 pt1 = [(C1.xabs, C1.yord), (M1.xabs, M1.yord)]
 pt2 = [(C1.xabs, C1.yord), (M2.xabs, M2.yord)]
 pt3 = [(C1.xabs, C1.yord), (M3.xabs, M3.yord)]
 pt4 = [(C1.xabs, C1.yord), (M4.xabs, M4.yord)]
 
-pt = [(M1.xabs, M1.yord), (M2.xabs, M2.yord), (M3.xabs, M3.yord),
-      (M4.xabs, M4.yord), (M1.xabs, M1.yord)]
+pt = [
+    (M1.xabs, M1.yord),
+    (M2.xabs, M2.yord),
+    (M3.xabs, M3.yord),
+    (M4.xabs, M4.yord),
+    (M1.xabs, M1.yord),
+]
 
 fig, ax = plt.subplots()
 fig.canvas.draw()
 ax.set_aspect(1)
 ax.scatter(M_X, M_Y)
-ax.scatter(N_X, N_Y, color='red')
-ax.plot(C1.xabs, C1.yord, marker='+')
-ax.annotate('C', (C1.xabs, C1.yord+0.1))
-ax.plot(*zip(*pZ), color='green')
-ax.plot(*zip(*p1), *zip(*p2), *zip(*p3), *zip(*p4), color='green')
-ax.plot(*zip(*pt), ls='--', color='orange')
-ax.plot(*zip(*pt1), *zip(*pt2), *zip(*pt3), *zip(*pt4), ls='--',
-        color='orange')
+ax.scatter(N_X, N_Y, color="red")
+ax.plot(C1.xabs, C1.yord, marker="+")
+ax.annotate("C", (C1.xabs, C1.yord + 0.1))
+ax.plot(*zip(*pZ), color="green")
+ax.plot(*zip(*p1), *zip(*p2), *zip(*p3), *zip(*p4), color="green")
+ax.plot(*zip(*pt), ls="--", color="orange")
+ax.plot(*zip(*pt1), *zip(*pt2), *zip(*pt3), *zip(*pt4), ls="--", color="orange")
 plt.xlim((-6, 7))
 plt.ylim((-6, 6))
-ax.grid('True')
-plt.title(f'Homothétie de rapport {L} et '
-          + f'de centre C({C1.xabs}, {C1.yord})')
-plt.savefig('homothetie.png')
-plt.close('all')
+ax.grid("True")
+plt.title(f"Homothétie de rapport {L} et " + f"de centre C({C1.xabs}, {C1.yord})")
+plt.savefig("homothetie.png")
+plt.close("all")

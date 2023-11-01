@@ -26,15 +26,15 @@ class Point:
 
     def affichage(self):
         """Permet d'afficher le point."""
-        return '('+str(self.xabs)+';'+str(self.yord)+')'
+        return "(" + str(self.xabs) + ";" + str(self.yord) + ")"
 
     def milieu(self, point):
         """Defini le milieu de deux points."""
-        return Point((self.xabs+point.xabs)/2, (self.yord+point.yord)/2)
+        return Point((self.xabs + point.xabs) / 2, (self.yord + point.yord) / 2)
 
     def vecteur(self, point):
         """Renvoie le vecteur directeur entre deux points."""
-        return Vecteur(point.xabs-self.xabs, point.yord-self.yord)
+        return Vecteur(point.xabs - self.xabs, point.yord - self.yord)
 
     def distance(self, point):
         """Renvoie la distance entre deux points."""
@@ -50,7 +50,7 @@ class Vecteur:
 
     def affichage(self):
         """Idem que pour la classe Point."""
-        return '('+str(self.xabs)+';'+str(self.yord)+')'
+        return "(" + str(self.xabs) + ";" + str(self.yord) + ")"
 
     def norme(self):
         """Renvoie la norme d'un vecteur."""
@@ -58,23 +58,23 @@ class Vecteur:
 
     def __add__(self, vec):
         """C'est l'addition de vecteurs."""
-        return Vecteur(self.xabs+vec.xabs, self.yord+vec.yord)
+        return Vecteur(self.xabs + vec.xabs, self.yord + vec.yord)
 
     def __rmul__(self, facteur):
         """C'est la multiplication par un scalaire."""
-        return Vecteur(self.xabs*facteur, self.yord*facteur)
+        return Vecteur(self.xabs * facteur, self.yord * facteur)
 
     def __mul__(self, vec):
         """C'est la multiplication entre vecteurs."""
-        return self.xabs*vec.xabs+self.yord*vec.yord
+        return self.xabs * vec.xabs + self.yord * vec.yord
 
     def colin(self, vec):
         """Renvoie Vrai si deux vecteurs sont colinéaires."""
-        return self.xabs*vec.yord == self.yord*vec.xabs
+        return self.xabs * vec.yord == self.yord * vec.xabs
 
     def ortho(self, vec):
         """Renvoie Vrai si deux vecteurs sont orthogonaux."""
-        return self*vec == 0
+        return self * vec == 0
 
 
 class Droite:
@@ -94,21 +94,29 @@ class Droite:
 
     def cartesienne(self):
         """Renvoie l'équation cartésienne de la droite."""
-        return '(' + str(self.normal().xabs) + ')x + (' + str(self.normal().yord) + \
-            ')y = ' + str(self.normal().xabs * self.a_abs.xabs +
-                          self.normal().yord * self.a_abs.yord)
+        return (
+            "("
+            + str(self.normal().xabs)
+            + ")x + ("
+            + str(self.normal().yord)
+            + ")y = "
+            + str(
+                self.normal().xabs * self.a_abs.xabs
+                + self.normal().yord * self.a_abs.yord
+            )
+        )
 
     def coefdir(self):
         """Renvoie le coefficient directeur de la droite."""
-        return self.directeur().yord/self.directeur().abs
+        return self.directeur().yord / self.directeur().abs
 
     def oalo(self):
         """Renvoie l'ordonnée à l'origine de la droite."""
-        return self.a_abs.yord-self.coefdir()*self.a_abs.xabs
+        return self.a_abs.yord - self.coefdir() * self.a_abs.xabs
 
     def reduite(self):
         """Renvoie l'équation réduite de la droite."""
-        return 'y='+str(self.coefdir())+'x+('+str(self.oalo())+')'
+        return "y=" + str(self.coefdir()) + "x+(" + str(self.oalo()) + ")"
 
     def parallele(self, droite):
         """Renvoie Vrai si les droites sont parallèles."""
@@ -129,7 +137,7 @@ class Cercle:
 
 def homothety(coeff, centre, point):
     """Cette methode definit une homot de rapport coeff et de centre Centre."""
-    temp = Vecteur(point.xabs-centre.xabs, point.yord-centre.yord)
-    outx = centre.xabs + coeff*temp.xabs
-    outy = centre.yord + coeff*temp.yord
+    temp = Vecteur(point.xabs - centre.xabs, point.yord - centre.yord)
+    outx = centre.xabs + coeff * temp.xabs
+    outy = centre.yord + coeff * temp.yord
     return Point(outx, outy)

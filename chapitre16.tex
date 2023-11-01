@@ -1,8 +1,7 @@
-\chapter{Espaces vectoriels}
-\label{chap:espaceVectoriel}
-\minitoc
-\minilof
-\minilot
+\chapter{Espaces vectoriels}\label{chap:espaceVectoriel}
+\minitoc%
+\minilof%
+\minilot%
 
 Dans tout ce chapitre, \((\K,+,\cdot)\) est un corps, en pratique \(\K=\R\) ou 
 \(\C\), et en général \(E\) désigne un \(\K\)-espace vectoriel.
@@ -100,7 +99,7 @@ vectoriel. On s'intéresse à l'ensemble des applications de \(X\) vers \(E\),
 c'est-à-dire \(E^X\). Soient deux fonctions \(f\) et \(g\) de \(E^X\). On 
 définit la fonction \(f+g\) par
 \begin{equation}
-  \forall x \in E \quad (f+g)(x)=f(x)+_Eg(x).
+  \forall x \in E \quad (f+g)(x)=f(x)+_{E}g(x).
 \end{equation}
 Soit l'application `` multiplication par un scalaire'' 
 \(\fonction{\perp}{\K\times E^X}{E^X}{(\lambda,f)}{\lambda f}\) telle que
@@ -117,8 +116,8 @@ Soit \((E,+,\perp)\) un espace vectoriel sur \(\K\).
   Alors on a
   \begin{table}[!h]
     \centering
-    \begin{tabular}{|c|c|} \hline
-      A & B \\ \hline
+    \begin{tabular}{cc} \toprule
+      A & B \\ \midrule
       \(0 x = 0\) & \(\lambda 0 = 0\) \\
       \((-\lambda)x=-(\lambda x)\) & \(\lambda(-x)=-(\lambda x)\)\\
       \((\lambda-\lambda')x=\lambda x- \lambda' x\) & \(\lambda(x-x')=\lambda x- 
@@ -126,7 +125,7 @@ Soit \((E,+,\perp)\) un espace vectoriel sur \(\K\).
       \(\left(\sum_{i=1}^n \lambda_i \right)x=\sum_{i=1}^n \lambda_i x\) & 
       \(\lambda\left(\sum_{i=1}^n x_i\right)=\sum_{i=1}^n \lambda x_i\)\\
       \((k\lambda)x=k(\lambda x)\) & \(\lambda (kx)=k(\lambda x)\) \\
-      \hline
+      \bottomrule
     \end{tabular}
   \end{table}
 \end{prop}

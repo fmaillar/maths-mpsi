@@ -1,8 +1,7 @@
-\chapter{Nombres réels}
-\label{chap:reels}
-\minitoc
-\minilof
-\minilot
+\chapter{Nombres réels}\label{chap:reels}
+\minitoc%
+\minilof%
+\minilot%
 \section{Ensemble ordonné \((\R, \leqslant)\)}
 
 \subsection{Notion d'ordre, éléments remarquables}
@@ -104,9 +103,8 @@ Soit \(A\) une partie de \(\R\).
       de la partie \(A\).
   \end{itemize}
 \end{proof}
-On peut voir une représentation illustrant un ensemble réel majoré, ses majorant 
-et sa borne supérieure sur la figure~
-\ref{fig:BorneSup}.
+On peut voir une représentation illustrant un ensemble réel majoré, ses majorants 
+et sa borne supérieure sur la figure~\ref{fig:BorneSup}.
 \begin{figure}[h]
   \centering
   \includegraphics[scale = 0.7]{./BorneSup.png}
@@ -328,16 +326,15 @@ addition et multiplication notées respectivement \( + \) et \(\times\) ou
     \end{equation}
   \end{prop}
   \begin{proof}
-    Si d'une part \(x\geqslant y\) alors \(\abs{x - y} = x - y\) et donc 
-    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2x}{2} = x\) et 
-    \(\min(x, y) = \frac{x + y - \abs{x - y}}{2} = \frac{2y}{2} = y\). Si 
-    d'autre part \(x\leqslant y\) alors \(\abs{x - y} = y - x\) et donc 
-    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2y}{2} = y\) et 
+    Si d'une part \(x\geqslant y\) alors \(\abs{x - y} = x - y\) et donc
+    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2x}{2} = x\) et
+    \(\min(x, y) = \frac{x + y - \abs{x - y}}{2} = \frac{2y}{2} = y\). Si
+    d'autre part \(x\leqslant y\) alors \(\abs{x - y} = y - x\) et donc
+    \(\max(x, y) = \frac{x + y + \abs{x - y}}{2} = \frac{2y}{2} = y\) et
     \(\min(x, y) = \frac{x + y - \abs{x - y}}{2} = \frac{2x}{2} = x\).
   \end{proof}
   \begin{defdef}
-    Pour tout réel \(x\), on note \(x^+ = \max(x, 0)\) et \(x^- = \max( - x, 
-    0)\).
+    Pour tout réel \(x\), on note \(x^+ = \max(x, 0)\) et \(x^- = \max( - x, 0)\).
   \end{defdef}
   \begin{prop}
     Pour tout réel \(x\), on a
@@ -346,7 +343,7 @@ addition et multiplication notées respectivement \( + \) et \(\times\) ou
     \end{equation}
     ou alors
     \begin{equation}
-      \abs{x} = x^ + +x^- \quad x = x^+ - x^ - .
+        \abs{x} = x^{+} + x^{-} \quad x = x^{+} - x^{-}.
     \end{equation}
   \end{prop}
   \begin{prop}
@@ -504,8 +501,7 @@ On note que l'ensemble vide est aussi un intervalle \(\emptyset =
 \end{theo}
 \begin{proof}
   \begin{itemize}
-    \item[\(\implies\)] déjà vue au théorème~
-      \ref{theo:partieconvexe1}.
+    \item[\(\implies\)] déjà vue au théorème~\ref{theo:partieconvexe1}.
     \item[\(\impliedby\)] Supposons \(I\) convexe. Si \(I\) est vide, alors 
       c'est un intervalle. Sinon, soit \(a\in I\) et on définit \(G_a = 
       \intervalleof{ - \infty}{a}\cap I\) et \(D_a = \intervallefo{a}{ + 
@@ -687,7 +683,7 @@ La conséquence est que ces deux ensembles sont infinis.
 \end{exercice}
 
 \begin{exercice}
-  Les parties de \(\R\) suivantes sont - elles majorées, minorées ? Si oui, 
+  Les parties de \(\R\) suivantes sont - elles majorées, minorées? Si oui, 
   déterminer leur bornes supérieures, inférieures, et dire s'il s'agit d'un 
   maximum, d'un minimum.
   \begin{align*}
@@ -733,7 +729,7 @@ La conséquence est que ces deux ensembles sont infinis.
 \begin{exercice}
   Soient \(I\) et \(J\) des intervalles de \(\R\) non vides. Démontrer qu'une 
   condition suffisante pour que \(I \cup J\) soit un intervalle est \(I \cap J 
-  \neq \emptyset\). Est - ce une condition nécessaire ?
+  \neq \emptyset\). Est - ce une condition nécessaire?
 \end{exercice}
 
 \begin{exercice}

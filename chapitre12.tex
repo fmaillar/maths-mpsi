@@ -1,7 +1,8 @@
 \chapter{Limites et continuité des fonctions réelles de la variable réelle} 
-\minitoc
-\minilof
-\minilot
+
+\minitoc%
+\minilof%
+\minilot%
 \section[Ensemble des fonctions de \(X\) vers \(\R\)]{Ensemble des fonctions de 
 \(X\) vers \(\R\) \((\R^X, +, \cdot, \perp,\leqslant)\)}
 
@@ -118,8 +119,7 @@ multiplication.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Voir celle du chapitre~
-  \ref{chap:reels}.
+  Voir celle du chapitre~\ref{chap:reels}.
 \end{proof}
 \begin{cor}
   Pour toute fonction \(f \in \R^X\),
@@ -169,8 +169,7 @@ multiplication.
   X\), \(\abs{f(x)} \leqslant M\).
 \end{prop}
 \begin{proof}
-  Voir celle du chapitre~
-  \ref{chap:suites}.
+  Voir celle du chapitre~\ref{chap:suites}.
 \end{proof}
 \begin{defdef}
   On appelle \(\Born(X,\R)\) l'ensemble des applications bornées de \(X\) dans 
@@ -724,8 +723,10 @@ Soit un intervalle réel \(I\).
   La réciproque est fausse. Par exemple, on prend \(I=[-1,1]\), \(I'=[0,1]\), 
   \(a=0\) et
   \begin{equation}
-    \fonction{f}{I}{\R}{x}{
-      \begin{cases} 0 & -1 \leqslant x < 0 \\ 1 & 0 \leqslant x \leqslant 1
+    \fonction{f}{I}{\R}{x}{%
+      \begin{cases}
+          0 & -1 \leqslant x < 0 \\
+          1 & 0 \leqslant x \leqslant 1
       \end{cases}
     },
   \end{equation}
@@ -843,8 +844,8 @@ Soient \(f\) une fonction définie au voisinage de \(a \in \Rbar\) et \(\ell \in
   \end{gather}
 \end{prop}
 \begin{proof}
-  Voir la démonstration équivalente du chapitre~
-  \ref{chap:suites} relative aux suites.
+  Voir la démonstration équivalente du chapitre~\ref{chap:suites} relative aux
+  suites.
 \end{proof}
 \begin{prop}
   Si la fonction \(f\) admet une limite finie en \(a \in \Rbar\), alors \(f\) 
@@ -1583,8 +1584,8 @@ continue. \end{proof}
 \subsection{Image d'un intervalle par une application continue}
 
 \begin{rappel}
-  On a montré au chapitre~
-  \ref{chap:reels} sur les réels que les intervalles de \(\R\) sont les parties 
+  On a montré au chapitre~\ref{chap:reels} sur les réels que les intervalles de
+  \(\R\) sont les parties 
   convexes de \(\R\). C'est-à-dire les parties \(I\) telles que
   \begin{equation}
     \forall (x,y) \in I^2 \quad x \leqslant y \implies \intervalleff{x}{y} 
@@ -1835,8 +1836,7 @@ une application continue et monotone}
         \item Soit \(y \in \intervallefo{f(a)}{+\infty}\), il existe alors un 
           réel \(c \in \intervallefo{a}{b}\) tel que \(f(c) \geqslant y\). 
           L'application continue \(f\) croît sur \(\intervalleff{a}{c}\) donc 
-          d'après le théorème~
-          \ref{theo:imagesegment} on écrit que 
+          d'après le théorème~\ref{theo:imagesegment} on écrit que 
           \(f(\intervalleff{a}{c})=\intervalleff{f(a)}{f(c)}\). On sait que 
           \(f(a) \le y \leqslant f(c)\) alors \(y \in f(\intervalleff{a}{c})\). 
           Il existe donc un réel \(d \in \intervalleff{a}{c}\) tel que 
@@ -1997,9 +1997,8 @@ suffisante pour qu'une application continue soit monotone}
       monotone.
     \item[\(2 \implies 1\)] La fonction \(f\) est monotone et \(f(I)=J\) 
       (puisque \(f\) est bijective) donc \(f(I)\) est un intervalle alors par 
-      théorème (
-      \ref{theo:monotone-intervalle-donc-continue}) l'application \(f\) est 
-      continue.
+      théorème~\ref{theo:monotone-intervalle-donc-continue}) l'application \(f\)
+      est continue.
   \end{itemize}
 \end{proof}
 
@@ -2113,10 +2112,10 @@ théorème suivant.
   limite \(c\), \(f\) est continue sur \(\intervalleff{a}{b}\) par hypothèse 
   donc particulièrement en \(c\). Par conséquent les suites 
   \(f(x_{\varphi{n}})\) et \(f(y_{\varphi{n}})\) convergent vers \(f(c)\). On 
-  peut donc passer à la limite dans l'équation~
-  \ref{eq:etoile} pour écrire que \(0 \geqslant \epsilon\). C'est absurde 
-  puisqu'on avait posé \(\epsilon >0\). Alors la fonction \(f\) est uniformément 
-  continue.
+  peut donc passer à la limite dans l'équation~\ref{eq:etoile} pour écrire que
+  \(0 \geqslant \epsilon\).
+  C'est absurde puisqu'on avait posé \(\epsilon >0\). Alors la fonction \(f\)
+  est uniformément continue.
 \end{proof}
 \begin{prop}
   \begin{enumerate}

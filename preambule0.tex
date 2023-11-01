@@ -1,114 +1,14 @@
-%pour résoudre le problème "No room for a new dimen" et on le place en premier
-\usepackage{etex}
-%
-%packages fondamentaux
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[french]{babel}
-%
-%pour les symboles mathématiques
-\usepackage{amsmath}
-\setlength{\mathindent}{1.5cm}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{mathrsfs}
-\usepackage{latexsym}
-%
-%Pour faire des maths en francais
-%\usepackage{frmath}
-%
-%Pour utiliser les tableaux
-\usepackage{array}
-%
-%fonte vectorielle
-\usepackage{lmodern}
-%
-%
-%Pour écrire de la physique avec les unités
-%\usepackage{siunitx}
-%
-%Pour inclure des images avec \includegraphics[scale=]{}
-\usepackage{graphics}
-%
-%Pour inclure des fichiers .ps ou .eps
-\usepackage{pstricks-add}
-%
-%Pour dessiner avec Tikz
-\usepackage{tikz, pgf}
-\usetikzlibrary{arrows,calc,backgrounds}
-\usepackage{tkz-tab}
-%
-%Pour le trace geogebra
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.15}
-%
-% pour le symbole \danger
-\usepackage{fourier-orns}
-%
-%pour utiliser les couleurs
-\usepackage{color}
-%
-%pour utiliser "draft" (brouillon)
-%\usepackage{draftcopy}
-%
-%pour renvoyer les \es à la fin
-\usepackage{endnotes}
-%
-%pour les encadrements et les boites
-\usepackage{fancybox}
-%
-%pour les boucles de programmation en \LaTeX
-\usepackage{ifthen}
-%
-%Pour le placement de flottants avec FloatBarrier
-\usepackage{placeins}
-%
-%Pour changer les titres de section
-%\makeatletter
-%	\renewcommand\section{\@startsection
-%	{section}{2}{0mm}
-%	{-\baselineskip}{0.5\baselineskip}
-%	{\FloatBarrier\normalfont\Large\bfseries}}
-%\makeatother
-%
-%
-%Calculs arithmétique
-%\usepackage{calc}
-%
-%Lettrines
-\usepackage{lettrine}
-%pour le symbole double crochet \rrbracket \llbracket
-\usepackage{stmaryrd}
-%pour les minitoc{}
-\usepackage{minitoc}
-\mtcselectlanguage{french}
-%
-%pour les tableaux de variations
-\usepackage{variations}
-%
-%Pour la taille de la page
-\usepackage{geometry}
-\geometry{
-	a4paper,
-	total={170mm,257mm},
-	left=20mm,
-	top=20mm,
-}
-%% entêtes et pieds de pages
-%Entêtes et pieds de pages
-\usepackage{fancyhdr}
 \pagestyle{fancy}
-%
 \fancyhead{}
 \fancyfoot{}
-%
 \renewcommand{\subsectionmark}[1]{%
   \ifsubsectioninheader
     \def\subsectiontitle{: #1}%
   \else
     \def\subsectiontitle{}%
-  \fi}
+  \fi
+}
+%
 \newif\ifsubsectioninheader
 \def\subsectiontitle{}
 \fancyhead[RO]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}
@@ -117,47 +17,13 @@
 %\fancyhead[LO]{MPSI F. M\bsc{aillard}}
 \fancyfoot[LE]{\thepage}
 \fancyfoot[RO]{\thepage}
-%
 %\setlength{\headheight}{15.36pt}
 \setlength{\headheight}{13.6pt}
-%
-%pour inclure des pdf
-\usepackage[final]{pdfpages}
-%
 %Pour l'interligne
 %\linespread{1.1}
-%
-%texte en latin
-%\usepackage{lipsum}
-%
-%pour creer un sommaire
-\usepackage{shorttoc}
-%
-%pour écrire des arc géométriques
-\usepackage{yhmath}
-%
-%pour l'index
-%\usepackage{makeidx}
-%\makeindex
-%
-%pour les boites autour des equations
-\usepackage{empheq}
-%
-%paquet pour les liens hypertextes
-\usepackage[colorlinks=true,%
-linkcolor=black,%
-urlcolor=black,%
-citecolor=black,%
-pdftitle={Mathématiques},%
-pdfauthor={Florian Maillard},%
-breaklinks = true%
-]{hyperref}
-%pour les tableaux
-\usepackage{tabularx}
 %onchange le nom de la table
 \renewcommand{\tablename}{\bsc{Tableau}}
 %%%%%%%%%%%%%%%%%%%%%%% THM et STYLES %%%%%%%%%%%%%%%%%%%%%%
-%
 \theoremstyle{plain} \newtheorem{theo}{Théorème}[chapter]
 %\newtheorem*{theo_etoile}{Théorème}
 \newtheorem{lemme}{Lemme}[chapter]
@@ -170,12 +36,10 @@ breaklinks = true%
 \newtheorem{proprietes}{Propriétés}[chapter]
 \theoremstyle{plain} \newtheorem{cor}{Corollaire}[prop]
 \newtheorem{corth}{Corollaire}[theo]
-%
 %%%%%%%%%%%%%%%%%%%%%%%% COMMANDES PERSOS %%%%%%%%%%%%%%%
-%
 \newcommand{\fonction}[5]{#1\colon \left\{\begin{array}{ccc}
-#2 & \longrightarrow &#3\\
-#4 & \longmapsto & #5
+  #2 & \longrightarrow &#3\\
+  #4 & \longmapsto & #5
 \end{array}
 \right.
 }
@@ -332,7 +196,6 @@ breaklinks = true%
 \DeclareMathOperator{\Com}{Com}%comatrice
 \DeclareMathOperator{\grad}{\vect{\mathbf{grad}}}%gradient
 \DeclareMathOperator{\rot}{\vect{\mathbf{rot}}}%rotationnel
-%
 \newcommand{\cercle}[2]{\mathcal{C}(#1,#2)}% cercle
 \newcommand{\congru}[3]{#1 \equiv #2\!\pmod {#3}} %congru
 \newcommand{\noncongru}[3]{#1 \not\equiv #2\!\pmod {#3}} %non-congru
@@ -352,7 +215,6 @@ breaklinks = true%
 \newcommand{\dr}{\partial{}}
 %%
 \newcommand\Hrule{\noindent \rule[0mm]{\linewidth}{0.5pt}}
-%
 %% Diagramme de Venn
 \newcommand{\En}{(-4,-1) rectangle (4,4)}
 \newcommand{\An}{(0,0) ++(135:2) circle (2)}
@@ -386,7 +248,6 @@ breaklinks = true%
 %pour changer le nom des tableaux
 %\renewcommand{\tablename}{Tableau}
 \addto\captionsfrench{\def\tablename{\bsc{Tableau}}}
-%
 %pour changer le carré en CQFD
 %\renewcommand{\qedsymbol}{C.Q.F.D.}
 
@@ -398,7 +259,6 @@ breaklinks = true%
 %   \let\@ifnextchar\new@ifnextchar
 %   \array{*\c@MaxMatrixCols c}}
 % \makeatother
-%
 \newcounter{exercice}
 \counterwithin*{exercice}{chapter}
 \newenvironment{exercice}[1][]{%
@@ -406,8 +266,9 @@ breaklinks = true%
 \par\vspace{5pt}\noindent
 \shadowbox{\textbf{Exercice~\thechapter.\theexercice~\textit{#1}}}%
 \hrulefill\par\vspace{10pt}\noindent\rmfamily}%
-{\par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par}
-%
+{
+  \par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par
+}
 \newcounter{corrige}
 \counterwithin*{corrige}{chapter}
 \newenvironment{corrige}[1][]{%
@@ -416,15 +277,13 @@ breaklinks = true%
 \fbox{\textbf{Corrigé~\thechapter.\thecorrige~\textit{#1}}}%
 \hrulefill\par\vspace{10pt}\noindent\rmfamily}%
 {\par\noindent\hrulefill\vrule width10pt height2pt depth2pt\par}
-%
-%
 \numberwithin{equation}{section}
-%
-\usepackage{multicol}
-%
-\usepackage{caption}
-\usepackage{subcaption}
+%%%%%%%%%%%% CREATE A SHADOW EQUATION ENV %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \begin{empheq}[box = \shadowbox*]{equation}
+%    \ln x = \int_{1}^{x} \frac{\diff t}{t}.
+%  \end{empheq}
+%\newenvironment{shadoweq}{\begin{empheq}[box = \shadowbox*]{equation}}{\end{empheq}}
 % La compteur de chapitre est resetter quand on change de partie
 \makeatletter
-\@addtoreset{chapter}{part}
+  \@addtoreset{chapter}{part}
 \makeatother

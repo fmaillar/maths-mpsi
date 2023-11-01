@@ -7,39 +7,40 @@ Created on Wed Mar  2 17:24:21 2022
 
 import numpy as np
 import matplotlib as mpl
-mpl.rcParams['text.usetex'] = True
+
+mpl.rcParams["text.usetex"] = True
 import matplotlib.pyplot as plt
 
-x = np.arange(-2,2,0.001)
-x1 = np.arange(-0.99,0.99,0.001)
-x2 = np.arange(-2,2,0.001)
+x = np.arange(-2, 2, 0.001)
+x1 = np.arange(-0.99, 0.99, 0.001)
+x2 = np.arange(-2, 2, 0.001)
 
 y1 = np.arctanh(x1)
 y2 = np.tanh(x2)
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.set_aspect('equal', adjustable='box')
-ax.axhline(y=0, color='k')
-ax.axvline(x=0, color='k')
-plt.plot(x1,y1, label='$\\textrm{argtanh}~x$')
-plt.plot(x2,y2, label='$\\textrm{tanh}~x$')
-plt.plot(x,x, label='$x$')
-#asymptotes
-plt.plot(x, x/x,'r', ls = (0, (5, 10)), lw=0.5, label='$x,y=\pm 1$')
-plt.plot(x, -x/x, 'r', ls = (0, (5, 10)), lw=0.5)
-plt.plot(x/x, x, 'r', ls = (0, (5, 10)), lw=0.5)
-plt.plot(-x/x, x, 'r', ls = (0, (5, 10)), lw=0.5)
+ax.set_aspect("equal", adjustable="box")
+ax.axhline(y=0, color="k")
+ax.axvline(x=0, color="k")
+plt.plot(x1, y1, label="$\\textrm{argtanh}~x$")
+plt.plot(x2, y2, label="$\\textrm{tanh}~x$")
+plt.plot(x, x, label="$x$")
+# asymptotes
+plt.plot(x, x / x, "r", ls=(0, (5, 10)), lw=0.5, label="$x,y=\pm 1$")
+plt.plot(x, -x / x, "r", ls=(0, (5, 10)), lw=0.5)
+plt.plot(x / x, x, "r", ls=(0, (5, 10)), lw=0.5)
+plt.plot(-x / x, x, "r", ls=(0, (5, 10)), lw=0.5)
 
-#plt.axis([-2, 2, -2, 2], 'equal')
+# plt.axis([-2, 2, -2, 2], 'equal')
 plt.grid()
-plt.xlim(-2,2)
-plt.ylim(-2,2)
-plt.xlabel('$x$',fontsize=8)
-plt.ylabel('$y$',fontsize=8)
+plt.xlim(-2, 2)
+plt.ylim(-2, 2)
+plt.xlabel("$x$", fontsize=8)
+plt.ylabel("$y$", fontsize=8)
 plt.legend()
-ax.axhline(y=0, color='k')
-ax.axvline(x=0, color='k')
-plt.savefig('argtanh.png', dpi=200)
-#plt.show()
+ax.axhline(y=0, color="k")
+ax.axvline(x=0, color="k")
+plt.savefig("argtanh.png", dpi=200)
+# plt.show()
 plt.close()

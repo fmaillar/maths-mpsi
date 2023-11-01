@@ -1,110 +1,110 @@
-\chapter{Plan géométrique euclidien -- Prérequis}
+\chapter{Plan géométrique euclidien --- Prérequis}
 
 L'objet de cette annexe est de rappeler des résultats et des notions supposés 
 connus à l'issue de la classe de terminale scientifique, mais avec une 
-formalisation nouvelle. Le plan géométrique euclidien $\P$ est un ensemble dont 
+formalisation nouvelle. Le plan géométrique euclidien \(\P\) est un ensemble dont 
 les éléments son appelés points et notés en lettres majuscules. On lui associe 
-une ensemble noté $\vect{\P}$ et appelé plan vectoriel euclidien. Ses éléments 
+une ensemble noté \(\vect{\P}\) et appelé plan vectoriel euclidien. Ses éléments 
 sont appelés vecteurs et notés en lettres minuscules coiffés d'une flèche. On 
-appelle scalaire les éléments de l'ensemble $\R$ des nombres réels.
+appelle scalaire les éléments de l'ensemble \(\R\) des nombres réels.
 
-\section{Plan vectoriel $\protect\vect{\P}$}
-%\section{Plan vectoriel $\P$}
+\section{Plan vectoriel \(\protect\vect{\P}\)}
+%\section{Plan vectoriel \(\P\)}
 
-Le plan vectoriel $\vect{\P}$ est muni de deux lois~:
+Le plan vectoriel \(\vect{\P}\) est muni de deux lois~:
 \begin{itemize}
-  \item la loi d'addition vectorielle, qui aux vecteurs $\vu$ et $\vv$ fait 
-    correspondre le vecteur noté $\vu +\vv$;
-  \item la loi de multiplication par un scalaire, qui au scalaire $\lambda$ et 
-    au vecteur $\vu$ fait correspondre le vecteur $\lambda \vu$.
+  \item la loi d'addition vectorielle, qui aux vecteurs \(\vu\) et \(\vv\) fait 
+    correspondre le vecteur noté \(\vu +\vv\);
+  \item la loi de multiplication par un scalaire, qui au scalaire \(\lambda\) et 
+    au vecteur \(\vu\) fait correspondre le vecteur \(\lambda \vu\).
 \end{itemize}
 
-Il possède de plus un élément appelé vecteur nul et noté $\vec{0}$.
+Il possède de plus un élément appelé vecteur nul et noté \(\vec{0}\).
 
 \begin{prop}
-  $(\vect{\P}, +, \cdot)$ est un $\R$-espace vectoriel, ce qui signifie que pour 
-  tout $\vu,\vv,\vw \in \vect{\P}$ tout scalaires $\lambda,\mu$ on a~:
+  \((\vect{\P}, +, \cdot)\) est un \(\R\)-espace vectoriel, ce qui signifie que pour 
+  tout \(\vu,\vv,\vw \in \vect{\P}\) tout scalaires \(\lambda,\mu\) on a~:
   \begin{enumerate}
-    \item $(\vu+\vv)+\vw=\vu +(\vv+\vw)$, la loi $+$ est associative;
-    \item $\vu+\vv=\vv+\vu$, la loi $+$ est commutative;
-    \item $\vu+\vect{0}=\vu$, le vecteur nul est neutre pour l'addition;
-    \item il existe un unique vecteur $\vu' \in \vect{\P}$ tel que 
-      $\vu+\vu'=\vect{0}$, c'est l'opposé $\vu'=-\vu$;
-    \item $1 \vu=\vu$;
-    \item $\lambda(\mu \vu)=(\lambda \mu) \vu$;
-    \item $(\lambda+\mu) \vu = \lambda\vu +\mu\vu$;
-    \item $\lambda(\vu+\vv)=\lambda \vu +\lambda\vv$, c'est la distributivité de 
-      $\cdot$ sur $+$;
-    \item $0 \vu = \lambda \vect{0}=\vect{0}$.
+    \item \((\vu+\vv)+\vw=\vu +(\vv+\vw)\), la loi \(+\) est associative;
+    \item \(\vu+\vv=\vv+\vu\), la loi \(+\) est commutative;
+    \item \(\vu+\vect{0}=\vu\), le vecteur nul est neutre pour l'addition;
+    \item il existe un unique vecteur \(\vu' \in \vect{\P}\) tel que 
+      \(\vu+\vu'=\vect{0}\), c'est l'opposé \(\vu'=-\vu\);
+    \item \(1 \vu=\vu\);
+    \item \(\lambda(\mu \vu)=(\lambda \mu) \vu\);
+    \item \((\lambda+\mu) \vu = \lambda\vu +\mu\vu\);
+    \item \(\lambda(\vu+\vv)=\lambda \vu +\lambda\vv\), c'est la distributivité de 
+      \(\cdot\) sur \(+\);
+    \item \(0 \vu = \lambda \vect{0}=\vect{0}\).
   \end{enumerate}
 \end{prop}
 
 \begin{defdef}
-  Soient deux vecteurs $\vu$ et $\vv$ de $\vect{\P}$.
+  Soient deux vecteurs \(\vu\) et \(\vv\) de \(\vect{\P}\).
   \begin{enumerate}
-    \item On dit que $\vu$ et $\vv$ sont colinéaires si~:
+    \item On dit que \(\vu\) et \(\vv\) sont colinéaires si~:
       \begin{equation}
-        \vu = \vect{0} \text{ ou } \exists \lambda \in \R \ \vv=\lambda\vu
+        \vu = \vect{0} \textrm{~ou~} \exists \lambda \in \R \ \vv=\lambda\vu
       \end{equation}
-    \item On dit que $\vu$ et $\vv$ sont colinéaires et de même sens si~:
+    \item On dit que \(\vu\) et \(\vv\) sont colinéaires et de même sens si~:
       \begin{equation}
-        \vu = \vect{0} \text{ ou } \exists \lambda \in \R_+ \ \vv=\lambda\vu
+        \vu = \vect{0} \textrm{~ou~} \exists \lambda \in \R_+ \ \vv=\lambda\vu
       \end{equation}
   \end{enumerate}
 \end{defdef}
 
 \begin{prop}
-  Il existe dans $\vect{\P}$ des couples $(\vu,\vv)$ de vecteurs non 
-  colinéaires. De plus, si $(\vu,\vv)$ est un tel couple, alors c'est une base 
-  de $\vect{\P}$, c'est-à-dire que pour tout vecteur $\vw \in \vect{\P}$ il 
-  existe un unique couple de scalaires $(\lambda, \mu)$ tel que
+  Il existe dans \(\vect{\P}\) des couples \((\vu,\vv)\) de vecteurs non 
+  colinéaires. De plus, si \((\vu,\vv)\) est un tel couple, alors c'est une base 
+  de \(\vect{\P}\), c'est-à-dire que pour tout vecteur \(\vw \in \vect{\P}\) il 
+  existe un unique couple de scalaires \((\lambda, \mu)\) tel que
   \begin{equation}
     \vw=\lambda \vu + \mu \vv
   \end{equation}
 \end{prop}
 
 \begin{defdef}
-  Le couple $(\lambda,\mu)$ est alors appelé coordonnées du vecteur $\vw$ dans 
-  la base $(\vu,\vv)$.
+  Le couple \((\lambda,\mu)\) est alors appelé coordonnées du vecteur \(\vw\) dans 
+  la base \((\vu,\vv)\).
 \end{defdef}
 
-Ce résultat caractérise le fait que $\vect{\P}$ est un espace vectoriel de 
-dimension deux, c'est-à-dire un plan (cf. Chapitre \ref{chap:espaceVectoriel}).
+Ce résultat caractérise le fait que \(\vect{\P}\) est un espace vectoriel de 
+dimension deux, c'est-à-dire un plan (cf. Chapitre~\ref{chap:espaceVectoriel}).
 
-\section{Plan affine $\P$}
+\section{Plan affine \(\P\)}
 
-Le plan affine $\P$ est muni d'une loi qui aux points $A$ et $B$ fait 
-correspondre le vecteur $\vect{AB}$.
+Le plan affine \(\P\) est muni d'une loi qui aux points \(A\) et \(B\) fait 
+correspondre le vecteur \(\vect{AB}\).
 
 \begin{prop}
-  Soient trois points de $\P$, $A$, $B$ et $C$ et alors~:
+  Soient trois points de \(\P\), \(A\), \(B\) et \(C\) et alors~:
   \begin{enumerate}
-    \item $\vect{AB}+\vect{BC}=\vect{AC}$, c'est la relation de Chasles;
-    \item $\vect{AA}=\vect{0}$;
-    \item $\vect{AB}=-\vect{BA}$;
-    \item pour tout vecteur $\vu \in \vect{\P}$, il existe un unique point $A' 
-      \in \P$ tel que $\vect{AA'}=\vu$. On note alors $A'=A+\vu$.
+    \item \(\vect{AB}+\vect{BC}=\vect{AC}\), c'est la relation de Chasles;
+    \item \(\vect{AA}=\vect{0}\);
+    \item \(\vect{AB}=-\vect{BA}\);
+    \item pour tout vecteur \(\vu \in \vect{\P}\), il existe un unique point $A' 
+      \in \P$ tel que \(\vect{AA'}=\vu\). On note alors \(A'=A+\vu\).
   \end{enumerate}
 \end{prop}
 
 \begin{defdef}
   \begin{enumerate}
-    \item On dit que trois points $A, B$ et $C$ sont alignés si les vecteurs 
-      $\vect{AB}$ et $\vect{BC}$ sont colinéaires.
-    \item On dit que trois points $A, B$ et $C$ sont alignés dans cet ordre si 
-      les vecteurs $\vect{AB}$ et $\vect{BC}$ sont colinéaires et de même sens.
+    \item On dit que trois points \(A, B\) et \(C\) sont alignés si les vecteurs 
+      \(\vect{AB}\) et \(\vect{BC}\) sont colinéaires.
+    \item On dit que trois points \(A, B\) et \(C\) sont alignés dans cet ordre si 
+      les vecteurs \(\vect{AB}\) et \(\vect{BC}\) sont colinéaires et de même sens.
   \end{enumerate}
 \end{defdef}
 
 \begin{defdef}
-  On appelle point pondéré tout couple $(A,\lambda)$ où $A \in \P$ et $\lambda 
+  On appelle point pondéré tout couple \((A,\lambda)\) où \(A \in \P\) et $\lambda 
   \in \R$.
 \end{defdef}
 
 \begin{prop}
-  Soient un naturel $n \geq 2$ et $\{(A_k,\lambda_k)_{k \in 
-  \intervalleentier{1}{n}}\}$ une famille de $n$ points pondérés telle que 
-  $\sum_{i=1}^n \lambda_i \neq 0$. Alors il existe un unique point $G \in \P$ 
+  Soient un naturel \(n \geq 2\) et $\{(A_k,\lambda_k)_{k \in 
+  \intervalleentier{1}{n}}\}$ une famille de \(n\) points pondérés telle que 
+  \(\sum_{i=1}^n \lambda_i \neq 0\). Alors il existe un unique point \(G \in \P\) 
   tel que
   \begin{equation}
     \sum_{i=1}^n \lambda_i \vect{GA_i}=0
@@ -114,16 +114,16 @@ correspondre le vecteur $\vect{AB}$.
   \begin{equation}
     G = \Bary\{(A_k,\lambda_k)_{k \in \intervalleentier{1}{n}}\}
   \end{equation}
-  On a alors pour tout point $M \in \P$
+  On a alors pour tout point \(M \in \P\)
   \begin{equation}
     \sum_{i=1}^n \lambda_i \vect{MA_i} = \sum_{i=1}^n \lambda_i \vect{MG}
   \end{equation}
 \end{prop}
 \begin{prop}
-  Soient $A,B, A_1, \ldots, A_p,B_1, \ldots, B_q$ des points de $\P$ et 
-  $\lambda$, $\mu$, $\lambda_1$, \ldots, $\lambda_p$, et $\mu_1$, \ldots, 
-  $\mu_q$ des réels. En notant $G = \Bary\{(A_k,\lambda_k)_{k \in 
-  \intervalleentier{1}{p}}\}$, $\alpha=\sum_{i=1}^p \lambda_i$, $H = 
+  Soient \(A,B, A_1, \ldots, A_p,B_1, \ldots, B_q\) des points de \(\P\) et 
+  \(\lambda\), \(\mu\), \(\lambda_1\), \ldots, \(\lambda_p\), et \(\mu_1\), \ldots, 
+  \(\mu_q\) des réels. En notant $G = \Bary\{(A_k,\lambda_k)_{k \in 
+  \intervalleentier{1}{p}}\}$, \(\alpha=\sum_{i=1}^p \lambda_i\), $H = 
   \Bary\{(B_l,\mu_l)_{l \in \intervalleentier{1}{q}}\}$, et $\beta=\sum_{i=1}^q 
   \mu_i$ on a
   \begin{enumerate}
@@ -145,10 +145,10 @@ correspondre le vecteur $\vect{AB}$.
 
 \section{Distances et normes}
 
-Le plan vectoriel $\vect{\P}$ est muni d'une loi qui au vecteur $\vu$ associe le 
-réel noté $||\vu||$ appelé sa norme ou norme euclidienne.
+Le plan vectoriel \(\vect{\P}\) est muni d'une loi qui au vecteur \(\vu\) associe le 
+réel noté \(||\vu||\) appelé sa norme ou norme euclidienne.
 \begin{prop}
-  Soient $\vu$ et $\vv$ deux vecteurs de $\vec{E}$ et $\lambda \in \R$, on a les 
+  Soient \(\vu\) et \(\vv\) deux vecteurs de \(\vec{E}\) et \(\lambda \in \R\), on a les 
   propriétés suivantes
   \begin{enumerate}
     \item positivité
@@ -170,10 +170,10 @@ réel noté $||\vu||$ appelé sa norme ou norme euclidienne.
       égalité si et seulement s'ils sont colinéaires et de même sens
   \end{enumerate}
 \end{prop}
-Le plan affine $\P$ est muni d'une loi qui aux points $A$ et $B$ fait 
-correspondre le réel $||\vect{AB}||$, noté $AB$ et appelé distance de $A$ à $B$.
+Le plan affine \(\P\) est muni d'une loi qui aux points \(A\) et \(B\) fait 
+correspondre le réel \(||\vect{AB}||\), noté \(AB\) et appelé distance de \(A\) à \(B\).
 \begin{prop}
-  Soient $A$, $B$ et $C$ trois points de $\P$ on a les propriétés suivantes
+  Soient \(A\), \(B\) et \(C\) trois points de \(\P\) on a les propriétés suivantes
   \begin{enumerate}
     \item positivité
       \begin{equation}
@@ -191,97 +191,98 @@ correspondre le réel $||\vect{AB}||$, noté $AB$ et appelé distance de $A$ à 
       \begin{equation}
         AC \leq AB + BC
       \end{equation}
-      égalité si et seulement si $A$ $B$ et $C$ sont alignés dans cet ordre
+      égalité si et seulement si \(A\) \(B\) et \(C\) sont alignés dans cet ordre
   \end{enumerate}
 \end{prop}
 
 \section{Angles non orientés, orthogonalité}
 
-Le plan vectoriel $\vect{\P}$ est muni d'une loi qui aux vecteurs non nuls $\vu$ 
-et $\vv$ associe le réel noté $\widehat{(\vu,\vv)}$, appartenant à $[0, \pi]$, 
-appelé mesure de l'angle non orienté entre les vecteurs $\vu$ et $\vv$.
+Le plan vectoriel \(\vect{\P}\) est muni d'une loi qui aux vecteurs non nuls \(\vu\) 
+et \(\vv\) associe le réel noté \(\widehat{(\vu,\vv)}\), appartenant à \([0, \pi]\), 
+appelé mesure de l'angle non orienté entre les vecteurs \(\vu\) et \(\vv\).
 \begin{prop}
-  Soient $\vu$, $\vv$ et $\vw$ des vecteurs non nuls de $\vect{\P}$ et un réel 
-  non nul $\lambda$, on a
+  Soient \(\vu\), \(\vv\) et \(\vw\) des vecteurs non nuls de \(\vect{\P}\) et un réel 
+  non nul \(\lambda\), on a
   \begin{enumerate}
-    \item $\widehat{(\vu,\vw)} \leq \widehat{(\vu,\vv)} + \widehat{(\vv,\vw)}$
-    \item $\widehat{(\vu,\vu)} = 0$
-    \item $\widehat{(\vu,\vv)} = \widehat{(\vv,\vu)}$
-    \item Si $\lambda>0$ $\widehat{(\vu,\lambda \vv)}= \widehat{(\vu,\vv)}$ et 
-      si $\lambda < 0$ alors $\widehat{(\vu,\lambda \vv)}= -\widehat{(\vu,\vv)}$
+    \item \(\widehat{(\vu,\vw)} \leq \widehat{(\vu,\vv)} + \widehat{(\vv,\vw)}\)
+    \item \(\widehat{(\vu,\vu)} = 0\)
+    \item \(\widehat{(\vu,\vv)} = \widehat{(\vv,\vu)}\)
+    \item Si \(\lambda>0\) \(\widehat{(\vu,\lambda \vv)}= \widehat{(\vu,\vv)}\) et 
+      si \(\lambda < 0\) alors \(\widehat{(\vu,\lambda \vv)}= -\widehat{(\vu,\vv)}\)
   \end{enumerate}
 \end{prop}
 
-Deux vecteurs $\vu$ et $\vv$ sont donc colinéaires si et seulement si $\vu$ ou 
-$\vv$ est nul ou si $\widehat{(\vu,\vv)}=0$ ou $\pi$.
+Deux vecteurs \(\vu\) et \(\vv\) sont donc colinéaires si et seulement si \(\vu\) ou 
+$\vv$ est nul ou si \(\widehat{(\vu,\vv)}=0\) ou \(\pi\).
 \begin{defdef}
-  On dit que deux vecteurs $\vu$ et $\vv$ sont orthogonaux si et seulement si 
-  $\vu$ est nul ou si $\vv$ est nul ou encore si $\widehat{(\vu,\vv)} = 
+  On dit que deux vecteurs \(\vu\) et \(\vv\) sont orthogonaux si et seulement si 
+  \(\vu\) est nul ou si \(\vv\) est nul ou encore si $\widehat{(\vu,\vv)} = 
   \frac{\pi}{2}$.
 \end{defdef}
 
-Étant donné trois points $A$, $B$ et $C$ de $\E$ tels que $A \neq B$ et $C \neq 
-B$, on appelle mesure de l'angle non orienté $\widehat{ABC}$ la mesure de 
-l'angle non orienté $\widehat{(\vect{BA},\vect{BC})}$.
+Étant donné trois points \(A\), \(B\) et \(C\) de \(\E\) tels que \(A \neq B\) et $C \neq 
+B$, on appelle mesure de l'angle non orienté \(\widehat{ABC}\) la mesure de 
+l'angle non orienté \(\widehat{(\vect{BA},\vect{BC})}\).
 
 \begin{prop}
-  Pour tout triangle $ABC$ rectangle en $B$, on a
+  Pour tout triangle \(ABC\) rectangle en \(B\), on a
   \begin{enumerate}
-    \item Le théorème de Pythagore : $AB^2+BC^2=AC^2$;
-    \item $AB=AC\cos(\widehat{ABC})$;
-    \item $BC=AC\sin(\widehat{ABC})$;
-    \item $BC=AB\tan(\widehat{ABC})$.
+    \item Le théorème de Pythagore : \(AB^2+BC^2=AC^2\);
+    \item \(AB=AC\cos(\widehat{ABC})\);
+    \item \(BC=AC\sin(\widehat{ABC})\);
+    \item \(BC=AB\tan(\widehat{ABC})\).
   \end{enumerate}
 \end{prop}
 
 \section{Bases et repères}
 
-Un couple $(\vu,\vv)$ de vecteurs de $\vect{\P}$ est une base de $\vec{E}$ si et 
-seulement si $\vu$, $\vv$ sont non colinéaires. 
+Un couple \((\vu,\vv)\) de vecteurs de \(\vect{\P}\) est une base de \(\vec{E}\) si et 
+seulement si \(\vu\), \(\vv\) sont non colinéaires.
 
 \begin{defdef}
-  On appelle repère de l'espace $\P$ tout triplet $(O,\vu,\vv)$ où $O$ est un 
-  point quelconque de l'espace $\P$ et $(\vu,\vv)$ une base de $\vect{\P}$.
+  On appelle repère de l'espace \(\P\) tout triplet \((O,\vu,\vv)\) où \(O\) est un 
+  point quelconque de l'espace \(\P\) et \((\vu,\vv)\) une base de \(\vect{\P}\).
 
-  Si $M$ est un point de $\P$, on appelle coordonnées du point $M$ dans le 
-  repère $(O,\vu,\vv)$ l'unique couple de réels $(x,y)$ tel que
+  Si \(M\) est un point de \(\P\), on appelle coordonnées du point \(M\) dans le 
+  repère \((O,\vu,\vv)\) l'unique couple de réels \((x,y)\) tel que
   \begin{equation}
     \vect{OM}=x\vu+y\vv
   \end{equation}
 \end{defdef}
 
-Soient $(\vu,\vv)$ une base de $\vect{\P}$ et $\theta$ la mesure principale de 
-l'angle orienté $\widehat{(\vu,\vv)}$. Par définition, $\theta \in ]-\pi, \pi]$ 
-et comme $\vu$ et $\vv$ ne sont pas colinéaires, $\theta \neq 0$. Si $\theta >0$ 
+Soient \((\vu,\vv)\) une base de \(\vect{\P}\) et \(\theta\) la mesure principale de 
+l'angle orienté \(\widehat{(\vu,\vv)}\). Par définition,
+\(\theta \in \intervalleof{-\pi}{\pi}\) et comme \(\vu\) et \(\vv\) ne sont 
+pas colinéaires, \(\theta \neq 0\). Si \(\theta >0\) 
 on dit que la base est directe sinon on dit qu'elle est indirecte.
 
 \begin{defdef}
-  On dit qu'un repère $(O,\vu,\vv)$ est direct (respectivement indirect) si la base 
-  $(\vu,\vv)$ est directe (respectivement indirecte).
+  On dit qu'un repère \((O,\vu,\vv)\) est direct (respectivement indirect) si la base 
+  \((\vu,\vv)\) est directe (respectivement indirecte).
 \end{defdef}
 
 \begin{defdef}
-  On dit que $(\vu,\vv)$ est une base orthonormée si les vecteurs $\vu$ et $\vv$ 
-  sont des vecteurs orthogonaux et de norme 1. Le repère $(O,\vu,\vv)$ est 
-  orthonormé si la base $(\vu,\vv)$ est orthonormée.
+  On dit que \((\vu,\vv)\) est une base orthonormée si les vecteurs \(\vu\) et \(\vv\) 
+  sont des vecteurs orthogonaux et de norme 1. Le repère \((O,\vu,\vv)\) est 
+  orthonormé si la base \((\vu,\vv)\) est orthonormée.
 \end{defdef}
 
 \section{Figures usuelles}
 
-Soient $A$ et $B$ deux points distincts du plan $\P$ et $r \in \R_+$.
+Soient \(A\) et \(B\) deux points distincts du plan \(\P\) et \(r \in \R_+\).
 \begin{itemize}
-  \item La droite $(AB)$ est l'ensemble des points $M \in \P$ tels que $A, B$ et 
-    $M$ sont alignés. Le vecteur $\vect{AB}$ est un vecteur directeur de la 
-    droite $(AB)$.
-  \item Le segment $[AB]$ est l'ensemble des points $M \in \P$ tels que $A, B$ 
-    et $M$ sont alignés dans cet ordre.
-  \item Le cercle de centre $A$ et de rayon $r$ est l'ensemble des points $M \in 
-    \P$ tels que $AM=r$.
+  \item La droite \((AB)\) est l'ensemble des points \(M \in \P\) tels que \(A, B\) et 
+    \(M\) sont alignés. Le vecteur \(\vect{AB}\) est un vecteur directeur de la 
+    droite \((AB)\).
+  \item Le segment \([AB]\) est l'ensemble des points \(M \in \P\) tels que \(A, B\) 
+    et \(M\) sont alignés dans cet ordre.
+  \item Le cercle de centre \(A\) et de rayon \(r\) est l'ensemble des points $M \in 
+    \P$ tels que \(AM=r\).
 \end{itemize}
-Soient deux droites $\Dr$ et $\Dr'$ du plan $\P$.
+Soient deux droites \(\Dr\) et \(\Dr'\) du plan \(\P\).
 \begin{itemize}
-  \item On dit que $\Dr$ et $\Dr'$ sont orthogonales si elles ont des vecteurs 
+  \item On dit que \(\Dr\) et \(\Dr'\) sont orthogonales si elles ont des vecteurs 
     directeurs orthogonaux.
-  \item On dit que $\Dr$ et $\Dr'$ sont parallèles si elles ont des vecteurs 
+  \item On dit que \(\Dr\) et \(\Dr'\) sont parallèles si elles ont des vecteurs 
     directeurs colinéaires.
 \end{itemize}

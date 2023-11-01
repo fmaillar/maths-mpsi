@@ -1,8 +1,8 @@
 \chapter[Dérivation des fonctions de la variable réelle]{Dérivation des 
 fonctions à valeurs réelles de la variable réelle}
-\minitoc
-\minilof
-\minilot
+\minitoc%
+\minilof%
+\minilot%
 Dans tout le chapitre \(I\) désigne un intervalle réel non vide et non réduit à 
 un point.
 \section{Dérivation en un point}
@@ -83,7 +83,7 @@ Soit \(f \in \R^I\), \(a \in I\) et on suppose que \(I \cap
   Sous réserve d'existence de cette limite, on note \(f'_d(a) = \lim\limits_{x 
   \to a^+}\frac{f(x)-f(a)}{x-a}\). On définit de manière analogue la dérivée à 
   gauche en \(f\). On note \(f'_g(a) = \lim\limits_{x \to 
-  a^-}\frac{f(x)-f(a)}{x-a}\) lorsque la limite existe et est finie..
+  a^-}\frac{f(x)-f(a)}{x-a}\) lorsque la limite existe et est finie.
 \end{defdef}
 
 \subsubsection{Propriétés}
@@ -717,8 +717,8 @@ Les inclusions sont strictes.
 \end{theo}
 \begin{proof}
   La fonction \(f\) est continue sur \(\intervalleff{a}{b}\). Le théorème des 
-  bornes, Théorème
-  \ref{theo:bornes}, nous dit alors qu'il existe deux réels \(m,M\) tels que 
+  bornes, Théorème~\ref{theo:bornes}, nous dit alors qu'il existe deux réels
+  \(m,M\) tels que 
   \(f(\intervalleff{a}{b})=\intervalleff{m}{M}\), \(m = 
   \inf\limits_{\intervalleff{a}{b}} f\) et \(M = 
   \sup\limits_{\intervalleff{a}{b}} f\). Deux cas se présentent~:
@@ -1404,8 +1404,8 @@ tf(x_1)+(1-t)f(x_2))\).
 \begin{proof}
   Supposons que \(f\) soit convexe. Soit \(a \in I\), montrons que \(p_a\) 
   croît. Soient \((x,x') \in I\setminus\{a\}^2\) tels que \(x < x'\). La 
-  démarche repose sur l'utilisation du théorème~
-  \ref{theo:pentes}. Trois cas de figures se présentent :
+  démarche repose sur l'utilisation du théorème~\ref{theo:pentes}.
+  Trois cas de figures se présentent :
   \begin{enumerate}
     \item \(x < x' < a\) et dans ce cas le théorème nous dit que
       \begin{equation}
@@ -1464,8 +1464,7 @@ intervalle réel \(I\).
 \end{theo}
 \begin{proof}
   Soient \((a,b) \in I^2\) tels que \(a <b\) et \(x \in \intervalleoo{a}{b}\). 
-  D'après le théorème~
-  \ref{theo:pentes} on a
+  D'après le théorème~\ref{theo:pentes} on a
   \begin{equation}
     \frac{f(x)-f(a)}{x-a} \leqslant \frac{f(b)-f(a)}{b-a} \leqslant 
     \frac{f(b)-f(x)}{b-x}.
@@ -1478,8 +1477,8 @@ intervalle réel \(I\).
   \(f'\) est croissante.
 \end{theo}
 \begin{proof}
-  Si \(f\) est convexe alors d'après le théorème~
-  \ref{theo:croisderiv} la dérivée \(f'\) est croissante.
+  Si \(f\) est convexe alors d'après le théorème~\ref{theo:croisderiv} 
+  la dérivée \(f'\) est croissante.
 
   On suppose que \(f'\) est croissante. Soient \(x_1,x_2 \in I\) tels que 
   \(x_1<x_2\) et \(t \in \intervalleoo{0}{1}\). Posons \(y=tx_1+(1-t)x_2 \in 
@@ -1536,11 +1535,11 @@ intervalle réel \(I\).
   Supposons que \(f\) soit convexe. Soit \(a \in I\).
   \begin{itemize}
     \item Si \(x=a\) alors la proposition est vraie \(f(a) \geqslant f(a)\);
-    \item si \(x < a\) alors d'après le théorème~
-      \ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \leqslant f'(a)\) et donc 
+    \item si \(x < a\) alors d'après le théorème~\ref{theo:croisderiv}
+      \(\frac{f(x)-f(a)}{x-a} \leqslant f'(a)\) et donc 
       comme \(x-a <0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\);
-    \item si \(x > a\) alors d'après le théorème~
-      \ref{theo:croisderiv} \(\frac{f(x)-f(a)}{x-a} \geqslant f'(a)\) et donc 
+    \item si \(x > a\) alors d'après le théorème~\ref{theo:croisderiv}
+      \(\frac{f(x)-f(a)}{x-a} \geqslant f'(a)\) et donc 
       comme \(x-a >0\) on a \(f(x) \geqslant f(a)+f'(a)(x-a)\).
   \end{itemize}
 
@@ -1629,11 +1628,11 @@ fixe dans \(I\), c'est à dire (\(\forall x \in I \ f(x) \neq x\)) alors la suit
 \end{proof}
 
 Si \(u_0\) est un point fixe de \(f\), alors \(u\) est constante égale à 
-\(u_0\). Sous les hypothèses de la proposition~
-\ref{prop:fmonotoneu}, il suffit de vérifier si la suite est majorée ou minorée 
-pour savoir si elle converge.
+\(u_0\). Sous les hypothèses de la proposition~\ref{prop:fmonotoneu},
+il suffit de vérifier si la suite est majorée ou minorée pour savoir si elle
+converge.
 
-\subsubsection{\(f\) est décroissante sur I}
+\subsubsection{\(f\) est décroissante sur \(I\)}
 
 \begin{prop}
   On suppose que I est stable par \(f\) et que \(f\) est décroissante sur I. 
@@ -1644,9 +1643,8 @@ pour savoir si elle converge.
 \begin{proof}
   L'application \(f\) est décroissante, donc la composée \(f \circ f\) est aussi 
   décroissante. Pour tout naturel \(n\) \(u_{2n+2}=f \circ f(u_{2n})\). D'après 
-  la proposition~
-  \ref{prop:fmonotoneu} la suite extraite \((u_{2n})\) est monotone. Deux cas de 
-  figure se présentent
+  la proposition~\ref{prop:fmonotoneu} la suite extraite \((u_{2n})\) est 
+  monotone. Deux cas de figure se présentent
   \begin{enumerate}
     \item si \((u_{2n})\) est croissante alors pour tout naturel \(n\) on a 
       \(u_{2n} \leqslant u_{2n+2}\) et comme \(f\) est décroissante \(f(u_{2n}) 
@@ -1680,8 +1678,7 @@ diverge.
 \end{prop}
 \begin{proof}
   Il suffit d'appliquer le deuxième corollaire de l'inégalité des accroissements 
-  finis~
-  \ref{corth:iaf2}. Soit un naturel \(n\), alors
+  finis~\ref{corth:iaf2}. Soit un naturel \(n\), alors
   \begin{equation}
     \abs{u_{n+1}-\ell}=\abs{f(u_n)-f(\ell)} \leqslant M \abs{u_n-\ell}.
   \end{equation}
