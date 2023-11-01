@@ -1,5 +1,4 @@
 \documentclass[10pt, a4paper, openright, twoside, fleqn, leqno]{book}
-%\documentclass[DIV14, BCOR0.8cm]{scrbook}
 \input{packages}
 \input{preambule0}
 \includeonly{%
@@ -55,15 +54,6 @@
 \begin{document}
 \frontmatter
 \maketitle
-%\dominitoc
-%\dominilof
-%\dominilot
-%\faketableofcontents
-%\fakelistoffigures
-%\fakelistoftables
-%pour créer le sommaire au début
-% \shorttableofcontents{Sommaire}{1}
-%
 \mainmatter
 \include{intro}
 \part{Cours}
@@ -103,7 +93,7 @@
 \renewcommand{\chaptername}{Devoir}
 \include{Devoir1}
 \appendix
-\part{Fiches compl\'ementaires}
+\part{Fiches complémentaires}
 \include{quelquesSymboles}
 \include{FormulaireTrigo}
 \include{PlanEtudeFonction}
@@ -114,7 +104,6 @@
 \include{EspaceEuclidienPrerequis}
 \include{EnsemblesFinis}
 \include{DeveloppementsLimites}
-%
 \backmatter%
 \dominitoc%
 \dominilof%
@@ -122,5 +111,4 @@
 \tableofcontents
 \listoffigures
 \listoftables
-%\printindex
 \end{document}

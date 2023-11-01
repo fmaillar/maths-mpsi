@@ -11,18 +11,18 @@ précisé.
 \subsection{Familles génératrices}
 
 \begin{defdef}
-  On appelle combinaison linéaire de la famille \((x_i)_{i \in I} \in E^I\) 
+  On appelle combinaison linéaire de la famille \({(x_i)}_{i \in I} \in E^I\) 
   (\(I\) fini) tout vecteur de \(E\) de la forme \(\sum_{i \in I}\alpha_i x_i\) 
-  avec \((\alpha_i)_{i\in I} \in \K^I\).
+  avec \({(\alpha_i)}_{i\in I} \in \K^I\).
 
-  Soit \(\X=(x_i)_{i \in I} \in E^I\) (\(I\) fini) et \(E_1 = \{\sum_{i \in 
-  I}\alpha_i x_i, (\alpha_i)_{i\in I} \in \K^I\}= \VectEngendre(\X)\).
+  Soit \(\X={(x_i)}_{i \in I} \in E^I\) (\(I\) fini) et \(E_1 = \{\sum_{i \in 
+  I}\alpha_i x_i, {(\alpha_i)}_{i\in I} \in \K^I\}= \VectEngendre(\X)\).
 
   \(E_1\) est le sous-espace vectoriel engendré par la famille \(\X\).
 \end{defdef}
 
 \begin{defdef}
-  Soient \(E_1\) un sous-espace vectoriel de \(E\), \(\X = (x_i)_{i \in I}\in 
+  Soient \(E_1\) un sous-espace vectoriel de \(E\), \(\X = {(x_i)}_{i \in I}\in 
   E^I\) une famille finie de vecteurs de \(E\). 
 
   Si \(E_1=\VectEngendre(\X)\), on dit que \(\X\) est une famille génératrice de 
@@ -409,14 +409,12 @@ vecteurs de \(E\)}
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  \(1 \implies 2\), c'est une conséquence de la proposition~
-  \ref{prop:propdeduitesu(x)} cinquième ligne.
+  \(1 \implies 2\), c'est une conséquence de la proposition~\ref{prop:propdeduitesu(x)} cinquième ligne.
 
   \(2 \implies 3\), par hypothèse il existe une base \(\E_0\) de \(E\) à 
   laquelle on applique \(2\).
 
-  \(3 \implies 1\), c'est une conséquence de la proposition~
-  \ref{prop:propdeduitesu} troisième ligne.
+  \(3 \implies 1\), c'est une conséquence de la proposition~\ref{prop:propdeduitesu} troisième ligne.
 \end{proof}
 
 \subsubsection{Caractérisation d'une application linéaire par la donnée de 
@@ -744,8 +742,7 @@ nulle car il est engendré par l'ensemble vide.
   libre donc d'après le corollaire \(\Card(\B) = \Dim_\K E \leqslant 
   \Card(\G)\).
 
-  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~
-  \ref{theo:dim}.
+  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~\ref{theo:dim}.
   \(\implies\)~: La famille \(\G\) est génératrice de \(E\) donc il existe une 
   base \(\B\) de \(E\) telle que \(\B \subset \G\) or \(\Card(\B) = \Dim_\K E\) 
   (puisque c'est une base) et par hypothèse \(\Card(\G) = \Dim_\K E\) alors
@@ -771,11 +768,9 @@ nulle car il est engendré par l'ensemble vide.
   Soit \(\B\) une base de \(E\), alors elle est génératrice donc \(\Card(\Lb) 
   \leqslant \Card(\B)=\Dim_\K E\).
 
-  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~
-  \ref{theo:dim}.  \(\implies\)~: Si \(\Lb\) est une famille libre, on peut la 
+  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~\ref{theo:dim}.  \(\implies\)~: Si \(\Lb\) est une famille libre, on peut la 
   compléter en une base \(\B\) de \(E\) (\(\Lb \subset \B\)) par théorème de la 
-  base incomplète, théorème~
-  \ref{theo:baseincomplete}. Alors \(\Card(\B)=\Dim_\K E = \Card(\Lb)\). Ainsi 
+  base incomplète, théorème~\ref{theo:baseincomplete}. Alors \(\Card(\B)=\Dim_\K E = \Card(\Lb)\). Ainsi 
   \(\Lb=\B\) et c'est une base de \(E\).
 \end{proof}
 
@@ -805,13 +800,11 @@ nulle car il est engendré par l'ensemble vide.
 
   Supposons qu'ils ont la même dimension \(n\). Soient \(\B=(b_1, \ldots, b_n)\) 
   une base de \(E\) et \(\E=(e_1, \ldots, e_n)\) une base de \(F\). D'après le 
-  théorème~
-  \ref{theo:caracapplinimagebase} il existe une unique application \(u \in 
+  théorème~\ref{theo:caracapplinimagebase} il existe une unique application \(u \in 
   \Lin{E}{F}\) telle que \(u(\B)=\E\).
 
   Comme \(\B\) est une base de \(E\) (donc génératrice), alors \(\E\) une base 
-  de \(F\) et \(u(\B)=\E\). Donc \(u\) est bijective (proposition~
-  \ref{prop:propdeduitesu}). Ainsi \(E\) et \(F\) sont isomorphes.
+  de \(F\) et \(u(\B)=\E\). Donc \(u\) est bijective (proposition~\ref{prop:propdeduitesu}). Ainsi \(E\) et \(F\) sont isomorphes.
 \end{proof}
 
 \begin{corth}
@@ -1234,8 +1227,7 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
   \begin{equation}
     \E=\E_1 \cup \E_2 \quad \E_1 \cap \E_2 = \emptyset.
   \end{equation}
-  Soit \(S= \VectEngendre(\E_2)\). D'après le théorème~
-  \ref{theo:theosuppdimfinie}, \(E_1\) et \(S\) sont supplémentaires dans 
+  Soit \(S= \VectEngendre(\E_2)\). D'après le théorème~\ref{theo:theosuppdimfinie}, \(E_1\) et \(S\) sont supplémentaires dans 
   \(E\)~:
   \begin{equation}
     E = E_1 \oplus S.
@@ -1330,8 +1322,7 @@ C'est faux même si \(E=F\).}
   vectoriel de \(E\) donc il existe un supplémentaire \(S\) du noyau dans \(E\) 
   : \(E= S \oplus \Ker(u)\).
 
-  D'après le théorème de préparation au théorème du rang (Théorème~
-  \ref{theo:preptheorang})~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\) 
+  D'après le théorème de préparation au théorème du rang (Théorème~\ref{theo:preptheorang})~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\) 
   est de dimension finie, \(S\) est aussi de dimension finie comme étant un 
   sous-espace vectoriel de \(E\). Alors \(\Image(u)\) est aussi de dimension 
   finie et \begin{equation}
@@ -1403,8 +1394,7 @@ C'est faux même si \(E=F\).}
 \end{prop}
 \begin{proof}
   \(E\) est un espace vectoriel de dimension finie donc \(\rg(u)\) est fini. La 
-  première égalité est une conséquence de la proposition~
-  \ref{prop:propdeduitesu(x)}. La deuxième égalité découle de la définition du 
+  première égalité est une conséquence de la proposition~\ref{prop:propdeduitesu(x)}. La deuxième égalité découle de la définition du 
   rang d'une application linéaire et du rang d'une famille de vecteurs~:
   \begin{equation}
     \rg(u) = \Dim_\K \Image(u) \qquad \rg(u(\G))=\Dim_\K \VectEngendre(u(\G)),

@@ -800,9 +800,7 @@ une \(\K\)-algèbre.
   \(E\).
 \end{theo}
 \begin{proof}
-  On sait que \(\GL{E} = \uinv{\Endo{E}}\) et on a vu dans le chapitre~
-  \ref{chap:groupes} au théorème~
-  \ref{theo:uinversible} à la page~\pageref{theo:uinversible} que c'est un 
+  On sait que \(\GL{E} = \uinv{\Endo{E}}\) et on a vu dans le chapitre~\ref{chap:groupes} au théorème~\ref{theo:uinversible} à la page~\pageref{theo:uinversible} que c'est un 
   groupe.
 \end{proof}
 
@@ -1118,8 +1116,7 @@ plus \(\R\cap \ii \R=\{0\}\).
     \forall x \in E \ \exists! (x_1,x_2) \in E_1 \times E_2 \quad x=x_1+x_2.
   \end{equation}
   alors elle nous dit que \(E \subset E_1+E_2\) et comme l'autre inclusion est 
-  triviale on a \(E = E_1+E_2\). Par le théorème~
-  \ref{theo:caracSommeDirecte} c'est équivalent à \(E_1 \cap E_2 =\{0\}\).
+  triviale on a \(E = E_1+E_2\). Par le théorème~\ref{theo:caracSommeDirecte} c'est équivalent à \(E_1 \cap E_2 =\{0\}\).
 \end{proof}
 
 \emph{Exemples}~: \(\R\) et \(\ii\R\) sont supplémentaires dans le \(\R\)-espace 
@@ -1128,8 +1125,7 @@ vectoriel \(C\). Pour n'importe quel \(\K\)-espace vectoriel \(E\) \(E=E \oplus
 on note \(P\) l'ensemble des fonctions paires et \(I\) l'ensemble des fonctions 
 impaires alors \(\R^R=P \oplus I\).
 En effet, ce sont des sous-espace vectoriel de \(\R^\R\) et on a montré au 
-chapitre~
-\ref{chap:fonctionsusuelles} que
+chapitre~\ref{chap:fonctionsusuelles} que
 \begin{equation}
   \forall f \in \R^R \ \exists! (\varphi, \psi) \in P\times I \quad 
   f=\varphi+\psi,
@@ -1152,15 +1148,14 @@ pas \(0\).
   vectoriel \(E_2\) de \(E\) tel que \(E= E_1 \oplus E_2\).
 \end{defdef}
 
-Un sous-espace vectoriel donné admet il un supplémentaire ? Si oui, est ce que ce 
+Un sous-espace vectoriel donné admet il un supplémentaire? Si oui, est ce que ce 
 supplémentaire est unique?
 
-Pour l'existence, on la démontrera en dimension finie au chapitre~
-\ref{chap:dimensionfinie} et en dimension infinie c'est une conséquence de 
-l'axiome du choix. Cependant, il n'y a pas unicité du supplémentaire.
+Pour l'existence, on la démontrera en dimension finie au chapitre~\ref{chap:dimensionfinie}
+et en dimension infinie c'est une conséquence de l'axiome du choix. 
+Cependant, il n'y a pas unicité du supplémentaire.
 
-\begin{prop}
-  \label{prop:deuxsuppiso}
+\begin{prop}\label{prop:deuxsuppiso}
   Soit un \(\K\)-espace vectoriel \(E\) et \(E_1\) un sous-espace vectoriel de 
   \(E\). Supposons que \(E_1\) admettent deux supplémentaires notés \(E_2\) et 
   \(E'_2\). Alors
@@ -1171,7 +1166,7 @@ l'axiome du choix. Cependant, il n'y a pas unicité du supplémentaire.
 \end{prop}
 \begin{proof}
   \begin{itemize}
-    \item voir la sous sous section~\ref{sec:projections}
+    \item Voir la sous sous section~\ref{sec:projections}
     \item On sait que \(E=E_1 \oplus E_2=E_1 \oplus E'_2\) et que \(E_2 \subset 
       E'_2\). Soit \(x \in E'_2 \subset E\) et comme \(E=E_1 \oplus E_2\) il 
       existe un unique couple \((x_1,x_2 ) \in E_1 \times E_2\) tel que 
@@ -1184,8 +1179,7 @@ l'axiome du choix. Cependant, il n'y a pas unicité du supplémentaire.
 
 \subsubsection{Préparation du théorème du rang}
 Comme son nom l'indique, ce théorème sert à préparer la démonstration du 
-théorème du rang, Théorème~
-\ref{theo:rang}.
+théorème du rang, Théorème~\ref{theo:rang}.
 \begin{theo}\label{theo:preptheorang}
   Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels et \(u \in \Lin{E}{F}\). 
   Ainsi tout supplémentaire à \(\Ker(u)\) est isomorphe à \(\Image(u)\).
@@ -1228,8 +1222,7 @@ addition et de sa multiplication par un scalaire.
 \begin{defdef}
   Soient \(E_1, E_2\) deux sous-espaces vectoriels supplémentaires de \(E\). 
   Pour tout vecteur \(x \in E\) il existe un unique couple \((x_1,x_2) \in E_1 
-  \times E_2\) tel que \(x=x_1+x_2\) (d'après le théorème~
-  \ref{theo:caracSommeDirecte}). Alors on peut définir les applications 
+  \times E_2\) tel que \(x=x_1+x_2\) (d'après le théorème~\ref{theo:caracSommeDirecte}). Alors on peut définir les applications 
   \(\fonction{p_1}{E}{E_1}{x}{x_1}\) et \(\fonction{p_2}{E}{E_2}{x}{x_2}\). 
   L'application \(p_1\) est appelée la projection sur \(E_1\) parallèlement à 
   \(E_2\). De manière analogue, l'application \(p_2\) est appelée la projection 
@@ -1296,8 +1289,7 @@ addition et de sa multiplication par un scalaire.
   \end{enumerate}
 \end{proof}
 
-\begin{proof}[Démonstration de la proposition~
-  \ref{prop:deuxsuppiso}]
+\begin{proof}[Démonstration de la proposition~\ref{prop:deuxsuppiso}]
   Soient \(E_1, E_2, E'_2\) trois sous-espaces vectoriels de \(E\) tels que 
   \(E_1\) et \(E_2\) soient supplémentaires et tels que \(E_1\) et \(E'_2\) 
   soient aussi supplémentaires.
@@ -1310,8 +1302,7 @@ addition et de sa multiplication par un scalaire.
   \(E'_2=\Image(p'_2)\). L'application \(\varphi\) est linéaire puisque c'est 
   une restriction de \(p'_2\) qui est linéaire. Comme \(E_2\) est un 
   supplémentaire de \(E_1\) on a \(E_1 = \Ker(p'_2)\) et par définition \(E'_2 = 
-  \Image(p'_2)\). D'après le théorème~
-  \ref{theo:preptheorang}, comme \(p'_2\) est linéaire tout supplémentaire de 
+  \Image(p'_2)\). D'après le théorème~\ref{theo:preptheorang}, comme \(p'_2\) est linéaire tout supplémentaire de 
   \(\Ker(p'_2)\) est isomorphe à \(\Image(p'_2)\). C'est-à-dire en remplaçant 
   que \(\varphi\) est un isomorphisme de \(E_2\) sur \(E'_2\).
 \end{proof}
@@ -1345,8 +1336,7 @@ addition et de sa multiplication par un scalaire.
 \end{prop}
 \begin{proof}
   Si \(p\) est un projecteur alors par définition, \(p\) est linéaire et d'après 
-  la proposition~
-  \ref{prop:caracimageproj} pour tout \(x \in \Image(p)\) \(p(x)=x\).
+  la proposition~\ref{prop:caracimageproj} pour tout \(x \in \Image(p)\) \(p(x)=x\).
 
   Si maintenant on suppose que \(p \in \Endo{E}\) et \(\forall x \in \Image(p)\) 
   \(p(x)=x\). On veut montrer que c'est un projecteur. Déjà \(p\) est linéaire 
@@ -1390,11 +1380,9 @@ addition et de sa multiplication par un scalaire.
 \end{prop}
 \begin{proof}
   \begin{enumerate}
-    \item Déjà vu au théorème~
-      \ref{theo:propprojection} au point 4.
+    \item Déjà vu au théorème~\ref{theo:propprojection} au point 4.
     \item Si \(p\) est un projecteur, on a montré que \(E = \Image(p) \oplus 
-      \Ker(p)\) (proposition~
-      \ref{prop:projecteursupplementaire}). Alors \(p\) est la projection sur 
+      \Ker(p)\) (proposition~\ref{prop:projecteursupplementaire}). Alors \(p\) est la projection sur 
       \(\Image(p)\) parallèlement à \(\Ker(p)\).
   \end{enumerate}
 \end{proof}
@@ -1409,8 +1397,7 @@ addition et de sa multiplication par un scalaire.
   \end{gather}
 \end{prop}
 \begin{proof}
-  On note \(E_1 = \Image(p)\) et \(E_2 = \Ker(p)\). D'après la sous-section~
-  \ref{sec:projections} on sait que \(q=\Id-p\) est la projection sur \(E_2\) 
+  On note \(E_1 = \Image(p)\) et \(E_2 = \Ker(p)\). D'après la sous-section~\ref{sec:projections} on sait que \(q=\Id-p\) est la projection sur \(E_2\) 
   parallèlement à \(E_1\) et les égalités en découlent.
 \end{proof}
 
@@ -1499,8 +1486,7 @@ addition et de sa multiplication par un scalaire.
 \end{prop}
 
 \begin{proof}
-  Les trois premiers points ont déjà vu à la sous-sous section~
-  \ref{subsec:exemples}.
+  Les trois premiers points ont déjà vu à la sous-sous section~\ref{subsec:exemples}.
 
   Pour le quatrième point, l'application \(\Phi\) est bien définie d'après le 
   troisième point. C'est un morphisme grâce au deuxième point. Déjà 
@@ -1610,8 +1596,7 @@ Alors comme \(\Ker(p)=E_2\) on a \(\Opp(s)=E_2\).
 \begin{proof}
   Si on note \(p\) le projecteur associé à \(s\), on a montré juste avant que 
   \(\Opp(s)=\Ker(p)\) et \(\Inv(s)=\Image(p)\) et on sait que l'image et le 
-  noyau d'un projecteur sont supplémentaires (proposition~
-  \ref{prop:projecteursupplementaire}).
+  noyau d'un projecteur sont supplémentaires (proposition~\ref{prop:projecteursupplementaire}).
 \end{proof}
 
 \emph{Exemple}~: Soit l'application \(\fonction{s}{E}{E}{x}{-x}\), donc \(s=-\Id 
@@ -1666,9 +1651,7 @@ et alors \(\Opp(s)=\Ker(p)=E\) et \(\Inv(s)=\Image(p)=\{0\}\).
 \end{defdef}
 %
 \begin{prop}
-  Avec les notations du lemme~
-  \ref{lemme:affinites} et de la définition~
-  \ref{def:affinites}, \(a_{\alpha}=p_1+\alpha p_2\).
+  Avec les notations du lemme~\ref{lemme:affinites} et de la définition~\ref{def:affinites}, \(a_{\alpha}=p_1+\alpha p_2\).
 \end{prop}
 \begin{proof}
   Puisque \(E_1\) et \(E_2\) sont supplémentaires, alors \(a_\alpha= 
@@ -1732,11 +1715,10 @@ et si c'est le contraire, \(E_1=\{0\}\) et \(E_2=E\) alors
 annulateur. Si \(p\) est est projecteur alors \(p \circ p=p\) et on dit que 
 \(X^2-X\) est annulateur de \(p\). Si \(s\) est une symétrie, comme \(s \circ s 
 =\Id\) alors son polynôme annulateur est \(X^2-1\). Si \(a_\alpha\) est une 
-affinité de rapport \(\alpha\) alors \((X-1)(X-\alpha\) est son polynôme 
-annulmateur. La quatrième propriété est en fait une conséquence de la troisième 
+affinité de rapport \(\alpha\) alors \((X-1)(X-\alpha)\) est son polynôme 
+annulateur. La quatrième propriété est en fait une conséquence de la troisième 
 et du théorème de décomposition des noyaux, car les polynômes sont premiers 
-entre eux cf.\ chapitre~
-\ref{chap:polynomes}.
+entre eux cf.\ chapitre~\ref{chap:polynomes}.
 
 \begin{prop}
   Soit un scalaire \(\alpha \in \K\setminus\{1\}\), si une application \(a \in 
@@ -1924,23 +1906,22 @@ on identifiera le vecteur \(\vect{0B}\) au point \(B\).
   puisque la loi \(+\) est associative. Ensuite de la même manière
   \begin{equation}
     t_{y_0} \circ t_{x_0} (A)=t_{y_0}(A+x_0) = (A+x_0)+y_0 = 
-    A+(x_0+y_0)=t_{x_0+y_0}(A).
+    A+(x_0+y_0) = t_{x_0+y_0}(A).
   \end{equation}
 \end{proof}
 
 \begin{prop}
   Pour tout vecteur \(x_0 \in E\), la translation \(t_{x_0}\) est bijective et 
-  \((t_{x_0})^{-1}=t_{-x_0}\).
+  \((t_{x_0})^{-1} = t_{{-x}_0}\).
 \end{prop}
 \begin{proof}
-  Il suffit d'appliquer la proposition~
-  \ref{prop:associativitevec} pour \(y_0=-x_0\).
+  Il suffit d'appliquer la proposition~\ref{prop:associativitevec} pour \(y_0=-x_0\).
 \end{proof}
 
 On peut considérer l'application \(\fonction{T}{E}{\sigma(E)}{x_0}{t_{x_0}}\) 
 avec \(\sigma(E)\) l'ensemble des permutations de \(E\). On rappelle que 
-\((\sigma(E),\circ)\) est un groupe. La proposition~
-\ref{prop:associativitevec} peut se reformuler ainsi~: \(T\) est un morphisme du 
+\((\sigma(E),\circ)\) est un groupe. La proposition~\ref{prop:associativitevec}
+peut se reformuler ainsi~: \(T\) est un morphisme du 
 groupe \((E,+)\) sur le groupe \((\sigma(E),\circ)\). On note 
 \(T(E)=\Image(T)\).
 
@@ -2220,8 +2201,7 @@ sous-espace affine n'est jamais vide.
   \times E_2\) tel que \(\vect{A_1A_2}=x_1+x_2\) alors \(A_2-x_2=x_1+A_1\). 
   Comme \(A_2\) et \(x_2\) sont dans \(W_2\) alors \(A_2-x_2 \in W_2\) et comme 
   \(A_1\) et \(x_1\) sont dans \(W_1\) alors \(A_1+x_1 \in W_1\). Si on pose 
-  \(I=A_2-x_2=x_1+A_1\) alors \(I \in W_1\cap W_2\). D'après la propostion~
-  \ref{prop:interssaffines}, \(W_1 \cap W_2\) est un sous-espace affine et \(W_1 
+  \(I=A_2-x_2=x_1+A_1\) alors \(I \in W_1\cap W_2\). D'après la propostion~\ref{prop:interssaffines}, \(W_1 \cap W_2\) est un sous-espace affine et \(W_1 
   \cap W_2 = I+E_1 \cap E_2 = I+\{0\}=\{I\}\).
 \end{proof}
 
@@ -2492,7 +2472,7 @@ avec \(\sum_{i=1}^n \alpha_i = 1\) en prenant pour tout \(i \in \llbracket 1,n
 \end{cor}
 %
 \begin{prop}
-  Soit \((\courbe{}_i)_{i \in I}\) une famille de parties convexes de \(E\). 
+  Soit \({(\courbe{}_i)}_{i \in I}\) une famille de parties convexes de \(E\). 
   Alors \(\bigcap_{i \in I} \courbe{}_i\) est aussi une partie convexe.
 \end{prop}
 \begin{proof}
@@ -2507,6 +2487,5 @@ avec \(\sum_{i=1}^n \alpha_i = 1\) en prenant pour tout \(i \in \llbracket 1,n
     d'intersection vide, alors comme l'ensemble vide est convexe, la proposition 
     précédente est encore vraie.
   \item Par contre l'union de deux paries convexes n'est pas convexe en général. 
-    Les parties convexes de \(\R\) sont les intervalles cf.\ chapitre~
-    \ref{chap:reels}.
+    Les parties convexes de \(\R\) sont les intervalles cf.\ chapitre~\ref{chap:reels}.
 \end{enumerate}

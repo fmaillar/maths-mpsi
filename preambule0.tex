@@ -2,23 +2,23 @@
 \fancyhead{}
 \fancyfoot{}
 \renewcommand{\subsectionmark}[1]{%
-  \ifsubsectioninheader
+  \ifsubsectioninheader{}%
     \def\subsectiontitle{: #1}%
-  \else
+  \else%
     \def\subsectiontitle{}%
   \fi
 }
 %
-\newif\ifsubsectioninheader
-\def\subsectiontitle{}
-\fancyhead[RO]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}
-%\fancyhead[RE]{MPSI F. M\bsc{aillard}}
-\fancyhead[LE]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}
-%\fancyhead[LO]{MPSI F. M\bsc{aillard}}
-\fancyfoot[LE]{\thepage}
-\fancyfoot[RO]{\thepage}
-%\setlength{\headheight}{15.36pt}
-\setlength{\headheight}{13.6pt}
+\newif\ifsubsectioninheader{}%
+\def\subsectiontitle{}%
+\fancyhead[RO]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}%
+%\fancyhead[RE]{MPSI F. M\bsc{aillard}}%
+\fancyhead[LE]{\nouppercase{\rightmark\ifsubsectioninheader\subsectiontitle\fi}}%
+%\fancyhead[LO]{MPSI F. M\bsc{aillard}}%
+\fancyfoot[LE]{\thepage}%
+\fancyfoot[RO]{\thepage}%
+%\setlength{\headheight}{15.36pt}%
+\setlength{\headheight}{13.6pt}%
 %Pour l'interligne
 %\linespread{1.1}
 %onchange le nom de la table
@@ -37,22 +37,17 @@
 \theoremstyle{plain} \newtheorem{cor}{Corollaire}[prop]
 \newtheorem{corth}{Corollaire}[theo]
 %%%%%%%%%%%%%%%%%%%%%%%% COMMANDES PERSOS %%%%%%%%%%%%%%%
-\newcommand{\fonction}[5]{#1\colon \left\{\begin{array}{ccc}
-  #2 & \longrightarrow &#3\\
-  #4 & \longmapsto & #5
-\end{array}
-\right.
-}
-\newcommand{\fonctionL}[5]{#1:#2 \longrightarrow #3, #4 \longmapsto #5}
-\newcommand{\fonctionR}[3]{#1:#2 \longrightarrow #3}
+\newcommand{\fonction}[5]{#1\colon\left\{\begin{array}{ccc}#2 & \longrightarrow &#3\\#4 & \longmapsto & #5\end{array}\right.} % chktex 21
+\newcommand{\fonctionL}[5]{#1:#2 \longrightarrow{} #3, #4 \longmapsto{} #5}
+\newcommand{\fonctionR}[3]{#1:#2 \longrightarrow{} #3}
 %nouveau raccourcis
 \newcommand{\ensemblenombre}[1]{\mathbb{#1}}
 \newcommand{\intervalle}[4]{\mathopen{#1}#2\mathclose{}\mathpunct{};#3\mathclose{#4}}
 \newcommand{\pv}{\ensuremath{\, ; }}
-\newcommand{\intervalleff}[2]{\ensuremath{\left[ #1 \pv #2 \right]}}%{\intervalle{[}{#1}{#2}{]}}
-\newcommand{\intervalleof}[2]{\ensuremath{\left] #1 \pv #2 \right]}}%{\intervalle{]}{#1}{#2}{]}}
-\newcommand{\intervallefo}[2]{\ensuremath{\left[ #1 \pv #2 \right[}}%{\intervalle{[}{#1}{#2}{[}}
-\newcommand{\intervalleoo}[2]{\ensuremath{\left] #1 \pv #2 \right[}}%{\intervalle{]}{#1}{#2}{[}}
+\newcommand{\intervalleff}[2]{\ensuremath{\left[ #1 \pv{} #2 \right]}} % chktex 9;10
+\newcommand{\intervalleof}[2]{\ensuremath{\left] #1 \pv{} #2 \right]}} % chktex 9;10
+\newcommand{\intervallefo}[2]{\ensuremath{\left[ #1 \pv{} #2 \right[}} % chktex 9;10
+\newcommand{\intervalleoo}[2]{\ensuremath{\left] #1 \pv{} #2 \right[}} % chktex 9;10
 \newcommand{\intervalleentier}[2]{\intervalle\llbracket{#1}{#2}\rrbracket}
 \newcommand{\R}{\ensemblenombre{R}}
 \newcommand{\Rplus}{\R_{+}}%{\intervallefo{0}{+\infty}}
