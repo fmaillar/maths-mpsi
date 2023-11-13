@@ -16,4 +16,4 @@ print(file_names)
 
 for file in file_names:
     print(file)
-    os.system("python " + file)
+    os.system("python3 " + file)

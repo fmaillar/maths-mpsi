@@ -1,7 +1,7 @@
 all:
 	latexmk
 fig:
-	python process_fig.py
+	python3 process_fig.py
 cleanTemp:
 	latexmk -c
 cleanAll:
