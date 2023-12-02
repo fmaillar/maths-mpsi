@@ -21,7 +21,7 @@ La construction de ce corps est hors programme. On le définit tel quel.
 \begin{defdef}
   L'ensemble des complexes est défini par
   \begin{empheq}[box = \shadowbox*]{align}
-    \C = \enstq{x+ \ii y}{(x,y)\in \R},
+    \C = \enstq{x+ \ii{}y}{(x,y)\in{}\R},
   \end{empheq}
   tel que \(\ii^2 = -1\).
 \end{defdef}
@@ -37,7 +37,7 @@ deux lois~:
 \begin{prop}
   Tous les réels sont complexes, c'est-à-dire~:
   \begin{empheq}[box = \shadowbox*]{align}
-    \R \subset \C.
+    \R\subset{}\C.
   \end{empheq}
   Les lois de \(\R\) coïncident avec les lois sur \(\C\).
 \end{prop}
@@ -47,11 +47,11 @@ deux lois~:
   \begin{itemize}
     \item la loi \( + \) est associative,
       \begin{equation}
-        \forall (x, y, z) \in \C^3 \quad x + (y + z) = (x + y) + z;
+        \forall (x, y, z) \in{}\C^3 \quad x + (y + z) = (x + y) + z;
       \end{equation}
     \item la loi \( + \) est commutative,
       \begin{equation}
-        \forall (x,y) \in \C^2 \quad x + y = y + x;
+        \forall (x,y) \in{}\C^2 \quad x + y = y + x;
       \end{equation}
     \item \(\C\) admet un neutre pour \(+\)~: c'est \(0\);
     \item tout élément de \(\C\) est inversible par \(+\) et l'opposé de 
@@ -67,16 +67,16 @@ deux lois~:
     \item \(\times\) admet un élément neutre noté \(1\);
     \item \(\times\) est distributive sur \( + \)~:
       \begin{equation}
-        \forall (a, b, c) \in \C^3 \quad a \times (b + c) = a \times b + 
+        \forall (a, b, c) \in{}\C^3 \quad a \times (b + c) = a \times b + 
         a \times c.
       \end{equation}
   \end{itemize}
 \end{prop}
 
 \begin{prop}
-  Pour tout complexe \(z \in \C\), il existe un unique couple de réels \((x, 
-  y) \in \R^2\) tel que \(z = x + \ii y\). C'est-à-dire que l'application 
-  \(\fonctionL{\varphi}{\R^2}{\C}{(x, y)}{x + \ii y}\) est bijective.
+  Pour tout complexe \(z \in{}\C\), il existe un unique couple de réels \((x, 
+  y) \in{}\R^2\) tel que \(z = x + \ii{}y\). C'est-à-dire que l'application 
+  \(\fonctionL{\varphi}{\R^2}{\C}{(x, y)}{x + \ii{}y}\) est bijective.
 \end{prop}
 
 \emph{Interprétation géométrique}~: L'application \(\varphi\) peut être vue comme 
@@ -86,15 +86,14 @@ figure~\ref{fig:complexe}.
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{./Complexes.png}
-  \caption{Représentation géométrique des complexes}
-  \label{fig:complexe}
+  \caption{Représentation géométrique des complexes}\label{fig:complexe}
 \end{figure}
 
 \begin{proof}[Unicité]
-  S'il existe deux couples de réels \((x, y),(x', y')\) tels que \(x' + \ii y' 
-  = x + \ii y\), alors \(\underbrace{(x - x')^2}_{\geqslant 0} = 
-  \underbrace{-(y'-y)^2}_{\leqslant 0}\).
-  Finalement \((x - x')^2 = (y' - y)^2 = 0\).
+  S'il existe deux couples de réels \((x, y),(x', y')\) tels que \(x' + \ii{}y' 
+  = x + \ii{}y\), alors \(\underbrace{{(x - x')}^2}_{\geqslant 0} = 
+  \underbrace{-{(y'-y)}^2}_{\leqslant 0}\).
+  Finalement \({(x - x')}^2 = {(y' - y)}^2 = 0\).
 \end{proof}
 
 \begin{proof}[Existence]
@@ -114,12 +113,11 @@ on appelle le réel \(y\) la partie imaginaire du complexe \(z\), \(y = \Im(z)\)
 \end{prop}
 \emph{Un complexe n'a pas de signe}. On note \(\C^* = \C \setminus \{0\}\)
 
-\subsection{Conjugaison de complexe}
-\label{subsec:conjugaisoncomplexe}
+\subsection{Conjugaison de complexe}\label{subsec:conjugaisoncomplexe}
 
 \begin{defdef}
-  Soit \(z = x + \ii y \in \C\) avec \((x, y)\in \R\), on définit son conjugué 
-  de \(z\) noté \(\bar{z}\) par \(\bar{z} = x- \ii y\).
+  Soit \(z = x + \ii{}y \in{}\C\) avec \((x, y)\in{}\R\), on définit son conjugué 
+  de \(z\) noté \(\bar{z}\) par \(\bar{z} = x- \ii{}y\).
 \end{defdef}
 Les conjugués de deux complexes sont représentés dans le plan complexe sur la 
 figure~\ref{fig:conjugueComplexe}.
@@ -128,8 +126,7 @@ figure~\ref{fig:conjugueComplexe}.
   \centering
   \includegraphics[scale = 0.8]{conjugue.png}
   \caption{Représentation dans le plan complexe du conjugué de deux complexes 
-  \(z_1\) et \(z_2\)}
-  \label{fig:conjugueComplexe}
+  \(z_1\) et \(z_2\)}\label{fig:conjugueComplexe}
 \end{figure}
 
 \begin{prop}
@@ -144,15 +141,14 @@ figure~\ref{fig:conjugueComplexe}.
   Pour tout complexe \(z\), on a
   \begin{equation}
     \Re(z) = \frac{z + \bar{z}}{2}; \quad \Im(z) = \frac{z-\bar{z}}{2 \ii}; 
-    \quad z \in \R \iff z = \bar{z}; \quad z \in \ii\R \iff z = -\bar{z}.
+    \quad z \in{}\R \iff z = \bar{z}; \quad z \in{}\ii\R \iff z = -\bar{z}.
   \end{equation}
 \end{prop}
 
-\subsection{Module d'un complexe}
-\label{subsec:modulecomplexe}
+\subsection{Module d'un complexe}\label{subsec:modulecomplexe}
 
 \begin{prop}
-  Soit un complexe \(z\), alors \(z \bar{z} \in \R\) et \(z \bar{z} = 0 \iff z 
+  Soit un complexe \(z\), alors \(z \bar{z} \in{}\R\) et \(z \bar{z} = 0 \iff z 
   = 0\).
 \end{prop}
 
@@ -173,8 +169,7 @@ figure~\ref{fig:moduleComplexe}.
 \begin{figure}
   \centering
   \includegraphics[scale = 0.8]{module_complexe.png}
-  \caption{Représentation dans le plan complexe du module}
-  \label{fig:moduleComplexe}
+  \caption{Représentation dans le plan complexe du module}\label{fig:moduleComplexe}
 \end{figure}
 
 \begin{prop}
@@ -189,30 +184,27 @@ figure~\ref{fig:moduleComplexe}.
 \begin{proof}
   On a~:
   \begin{equation*}
-    (\abs{z} + \abs{z'})^2-\abs{z + z'}^2 = (\sqrt{z \bar{z}} + 
-    \sqrt{z'\bar{z'}})^2 - (z + z')(\bar{z + z'}) = 2 \sqrt{z \bar{z} z' 
+    {(\abs{z} + \abs{z'})}^2-\abs{z + z'}^2 = {(\sqrt{z \bar{z}} + 
+    \sqrt{z'\bar{z'}})}^2 - (z + z')(\bar{z + z'}) = 2 \sqrt{z \bar{z} z' 
     \bar{z'}} - z \bar{z'} - z'\bar{z}
   \end{equation*}
-  On pose \(u = z \bar{z'}\) et on a \[(\abs{z} + \abs{z'})^2-\abs{z + z'}^2 = 
+  On pose \(u = z \bar{z'}\) et on a \[{(\abs{z} + \abs{z'})}^2-\abs{z + z'}^2 = 
   2 \abs{u}-2 \Re(u) \geqslant 0.\]
-  On a montré que \((\abs{z} + \abs{z'})^2 \geqslant \abs{z + z'}^2\) et comme 
+  On a montré que \({(\abs{z} + \abs{z'})}^2 \geqslant \abs{z + z'}^2\) et comme 
   ce sont des nombres positifs, en appliquant la racine carré~\footnote{qui 
   est une fonction croissante}, on obtient l'inégalité triangulaire.
 
-  \emph{Cas d'égalité}~: Notons ici que \(\frac{z'}{z} = x + \ii y\) avec 
+  \emph{Cas d'égalité}~: Notons ici que \(\frac{z'}{z} = x + \ii{}y\) avec 
   \(x\) et \(y\) deux réels. On va montrer que l'égalité est vraie si et 
   seulement si \(y = 0\) et \(x \geqslant 0\).
   \begin{align}
     \abs{z + z'} = \abs{z} + \abs{z'} &\iff \abs{1 + \frac{z'}{z}}^2 = 
-    \left(1 + \abs{\frac{z'}{z}}\right)^2 \\
-                                      &\iff \abs{1 + x + \ii y}^2 = (1+ 
-                                      \abs{x+ \ii y})^2 \\
-                                      &\iff (1 + x)^2 + y^2 = (1 + \sqrt{x^2 
-                                      + y^2})^2 \\
-                                      &\iff 1 + 2x + x^2 + y^2 = 1 + 
-                                      2\sqrt{x^2 + y^2} + x^2 + y^2 \\
-                                      &\iff x = \sqrt{x^2 + y^2}\\
-                                      &\iff y = 0 \text{~et~} x \geqslant 0.
+    {\left(1 + \abs{\frac{z'}{z}}\right)}^2 \\
+    &\iff \abs{1 + x + \ii{}y}^2 = {(1+\abs{x+ \ii{}y})}^2 \\
+    &\iff {(1 + x)}^2 + y^2 = {(1 + \sqrt{x^2 + y^2})}^2 \\
+    &\iff 1 + 2x + x^2 + y^2 = 1 + 2\sqrt{x^2 + y^2} + x^2 + y^2 \\
+    &\iff x = \sqrt{x^2 + y^2}\\
+    &\iff y = 0 \text{~et~} x \geqslant 0.
   \end{align}
 \end{proof}
 
@@ -231,12 +223,12 @@ figure~\ref{fig:moduleComplexe}.
   \(z' = \frac{\bar{z}}{\abs{z}^2}\).
 \end{proof}
 
-En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} = 
-\frac{x -\ii y}{x^2 + y^2}\).
+En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii{}y} = 
+\frac{x -\ii{}y}{x^2 + y^2}\).
 
 \begin{prop}
   \((\C, + ,\times)\) est un anneau commutatif intègre. C'est-à-dire qu'il 
-  n'admet pas de diviseurs de 0~: Si \(a, b \in \C\) tels que \(ab = 0\) alors 
+  n'admet pas de diviseurs de 0~: Si \(a, b \in{}\C\) tels que \(ab = 0\) alors 
   soit \(a = 0\) ou \(b = 0\).
   \((\C^*, + ,\times)\) est aussi un corps commutatif. C'est-à-dire que tout 
   complexe non nul admet un inverse.
@@ -260,13 +252,12 @@ En pratique, on multiplie par le complexe conjugué~: \(\frac{1}{x + \ii y} =
   = \enstq{z\in\C}{\abs{z-a}\leqslant r}\).
 \end{defdef}
 
-\subsection{Plan complexe}
-\label{subsec:plancomplexe}
+\subsection{Plan complexe}\label{subsec:plancomplexe}
 
 Soit \(\P\) le plan euclidien muni d'un repère orthonormé \((O,\vect{u}, 
 \vect{v})\). Si \(M\) est un point du plan \(\mathcal{P}\) de coordonnées 
 \((x,y)\) dans le repère \((O,\vect{u}, \vect{v})\), on appelle l'affixe de 
-\(M\), le complexe \(z = x + \ii y\). pour tout complexe \(z\), il existe un 
+\(M\), le complexe \(z = x + \ii{}y\). Pour tout complexe \(z\), il existe un 
 point du plan \(\mathcal{P}\) d'affixe \(z\), c'est \(M(z)\). L'application 
 \(\fonctionL{\varphi}{\C}{\P}{z}{M(z)}\) est une bijection. Cette bijection 
 permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
@@ -274,7 +265,7 @@ permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
 \begin{itemize}
   \item \(M(\bar{z})\) est le symétrique de \(M(z)\) par rapport à l'axe 
     \((O,\vect{u})\);
-  \item \(M(-z)\) est le symétrique de \(M(z)\) par rapport au point O;
+  \item \(M(-z)\) est le symétrique de \(M(z)\) par rapport au point O\@;
   \item le module de \(z\), \(\abs{z}\) est la distance de O à \(M(z)\);
   \item \(\abs{z-z'}\) est la distance entre \(M(z)\) et \(M(z')\);
   \item l'inégalité triangulaire dit que la distance de \(M(z)\) à \(M(z')\) 
@@ -287,16 +278,14 @@ permet ``d'identifier'' \(\C\) et le plan \(\P\). Dans ce cadre~:
 Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point 
 \(M\) tel que \(\vect{a} = \vect{OM}\).
 
-\section{Groupe des complexes de module 1}
-\label{sec:groupeU}
+\section{Groupe des complexes de module 1}\label{sec:groupeU}
 
-\subsection{Définitions et premières propriétés}
-\label{subsec:groupeU-defetprop}
+\subsection{Définitions et premières propriétés}\label{subsec:groupeU-defetprop}
 
 \begin{defdef}
   Le groupe des complexes de module 1, noté \(\U\), est~:
   \begin{empheq}[box = \shadowbox*]{align}
-    \U = \enstq{z \in \C}{\abs{z} = 1}.
+    \U = \enstq{z \in{}\C}{\abs{z} = 1}.
   \end{empheq}
   Géométriquement parlant, \(\U\) est le cercle de centre \(O\) et de rayon 
   \(1\).
@@ -305,14 +294,14 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
 \begin{prop}
   Soit un complexe \(z\), alors
   \begin{equation}
-    z \in \U \iff z \cdot \bar{z} = 1 \iff \bar{z} = \frac{1}{z}.
+    z \in{}\U \iff z \cdot \bar{z} = 1 \iff \bar{z} = \frac{1}{z}.
   \end{equation}
 \end{prop}
 
 \begin{prop}
   \emph{\((\U, \times)\) est un groupe commutatif}, c'est-à-dire que~:
   \begin{enumerate}
-    \item \(\forall (z,z') \in \U^2 \quad zz' \in \U\);
+    \item \(\forall (z,z') \in{}\U^2 \quad zz' \in{}\U\);
     \item la loi \(\times\) est associative et commutative;
     \item \(\U\) admet \(1\) comme élément neutre pour \(\times\);
     \item tout élément de \(\U\) admet un inverse dans \(\U\).
@@ -322,18 +311,17 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
 \begin{proof}
   \begin{enumerate}
     \item Soit deux complexes \(z\) et \(z'\) de \(\U\), alors \(\abs{zz'} = 
-      \abs{z}\abs{z'} = 1\) donc \(zz' \in \U\);
+      \abs{z}\abs{z'} = 1\) donc \(zz' \in{}\U\);
     \item puisque la loi \(\times\) est associative et commutative dans 
       \(\C\), elle l'est dans \(\U\);
-    \item le module de 1 est égal à 1 donc \(1 \in \U\);
+    \item le module de 1 est égal à 1 donc \(1 \in{}\U\);
     \item soit un complexe \(z\) de \(\U\), comme son module vaut 1, il est 
       non nul et il admet un inverse et \(\abs{\frac{1}{z}} = 
       \frac{1}{\abs{z}} = 1\) donc l'inverse est dans \(\U\).
   \end{enumerate}
 \end{proof}
 
-\begin{prop}
-  \label{prop:expsurj}
+\begin{prop}\label{prop:expsurj}
   Soit un complexe \(z\) de \(\U\), alors il existe un réel \(\theta\) 
   ---~unique modulo \(2\pi\)~--- tel que \(z = \cos\theta  + 
   \ii\sin\theta\).
@@ -343,24 +331,24 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
   Soit un complexe \(z\) de \(\U\), notons \(x\) et \(y\) respectivement sa 
   partie réelle et sa partie imaginaire. Alors \(x^2 + y^2 = \abs{z}^2 = 1\), 
   donc d'après le théorème~\ref{chap1-theo:thetasin} il existe un unique 
-  \(\theta_0 \in \intervalleof{-\pi}{\pi}\) tel que \(x = \cos\theta_0\) et 
+  \(\theta_0 \in{}\intervalleof{-\pi}{\pi}\) tel que \(x = \cos\theta_0\) et 
   \(y = \sin\theta_0\).
 \end{proof}
 
 \begin{proof}[Unicité]
-  Montrons l'unicité modulo \(2\pi\) : Soit deux réels \(\theta\) et 
-  \(\theta'\) vérifiant  \(x = \cos \theta = \cos \theta'\) et \(y = \sin 
-  \theta = \sin \theta'\). Il existe deux entiers relatifs \(k\) et \(l\) tels 
-  que \(\theta  + 2k \pi \in \intervalleof{-\pi}{\pi}\) et \(\theta'  + 2kl 
-  \pi \in \intervalleof{-\pi}{\pi}\). Donc on a \(\theta_0 = \theta + 2k \pi = 
-  \theta' + 2l \pi\), soit encore \(\theta-\theta' = (l-k) 2\pi\), 
-  c'est-à-dire \(\congru{\theta}{\theta'}{2\pi}\).
+  Montrons l'unicité modulo \(2\pi\): Soit deux réels \(\theta\) et 
+  \(\theta'\) vérifiant  \(x = \cos{\theta} = \cos{\theta'}\) et \(y = 
+  \sin{\theta} = \sin{\theta'}\). Il existe deux entiers relatifs \(k\) et \(l\) tels 
+  que \(\theta+2k\pi\in{}\intervalleof{-\pi}{\pi}\) et 
+  \(\theta'+2kl\pi\in{}\intervalleof{-\pi}{\pi}\). Donc on a 
+  \(\theta_0=\theta+2k\pi={\theta'}+2l\pi\), soit encore 
+  \(\theta-\theta'=2\pi(l-k)\), c'est-à-dire \(\congru{\theta}{\theta'}{2\pi}\).
 \end{proof}
 
 \begin{defdef}[Exponentielle complexe]
   Pour tout réel \(\theta\), on note
   \begin{empheq}[box = \shadowbox*]{align}
-    \expc{}{\theta} = \cos\theta  + \ii\sin\theta.
+    \expc{}{\theta} = \cos{\theta}+\ii{}\sin{\theta}.
   \end{empheq}
 \end{defdef}
 
@@ -372,13 +360,13 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
 
 \begin{proof}
   Pour tout réel \(\theta\), on a bien \(\abs{\expc{}{\theta}} = \sqrt{\cos^2 
-  \theta + \sin^2 \theta} = 1\), donc \(\psi(\theta) \in \U\). Ensuite,
+  \theta + \sin^2 \theta} = 1\), donc \(\psi(\theta) \in{}\U\). Ensuite,
   \begin{align*}
-    \psi(\theta  + \theta') = &\cos(\theta  + \theta') + \ii \sin(\theta + 
+    \psi(\theta  + \theta') = &\cos(\theta  + \theta') + \ii{}\sin(\theta + 
     \theta')\\
     = &\cos \theta \cos \theta' - \sin \theta \sin \theta'  + \ii(\cos 
     \theta \sin \theta' + \sin \theta \cos \theta')\\
-    = &(\cos \theta + \ii \sin \theta)(\cos \theta' + \ii \sin \theta')\\
+    = &(\cos \theta + \ii{}\sin \theta)(\cos \theta' + \ii{}\sin \theta')\\
     = &\psi(\theta) \psi(\theta')
   \end{align*}
 \end{proof}
@@ -388,9 +376,9 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
   alors~:
   \begin{gather}
     \expc{}{(\theta-\theta')} = \frac{\expc{}{\theta}}{\expc{}{\theta'}};\\
-    \expc{}{n \theta} = (\expc{}{\theta})^n;\\
-    \cos \theta = \frac{\e^{\ii \theta} + \e^{-\ii\theta}}{2} \quad \sin 
-    \theta = \frac{\e^{\ii \theta}-\e^{-\ii\theta}}{2\ii}.
+    \expc{}{n \theta} = {(\expc{}{\theta})}^n;\\
+    \cos \theta = \frac{\e^{\ii{}\theta} + \e^{-\ii\theta}}{2} \quad \sin 
+    \theta = \frac{\e^{\ii{}\theta}-\e^{-\ii\theta}}{2\ii}.
   \end{gather}
 \end{prop}
 
@@ -401,7 +389,7 @@ Si \(\vect{a}\) est un vecteur on définit son affixe comme l'affixe du point
   directement de la définition de l'exponentielle complexe.
 \end{proof}
 
-Soient un entier naturel \(n\) non nul et \(\theta \in \R \setminus 2\pi\Z\). La 
+Soient un entier naturel \(n\) non nul et \(\theta \in{}\R \setminus 2\pi\Z\). La 
 somme vaut~:
 \begin{align*}
   \sum_{k = 0}^n \cos(k\theta)  = & \frac{1}{2} \sum_{k = 0}^n (\expc{}{k 
@@ -426,7 +414,7 @@ somme vaut~:
     \frac{\theta}{2} \right)} \cos \left( \frac{n\theta}{2} \right).
 \end{align*}
 
-Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii 
+Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii{}
 \sin\left(\frac{a-b}{2}\right)\expc{}{\frac{(a + b)}{2}}\).
 
 \begin{prop}
@@ -442,79 +430,71 @@ Car pour tout réel \(a\) et \(b\) \(\expc{}{a}-\expc{}{b} = 2\ii
 \begin{proof}
   \begin{itemize}
     \item \(\psi\) est \(2\pi\)-périodique car \(\cos\) et \(\sin\) le sont;
-    \item \(\psi\) est surjective d'après la proposition~\ref{prop:expsurj}.
+    \item \(\psi\) est surjective d'après la Proposition~\ref{prop:expsurj}.
   \end{itemize}
 \end{proof}
 
 \begin{prop}
   L'application \(\psi\) est dérivable sur \(\R\) et pour tout réel \(theta\) 
-  \[\psi'(\theta) = \ii \expc{}{\theta}.\]
+  \[\psi'(\theta) = \ii{}\expc{}{\theta}.\]
 \end{prop}
 
 \begin{proof}
-  D'après la proposition~\ref{prop:derivefcomplexe}, on peut dire qu'une 
-  fonction \(f \in \C^{\R}\) telle que \(f = x + \ii y\) avec \((x, y) \in 
+  D'après la Proposition~\ref{prop:derivefcomplexe}, on peut dire qu'une 
+  fonction \(f \in{}\C^{\R}\) telle que \(f = x + \ii{}y\) avec \((x, y) \in{}
   \R^{\R} \times \R^{\R}\) est dérivable si et seulement si \(x\) et \(y\) 
-  sont dérivables sur \(\R\) et auquel cas \(f' = x'  + \ii y'\). Ici, \(\psi 
-  = \cos  + \ii \sin\), \(\sin\) et \(\cos\) sont dérivables alors \(\psi' = 
-  -\sin + \ii \cos = \ii (\cos  + \ii \sin) = \ii \psi\).
+  sont dérivables sur \(\R\) et auquel cas \(f' = x'  + \ii{}y'\). Ici, \(\psi 
+  = \cos  + \ii{}\sin\), \(\sin\) et \(\cos\) sont dérivables alors \(\psi' = 
+  -\sin + \ii{}\cos = \ii{}(\cos  + \ii{}\sin) = \ii{}\psi\).
 \end{proof}
 
-\subsection{Trigonométrie}
-\label{subsec:complexestrigo}
-
-\subsubsection{Polynômes de Chebychev}
-\label{subsubsec:Chebychev}
+\subsection{Trigonométrie}\label{subsec:complexestrigo}
+\subsubsection{Polynômes de Chebychev}\label{subsubsec:Chebychev}
 
 \begin{defdef}
   On définit les polynômes de Chebychev en suivant ce raisonnement~:
   \begin{align*}
-    \cos n \theta + \ii \sin n \theta &= (\cos \theta + \ii \sin \theta)^n\\
-    &= \sum_{k = 0}^n \binom{n}{k} \ii^k 
-    \sin^k \theta \cos^{n-k} \theta\\
-    &= \sum_{2p \leqslant n} \binom{n}{2p} 
-    (-1)^p \sin^{2p} \theta \cos^{n-2p} 
-    \theta \\
-    &+ \ii \sin \theta \sum_{2p  + 
-    1\leqslant n} \binom{n}{2p + 1} (-1)^p 
-    \sin^{2p} \theta \cos^{n-2p-1} \theta.
+    \cos n \theta + \ii{}\sin n \theta &= {(\cos \theta + \ii{}\sin \theta)}^n\\
+    &= \sum_{k = 0}^n \binom{n}{k} \ii^k \sin^k \theta \cos^{n-k} \theta\\
+    &= \sum_{2p\leqslant 
+    n}\binom{n}{2p}{(-1)}^p\sin^{2p}\theta\cos^{n-2p}{\theta} \\
+    &+ \ii{}\sin \theta \sum_{2p + 1\leqslant n}\binom{n}{2p + 1}{(-1)}^p 
+    \sin^{2p}{\theta}\cos^{n-2p-1}{\theta}
   \end{align*}
   En remplaçant par \(\sin^2 \theta\) par \(1-\cos^2 \theta\), on obtient
   \begin{empheq}[box = \shadowbox*]{align}
-    \cos n \theta = P_n(\cos \theta) \quad \sin n \theta = \sin \theta \cdot 
-    Q_n(\cos \theta).
+    \cos{n\theta} = P_{n}(\cos{\theta})\quad\sin{n\theta} = 
+    \sin{\theta}\cdot{}Q_n{(\cos{\theta})}.
   \end{empheq}
   \(P_n\) et \(Q_n\) sont respectivement les polynômes de Chebychev de 
   1\iere{} et de 2\ieme{} espèce.
 \end{defdef}
 
-\subsubsection{Arc moitié}
-\label{subsubsec:arcmoitie}
+\subsubsection{Arc moitié}\label{subsubsec:arcmoitie}
 
 Pour tout réel \(\theta\) non congru à \(\pi\) modulo--\(2\pi\) on pose \(t = 
 \tan \left( \frac{\theta}{2} \right)\) alors
 \begin{equation}
   \cos \theta = \dfrac{1-t^2}{1 + t^2}; \quad  \sin \theta = \dfrac{2t}{1 + 
-  t^2}; \quad \tan \theta = \frac{2t}{1-t^2}; \quad \e^{\ii \theta} = \frac{(1 
-  + \ii \theta)^2}{1 + t^2}.
+  t^2}; \quad \tan \theta = \frac{2t}{1-t^2}; \quad \e^{\ii{}\theta} = \frac{(1 
+  + \ii{}\theta)^2}{1 + t^2}.
 \end{equation}
 
-La bijection \(\fonctionL{\varphi}{\R}{\U\setminus \{-1\}}{t}{\frac{(1 + \ii 
-\theta)^2}{1 + t^2}}\) fournit un paramétrage du cercle trigonométrique privé du 
-point \((-1,0)\).
+La bijection \(\fonctionL{\varphi}{\R}{\U\setminus \{-1\}}{t}{\frac{{(1 + \ii{} 
+\theta)}^2}{1 + t^2}}\) fournit un paramétrage du cercle trigonométrique privé 
+du point \((-1,0)\).
 
-\subsubsection{Linéarisation}
-\label{subsubsec:linearisation}
+\subsubsection{Linéarisation}\label{subsubsec:linearisation}
 
 Pour tout réel \(\theta\) on a~:
 \begin{empheq}[box = \shadowbox*]{align}
-  \cos^2 \theta = \frac{1 + \cos 2\theta}{2} \quad \sin^2 \theta = 
-  \frac{1-\cos 2\theta}{2}
+  \cos^2{\theta} = \frac{1 + \cos{2\theta}}{2} \quad \sin^2{\theta} = 
+  \frac{1-\cos{2\theta}}{2}
 \end{empheq}
 
 Si l'exposant \(p \geqslant 3\), on utilise les formules d'Euler
 \begin{equation}
-  \cos^p \theta = \left(\frac{\expc{}{\theta} + \expc{}{\theta}}{2} \right)^p 
+  \cos^p{\theta} = \left(\frac{\expc{}{\theta} + \expc{}{\theta}}{2} \right)^p 
   \quad \sin^p \theta = \left(\frac{\expc{}{\theta}-\expc{}{\theta}}{2 \ii} 
   \right)^p,
 \end{equation}
@@ -532,7 +512,7 @@ suivant~:
   \expc{}{\frac{a + b}{2}} 2\cos \left(\frac{a-b}{2} \right).\\
   \expc{}{a}-\expc{}{b} &= \expc{}{\frac{a + b}{2}} \left(  
   \expc{}{\frac{a-b}{2}} - \expc{}{\frac{b-a}{2}} \right) 
-  =  \expc{}{\frac{a + b}{2}} 2 \ii \sin \left( \frac{a-b}{2} \right).
+  =  \expc{}{\frac{a + b}{2}} 2 \ii{}\sin \left( \frac{a-b}{2} \right).
 \end{align}
 
 On identifie la partie réelle et la partie imaginaire pour écrire que
@@ -561,11 +541,11 @@ Soit \(z\) un complexe non nul. Le complexe \(\frac{z}{\abs{z}}\) est de module
   Si \(z\) est un complexe non nul, on appelle argument de \(z\) tout réel 
   \(\theta\) tel que \(z = \expc{\abs{z}}{\theta}\).  Le réel \(\theta\) est 
   défini modulo-\(2\pi\), on note \(\congru{\arg(z)}{\theta}{2\pi}\). L'unique 
-  réel \(\theta \in \intervalleof{-\pi}{\pi}\), qui est un argument de \(z\), 
+  réel \(\theta \in{}\intervalleof{-\pi}{\pi}\), qui est un argument de \(z\), 
   est l'argument principal de \(z\), noté \(\Arg(z)\).
 \end{defdef}
 
-L'écriture \(z = \expc{\abs{z}}{\theta}\) avec \(\theta \in \R\) est appelée 
+L'écriture \(z = \expc{\abs{z}}{\theta}\) avec \(\theta \in{}\R\) est appelée 
 forme trigonométrique du complexe non nul \(z\).
 
 \emph{Remarque}~: Si on ne sait pas que le complexe est non nul, on ne parle ni 
@@ -574,7 +554,7 @@ d'argument ni de forme trigonométrique.
 \begin{prop}
   Soit un complexe \(z\) non nul, alors
   \begin{equation}
-    \forall (\theta, \theta') \in \R^2 \ \forall (\rho, \rho') \in \Rpluss 
+    \forall (\theta, \theta') \in{}\R^2 \ \forall (\rho, \rho') \in{}\Rpluss 
     \times \Rpluss \quad z = \expc{\rho}{\theta} = \expc{\rho'}{\theta'} 
     \iff
     \begin{cases}
@@ -592,8 +572,8 @@ d'argument ni de forme trigonométrique.
   Soient deux complexes non nuls \(z\) et \(z'\) et un entier relatif \(n\), 
   alors
   \begin{align*}
-    \congru{\arg(z)}{0}{\pi} \iff z \in \R^*; \quad 
-    \congru{\arg(z)}{\frac{\pi}{2}}{\pi} \iff z \in \ii\R^{*};\\
+    \congru{\arg(z)}{0}{\pi} \iff z \in{}\R^*; \quad 
+    \congru{\arg(z)}{\frac{\pi}{2}}{\pi} \iff z \in{}\ii\R^{*};\\
     \congru{\arg(\bar{z})}{-\arg(z)}{2\pi}; \quad \congru{\arg(z 
     z')}{\arg(z) + \arg(z')}{2\pi}; \\
     \congru{\arg(z^n)}{n \arg(z)}{2\pi}; \quad \congru{\arg 
@@ -606,7 +586,7 @@ d'argument ni de forme trigonométrique.
   La preuve s'articule en cinq parties~:
   \begin{enumerate}
     \item \(\congru{\arg(z)}{0}{\pi} \iff z = \pm \abs{z}\);
-    \item \(\congru{\arg(z)}{\frac{\pi}{2}}{\pi} \iff z = \pm \ii \abs{z}\);
+    \item \(\congru{\arg(z)}{\frac{\pi}{2}}{\pi} \iff z = \pm \ii{}\abs{z}\);
     \item si \(z = \expc{\abs{z}}{\theta}\), alors \(\bar{z} = 
       \bar{\expc{|z|}{\theta}} = \expc{|z|}{(-\theta)}\) donc 
       \(\congru{\arg(\bar{z})}{-\arg(z)}{2\pi}\);
@@ -647,14 +627,14 @@ et seulement si le complexe \(\frac{b-c}{b-a}\) est un réel non nul.
 \begin{proof}
   Soit un complexe \(z\) de \(\U_n\) noté \(\expc{\rho}{\theta}\), alors comme 
   \(z^n = 1\) on a \(\rho = 1\) et \(\congru{n\theta}{0}{2\pi}\) c'est à dire 
-  que \(z \in \enstq{\expc{}{\frac{2k\pi}{n}}}{k \in \Z}\).
+  que \(z \in{}\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in{}\Z}\).
   \begin{itemize}
     \item Soient deux entiers relatifs \(k\) et \(l\) de 
       \(\intervalleentier{0}{n-1}\) alors \(\abs{\frac{2\pi}{n}k - 
       \frac{2\pi}{n}l} \leqslant 2\pi\) donc \(\expc{}{\frac{2\pi k}{n}} 
       \neq \expc{}{\frac{2\pi l}{n}}\). Il y a donc \(n\) racines 
       distinctes.
-    \item Soit un entier relatif \(k\), il existe un entier \(l \in 
+    \item Soit un entier relatif \(k\), il existe un entier \(l \in{}
       \intervalleentier{0}{n-1}\) tel que \(\congru{k}{l}{n}\)~:
       Puisque si on définit \(p\) tel que \(p = \Ent\left( \frac{k}{n} 
       \right)\) alors
@@ -664,12 +644,12 @@ et seulement si le complexe \(\frac{b-c}{b-a}\) est un réel non nul.
       \end{align*}
   \end{itemize}
   Alors on a démontré que \(\U_n \subset \enstq{\expc{}{\frac{2k\pi}{n}}}{k 
-  \in \intervalleentier{0}{n-1}}\), on déduit l'autre inclusion en vérifiant 
-  que tous les éléments de \(\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in 
+  \in{}\intervalleentier{0}{n-1}}\), on déduit l'autre inclusion en vérifiant 
+  que tous les éléments de \(\enstq{\expc{}{\frac{2k\pi}{n}}}{k \in{}
   \intervalleentier{0}{n - 1}}\) élevés à la puissance \(n\) font 1.
 \end{proof}
 
-\emph{Interprétation géométrique}~: Les points d'affixes \(z \in \U_n\) forment 
+\emph{Interprétation géométrique}~: Les points d'affixes \(z \in{}\U_n\) forment 
 les sommets d'un polygone régulier à \(n\) cotés centré en O dont l'un des 
 sommet est \(1\). Les représentations géométriques des ensembles \(\U_3\) 
 jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
@@ -769,7 +749,7 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
 \begin{theo}
   Soit \(n\) un entier naturel non nul alors
   \begin{empheq}[box = \shadowbox*]{align}
-    \forall z \in \U_n \setminus \{1\} \quad \sum_{k = 0}^{n - 1} z^k = 0.
+    \forall z \in{}\U_n \setminus \{1\} \quad \sum_{k = 0}^{n - 1} z^k = 0.
   \end{empheq}
 \end{theo}
 
@@ -781,7 +761,7 @@ jusqu'à \(\U_{8}\) sont données par le figure~\ref{fig:racinesnieme}.
   \end{equation*}
 \end{proof}
 
-Application à la résolution de \(z^n = a\) pour \(a \in \C\)~: On étudie ce 
+Application à la résolution de \(z^n = a\) pour \(a \in{}\C\)~: On étudie ce 
 problème en étude de cas~:
 \begin{enumerate}
   \item si \(a = 0\), la seule solution est zéro;
@@ -791,7 +771,7 @@ problème en étude de cas~:
     \(\congru{\theta}{\frac{\alpha}{n}}{\frac{2\pi}{n}}\), c'est-à-dire 
     \(z_0 = \expc{\sqrt[n]{A} }{\frac{\alpha}{n}}\), c'est une solution de 
     l'équation. Une solution \(z\) de l'équation est telle que 
-    \(\frac{z}{z_0} \in \U_n\).
+    \(\frac{z}{z_0} \in{}\U_n\).
 \end{enumerate}
 
 \begin{prop}
@@ -803,7 +783,7 @@ problème en étude de cas~:
   \end{equation}
   Si on connaît une solution \(z_0\) de l'équation, alors
   \begin{equation}
-    S_{z^n = a} = \enstq{\expc{z_0}{\frac{2 k \pi}{n}}}{k \in 
+    S_{z^n = a} = \enstq{\expc{z_0}{\frac{2 k \pi}{n}}}{k \in{}
     \intervalleentier{0}{n-1}}.
   \end{equation}
 \end{prop}
@@ -813,9 +793,9 @@ Si \(n = 2\), on trouve deux racines complexes conjuguées. Par exemple les
 racines de \(Z = 3 + 4\ii\) sont telles que
 
 \begin{align*}
-  z^2 = 3 + 4\ii & \iff  \begin{cases} x^2-y^2 = 3 \\ 2xy = 4 \end{cases} \\
+  z^2 = 3 + 4\ii{}& \iff  \begin{cases} x^2-y^2 = 3 \\ 2xy = 4 \end{cases} \\
     & \iff \begin{cases} x^2 = 4 \\ y^2 = 1 \\ xy = 2 \end{cases} \\
-      & \iff z \in \{2 + \ii, -2-\ii\}.
+      & \iff z \in{}\{2 + \ii, -2-\ii\}.
 \end{align*}
 
 \section{Résolution d'équations du second degré}
@@ -830,7 +810,7 @@ l'équation
   \label{eq:eq1}
   az^2 + bz + c = 0,
 \end{equation}
-avec \(z \in \C\) l'inconnue. On note \(\mathcal{S}\) l'ensemble des solutions 
+avec \(z \in{}\C\) l'inconnue. On note \(\mathcal{S}\) l'ensemble des solutions 
 de l'équation \eqref{eq:eq1}. Ces solutions sont les racines complexes du 
 trinôme \(aX^2 + bX + c\).
 
@@ -927,7 +907,7 @@ b'^2-ac\) et les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 \begin{defdef}
   Soit \(z\) un nombre complexe. On définit l'exponentielle complexe de \(z\) 
   (notée \(\exp(z)\) ou \(\e^z\)) par \(\exp(z) = \e^{\Re(z)}(\cos \Im(z) + 
-  \ii \sin \Im(z))\).
+  \ii{}\sin \Im(z))\).
 \end{defdef}
 
 \begin{prop}
@@ -937,11 +917,11 @@ b'^2-ac\) et les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 \end{prop}
 
 \begin{proof}
-  Si on note avec quatre réels \(x,x',y,y'\) les complexes \(z = x + \ii y\) et 
-  \(z' = x' + \ii y'\) alors
+  Si on note avec quatre réels \(x,x',y,y'\) les complexes \(z = x + \ii{}y\) et 
+  \(z' = x' + \ii{}y'\) alors
   \begin{equation*}
-    \e^{z + z'}  =  \e^{(x + x') + \ii(y + y')} = \e^{x + x'} \e^{\ii (y + 
-    y')} = \e^{x} \e^{x'} \e^{\ii y} \e^{\ii y'} = \e^z \e^{z'}.
+    \e^{z + z'}  =  \e^{(x + x') + \ii(y + y')} = \e^{x + x'} \e^{\ii{}(y + 
+    y')} = \e^{x} \e^{x'} \e^{\ii{}y} \e^{\ii{}y'} = \e^z \e^{z'}.
   \end{equation*}
 \end{proof}
 
@@ -967,9 +947,9 @@ b'^2-ac\) et les solutions sont sous la forme \(\frac{-b'\pm \delta'}{a}\).
 
 \begin{proof}
   Soient \(\varphi_1\) et \(\varphi_2\), la partie réelle et la partie 
-  imaginaire de \(\varphi\) (resp.), alors, pour tout \(x \in I\)
+  imaginaire de \(\varphi\) (resp.), alors, pour tout \(x \in{}I\)
   \begin{align*}
-    f(x) = e^{\varphi(x)}& = \cos \varphi_2(x) \e^{\varphi_1(x)}+ \ii \sin 
+    f(x) = e^{\varphi(x)}& = \cos \varphi_2(x) \e^{\varphi_1(x)}+ \ii{}\sin 
     \varphi_2(x)\e^{\varphi_1(x)}\\ 
     & = \Re[f(x)] + \Im[f(x)]\ii.
   \end{align*}
@@ -1062,7 +1042,7 @@ points affectés des pondérations \(\lambda\), alors l'affixe de \(G\) est \(z_
 \label{subsec:complexeorthogonalite}
 
 Soient \(\vect{v}\) et \(\vect{v'}\) deux vecteurs d'affixes respectives \(z = x 
-+ \ii y\) et \(z' = x' + \ii y'\). On sait que \(\vect{v}\) et \(\vect{v'}\) 
++ \ii{}y\) et \(z' = x' + \ii{}y'\). On sait que \(\vect{v}\) et \(\vect{v'}\) 
 sont orthogonaux si et seulement si leur produit scalaire est nul. Soit 
 \(\vect{v}\) et \(\vect{v'}\) sont orthogonaux si et seulement si \(\Re(z 
 \bar{z'}) = 0\).
@@ -1072,9 +1052,9 @@ sont orthogonaux si et seulement si leur produit scalaire est nul. Soit
 
 Soient deux réels \(k\) et \(\lambda\).
 \begin{enumerate}
-  \item Quel est l'ensemble des points \(E_k = \enstq{M(z) \in 
+  \item Quel est l'ensemble des points \(E_k = \enstq{M(z) \in{}
     \P}{\abs{\frac{z-a}{z-b}} = k}\)~?
-  \item Quel est l'ensemble des points \(E_\lambda = \enstq{M(z) \in 
+  \item Quel est l'ensemble des points \(E_\lambda = \enstq{M(z) \in{}
     \P}{\congru{\arg \left(\frac{z-a}{z-b} \right)}{\lambda}{2\pi}}\)~?
 \end{enumerate}
 \begin{enumerate}
@@ -1090,7 +1070,7 @@ Soient deux réels \(k\) et \(\lambda\).
         \((1 + k)(1-k) \vect{MI} \cdot \vect{MJ}  = 0\) comme \(k \neq 
         \pm 1\) on a que M est sur le cercle de diamètre \([IJ]\).
     \end{itemize}
-  \item Si \(z \in \{a,b\}\) alors \(E_\lambda = \emptyset\) et sinon 
+  \item Si \(z \in{}\{a,b\}\) alors \(E_\lambda = \emptyset\) et sinon 
     \(E_\lambda\) est la droite qui forme l'angle \(\lambda\) avec la droite 
     \((A(a)B(b))\).
 \end{enumerate}
@@ -1104,7 +1084,7 @@ Soient deux réels \(k\) et \(\lambda\).
 
 \begin{exercice}
   Soient un naturel \(n\) et un réel \(a\) tel que \(0 \leqslant a < 2\pi\).  
-  Calculer le module et l'argument (s'il existe) de \(z = (1 + \ii\e^{\ii 
+  Calculer le module et l'argument (s'il existe) de \(z = (1 + \ii\e^{\ii{}
   a})^n\).
 \end{exercice}
 
@@ -1121,7 +1101,7 @@ Soient deux réels \(k\) et \(\lambda\).
 \end{exercice}
 
 \begin{exercice}[Théorème de l'angle inscrit]
-  Soient \((a, b, c) \in \C^3\) tels que \(\abs{a} = \abs{b} = \abs{c} = 1\) 
+  Soient \((a, b, c) \in{}\C^3\) tels que \(\abs{a} = \abs{b} = \abs{c} = 1\) 
   et \(a \neq c\) et \(b \neq c\). Montrer que~:\(\Arg \frac{c-b}{c-a} \equiv 
   \frac{1}{2} \Arg \frac{b}{a} \pmod \pi\). En donner une interprétation 
   géométrique.
@@ -1156,7 +1136,7 @@ Soient deux réels \(k\) et \(\lambda\).
 \end{exercice}
 
 \begin{exercice}
-  Soient \(n \in \N^{*}\) et \((z_1, \ldots, z_n) \in (\C^{*})^n\).
+  Soient \(n \in{}\N^{*}\) et \((z_1, \ldots, z_n) \in{}(\C^{*})^n\).
   \begin{enumerate}
     \item Montrer que \( \abs{\sum_{k = 1}^n z_k} \leqslant \sum_{k = 1}^n 
       \abs{z_k}\).
@@ -1164,8 +1144,8 @@ Soient deux réels \(k\) et \(\lambda\).
       si~: \(\Arg(z_1) \equiv \Arg(z_2) \equiv \cdots \equiv \arg(z_n) 
       \pmod{2\pi}\).
     \item Montrer qu'il y a égalité dans cette inégalité si et seulement si, 
-      pour tout couple \((a,b) \in \intervalleentier{1}{n}^2 \ z_a 
-      \bar{z_b} \in \Rpluss\).
+      pour tout couple \((a,b) \in{}\intervalleentier{1}{n}^2 \ z_a 
+      \bar{z_b} \in{}\Rpluss\).
   \end{enumerate}
 \end{exercice}
 
@@ -1178,9 +1158,9 @@ Soient deux réels \(k\) et \(\lambda\).
       \item \(z^2-2\cos(\alpha)z + 1 = 0\)
       \item \(z + \bar{z} = \abs{z}\)
       \item \((1 + \ii)z^2 + 3(1-\ii)z-2(2 + \ii) = 0\)
-      \item \(z^4-(3 + i)z^2 + 4 + 3\ii = 0\)
+      \item \(z^4-(3 + i)z^2 + 4 + 3\ii{}= 0\)
       \item \(z^{2n} + z^n + 1 = 0\)
-      \item \(\left( 1 + \frac{\ii z}{n} \right)^n = \left( 1-\frac{\ii 
+      \item \(\left( 1 + \frac{\ii{}z}{n} \right)^n = \left( 1-\frac{\ii{}
         z}{n} \right)^n\)
     \end{enumerate}
   \end{multicols}
@@ -1209,7 +1189,7 @@ Soient deux réels \(k\) et \(\lambda\).
 \end{exercice}
 
 \begin{exercice}
-  Soient \(n \in \N\setminus\{0,1\}\) et \(\omega = \e^{2\ii\pi/n}\), \(a\) et 
+  Soient \(n \in{}\N\setminus\{0,1\}\) et \(\omega = \e^{2\ii\pi/n}\), \(a\) et 
   \(b\) deux complexes. Montrer que~: \(\abs{a + b} \leqslant \frac{2}{n} 
   \sum_{k = 0}^{n-1} \abs{a + \omega^k b}\).
 \end{exercice}
@@ -1220,14 +1200,14 @@ Soient deux réels \(k\) et \(\lambda\).
     \begin{cases} x + y + z = 1 \\ xyz = 1 \\ \abs{x} = \abs{y} = \abs{z} = 
     1 \end{cases}
     \begin{cases} 5x-\ii{}y = 2 \\ (1 + \ii)x + 3y = 5 \end{cases}
-      \begin{cases} (1 + \ii)x + \bar{y} = 3 + 7\ii \\\bar{x} + y = 2 + 
+      \begin{cases} (1 + \ii)x + \bar{y} = 3 + 7\ii{}\\\bar{x} + y = 2 + 
       \ii\end{cases}
   \end{equation}
 \end{exercice}
 
 \begin{exercice}
-  Déterminer toutes les applications \(f \in \C^{\C}\) telles que \(\forall z 
-  \in \C, f(z) + \ii f(\bar{z}) = 1 + z\).
+  Déterminer toutes les applications \(f \in{}\C^{\C}\) telles que \(\forall z 
+  \in{}\C, f(z) + \ii{}f(\bar{z}) = 1 + z\).
 \end{exercice}
 
 \begin{exercice}[Méthode de Cardan]

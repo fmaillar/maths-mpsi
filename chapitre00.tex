@@ -78,7 +78,7 @@ table~\ref{tab:tabverconn}.
 Dans l'assertion \(P \implies Q\) l'assertion \(P\) est l'hypothèse et 
 l'assertion \(Q\) est la conclusion. On a l'équivalence logique
 \begin{empheq}[box=\shadowbox*]{equation}%
-  (P \implies Q) \iff (\neg{P} \text{~ou~} Q).
+  (P \implies{} Q) \iff{} (\neg{P} \text{~ou~} Q).
 \end{empheq}
 
 L'assertion \(Q \implies P\) est l'assertion réciproque de \(P \implies 
@@ -97,7 +97,7 @@ table de vérité. On écrit par exemple les équivalences suivantes~:
 
 Le raisonnement par \emph{contraposée} repose sur l'équivalence logique
 \begin{empheq}[box=\shadowbox*]{equation}
-  (P \implies Q) \iff (\neg{Q} \implies \neg{P}).
+  (P \implies{} Q) \iff{} (\neg{Q} \implies{} \neg{P}).
 \end{empheq}
 
 Le raisonnement par l'absurde est le suivant~: pour montrer que \(P \implies
@@ -105,21 +105,26 @@ Q\), on suppose que \(P\) est vraie et que \(Q\) est fausse puis on montre que
 cela aboutit à une contradiction. Ainsi, le \emph{raisonnement par l'absurde}
 repose sur l'équivalence logique
 \begin{empheq}[box=\shadowbox*]{equation}
-  (P \implies Q) \iff \neg(P \text {~et~} \neg{}Q).
+  (P \implies{} Q) \iff{} \neg(P \text{~et~} \neg{}Q).
 \end{empheq}
 
-\section{Quantificateurs et leurs négations}\label{chap0sec:quantificateursetnegation}
+\section{Quantificateurs et leurs négations}
 
 L'expression mathématique ``\(\forall x \in E\)'' se lit ``quelque soit
-l'élément \(x\) de E'' ou encore ``pour tout élément \(x\) de E''. L'expression
-mathématique ``\(\exists x \in E\)'' se lit ``il existe un élément \(x\) de E'',
-au moins un. ``\(\forall x \in E \ P(x)\)'' signifie que pour tout élément pris
-dans E, la propriété P est vraie. ``\(\exists x \in E \ P(x)\)'' signifie qu'il
-existe au moins un élément de E pour lequel P est vérifiée.
+l'élément \(x\) de \(E\)'' ou encore ``pour tout élément \(x\) de \(E\)''.
+L'expression mathématique ``\(\exists x \in E\)'' se lit ``il existe un élément
+\(x\) de \(E\)'', au moins un.
+``\(\forall x \in E\ P(x)\)'' signifie que pour tout élément pris dans \(E\),
+la propriété \(P\) est vraie.
+``\(\exists x \in E \ P(x)\)'' signifie qu'il existe au moins un élément de
+\(E\) pour lequel \(P\) est vérifiée.
+
 Les négations des quantificateurs sont les suivantes~:
 \begin{empheq}[box=\shadowbox*]{align}
-  \neg(\forall x \in E \quad P(x)) &\iff \exists x \in E \quad \neg{}P(x); \\
-  \neg(\exists x \in E \quad P(x)) &\iff \forall x \in E \quad \neg{}P(x).
+  \neg(\forall{} x \in{} E \quad{} P[x]) &\iff{}\exists{} x \in{} E 
+  \quad{}\neg{}P_x;\\
+  \neg(\exists{} x \in{} E \quad{} P[x]) &\iff{}\forall{} x \in{} E 
+  \quad{}\neg{}P_x.
 \end{empheq}
 
 La variable \(x\) est dite muette.
@@ -218,7 +223,8 @@ La variable \(x\) est dite muette.
     \item \(\exists x \in \R \quad x\neq 1\);
     \item \(\forall x \in \R \ \exists y \in \R \quad xy=1\);
     \item \(\exists x \in \R \ \exists y \in \R \quad xy=1\);
-    \item \(\forall n \in \N \quad (n^2 \textrm{~est pair}) \implies n \textrm{~est pair})\);
+    \item \(\forall n \in \N \quad (n^2 \textrm{~est pair} \implies n
+      \textrm{~est pair})\);
     \item \(\forall x \in \R \quad (8=7 \implies x=1)\);
     \item \(\forall x \in \R \quad (x \geqslant 7 \implies x^2 \geqslant 49)\).
   \end{enumerate}
