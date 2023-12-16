@@ -42,7 +42,7 @@ Finalement, un produit scalaire est une forme bilinéaire symétrique et défini
 \begin{proof}
   \(\impliedby\) Déjà vu.
 
-  \(\implies\) On applique l'égalité en \(y=x\) et on a \(\prodscal{x}{x}=0\), qui est vrai si et seulement si \(x=0\). 
+  \(\implies\) On applique l'égalité en \(y=x\) et on a \(\prodscal{x}{x}=0\), qui est vrai si et seulement si \(x=0\).
 \end{proof}
 
 \subsection{Norme euclidienne associée à un produit scalaire}
@@ -88,7 +88,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
     \item pour tout réel \(\lambda\), \(P(\lambda)\geqslant 0\);
     \item pour tout réel \(\lambda\), \(P(\lambda) = \norme{x}^2+\lambda^2\norme{y}^2+2\lambda\prodscal{x}{y}\).
   \end{enumerate}
-  \(P\) est un polynôme de degré inférieur ou égal à \(2\). 
+  \(P\) est un polynôme de degré inférieur ou égal à \(2\).
 
   Dans le cas où \(\norme{y}=0\), alors \(y=0\) et l'inégalité \(\abs{\prodscal{x}{y}} \leqslant \norme{x}\norme{y}\) est vraie.
 
@@ -121,7 +121,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
     \end{cases}\\
     &\iff
     \begin{cases}
-      x=0 \\ 
+      x=0 \\
       \text{~ou~} \\
       x\neq 0 \text{~et~}  \exists \lambda_0 \in \R \quad x=-\lambda_0 y
     \end{cases}\\
@@ -138,15 +138,15 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit un couple de  vecteurs \((x,y) \in E\), alors en appliquant le théorème 
+  Soit un couple de  vecteurs \((x,y) \in E\), alors en appliquant le théorème
   de Cauchy-Schwarz on a \begin{align*}
     \norme{x+y}^2 &= \norme{x}^2 + \norme{y}^2 + 2\prodscal{x}{y} \\
     & \leqslant \norme{x}^2 + \norme{y}^2 + 2\abs{\prodscal{x}{y}} \\
-    & \leqslant \norme{x}^2 + \norme{y}^2 + 
+    & \leqslant \norme{x}^2 + \norme{y}^2 +
     2\norme{x}\norme{y}=(\norme{x}+\norme{y})^2.
   \end{align*}
-  Comme \(\norme{x+y} \geqslant 0\), \(\norme{x}\geqslant 0\) et \(\norme{y}\ge 
-  0\), le sens de l'inégalité est conservé en passant à la racine carrée et on a 
+  Comme \(\norme{x+y} \geqslant 0\), \(\norme{x}\geqslant 0\) et \(\norme{y}\ge
+  0\), le sens de l'inégalité est conservé en passant à la racine carrée et on a
   bien
   \begin{equation}
     \norme{x+y} \leqslant \norme{x}+\norme{y}.
@@ -156,7 +156,7 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
 \begin{prop}
   Pour tout couple de  vecteurs \((x,y) \in E\) on a
   \begin{equation}
-    \norme{x+y} = \norme{x}+\norme{y} \iff x=0 \text{~ou~} (x\neq 0 \text{~et~} 
+    \norme{x+y} = \norme{x}+\norme{y} \iff x=0 \text{~ou~} (x\neq 0 \text{~et~}
     \exists \mu \geqslant 0  \quad y=\mu x)
   \end{equation}
 \end{prop}
@@ -165,17 +165,17 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
   \begin{align*}
     \norme{x+y} = \norme{x}+\norme{y} &\iff
     \begin{cases}
-      \prodscal{x}{y} = \abs{\prodscal{x}{y}} \\ 
+      \prodscal{x}{y} = \abs{\prodscal{x}{y}} \\
       \text{~et~} \\
       \abs{\prodscal{x}{y}} = \norme{x}\norme{y}
     \end{cases} \\
     &\iff
     \begin{cases}
-      \prodscal{x}{y} \geqslant 0 \\ 
-      \text{~et~} \\ 
+      \prodscal{x}{y} \geqslant 0 \\
+      \text{~et~} \\
       \begin{cases}
-        x=0 \\ 
-        \text{~ou~} \\ 
+        x=0 \\
+        \text{~ou~} \\
         x\neq 0 \text{~et~} \exists \lambda \in \R \quad y=\lambda x
       \end{cases}
     \end{cases}\\
@@ -186,16 +186,16 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
       \prodscal{x}{y} \geqslant 0 \text{~et~} x \neq 0 \text{~et~} \exists \lambda \in \R \quad y=\lambda x
     \end{cases}\\
     & \iff
-    \begin{cases} 
-      x=0 \\ 
-      \text{~ou~} \\ 
+    \begin{cases}
+      x=0 \\
+      \text{~ou~} \\
       x \neq 0 \text{~et~} \exists \lambda \in \R \quad y=\lambda x \text{~et~} \lambda\norme{x}^2 \geqslant 0
     \end{cases} \\
-    & \iff 
-    \begin{cases} 
-      x=0 \\ 
-      \text{~ou~} \\ 
-      x \neq 0 \text{~et~} \exists \lambda \in \Rpluss \quad y=\lambda x 
+    & \iff
+    \begin{cases}
+      x=0 \\
+      \text{~ou~} \\
+      x \neq 0 \text{~et~} \exists \lambda \in \Rpluss \quad y=\lambda x
     \end{cases}
   \end{align*}
 \end{proof}
@@ -223,26 +223,26 @@ Soient \(x\) et \(y\) deux vecteurs de \(E\) et \(\lambda\) et \(\mu\) deux rée
 
 \subsubsection{Application norme euclidienne}
 
-Soit un \(\R\)-espace vectoriel \(E\) muni d'un produit scalaire 
+Soit un \(\R\)-espace vectoriel \(E\) muni d'un produit scalaire
 \(\prodscal{.}{.}\), et soit \(\norme{.}\) la norme euclidienne associée.
 
 \begin{prop}
-  L'application \(\fonction{\norme{.}}{E}{\R}{x}{\norme{x}}\) est une norme, 
+  L'application \(\fonction{\norme{.}}{E}{\R}{x}{\norme{x}}\) est une norme,
   c'est-à-dire qu'elle vérifie
   \begin{enumerate}
-    \item la positivité : pour tout vecteur \(x \in E\), \(\norme{x} \geqslant 
+    \item la positivité : pour tout vecteur \(x \in E\), \(\norme{x} \geqslant
       0\);
-    \item la séparation : pour tout vecteur \(x \in E\), \(\norme{x}= 0 
+    \item la séparation : pour tout vecteur \(x \in E\), \(\norme{x}= 0
       \implies x=0\);
-    \item l'homogénéité : pour tout réel \(\lambda\) et tout vecteur \(x \in 
+    \item l'homogénéité : pour tout réel \(\lambda\) et tout vecteur \(x \in
       E\), \(\norme{\lambda x}=\abs{\lambda}\norme{x}\);
-    \item l'inégalité triangulaire (ou de Minkowski) : pour tout couple de 
-      vecteurs \((x,y) \in E^2\), \(\norme{x+y}\leqslant 
+    \item l'inégalité triangulaire (ou de Minkowski) : pour tout couple de
+      vecteurs \((x,y) \in E^2\), \(\norme{x+y}\leqslant
       \norme{x}+\norme{y}\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  La démonstration repose sur les propriété du produit scalaire, parce que 
+  La démonstration repose sur les propriété du produit scalaire, parce que
   pour tout vecteur \(x \in E\), \(\norme{x}^2 = \prodscal{x}{x}\).
 \end{proof}
 
@@ -252,9 +252,9 @@ Avec les mêmes notations, on définit l'application distance
 \begin{equation}
   \fonction{d}{E^2}{\R}{(x,y)}{\norme{x-y}}.
 \end{equation}
-% 
+%
 \begin{prop}
-  L'application distance \(d\) vérifie les propriétés suivantes~: Pour tout 
+  L'application distance \(d\) vérifie les propriétés suivantes~: Pour tout
   triplet \((x,y,z) \in E^3\) on a
   \begin{enumerate}
     \item \(d(x,y) \in \Rpluss\);
@@ -268,27 +268,27 @@ Avec les mêmes notations, on définit l'application distance
 
 \subsubsection{Produit scalaire sur \(\R^n\)}
 
-Soit \(E=\R^n\), \(x=(x_i)_{1\le i\leqslant n}\) et \(y=(y_i)_{1\le i\leqslant 
-n}\). On pose \(\prodscal{x}{y}=\sum_{i=1}^n x_iy_i\). Alors 
-\(\fonction{}{\R^n\times\R^n}{\R}{(x,y)}{\prodscal{x}{y}}\) est un produit 
-scalaire. C'est le produit scalaire canonique. La norme euclidienne associée 
+Soit \(E=\R^n\), \(x=(x_i)_{1\le i\leqslant n}\) et \(y=(y_i)_{1\le i\leqslant
+n}\). On pose \(\prodscal{x}{y}=\sum_{i=1}^n x_iy_i\). Alors
+\(\fonction{}{\R^n\times\R^n}{\R}{(x,y)}{\prodscal{x}{y}}\) est un produit
+scalaire. C'est le produit scalaire canonique. La norme euclidienne associée
 est telle que
 \begin{equation}
   \forall x \in \R^n \quad \norme{x} = \sqrt{\sum_{i=1}^n x_i^2}.
 \end{equation}
 La distance associée est telle que
 \begin{equation}
-  \forall (x,y) \in \R^n\times\R^n \quad d(x,y)=\norme{x-y} = 
+  \forall (x,y) \in \R^n\times\R^n \quad d(x,y)=\norme{x-y} =
   \sqrt{\sum_{i=1}^n (x_i-y_i)^2}.
 \end{equation}
 L'inégalité de Cauchy-Scharwz s'écrit
 \begin{equation}
-  \forall (x,y) \in \R^n\times\R^n \quad \abs{\sum_{i=1}^n x_iy_i} \leqslant 
+  \forall (x,y) \in \R^n\times\R^n \quad \abs{\sum_{i=1}^n x_iy_i} \leqslant
   \sqrt{\sum_{i=1}^n x_i^2} \sqrt{\sum_{i=1}^n y_i^2}.
 \end{equation}
 L'inégalité de Minkowski s'écrit
 \begin{equation}
-  \forall (x,y) \in \R^n\times\R^n \quad \sqrt{\sum_{i=1}^n (x_i+y_i)^2} 
+  \forall (x,y) \in \R^n\times\R^n \quad \sqrt{\sum_{i=1}^n (x_i+y_i)^2}
   \leqslant \sqrt{\sum_{i=1}^n x_i^2}+ \sqrt{\sum_{i=1}^n y_i^2}.
 \end{equation}
 
@@ -298,8 +298,8 @@ Soient deux réels \(a\) et \(b\) tels que \(a<b\) et l'application
 \begin{equation}
   \fonction{\varphi}{\cont{\intervalleff{a}{b}}{\R}^2}{\R}{(f,g)}{\int_{[a,b]}fg}.
 \end{equation}
-L'application \(\varphi\) est bilinéaire, symétrique, et définie-positive. 
-C'est-à-dire que c'est un produit scalaire. En effet pour toute fonction \(f\) 
+L'application \(\varphi\) est bilinéaire, symétrique, et définie-positive.
+C'est-à-dire que c'est un produit scalaire. En effet pour toute fonction \(f\)
 continue sur \([a,b]\) on a bien
 \begin{enumerate}
   \item \(\int_{[a,b]}f^2 \geqslant 0\);
@@ -307,38 +307,38 @@ continue sur \([a,b]\) on a bien
 \end{enumerate}
 
 
-\emph{Remarque~: Sur l'ensemble des fonctions continues par morceaux, 
-\(\varphi\) n'est pas un produit scalaire car \(\varphi\) n'est pas définie 
+\emph{Remarque~: Sur l'ensemble des fonctions continues par morceaux,
+\(\varphi\) n'est pas un produit scalaire car \(\varphi\) n'est pas définie
 positive. On dispose qand même de l'inégalité de Cauchy-Schwarz.}
 
 La norme euclidienne associée à \(\varphi\) est telle que
 \begin{equation}
-  \forall f \in \cont{\intervalleff{a}{b}}{\R} \quad 
+  \forall f \in \cont{\intervalleff{a}{b}}{\R} \quad
   \norme{f}=\sqrt{\int_{[a,b]}f^2}.
 \end{equation}
 La distance euclidienne associée est \begin{equation}
-  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad 
+  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad
   d(f,g)=\sqrt{\int_{[a,b]}(f-g)^2}.
 \end{equation}
 L'inégalité de Cauchy-Schwarz s'écrit
 \begin{equation}
-  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad 
-  \abs{\int_{[a,b]}fg} \leqslant \sqrt{\int_{[a,b]}f^2} 
+  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad
+  \abs{\int_{[a,b]}fg} \leqslant \sqrt{\int_{[a,b]}f^2}
   \sqrt{\int_{[a,b]}g^2}.
 \end{equation}
 L'inégalité de Minkowski s'écrit
 \begin{equation}
-  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad 
-  \sqrt{\int_{[a,b]}(f+g)^2} \leqslant \sqrt{\int_{[a,b]}f^2} + 
+  \forall (f,g) \in \cont{\intervalleff{a}{b}}{\R}^2 \quad
+  \sqrt{\int_{[a,b]}(f+g)^2} \leqslant \sqrt{\int_{[a,b]}f^2} +
   \sqrt{\int_{[a,b]}g^2}.
 \end{equation}
 
-\emph{Remarque~:} Soit \(E\) l'ensemble des fonctions continues 
-\(2\pi\)-périodiques de \(\R\) dans \(\R\). On définit l'application 
-\(\fonction{\varphi}{E^2}{\R}{(f,g)}{\frac{1}{2\pi}\int_{\intervalleff{0}{2\pi}}fg}\). 
+\emph{Remarque~:} Soit \(E\) l'ensemble des fonctions continues
+\(2\pi\)-périodiques de \(\R\) dans \(\R\). On définit l'application
+\(\fonction{\varphi}{E^2}{\R}{(f,g)}{\frac{1}{2\pi}\int_{\intervalleff{0}{2\pi}}fg}\).
 C'est un produit scalaire.
 
-\subsection{Familles de vecteurs orthogonales et familles de vecteurs 
+\subsection{Familles de vecteurs orthogonales et familles de vecteurs
 orthonormales}
 
 Soit \(E\) un \(\R\)-espace vectoriel muni d'un produit scalaire \(\varphi\).
@@ -346,18 +346,18 @@ Soit \(E\) un \(\R\)-espace vectoriel muni d'un produit scalaire \(\varphi\).
 \subsubsection{Vecteur unitaire}
 
 \begin{defdef}
-  Soit \(x \in E\). On dit que \(x\) est unitaire si et seulement 
-  \(\norme{x}=1\). \emph{C'est une caractéristique qui dépend du produit 
+  Soit \(x \in E\). On dit que \(x\) est unitaire si et seulement
+  \(\norme{x}=1\). \emph{C'est une caractéristique qui dépend du produit
   scalaire \(\varphi\)}.
 \end{defdef}
 
-\emph{Remarque}~: Si \(x\) est non nul, alors \(\frac{x}{\norme{x}}\) est un 
+\emph{Remarque}~: Si \(x\) est non nul, alors \(\frac{x}{\norme{x}}\) est un
 vecteur unitaire colinaire à \(x\) et de même sens.
 
 \subsubsection{Vecteurs orthogonaux}
 
 \begin{defdef}
-  Soient deux vecteurs \(x\) et \(y\) de \(E\). On dit que \(x\) et \(y\) sont 
+  Soient deux vecteurs \(x\) et \(y\) de \(E\). On dit que \(x\) et \(y\) sont
   orthogonaux, on note \(x \perp y\) si et seulement si \(\prodscal{x}{y}=0\).
 \end{defdef}
 
@@ -393,70 +393,70 @@ Le seul vecteur orthogonal à tous les vecteurs de l'espace est le vecteur nul.
 \subsubsection{Familles orthogonales, familles orthonormales}
 
 \begin{defdef}
-  Soit un ensemble fini \(I\) ayant au moins deux éléments. Soit \(\X=(x_i)_{i 
+  Soit un ensemble fini \(I\) ayant au moins deux éléments. Soit \(\X=(x_i)_{i
   \in I}\) une famille de vecteurs de \(E\) indéxée par \(I\).
   \begin{itemize}
-    \item On dit que \(\X\) est une famille orthogonale de \(E\) (FOG) si et 
+    \item On dit que \(\X\) est une famille orthogonale de \(E\) (FOG) si et
       seulement si
       \begin{equation}
         \forall (i,j) \in I^2 \quad i\neq j \implies x_i \perp x_j.
       \end{equation}
       Les vecteurs sont deux à deux orthogonaux.
-    \item On dit qe \(\X\) est une famille orthonormale de \(E\) (FON) si et 
-      seulement si \(\X\) est une famille orthogonale de \(E\) et si pour tout 
+    \item On dit qe \(\X\) est une famille orthonormale de \(E\) (FON) si et
+      seulement si \(\X\) est une famille orthogonale de \(E\) et si pour tout
       \(i \in I\), \(\norme{x_i}=1\).
   \end{itemize}
 \end{defdef}
 
 \begin{prop}
-  Une famille orthogonale finie de vecteurs de \(E\) dont aucun n'est nul est 
+  Une famille orthogonale finie de vecteurs de \(E\) dont aucun n'est nul est
   libre.
 \end{prop}
 \begin{proof}
-  Soit \(\X=(x_i)_{i \in I}\) une famille orthogonale finie de \(E\) et 
-  \((\alpha_i)_{i \in I} \in \R^I\) telle que \(\sum_{i \in I}\alpha_i 
+  Soit \(\X=(x_i)_{i \in I}\) une famille orthogonale finie de \(E\) et
+  \((\alpha_i)_{i \in I} \in \R^I\) telle que \(\sum_{i \in I}\alpha_i
   x_i=0\). Soit \(i_0 \in I\), alors \(\prodscal{x_{i_0}}{0}=0\). Alors
   \begin{align*}
     0 &=\prodscal{\sum_{i \in I}\alpha_i x_i}{x_{i_0}} \\
-    &=\sum_{i \in I}\alpha_i \prodscal{x_i}{x_{i_0}} && \text{linéarité à 
+    &=\sum_{i \in I}\alpha_i \prodscal{x_i}{x_{i_0}} && \text{linéarité à
     gauche}\\
     &=\alpha_{i_0} \norme{x_{i_0}}^2. && \text{famille orthogonale}
   \end{align*}
-  Comme tous les vecteurs sont non nuls on a \(x_{i_0}\neq 0\) et donc 
-  \(\norme{x_{i_0}} \neq 0\). Si bien que \(\alpha_{i_0}=0\), qui est vrai 
+  Comme tous les vecteurs sont non nuls on a \(x_{i_0}\neq 0\) et donc
+  \(\norme{x_{i_0}} \neq 0\). Si bien que \(\alpha_{i_0}=0\), qui est vrai
   pour tout \(i_0\), alors la famille \(\X\) est libre.
 \end{proof}
 
 \begin{theo}[Théorème de Pythagore pour une famille orthogonale finie]
-  Soit un naturel \(n\geqslant 2\) et une famille orthogonale \((x_i)_{i \in 
+  Soit un naturel \(n\geqslant 2\) et une famille orthogonale \((x_i)_{i \in
   \intervalleentier{1}{n}} \in E^n\). Alors
   \begin{equation}
     \norme{\sum_{i=1}^nx_i}^2 = \sum_{i=1}^n \norme{x_i}^2.
   \end{equation}
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-  Initialement on prend \(n=2\) et c'est le théorème de Pythagore classique 
-  énoncé ci-avant. Soit un naturel \(n \ge 2\) et supposons l'assertion vraie 
-  au rang \(n\), montrons qu'elle est encore vraie au rang \(n+1\). Soit 
-  famille orthogonale \((x_i)_{i \in \intervalleentier{1}{n+1}} \in E^{n+1}\), 
+  Initialement on prend \(n=2\) et c'est le théorème de Pythagore classique
+  énoncé ci-avant. Soit un naturel \(n \ge 2\) et supposons l'assertion vraie
+  au rang \(n\), montrons qu'elle est encore vraie au rang \(n+1\). Soit
+  famille orthogonale \((x_i)_{i \in \intervalleentier{1}{n+1}} \in E^{n+1}\),
   alors
   \begin{equation}
     \norme{\sum_{i=1}^{n+1}x_i}^2 =  \norme{\sum_{i=1}^{n}x_i+x_{n+1}}^2.
   \end{equation}
   Or
   \begin{align*}
-    \prodscal{\sum_{i=1}^{n}x_i}{x_{n+1}} 
+    \prodscal{\sum_{i=1}^{n}x_i}{x_{n+1}}
     &=\sum_{i=1}^{n}\prodscal{x_i}{x_{n+1}} && \text{linéarité} \\
     &=0 && \text{famille orthogonale}.
   \end{align*}
   Alors \(x_{n+1} \perp \sum_{i=1}^n x_i\). Donc
   \begin{align*}
     \norme{\sum_{i=1}^{n+1}x_i}^2 &=  \norme{\sum_{i=1}^{n}x_i+x_{n+1}}^2 \\
-    &=\norme{\sum_{i=1}^{n}x_i}^2 + \norme{x_{n+1}}^2 && x_{n+1} \perp 
+    &=\norme{\sum_{i=1}^{n}x_i}^2 + \norme{x_{n+1}}^2 && x_{n+1} \perp
     \sum_{i=1}^n x_i \\
     &=\sum_{i=1}^{n+1}\norme{x_i}^2 &&  \text{Hypothèse de récurrence}.
   \end{align*}
-  L'assertion au rang \(n+1\) est vraie. Par théorème de récurrence, le 
+  L'assertion au rang \(n+1\) est vraie. Par théorème de récurrence, le
   résultat est vraie pour tout naturel \(n \geqslant 2\).
 \end{proof}
 
@@ -464,7 +464,7 @@ Le seul vecteur orthogonal à tous les vecteurs de l'espace est le vecteur nul.
 
 \subsubsection{Orthogonal}
 
-Soit \((E,\varphi)\) un \(\R\)-espace vectoriel muni d'un produit scalaire 
+Soit \((E,\varphi)\) un \(\R\)-espace vectoriel muni d'un produit scalaire
 \(\varphi\).
 
 \begin{defdef}
@@ -472,7 +472,7 @@ Soit \((E,\varphi)\) un \(\R\)-espace vectoriel muni d'un produit scalaire
   \begin{equation}
     F^{\perp}=\enstq{x \in E}{\forall y \in F \quad x \perp y}.
   \end{equation}
-  C'est l'ensemble des vecteurs de \(E\) qui sont orthogonaux à tous les 
+  C'est l'ensemble des vecteurs de \(E\) qui sont orthogonaux à tous les
   vecteurs de \(F\). \(F^{\perp}\) est appelé l'orthogonal de \(F\).
 \end{defdef}
 
@@ -483,12 +483,12 @@ Soit \((E,\varphi)\) un \(\R\)-espace vectoriel muni d'un produit scalaire
 \end{itemize}
 
 \begin{prop}
-  Pour tout sous-espace vectoriel \(F\) de \(E\), \(F^{\perp}\) est un 
+  Pour tout sous-espace vectoriel \(F\) de \(E\), \(F^{\perp}\) est un
   sous-espace vectoriel de \(E\).
 \end{prop}
 \begin{proof}
-  Par définition \(F^\perp \subset E\). Comme \(0 \in F^\perp\), il est non 
-  vide. Soient deux vecteurs \(x\) et \(x'\) de \(F^\perp\) et \(\lambda \in 
+  Par définition \(F^\perp \subset E\). Comme \(0 \in F^\perp\), il est non
+  vide. Soient deux vecteurs \(x\) et \(x'\) de \(F^\perp\) et \(\lambda \in
   \R\). Pour tout \(y \in F\) on a
   \begin{equation}
     \prodscal{\lambda x+x'}{y}=\lambda \prodscal{x}{y}+\prodscal{x'}{y}=0.
@@ -498,7 +498,7 @@ Soit \((E,\varphi)\) un \(\R\)-espace vectoriel muni d'un produit scalaire
   Par caractérisation \(F^\perp\) est un sous-espace vectoriel de \(E\).
 \end{proof}
 
-Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal 
+Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
 \((F^\perp)^\perp\).
 
 \begin{prop}
@@ -519,7 +519,7 @@ Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
 \subsubsection{Sous-espaces vectoriels othogonaux}
 
 \begin{defdef}
-  Soient \(F\) et \(G\) deux sous-espaces vectoriels de \(E\). On dit que 
+  Soient \(F\) et \(G\) deux sous-espaces vectoriels de \(E\). On dit que
   \(F\) et \(G\) sont orthogonaux et on note \(F \perp G\), si et seulement si
   \begin{equation}
     \forall x \in F \ \forall y \in G \quad x \perp y.
@@ -533,15 +533,15 @@ Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
       \begin{equation}
         G \perp F \iff G \subset F^\perp.
       \end{equation}
-      \(F^\perp\) est le plus grand sous-espace vectoriel (au sens de 
+      \(F^\perp\) est le plus grand sous-espace vectoriel (au sens de
       l'inclusion) qui est orthogonal à \(F\).
   \end{enumerate}
 \end{prop}
 \begin{proof}
   \begin{enumerate}
     \item Évident par définitin de \(F^\perp\);
-    \item Si \(G \perp F^\perp\) soit alors \(x \in G\). Pour tout \(y \in 
-      F\), on a \(x \perp y\) (car \(G \perp F\)) donc \(x \in F^\perp\), par 
+    \item Si \(G \perp F^\perp\) soit alors \(x \in G\). Pour tout \(y \in
+      F\), on a \(x \perp y\) (car \(G \perp F\)) donc \(x \in F^\perp\), par
       définition de \(F^\perp\).
   \end{enumerate}
 \end{proof}
@@ -552,7 +552,7 @@ Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit \(x \in F_2^\perp\), alors pour tout \(y \in F_1\), \(y \in F_2\) donc 
+  Soit \(x \in F_2^\perp\), alors pour tout \(y \in F_1\), \(y \in F_2\) donc
   \(x \perp y\). Alors \(x \in F_1^\perp\).
 \end{proof}
 \begin{prop}
@@ -562,8 +562,8 @@ Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
   \end{equation}
 \end{prop}
 \begin{proof}
-  Si \(x \in F \cap G\), alors \(x (\in F) \perp x (\in G)\) donc \(x=0\).  
-  \(F \cap G \subset \{0\}\). L'autre inclusion est triviale puisque \(F \cap 
+  Si \(x \in F \cap G\), alors \(x (\in F) \perp x (\in G)\) donc \(x=0\).
+  \(F \cap G \subset \{0\}\). L'autre inclusion est triviale puisque \(F \cap
   G\) est un sous-espace vectoriel.
 \end{proof}
 \begin{cor}
@@ -575,14 +575,14 @@ Comme \(F^\perp\) est un sous-espace vectoriel, on peut définir son orthogonal
 
 Soit \(F\) un sous-espace vectoriel de \(E\). On sait que~:
 \begin{itemize}
-  \item \(F\) et \(F^\perp\) sont en somme directe mais à priori \(F \oplus 
+  \item \(F\) et \(F^\perp\) sont en somme directe mais à priori \(F \oplus
     F^\perp \subset E\);
   \item \(F \subset (F^\perp)^\perp\).
 \end{itemize}
 
 \begin{theo}\label{theo:orthetsupp}
-  Soient \(F\) et \(G\) deux sous-espaces vectoriels de \(E\). On suppose 
-  qu'ils sont supplémentaires dans \(E\). Il y a équivalence entre les 
+  Soient \(F\) et \(G\) deux sous-espaces vectoriels de \(E\). On suppose
+  qu'ils sont supplémentaires dans \(E\). Il y a équivalence entre les
   assertions suivantes~:
   \begin{enumerate}
     \item \(F \perp G\);
@@ -592,13 +592,13 @@ Soit \(F\) un sous-espace vectoriel de \(E\). On sait que~:
   Auquel cas \(E = F \oplus G = F \oplus F^\perp\).
 \end{theo}
 \begin{proof}
-  \(1 \implies 2\) D'après la proposition précédente, on a déjà \(G \subset 
-  F^\perp\), montrons l'autre inclusion~: soit \(x \in F^{\perp}\). Comme 
-  \(E=F\oplus G\) alors il existe un unique couple \((x_1,x_2) \in F \times 
-  G\) tel que \(x=x_1+x_2\). Alors 
-  \(0=\prodscal{x}{x_1}=\prodscal{x_1+x_2}{x_1}\). Comme \(x_2 \in G\) et 
-  \(x_1 \in F\), et \(F \perp G\) on a \(\prodscal{x_1}{x_2}=0\). Du coup 
-  \(\norme{x_1}^2=0\) donc \(x_1=0\). Finalement \(x=x_2 \in G\). Alors 
+  \(1 \implies 2\) D'après la proposition précédente, on a déjà \(G \subset
+  F^\perp\), montrons l'autre inclusion~: soit \(x \in F^{\perp}\). Comme
+  \(E=F\oplus G\) alors il existe un unique couple \((x_1,x_2) \in F \times
+  G\) tel que \(x=x_1+x_2\). Alors
+  \(0=\prodscal{x}{x_1}=\prodscal{x_1+x_2}{x_1}\). Comme \(x_2 \in G\) et
+  \(x_1 \in F\), et \(F \perp G\) on a \(\prodscal{x_1}{x_2}=0\). Du coup
+  \(\norme{x_1}^2=0\) donc \(x_1=0\). Finalement \(x=x_2 \in G\). Alors
   \(F^\perp \subset G\). Par double inclusion on a \(G=F^\perp\).
 
   \(1 \implies 3\) C'est la même démonstration en échangeant \(F\) et \(G\).
@@ -608,17 +608,17 @@ Soit \(F\) un sous-espace vectoriel de \(E\). On sait que~:
 
 \begin{corth}[Supplémentaire orthogonal]
   \label{corth:supportho}
-  Pour tout sous-espace vectoriel \(F\) de \(E\), il existe \emph{au plus} un 
-  sous-espace vectoriel \(G\) tel que \(\begin{cases} E = F \oplus G \\ F 
-  \perp G \end{cases}\). S'il existe alors \(G=F^\perp\). On parle de 
+  Pour tout sous-espace vectoriel \(F\) de \(E\), il existe \emph{au plus} un
+  sous-espace vectoriel \(G\) tel que \(\begin{cases} E = F \oplus G \\ F
+  \perp G \end{cases}\). S'il existe alors \(G=F^\perp\). On parle de
   supplémentaire orthogonal.
 \end{corth}
 \begin{corth}
-  Soit \(F\) un sous-espace vectoriel de \(E\). Si \(E=F \oplus F^\perp\) 
+  Soit \(F\) un sous-espace vectoriel de \(E\). Si \(E=F \oplus F^\perp\)
   alors \(F=(F^\perp)^\perp\).
 \end{corth}
 \begin{proof}
-  On applique le théorème avec \(G=F^\perp\) : \(F=G^\perp = 
+  On applique le théorème avec \(G=F^\perp\) : \(F=G^\perp =
   (F^\perp)^\perp\).
 \end{proof}
 
@@ -627,13 +627,13 @@ Soit \(F\) un sous-espace vectoriel de \(E\). On sait que~:
 \subsection{Définition d'un espace vectoriel euclidien}
 
 \begin{defdef}
-  On appelle espace vectoriel euclidien tout couple \((E,\varphi)\) où \(E\) 
-  est un \(\R\)-espace vectoriel de dimension finie non nulle, et \(\varphi\) 
+  On appelle espace vectoriel euclidien tout couple \((E,\varphi)\) où \(E\)
+  est un \(\R\)-espace vectoriel de dimension finie non nulle, et \(\varphi\)
   un produit scalaire sur \(E\).
 \end{defdef}
 
-\emph{Remarque~:} Si \(F\) est un sous-espace vectoriel non nul de \(E\), on 
-peut montrer que \(\varphi_F=\varphi_{|F\times F}\) est un produit scalaire 
+\emph{Remarque~:} Si \(F\) est un sous-espace vectoriel non nul de \(E\), on
+peut montrer que \(\varphi_F=\varphi_{|F\times F}\) est un produit scalaire
 sur \(F\). Alors \((F,\varphi_F)\) est un espace vectoriel euclidien.
 
 \subsection{Supplémentaire orthogonal d'un sous-espace vectoriel euclidien}
@@ -647,38 +647,38 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien.
     \item \(\Dim F^\perp = \Dim E - \Dim F\);
     \item \(F=(F^\perp)^\perp\).
   \end{itemize}
-  On dit que \(F^\perp\) est le supplémentaire orthogonal de \(F\) (l'unicité 
+  On dit que \(F^\perp\) est le supplémentaire orthogonal de \(F\) (l'unicité
   a été prouvé à la sous-section~\ref{subsec:orthetsupp}). \end{theo}
-\emph{Ne pas confondre l'unicité du supplémentaire orthogonal avec l'unicité 
-du supplémentaire en général. En général un sous-espace vectoriel admet une 
+\emph{Ne pas confondre l'unicité du supplémentaire orthogonal avec l'unicité
+du supplémentaire en général. En général un sous-espace vectoriel admet une
 infinité de supplémentaire.}
 \begin{proof}
-  \emph{Cas 1~:} C'est le cas facile où \(F=\{0\}\), alors \(F^\perp =E\) et 
+  \emph{Cas 1~:} C'est le cas facile où \(F=\{0\}\), alors \(F^\perp =E\) et
   alors les trois points sont vérifiés.
 
-  \emph{Cas 2~:} On note \(\Dim F=p \in \intervalleentier{1}{n}\) avec \(n = 
-  \Dim E\). Soit \((f_1, \ldots, f_p)\) une base de \(F\). On a montré que \(F 
-  \oplus F^\perp \subset E\), alors \(\Dim F^\perp \leqslant n-p\). Soit 
+  \emph{Cas 2~:} On note \(\Dim F=p \in \intervalleentier{1}{n}\) avec \(n =
+  \Dim E\). Soit \((f_1, \ldots, f_p)\) une base de \(F\). On a montré que \(F
+  \oplus F^\perp \subset E\), alors \(\Dim F^\perp \leqslant n-p\). Soit
   l'application
   \begin{equation}
     \fonction{u}{E}{\R^p}{x}{(\prodscal{x}{f_1}, \ldots, \prodscal{x}{f_p})}.
   \end{equation}
-  L'application \(u\) est linéaire, grâce à la linéarité à gauche du produit 
+  L'application \(u\) est linéaire, grâce à la linéarité à gauche du produit
   scalaire. Montrons que \(\Ker(u)=F^\perp\)~:
   \begin{itemize}
-    \item Soit \(x \in \Ker(u)\). Pour tout \(i \in \intervalleentier{1}{p}\), 
-      on a \(\prodscal{x}{f_i}=0\). Pour tout \(y \in F\), il existe un unique 
-      \(p\)-uplet de scalaire \((\alpha_1, \ldots, \alpha_p)\) tel que \(y = 
+    \item Soit \(x \in \Ker(u)\). Pour tout \(i \in \intervalleentier{1}{p}\),
+      on a \(\prodscal{x}{f_i}=0\). Pour tout \(y \in F\), il existe un unique
+      \(p\)-uplet de scalaire \((\alpha_1, \ldots, \alpha_p)\) tel que \(y =
       \sum_{k=1}\alpha_k f_k\). Alors
       \begin{align*}
-        \prodscal{x}{y} &= \sum_{k=1}\alpha_k \prodscal{x}{f_k} && 
+        \prodscal{x}{y} &= \sum_{k=1}\alpha_k \prodscal{x}{f_k} &&
         \text{linéarité} \\
         &=\sum_{k=1}\alpha_k 0 && x \in \Ker(u) \\
         &=0,
       \end{align*}
       alors \(x \in F^\perp\). Alors \(\Ker(u) \subset F^\perp\).
-    \item Soit \(x \in F^\perp\). Pour tout \(i \in \intervalleentier{1}{p}\), 
-      on a \(x\perp f_i\). Donc \(\prodscal{x}{f_i}=0\), et alors \(u(x)=0\). 
+    \item Soit \(x \in F^\perp\). Pour tout \(i \in \intervalleentier{1}{p}\),
+      on a \(x\perp f_i\). Donc \(\prodscal{x}{f_i}=0\), et alors \(u(x)=0\).
       Finalement \(x \in \Ker(u)\). \(F^\perp \subset \Ker(u)\).
   \end{itemize}
   Par double inclusion \(F^\perp = \Ker(u)\).
@@ -691,8 +691,8 @@ infinité de supplémentaire.}
   \begin{equation}
     \Dim F^\perp = n-\rg(u).
   \end{equation}
-  Comme \(\Image(u) \subset \R^p\), on a bien \(\rg(u) \leqslant p\) et donc 
-  \(\Dim F^\perp \geqslant n-p\). Avec l'inégalité inverse vue plus haut on 
+  Comme \(\Image(u) \subset \R^p\), on a bien \(\rg(u) \leqslant p\) et donc
+  \(\Dim F^\perp \geqslant n-p\). Avec l'inégalité inverse vue plus haut on
   obtient bien \(\Dim F^\perp = n-p\).
 
   Finalement \(F \oplus F^\perp \subset E\) et
@@ -702,46 +702,46 @@ infinité de supplémentaire.}
   nous donne que \(F \oplus F^\perp = E\).
 \end{proof}
 
-\subsection{Bases orthogonales et bases orthonormales d'un espace vectoriel 
+\subsection{Bases orthogonales et bases orthonormales d'un espace vectoriel
 euclidien}
 
 \subsubsection{Définition}
 
-Soient \((E,\varphi)\) un espace vectoriel euclidien et \(\B\) une famille 
+Soient \((E,\varphi)\) un espace vectoriel euclidien et \(\B\) une famille
 finie de vecteurs de \(E\).
 \begin{defdef}
-  \(\B\) est une base orthogonale (BOG) de \(E\) si et seulemet si \(\B\) est 
+  \(\B\) est une base orthogonale (BOG) de \(E\) si et seulemet si \(\B\) est
   une base de \(E\) et si \(\B\) est une famille orthogonale de \(E\).
 
-  \(\B\) est une base orthonormale (BON) de \(E\) si et seulemet si \(\B\) est 
+  \(\B\) est une base orthonormale (BON) de \(E\) si et seulemet si \(\B\) est
   une base de \(E\) et si \(\B\) est une famille orthonormale de \(E\).
 \end{defdef}
 
-\emph{Remarque~:} Si \(E\) est une droite vectorielle, alors \(\B=(x)\) est 
-une BOG si et seulement si \(x\) est non nul et c'est une BON si et seulement 
+\emph{Remarque~:} Si \(E\) est une droite vectorielle, alors \(\B=(x)\) est
+une BOG si et seulement si \(x\) est non nul et c'est une BON si et seulement
 si \(\norme{x}=1\).
 
 \subsubsection{Caractérisation}
 
-Soient \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n\in 
+Soient \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n\in
 \N^*\) et \(\B=(e_i)_{i \in \intervalleentier{1}{n}} \in E^n\).
 
 \begin{prop}
   \(\B\) est une base orthogonale de \(E\) si et seulement si~:
   \begin{itemize}
     \item pour tout \(i \in \intervalleentier{1}{n}\), \(e_i \neq 0\);
-    \item pour tout \((i,j)\in \intervalleentier{1}{n}^2\) tel que \(i \neq 
+    \item pour tout \((i,j)\in \intervalleentier{1}{n}^2\) tel que \(i \neq
       j\) on a \(e_i \perp e_j\).
   \end{itemize}
 \end{prop}
 \begin{proof}
-  \(\implies\) C'est évident : le fait que \(\B\) est une base implique que 
-  tous les vecteurs de \(\B\) sont non nuls, et le fait que la famille soit 
+  \(\implies\) C'est évident : le fait que \(\B\) est une base implique que
+  tous les vecteurs de \(\B\) sont non nuls, et le fait que la famille soit
   orthogonale implique trivialement l'orthogonalité des vecteurs deux à deux.
 
-  \(\impliedby\) Le deuxième point implique que la famille \(\B\) est 
-  orthogonale. De plus c'est une famille orthogonale dont aucun des vecteurs 
-  n'est nul donc \(\B\) est une famille libre. C'est une famille libre de 
+  \(\impliedby\) Le deuxième point implique que la famille \(\B\) est
+  orthogonale. De plus c'est une famille orthogonale dont aucun des vecteurs
+  n'est nul donc \(\B\) est une famille libre. C'est une famille libre de
   cardinal \(n=\Dim E\) donc c'est une base.
 \end{proof}
 %
@@ -749,38 +749,38 @@ Soient \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n\in
   \(\B\) est une base orthonormale de \(E\) si et seulement si~:
   \begin{itemize}
     \item pour tout \(i \in \intervalleentier{1}{n}\), \(\norme{e_i}=1\);
-    \item pour tout \((i,j)\in \intervalleentier{1}{n}^2\) tel que \(i \neq 
+    \item pour tout \((i,j)\in \intervalleentier{1}{n}^2\) tel que \(i \neq
       j\) on a \(e_i \perp e_j\).
   \end{itemize}
   C'est-à-dire
   \begin{equation}
-    \B \text{~est une BON} \iff \forall (i,j)\in \intervalleentier{1}{n}^2 
+    \B \text{~est une BON} \iff \forall (i,j)\in \intervalleentier{1}{n}^2
     \quad \prodscal{e_i}{e_j}=\delta_{ij}.
   \end{equation}
 \end{prop}
 \begin{proof}
   \(\implies\) C'est la définition de la BON.
 
-  \(\impliedby\) D'après la proposition précédente, \(\B\) est une BOG\@. De 
+  \(\impliedby\) D'après la proposition précédente, \(\B\) est une BOG\@. De
   plus tous ces vecteurs sont unitaires, donc c'est une BON\@.
 \end{proof}
 \begin{prop}
-  Soit \(\B=(e_i)_{1 \leqslant i \leqslant n}\) une BOG de \(E\). Alors 
-  \(\B'=\left(\frac{e_i}{\norme{e_i}}\right)_{i \in 
-  \intervalleentier{1}{n}}=(b_i)_{i \in \intervalleentier{1}{n}}\) est une BON 
+  Soit \(\B=(e_i)_{1 \leqslant i \leqslant n}\) une BOG de \(E\). Alors
+  \(\B'=\left(\frac{e_i}{\norme{e_i}}\right)_{i \in
+  \intervalleentier{1}{n}}=(b_i)_{i \in \intervalleentier{1}{n}}\) est une BON
   de \(E\).
 \end{prop}
 \begin{proof}
   Déjà \(\B' \subset E\) et \(\Card \B' = n = \Dim E\). De plus
   \begin{equation}
-    \forall (i,j) \in \intervalleentier{1}{n}^2 \quad 
-    \prodscal{b_i}{b_j}=\frac{\prodscal{e_i}{e_j}}{\norme{e_i}\norme{e_j}} = 
+    \forall (i,j) \in \intervalleentier{1}{n}^2 \quad
+    \prodscal{b_i}{b_j}=\frac{\prodscal{e_i}{e_j}}{\norme{e_i}\norme{e_j}} =
     \delta_{ij}.
   \end{equation}
   Par caractérisation, \(\B\) est une BON de \(E\).
 \end{proof}
 
-\emph{Exemple~:} La base canonique de \(\R^n\) est une BON de \(\R^n\) munique 
+\emph{Exemple~:} La base canonique de \(\R^n\) est une BON de \(\R^n\) munique
 du produit scalaire canonique.
 
 \subsection{Existence de bases orthonormales dans un espace euclidien}
@@ -789,26 +789,26 @@ du produit scalaire canonique.
   Tout espace vectoriel euclidien admet au moins une base orthonormale.
 \end{theo}
 \begin{proof}
-  On prouve par récurrence sur \(n \in \N^{*}\) l'assertion \(\P(n)\) ``Si 
-  \(E\) est un espace vectoriel euclidien de dimension \(n\), alors \(E\) 
+  On prouve par récurrence sur \(n \in \N^{*}\) l'assertion \(\P(n)\) ``Si
+  \(E\) est un espace vectoriel euclidien de dimension \(n\), alors \(E\)
   admet une base orthonormale.''
 
-  \emph{Initialisation~:} Soit \(E\) un espace vectoriel euclidien de 
-  dimension \(1\). Soit \(x \in E\setminus\{0\}\), alors 
-  \(\left(\frac{x}{\norme{x}}\right)\) est une bas orthonormale de \(E\). 
+  \emph{Initialisation~:} Soit \(E\) un espace vectoriel euclidien de
+  dimension \(1\). Soit \(x \in E\setminus\{0\}\), alors
+  \(\left(\frac{x}{\norme{x}}\right)\) est une bas orthonormale de \(E\).
   \(\P(1)\) est vraie.
 
-  \emph{Hérédité~:} Soit un naturel \(n\) non nul. Supposons que \(\P(n)\) est 
-  vraie, et démontrons \(\P(n+1)\). Soit \(E\) un espace vectoriel euclidien 
-  de dimension \(n+1\). Soit \(x \in E\setminus\{0\}\) et posons \(F = 
+  \emph{Hérédité~:} Soit un naturel \(n\) non nul. Supposons que \(\P(n)\) est
+  vraie, et démontrons \(\P(n+1)\). Soit \(E\) un espace vectoriel euclidien
+  de dimension \(n+1\). Soit \(x \in E\setminus\{0\}\) et posons \(F =
   \VectEngendre(x)\).
 
-  \(F^\perp\) est un sous-espace vectoriel de \(E\) de dimension \(n\). Muni 
-  du produit scalaire induit par celui de \(E\), \(F^\perp\) est un sous 
-  espace vectoriel euclidien de dimension \(n\). Appliquons-lui l'hypothèse de 
-  récurrence : Il existe une base orthonormale \(\B'=(b_1, \ldots, b_n)\) de 
-  \(F^\perp\). Soit \(\B=\B'\cup\{b_{n+1}\}\) avec 
-  \(b_{n+1}=\left(\frac{x}{\norme{x}}\right)\). On vérifie que \(\B\) est une 
+  \(F^\perp\) est un sous-espace vectoriel de \(E\) de dimension \(n\). Muni
+  du produit scalaire induit par celui de \(E\), \(F^\perp\) est un sous
+  espace vectoriel euclidien de dimension \(n\). Appliquons-lui l'hypothèse de
+  récurrence : Il existe une base orthonormale \(\B'=(b_1, \ldots, b_n)\) de
+  \(F^\perp\). Soit \(\B=\B'\cup\{b_{n+1}\}\) avec
+  \(b_{n+1}=\left(\frac{x}{\norme{x}}\right)\). On vérifie que \(\B\) est une
   base orthonormale de \(E\)~:
   \begin{itemize}
     \item \(\Card(\B)=n+1=\Dim(E)\);
@@ -817,44 +817,44 @@ du produit scalaire canonique.
         \prodscal{b_i}{b_j} = \begin{cases}
           \delta_{ij} & \text{si~} i \leqslant n \text{~et~} j \leqslant n \\
           & \text{~car~} \B' \text{~est une BON} \\
-          0 = \delta_{ij} & \text{si~} (i \leqslant n, \ j=n+1) \text{~ou~} (j 
+          0 = \delta_{ij} & \text{si~} (i \leqslant n, \ j=n+1) \text{~ou~} (j
           \leqslant n, \ i=n+1) \\
           &  \text{~car~} F \perp F^{\perp} \\
-          1 = \delta_{ij} & \text{si~} i=j=n+1 \text{~car~} 
+          1 = \delta_{ij} & \text{si~} i=j=n+1 \text{~car~}
           \prodscal{b_{n+1}}{b_{n+1}}=1
         \end{cases}
       \end{equation}
   \end{itemize}
   Donc \(\B\) est une base orthonormale de \(E\).
 
-  \emph{Conclusion~:} Le théorème de récurrence permet de conclure que 
+  \emph{Conclusion~:} Le théorème de récurrence permet de conclure que
   l'assertion \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 \begin{theo}
-  Toute famille orthonormale d'un espace vectoriel euclidien \(E\) peut être 
+  Toute famille orthonormale d'un espace vectoriel euclidien \(E\) peut être
   complétée en une base orthonormale de \(E\).
 \end{theo}
 \begin{proof}
-  Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n 
-  \geqslant 1\). Soit \(\F\) une famille orthonormale de \(E\). \(\F\) est 
-  donc une famille libre de \(E\). Soit \(p \leqslant n\) le cardinal de 
-  \(\F\), et notons \(\F=(f_1, \ldots, f_p)\). Deux cas se présentent~: Si 
+  Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n
+  \geqslant 1\). Soit \(\F\) une famille orthonormale de \(E\). \(\F\) est
+  donc une famille libre de \(E\). Soit \(p \leqslant n\) le cardinal de
+  \(\F\), et notons \(\F=(f_1, \ldots, f_p)\). Deux cas se présentent~: Si
   \(p=n\) alors \(\F\) est déjà une base orthonormale.
 
-  Sinon, on note \(F=\VectEngendre(\F)\), et \(\dim F^{\perp} = n-p\geqslant 
-  1\). Muni du produit scalaire induit par celui de \(E\), \(F^\perp\) est un 
-  espace vectoriel euclidien. D'après le théorème précédent, \(F^\perp\) admet 
-  une base orthonormale notée \(\F'=(f_{p+1}, \ldots, f_{n})\). Soit 
+  Sinon, on note \(F=\VectEngendre(\F)\), et \(\dim F^{\perp} = n-p\geqslant
+  1\). Muni du produit scalaire induit par celui de \(E\), \(F^\perp\) est un
+  espace vectoriel euclidien. D'après le théorème précédent, \(F^\perp\) admet
+  une base orthonormale notée \(\F'=(f_{p+1}, \ldots, f_{n})\). Soit
   \(\B=\F\cup\F'\). Montrons que \(\B\) est une base orthonormale de \(E\)~:
   \begin{itemize}
     \item \(\Card(\B)=n=\Dim(E)\);
     \item Pour tout \((i,j) \in \intervalleentier{1}{n}^2\) on a
       \begin{equation}
-        \prodscal{f_i}{f_j} = \begin{cases} \delta_{ij} & \text{si~} (i 
-          \leqslant p, \ j \leqslant p) \text{~ou~} (i \geqslant p+1, \ j 
+        \prodscal{f_i}{f_j} = \begin{cases} \delta_{ij} & \text{si~} (i
+          \leqslant p, \ j \leqslant p) \text{~ou~} (i \geqslant p+1, \ j
           \geqslant p+1) \\
           & \text{~car~} \F, \F'\text{~sont des~} BON \\
-          0=\delta_{ij} & \text{~si~} (i \leqslant p, \ j \leqslant p) 
+          0=\delta_{ij} & \text{~si~} (i \leqslant p, \ j \leqslant p)
           \text{~ou~} (i \geqslant p+1, \ j \geqslant p+1)\\
         &  \text{~car~} F \perp F^\perp \end{cases}
       \end{equation}
@@ -862,11 +862,11 @@ du produit scalaire canonique.
   \end{itemize}
 \end{proof}
 \begin{theo}
-  Soit \(E\) un espace vectoriel euclidien de dimension \(n \geqslant 1\). 
-  Soit \(\B=(b_1, \ldots, b_n)\) une base orthonormale de \(E\). Soit \(p \in 
-  \intervalleentier{0}{n}\). On note \(\B_1 = (b_i)_{1 \leqslant i \leqslant 
-  p}\) (\(\B_1 = \emptyset\) si \(p=0\)) et \(\B_2 = (b_i)_{p+1 \leqslant i 
-  \leqslant n}\) (\(\B_2 = \emptyset\) si \(p=n\)). Soient 
+  Soit \(E\) un espace vectoriel euclidien de dimension \(n \geqslant 1\).
+  Soit \(\B=(b_1, \ldots, b_n)\) une base orthonormale de \(E\). Soit \(p \in
+  \intervalleentier{0}{n}\). On note \(\B_1 = (b_i)_{1 \leqslant i \leqslant
+  p}\) (\(\B_1 = \emptyset\) si \(p=0\)) et \(\B_2 = (b_i)_{p+1 \leqslant i
+  \leqslant n}\) (\(\B_2 = \emptyset\) si \(p=n\)). Soient
   \(F_1=\VectEngendre(\B_1)\) et \(F_2=\VectEngendre(\B_2)\). Alors
   \begin{equation}
     \begin{cases}
@@ -874,46 +874,46 @@ du produit scalaire canonique.
       F_2 = F_1^\perp
     \end{cases}.
   \end{equation}
-  De plus \(\B_1\) et \(\B_2\) sont des bases orthonormales respectives de 
+  De plus \(\B_1\) et \(\B_2\) sont des bases orthonormales respectives de
   \(F_1\) et \(F_2\).
 \end{theo}
 \begin{proof}
-  On a déjà vu au chapitre~\ref{chap:dimensionfinie} (théorème~\ref{theo:theosuppdimfinie}) que \(F_1\) et \(F_2\) sont supplémentaires 
+  On a déjà vu au chapitre~\ref{chap:dimensionfinie} (théorème~\ref{theo:theosuppdimfinie}) que \(F_1\) et \(F_2\) sont supplémentaires
   dans \(E\). Montrons l'orthogonalité~:
 
-  Soit \(x \in F_1\) et \(y \in F_2\). Il existe \((\alpha_i)_{1 \leqslant i 
-  \leqslant p} \in \R^p\) et \((\beta_i)_{p+1 \leqslant i \leqslant n}\in 
-  \R^{n-p}\) telles que \(x = \sum_{i=1}^p \alpha_i b_i\) et \(y = 
+  Soit \(x \in F_1\) et \(y \in F_2\). Il existe \((\alpha_i)_{1 \leqslant i
+  \leqslant p} \in \R^p\) et \((\beta_i)_{p+1 \leqslant i \leqslant n}\in
+  \R^{n-p}\) telles que \(x = \sum_{i=1}^p \alpha_i b_i\) et \(y =
   \sum_{i=p+1}^n \beta_i b_i\). Leur produit scalaire vaut
   \begin{align*}
-    \prodscal{x}{y} &= \prodscal{\sum_{i=1}^p \alpha_i b_i}{\sum_{j=p+1}^n 
+    \prodscal{x}{y} &= \prodscal{\sum_{i=1}^p \alpha_i b_i}{\sum_{j=p+1}^n
     \beta_j b_j}\\
-    &= \sum_{i=1}^p \alpha_i \sum_{j=p+1}^n \beta_j 
+    &= \sum_{i=1}^p \alpha_i \sum_{j=p+1}^n \beta_j
     \underbrace{\prodscal{b_i}{b_j}}_{=0 \text{~car~} i\neq j}\\
     &=0.
   \end{align*}
-  Donc \(F_1 \perp F_2\), et puisque \(E = F_1 \oplus F_2\), alors \(F_2 = 
+  Donc \(F_1 \perp F_2\), et puisque \(E = F_1 \oplus F_2\), alors \(F_2 =
   F_1^\perp\), d'après le corollaire~\ref{corth:supportho}.
 
   \(\B_1\) et \(\B_2\) vérifient toutes les deux~:
   \begin{equation}
-    \forall (i,j) \in \intervalleentier{1}{n}^2 \quad 
+    \forall (i,j) \in \intervalleentier{1}{n}^2 \quad
     \prodscal{b_i}{b_j}=\delta_{ij}.
   \end{equation}
-  De plus \(\B_1\) et \(\B_2\) sont des bases de \(F_1\) et \(F_2\) (libres 
-  car extraites de \(\B\) et génératrices par définition de \(F_1\) et\(F 
-  _2\)). Alors \(\B_1\) et \(\B_2\) sont des bases orthonormales respectives 
+  De plus \(\B_1\) et \(\B_2\) sont des bases de \(F_1\) et \(F_2\) (libres
+  car extraites de \(\B\) et génératrices par définition de \(F_1\) et\(F
+  _2\)). Alors \(\B_1\) et \(\B_2\) sont des bases orthonormales respectives
   de \(F_1\) et \(F_2\).
 \end{proof}
 
-\subsection{Construction d'une base orthonormale par le procédé de 
+\subsection{Construction d'une base orthonormale par le procédé de
 Gram-Schmidt}
 
 \begin{theo}
-  Soit \((E,\varphi)\) un espace vecoriel euclidien de dimension \(n \geqslant 
-  1\). Soit \(\E=(e_1, \ldots, e_n)\) une base quelconque de \(E\). Alors il 
-  existe de façon unique une famille de réels \((\alpha_{ij})_{1 \leqslant i<j 
-  \leqslant n}\) telle que la famille \((b_j)_{1 \leqslant j \leqslant n} \in 
+  Soit \((E,\varphi)\) un espace vecoriel euclidien de dimension \(n \geqslant
+  1\). Soit \(\E=(e_1, \ldots, e_n)\) une base quelconque de \(E\). Alors il
+  existe de façon unique une famille de réels \((\alpha_{ij})_{1 \leqslant i<j
+  \leqslant n}\) telle que la famille \((b_j)_{1 \leqslant j \leqslant n} \in
   E^n\) vérifiant
   \begin{equation} \Sigma
     \begin{cases}
@@ -927,116 +927,116 @@ Gram-Schmidt}
   \end{equation}
   soit une base orthogonale de \(E\). De plus
   \begin{equation}
-    \forall (i,j) \in \intervalleentier{1}{n}^2 \ 1 \leqslant i < j \leqslant 
+    \forall (i,j) \in \intervalleentier{1}{n}^2 \ 1 \leqslant i < j \leqslant
     n \quad \alpha_{ij} = -\frac{\prodscal{b_i}{e_j}}{\norme{b_i}^2}.
   \end{equation}
-  Il reste à normaliser cette base~: la famille 
-  \(\left(\frac{b_j}{\norme{b_j}}\right)_{1 \leqslant j \leqslant n}\) est une 
+  Il reste à normaliser cette base~: la famille
+  \(\left(\frac{b_j}{\norme{b_j}}\right)_{1 \leqslant j \leqslant n}\) est une
   base orthonormale de \(E\).
 \end{theo}
 \begin{proof}[Démonstration par récurrence]
-  Pour tout naturel \(n\) non nul on pose \(\P(n)\) ``pour tout espace 
+  Pour tout naturel \(n\) non nul on pose \(\P(n)\) ``pour tout espace
   vectoriel euclidien de dimension \(n\), toute base \(\E\), \ldots''
 
-  \emph{Initialisation~:} Soit \(E\) un espace vectoriel euclidien de 
-  dimension \(1\). Soit \(\E=(e_1)\) une base de \(E\), et elle est 
+  \emph{Initialisation~:} Soit \(E\) un espace vectoriel euclidien de
+  dimension \(1\). Soit \(\E=(e_1)\) une base de \(E\), et elle est
   orthogonale. \(\P(1)\) est vraie.
 
-  \emph{Hérédité~:} Soit \(n \in \N^*\), et supposons \(\P(n)\). Soit \(E\) un 
-  espace vectoriel euclidien de dimension \(n+1\), \(\E=(e_1, \ldots, 
-  e_{n+1})\) une base de \(\E\). Soient \(\E'=\E\setminus\{e_{n+1}\}\) et 
-  \(E'=\VectEngendre(\E')\) muni du produit scalaire induit. \(E'\) est un 
-  espace vectoriel euclidien de dimension \(n\). Par hypothèse de récurrence, 
-  il existe, de façon unique, une famille de réels \((\alpha_{ij})_{1 
-  \leqslant i<j \leqslant n}\) telle que la famille \((b_j)_{1 \leqslant j 
-  \leqslant n} \in E^n\) vérifiant \(\Sigma\) formant une base orthogonale de 
-  \(E'\). 
+  \emph{Hérédité~:} Soit \(n \in \N^*\), et supposons \(\P(n)\). Soit \(E\) un
+  espace vectoriel euclidien de dimension \(n+1\), \(\E=(e_1, \ldots,
+  e_{n+1})\) une base de \(\E\). Soient \(\E'=\E\setminus\{e_{n+1}\}\) et
+  \(E'=\VectEngendre(\E')\) muni du produit scalaire induit. \(E'\) est un
+  espace vectoriel euclidien de dimension \(n\). Par hypothèse de récurrence,
+  il existe, de façon unique, une famille de réels \((\alpha_{ij})_{1
+  \leqslant i<j \leqslant n}\) telle que la famille \((b_j)_{1 \leqslant j
+  \leqslant n} \in E^n\) vérifiant \(\Sigma\) formant une base orthogonale de
+  \(E'\).
 
-  Il reste à prouver l'existence et l'unicité de \((\alpha_{i n+1})_{1 
-  \leqslant i \leqslant n} \in \R^n\) telle que si \(b_{n+1} = \sum_{i=1}^{n} 
-  \alpha_{i n+1}b_i  + e_{n+1}\) alors \((b_j)_{1 \leqslant j \leqslant n+1}\) 
+  Il reste à prouver l'existence et l'unicité de \((\alpha_{i n+1})_{1
+  \leqslant i \leqslant n} \in \R^n\) telle que si \(b_{n+1} = \sum_{i=1}^{n}
+  \alpha_{i n+1}b_i  + e_{n+1}\) alors \((b_j)_{1 \leqslant j \leqslant n+1}\)
   est une base orthogonale de \(E\).
 
-  \emph{Unicité (Analyse)~:} Si les \(\alpha_{i n+1}\) existent alors pour 
+  \emph{Unicité (Analyse)~:} Si les \(\alpha_{i n+1}\) existent alors pour
   tout \(j \in \intervalleentier{1}{n}\), on a
   \begin{align*}
     0 &= \prodscal{b_{n+1}}{b_j} \\
     0 &= \prodscal{\sum_{i=1}^{n} \alpha_{i n+1}b_i  + e_{n+1}}{b_j}\\
-    0 &= \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} + 
+    0 &= \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} +
     \prodscal{e_{n+1}}{b_j} && \text{linéarité à gauche}\\
-    0 &= \alpha_{j n+1} \prodscal{b_j}{b_j} + \prodscal{e_{n+1}}{b_j} && 
+    0 &= \alpha_{j n+1} \prodscal{b_j}{b_j} + \prodscal{e_{n+1}}{b_j} &&
     (b_j)_{1 \leqslant j \leqslant n} \text{~est orthogonale}\\
-    \alpha_{j n+1} &= -\frac{\prodscal{e_{n+1}}{b_j}}{\norme{b_j}^2}. && b_j 
+    \alpha_{j n+1} &= -\frac{\prodscal{e_{n+1}}{b_j}}{\norme{b_j}^2}. && b_j
     \neq 0
   \end{align*}
-  On a montré l'unicité sous réserve d'existence et on a trouvé la seule 
+  On a montré l'unicité sous réserve d'existence et on a trouvé la seule
   valeur possible des \(\alpha_{i n+1}\).
 
-  \emph{Existence (Synthèse)~:} Pour tout \(i \in \intervalleentier{1}{n}\), 
-  on pose \(\alpha_{i n+1} = -\frac{\prodscal{e_{n+1}}{b_i}}{\norme{b_i}^2}\) 
-  et \(b_{n+1}=\sum_{i=1}^{n} \alpha_{i n+1}b_i  + e_{n+1}\). 
+  \emph{Existence (Synthèse)~:} Pour tout \(i \in \intervalleentier{1}{n}\),
+  on pose \(\alpha_{i n+1} = -\frac{\prodscal{e_{n+1}}{b_i}}{\norme{b_i}^2}\)
+  et \(b_{n+1}=\sum_{i=1}^{n} \alpha_{i n+1}b_i  + e_{n+1}\).
 
-  Montrons que \((b_j)_{1 \leqslant j \leqslant n+1}\) est une base 
+  Montrons que \((b_j)_{1 \leqslant j \leqslant n+1}\) est une base
   orthogonale de \(E\)~:
   \begin{itemize}
-    \item Pour tout \((i,j) \in \intervalleentier{1}{n}^2\) si \(i \neq j\) 
-      alors \(\prodscal{b_i}{b_j}=0\) car \((b_j)_{1 \leqslant j \leqslant 
+    \item Pour tout \((i,j) \in \intervalleentier{1}{n}^2\) si \(i \neq j\)
+      alors \(\prodscal{b_i}{b_j}=0\) car \((b_j)_{1 \leqslant j \leqslant
       n}\) est une base orthogonale de \(E\). Ensuite
       \begin{align*}
-        \prodscal{b_i}{b_{n+1}} &= \prodscal{b_i}{\sum_{i=1}^{n} \alpha_{i 
+        \prodscal{b_i}{b_{n+1}} &= \prodscal{b_i}{\sum_{i=1}^{n} \alpha_{i
         n+1}b_i  + e_{n+1}} \\
-        & = \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} + 
+        & = \sum_{i=1}^{n} \alpha_{i n+1} \prodscal{b_i}{b_j} +
         \prodscal{b_i}{e_{n+1}} \\
         &=\alpha_{i n+1} \norme{b_i}^2 + \prodscal{b_i}{e_{n+1}} \\
         &=0.
       \end{align*}
-      Alors \((b_j)_{1 \leqslant j \leqslant n+1}\)  est une famille 
+      Alors \((b_j)_{1 \leqslant j \leqslant n+1}\)  est une famille
       orthogonale. Montrons que c'est une base~:
       \begin{itemize}
-        \item Si \(i \leqslant n\), alors \(b_i \neq 0\) car \((b_j)_{1 
+        \item Si \(i \leqslant n\), alors \(b_i \neq 0\) car \((b_j)_{1
           \leqslant j \leqslant n}\) est une base orthogonale de \(E'\);
-        \item Si on avait \(b_{n+1}=0\), on aurait \(e_{n+1}= -\sum_{i=1}^{n} 
-          \alpha_{i n+1}b_i\). C'est-à-dire \(e_{n+1} \in \VectEngendre(b_1, 
-          \ldots, b_n) = \VectEngendre(e_1, \ldots, e_n)\). Or c'est 
-          impossible car \((e_1, \ldots, e_{n+1})\) est une base. Donc 
+        \item Si on avait \(b_{n+1}=0\), on aurait \(e_{n+1}= -\sum_{i=1}^{n}
+          \alpha_{i n+1}b_i\). C'est-à-dire \(e_{n+1} \in \VectEngendre(b_1,
+          \ldots, b_n) = \VectEngendre(e_1, \ldots, e_n)\). Or c'est
+          impossible car \((e_1, \ldots, e_{n+1})\) est une base. Donc
           \(b_{n+1} \neq 0\).
       \end{itemize}
-      \((b_j)_{1 \leqslant j \leqslant n+1}\)  est une famille orthogonale 
-      dont tous les vecteurs sont non nuls, elle est donc libre. Finalement 
-      c'est une base car \(\Card(b_j)_{1 \leqslant j \leqslant n+1}=n+1=\Dim 
+      \((b_j)_{1 \leqslant j \leqslant n+1}\)  est une famille orthogonale
+      dont tous les vecteurs sont non nuls, elle est donc libre. Finalement
+      c'est une base car \(\Card(b_j)_{1 \leqslant j \leqslant n+1}=n+1=\Dim
       E\).
   \end{itemize}
   Alors \(\P(n+1)\) est vraie.
 
-  \emph{Conclusion~:} Le théorème de récurrence nous permet de conclure en 
-  écrivant que l'assertion \(\P(n)\) est vraie pour tout naturel \(n\) non 
+  \emph{Conclusion~:} Le théorème de récurrence nous permet de conclure en
+  écrivant que l'assertion \(\P(n)\) est vraie pour tout naturel \(n\) non
   nul.
 \end{proof}
 
 \emph{Remarques~:}
 \begin{enumerate}
-  \item La démonstration par récurrence fournit un procédé pour déterminer la 
-    base \((b_1, \ldots, b_n)\), appelé procédé d'orthogonalisation ou procédé 
+  \item La démonstration par récurrence fournit un procédé pour déterminer la
+    base \((b_1, \ldots, b_n)\), appelé procédé d'orthogonalisation ou procédé
     de Gram Schmidt;
-  \item La matrice de passage \(\P_{\B,\E}\) de la base \(\E\) à la base 
-    \(\B\) est triangulaire supérieure avec que des \(1\) sur la diagonale, 
+  \item La matrice de passage \(\P_{\B,\E}\) de la base \(\E\) à la base
+    \(\B\) est triangulaire supérieure avec que des \(1\) sur la diagonale,
     idem pour \(\P_{\E,\B}=\P_{\B,\E}^{-1}\);
-  \item Pour tout naturel \(p \in \intervalleentier{1}{n}\), 
+  \item Pour tout naturel \(p \in \intervalleentier{1}{n}\),
     \(\VectEngendre(e_1, \ldots, e_p)=\VectEngendre(b_1, \ldots, b_p)\).
 \end{enumerate}
 
 \subsection{Expressions analytiques dans une base orthonormée donnée}
 
-Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \geqslant 
+Soit \((E,\varphi)\) un espace vectoriel euclidien de dimension \(n \geqslant
 1\). Soit \(\B=(b_1, \ldots, b_n)\) une base orthonormée de \(E\).
 
 \subsubsection{Coordonnées d'un vecteur}
 
-Soit \(x \in E\), \(\B\) une base de \(E\). Il existe un unitque \(n\)-uplet 
-\((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) tel que \(x = \sum_{i=1}^n 
+Soit \(x \in E\), \(\B\) une base de \(E\). Il existe un unitque \(n\)-uplet
+\((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) tel que \(x = \sum_{i=1}^n
 x_ib_i\). Pour tout \(j \in \intervalleentier{1}{n}\), on a
 \begin{align*}
-  \prodscal{x}{b_j} &=\sum_{i=1}^n x_i\prodscal{b_i}{b_j} && \text{linéarité} 
+  \prodscal{x}{b_j} &=\sum_{i=1}^n x_i\prodscal{b_i}{b_j} && \text{linéarité}
   \\
   &=x_j. && \B \text{~est une BON}
 \end{align*}
@@ -1045,8 +1045,8 @@ Alors pour tout \(x \in E\), on a \(x = \sum_{i=1}^n \prodscal{x}{b_i}b_i\).
 
 \subsubsection{Produit scalaire}
 
-Soient \(x\) et \(y\) des vecteurs de \(E\). Il existe deux uniques familles 
-de scalaire \((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) et \((y_i)_{1 
+Soient \(x\) et \(y\) des vecteurs de \(E\). Il existe deux uniques familles
+de scalaire \((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) et \((y_i)_{1
 \leqslant i \leqslant n}\in\R^n\) telles que
 \begin{align*}
   x &= \sum_{i=1}^n x_ib_i \\
@@ -1055,24 +1055,24 @@ de scalaire \((x_i)_{1 \leqslant i \leqslant n}\in\R^n\) et \((y_i)_{1
 Ainsi le produit scalaire s'écrit
 \begin{align*}
   \prodscal{x}{y} &=\prodscal{\sum_{i=1}^n x_ib_i}{\sum_{j=1}^n y_jb_j} \\
-  &=\sum_{i=1}^n  \sum_{j=1}^n x_i y_j \prodscal{b_i}{b_j} && 
+  &=\sum_{i=1}^n  \sum_{j=1}^n x_i y_j \prodscal{b_i}{b_j} &&
   \text{bilinéarité} \\
   &=\sum_{i=1}^n  x_i y_i. && \B \text{~est une BON}
 \end{align*}
 
-Finalement pour tout \((x,y) \in E^2\), on a \(\prodscal{x}{y} = \sum_{i=1}^n 
+Finalement pour tout \((x,y) \in E^2\), on a \(\prodscal{x}{y} = \sum_{i=1}^n
 \prodscal{x}{b_i}\prodscal{y}{b_i}\).
 
-\emph{Remarque~:} Si on note \(X=\Mat_{\B}(x) \in \Mnp{n}{1}{\R}\) et 
+\emph{Remarque~:} Si on note \(X=\Mat_{\B}(x) \in \Mnp{n}{1}{\R}\) et
 \(Y=\Mat_{\B}(y) \in \Mnp{n}{1}{\R}\), alors \(\prodscal{x}{y} = X^{\top}Y\).
 
 \subsubsection{Norme euclidienne}
 
-Soit \(x \in E\), il existe un unique \(n\)-uplet de scalaires 
-\((\lambda_i)_{i \in \intervalleentier{1}{n}}\) tel que \(x = \sum_{i=1}^n x_i 
+Soit \(x \in E\), il existe un unique \(n\)-uplet de scalaires
+\((\lambda_i)_{i \in \intervalleentier{1}{n}}\) tel que \(x = \sum_{i=1}^n x_i
 b_i\). On note \(X = \Mat_{\B}(x)\). Alors
 \begin{gather}
-  \norme{x} = \sqrt{\sum_{i=1}^n x_i^2}=\sqrt{\sum_{i=1}^n 
+  \norme{x} = \sqrt{\sum_{i=1}^n x_i^2}=\sqrt{\sum_{i=1}^n
   \prodscal{x}{b_i}^2} \\
   \norme{x}^2 = X^\top X
 \end{gather}
@@ -1080,80 +1080,80 @@ b_i\). On note \(X = \Mat_{\B}(x)\). Alors
 \subsection{Isomorphisme entre un espace euclidien et \(\R^n\)}
 
 \begin{theo}
-  Soit \((E,\varphi)\) un espace vectoriel euclidiende dimension \(n \geqslant 
-  1\). Soit \(\B\) une base orthonormale de \(E\). On note \(\E_c\) la base 
+  Soit \((E,\varphi)\) un espace vectoriel euclidiende dimension \(n \geqslant
+  1\). Soit \(\B\) une base orthonormale de \(E\). On note \(\E_c\) la base
   canonique de \(\R^n\) muni du produit scalaire canconique.
 
-  Il existe un unique isomorphisme \(u \in \Isom{E}{\R^n}\) tel que 
+  Il existe un unique isomorphisme \(u \in \Isom{E}{\R^n}\) tel que
   \(u(\B)=\E_c\). De plus \(u\) conserve le produit scalaire~:
   \begin{equation}
-    \forall (x,y) \in E^2 \quad 
+    \forall (x,y) \in E^2 \quad
     \prodscal{u(x)}{u(y)}=\varphi(x,y)=\prodscal{x}{y}.
   \end{equation}
 \end{theo}
 \begin{proof}
-  \(\B\) est une base de \(E\) et \(\Dim(E)=n\), alors il existe un unique \(u 
-  \in \Lin{E}{\R^n}\) tel que \(u(\B)=\E_c\). De plus \(\E_c\) est une base de 
-  \(\R^n\), donc \(u\) est bijective, c'est un isomorphisme de \(E\) sur 
+  \(\B\) est une base de \(E\) et \(\Dim(E)=n\), alors il existe un unique \(u
+  \in \Lin{E}{\R^n}\) tel que \(u(\B)=\E_c\). De plus \(\E_c\) est une base de
+  \(\R^n\), donc \(u\) est bijective, c'est un isomorphisme de \(E\) sur
   \(\R^n\).
 
-  Pour tout couple \((x,y) \in E^2\), il existe deux uniques \(n\)-uplets 
-  \((x_i)_{i \in \intervalleentier{1}{n}}\in \R^n\) et \((y_i)_{i \in 
+  Pour tout couple \((x,y) \in E^2\), il existe deux uniques \(n\)-uplets
+  \((x_i)_{i \in \intervalleentier{1}{n}}\in \R^n\) et \((y_i)_{i \in
   \intervalleentier{1}{n}}\in \R^n\) tels que
   \begin{equation}
     x = \sum_{i=1}^n x_i b_i, \quad y = \sum_{i=1}^n y_i b_i.
   \end{equation}
   Alors
   \begin{align*}
-    \prodscal{u(x)}{u(y)} &=\prodscal{\sum_{i=1}^n x_i u(b_i)}{\sum_{j=1}^n 
+    \prodscal{u(x)}{u(y)} &=\prodscal{\sum_{i=1}^n x_i u(b_i)}{\sum_{j=1}^n
     y_j u(b_j)} && u \in \Lin{E}{\R^n} \\
-    &=\prodscal{\sum_{i=1}^n x_i e_i}{\sum_{j=1}^n y_j e_j} && 
+    &=\prodscal{\sum_{i=1}^n x_i e_i}{\sum_{j=1}^n y_j e_j} &&
     \text{définition de } u\\
-    &=\sum_{i=1}^n \sum_{j=1}^n x_iy_j \prodscal{e_i}{e_j} && 
+    &=\sum_{i=1}^n \sum_{j=1}^n x_iy_j \prodscal{e_i}{e_j} &&
     \text{bilinéarité} \\
     &=\sum_{i=1}^n x_i y_i && \E_c \text{~est une  BOG} \\
     &=\varphi(x,y)=\prodscal{x}{y}.
   \end{align*}
 \end{proof}
 \begin{theo}
-  Soit \(E\) un espace vectoriel euclidien de dimension \(n \geqslant 1\). 
-  Soit \(\B\) une base de \(E\). Il existe un unique produit scalaire 
-  \(\varphi\) sur \(E\) tel que la base \(\B\) soit une base orthonormale de 
+  Soit \(E\) un espace vectoriel euclidien de dimension \(n \geqslant 1\).
+  Soit \(\B\) une base de \(E\). Il existe un unique produit scalaire
+  \(\varphi\) sur \(E\) tel que la base \(\B\) soit une base orthonormale de
   \(E\) pour le produit scalaire \(\varphi\).
 \end{theo}
 \begin{proof}[Analyse \& Unicité]
   Supposons avoir construit le produit scalaire \(\varphi\).
 
-  On peut lui appliquer le théorème précédent, alors pour tout \((x,y) \in 
-  E^2\), on a \(\varphi(x,y)=\prodscal{u(x)}{u(y)}\). De plus \(u\) ne dépend 
+  On peut lui appliquer le théorème précédent, alors pour tout \((x,y) \in
+  E^2\), on a \(\varphi(x,y)=\prodscal{u(x)}{u(y)}\). De plus \(u\) ne dépend
   que de la base \(\B\) et pas du produit scalaire \(\varphi\).
 
   Alors \(\varphi\) est défini en fonction unique de \(u\), et donc de \(\B\).
 \end{proof}
 \begin{proof}[Synthèse \& Existence]
-  On sait grâce au htéorème précédent qu'il existe un unique isomorphisme \(u 
+  On sait grâce au htéorème précédent qu'il existe un unique isomorphisme \(u
   \in \Isom{E}{\R^n}\) tel que \(u(\B)=\E_c\). On définit l'application
   \begin{equation}
     \fonction{\varphi}{E^2}{\R}{(x,y)}{\prodscal{u(x)}{u(y)}}.
   \end{equation}
-  L'application \(\varphi\) est symétrique puisque \(\prodscal{.}{.}\) l'est. 
+  L'application \(\varphi\) est symétrique puisque \(\prodscal{.}{.}\) l'est.
   Pour tout réel \(\lambda\) et tout triplet \((x,x',y) \in E^3\) on a
   \begin{align*}
     \varphi(\lambda x+x',y) &= \prodscal{u(\lambda x+x')}{u(y)} \\
-    &=\lambda \prodscal{u(x)}{u(y)}+ \prodscal{u(x')}{u(y)} && \text{linéarité 
+    &=\lambda \prodscal{u(x)}{u(y)}+ \prodscal{u(x')}{u(y)} && \text{linéarité
     de } u \text{~et~} \prodscal{.}{.} \\
     &=\lambda \varphi(x,y)+ \varphi(x,y').
   \end{align*}
-  \(\varphi\) est linéaire à gauche. Elle est aussi linéaire à droite et 
+  \(\varphi\) est linéaire à gauche. Elle est aussi linéaire à droite et
   symétrique.
 
-  Soit \(x \in E\), \(\varphi(x,x)=\norme{u(x)}^2 \geqslant 0\) et 
-  \(\varphi(x,x)=0 \iff u(x)=0 \iff x=0\) car \(u\) est bijective (donc 
+  Soit \(x \in E\), \(\varphi(x,x)=\norme{u(x)}^2 \geqslant 0\) et
+  \(\varphi(x,x)=0 \iff u(x)=0 \iff x=0\) car \(u\) est bijective (donc
   injective). L'application \(\varphi\) est définie positive.
 
   Au final, \(\varphi\) est un produit scalaire.
 
-  Il reste à vérifier que \(\B\) est une base orthonormale pour \(\varphi\). 
+  Il reste à vérifier que \(\B\) est une base orthonormale pour \(\varphi\).
   Pour tout \((i,j) \in \intervalleentier{1}{n}^2\), on a
   \begin{align*}
     \varphi(b_i,b_j) &= \prodscal{u(b_i)}{u(b_j)} \\
@@ -1169,43 +1169,43 @@ Soit \((E, \varphi)\) un espace vectoriel euclidien.
 
 \subsection{Notion de projecteur orthogonal}
 
-Soit \(p \in \Endo{E}\) un projecteur. Alors \(E = \Image(p)\oplus \Ker(p)\). 
+Soit \(p \in \Endo{E}\) un projecteur. Alors \(E = \Image(p)\oplus \Ker(p)\).
 D'après le théorème~\ref{theo:orthetsupp}, il y a équivalence entre
 \begin{enumerate}
   \item \(\Image(p) \perp \Ker(p)\);
   \item \(\Image(p) = \Ker(p)^\perp\);
   \item \(\Ker(p) = \Image(p)^\perp\).
 \end{enumerate}
-Lorsqu'une de ces conditions est vérifiée, on dit que \(p\) est un projecteur 
+Lorsqu'une de ces conditions est vérifiée, on dit que \(p\) est un projecteur
 orthogonal.
 
-\emph{Vocabulaire~:} Soit \(F\) un sous-espace vectoriel de \(E\), \(E = F 
-\oplus F^\perp\). Le projecteur sur \(F\) parallélement à \(F^\perp\) et noté 
+\emph{Vocabulaire~:} Soit \(F\) un sous-espace vectoriel de \(E\), \(E = F
+\oplus F^\perp\). Le projecteur sur \(F\) parallélement à \(F^\perp\) et noté
 \(p_F\) est appelé projecteur orthogonal de \(E\) sur \(F\).
 
 \begin{theo}
-  Soit \(p\) ine application de \(E\) dans \(E\). Il y a équivalence entre les 
+  Soit \(p\) ine application de \(E\) dans \(E\). Il y a équivalence entre les
   assertions suivantes~:
   \begin{enumerate}
     \item \(p\) est un projecteur orthognal de \(E\);
-    \item \(p \in \Endo{E}\), \(p \circ p =p\), et pour tout \((x,y) \in E^2\) 
+    \item \(p \in \Endo{E}\), \(p \circ p =p\), et pour tout \((x,y) \in E^2\)
       on a \(\prodscal{x}{p(y)}=\prodscal{p(x)}{y}\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
-  \(1 \implies 2\). Comme \(p\) est un projecteur, alors \(p \in \Endo{E}\) et 
+  \(1 \implies 2\). Comme \(p\) est un projecteur, alors \(p \in \Endo{E}\) et
   \(p \circ p =p\). Soient \((x,y) \in E^2\) alors
   \begin{align*}
     \prodscal{p(x)}{y} &=  \prodscal{p(x)}{y-p(y)+p(y)} \\
-    &= \prodscal{\underbrace{p(x)}_{\in \Image(p)}}{\underbrace{y-p(y)}_{\in 
+    &= \prodscal{\underbrace{p(x)}_{\in \Image(p)}}{\underbrace{y-p(y)}_{\in
     \Ker(p)}}+\prodscal{p(x)}{p(y)} \\
     &=  \prodscal{p(x)}{p(y)} && \Image(p) \perp \Ker(p)
   \end{align*}
-  De la même manière, par symétrie des rôles de \(x\) et \(y\) on a 
-  \(\prodscal{x}{p(y)}=\prodscal{p(x)}{p(y)}\). Donc 
+  De la même manière, par symétrie des rôles de \(x\) et \(y\) on a
+  \(\prodscal{x}{p(y)}=\prodscal{p(x)}{p(y)}\). Donc
   \(\prodscal{x}{p(y)}=\prodscal{p(x)}{y}\).
 
-  \(2 \implies 1\). \(p \in \Endo{E}\) et \(p \circ p =p\) impliquent que 
+  \(2 \implies 1\). \(p \in \Endo{E}\) et \(p \circ p =p\) impliquent que
   \(p\) est un projecteur de \(E\).
 
   Soit \(x \in \Ker(p)\) et \(y \in \Image(p)\). Alors
@@ -1219,9 +1219,9 @@ orthogonal.
 
 \subsection{Expression du projeté orthogonal}
 
-Soit \(F\) un sous-espace vectoriel de \(E\). Soit \(p_F\) le projecteur 
-orthogonal sur \(F\). On se donne une \emph{base orthogonale} \((f_1, \ldots, 
-f_p)\) de \(F\). On veut obtenir une expression de \(p_F(x)\) pour tout 
+Soit \(F\) un sous-espace vectoriel de \(E\). Soit \(p_F\) le projecteur
+orthogonal sur \(F\). On se donne une \emph{base orthogonale} \((f_1, \ldots,
+f_p)\) de \(F\). On veut obtenir une expression de \(p_F(x)\) pour tout
 vecteur \(x\) de \(E\).
 
 Soit \(x \in E\), alors \(p_F(x) \in F\) et
@@ -1231,24 +1231,24 @@ Soit \(x \in E\), alors \(p_F(x) \in F\) et
   &=\sum_{k=1}^n \prodscal{x}{f_k}f_k. && f_k \in F=\Image(p_F)
 \end{align*}
 
-\emph{Remarque~:} Pour tout \(x \in E\), \(x = p_F(x) +(x-p_F(x)) = p_F(x) + 
-p_{F^\perp}(x)\). Parfois c'est plus intéressant de calculer \(p_{F^\perp}\), 
-soit parce qu'il est de dimension plus petite, soit parce qu'on connait une de 
+\emph{Remarque~:} Pour tout \(x \in E\), \(x = p_F(x) +(x-p_F(x)) = p_F(x) +
+p_{F^\perp}(x)\). Parfois c'est plus intéressant de calculer \(p_{F^\perp}\),
+soit parce qu'il est de dimension plus petite, soit parce qu'on connait une de
 ses bases orthonormales.
 
 \paragraph{Matrice d'un projecteur orthogonal}
-Soit \(F\) un sous-espace vectoriel de dimension \(p \geqslant 1\). Soit 
-\(p_F\) un projecteur orthogonal sur \(F\). Soit \(\F=(f_1, \ldots, f_p)\) une 
-base orthonormale de \(F\) et \(\B=(b_1, \ldots, b_n)\) une base orthonormale 
+Soit \(F\) un sous-espace vectoriel de dimension \(p \geqslant 1\). Soit
+\(p_F\) un projecteur orthogonal sur \(F\). Soit \(\F=(f_1, \ldots, f_p)\) une
+base orthonormale de \(F\) et \(\B=(b_1, \ldots, b_n)\) une base orthonormale
 de \(E\).
 
-Soit \(A=\Mat_\B(p_F)\). Calculons pour tout \(i \in \intervalleentier{1}{n}\) 
+Soit \(A=\Mat_\B(p_F)\). Calculons pour tout \(i \in \intervalleentier{1}{n}\)
 \(p_F(b_i)\)~: Pour tout \(j \in \intervalleentier{1}{n}\), on a
 \begin{equation}
   p_F(b_j)=\sum_{k=1}^p \prodscal{b_j}{f_k}f_k.
 \end{equation}
 
-Il faut les coordonnées de \(p_F(b_j)\) dans la base \(\B\)~: ce sont les 
+Il faut les coordonnées de \(p_F(b_j)\) dans la base \(\B\)~: ce sont les
 \(\prodscal{p_F(b_j)}{b_i}\).
 \begin{align*}
   a_{ij} &= \prodscal{p_F(b_j)}{b_i} \\
@@ -1260,11 +1260,11 @@ La matrice \(A\) est symétrique.
 
 \subsection{Distance d'un point à un sous-espace vectoriel}
 
-Soit \(F\) un sous-espace vectoriel de \(E\) de dimension \(p \geqslant 1\). 
-Soit \(x \in E\), la partie \(\enstq{d(x,y)}{y \in F}\) est une partie de 
+Soit \(F\) un sous-espace vectoriel de \(E\) de dimension \(p \geqslant 1\).
+Soit \(x \in E\), la partie \(\enstq{d(x,y)}{y \in F}\) est une partie de
 \(\R\) non vide (car \(F\) est non vide) et est minorée par \(0\).
 
-Elle admet donc une borne inférieure noté \(d(x,F)=\inf\enstq{d(x,y)}{y \in 
+Elle admet donc une borne inférieure noté \(d(x,F)=\inf\enstq{d(x,y)}{y \in
 F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
 
 \begin{theo}
@@ -1272,7 +1272,7 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
     \item Cette borne inférieure est en fait un minimum;
     \item pour tout vecteur \(y \in F\), on a
       \begin{equation}
-        d(x,F) = d(x,p_F(x)) = \norme{x-p_F(x)} \leqslant \norme{x-y};    
+        d(x,F) = d(x,p_F(x)) = \norme{x-p_F(x)} \leqslant \norme{x-y};
       \end{equation}
     \item pour tout vecteur \(y \in F\), on a
       \begin{equation}
@@ -1284,7 +1284,7 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
 \begin{proof}
   Soit \(y \in F\), alors
   \begin{align*}
-    \norme{x-y}^2 &=\norme{\underbrace{x-p_F(x)}_{\in F^\perp} + 
+    \norme{x-y}^2 &=\norme{\underbrace{x-p_F(x)}_{\in F^\perp} +
     \underbrace{p_F(x)-y}_{\in F}}\\
     &=\norme{x-p_F(x)}^2 + \norme{p_F(x)-y}^2. && \text{Pythagore}
   \end{align*}
@@ -1293,7 +1293,7 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
   \begin{equation}
     \norme{x-y}^2 = \norme{x-p_F(x)}^2 \iff  \norme{p_F(x)-y}=0.
   \end{equation}
-  Cela signifie que \(d(x,F)\) est un minimum et qu'il est atteint en 
+  Cela signifie que \(d(x,F)\) est un minimum et qu'il est atteint en
   \(p_F(x)\) : \(d(x,F)=\norme{x-p_F(x)}\)
 \end{proof}
 
@@ -1303,17 +1303,17 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
   \item
     \begin{gather}
       d(x,F) = \norme{x-p_F(x)} = \norme{p_{F^\perp}(x)} \\
-      \norme{x}^2 = 
+      \norme{x}^2 =
       \norme{x-p_F(x)+p_F(x)}^2=\norme{x-p_F(x)}^2+\norme{p_F(x)}^2\\
       d(x,F) = \sqrt{\norme{x}^2-\norme{p_F(x)}^2}
     \end{gather}
-  \item Soit \(\B=(b_1,\ldots, b_n)\) une base orthonormale de \(E\) et 
+  \item Soit \(\B=(b_1,\ldots, b_n)\) une base orthonormale de \(E\) et
     \(\F=(f_1,\ldots, f_p)\) une base orthonormale de \(F\), alors
     \begin{equation}
-      d(x,F) = 
+      d(x,F) =
       \sqrt{\sum_{i=1}^n\prodscal{x}{b_i}^2-\sum_{k=1}^p\prodscal{x}{f_k}^2}.
     \end{equation}
-  \item Il est parfois utile de calculer \(p_{F^\perp}(x)\) plutôt que 
+  \item Il est parfois utile de calculer \(p_{F^\perp}(x)\) plutôt que
     \(p_{F^\perp}(x)\).
 \end{itemize}
 
@@ -1321,20 +1321,20 @@ F}\). C'est la distance du point \(x\) au sous-esapce vectoriel \(F\).
 
 \subsubsection{Vecteur normal et forme linéaire}
 
-Soit \((E,\varphi)\) un espace vectoriel euclidien. On note 
-\(E^*=\Lin{E}{\R}\) son dual, c'est-à-dire l'ensemble des formes linéaires de 
+Soit \((E,\varphi)\) un espace vectoriel euclidien. On note
+\(E^*=\Lin{E}{\R}\) son dual, c'est-à-dire l'ensemble des formes linéaires de
 \(E\). Pour tout \(x \in E\), on pose
 \begin{equation}
   \fonction{\varphi_x}{E}{\R}{y}{\prodscal{x}{y}}.
 \end{equation}
-Le produit scalaire est linéaire à droite donc \(\varphi_x \in E^*\). Soit 
+Le produit scalaire est linéaire à droite donc \(\varphi_x \in E^*\). Soit
 l'application
 \begin{equation}
   \fonction{\psi}{E}{E^*}{x}{\varphi_x}.
 \end{equation}
-L'application \(\psi\) est bien définie car pour tout vecteur \(x \in E\), 
-\(\varphi_x \in E^*\). Montrons que \(\psi\) est linéaire~: Soit \((x,x') \in 
-E^2\) et \(\lambda \in \R\), alors \(\psi(\lambda x+x') = \varphi_{\lambda 
+L'application \(\psi\) est bien définie car pour tout vecteur \(x \in E\),
+\(\varphi_x \in E^*\). Montrons que \(\psi\) est linéaire~: Soit \((x,x') \in
+E^2\) et \(\lambda \in \R\), alors \(\psi(\lambda x+x') = \varphi_{\lambda
 x+x'}\). Soit \(y \in E\), alors
 \begin{align*}
   \psi(\lambda x+x')(y) &= \varphi_{\lambda x+x'}(y) \\
@@ -1344,7 +1344,7 @@ x+x'}\). Soit \(y \in E\), alors
   &=\lambda \psi(x)(y)+\psi(x')(y)\\
   &=[\lambda \psi(x)+\psi(x')](y).
 \end{align*}
-Comme l'égalité est vraie pour tout \(y \in E\), on a \(\psi(\lambda 
+Comme l'égalité est vraie pour tout \(y \in E\), on a \(\psi(\lambda
 x+x')=\lambda \psi(x)+\psi(x')\), donc \(\psi \in \Lin{E}{E^*}\).
 
 Trouvons le noyau de \(\psi\).
@@ -1357,7 +1357,7 @@ Soit \(x \in E\), alors
   &\iff \forall y \in E \quad \prodscal{x}{y}=0_\R \\
   &\iff x=0_E.
 \end{align*}
-Donc \(\Ker \psi = \{0_E\}\). L'application \(\psi\) est injective et \(\Dim 
+Donc \(\Ker \psi = \{0_E\}\). L'application \(\psi\) est injective et \(\Dim
 E= \Dim E^*\) donc \(\psi\) est bijective. On en déduit le théorème suivant
 \begin{theo}
   L'application
@@ -1369,16 +1369,16 @@ E= \Dim E^*\) donc \(\psi\) est bijective. On en déduit le théorème suivant
 \begin{corth}
   \begin{gather}
     \forall f \in E^* \ \exists! a \in E \quad f=\varphi_a \\
-    \forall f \in E^* \ \exists! a \in E \ \forall x \in E \quad 
+    \forall f \in E^* \ \exists! a \in E \ \forall x \in E \quad
     f(x)=\prodscal{a}{x}.
   \end{gather}
 \end{corth}
-\emph{Vocabulaire~:} Le vecteur \(a\) est le \emph{vecteur normal} de la forme 
+\emph{Vocabulaire~:} Le vecteur \(a\) est le \emph{vecteur normal} de la forme
 linéaire \(f\).
 
 \subsubsection{Applications aux hyperplans d'unespace vectoriel euclidien}
 
-Soit \(H\) un hyperplan de \(E\). Il existe une forme linéaire \(f\) non nulle 
+Soit \(H\) un hyperplan de \(E\). Il existe une forme linéaire \(f\) non nulle
 telle que \(H= \Ker(f)\).
 
 Pour toute forme linéaire \(g\),
@@ -1386,38 +1386,38 @@ Pour toute forme linéaire \(g\),
   H = \Ker(g) \iff \exists \lambda \in \R^* \quad g=\lambda f.
 \end{equation}
 
-Soit \(a\) le vecteur normal de \(f\). \(a\) est non nul parce que \(f\) est 
+Soit \(a\) le vecteur normal de \(f\). \(a\) est non nul parce que \(f\) est
 non nulle. Soit un vecteur \(x \in E\), alors
 \begin{equation}
   f(x)= \prodscal{a}{x},
 \end{equation}
-donc pour tout \(x \in E\), \((\lambda f)(x) = \prodscal{\lambda a}{x}\). Le 
+donc pour tout \(x \in E\), \((\lambda f)(x) = \prodscal{\lambda a}{x}\). Le
 vecteur normal de \(\lambda f\) est \(\lambda a\).
 
 \begin{defdef}
-  Soit \(H\) un un hyperplan de \(E\) et une forme linéaire \(f\) non nulle 
-  telle que \(H= \Ker(f)\). Soit \(a\) le vecteur normal de \(f\). \(a\) est 
-  appelé \emph{un} vecteur normal  de \(H\). Les autres sont les \(\lambda 
+  Soit \(H\) un un hyperplan de \(E\) et une forme linéaire \(f\) non nulle
+  telle que \(H= \Ker(f)\). Soit \(a\) le vecteur normal de \(f\). \(a\) est
+  appelé \emph{un} vecteur normal  de \(H\). Les autres sont les \(\lambda
   a\), avec \((\lambda \neq 0)\).
 \end{defdef}
 
 \paragraph{Propriétés des vecteurs normaux}
 
-Soit \(H\) un hyperplan de \(E\). Il existe une forme linéaire \(f\) non nulle 
+Soit \(H\) un hyperplan de \(E\). Il existe une forme linéaire \(f\) non nulle
 telle que \(H= \Ker(f)\). Soit un vecteur \(x \in E\), alors
 \begin{align*}
   x \in H &\iff f(x) = 0 \\
   &\iff \prodscal{x}{a}=0\\
   &\iff a \in H^\perp.
 \end{align*}
-De plus \(\Dim H^\perp =1\) et \(a\) est non nul, donc c'est une base de 
-\(H^\perp\). Ainsi \(\left(\frac{a}{\norme{a}}\right)\) est une base 
+De plus \(\Dim H^\perp =1\) et \(a\) est non nul, donc c'est une base de
+\(H^\perp\). Ainsi \(\left(\frac{a}{\norme{a}}\right)\) est une base
 orthonormée de \(H^\perp\).
 
 \paragraph{Conséquences}
 Soit un vecteur \(x \in E\).  Alors
 \begin{gather}
-  p_{H^\perp}(x) = \prodscal{x}{\frac{a}{\norme{a}}}\frac{a}{\norme{a}} = 
+  p_{H^\perp}(x) = \prodscal{x}{\frac{a}{\norme{a}}}\frac{a}{\norme{a}} =
   \frac{\prodscal{x}{a}}{\prodscal{a}{a}}a \\
   p_H(x) = x-\frac{\prodscal{x}{a}}{\prodscal{a}{a}}a.
 \end{gather}
@@ -1429,31 +1429,31 @@ La distance de \(x\) à l'hyperplan \(H\) vaut
 
 \subsection{Orientation d'un hyperplan}
 
-Soit \(E\) un espace vectoriel de dimension finie non nulle \(n\), supposée 
-orienté. Soient \(F\) et \(G\) deux sous-espaces vectoriels orthogonaux et 
+Soit \(E\) un espace vectoriel de dimension finie non nulle \(n\), supposée
+orienté. Soient \(F\) et \(G\) deux sous-espaces vectoriels orthogonaux et
 supplémentaires de \(E\)~:
 \begin{equation}
   E = F \oplus G \quad F \perp G.
 \end{equation}
-Soient \(\E_F=(e_1, \ldots, e_p)\) une base de \(F\), \(\E_G=(e_{p+1}, \ldots, 
-e_n)\) une base de \(G\) et \(\E=\E_G \cup \E_F\) une base de \(E\). On 
-suppose que \(G\) est orienté par \(\E_G\), et que \(\E_G\) est une base 
+Soient \(\E_F=(e_1, \ldots, e_p)\) une base de \(F\), \(\E_G=(e_{p+1}, \ldots,
+e_n)\) une base de \(G\) et \(\E=\E_G \cup \E_F\) une base de \(E\). On
+suppose que \(G\) est orienté par \(\E_G\), et que \(\E_G\) est une base
 directe de \(G\). On veut orienter \(F\). Deux possibilités se présentent~:
 \begin{itemize}
-  \item Si \(\E\) est une base directe de \(E\), on décide d'orienter \(F\) 
+  \item Si \(\E\) est une base directe de \(E\), on décide d'orienter \(F\)
     par \(\E_F\) (\(\E_F\) est une base directe de \(F\));
-  \item Si \(\E\) est une base indirecte de \(E\), on décide que \(\E_F\) est 
-    une base indirecte de \(F\). On dit que l'on a induit une orientation de 
+  \item Si \(\E\) est une base indirecte de \(E\), on décide que \(\E_F\) est
+    une base indirecte de \(F\). On dit que l'on a induit une orientation de
     \(F\) par l'orientation de \(G\).
 \end{itemize}
 
-En particulier si \(F=H\), et un hyperplan \(G=\VectEngendre(a)\) avce \(a\) 
-un vecteur normal de \(H\). Le choix d'un vecteur normal donne une orientation 
+En particulier si \(F=H\), et un hyperplan \(G=\VectEngendre(a)\) avce \(a\)
+un vecteur normal de \(H\). Le choix d'un vecteur normal donne une orientation
 pour \(G\) qui induit une orientation de l'hyperplan.
 
-\section{Produit mixte -- produit vectoriel}
+\section{Produit mixte --- produit vectoriel}
 
-Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n 
+Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
 \in \N^*\).
 
 \subsection{Produit mixte}
@@ -1461,21 +1461,21 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
 \subsubsection{Définition}
 
 \begin{lemme}
-  Soient \(\B\) et \(\B'\) deux bases orthonormales de \(E\), alors 
+  Soient \(\B\) et \(\B'\) deux bases orthonormales de \(E\), alors
   \(\Det_\B(\B') \in \{-1; 1\}\). De plus
   \begin{itemize}
-    \item si \(\B\) et \(\B'\) ont la même orientation alors 
+    \item si \(\B\) et \(\B'\) ont la même orientation alors
       \(\Det_\B(\B')=1\);
     \item sinon \(\Det_\B(\B')=-1\).
   \end{itemize}
 \end{lemme}
 \begin{proof}
-  Notons \(\B=(b_1, \ldots, b_n)\), \(\B'=(b'_1, \ldots, b'_n)\), \(A=\P_{\B 
+  Notons \(\B=(b_1, \ldots, b_n)\), \(\B'=(b'_1, \ldots, b'_n)\), \(A=\P_{\B
   \B'}=\Mat_\B(\B')\). Alors pour tout \(j \in \intervalleentier{1}{n}\), on a
   \begin{equation}
     b'_j = \sum_{i=1}^na_{ij}b_i. \label{eq:defBONdeltaij}
   \end{equation}
-  Comme ce sont des bases orthonormées, on a pour tout \((j,k) \in 
+  Comme ce sont des bases orthonormées, on a pour tout \((j,k) \in
   \intervalleentier{1}{n}^2\)
   \begin{align}
     \prodscal{b_j}{b_k} &= \delta_{jk} \\
@@ -1484,21 +1484,21 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   Alors
   \begin{align*}
     \delta_{jk} &= \prodscal{b'_j}{b'_k} && \text{BON}\\
-    &=\prodscal{\sum_{i=1}^na_{ij}b_i}{\sum_{l=1}^na_{lk}b_l} && \text{équation} 
+    &=\prodscal{\sum_{i=1}^na_{ij}b_i}{\sum_{l=1}^na_{lk}b_l} && \text{équation}
     \eqref{eq:defBONdeltaij}\\
-    &=\sum_{i=1}^n\sum_{l=1}^n a_{ij}a_{kl} \prodscal{b_i}{b_l} && 
+    &=\sum_{i=1}^n\sum_{l=1}^n a_{ij}a_{kl} \prodscal{b_i}{b_l} &&
     \text{bilinéarité}\\
     &=\sum_{i=1}^na_{ij}a_{il} && \text{BON}\\
     &=\sum_{i=1}^n (A^\top)_{ji}A_{ik} \\
     &=(A^\top A)_{jk}.
   \end{align*}
-  Alors \(A^\top A=I_n\). Lorsqu'on passe au déterminant \(\Det(A) \in \{-1; 
-  1\}\). De plus \(\B\) et \(\B'\) ont la même orientation si et seulement si 
+  Alors \(A^\top A=I_n\). Lorsqu'on passe au déterminant \(\Det(A) \in \{-1;
+  1\}\). De plus \(\B\) et \(\B'\) ont la même orientation si et seulement si
   \(\Det(A)>0\) c'est-à-dire \(\Det(A)=1\).
 \end{proof}
 \begin{lemme}
-  Soit \(\X=(x_1, \ldots, x_n)\) une famille de \(n\) vecteurs de \(E\). Alors 
-  le réel \(\Det_\B(\X)\) est indépendant du choix de la base \(\B\) dans 
+  Soit \(\X=(x_1, \ldots, x_n)\) une famille de \(n\) vecteurs de \(E\). Alors
+  le réel \(\Det_\B(\X)\) est indépendant du choix de la base \(\B\) dans
   l'ensemble des bases orthonormées directes de \(E\).
 \end{lemme}
 \begin{proof}
@@ -1506,13 +1506,13 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   \begin{equation}
     \Det_{\B'}(\X) = \Det_{\B'}(\B) \Det_{\B}(\X).
   \end{equation}
-  Or \(\Det_{\B'}(\B)=1\) puisqu'elles sont de même orientations. Alors 
+  Or \(\Det_{\B'}(\B)=1\) puisqu'elles sont de même orientations. Alors
   \(\Det_{\B'}(\X) = \Det_{\B}(\X)\).
 \end{proof}
 \begin{defdef}
-  Soit \(X=(x_1, \ldots, x_n)\) une famille de \(n\) vecteurs de \(E\). On 
-  appelle produit mixte de \(\X\), et on note \(\Det(x_1, \ldots, x_n)\) le 
-  réel \(\Det_\B(\X)\), \(\B\) étant une base orthonormée directe quelconque 
+  Soit \(X=(x_1, \ldots, x_n)\) une famille de \(n\) vecteurs de \(E\). On
+  appelle produit mixte de \(\X\), et on note \(\Det(x_1, \ldots, x_n)\) le
+  réel \(\Det_\B(\X)\), \(\B\) étant une base orthonormée directe quelconque
   de \(E\).
 \end{defdef}
 \begin{prop}
@@ -1523,7 +1523,7 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   est une forme \(n\)-linéaire alternée et antisymétrique.
 \end{prop}
 \begin{proof}
-  Ce sont des propriétés de l'application \(\Det_\B\), \(\B\) étant une base 
+  Ce sont des propriétés de l'application \(\Det_\B\), \(\B\) étant une base
   orthonornée directe de \(E\).
 \end{proof}
 \begin{prop}
@@ -1535,20 +1535,20 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  Soit \(\B\) une base orthonormée directe de \(E\). Alors 
-  \(\Det(\X)=\Det_\B(\X)\). Donc \(\X\) est liée si et seulement si 
-  \(\Det_\B(\X)=0\). Si \(\X\) est libre alors \(\Det_\B(\X) \neq 0\). 
-  \(\Det_\B(\X)>0\) signifie que \(\X\) et \(\B\) ont la même orientation et 
+  Soit \(\B\) une base orthonormée directe de \(E\). Alors
+  \(\Det(\X)=\Det_\B(\X)\). Donc \(\X\) est liée si et seulement si
+  \(\Det_\B(\X)=0\). Si \(\X\) est libre alors \(\Det_\B(\X) \neq 0\).
+  \(\Det_\B(\X)>0\) signifie que \(\X\) et \(\B\) ont la même orientation et
   comme \(\B\) est directe alors \(\X\) est directe. Idem pour indirecte.
 \end{proof}
 \begin{prop}
-  Si on change l'orientation de \(E\), le produit mixte est changé en son 
+  Si on change l'orientation de \(E\), le produit mixte est changé en son
   opposé.
 \end{prop}
 \begin{proof}
-  Soient \(\B_1\) et \(\B_2\) deux bases orthonormées d'orientation 
-  contraires. On note \(\Det_1\) le déterminant dans \(\B_1\) et \(\Det_2\) le 
-  déterminant dans \(\B_2\). Pour toute famille \(\X\) de \(n\) vecteurs de 
+  Soient \(\B_1\) et \(\B_2\) deux bases orthonormées d'orientation
+  contraires. On note \(\Det_1\) le déterminant dans \(\B_1\) et \(\Det_2\) le
+  déterminant dans \(\B_2\). Pour toute famille \(\X\) de \(n\) vecteurs de
   \(E\), on a
   \begin{align*}
     \Det_1(\X) &= \Det_{\B_1}(\X) \\
@@ -1556,7 +1556,7 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
   \end{align*}
   Donc
   \begin{equation}
-    \Det_1(\X) = \Det_{\B_1}(\X) = 
+    \Det_1(\X) = \Det_{\B_1}(\X) =
     \Det_{\B_1}(\B_2)\Det_{\B_2}(\X)=-\Det_2(\X).
   \end{equation}
 \end{proof}
@@ -1565,14 +1565,14 @@ Soit \((E,\varphi)\) un espace vectoriel euclidien orienté de dimension \(n
 
 \paragraph{Cas où \(n=2\)}
 
-Soit \((x,y)\) une famille libre de \(E\) (c.-à-d.\ une base car \(\Dim 
-E=n=2\)). \(\Dr=\VectEngendre(x)\) et \(\Dr^\perp\) sont deux droites 
-vectorielles car \(x\neq 0\) et \(\Dim(E)=2\). Alors \(E = \Dr \oplus 
+Soit \((x,y)\) une famille libre de \(E\) (c.-à-d.\ une base car \(\Dim
+E=n=2\)). \(\Dr=\VectEngendre(x)\) et \(\Dr^\perp\) sont deux droites
+vectorielles car \(x\neq 0\) et \(\Dim(E)=2\). Alors \(E = \Dr \oplus
 \Dr^\perp\).
 
-Il existe un unique couple \((y_\Dr, y_{\Dr^\perp}) \in \Dr \times \Dr^\perp\) 
-tel que \(y=y_\Dr +y_{\Dr^\perp}\). Le vecteur \(x\) est non nul, alors on 
-peut poser \(i=\frac{x}{\norme{x}}\). On compléte \(i\) en une base 
+Il existe un unique couple \((y_\Dr, y_{\Dr^\perp}) \in \Dr \times \Dr^\perp\)
+tel que \(y=y_\Dr +y_{\Dr^\perp}\). Le vecteur \(x\) est non nul, alors on
+peut poser \(i=\frac{x}{\norme{x}}\). On compléte \(i\) en une base
 orthonormale directe \((i,j)\) de \(E\).
 
 \begin{align*}
@@ -1580,39 +1580,39 @@ orthonormale directe \((i,j)\) de \(E\).
   &=\Det(x,y_\Dr) + \Det(x,y_{\Dr^\perp}) && \text{linéarité à droite} \\
   &=\Det(x,y_{\Dr^\perp}). && (y_\Dr,x) \text{~est liée}
 \end{align*}
-On a \(x=\norme{x}i\) et il existe \(\epsilon \in \{-1;1\}\) tel que 
+On a \(x=\norme{x}i\) et il existe \(\epsilon \in \{-1;1\}\) tel que
 \(y_{\Dr^\perp}=\epsilon\norme{y_{\Dr^\perp}}j\). Alors
 \begin{align*}
   \Det(x,y) &=\Det(\norme{x}i, \epsilon\norme{y_{\Dr^\perp}}j) \\
   &=\norme{x} \epsilon\norme{y_{\Dr^\perp}} \Det(i,j) && \text{bilinéarité} \\
   &=\norme{x} \epsilon\norme{y_{\Dr^\perp}}.
 \end{align*}
-Donc \(\abs{\Det(x,y)}=\norme{x}\norme{y_{\Dr^\perp}}\) et c'est l'aire du 
+Donc \(\abs{\Det(x,y)}=\norme{x}\norme{y_{\Dr^\perp}}\) et c'est l'aire du
 parallélogramme formé par \(x\) et \(y\). D'où la proposition suivante.
 
 \begin{prop}
-  Pour tout couple \((x,y) \in E^2\), si \((x,y)\) est une famille libre alors 
+  Pour tout couple \((x,y) \in E^2\), si \((x,y)\) est une famille libre alors
   \(\abs{\Det(x,y)}\) est égal à l'aire du parallèlogramme bâti sur \((x,y)\).
 \end{prop}
 
 \paragraph{Cas où \(n=3\)}
 
-\(E\) est un espace vectorel de dimension 3. Soit \((x,y,z)\) une famille 
-libre de \(E\) (donc une base). \(\P=\VectEngendre(x,y)\) est un plan 
-vectoriel et \(\P^\perp\) est une droite vectoriel (car \(\Dim E=3\)). Alors 
+\(E\) est un espace vectorel de dimension 3. Soit \((x,y,z)\) une famille
+libre de \(E\) (donc une base). \(\P=\VectEngendre(x,y)\) est un plan
+vectoriel et \(\P^\perp\) est une droite vectoriel (car \(\Dim E=3\)). Alors
 \(E =\P \oplus\P^\perp\).
 
-Alors il existe un unique couple \((z_\P,z_{\P^\perp}) \in \P \times 
+Alors il existe un unique couple \((z_\P,z_{\P^\perp}) \in \P \times
 \P^\perp\) tel que \(z=z_\P +z_{\P^\perp}\). Ainsi
 \begin{equation}
-  \Det(x,y,z) = \Det(x,y,z_\P) +\Det(x,y,z_{\P^\perp})) = 
+  \Det(x,y,z) = \Det(x,y,z_\P) +\Det(x,y,z_{\P^\perp})) =
   \Det(x,y,z_{\P^\perp})),
 \end{equation}
 car \(z_\P \in \P\).
 
-La famille \((x,y,z)\) est libre donc \(z \notin \P\) et donc \(z_{\P^\perp} 
-\neq 0\). On pose \(k=\frac{z_{\P^\perp}}{\norme{z_{\P^\perp}}}\). On compléte 
-\(k\) en une base orthonormale \((i,j,k)\) de \(E\). \((i,j)\) est une base 
+La famille \((x,y,z)\) est libre donc \(z \notin \P\) et donc \(z_{\P^\perp}
+\neq 0\). On pose \(k=\frac{z_{\P^\perp}}{\norme{z_{\P^\perp}}}\). On compléte
+\(k\) en une base orthonormale \((i,j,k)\) de \(E\). \((i,j)\) est une base
 orthonormale de \(\P\). Alors on a
 \begin{align*}
   \Det(x,y,z) &= \Det(x,y,k\norme{z_{\P^\perp}}) \\
@@ -1627,8 +1627,8 @@ Alors
 \end{equation}
 D'où la proposition suivante
 \begin{prop}
-  Pour tout couple \((x,y,z) \in E^3\), si \((x,y,z)\) est une famille libre 
-  alors \(\abs{\Det(x,y,z)}\) est égal au volume du parallélépipéde bâti sur 
+  Pour tout couple \((x,y,z) \in E^3\), si \((x,y,z)\) est une famille libre
+  alors \(\abs{\Det(x,y,z)}\) est égal au volume du parallélépipéde bâti sur
   \((x,y,z)\).
 \end{prop}
 
@@ -1639,7 +1639,7 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
 \subsubsection{Définition}
 
 \begin{defdef}
-  Soit \((x,y) \in E^2\). On appelle produit vectoriel de \(x\) et \(y\), dans 
+  Soit \((x,y) \in E^2\). On appelle produit vectoriel de \(x\) et \(y\), dans
   cet ordre, et on note \(x \wedge y\) le vecteur normal de la forme linéaire
   \begin{equation}
     \fonction{f}{E}{\R}{z}{\Det(x,y,z)}.
@@ -1650,7 +1650,7 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
     \item \(f\) est une forme linéaire, car \(\Det\) est trilinéaire;
     \item \(f\) admet un unique vecteur normal.
   \end{itemize}
-  Ainsi \(x \wedge y\) est l'unique vecteur \(p \in E\) tel que pour tout \(z 
+  Ainsi \(x \wedge y\) est l'unique vecteur \(p \in E\) tel que pour tout \(z
   \in E\) on ait \(f(z)=\Det(x,y,z)=\prodscal{p}{z}\).
 \end{defdef}
 \begin{prop}
@@ -1658,12 +1658,12 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
   \begin{gather}
     \Det(x,y,z)=\prodscal{x\wedge y}{z}; \\
     \prodscal{y\wedge x}{z} = -\prodscal{x\wedge y}{z}; \\
-    \prodscal{y\wedge z}{x} = \prodscal{z\wedge x}{y} =\prodscal{x\wedge 
+    \prodscal{y\wedge z}{x} = \prodscal{z\wedge x}{y} =\prodscal{x\wedge
     y}{z}.
   \end{gather}
 \end{prop}
 \begin{proof}
-  La première égalit'' est due à la définition du produit vectoriel. On montre 
+  La première égalit'' est due à la définition du produit vectoriel. On montre
   la deuxième~:
   \begin{align*}
     \prodscal{y\wedge x}{z} &=\Det(y,x,z)\\
@@ -1679,13 +1679,13 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
   Idem pour le reste.
 \end{proof}
 \begin{prop}[Effet d'un changement d'orientation de \(E\)]
-  Soit \((x,y) \in E^2\). Si on change l'orientation de \(E\), \(x \wedge y\) 
+  Soit \((x,y) \in E^2\). Si on change l'orientation de \(E\), \(x \wedge y\)
   est changé en son opposé.
 \end{prop}
 \begin{proof}
-  Si on change l'orientation de \(E\), l'application produit mixte \(\Det\) 
-  est changée en son opposée. Donc la forme linéaire \(f\) est changée en son 
-  opposée. Par conséquent le vecteur normal de \(f\) est aussi changé en son 
+  Si on change l'orientation de \(E\), l'application produit mixte \(\Det\)
+  est changée en son opposée. Donc la forme linéaire \(f\) est changée en son
+  opposée. Par conséquent le vecteur normal de \(f\) est aussi changé en son
   opposé.
 \end{proof}
 
@@ -1696,15 +1696,15 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
   \begin{enumerate}
     \item \(x \wedge y \perp x\) et \(x \wedge y \perp y\);
     \item \(x \wedge y = 0\) si et seulement si \((x,y)\) est liée;
-    \item Si \((x,y)\) est libre, alors \((x,y,x \wedge y)\) est une base 
+    \item Si \((x,y)\) est libre, alors \((x,y,x \wedge y)\) est une base
       directe de \(E\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   \begin{enumerate}
-    \item En effet, on a \(\prodscal{x \wedge y}{x}=\Det(x,y,x)=0\) donc \(x 
+    \item En effet, on a \(\prodscal{x \wedge y}{x}=\Det(x,y,x)=0\) donc \(x
       \wedge y \perp x\). Idem pour \(y\).
-    \item \(\impliedby\). Si \((x,y)\) est liée, alors \((x,y,x\wedge y)\) est 
+    \item \(\impliedby\). Si \((x,y)\) est liée, alors \((x,y,x\wedge y)\) est
       liée aussi et donc
       \begin{align*}
         \Det(x,y,x\wedge y) &= 0\\
@@ -1713,12 +1713,12 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
       \end{align*}
       et donc \(x \wedge y=0\).
 
-      \(\implies\). Par contraposée. Supposons que \('x,y)\) est libre. Alors 
-      il existe \(z \in E\) tel que \((x,y,z)\) est une base de \(E\). Ainsi 
-      \(\Det(x,y,z)=\prodscal{x\wedge y}{z}\neq 0\). Par conséquent \(x\wedge 
+      \(\implies\). Par contraposée. Supposons que \('x,y)\) est libre. Alors
+      il existe \(z \in E\) tel que \((x,y,z)\) est une base de \(E\). Ainsi
+      \(\Det(x,y,z)=\prodscal{x\wedge y}{z}\neq 0\). Par conséquent \(x\wedge
       y \neq 0\).
-    \item Si \((x,y)\) est libre, \(\Det(x,y,x \wedge y)=\norme{x \wedge y}^2 
-      >0\) (car \(x \wedge y \neq 0\)). Donc \((x,y,x \wedge y)\) est une base 
+    \item Si \((x,y)\) est libre, \(\Det(x,y,x \wedge y)=\norme{x \wedge y}^2
+      >0\) (car \(x \wedge y \neq 0\)). Donc \((x,y,x \wedge y)\) est une base
       directe de \(E\).
   \end{enumerate}
 \end{proof}
@@ -1726,12 +1726,12 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
 \subsubsection{Propriétés du produit vectoriel}
 
 \begin{theo}
-  L'application \(\fonction{\wedge}{E^2}{E}{(x,y)}{x \wedge y}\) est 
+  L'application \(\fonction{\wedge}{E^2}{E}{(x,y)}{x \wedge y}\) est
   bilinéaire et alterné (donc antisymétrique).
 \end{theo}
 \begin{proof}
-  Soient \((x,x',y) \in E^3\) et \(\lambda \in \R\). On note \(p_1=(\lambda 
-  x+x')\wedge y\) et \(p_2=\lambda x\wedge y+x'\wedge y\). Pour tout vecteur 
+  Soient \((x,x',y) \in E^3\) et \(\lambda \in \R\). On note \(p_1=(\lambda
+  x+x')\wedge y\) et \(p_2=\lambda x\wedge y+x'\wedge y\). Pour tout vecteur
   \(z \in E\), on a
   \begin{align*}
     \prodscal{p_1}{z} &=\prodscal{(\lambda x+x')\wedge y}{z} \\
@@ -1741,7 +1741,7 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
     &=\prodscal{\lambda x\wedge y +x'\wedge y}{z}\\
     &=\prodscal{p_2}{z}.
   \end{align*}
-  Alors \(\prodscal{p_1-p_2}{z}=0\) et comme c'est vrai pour tout \(z\) alors 
+  Alors \(\prodscal{p_1-p_2}{z}=0\) et comme c'est vrai pour tout \(z\) alors
   \(p_1=p_2\). C'est la linéarité à gauche.
 
   Soient \((x,y) \in E^2\). Pour tout \(z \in E\), on a
@@ -1751,18 +1751,18 @@ Soit \((E,\varphi)\) un espace euclidien orienté de dimension 3.
     &=-\prodscal{x \wedge y}{z}\\
     &=\prodscal{-x \wedge y}{z}.
   \end{align*}
-  Alors \(\prodscal{y \wedge x+x \wedge y}{z}=0\) et comme c'est vrai pour 
-  tout \(z \in E\) on a bien \(x \wedge y = -y\wedge x\). C'est 
+  Alors \(\prodscal{y \wedge x+x \wedge y}{z}=0\) et comme c'est vrai pour
+  tout \(z \in E\) on a bien \(x \wedge y = -y\wedge x\). C'est
   l'antisymétrie.
 
   La linéarité à gauche et l'antisymétrie nous donne la linéarité à droite.
 \end{proof}
 
-\subsubsection{Coordonnées de \(x \wedge y\) dans une base orthonormale 
+\subsubsection{Coordonnées de \(x \wedge y\) dans une base orthonormale
 directe}
 
-Soit \(\B=(b_1,b_2,b_3)\) une base orthonormée directe de \(E\). Soient \(x\) 
-et \(y\) dans \(E\) de coordonnées respectives \((x_1,x_2,x_3)\) et 
+Soit \(\B=(b_1,b_2,b_3)\) une base orthonormée directe de \(E\). Soient \(x\)
+et \(y\) dans \(E\) de coordonnées respectives \((x_1,x_2,x_3)\) et
 \((y_1,y_2,y_3)\) dans la base \(\B\). Alors
 \begin{equation}
   x \wedge y = \sum_{i=1}^3 \prodscal{x \wedge y}{b_i}b_i.
@@ -1775,29 +1775,29 @@ Car \(\B\) est une base orthonormée. Alors on a
 \end{align*}
 De la même manière on trouve
 \begin{equation}
-  \prodscal{x \wedge y}{b_2} = - \begin{vmatrix} x_1 & y_1 \\ x_3 & y_3 
-  \end{vmatrix} \qquad \prodscal{x \wedge y}{b_3} =  \begin{vmatrix} x_1 & 
+  \prodscal{x \wedge y}{b_2} = - \begin{vmatrix} x_1 & y_1 \\ x_3 & y_3
+  \end{vmatrix} \qquad \prodscal{x \wedge y}{b_3} =  \begin{vmatrix} x_1 &
   y_1 \\ x_2 & y_2 \end{vmatrix}.
 \end{equation}
 D'où la proposition suivante
 \begin{prop}
-  Avec les notations précédentes, les coordonnées de \(x \wedge y\) dans la 
-  base orthonormée directe \(\B\) sont \(\left(\begin{vmatrix} x_2 & y_2 \\ 
-  x_3 & y_3 \end{vmatrix}, - \begin{vmatrix} x_1 & y_1 \\ x_3 & y_3 
-  \end{vmatrix},  \begin{vmatrix} x_1 & y_1 \\ x_2 & y_2 
+  Avec les notations précédentes, les coordonnées de \(x \wedge y\) dans la
+  base orthonormée directe \(\B\) sont \(\left(\begin{vmatrix} x_2 & y_2 \\
+  x_3 & y_3 \end{vmatrix}, - \begin{vmatrix} x_1 & y_1 \\ x_3 & y_3
+  \end{vmatrix},  \begin{vmatrix} x_1 & y_1 \\ x_2 & y_2
   \end{vmatrix}\right)\).
 \end{prop}
 
 \subsubsection{Propriétés relatives aux bases orthonormées directes}
 
 \begin{prop}
-  Soit \((i,j,k)\) une base orthonormée directe. Alors \(i \wedge j=k\), \(j 
+  Soit \((i,j,k)\) une base orthonormée directe. Alors \(i \wedge j=k\), \(j
   \wedge k = i\), et \(k \wedge i =j\).
 \end{prop}
 \begin{proof}
   La base \((i,j,k)\) est orthonormée donc
   \begin{align*}
-    i \wedge j &= \prodscal{i \wedge j}{i}i + \prodscal{i \wedge j}{j}j + 
+    i \wedge j &= \prodscal{i \wedge j}{i}i + \prodscal{i \wedge j}{j}j +
     \prodscal{i \wedge j}{k}k \\
     &=\prodscal{i \wedge j}{k}k\\
     &=\Det(i,j,k)k\\
@@ -1807,31 +1807,31 @@ D'où la proposition suivante
   Idem pour les autres.
 \end{proof}
 \begin{prop}
-  Soient \(x\) et \(y\) deux vecteurs de \(E\) unitaires et orthogonaux. Alors 
+  Soient \(x\) et \(y\) deux vecteurs de \(E\) unitaires et orthogonaux. Alors
   \((x,y,x \wedge y)\) est ue base orthonormée directe.
 \end{prop}
 \begin{proof}
-  La famille \((x,y)\) est orthogonale et \(x\) et \(y\) sont non nuls. Donc 
-  Elle est libre. On sait déjà que \((x,y,x \wedge y)\) est une base directe 
-  de \(E\). Par hypothèse \(x \perp y\) et d'après les propriétés on a \(x 
-  \perp x \wedge y\) et \(y \perp x \wedge y\). Alors \((x,y,x \wedge y)\) est 
-  une base orthogonale. Ainsi \(\left(x,y,\frac{x \wedge y}{\norme{x \wedge 
+  La famille \((x,y)\) est orthogonale et \(x\) et \(y\) sont non nuls. Donc
+  Elle est libre. On sait déjà que \((x,y,x \wedge y)\) est une base directe
+  de \(E\). Par hypothèse \(x \perp y\) et d'après les propriétés on a \(x
+  \perp x \wedge y\) et \(y \perp x \wedge y\). Alors \((x,y,x \wedge y)\) est
+  une base orthogonale. Ainsi \(\left(x,y,\frac{x \wedge y}{\norme{x \wedge
   y}}\right)\) est une base orthonormée directe.
 \end{proof}
 \begin{prop}
-  Soit \((x,y) \in E^2\). Si \(x \perp y\) alors \(\norme{x \wedge 
+  Soit \((x,y) \in E^2\). Si \(x \perp y\) alors \(\norme{x \wedge
   y}=\norme{x}\cdot\norme{y}\).
 \end{prop}
 \begin{proof}
-  Deux cas se présentent. Si \(x\) est nul ou si \(y\) est nul alors \(x 
+  Deux cas se présentent. Si \(x\) est nul ou si \(y\) est nul alors \(x
   \wedge y\) est nul. L'égalité est vraie.
 
-  Sinon, c'est-à-dire si \(x\) est non nul et si \(y\) est non nul, alors 
-  \(\frac{x}{\norme{x}}\) et \(\frac{y}{\norme{y}}\) sont unitaires et 
-  orthogonaux. En appliquant la proposition précédente 
-  \(\left(\frac{x}{\norme{x}}, \frac{y}{\norme{y}}, \frac{x}{\norme{x}}\wedge 
-  \frac{y}{\norme{y}}\right)\) est une base orthonormée directe de \(E\). En 
-  particulier \(\frac{x}{\norme{x}}\wedge \frac{y}{\norme{y}}\) est unitaire 
+  Sinon, c'est-à-dire si \(x\) est non nul et si \(y\) est non nul, alors
+  \(\frac{x}{\norme{x}}\) et \(\frac{y}{\norme{y}}\) sont unitaires et
+  orthogonaux. En appliquant la proposition précédente
+  \(\left(\frac{x}{\norme{x}}, \frac{y}{\norme{y}}, \frac{x}{\norme{x}}\wedge
+  \frac{y}{\norme{y}}\right)\) est une base orthonormée directe de \(E\). En
+  particulier \(\frac{x}{\norme{x}}\wedge \frac{y}{\norme{y}}\) est unitaire
   et donc
   \begin{equation}
     1 = \frac{\norme{x \wedge y}}{\norme{x}\norme{y}}.

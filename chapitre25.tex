@@ -9,45 +9,45 @@ Dans tout le chapitre, \(\K\) désigne un corps, sous-corps de \(\C\).
 
 \subsection{Notion d'application \(p\)-linéaire}
 
-Soient un naturel \(n\) non nul et deux \(\K\)-espaces vectoriels \(E\) et 
+Soient un naturel \(n\) non nul et deux \(\K\)-espaces vectoriels \(E\) et
 \(F\).
 \begin{defdef}
-  On appelle application \(p\)-linéaire sur \(E\) dans \(F\) toute application 
-  \(f: E^p \rightarrow F\) telle que pour tout \(i \in \llbracket 1,p 
+  On appelle application \(p\)-linéaire sur \(E\) dans \(F\) toute application
+  \(f: E^p \rightarrow F\) telle que pour tout \(i \in \llbracket 1,p
   \rrbracket\) et pour tout \(a=(a_1, \ldots, a_p) \in E^p\) l'application
   \begin{equation}
     \fonction{f_i}{E}{F}{x_i}{f(a_1, \ldots, a_{i-1},x_i,a_{i+1}, \ldots, a_p)}
   \end{equation}
-  est linéaire. C'est la \(i\)\ieme{} application partielle de \(f\) au point 
+  est linéaire. C'est la \(i\)\ieme{} application partielle de \(f\) au point
   \(a\).
 \end{defdef}
 
-On dira que \(f\) est linéaire par rapport à son \(i\)\ieme{} argument pour 
+On dira que \(f\) est linéaire par rapport à son \(i\)\ieme{} argument pour
 signifier que la \(i\)\ieme{} application partielle de \(f\) est linéaire.
 
-\emph{Remarque}~: Si \(p=2\) alors l'application est dite bilinéaire et si 
+\emph{Remarque}~: Si \(p=2\) alors l'application est dite bilinéaire et si
 \(p=3\) alors elle est trilinéaire.
 
 \begin{defdef}
-  On appelle forme \(p\)-linéaire toute application \(p\)-linéaire sur \(E\) à 
+  On appelle forme \(p\)-linéaire toute application \(p\)-linéaire sur \(E\) à
   valeurs dans \(\K\).
 \end{defdef}
 
-\emph{Exemple de calcul}~: Supposons que \(p=2\) et soit \(f: E^2 \rightarrow 
-F\) une application bilinéaire. Pour tout quadruplet \((x, x', y, y') \in E^4\), 
+\emph{Exemple de calcul}~: Supposons que \(p=2\) et soit \(f: E^2 \rightarrow
+F\) une application bilinéaire. Pour tout quadruplet \((x, x', y, y') \in E^4\),
 on a
 \begin{align}
   f(x+x',y+y') &= f(x,y+y') +f(x',y+y') \\
   &=f(x,y)+f(x,y')+f(x',y)+f(x',y').
 \end{align}
-Ne pas confondre avec l'application linéaire \(g: E^2 \rightarrow F\), parce que 
+Ne pas confondre avec l'application linéaire \(g: E^2 \rightarrow F\), parce que
 pour tout \((x, x', y, y') \in E^4\), on a
 \begin{equation}
   g(x+x',y+y') = g(x,y)+g(x',y').
 \end{equation}
 
-\emph{Notation}~: Notons \(\pLin{p}{E}{F}\) l'ensemble des applications 
-\(p\)-linéaires de \(E\) sur \(F\) et \(\pEndo{p}{E}\) l'ensemble des formes 
+\emph{Notation}~: Notons \(\pLin{p}{E}{F}\) l'ensemble des applications
+\(p\)-linéaires de \(E\) sur \(F\) et \(\pEndo{p}{E}\) l'ensemble des formes
 \(p\)-linéaires sur \(E\).
 
 \begin{prop}
@@ -56,28 +56,28 @@ pour tout \((x, x', y, y') \in E^4\), on a
 
 \subsection{Qualités éventuelles d'une application \(p\)-linéaire}
 
-Supposons que \(p\geqslant 2\). Soient \(E\) et \(F\) deux \(\K\)-espaces 
+Supposons que \(p\geqslant 2\). Soient \(E\) et \(F\) deux \(\K\)-espaces
 vectoriels et \(f \in \pLin{p}{E}{F}\).
 
 \begin{defdef}
   On dira que
   \begin{enumerate}
-    \item \(f\) est symétrique si et seulement si pour tout couple \((i,j) \in 
-      \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet 
+    \item \(f\) est symétrique si et seulement si pour tout couple \((i,j) \in
+      \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet
       \((x_1, \ldots, x_p) \in E^p\) on a
       \begin{equation}
-        f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) = f(x_1, \ldots, x_j, 
+        f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) = f(x_1, \ldots, x_j,
         \ldots, x_i, \ldots, x_p);
       \end{equation}
-    \item \(f\) est antisymétrique si et seulement si pour tout couple \((i,j) 
-      \in \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet 
+    \item \(f\) est antisymétrique si et seulement si pour tout couple \((i,j)
+      \in \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet
       \((x_1, \ldots, x_p) \in E^p\) on a
       \begin{equation}
-        f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) = -f(x_1, \ldots, x_j, 
+        f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) = -f(x_1, \ldots, x_j,
         \ldots, x_i, \ldots, x_p);
       \end{equation}
-    \item \(f\) est alternée si et seulement si pour tout couple \((i,j) \in 
-      \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet 
+    \item \(f\) est alternée si et seulement si pour tout couple \((i,j) \in
+      \intervalleentier{1}{p}^2\) tel que \(i<j\) et pour tout \(p\)-uplet
       \((x_1, \ldots, x_p) \in E^p\) on a
       \begin{equation}
         x_i=x_j \implies f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p)=0.
@@ -85,31 +85,31 @@ vectoriels et \(f \in \pLin{p}{E}{F}\).
   \end{enumerate}
 \end{defdef}
 
-\emph{Remarque}~: Soit \(p=2\) et \(f:E^2 \rightarrow F\) une application 
+\emph{Remarque}~: Soit \(p=2\) et \(f:E^2 \rightarrow F\) une application
 bilinéaire. ALors~:
 \begin{enumerate}
-  \item \(f\) est symétrique si et seulement si pour tout couple \((x,y) \in 
+  \item \(f\) est symétrique si et seulement si pour tout couple \((x,y) \in
     E^2\) on a \(f(x,y)=f(y,x)\);
-  \item \(f\) est antisymétrique si et seulement si pour tout couple \((x,y) \in 
+  \item \(f\) est antisymétrique si et seulement si pour tout couple \((x,y) \in
     E^2\) on a \(f(x,y)=-f(y,x)\);
-  \item \(f\) est alternée si et seulement si pour tout vecteur \(x \in E\) on a 
+  \item \(f\) est alternée si et seulement si pour tout vecteur \(x \in E\) on a
     \(f(x,x)=0\).
 \end{enumerate}
 
 \begin{prop}
   Soit \(f \in \pLin{p}{E}{F}\). Alors~:
   \begin{enumerate}
-    \item \(f\) est symétrique si et seulement si pour toute permutation 
-      \(\sigma \in \sigma_p\) et tout \(p\)-uplet \((x_1,\ldots,x_p) \in E^p\) 
+    \item \(f\) est symétrique si et seulement si pour toute permutation
+      \(\sigma \in \sigma_p\) et tout \(p\)-uplet \((x_1,\ldots,x_p) \in E^p\)
       on a
       \begin{equation}
         f(x_{\sigma(1)}, \ldots, x_{\sigma(p)})=f(x_1,\ldots,x_p);
       \end{equation}
-    \item \(f\) est antisymétrique si et seulement si pour toute permutation 
-      \(\sigma \in \sigma_p\) et tout \(p\)-uplet \((x_1,\ldots,x_p) \in E^p\) 
+    \item \(f\) est antisymétrique si et seulement si pour toute permutation
+      \(\sigma \in \sigma_p\) et tout \(p\)-uplet \((x_1,\ldots,x_p) \in E^p\)
       on a
       \begin{equation}
-        f(x_{\sigma(1)}, \ldots, 
+        f(x_{\sigma(1)}, \ldots,
         x_{\sigma(p)})=\epsilon(\sigma)f(x_1,\ldots,x_p).
       \end{equation}
   \end{enumerate}
@@ -119,22 +119,22 @@ bilinéaire. ALors~:
     \item \(\implies\) Supposons que \(f\) soit symétrique, alors
       \begin{itemize}
         \item si \(\sigma\) est une transposition alors c'est la définition;
-        \item sinon, \(\sigma\) est un produit de \(n\) transpositions, et on 
+        \item sinon, \(\sigma\) est un produit de \(n\) transpositions, et on
           applique \(n\) fois la définition
       \end{itemize}
 
-      \(\impliedby\) On l'applique pour tout \((i,j)\in 
+      \(\impliedby\) On l'applique pour tout \((i,j)\in
       \intervalleentier{1}{p}^2\) avec \(\sigma\) la transposition \((i,j)\).
 
     \item \(\implies\) Supposons que \(f\) soit antisymétrique, alors
       \begin{itemize}
-        \item si \(\sigma\) est une transposition alors pour tout \(p\)-uplet 
+        \item si \(\sigma\) est une transposition alors pour tout \(p\)-uplet
           \((x_1, \ldots, x_p)\) on a
           \begin{equation}
-            f(x_{\sigma(1)}, \ldots, 
+            f(x_{\sigma(1)}, \ldots,
             x_{\sigma(p)})=-f(x_1,\ldots,x_p)=\epsilon(\sigma)f(x_1,\ldots,x_p)
           \end{equation}
-        \item sinon, \(\sigma\) est un produit de \(n\) transpositions, et on 
+        \item sinon, \(\sigma\) est un produit de \(n\) transpositions, et on
           applique \(n\) fois la définition \((-1)^n=\epsilon(\sigma)\);
       \end{itemize}
 
@@ -143,33 +143,33 @@ bilinéaire. ALors~:
 \end{proof}
 
 \begin{prop}
-  Soit \(f \in \pLin{p}{E}{F}\), alors \(f\) est antisymétrique si et seulement 
+  Soit \(f \in \pLin{p}{E}{F}\), alors \(f\) est antisymétrique si et seulement
   si elle est alternée.
 \end{prop}
 \begin{proof}
-  Supposons que \(f\) soit antisymétrique. Soient \((x_1, \ldots, x_p) \in 
-  E^p\), \((i,j) \in \intervalleentier{1}{p}^2\) tel que \(i<j\) et \(x_i=x_j\). 
+  Supposons que \(f\) soit antisymétrique. Soient \((x_1, \ldots, x_p) \in
+  E^p\), \((i,j) \in \intervalleentier{1}{p}^2\) tel que \(i<j\) et \(x_i=x_j\).
   Alors
   \begin{align}
-    f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) &= f(x_1, \ldots, x_j, \ldots, 
+    f(x_1, \ldots, x_i, \ldots, x_j, \ldots, x_p) &= f(x_1, \ldots, x_j, \ldots,
     x_i, \ldots, x_p)\\
     &=-f(x_1, \ldots, x_j, \ldots, x_i, \ldots, x_p).
   \end{align}
-  Alors \(2f(x_1, \ldots, x_p)=0\), c'est-à-dire \(f(x_1, \ldots, x_p)=0\). 
+  Alors \(2f(x_1, \ldots, x_p)=0\), c'est-à-dire \(f(x_1, \ldots, x_p)=0\).
   \(f\) est alternée.
 
-  Supposons que \(f\) soit alternée.  Soient \((x_1, \ldots, x_p) \in E^p\), 
-  \((i,j) \in \intervalleentier{1}{p}^2\) tel que \(i<j\). Alors comme \(f\) est 
+  Supposons que \(f\) soit alternée.  Soient \((x_1, \ldots, x_p) \in E^p\),
+  \((i,j) \in \intervalleentier{1}{p}^2\) tel que \(i<j\). Alors comme \(f\) est
   alternée on a
   \begin{align}
     0&=f(x_1, \ldots, x_i+x_j, \ldots, x_i+x_j, \ldots, x_p)
-    &=f(x_1, \ldots, x_i, \ldots, x_i, \ldots, x_p)  \\ &+f(x_1, \ldots, x_i, 
-    \ldots, x_j, \ldots, x_p) \\ &+f(x_1, \ldots, x_j, \ldots, x_i, \ldots, x_p) 
+    &=f(x_1, \ldots, x_i, \ldots, x_i, \ldots, x_p)  \\ &+f(x_1, \ldots, x_i,
+    \ldots, x_j, \ldots, x_p) \\ &+f(x_1, \ldots, x_j, \ldots, x_i, \ldots, x_p)
     \\ & +f(x_1, \ldots, x_j, \ldots, x_j, \ldots, x_p).
   \end{align}
   Le premier et le dernier terme sont nuls, parce que \(f\) est alternée. Donc
   \begin{equation}
-    f(x_1, \ldots, x_j, \ldots, x_i, \ldots, x_p)=-f(x_1, \ldots, x_i, \ldots, 
+    f(x_1, \ldots, x_j, \ldots, x_i, \ldots, x_p)=-f(x_1, \ldots, x_i, \ldots,
     x_j, \ldots, x_p).
   \end{equation}
   \(f\) est antisymétrique.
@@ -177,47 +177,47 @@ bilinéaire. ALors~:
 
 \subsection{Exemples d'applications multilinéaires}
 
-La fonction \(\fonction{f}{\R^2}{\R}{(x,y)}{xy}\) est une forme bilinéaire 
-symétrique. L'application \(\fonction{g}{\R^2 \times 
-\R^2}{\R}{((x,y),(x',y'))}{xx'+yy'}\) est une forme bilinéaire symétrique 
-(analogue au produit scalaire). L'application 
-\(\fonction{h}{\C^2}{\R}{(z,z')}{\Re(\bar{z}z'}\) est une forme bilinéaire 
-symétrique sur le \(\R\)-espace vectoriel \(\C\). L'application 
-\(\fonction{k}{\C^2}{\R}{(z,z')}{\Im(\bar{z}z'}\) est une forme bilinéaire 
-antisymétrique sur le \(\R\)-espace vectoriel \(\C\). La fonction 
-\(\fonction{l}{\Mn{n}{\R}^2}{\Mn{n}{\R}}{(A,B)}{AB-BA}\) est antisymétrique et 
+La fonction \(\fonction{f}{\R^2}{\R}{(x,y)}{xy}\) est une forme bilinéaire
+symétrique. L'application \(\fonction{g}{\R^2 \times
+\R^2}{\R}{((x,y),(x',y'))}{xx'+yy'}\) est une forme bilinéaire symétrique
+(analogue au produit scalaire). L'application
+\(\fonction{h}{\C^2}{\R}{(z,z')}{\Re(\bar{z}z'}\) est une forme bilinéaire
+symétrique sur le \(\R\)-espace vectoriel \(\C\). L'application
+\(\fonction{k}{\C^2}{\R}{(z,z')}{\Im(\bar{z}z'}\) est une forme bilinéaire
+antisymétrique sur le \(\R\)-espace vectoriel \(\C\). La fonction
+\(\fonction{l}{\Mn{n}{\R}^2}{\Mn{n}{\R}}{(A,B)}{AB-BA}\) est antisymétrique et
 alternée.
 
 \section{Déterminant dans une base de vecteurs}
 
 \subsection{Formes linéaires alternées}
 
-Soient \(n\in \N\), \(n\geqslant 2\) et \(E\) un \(\K\)-espace vectoriel de 
-dimension \(n\). Notons \(\AN{n}{E}\) l'ensemble des formes \(n\)-linéaires 
+Soient \(n\in \N\), \(n\geqslant 2\) et \(E\) un \(\K\)-espace vectoriel de
+dimension \(n\). Notons \(\AN{n}{E}\) l'ensemble des formes \(n\)-linéaires
 alternées sur \(E\). \(\AN{n}{E}\) est un \(\K\)-espace vectoriel.
 
 \begin{theo}
   \label{theo:detbases}
   \begin{enumerate}
-    \item Pour toute base \(\E\) de \(E\), il existe une unique forme \(f_0 \in 
-      \AN{n}{E}\) telle que \(f_0(\E)=1\). On dit que \(f_0\) est le déterminant 
+    \item Pour toute base \(\E\) de \(E\), il existe une unique forme \(f_0 \in
+      \AN{n}{E}\) telle que \(f_0(\E)=1\). On dit que \(f_0\) est le déterminant
       de la base \(\E\), et \(f_0=\Det_\E\).
     \item Pour toute \(f \in \AN{n}{E}\), on a \(f=f(\E) Det_\E\).
-    \item \(\AN{n}{E}\) est une droite vectorielle et pour toute base \(\E\) de 
+    \item \(\AN{n}{E}\) est une droite vectorielle et pour toute base \(\E\) de
       \(E\), \(\Det_\E\) est une base de \(\AN{n}{E}\).
   \end{enumerate}
 \end{theo}
 
-En d'autre termes, pour toute base \(\E\) de \(E\), \(\Det_\E\) est une forme 
-\(n\)-linéaire alternée non nulle et toute les autre formes \(n\)-linéaires 
+En d'autre termes, pour toute base \(\E\) de \(E\), \(\Det_\E\) est une forme
+\(n\)-linéaire alternée non nulle et toute les autre formes \(n\)-linéaires
 alternées lui sont proportionelles.
 
 \begin{proof}
-  VOir poly. On y montre que \(\E=(e_1, \ldots, e_n)\) et que pour tout 
+  VOir poly. On y montre que \(\E=(e_1, \ldots, e_n)\) et que pour tout
   \(n\)-uplet \((x_1, \ldots, x_n)\) et tout \(j \in \intervalleentier{1}{n}\)
   \begin{gather}
     x_j=\sum_{i}^n a_{ij}e_i \quad a_{ij} \in \K, \\
-    \Det_\E(x_1, \ldots, x_n) =\sum_{\sigma \in \sigma_n}\epsilon(\sigma) 
+    \Det_\E(x_1, \ldots, x_n) =\sum_{\sigma \in \sigma_n}\epsilon(\sigma)
     \prod_{j=1}^n a_{\sigma(j)j}.
   \end{gather}
 \end{proof}
@@ -226,39 +226,39 @@ alternées lui sont proportionelles.
 
 \subsubsection{Définition}
 
-Soient \(n \in \N\), \(n\geqslant 2\). \(E\) un \(\K\)-espace vectoriel de 
+Soient \(n \in \N\), \(n\geqslant 2\). \(E\) un \(\K\)-espace vectoriel de
 dimension \(n\) et \(\E\) une base de \(E\).
 \begin{defdef}
-  Pour toute famille \(\X=(x_1, \ldots, x_n)\) de \(n\) vecteurs de \(E\), on 
-  définit le déterminant de \(\X\) dans la base \(\E\), noté \(\Det_\E(\X)\), 
+  Pour toute famille \(\X=(x_1, \ldots, x_n)\) de \(n\) vecteurs de \(E\), on
+  définit le déterminant de \(\X\) dans la base \(\E\), noté \(\Det_\E(\X)\),
   par
   \begin{equation}
-    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n 
+    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n
     a_{\sigma(j)j},
   \end{equation}
   où pour tout \(j \in \intervalleentier{1}{n}\), \(x_j=\sum_{i}^n a_{ij}e_i\).
 \end{defdef}
 On note \begin{equation}
-  \Det_\E(\X) = \begin{vmatrix} a_{11} & \ldots & a_{1n} \\ \vdots & a_{ij} & 
+  \Det_\E(\X) = \begin{vmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & a_{ij} &
   \vdots \\ a_{n1} & \vdots & a_{nn}\end{vmatrix}.
 \end{equation}
 %
 \begin{prop}
   Avec les mêmes notations,
   \begin{equation}
-    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{i=1}^n 
+    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{i=1}^n
     a_{i\sigma(i)}.
   \end{equation}
 \end{prop}
 \begin{proof}
   On sait que
   \begin{equation}
-    Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n 
+    Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n
     a_{\sigma(j)j}.
   \end{equation}
   Alors en notant \(s=\sigma^{-1}\), on a
   \begin{equation}
-    Det_\E(\X) = \sum_{s \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n 
+    Det_\E(\X) = \sum_{s \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n
     a_{s^{-1}(j)j},
   \end{equation}
   et en posant \(i=s^{-1}(j)\), on a bien
@@ -267,21 +267,21 @@ On note \begin{equation}
   \end{equation}
 \end{proof}
 
-\emph{Remarque}~: On peut étendre la définition du déterminant pour \(n=1\), 
+\emph{Remarque}~: On peut étendre la définition du déterminant pour \(n=1\),
 \(\Det_\E(\X) = \abs{a_{11}}\) (\danger différent de la valeur absolue).
 
 \subsubsection{Effet d'un changement de base}
 
 \begin{prop}
-  Soit u \(\K\)-espace vectoriel \(E\) de dimension \(n \in 
+  Soit u \(\K\)-espace vectoriel \(E\) de dimension \(n \in
   \N\setminus\{0,1\}\). Soient \(\E\) et \(\B\) deux bases de \(E\). Alors
   \begin{equation}
     \Det_\E = \Det_\E(\B) \Det_\B.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Comme \(\E\) et \(\B\) sont deux bases de \(E\), le théorème~\ref{theo:detbases} affirme que les formes linéaires \(\Det_\E\) et 
-  \(\Det_\B\) de \(\AN{n}{E}\) sont proportionelles. Il existe \(\lambda \in 
+  Comme \(\E\) et \(\B\) sont deux bases de \(E\), le théorème~\ref{theo:detbases} affirme que les formes linéaires \(\Det_\E\) et
+  \(\Det_\B\) de \(\AN{n}{E}\) sont proportionelles. Il existe \(\lambda \in
   \K\) tel que \(\Det_\E = \lambda \Det_\B\), et en particulier
   \begin{equation}
     \Det_\E(\B)= \lambda \Det_\B(\B) = \lambda.
@@ -292,13 +292,13 @@ On note \begin{equation}
 \subsubsection{Caractérisation des bases}
 
 \begin{theo}
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie \(n\) et \(\X\) une 
-  famille de \(n\) vecteurs de \(E\). Il y a équivalence entre les assertions 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie \(n\) et \(\X\) une
+  famille de \(n\) vecteurs de \(E\). Il y a équivalence entre les assertions
   suivantes~:
   \begin{enumerate}
     \item \(\X\) est une famille libre dans \(E\);
     \item \(\X\) est une base de \(E\);
-    \item Il existe une base \(\E_0\) de \(E\) telle que \(\Det_{\E_0}(\X)\neq 
+    \item Il existe une base \(\E_0\) de \(E\) telle que \(\Det_{\E_0}(\X)\neq
       0\);
     \item Pour toute base \(\E\) de \(E\), on a \(\Det_{\E}(\X)\neq 0\).
   \end{enumerate}
@@ -307,35 +307,35 @@ On note \begin{equation}
 \begin{proof}
   \(1 \iff 2\) C'est logique car \(\Card(\X)=n=\dim(E)\).
 
-  \(2 \implies 3\) On choisit \(\E_0=\X\), alors par définition 
+  \(2 \implies 3\) On choisit \(\E_0=\X\), alors par définition
   \(\Det_\X(\X)=1\neq 0\).
 
-  \(3 \implies 4\) Il existe une base \(\E_0\) de \(E\) telle que 
+  \(3 \implies 4\) Il existe une base \(\E_0\) de \(E\) telle que
   \(\Det_{\E_0}(\X)\neq 0\). Soit \(\E\) une base quelconque de \(E\), alors
   \begin{equation}
     \Det_{\E_0} = \Det_{\E_0}(\E) \Det_{\E}(\X) \neq 0.
   \end{equation}
   Donc \(\Det_{\E}(\X) \neq 0\).
 
-  \(4 \implies 1\) (par contraposée) Supposons que \(\X\) est liée alors il 
-  existe \(j_0 \in \intervalleentier{1}{n}\) et il existe une famille de 
-  scalaire \((\lambda_j)_{j \in \intervalleentier{1}{n}\setminus\{j_0\}}\) tels 
+  \(4 \implies 1\) (par contraposée) Supposons que \(\X\) est liée alors il
+  existe \(j_0 \in \intervalleentier{1}{n}\) et il existe une famille de
+  scalaire \((\lambda_j)_{j \in \intervalleentier{1}{n}\setminus\{j_0\}}\) tels
   que
   \begin{equation}
-    x_{j_0} = \sum_{j \in \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j 
+    x_{j_0} = \sum_{j \in \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j
     x_j.
   \end{equation}
   Soit \(\E\) une base de \(E\). Alors
   \begin{align}
-    \Det_\E(\X) &= \Det (x_1, \ldots, x_{j_0-1}, \sum_{j \in 
-    \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j x_j, x_{j_0+1}, \ldots, 
+    \Det_\E(\X) &= \Det (x_1, \ldots, x_{j_0-1}, \sum_{j \in
+    \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j x_j, x_{j_0+1}, \ldots,
     x_n) \\
-    &= \sum_{j \in \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j 
+    &= \sum_{j \in \intervalleentier{1}{n}\setminus\{j_0\}} \lambda_j
     \Det_\E(x_1, \ldots, x_{j_0-1}, x_j, x_{j_0+1}, \ldots, x_n ) \\
     &=0.
   \end{align}
-  On vient de montrer que si \(\X\) est liée alors dans toute base \(\E\) de 
-  \(E\) on a \(\Det_\E(\X)=0\). Par contraposée, si pour toute base \(\E\) de 
+  On vient de montrer que si \(\X\) est liée alors dans toute base \(\E\) de
+  \(E\) on a \(\Det_\E(\X)=0\). Par contraposée, si pour toute base \(\E\) de
   \(E\) \(\Det_\E(\X) \neq 0\) alors \(\X\) est libre.
 \end{proof}
 %
@@ -347,26 +347,26 @@ Soient \(n \in \N^*\) et \(E\) un \(\K\)-espace vectoriel de dimension \(n\).
 \subsection{Défintion}
 
 \begin{theo}
-  Soit un endomorphisme \(u\) de \(E\). Il existe un unique scalaire \(\lambda\) 
-  tel que pour toute base \(\E\) de \(E\) et toute famille \(\X\) de \(n\) 
+  Soit un endomorphisme \(u\) de \(E\). Il existe un unique scalaire \(\lambda\)
+  tel que pour toute base \(\E\) de \(E\) et toute famille \(\X\) de \(n\)
   vecteurs de \(E\) on ait
   \begin{equation}
     \Det_\E(u(\X)) = \lambda \Det_\E(\X).
   \end{equation}
-  Le scalaire \(\lambda\) est appellé le déterminant de \(u\) et il est noté 
+  Le scalaire \(\lambda\) est appellé le déterminant de \(u\) et il est noté
   \(\Det(u)\).
 \end{theo}
 Cette définition ne dépend pas de la base : \(\Det_\E(u(\E)) = \Det(u)\).
 \begin{proof}[Preuve de l'unicité]
-  Si \(\lambda\) existe, alors particulièrement \(\Det_\E(u(\E)) = \Det(u) = 
+  Si \(\lambda\) existe, alors particulièrement \(\Det_\E(u(\E)) = \Det(u) =
   \lambda\). Donc, sous réserve d'existence, \(\lambda\) est unique.
 \end{proof}
 \begin{proof}[Preuve de l'existence]
-  Soit \(\E_0\) une base quelconque de \(E\). Soit 
-  \(\fonction{\varphi}{E^n}{\K}{\X}{\Det_{\E_{0}}(u(\X))}\). C'est une forme 
-  \(n\)-linéaire (car \(u\) et \(\Det_{\E_{0}}\) le sont) alterné (car 
-  \(\Det_{\E_{0}}\) l'est). Il existe donc un scalaire \(\lambda\) tel que 
-  \(\varphi = \lambda \Det_{\E_0}\). Pour toute famille \(\X\) de \(n\) vecteurs 
+  Soit \(\E_0\) une base quelconque de \(E\). Soit
+  \(\fonction{\varphi}{E^n}{\K}{\X}{\Det_{\E_{0}}(u(\X))}\). C'est une forme
+  \(n\)-linéaire (car \(u\) et \(\Det_{\E_{0}}\) le sont) alterné (car
+  \(\Det_{\E_{0}}\) l'est). Il existe donc un scalaire \(\lambda\) tel que
+  \(\varphi = \lambda \Det_{\E_0}\). Pour toute famille \(\X\) de \(n\) vecteurs
   de \(E\), on a
   \begin{align}
     \varphi(\X) &= \lambda \Det_{\E_0}(\X) \\
@@ -415,7 +415,7 @@ Soit un \(\K\)-espace vectoriel \(E\) de dimension finie \(n\).
 \begin{prop}
   Soit \(\E\) une base de \(E\), alors
   \begin{equation}
-    \Det(v \circ u) = \Det_\E(v(u(\E))) = \Det(v) \Det_\E(u(\E)) = \Det(v) 
+    \Det(v \circ u) = \Det_\E(v(u(\E))) = \Det(v) \Det_\E(u(\E)) = \Det(v)
     \Det(u).
   \end{equation}
 \end{prop}
@@ -423,7 +423,7 @@ Soit un \(\K\)-espace vectoriel \(E\) de dimension finie \(n\).
 \section{Caractérisation des automorphismes parmi les endomorphismes}
 %
 \begin{theo}
-  Soient \(E\) un \(\K\)-espace vectoriel de \emph{dimension finie} et \(u\in 
+  Soient \(E\) un \(\K\)-espace vectoriel de \emph{dimension finie} et \(u\in
   \Endo{E}\). Alors
   \begin{equation}
     u \in \Auto{E} \iff \Det(u) \neq 0.
@@ -446,8 +446,8 @@ Soit un \(\K\)-espace vectoriel \(E\) de dimension finie \(n\).
   donc \(\Det(u^{-1}) = \Det(u)^{-1}\).
 \end{proof}
 
-\emph{\danger Il n'y a pas de déterminant en dimension infinie. Ne pas essayer 
-de calculer des déterminants, en dimension infinie, pour prouver qu'un 
+\emph{\danger Il n'y a pas de déterminant en dimension infinie. Ne pas essayer
+de calculer des déterminants, en dimension infinie, pour prouver qu'un
 endomorphisme est bijectif.}
 
 \section{Déterminant d'une matrice carrée}
@@ -455,29 +455,29 @@ endomorphisme est bijectif.}
 Soit un naturel \(n\).
 \subsection{Définition}
 
-Soit \(A \in \Mn{n}{\K}\), notée \((a_{ij})_{(i,j) \in 
+Soit \(A \in \Mn{n}{\K}\), notée \((a_{ij})_{(i,j) \in
 \intervalleentier{1}{n}^2}\).
 \begin{defdef}
   On définit le déterminant de la matrice \(A\), noté \(\Det(A)\), par
   \begin{equation}
-    \Det(A) = \sum_{\sigma \in \sigma_n} \epsilon(\sigma) \prod_{j=1}^n 
+    \Det(A) = \sum_{\sigma \in \sigma_n} \epsilon(\sigma) \prod_{j=1}^n
     a_{\sigma(j)j}.
   \end{equation}
-  On le note \(\begin{vmatrix} a_{11} & \ldots & a_{1n} \\ \vdots & a_{ij} & 
+  On le note \(\begin{vmatrix} a_{11} & \cdots & a_{1n} \\ \vdots & a_{ij} &
   \vdots \\ a_{n1} & \vdots & a_{nn}\end{vmatrix}\).
 \end{defdef}
 
-\emph{Exemple}~: Soit \((a_{11}, a_{12}, a_{21}, a_{22}) \in \K^4\) et 
+\emph{Exemple}~: Soit \((a_{11}, a_{12}, a_{21}, a_{22}) \in \K^4\) et
 \(t=(1,2)\) alors
 \begin{equation}
-  \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} = 
-    \epsilon(\Id) a_{11}a_{22} + \epsilon(t) a_{21}a_{12} = a_{11}a_{22} - 
+  \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} =
+    \epsilon(\Id) a_{11}a_{22} + \epsilon(t) a_{21}a_{12} = a_{11}a_{22} -
     a_{21}a_{12}.
 \end{equation}
 
 \begin{prop}
   \begin{equation}
-    \Det(A) = sum_{\sigma \in \sigma_n} \epsilon(\sigma) \prod_{i=1}^n 
+    \Det(A) = sum_{\sigma \in \sigma_n} \epsilon(\sigma) \prod_{i=1}^n
     a_{i\sigma(i)}
   \end{equation}
 \end{prop}
@@ -492,23 +492,23 @@ Soit \(A \in \Mn{n}{\K}\), notée \((a_{ij})_{(i,j) \in
 \end{corth}
 %
 \begin{prop}
-Soient \(E\) un \(\K\)-espace vectoriel de dimension \(n\), \(\E\) une base de 
-\(E\) et \(\X\) une famille de \(n\) vecteurs de \(E\). Si \(A = \Mat_\E(\X)\) 
+Soient \(E\) un \(\K\)-espace vectoriel de dimension \(n\), \(\E\) une base de
+\(E\) et \(\X\) une famille de \(n\) vecteurs de \(E\). Si \(A = \Mat_\E(\X)\)
 alors \(\Det(A) = \Det_\E(\X)\). \end{prop}
 
-Autrement dit~: \(\Det(A)\) est le déterminant de toute famille de vecteur 
-\(\X\), dans une base \(\E\), représentée dans cette base par \(A\). On note 
-\(\E_c\) la base canonique de \(\K^n\), \(\Lb_A\) et \(\courbe_A\) les familles 
+Autrement dit~: \(\Det(A)\) est le déterminant de toute famille de vecteur
+\(\X\), dans une base \(\E\), représentée dans cette base par \(A\). On note
+\(\E_c\) la base canonique de \(\K^n\), \(\Lb_A\) et \(\courbe_A\) les familles
 de vecteurs lignes et les familles de vecteurs colonnes de \(A\)
 \begin{equation}
   \Det(A) = \Det_{\E_c}(\courbe_A) = \Det_{\E_c}(\Lb_A).
 \end{equation}
 %
 \begin{proof}
-  Soit \(A=\Mat_\E(A)\), \(A=(a_{ij})\), \(\X=(x_i)\) et \(\E=(e_i)\). Pour tout 
+  Soit \(A=\Mat_\E(A)\), \(A=(a_{ij})\), \(\X=(x_i)\) et \(\E=(e_i)\). Pour tout
   \(j \in \intervalleentier{1}{n}\), on a \(x_j = \sum_{i=1}^n a_{ij}e_j\). Donc
   \begin{equation}
-    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n 
+    \Det_\E(\X) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n
     a_{\sigma(j)j}=\Det(A).
   \end{equation}
   De la même façon on a~:
@@ -517,17 +517,17 @@ de vecteurs lignes et les familles de vecteurs colonnes de \(A\)
   \end{equation}
   et
   \begin{equation}
-    \Det_{\E_c}(\Lb_A) = \Det_{\E_c}(\courbe_{A^\top}) = \Det(A^{\top}) = 
+    \Det_{\E_c}(\Lb_A) = \Det_{\E_c}(\courbe_{A^\top}) = \Det(A^{\top}) =
     \Det(A).
   \end{equation}
 \end{proof}
 %
 \begin{prop}
-  Pour toute base \(\E\) d'un \(\K\)-espace vectoriel \(E\) de dimension \(n\), 
-  et pour tout endomorphisme \(u \in \Endo{E}\) tels que \(\Mat_{\E}(u)=A\) on a 
+  Pour toute base \(\E\) d'un \(\K\)-espace vectoriel \(E\) de dimension \(n\),
+  et pour tout endomorphisme \(u \in \Endo{E}\) tels que \(\Mat_{\E}(u)=A\) on a
   \(\Det(u)=\Det(A)\).
 
-  \(\Det(A)\) est égal au déterminant de tout endormorphisme représenté dans une 
+  \(\Det(A)\) est égal au déterminant de tout endormorphisme représenté dans une
   base par \(A\).
 \end{prop}
 \begin{proof}
@@ -581,7 +581,7 @@ On déduit sur les endomorphismes les propriétés suivantes~:
 
 \subsection{``Petits'' déterminants}
 
-Dans le cas où \(n=2\), on a pour quatre scalaires \(a\), \(b\), \(c\) et \(d\) 
+Dans le cas où \(n=2\), on a pour quatre scalaires \(a\), \(b\), \(c\) et \(d\)
 : \(
 \begin{vmatrix}
   a & b \\
@@ -591,13 +591,13 @@ Dans le cas où \(n=2\), on a pour quatre scalaires \(a\), \(b\), \(c\) et \(d\)
 
 Dans le cas où \(n=3\), on a
 \begin{equation}
-  A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} 
-  \\ a_{31} & a_{32} & a_{33} \end{pmatrix} \quad \sigma_3=\{\Id, (1,2), 
+  A = \begin{pmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23}
+  \\ a_{31} & a_{32} & a_{33} \end{pmatrix} \quad \sigma_3=\{\Id, (1,2),
   (1,3), (2,3), (1,2,3), (1,3,2)\}
 \end{equation}
 et alors
 \begin{align}
-  \Det(A) &= \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n 
+  \Det(A) &= \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^n
   a_{\sigma(j)j} \\
   &=a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} \notag \\
   & - a_{12}a_{21}a_{33} -a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32}.
@@ -615,7 +615,7 @@ et alors
       &        &  & *        \\
       & A'     &  & \vdots   \\
       &        &  & *        \\
-      0 & \ldots &0 & a_{n+1 n+1}
+      0 & \cdots &0 & a_{n+1 n+1}
     \end{pmatrix}.
   \end{equation}
   Alors \(\Det(A) = a_{n+1 n+1} \Det(A')\).
@@ -623,78 +623,78 @@ et alors
 \begin{proof}
   On sait que
   \begin{equation}
-    \Det(A) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^{n+1} 
+    \Det(A) = \sum_{\sigma \in \sigma_n}\epsilon(\sigma) \prod_{j=1}^{n+1}
     a_{\sigma(j)j},
   \end{equation}
-  or \(a_{n+1 j}=0\) si \(j \neq n+1\). Donc \(a_{n+1 \sigma(n+1)}=0\) si 
+  or \(a_{n+1 j}=0\) si \(j \neq n+1\). Donc \(a_{n+1 \sigma(n+1)}=0\) si
   \(\sigma(n+1) \neq n+1\). On peut décomposer le déterminant
   \begin{equation}
-    \Det(A) = \sum_{\substack{\sigma \in \sigma_n\\ 
-    \sigma(n+1)=n+1}}\epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j)j}a_{n+1 
-    \sigma(n+1)} + \sum_{\substack{\sigma \in \sigma_n\\ \sigma(n+1)\neq 
+    \Det(A) = \sum_{\substack{\sigma \in \sigma_n\\
+    \sigma(n+1)=n+1}}\epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j)j}a_{n+1
+    \sigma(n+1)} + \sum_{\substack{\sigma \in \sigma_n\\ \sigma(n+1)\neq
     n+1}}\epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j)j}a_{n+1 \sigma(n+1)}.
   \end{equation}
   Le deuxième terme de cette somme est nul. Si bien qu'on a
   \begin{align}
-    \Det(A) &= a_{n+1 \sigma(n+1)} \sum_{\substack{\sigma \in \sigma_n\\ 
+    \Det(A) &= a_{n+1 \sigma(n+1)} \sum_{\substack{\sigma \in \sigma_n\\
     \sigma(n+1)=n+1}}\epsilon(\sigma) \prod_{j=1}^n a_{\sigma(j)j} \\
-    &= a_{n+1 \sigma(n+1)} \sum_{\substack{s \in \sigma_n\\ 
-    s=\sigma_{\intervalleentier{1}{n}}^{\intervalleentier{1}{n}}}}\epsilon(s) 
+    &= a_{n+1 \sigma(n+1)} \sum_{\substack{s \in \sigma_n\\
+    s=\sigma_{\intervalleentier{1}{n}}^{\intervalleentier{1}{n}}}}\epsilon(s)
     \prod_{i=1}^n a_{is(i)}.
   \end{align}
-  Les permutations \(s\) et \(\sigma\) se décomposent en le même nombre de 
-  transpositions et donc \(\epsilon(s) = \epsilon(\sigma)\). Alors \(\Det(A) 
+  Les permutations \(s\) et \(\sigma\) se décomposent en le même nombre de
+  transpositions et donc \(\epsilon(s) = \epsilon(\sigma)\). Alors \(\Det(A)
   = a_{n+1 \sigma(n+1)} \Det(A')\).
 \end{proof}
 %
 \begin{corth}
-  Soit une matrice \(A=(a_{ij}) \in \Mn{n}{\K}\) triangualire (supérieure ou 
+  Soit une matrice \(A=(a_{ij}) \in \Mn{n}{\K}\) triangualire (supérieure ou
   inférieure). Alors \(\Det(A) = \prod_{i=1}^n a_{ii}\).
 \end{corth}
 \begin{proof}
-  Démontrons par récurrence sur \(n \in \N^*\) l'assertion \(\P(n)\) 
+  Démontrons par récurrence sur \(n \in \N^*\) l'assertion \(\P(n)\)
   ``\(\forall A \in \mathcal{T}_n^s(\K), \Det(A)=\prod_{i=1}^n a_{ii}\)''.
 
-  Initialement, en prenant \(n=1\), on a bien \(\Det(A)=a_{11}\) donc 
-  \(\P(1)\) est vraie. Soit \(n \in \N^*\), supposons que \(\P(n)\) est 
-  vraie et alors démontrons que \(\P(n+1)\) est vraie. Soit \(A \in 
-  \Mn{N}{\K}\) triangulaire supérieure, on peut l'écrire comme 
+  Initialement, en prenant \(n=1\), on a bien \(\Det(A)=a_{11}\) donc
+  \(\P(1)\) est vraie. Soit \(n \in \N^*\), supposons que \(\P(n)\) est
+  vraie et alors démontrons que \(\P(n+1)\) est vraie. Soit \(A \in
+  \Mn{N}{\K}\) triangulaire supérieure, on peut l'écrire comme
   \begin{equation}
     A =
     \begin{pmatrix}
       &        &  & *        \\
       & A'     &  & \vdots   \\
       &        &  & *        \\
-      0 & \ldots &0 & a_{n+1 n+1}
+      0 & \cdots &0 & a_{n+1 n+1}
     \end{pmatrix},
   \end{equation}
-  avec \(A'\) triangulaire supérieure de taille \(n\). Si on applique 
-  l'hypothèse de récurrence à \(A'\), on trouve que 
-  \(\Det(A')=\prod_{i=1}^{n} a_{ii}\). D'après la proposition précédente, 
-  on a \(\Det(A)=a_{n+1 n+1} \Det(A')\). Donc au final 
-  \(\Det(A)=\prod_{i=1}^{n+1} a_{ii}\), et \(\P(n+1)\) est vraie. Le 
-  théorème de récurrence nous permet de conclure en écrivant que 
+  avec \(A'\) triangulaire supérieure de taille \(n\). Si on applique
+  l'hypothèse de récurrence à \(A'\), on trouve que
+  \(\Det(A')=\prod_{i=1}^{n} a_{ii}\). D'après la proposition précédente,
+  on a \(\Det(A)=a_{n+1 n+1} \Det(A')\). Donc au final
+  \(\Det(A)=\prod_{i=1}^{n+1} a_{ii}\), et \(\P(n+1)\) est vraie. Le
+  théorème de récurrence nous permet de conclure en écrivant que
   l'assertion \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 
-\emph{Remarque}~: Si la matrice est triangulaire inférieure, ça ne change 
-rien puisque sa transposée est triangulaire supérieure et \(\Det(A^{\top}) 
+\emph{Remarque}~: Si la matrice est triangulaire inférieure, ça ne change
+rien puisque sa transposée est triangulaire supérieure et \(\Det(A^{\top})
 = \Det(A)\).
 
 \subsection{Manipulations sur les lignes et les colonnes}
 
-Soient \(A=(a_{ij})\in \Mn{n}{\K}\), \(D\) un déterminant d'ordre \(n 
-\geqslant 2\)  de coefficients les \(a_{ij}\), \(\courbe_A\) la famille 
-des colonnes de \(A\) et \(\Lb_A\) la famille des lignes de \(A\). 
+Soient \(A=(a_{ij})\in \Mn{n}{\K}\), \(D\) un déterminant d'ordre \(n
+\geqslant 2\)  de coefficients les \(a_{ij}\), \(\courbe_A\) la famille
+des colonnes de \(A\) et \(\Lb_A\) la famille des lignes de \(A\).
 \(\E_c\) est la base canonique de \(\K^n\).
 
 En théorie on utilise~:
 \begin{itemize}
-  \item \(D=\Det(A)=\Det_{\E_C}(\courbe_A)\) pour les opérations sur les 
+  \item \(D=\Det(A)=\Det_{\E_C}(\courbe_A)\) pour les opérations sur les
     colonnes;
-  \item \(D=\Det(A)=\Det_{\E_C}(\Lb_A)\) pour les opérations sur les 
+  \item \(D=\Det(A)=\Det_{\E_C}(\Lb_A)\) pour les opérations sur les
     lignes;
-  \item \(\Det_{\E_C}\) est une forme \(n\)-lin'éaire alternée (et 
+  \item \(\Det_{\E_C}\) est une forme \(n\)-lin'éaire alternée (et
     antisymétrique).
 \end{itemize}
 
@@ -702,30 +702,30 @@ En pratique on utilise plutôt~:
 \begin{enumerate}
   \item \(\D\) est linéaire par rapport à chaque colonne de \(A\)~:
     \begin{itemize}
-      \item si on multiplie une colonne par \(\lambda\), alors \(\D\) est 
+      \item si on multiplie une colonne par \(\lambda\), alors \(\D\) est
         changé en \(\lambda D\);
-      \item si on multiplie toutes les colonnes par \(\lambda\), alors 
+      \item si on multiplie toutes les colonnes par \(\lambda\), alors
         \(\D\) est changé en \(\lambda^n D\);
       \item si une colonne est nulle, alors le déterminant est nul.
     \end{itemize}
-  \item Ajouter à une colonne de \(A\) une combinaison linéaire des autres 
+  \item Ajouter à une colonne de \(A\) une combinaison linéaire des autres
     colonnes ne change pas le déterminant;
 
     \begin{proof}
-      Soit \(k \in \intervalleentier{1}{n}\setminus\{j\}\) et soit 
+      Soit \(k \in \intervalleentier{1}{n}\setminus\{j\}\) et soit
       \(\lambda_k \in \R\) alors
       \begin{align}
-        &\Det(C_1, \ldots, C_{j-1}, \sum_{k \in 
-        \intervalleentier{1}{n}\setminus\{j\}}\lambda_kC_k, C_{j+1}, 
+        &\Det(C_1, \ldots, C_{j-1}, \sum_{k \in
+        \intervalleentier{1}{n}\setminus\{j\}}\lambda_kC_k, C_{j+1},
         \ldots, C_n) \\
-        =&D + \sum_{k \in \intervalleentier{1}{n}\setminus\{j\}}\lambda_k 
+        =&D + \sum_{k \in \intervalleentier{1}{n}\setminus\{j\}}\lambda_k
         \Det(C_1, \ldots, C_{j-1}, C_k, C_{j+1}, \ldots, C_n) \\
         =&D.
       \end{align}
       La somme est nulle puisque le déterminant est alterné.
     \end{proof}
-  \item Effectuer une permutation \(\sigma\) sur les colonnes de \(A\) 
-    change \(D\) en \(\epsilon(\sigma)D\). Particulièrement, en échangeant 
+  \item Effectuer une permutation \(\sigma\) sur les colonnes de \(A\)
+    change \(D\) en \(\epsilon(\sigma)D\). Particulièrement, en échangeant
     deux colonnes, on change \(D\) en \(-D\);
   \item S'il y a deux colonnes identiques alors \(D\) est nul;
   \item S'il y a deux colonnes proportionnelles alors \(D\) est nul.
@@ -734,125 +734,128 @@ Les résultats sont analogues pour les lignes.
 
 \emph{Exemple : Le déterminant de Van der Monde d'ordre 4}
 
-Soient quatres scalaires \(a\), \(b\), \(c\) et \(d\). On cherche à 
-calculer \(D = \begin{vmatrix} 1 & a & a^2 & a^3 \\ 1 & b & b^2 & b^3 \\ 1 
-& c & c^2 & c^3 \\ 1 & d & d^2 & d^3\end{vmatrix}\). En retranchant la 
+Soient quatres scalaires \(a\), \(b\), \(c\) et \(d\). On cherche à
+calculer \(D = \begin{vmatrix} 1 & a & a^2 & a^3 \\ 1 & b & b^2 & b^3 \\ 1
+& c & c^2 & c^3 \\ 1 & d & d^2 & d^3\end{vmatrix}\). En retranchant la
 première ligne aux autres lignes, on obtient
 \begin{align}
-  D &= \begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & b-a & b^2-a^2 & b^3-a^3 \\ 
-    0 & c-a & c^2-a^2 & c^3-a^3 \\ 0 & d-a & d^2-a^2 & 
+  D &= \begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & b-a & b^2-a^2 & b^3-a^3 \\
+    0 & c-a & c^2-a^2 & c^3-a^3 \\ 0 & d-a & d^2-a^2 &
   d^3-a^3\end{vmatrix}\\
-  &=(b-a)(c-a)(d-a) \begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & b+a & 
-    b^2+ab+a^2 \\ 0 & 1 & c+a & c^2+ac+a^2 \\0 & 1 & d+a & d^2+ad+a^2 
+  &=(b-a)(c-a)(d-a) \begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & b+a &
+    b^2+ab+a^2 \\ 0 & 1 & c+a & c^2+ac+a^2 \\0 & 1 & d+a & d^2+ad+a^2
   \end{vmatrix}
 \end{align}
-En retranchant la deuxième ligne à la troisième ligne et à la quatrième 
+En retranchant la deuxième ligne à la troisième ligne et à la quatrième
 ligne nous obtenons
 \begin{align}
-  D &= (b-a)(c-a)(d-a)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & b+a & 
-    b^2+ab+a^2 \\ 0 & 0 & c-b & c^2-b^2+a(c-b) \\ 0 & 0 & d-b & 
+  D &= (b-a)(c-a)(d-a)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & b+a &
+    b^2+ab+a^2 \\ 0 & 0 & c-b & c^2-b^2+a(c-b) \\ 0 & 0 & d-b &
   d^2-b^2+a(d-b)\end{vmatrix}\\
-  &=(b-a)(c-a)(d-a)(c-b)(d-b)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & 
-    b+a & b^2+ab+a^2 \\ 0 & 0 & 1 & c+b+a \\ 0 & 0 & 1 & 
+  &=(b-a)(c-a)(d-a)(c-b)(d-b)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 &
+    b+a & b^2+ab+a^2 \\ 0 & 0 & 1 & c+b+a \\ 0 & 0 & 1 &
   d+b+a\end{vmatrix}\\
-  &=(b-a)(c-a)(d-a)(c-b)(d-b)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 & 
+  &=(b-a)(c-a)(d-a)(c-b)(d-b)\begin{vmatrix} 1 & a & a^2 & a^3 \\ 0 & 1 &
   b+a & b^2+ab+a^2 \\ 0 & 0 & 1 & c+b+a \\ 0 & 0 & 0 & d-c\end{vmatrix}
   &=(b-a)(c-a)(d-a)(c-b)(d-b)(d-c).
 \end{align}
 
-\subsection{Développement par rapport à une ligne et développement par 
+\subsection{Développement par rapport à une ligne et développement par
 rapport à une colonne}
 
-Soit \(D\) un déterminant d'ordre \(n\geqslant 2\). Soit \(A=(a_{ij}) \in 
-\Mn{n}{\K}\) telle que \(D=\Det(A)\). On note \(\E_c\) la base canonique 
-de \(\K^n\), \(\courbe_A\) la famille des colonnes de \(A\), \(\Lb_A\) la 
+Soit \(D\) un déterminant d'ordre \(n\geqslant 2\). Soit \(A=(a_{ij}) \in
+\Mn{n}{\K}\) telle que \(D=\Det(A)\). On note \(\E_c\) la base canonique
+de \(\K^n\), \(\courbe_A\) la famille des colonnes de \(A\), \(\Lb_A\) la
 famille des lignes de \(A\). Soit \(j_0 \in \intervalleentier{1}{n}\).
 
-Pour tout couple \((i,j) \in \intervalleentier{1}{n}^2\), on note 
+Pour tout couple \((i,j) \in \intervalleentier{1}{n}^2\), on note
 \(A_{ij}=\Det_{\E_c}(C_1, \ldots, C_{j-1}, e_i, C_{j+1}, \ldots, C_n)\).
 
-On a \(D=\Det(A) = \Det_{\E_c}(C_1, \ldots, C_n)\), \(C_{j_0}=\sum_{i=1}^n 
+On a \(D=\Det(A) = \Det_{\E_c}(C_1, \ldots, C_n)\), \(C_{j_0}=\sum_{i=1}^n
 a_{ij_{0}}e_i\). Par \(n\)-linéarité du déterminant
 \begin{align}
-  D &= \Det_{\E_c}(C_1, \ldots, C_{j_0-1}, \sum_{i=1}^n a_{ij_{0}}e_i, 
+  D &= \Det_{\E_c}(C_1, \ldots, C_{j_0-1}, \sum_{i=1}^n a_{ij_{0}}e_i,
   C_{j_0+1}, \ldots, C_n) \\
-  D &= \sum_{i=1}^n a_{ij_{0}} \Det_{\E_c}(C_1, \ldots, C_{j_0-1}, e_i, 
+  D &= \sum_{i=1}^n a_{ij_{0}} \Det_{\E_c}(C_1, \ldots, C_{j_0-1}, e_i,
   C_{j_0+1}, \ldots, C_n) \\
 D &= \sum_{i=1}^n a_{ij_{0}} A_{ij_0}. \end{align}
 
 Calculons \(A_{ij}\)~:
 \begin{align}
-  A_{ij} &= \Det_{\E_c}(C_1, \ldots, C_{j-1}, e_i, C_{j+1}, \ldots, C_n) 
+  A_{ij} &= \Det_{\E_c}(C_1, \ldots, C_{j-1}, e_i, C_{j+1}, \ldots, C_n)
   \\
-  &=  \begin{vmatrix} &        &        &0      &      &        &  \\
-    &        &        &\vdots &      &        &  \\
-    &        &        & 1     &      &        &  \\
-    &        &        &\vdots &      &        &  \\
-    C_1 & \ldots & C_{j-1} & 0     &C_{j+1} & \ldots & C_{n} \\
-    &        &        &\vdots &      &        &  \\
-  &        &        &0      &      &        &  \\    \end{vmatrix}.
+  &=
+  \begin{vmatrix}
+        &        &         &0      &         &        &  \\
+        &        &         &\vdots &         &        &  \\
+        &        &         & 1     &         &        &  \\
+        &        &         &\vdots &         &        &  \\
+    C_1 & \cdots & C_{j-1} & 0     & C_{j+1} & \cdots & C_{n} \\
+        &        &         &\vdots &         &        &  \\
+        &        &         &0      &         &        &
+  \end{vmatrix}.
 \end{align}
 
-Il suffit de faire \(j-1\) échanges successifs de colonnes pour ramener la 
+Il suffit de faire \(j-1\) échanges successifs de colonnes pour ramener la
 colonne \(j\) en première~:
 \begin{equation}
-  A_{ij} = (-1)^{j-1} \begin{vmatrix} 0     &        &        &      &       
+  A_{ij} = (-1)^{j-1} \begin{vmatrix} 0     &        &        &      &
     &        &  \\
     \vdots &        &        &      &       &        &  \\
     1     &        &        &      &       &        &  \\
     \vdots &        &        &      &       &        &  \\
-    0     & C_1    & \ldots & C_{j-1}&C_{j+1} & \ldots & C_{n} \\
+    0     & C_1    & \cdots & C_{j-1}&C_{j+1} & \cdots & C_{n} \\
     \vdots &        &        &      &       &        &  \\
   0     &        &        &      &       &        &  \\    \end{vmatrix}.
 \end{equation}
 
-De la même manière il suffit de faire \(i-1\) échanges successifs de 
+De la même manière il suffit de faire \(i-1\) échanges successifs de
 lignes pour ramener la ligne \(i\) en première~:
 
 \begin{align}
-  A_{ij} &= (-1)^{j-1} (-1)^{i-1}
+  A_{ij} &= {(-1)}^{j-1} {(-1)}^{i-1}
   \begin{vmatrix} 1     &        &        &       &      &        & \\
-    0     &        &        &      &       &        &  \\    \vdots &        
-    & C_1    & \ldots & C_{j-1}&C_{j+1} & \ldots & C_{n} \\
+    0     &        &        &      &       &        &  \\    \vdots &
+    & C_1    & \cdots & C_{j-1}&C_{j+1} & \cdots & C_{n} \\
   0     &        &        &      &       &        &  \\    \end{vmatrix}\\
-  &=(-1)^{i+j-2} \Det(M_{ij}),
+  &={(-1)}^{i+j-2} \Det(M_{ij}),
 \end{align}
-où \(M_{ij}\) est la matric obtenue à partir de \(A\) en enlevant la 
+où \(M_{ij}\) est la matric obtenue à partir de \(A\) en enlevant la
 \(i\)\ieme{} ligne et la \(j\)\ieme{} colone.
 
 \begin{defdef}
-  Pour tout entiers \(i\) et \(j\) de \(\intervalleentier{1}{n}\), la 
-  matrice \(M_{ij}\) est appelée sous-matrice de \(A\) et \(\Det(M_{ij})\) 
+  Pour tout entiers \(i\) et \(j\) de \(\intervalleentier{1}{n}\), la
+  matrice \(M_{ij}\) est appelée sous-matrice de \(A\) et \(\Det(M_{ij})\)
   est appelé le mineur, et \(A_{ij}\) est appelé le cofacteur.
 \end{defdef}
 %
 \begin{theo}
-  Soient \(i_0\) et \(j_0\) des entiers de \(\intervalleentier{1}{n}\). Le 
+  Soient \(i_0\) et \(j_0\) des entiers de \(\intervalleentier{1}{n}\). Le
   développement du déterminant par rapport à la colonne \(j_0\) est
   \begin{equation}
-    \Det(A) = \sum_{i=1}^n a_{ij_0}A_{ij_0} = \sum_{i=1}^n 
-    a_{ij_0}(-1)^{i+j_0-2} \Det(M_{ij_0}).
+    \Det(A) = \sum_{i=1}^n a_{ij_0}A_{ij_0} = \sum_{i=1}^n
+    a_{ij_0}{(-1)}^{i+j_0-2} \Det(M_{ij_0}).
   \end{equation}
   Le développement du déterminant par rapport à la ligne \(i_0\) est
   \begin{equation}
-    \Det(A) = \sum_{j=1}^n a_{i_0j}A_{i_0j} = \sum_{j=1}^n 
-    a_{i_0j}(-1)^{i_0+j-2} \Det(M_{i_0j}).
+    \Det(A) = \sum_{j=1}^n a_{i_0j}A_{i_0j} = \sum_{j=1}^n
+    a_{i_0j}{(-1)}^{i_0+j-2} \Det(M_{i_0j}).
   \end{equation}
 
-  En pratique c'est intéressant de développer par rapport à une ligne (ou 
+  En pratique c'est intéressant de développer par rapport à une ligne (ou
   une colonne) presque nulle.
 \end{theo}
 
 \subsection{Exemple classique~: Le déterminant de Van der Monde}
 
-Soit un naturel \(n \geqslant 2\) et \((a_1, \ldots, a_n) \in \K^n\). On 
+Soit un naturel \(n \geqslant 2\) et \((a_1, \ldots, a_n) \in \K^n\). On
 pose
 \begin{equation}
   V_n(a_1, \ldots, a_n) =
   \begin{vmatrix}
-    1 & a_1 & \ldots & a_1^{n-1} \\
+    1 & a_1 & \cdots & a_1^{n-1} \\
     \vdots & \vdots &  & \vdots \\
-    1 & a_n & \ldots & a_n^{n-1}
+    1 & a_n & \cdots & a_n^{n-1}
   \end{vmatrix}.
 \end{equation}
 
@@ -860,32 +863,30 @@ On le calcule de deux manières différentes~:
 
 \subsubsection{Méthode 1}
 
-On fait les opérations \( C_j \leftarrow C_j - a_1C_{j-1}\) pour \(j\) 
+On fait les opérations \( C_j \leftarrow C_j - a_1C_{j-1}\) pour \(j\)
 allant de \(n\) à \(2\) (dans cet ordre) et on obtient
 \begin{align}
   V_n(a_1, \ldots, a_n) &=
   \begin{vmatrix}
-    1 & 0 & \ldots & 0 \\
-    1 & a_2-a_1 & \ldots & (a_2-a_1)a_2^{n-2} \\
+    1 & 0 & \cdots & 0 \\
+    1 & a_2-a_1 & \cdots & (a_2-a_1)a_2^{n-2} \\
     \vdots & \vdots &  & \vdots \\
-    1 & a_n-a_1 & \ldots & (a_n-a_1)a_n^{n-2}
+    1 & a_n-a_1 & \cdots & (a_n-a_1)a_n^{n-2}
   \end{vmatrix}\\
   &=1
   \begin{vmatrix}
-    a_2-a_1 & \ldots & (a_2-a_1)a_2^{n-2} \\
+    a_2-a_1 & \cdots & (a_2-a_1)a_2^{n-2} \\
     \vdots &  & \vdots \\
-    a_n-a_1 & \ldots & (a_n-a_1)a_n^{n-2}
+    a_n-a_1 & \cdots & (a_n-a_1)a_n^{n-2}
   \end{vmatrix}\\
   &=\prod_{i=2}^n(a_i-a_1)
   \begin{vmatrix}
-    1 & a_2 &\ldots & a_2^{n-2} \\
+    1 & a_2 &\cdots & a_2^{n-2} \\
     \vdots & & & \vdots \\
-    1 & a_n &\ldots & a_n^{n-2}
+    1 & a_n &\cdots & a_n^{n-2}
   \end{vmatrix}\\
-  V_n(a_1, \ldots, a_n)  &=\prod_{i=2}^n(a_i-a_1) V_{n-1}(a_1, \ldots, 
-  a_n) \\
-  &=\prod_{i=2}^n(a_i-a_1) \prod_{j=3}^n(a_j-a_2) V_{n-2}(a_1, \ldots, 
-  a_n).
+  V_n(a_1, \ldots, a_n)  &=\prod_{i=2}^n(a_i-a_1) V_{n-1}(a_1, \ldots, a_n) \\
+  &=\prod_{i=2}^n(a_i-a_1) \prod_{j=3}^n(a_j-a_2) V_{n-2}(a_1, \ldots, a_n).
 \end{align}
 En itérant le processus on obtient
 \begin{equation}
@@ -895,15 +896,15 @@ sachant que \(V_2(a_{n-1},a_n)=a_n-a_{n-1}\).
 
 \subsubsection{Méthode 2}
 
-\(\K\) est un sous-corps du corps \(\K(X)\) des fractions rationelles. On 
-peut considérer que les déterminants sont à coefficients dans \(\K(X)\). 
+\(\K\) est un sous-corps du corps \(\K(X)\) des fractions rationnelles. On
+peut considérer que les déterminants sont à coefficients dans \(\K(X)\).
 On pose
 \begin{equation}
   P = \begin{vmatrix}
-    1 & a_1 & \ldots & a_1^{n-1} \\
+    1 & a_1 & \cdots & a_1^{n-1} \\
     \vdots & \vdots &  & \vdots \\
-    1 & a_{n-1} & \ldots & a_{n-1}^{n-1}\\
-    1 & X     & \ldots & X^{n-1}
+    1 & a_{n-1} & \cdots & a_{n-1}^{n-1}\\
+    1 & X     & \cdots & X^{n-1}
   \end{vmatrix}.
 \end{equation}
 
@@ -911,20 +912,20 @@ On développe par rapport à la dernière ligne et on a~:
 \begin{equation}
   P = \sum_{j=1}^n A_{nj} X^{j-1}=\sum_{k=0}^{n-1} A_{n k+1} X^{k},
 \end{equation}
-avec \(A\) les cofacteurs. \(P\) est un polynôme de degré inférieur ou 
-égal à \(n-1\). \(P\) s'annule en tous les \(a_k\) (pour \(k \in 
-\intervalleentier{1}{n-1}\)) parce qu'il y a deux fois la même ligne. Deux 
+avec \(A\) les cofacteurs. \(P\) est un polynôme de degré inférieur ou
+égal à \(n-1\). \(P\) s'annule en tous les \(a_k\) (pour \(k \in
+\intervalleentier{1}{n-1}\)) parce qu'il y a deux fois la même ligne. Deux
 cas se présentent~:
 \begin{enumerate}
-  \item s'il existe un couple \((j,k) \in \intervalleentier{1}{n}^2\) tel 
+  \item s'il existe un couple \((j,k) \in \intervalleentier{1}{n}^2\) tel
     que \(j \neq k\) et \(a_j=a_k\) alors \(P\) est le polynôme nul;
-  \item si les \(a_k\) (pour \(k \in \intervalleentier{1}{n}\)) sont deux 
-    à deux distincts, alors \(P\) est un polynôme de degré inférieur ou 
+  \item si les \(a_k\) (pour \(k \in \intervalleentier{1}{n}\)) sont deux
+    à deux distincts, alors \(P\) est un polynôme de degré inférieur ou
     égal à \(n-1\) qui admet \(n-1\) racines. Alors \(P\) est scindé~:
     \begin{equation}
       P = A_{nn} \prod_{k=1}^{n-1}(X-a_k),
     \end{equation}
-    avec \(A_{nn} = V_{n-1}(a_1, \ldots, a_n)\). En appliquant \(P\) en 
+    avec \(A_{nn} = V_{n-1}(a_1, \ldots, a_n)\). En appliquant \(P\) en
     \(a_n\) on obtient
     \begin{align}
       V_{n}(a_1, \ldots, a_n) &= P(a_n) \\
@@ -944,14 +945,14 @@ La formule est valable dans les deux cas.
 \subsection{Comatrice. Calcul de l'inverse d'une matrice}
 
 \begin{defdef}
-  Soient \(n \geqslant 2\) et \(A \in \Mn{n}{\K}\). On appelle comatrice 
-  de \(A\), noté \(\Com A\), la matrice dont les coefficients sont les 
+  Soient \(n \geqslant 2\) et \(A \in \Mn{n}{\K}\). On appelle comatrice
+  de \(A\), noté \(\Com A\), la matrice dont les coefficients sont les
   cofacteurs de \(A\)~:
   \begin{equation}
-    \Com A = (A_{ij})_{1 \leqslant i,j \leqslant n} \quad 
+    \Com A = (A_{ij})_{1 \leqslant i,j \leqslant n} \quad
     A_{ij}=(-1)^{i+j} \Det M_{ij}
   \end{equation}
-  où \(M_{ij}\) est la sous-matrice de \(A\) obtenue en enlevant la 
+  où \(M_{ij}\) est la sous-matrice de \(A\) obtenue en enlevant la
   colonne \(j\) et la ligne \(i\).
 \end{defdef}
 
@@ -962,10 +963,10 @@ La formule est valable dans les deux cas.
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit \(A=(a_{ij})_{1 \leqslant i,j \leqslant n}\), \({\Com A}^{\top} = 
-  (b_{ij})_{1 \leqslant i,j \leqslant n}\) (c.-à-d. \(\forall (i,j) \in 
-  \intervalleentier{1}{n}^2 \quad b_{ij}=A_{ji}\)) et \(C=(c_{ij})_{1 
-  \leqslant i,j \leqslant n}={\Com A}^{\top} A\). Alors pour tout \((i,j) 
+  Soit \(A=(a_{ij})_{1 \leqslant i,j \leqslant n}\), \({\Com A}^{\top} =
+  (b_{ij})_{1 \leqslant i,j \leqslant n}\) (c.-à-d. \(\forall (i,j) \in
+  \intervalleentier{1}{n}^2 \quad b_{ij}=A_{ji}\)) et \(C=(c_{ij})_{1
+  \leqslant i,j \leqslant n}={\Com A}^{\top} A\). Alors pour tout \((i,j)
   \in \intervalleentier{1}{n}^2\) on a
   \begin{equation}
     c_{ij} = \sum_{k=1}^n b_{ik}a_{kj} = \sum_{k=1}^n A_{ki} a_{kj}.
@@ -973,33 +974,33 @@ La formule est valable dans les deux cas.
 
   Deux cas se présentent à nous~:
   \begin{enumerate}
-    \item Si \(i=j\) alors \(c_{jj} = \sum_{k=1}^n A_{kj} a_{kj} = 
-      \Det(A)\), c'est le développement par rapport à la \(j\)\ieme{} 
+    \item Si \(i=j\) alors \(c_{jj} = \sum_{k=1}^n A_{kj} a_{kj} =
+      \Det(A)\), c'est le développement par rapport à la \(j\)\ieme{}
       colonne;
-    \item sinon alors \(c_{ij} = \sum_{k=1}^n a_{kj} A_{ki}\). Les 
-      \(A_{ki}\) ne dépendent pas de la \(i\)\ieme{} colonne de \(A\). 
-      Soit \(A'\) la matrice obtenue à partir de \(A\) en remplaçant la 
-      \(i\)\ieme{} colonne par la \(j\)\ieme{}. Alors pour tout \(k \in 
-      \intervalleentier{1}{n}\) \(A'_{ki}=A_{ki}\). Développons par 
+    \item sinon alors \(c_{ij} = \sum_{k=1}^n a_{kj} A_{ki}\). Les
+      \(A_{ki}\) ne dépendent pas de la \(i\)\ieme{} colonne de \(A\).
+      Soit \(A'\) la matrice obtenue à partir de \(A\) en remplaçant la
+      \(i\)\ieme{} colonne par la \(j\)\ieme{}. Alors pour tout \(k \in
+      \intervalleentier{1}{n}\) \(A'_{ki}=A_{ki}\). Développons par
       rapport à la \(i\)\ieme{} colonne~:
       \begin{equation}
-        \Det(A') = \sum_{k=1}^n a'_{ki} A'_{ki} = \sum_{k=1}^n a_{kj} 
+        \Det(A') = \sum_{k=1}^n a'_{ki} A'_{ki} = \sum_{k=1}^n a_{kj}
         A_{ki} =c_{ij}.
       \end{equation}
-      Or \(A'\) contient deux fois la colonne \(j\), donc \(\Det(A')=0\). 
+      Or \(A'\) contient deux fois la colonne \(j\), donc \(\Det(A')=0\).
       Alors \(c_{ij}=0\).
   \end{enumerate}
 
   Ce qui permet de montrer que \({\Com A}^{\top} A = C = \Det(A) I_n\).
 \end{proof}
 \begin{corth}
-  Si \(A\) est inversible alors \(A^{-1} = \frac{{\Com 
+  Si \(A\) est inversible alors \(A^{-1} = \frac{{\Com
   A}^{\top}}{\Det(A)}\).
 \end{corth}
 
 \emph{Cas particuliers importants}~:
 
-Si \(n=2\) alors 
+Si \(n=2\) alors
 \(A = \begin{pmatrix}
   a & b \\
   c & d
@@ -1010,20 +1011,20 @@ et \(\Det(A) = ad-bc\).
 \begin{equation}
   \Com A =
   \begin{pmatrix}
-    d & -c \\ 
-    -b & a 
-  \end{pmatrix} 
-  \quad {\Com A}^{\top} = 
-  \begin{pmatrix} 
-    d & -b \\ 
-    -c & a 
+    d & -c \\
+    -b & a
+  \end{pmatrix}
+  \quad {\Com A}^{\top} =
+  \begin{pmatrix}
+    d & -b \\
+    -c & a
   \end{pmatrix}
 \end{equation}
 
-\(A\) est inversible si et seulement si \(ad \neq bc\) et dans ce cas 
-\(A^{-1} = \frac{1}{ad-bc} 
+\(A\) est inversible si et seulement si \(ad \neq bc\) et dans ce cas
+\(A^{-1} = \frac{1}{ad-bc}
 \begin{pmatrix}
-  d & -b \\ 
+  d & -b \\
   -c & a
 \end{pmatrix}
 \).
@@ -1034,13 +1035,13 @@ Soit \((\Lb)\) un système linéaire qui a pour représentation matricielle
 \begin{equation}
   AX=B \quad (A \in \Mn{n}{\K}).
 \end{equation}
-On suppose que le nombre d'inconnues est le même que le nombre 
-d'équations. Soit \((\H)\) le système homogéne associé, de 
+On suppose que le nombre d'inconnues est le même que le nombre
+d'équations. Soit \((\H)\) le système homogéne associé, de
 représentation matricielle
 \begin{equation}
   AX=0.
 \end{equation}
-On appelle déterminant de \((\Lb)\) ou de \((\H)\) le déterminant de la 
+On appelle déterminant de \((\Lb)\) ou de \((\H)\) le déterminant de la
 matrice \(A\).
 \begin{equation}
   \Det(\Lb)=\Det(\H)=\Det(A).
@@ -1048,76 +1049,76 @@ matrice \(A\).
 
 \begin{prop}
   \begin{enumerate}
-    \item \((\Lb)\) est de Cramer si et seulement si \(\Det(\Lb) \neq 
+    \item \((\Lb)\) est de Cramer si et seulement si \(\Det(\Lb) \neq
       0\);
-    \item \((\H)\) admet des solutions non nulles si et seulement si 
+    \item \((\H)\) admet des solutions non nulles si et seulement si
       \(\Det(\H) \neq 0\).
   \end{enumerate}
 \end{prop}
 
 \begin{theo}
-  Supposons que \((\Lb)\) est de Cramer. La solution unique \((x_1, 
+  Supposons que \((\Lb)\) est de Cramer. La solution unique \((x_1,
   \ldots, x_n)\) de \((\Lb)\) est donnée par~:
   \begin{equation}
-    \forall j \in \intervalleentier{1}{n} \quad 
+    \forall j \in \intervalleentier{1}{n} \quad
     x_j=\frac{\Det(A_j)}{\Det(A)}=\frac{\Det(A_j)}{\Det(\Lb)},
   \end{equation}
-  où \(A_j\) est la matrice obtenue à partir de \(A\) en remplaçant sa 
+  où \(A_j\) est la matrice obtenue à partir de \(A\) en remplaçant sa
   \(j\)\ieme{} colonne par celle de \(B\).
 \end{theo}
 \begin{proof}
-  Déjà \((\Lb)\) est de Cramer donc on sait qu'il admet une unique 
-  solution \((x_1, \ldots, x_n)\). Notons \(C_1, \ldots, C_n\) les 
+  Déjà \((\Lb)\) est de Cramer donc on sait qu'il admet une unique
+  solution \((x_1, \ldots, x_n)\). Notons \(C_1, \ldots, C_n\) les
   colonnes de \(A\). On sait que  \(B = \sum_{k=1}^n x_i C_i\). Alors
   \begin{align}
     \Det(A_j) &= \Det(C_1, \ldots, C_{j-1}, B, C_{j+1}, \ldots, C_n) \\
-    &= \Det(C_1, \ldots, C_{j-1}, \sum_{k=1}^n x_i C_i, C_{j+1}, \ldots, 
+    &= \Det(C_1, \ldots, C_{j-1}, \sum_{k=1}^n x_i C_i, C_{j+1}, \ldots,
     C_n) \\
-    &= \sum_{k=1}^n x_i \Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1}, \ldots, 
+    &= \sum_{k=1}^n x_i \Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1}, \ldots,
     C_n).
   \end{align}
   Deux cas se présentent~:
   \begin{enumerate}
-    \item Si \(i=j\) alors \(\Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1}, 
+    \item Si \(i=j\) alors \(\Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1},
       \ldots, C_n)=\Det(A)\);
-    \item sinon \(\Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1}, \ldots, 
+    \item sinon \(\Det(C_1, \ldots, C_{j-1}, C_i, C_{j+1}, \ldots,
       C_n)=0\) car le déterminant est alterné.
   \end{enumerate}
-  Finalement  \(\Det(A_j) = x_j \Det(A)\). C'est-à-dire 
+  Finalement  \(\Det(A_j) = x_j \Det(A)\). C'est-à-dire
   \(x_j=\frac{\Det(A_j)}{\Det(A)}\).
 \end{proof}
 %
 
 \subsection{Orientation d'un espace vectoriel réel de dimension finie}
 
-Soit un \(\R\)-espace vectoriel \(E\) de dimension finie \(n\geqslant 
+Soit un \(\R\)-espace vectoriel \(E\) de dimension finie \(n\geqslant
 1\). Soient \(\B\) et \(\B'\) deux bases de \(E\). Alors
 \begin{equation}
   \Det_{\B}(\B') =  \Det_{\B'}(\B) = 1
 \end{equation}
-Alors \(\Det_{\B}(\B')\) et \(\Det_{\B'}(\B)\) sont soit tous les deux 
-strictement négatifs ou soit strictement positifs. Soit \(B_0\) une 
+Alors \(\Det_{\B}(\B')\) et \(\Det_{\B'}(\B)\) sont soit tous les deux
+strictement négatifs ou soit strictement positifs. Soit \(B_0\) une
 autre base de \(E\). On définit
 \begin{gather}
   O'=\enstq{\B \text{~base de~} E}{\Det_{\B_0}(B)>0},\\
   O''=\enstq{\B \text{~base de~} E}{\Det_{\B_0}(B)<0}.
 \end{gather}
-\((O',O'')\) forment une partition de l'ensemble des bases. En effet on 
+\((O',O'')\) forment une partition de l'ensemble des bases. En effet on
 a~:
 \begin{itemize}
-  \item \(O' \cup O'' = F\) (le déterminant d'une base et soit négatif 
+  \item \(O' \cup O'' = F\) (le déterminant d'une base et soit négatif
     ou positif);
-  \item \(O' \cap O'' = \emptyset\) (le déterminant d'une base n'est pas 
+  \item \(O' \cap O'' = \emptyset\) (le déterminant d'une base n'est pas
     à la fois négatif et positif);
-  \item \(O' \neq \emptyset\) car \(\Det_{\B_0}(\B_0)=1\) donc \(\B_0 
+  \item \(O' \neq \emptyset\) car \(\Det_{\B_0}(\B_0)=1\) donc \(\B_0
     \in O'\);
-  \item \(O'' \neq \emptyset\)  car si on note \(B_0=(e_1, e_2, \ldots, 
-    e_n)\) et si on crée \(B_1 = (-e_1, e_2, \ldots, e_n)\) alors 
+  \item \(O'' \neq \emptyset\)  car si on note \(B_0=(e_1, e_2, \ldots,
+    e_n)\) et si on crée \(B_1 = (-e_1, e_2, \ldots, e_n)\) alors
     \(\Det_{B_0}(\B_1) = -1\); et donc \(B_1 \in O''\).
 \end{itemize}
 
 \begin{defdef}
-  Orienter l'espace vectoriel \(E\), c'est choisir un ou des ensembles 
-  \(O'\) et \(O''\) et décider d'appeler leurs éléments des bases 
+  Orienter l'espace vectoriel \(E\), c'est choisir un ou des ensembles
+  \(O'\) et \(O''\) et décider d'appeler leurs éléments des bases
   directes et les autres indirectes.
 \end{defdef}

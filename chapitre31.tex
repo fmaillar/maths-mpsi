@@ -7,44 +7,44 @@
 
 \subsection{Intégrales doubles sur un segment}
 
-\subsubsection{Théorème de Fubini -- Définitions}
+\subsubsection{Théorème de Fubini --- Définitions}
 
 \begin{theo}[Admis]
-  Soient quatre réels \(a\), \(b\), \(c\) et \(d\) tels que \(a\leqslant b\) et 
-  \(c \leqslant d\), \(f\) une fonction continue sur le rectangle 
+  Soient quatre réels \(a\), \(b\), \(c\) et \(d\) tels que \(a\leqslant b\) et
+  \(c \leqslant d\), \(f\) une fonction continue sur le rectangle
   \(\intervalleff{a}{b} \times \intervalleff{c}{d}\). Alors
   \begin{equation}
-  \int_a^b\left(\int_c^d f(x,y)\diff y \right)\diff x = \int_c^d\left(\int_a^b 
+  \int_a^b\left(\int_c^d f(x,y)\diff y \right)\diff x = \int_c^d\left(\int_a^b
   f(x,y)\diff x\right)\diff y. \end{equation}
-  Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle 
+  Cette valeur commune est appelée intégrale double de \(f\) sur le rectangle
   \(\intervalleff{a}{b} \times \intervalleff{c}{d}\) et notée
   \begin{equation}
-    \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f(x,y) \diff x \diff y 
+    \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f(x,y) \diff x \diff y
     = \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}}f.
   \end{equation}
 \end{theo}
 
 \emph{Interprétation}~:
 \begin{enumerate}
-  \item Lorsque \(f\) est à valeurs positives, \(\iint_{\intervalleff{a}{b} 
-    \times \intervalleff{c}{d}}f\) représente le volume de l'ensemble 
-    \(\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times 
+  \item Lorsque \(f\) est à valeurs positives, \(\iint_{\intervalleff{a}{b}
+    \times \intervalleff{c}{d}}f\) représente le volume de l'ensemble
+    \(\enstq{(x,y,z)\in\R^3}{(x,y) \in \intervalleff{a}{b} \times
     \intervalleff{c}{d} \ 0 \leqslant z \leqslant f(x,y)}\).
-  \item Lorsque \(f=\tilde{1}\) sur le rectangle \(\intervalleff{a}{b} \times 
+  \item Lorsque \(f=\tilde{1}\) sur le rectangle \(\intervalleff{a}{b} \times
     \intervalleff{c}{d}\),
     \begin{equation}
-      \iint_{\intervalleff{a}{b} \times 
+      \iint_{\intervalleff{a}{b} \times
       \intervalleff{c}{d}}\tilde{1}=(a-b)(c-d).
     \end{equation}
 \end{enumerate}
 \begin{corth}
-  Avec les hypothèses du théorème, on suppose en outre qu'il existe deux 
-  fonctions continues \(u \in \R^{\intervalleff{a}{b}}\) et \(v \in 
-  \R^{\intervalleff{c}{d}}\) telles que pour tout \((x, y) \in 
-  \intervalleff{a}{b} \times \intervalleff{c}{d}\) on a \(f(x,y)=u(x)v(y)\), 
+  Avec les hypothèses du théorème, on suppose en outre qu'il existe deux
+  fonctions continues \(u \in \R^{\intervalleff{a}{b}}\) et \(v \in
+  \R^{\intervalleff{c}{d}}\) telles que pour tout \((x, y) \in
+  \intervalleff{a}{b} \times \intervalleff{c}{d}\) on a \(f(x,y)=u(x)v(y)\),
   alors
   \begin{equation}
-    \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}} f(x,y)\diff x \diff y 
+    \iint_{\intervalleff{a}{b} \times \intervalleff{c}{d}} f(x,y)\diff x \diff y
     = \int_a^b u(x)\diff x \int_c^d v(y)\diff y.
   \end{equation}
 \end{corth}
@@ -52,21 +52,21 @@
 \subsubsection{Propriétés}
 
 \begin{prop}
-  Soient \(R\) un rectangle du plan, deux fonctions continues \(f\) et \(g\), et 
+  Soient \(R\) un rectangle du plan, deux fonctions continues \(f\) et \(g\), et
   un réel \(\lambda\). Alors
   \begin{equation}
     \iint_R (\lambda f+g) = \lambda \iint_R f + \iint_R g.
   \end{equation}
 \end{prop}
 \begin{prop}
-  Soient \(R_1\) et \(R_2\) deux rectangles disjoints du plan, \(f\) une 
+  Soient \(R_1\) et \(R_2\) deux rectangles disjoints du plan, \(f\) une
   fonction continue sur \(R_1 \cup R_2\). Alors
   \begin{equation}
     \iint_{R_1 \cup R_2} f = \iint_{R_1} f + \iint_{R_2} f.
   \end{equation}
 \end{prop}
 \begin{prop}
-  Soient \(R\) un rectangle du plan, deux fonctions continues \(f\) et \(g\). 
+  Soient \(R\) un rectangle du plan, deux fonctions continues \(f\) et \(g\).
   Supposons que \(f \leqslant g\), alors
   \begin{equation}
     \iint_R f \leqslant \iint_R g.
@@ -78,65 +78,65 @@
 \subsubsection{Théorème de Fubini}
 
 \begin{defdef}
-  On appelle domaine simple du plan toute partie \(\Ddomaine\) de \(\R^2\) 
+  On appelle domaine simple du plan toute partie \(\Ddomaine\) de \(\R^2\)
   telle~:
   \begin{itemize}
-    \item qu'il existe quatre réels \(a\), \(b\), \(c\) et \(d\) (\(a\leqslant 
+    \item qu'il existe quatre réels \(a\), \(b\), \(c\) et \(d\) (\(a\leqslant
       b\) et \(c \leqslant d\)) ;
-    \item qu'il existe des fonctions continues \(\varphi_1\) et \(\varphi_2\) de 
-      \(\intervalleff{a}{b}\) vers \(\R\); et \(\psi_1\) et \(\psi_2\) de 
+    \item qu'il existe des fonctions continues \(\varphi_1\) et \(\varphi_2\) de
+      \(\intervalleff{a}{b}\) vers \(\R\); et \(\psi_1\) et \(\psi_2\) de
       \(\intervalleff{c}{d}\) vers \(\R\) ;
   \end{itemize}
   telles que
   \begin{align}
-    \Ddomaine&=\enstq{(x,y)\in\R^2}{a\leqslant x\leqslant b \quad 
+    \Ddomaine&=\enstq{(x,y)\in\R^2}{a\leqslant x\leqslant b \quad
     \varphi_1(x)\leqslant y\leqslant \varphi_2(x)}\\
-    &=\enstq{(x,y)\in\R^2}{c \leqslant y \leqslant d \quad \psi_1(y) \leqslant x 
+    &=\enstq{(x,y)\in\R^2}{c \leqslant y \leqslant d \quad \psi_1(y) \leqslant x
     \leqslant \psi_2(y)}
   \end{align}
 \end{defdef}
 
 \begin{defdef}
-  Soient \(\Ddomaine\) un domaine simple du plan (avec les notations de la 
+  Soient \(\Ddomaine\) un domaine simple du plan (avec les notations de la
   définition) et \(f\) une fonction continue sur \(\Ddomaine\). Alors
   \begin{equation}
-    \int_{a}^{b} \left( \int_{\varphi_1(x)}^{\varphi_2(x)} f(x,y)\diff 
-    y\right)\diff x = \int_{c}^{d} \left( \int_{\psi_1(y)}^{\psi_2(y)} 
+    \int_{a}^{b} \left( \int_{\varphi_1(x)}^{\varphi_2(x)} f(x,y)\diff
+    y\right)\diff x = \int_{c}^{d} \left( \int_{\psi_1(y)}^{\psi_2(y)}
     f(x,y)\diff x\right)\diff y.
   \end{equation}
-  Cette valeur commune est appelée intégrale double de \(f\) dans le domaine 
-  \(\Ddomaine\), et elle est notée \(\iint_{\Ddomaine} f(x,y)\diff x \diff y = 
+  Cette valeur commune est appelée intégrale double de \(f\) dans le domaine
+  \(\Ddomaine\), et elle est notée \(\iint_{\Ddomaine} f(x,y)\diff x \diff y =
   \iint_{\Ddomaine} f\).
 \end{defdef}
 
-\emph{Interprétation}~: On admet ce théorème, en particulier que l'aire de 
+\emph{Interprétation}~: On admet ce théorème, en particulier que l'aire de
 \(\Ddomaine\) vaut \(\iint_{\Ddomaine}\diff x \diff y\).
 
 \subsubsection{Propriétés}
 
 \begin{prop}[Linéarité]
-  Soient \(\Ddomaine\) un domaine simple du plan, \(f\) et \(g\) deux fonctions 
+  Soient \(\Ddomaine\) un domaine simple du plan, \(f\) et \(g\) deux fonctions
   continues sur \(\Ddomaine\), et \(\lambda\) un réel. Alors
   \begin{equation}
-    \iint_{\Ddomaine}(\lambda f+g) = \lambda \iint_{\Ddomaine} f + 
+    \iint_{\Ddomaine}(\lambda f+g) = \lambda \iint_{\Ddomaine} f +
     \iint_{\Ddomaine} g.
   \end{equation}
 \end{prop}
 \begin{prop}[Additivité des domaines]
-  Soient \(\Ddomaine_1\) et \(\Ddomaine_2\) des domaines simples du plan, \(f\) 
+  Soient \(\Ddomaine_1\) et \(\Ddomaine_2\) des domaines simples du plan, \(f\)
   une fonction continue sur \(\Ddomaine_1 \cup \Ddomaine_2\). Alors
   \begin{equation}
-    \iint_{\Ddomaine_1 \cup \Ddomaine_2} f = \iint_{\Ddomaine_1} f + 
+    \iint_{\Ddomaine_1 \cup \Ddomaine_2} f = \iint_{\Ddomaine_1} f +
     \iint_{\Ddomaine_2} f.
   \end{equation}
 \end{prop}
 \begin{prop}[Croissance]
-  Soient \(\Ddomaine\) un domaine simple du plan, \(f\) et \(g\) deux fonctions 
+  Soient \(\Ddomaine\) un domaine simple du plan, \(f\) et \(g\) deux fonctions
   continues sur \(\Ddomaine\). Alors
   \begin{equation}
     f \leqslant g \implies \iint_{\Ddomaine} f \leqslant \iint_{\Ddomaine} f.
   \end{equation}
-  En particulier si \(f \geqslant \tilde{0}\) alors \(\iint_{\Ddomaine} f 
+  En particulier si \(f \geqslant \tilde{0}\) alors \(\iint_{\Ddomaine} f
   \geqslant 0\).
 \end{prop}
 
@@ -145,28 +145,28 @@
 \subsubsection{Notion de \(\classe{1}\)-difféomorphisme}
 
 \begin{defdef}
-  Soient \(U\) un ouvert de \(\R^2\) et 
-  \(\fonction{\varphi}{U}{\R^2}{(x,y)}{(\varphi_1(x,y),\varphi_2(x,y))}\). On 
-  suppose que \(\varphi\) est de classe \(\classe{1}\) sur \(U\) et on définit 
-  pour tout \((x,y) \in U\) la matrice jacobienne de \(\varphi\) en \((x,y)\) 
+  Soient \(U\) un ouvert de \(\R^2\) et
+  \(\fonction{\varphi}{U}{\R^2}{(x,y)}{(\varphi_1(x,y),\varphi_2(x,y))}\). On
+  suppose que \(\varphi\) est de classe \(\classe{1}\) sur \(U\) et on définit
+  pour tout \((x,y) \in U\) la matrice jacobienne de \(\varphi\) en \((x,y)\)
   notée
   \begin{equation}
-    J_\varphi(x,y) = \begin{pmatrix} \derivep{\varphi_1}{x}(x,y) & 
-    \derivep{\varphi_1}{y}(x,y) \\ \derivep{\varphi_2}{x}(x,y) & 
+    J_\varphi(x,y) = \begin{pmatrix} \derivep{\varphi_1}{x}(x,y) &
+    \derivep{\varphi_1}{y}(x,y) \\ \derivep{\varphi_2}{x}(x,y) &
     \derivep{\varphi_2}{y}(x,y) \end{pmatrix}.
   \end{equation}
 
-  On appelle le jacobien (ou le déterminant jacobien) de \(\varphi\) au point 
+  On appelle le jacobien (ou le déterminant jacobien) de \(\varphi\) au point
   \((x,y)\) le réel
   \begin{equation}
-    \Det J_\varphi(x,y) = \derivep{\varphi_1}{x}(x,y) 
-    \derivep{\varphi_2}{y}(x,y) - \derivep{\varphi_2}{x}(x,y) 
+    \Det J_\varphi(x,y) = \derivep{\varphi_1}{x}(x,y)
+    \derivep{\varphi_2}{y}(x,y) - \derivep{\varphi_2}{x}(x,y)
     \derivep{\varphi_1}{y}(x,y).
   \end{equation}
 \end{defdef}
 %
 \begin{defdef}
-  On dit que \(\varphi\) est un \(\classe{1}\)-difféomorphisme d'un ouvert \(U\) 
+  On dit que \(\varphi\) est un \(\classe{1}\)-difféomorphisme d'un ouvert \(U\)
   de \(\R^2\) sur un ouvert \(V\) de \(\R^2\) si et seulement si~:
   \begin{enumerate}
     \item \(\varphi\) est de classe \(\classe{1}\) sur \(U\) ;
@@ -176,8 +176,8 @@
 \end{defdef}
 %
 \begin{prop}[Admise]
-  Si \(\varphi\) est un \(\classe{1}\)-difféomorphisme de \(U\) sur \(V\), alors 
-  pour tout \((x,y) \in U^2\) la matrice jacobienne \(J_\varphi(x,y)\) est 
+  Si \(\varphi\) est un \(\classe{1}\)-difféomorphisme de \(U\) sur \(V\), alors
+  pour tout \((x,y) \in U^2\) la matrice jacobienne \(J_\varphi(x,y)\) est
   inversible et~:
   \begin{equation}
     J_\varphi(x,y)^{-1} = J_{\varphi^{-1}}(x,y).
@@ -187,15 +187,15 @@
 \subsubsection{Théorème de changement de variable}
 
 \begin{theo}
-  Soient \(U\) et \(V\) deux ouverts de \(\R^2\), \(\varphi\) un 
-  \(\classe{1}\)-difféomorphisme de \(U\) sur \(V\). Soit \(\Ddomaine\) un 
-  domaine simple de \(\R^2\) tel que \(\Ddomaine \subset U\) et \(\Delta = 
+  Soient \(U\) et \(V\) deux ouverts de \(\R^2\), \(\varphi\) un
+  \(\classe{1}\)-difféomorphisme de \(U\) sur \(V\). Soit \(\Ddomaine\) un
+  domaine simple de \(\R^2\) tel que \(\Ddomaine \subset U\) et \(\Delta =
   \varphi(\Ddomaine)\) soit un domaine simple inclus dans \(V\).
 
-  Soit \(f\) une fonction continue sur \(\Ddomaine\) à valeurs dans \(\R\), 
+  Soit \(f\) une fonction continue sur \(\Ddomaine\) à valeurs dans \(\R\),
   alors
   \begin{equation}
-    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(\varphi(x,y)) 
+    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(\varphi(x,y))
     \abs{\Det J_\varphi(x,y)}\diff x \diff y.
   \end{equation}
   \emph{Valeur absolue.}
@@ -204,17 +204,17 @@
 \subsubsection{Changement de variable affine}
 
 \begin{theo}
-  Soient quatre réels \(a\), \(b\), \(c\) et \(d\) tels que \(ad \neq bc\). On 
-  adopte comme nouvelles variables \(u\) et \(v\) telles que \(\begin{cases} 
-  x=au+bv \\ y=cu+dv \end{cases}\). Soit une bijection affine de classe 
-  \(\classe{1}\)~: \(\fonction{\varphi}{\R^2}{\R}{(u,v)}{(au+bv, cu+dv)}\). 
+  Soient quatre réels \(a\), \(b\), \(c\) et \(d\) tels que \(ad \neq bc\). On
+  adopte comme nouvelles variables \(u\) et \(v\) telles que \(\begin{cases}
+  x=au+bv \\ y=cu+dv \end{cases}\). Soit une bijection affine de classe
+  \(\classe{1}\)~: \(\fonction{\varphi}{\R^2}{\R}{(u,v)}{(au+bv, cu+dv)}\).
   Ainsi que \(\varphi^{-1}\) (puisque \(ad-bc\neq 0\).
 
-  Soit \(\Ddomaine\) un domaine simple de \(\R^2\), 
-  \(\Delta=\varphi(\Ddomaine)\) un domaine simple et \(f\) une fonction continue 
+  Soit \(\Ddomaine\) un domaine simple de \(\R^2\),
+  \(\Delta=\varphi(\Ddomaine)\) un domaine simple et \(f\) une fonction continue
   sur \(\Delta\). Alors
   \begin{equation}
-    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(au+bv, cu+dv) 
+    \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(au+bv, cu+dv)
     \abs{ad-bc}\diff u \diff v.
   \end{equation}
 \end{theo}
@@ -222,36 +222,36 @@
 \subsubsection{Changement de variables en polaire}
 
 \begin{theo}
-  On adopte comme nouvelles variables \(r\) et \(\theta\) telles que 
-  \(\begin{cases} x=r\cos\theta \\ y=r\sin\theta \end{cases}\). Soient \(U\) et 
-    \(V\) deux ouverts de \(\R^2\) tels que \(\fonction{\varphi}{U}{V}{(r, 
-    \theta)}{(r\cos\theta, r\sin\theta)}\) soit un 
+  On adopte comme nouvelles variables \(r\) et \(\theta\) telles que
+  \(\begin{cases} x=r\cos\theta \\ y=r\sin\theta \end{cases}\). Soient \(U\) et
+    \(V\) deux ouverts de \(\R^2\) tels que \(\fonction{\varphi}{U}{V}{(r,
+    \theta)}{(r\cos\theta, r\sin\theta)}\) soit un
     \(\classe{1}\)-difféomorphisme.
 
-    Soit \(\Ddomaine\) un domaine simple de \(\R^2\) tel que \(\Ddomaine \subset 
-    U\) et \(\Delta=\varphi(\Ddomaine)\) soit un domaine simple inclus dans 
+    Soit \(\Ddomaine\) un domaine simple de \(\R^2\) tel que \(\Ddomaine \subset
+    U\) et \(\Delta=\varphi(\Ddomaine)\) soit un domaine simple inclus dans
     \(V\). Soit \(f\) une fonction continue sur \(\Ddomaine\), alors
     \begin{equation}
-      \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(r\cos\theta, 
+      \iint_\Delta f(x,y)\diff x \diff y = \iint_\Ddomaine f(r\cos\theta,
       r\sin\theta) \abs{r}\diff r \diff \theta.
     \end{equation}
 \end{theo}
 
 \emph{En pratique}~:
 \begin{itemize}
-  \item toujours dessiner les domaines \(\Ddomaine\) et \(\Delta\) pour éviter 
+  \item toujours dessiner les domaines \(\Ddomaine\) et \(\Delta\) pour éviter
     de se tromper;
-  \item essayer, pour des changements de variables en polaire, de choisir les 
+  \item essayer, pour des changements de variables en polaire, de choisir les
     domaines de sorte que \(r>0\).
 \end{itemize}
 
-\emph{Exemple -- Aire d'un disque}~: Soit \(\Delta\) le disque de centre \(O\) 
+\emph{Exemple --- Aire d'un disque}~: Soit \(\Delta\) le disque de centre \(O\)
 et de rayon \(R>0\), tels que
 \begin{align}
-  \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad 
+  \text{Aire}(\Delta) = \iint_\Delta \diff x \diff y \quad
   \Delta=\enstq{(x,y)\in\R^2}{x^2+y^2\leqslant R^2} \\
-  \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)} 
-  \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leqslant r \leqslant R \ 0 
+  \fonction{\varphi}{\Ddomaine}{\Delta}{(r, \theta)}{(r\cos\theta, r\sin\theta)}
+  \quad \Ddomaine=\enstq{(r,\theta)\in\R^2}{0 \leqslant r \leqslant R \ 0
   \leqslant \theta \leqslant 2\pi}
 \end{align}
 Alors
@@ -262,17 +262,15 @@ Alors
   &=\pi R^2.
 \end{align}
 
-
-\section{Champs de vecteurs et champs de scalaires}
-\label{sec:champvec}
-On suppose que \(n \in \{2, 3\}\) et on considère l'espace vectoriel \(\R^n\) 
-muni de sa structure canonique d'espace euclidien. On note \(e=(e_i)_{1 
+\section{Champs de vecteurs et champs de scalaires}\label{sec:champvec}
+On suppose que \(n \in \{2, 3\}\) et on considère l'espace vectoriel \(\R^n\)
+muni de sa structure canonique d'espace euclidien. On note \(e=(e_i)_{1
 \leqslant i \leqslant n}\) sa base canonique. Soit \(U\) un ouvert de \(\R^n\).
 
 \subsection{Gradient d'un champ de scalaires}
 
-On appelle champ de scalaire sur \(U\) toute application \(f \in \R^U\) de 
-classe \(\classe{1}\). On rappelle que le gradient de \(f\) au point \(M \in U\) 
+On appelle champ de scalaire sur \(U\) toute application \(f \in \R^U\) de
+classe \(\classe{1}\). On rappelle que le gradient de \(f\) au point \(M \in U\)
 est défini par
 \begin{equation}
   \grad{f}(M) = \sum_{i=1}^n \derivep{f}{x_i} \vect{e_i}.
@@ -282,42 +280,42 @@ est défini par
 
 On appelle champ de vecteurs sur \(U\) toute application de \(U\) dans \(\R^n\).
 
-\emph{Exemple}~: Si \(f\) est un champ de scalaire sur \(U\) de classe 
-\(\classe{1}\), alors le gradient \(\grad{f}\) est un champ de vecteurs sur 
+\emph{Exemple}~: Si \(f\) est un champ de scalaire sur \(U\) de classe
+\(\classe{1}\), alors le gradient \(\grad{f}\) est un champ de vecteurs sur
 \(U\).
 
 
 \subsection{Divergence}
 
-Soit \(\vect{F} : U \longrightarrow \R^n\) un champ de scalaires sur \(U\) de 
+Soit \(\vect{F} : U \longrightarrow \R^n\) un champ de scalaires sur \(U\) de
 classe \(\classe{1}\).
 
-Si \(n=2\), on note pour tout \(M(x,y) \in U\) \(\vect{F}=P(x,y)\vect{e_1} + 
+Si \(n=2\), on note pour tout \(M(x,y) \in U\) \(\vect{F}=P(x,y)\vect{e_1} +
 Q(x,y)\vect{e_2}\).
 
-Si \(n=3\), on note pour tout \(M(x,y,z) \in U\) \(\vect{F}=P(x,y,z)\vect{e_1} + 
+Si \(n=3\), on note pour tout \(M(x,y,z) \in U\) \(\vect{F}=P(x,y,z)\vect{e_1} +
 Q(x,y,z)\vect{e_2}+R(x,y,z)\vect{e_3}\).
 
 \begin{defdef}
-  On appelle divergence du champ de vecteurs \(\vect{F}\) au point \(M \in U\), 
+  On appelle divergence du champ de vecteurs \(\vect{F}\) au point \(M \in U\),
   le réel noté \(\divgc \vect{F}(M)\) défini par~:
   \begin{itemize}
-    \item si \(n=2\), \(M=(x,y)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y) + 
+    \item si \(n=2\), \(M=(x,y)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y) +
       \derivep{Q}{y}(x,y)\);
-    \item si \(n=3\), \(M=(x,y,z)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y,z) + 
+    \item si \(n=3\), \(M=(x,y,z)\) \(\divgc \vect{F}(M)=\derivep{P}{x}(x,y,z) +
       \derivep{Q}{y}(x,y,z) + \derivep{R}{z}(x,y,z)\).
   \end{itemize}
-  L'application \(\fonction{\divgc}{U}{\R}{M}{\divgc \vect{F}(M)}\) est un champ 
+  L'application \(\fonction{\divgc}{U}{\R}{M}{\divgc \vect{F}(M)}\) est un champ
   de scalaire
 \end{defdef}
 %
 \begin{prop}
-  Pour tout point \(M\) de \(U\), l'application divergence notée \(\divgc\), 
-  \(\fonction{\divgc}{\classe{1}(U, \R^n)}{\R}{\vect{F}}{\divgc\vect{F}(M)}\) 
-  est une forme linéaire. Autrement dit pour tout champs de vecteurs \(F\) et 
+  Pour tout point \(M\) de \(U\), l'application divergence notée \(\divgc\),
+  \(\fonction{\divgc}{\classe{1}(U, \R^n)}{\R}{\vect{F}}{\divgc\vect{F}(M)}\)
+  est une forme linéaire. Autrement dit pour tout champs de vecteurs \(F\) et
   \(G\) dans \(\classe{1}(U, \R^n)\) et pour tout réel \(\lambda\), on a
   \begin{equation}
-    \divgc(\lambda \vect{F} + \vect{G})(M) = \lambda \divgc \vect{F}(M) + \divgc 
+    \divgc(\lambda \vect{F} + \vect{G})(M) = \lambda \divgc \vect{F}(M) + \divgc
     \vect{G}(M)
   \end{equation}
 \end{prop}
@@ -326,10 +324,10 @@ Q(x,y,z)\vect{e_2}+R(x,y,z)\vect{e_3}\).
 \end{proof}
 %
 \begin{prop}
-  Soient \(\vect{F} \in \classe{1}(U, \R^n)\) un champ de vecteurs et \(\varphi 
+  Soient \(\vect{F} \in \classe{1}(U, \R^n)\) un champ de vecteurs et \(\varphi
   \in \classe{1}(U, \R)\). Alors pour tout point \(M \in U\), on a
   \begin{equation}
-    \divgc(\varphi \vect{F})(M)=\prodscal{\grad{\varphi}}{\vect{F}}(M) + 
+    \divgc(\varphi \vect{F})(M)=\prodscal{\grad{\varphi}}{\vect{F}}(M) +
     (\varphi \divgc \vect{F})(M).
   \end{equation}
 \end{prop}
@@ -337,8 +335,8 @@ Q(x,y,z)\vect{e_2}+R(x,y,z)\vect{e_3}\).
   Dans le cas où \(n=2\) avec les notations précédentes, on a
   \begin{align}
     (\varphi \vect{F})(M)& = (\varphi(M) P(M), \varphi(M) Q(M)) \\
-    \divgc(\varphi \vect{F})(M)& = \derivep{\varphi}{x}(M)  P(M) + \varphi(M) 
-    \derivep{P}{x}(M) + \derivep{\varphi}{y}(M)  Q(M) + \varphi(M) 
+    \divgc(\varphi \vect{F})(M)& = \derivep{\varphi}{x}(M)  P(M) + \varphi(M)
+    \derivep{P}{x}(M) + \derivep{\varphi}{y}(M)  Q(M) + \varphi(M)
     \derivep{P}{y}(M) \\
     &=\prodscal{\grad{\varphi}(M)}{\vect{F}(M)} + \varphi(M)\divgc\vect{F}(M)
   \end{align}
@@ -349,55 +347,55 @@ Q(x,y,z)\vect{e_2}+R(x,y,z)\vect{e_3}\).
 Dans cette sous-section, \(n=3\).
 
 \begin{defdef}
-  Soit \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteur. Pour tout point 
-  \(M \in U\), on définit un vecteur appelé rotationnel de \(\vect{F}\) au point 
+  Soit \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteur. Pour tout point
+  \(M \in U\), on définit un vecteur appelé rotationnel de \(\vect{F}\) au point
   \(M\), noté \(\rot \vect{F}(M)\), défini par
   \begin{equation}
-    \rot \vect{F}(M) = \begin{pmatrix} \derivep{R}{y}(M) - \derivep{Q}{z}(M) \\ 
-    \derivep{P}{z}(M) - \derivep{R}{x}(M) \\ \derivep{Q}{x}(M) - 
+    \rot \vect{F}(M) = \begin{pmatrix} \derivep{R}{y}(M) - \derivep{Q}{z}(M) \\
+    \derivep{P}{z}(M) - \derivep{R}{x}(M) \\ \derivep{Q}{x}(M) -
     \derivep{P}{y}(M)\end{pmatrix}.
   \end{equation}
 \end{defdef}
 
-L'application \(\fonction{\rot \vect{F}}{U}{\R^n}{M}{\rot \vect{F}(M)}\) est un 
+L'application \(\fonction{\rot \vect{F}}{U}{\R^n}{M}{\rot \vect{F}(M)}\) est un
 champ de vecteurs.
 
 \begin{prop}
-  Soient \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteurs et 
-  \(\varphi\) un champs de scalaire de classe \(\classe{1}(U, \R)\). Alors pour 
+  Soient \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteurs et
+  \(\varphi\) un champs de scalaire de classe \(\classe{1}(U, \R)\). Alors pour
   tout point \(M \in U\), on a
   \begin{equation}
-    \rot(\varphi \vect{F})(M) = \grad \varphi(M) \wedge \vect{F}(M) + 
+    \rot(\varphi \vect{F})(M) = \grad \varphi(M) \wedge \vect{F}(M) +
     \varphi(M)\rot(\vect{F})(M).
   \end{equation}
 \end{prop}
 \begin{proof}
   Soit \(M \in U\). On a
   \begin{equation}
-    (\varphi \vect{F})(M) = \begin{pmatrix} \varphi(M)P(M) \\ \varphi(M)Q(M) \\ 
+    (\varphi \vect{F})(M) = \begin{pmatrix} \varphi(M)P(M) \\ \varphi(M)Q(M) \\
     \varphi(M)R(M)\end{pmatrix}.
   \end{equation}
   Alors
   \begin{align}
-    \rot(\varphi \vect{F})(M)) &= \begin{pmatrix} \derivep{\varphi}{y}(M)R(M) + 
-    \varphi(M)\derivep{R}{y}(M) - \derivep{\varphi}{z}(M)Q(M) - 
-    \derivep{Q}{z}(M)\varphi(M) \\ \derivep{\varphi}{z}(M)P(M) + 
-    \varphi(M)\derivep{P}{z}(M) - \derivep{\varphi}{x}(M)R(M) - 
-    \derivep{R}{x}(M)\varphi(M) \\ \derivep{\varphi}{x}(M)Q(M) + 
-    \varphi(M)\derivep{Q}{x}(M) - \derivep{\varphi}{y}(M)P(M) - 
+    \rot(\varphi \vect{F})(M)) &= \begin{pmatrix} \derivep{\varphi}{y}(M)R(M) +
+    \varphi(M)\derivep{R}{y}(M) - \derivep{\varphi}{z}(M)Q(M) -
+    \derivep{Q}{z}(M)\varphi(M) \\ \derivep{\varphi}{z}(M)P(M) +
+    \varphi(M)\derivep{P}{z}(M) - \derivep{\varphi}{x}(M)R(M) -
+    \derivep{R}{x}(M)\varphi(M) \\ \derivep{\varphi}{x}(M)Q(M) +
+    \varphi(M)\derivep{Q}{x}(M) - \derivep{\varphi}{y}(M)P(M) -
     \derivep{P}{y}(M)\varphi(M)\end{pmatrix} \\
-    &=\begin{pmatrix} \derivep{\varphi}{y}(M)R(M) - \derivep{\varphi}{z}(M)Q(M) 
-    + \varphi(M)\left(\derivep{R}{y}(M)  - \derivep{Q}{z}(M)\right) \\ 
-    \derivep{\varphi}{z}(M)P(M) - \derivep{\varphi}{x}(M)R(M) + 
-    \varphi(M)\left(\derivep{P}{z}(M) - \derivep{R}{x}(M)\right) \\ 
-    \derivep{\varphi}{x}(M)Q(M) -\derivep{\varphi}{y}(M)P(M) + 
+    &=\begin{pmatrix} \derivep{\varphi}{y}(M)R(M) - \derivep{\varphi}{z}(M)Q(M)
+    + \varphi(M)\left(\derivep{R}{y}(M)  - \derivep{Q}{z}(M)\right) \\
+    \derivep{\varphi}{z}(M)P(M) - \derivep{\varphi}{x}(M)R(M) +
+    \varphi(M)\left(\derivep{P}{z}(M) - \derivep{R}{x}(M)\right) \\
+    \derivep{\varphi}{x}(M)Q(M) -\derivep{\varphi}{y}(M)P(M) +
     \varphi(M)\left(\derivep{Q}{x}(M)  - \derivep{P}{y}(M)\right)\end{pmatrix}\\
     &=\grad \varphi(M) \wedge \vect{F}(M) + \varphi(M)\rot(\vect{F})(M).
   \end{align}
 \end{proof}
 %
 \begin{prop}
-  Soit \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteurs et soit 
+  Soit \(\vect{F} \in \classe{1}(U, \R^3)\) un champ de vecteurs et soit
   \(\vu\in\R^3\), alors
   \begin{equation}
     \divgc(\vect{F}\wedge \vu)(M) = \prodscal{\rot \vect{F}(M)}{\vu}.
@@ -406,12 +404,12 @@ champ de vecteurs.
 \begin{proof}
   Si on note \(\vu =(a, b, c)\) alors
   \begin{equation}
-    \vect{F}(M) \wedge \vu = \begin{pmatrix} cQ-bR \\ aR-cP 
+    \vect{F}(M) \wedge \vu = \begin{pmatrix} cQ-bR \\ aR-cP
     \\bP-aQ\end{pmatrix}(M).
   \end{equation}
   En calculant la divergence~:
   \begin{align}
-    \divgc(\vect{F} \wedge \vu)(M) &=c \derivep{Q}{x}(M) -b\derivep{R}{x}(M) + a 
+    \divgc(\vect{F} \wedge \vu)(M) &=c \derivep{Q}{x}(M) -b\derivep{R}{x}(M) + a
     \derivep{R}{y}(M) \notag\\
     &-c\derivep{P}{y}(M) + b \derivep{P}{z}(M) -a\derivep{Q}{z}(M) \\
     &=\prodscal{\rot \vect{F}(M)}{\vu}.
@@ -421,34 +419,34 @@ champ de vecteurs.
 \subsection{Potentiel scalaire}
 
 \begin{defdef}
-  Soient \(\vect{F} \in \classe{1}(U, \R^n)\) un champ de vecteurs. On dit que 
-  \(\vect{F}\) dérive d'un potentiel scalaire s'il existe un champ de scalaires 
+  Soient \(\vect{F} \in \classe{1}(U, \R^n)\) un champ de vecteurs. On dit que
+  \(\vect{F}\) dérive d'un potentiel scalaire s'il existe un champ de scalaires
   \(f \in \classe{1}(U, \R)\) tel que \(\vect{F}=\grad{f}\).
 \end{defdef}
 \begin{prop}[Dans le cas où \(n=3\)]
-  Tout champ de vecteurs de classe \(\classe{1}\) qui dérive d'un potentiel 
+  Tout champ de vecteurs de classe \(\classe{1}\) qui dérive d'un potentiel
   scalaire admet un rotationnel nul.
 \end{prop}
 \begin{proof}
-  Notons \(\vect{F}=\grad f\) avec \(f \in \classe{1}(U, \R)\). Pour tout \(M 
+  Notons \(\vect{F}=\grad f\) avec \(f \in \classe{1}(U, \R)\). Pour tout \(M
   \in U\), on a
   \begin{equation}
-    \vect{F}(M) = \derivep{f}{x}(M)\vect{e_1} +  \derivep{f}{y}(M)\vect{e_2} +  
+    \vect{F}(M) = \derivep{f}{x}(M)\vect{e_1} +  \derivep{f}{y}(M)\vect{e_2} +
     \derivep{f}{z}(M)\vect{e_3}.
   \end{equation}
-  Lorsqu'on calcule la première composante du rotationnel de \(\vect{F}\), 
+  Lorsqu'on calcule la première composante du rotationnel de \(\vect{F}\),
   puisque \(f\) est de classe \(\classe{2}\), on a
   \begin{equation}
     \derivepc{f}{y}{z}(M)-\derivepc{f}{z}{y}(M)=0,
   \end{equation}
   d'après le théorème de Schwarz.
 
-  Le calcul donne le même résultat pour la deuxième et troisième composante du 
+  Le calcul donne le même résultat pour la deuxième et troisième composante du
   vecteur, de telle sorte que \(\rot\vect{F}(M)=\vect{0}\).
 \end{proof}
 
 \begin{cor}
-  Pour tout champ scalaire de classe \(\classe{1}\) \(f \in classe{1}(U, \R)\), 
+  Pour tout champ scalaire de classe \(\classe{1}\) \(f \in classe{1}(U, \R)\),
   on a pour tout point \(M \in U\)
   \begin{equation}
     \rot\grad f(M)=\vect{0}.
@@ -456,29 +454,29 @@ champ de vecteurs.
 \end{cor}
 
 \begin{defdef}
-  On appelle ouvert étoilé de \(\R^n\) tout ouvert \(U\) de \(\R^n\) pour lequel 
-  il existe \(\Omega \in U\) tel que pour tout \(M \in U\), \([\Omega M] \subset 
+  On appelle ouvert étoilé de \(\R^n\) tout ouvert \(U\) de \(\R^n\) pour lequel
+  il existe \(\Omega \in U\) tel que pour tout \(M \in U\), \([\Omega M] \subset
   U\).
 \end{defdef}
 
 En particulier les convexes sont étoilés.
 
 \begin{theo}[Admis]
-  Soit \(U\) un ouvert étoilé de \(\R^3\), \(\vect{F} \in \classe{1}(U, \R^3)\) 
-  un champ de vecteurs dont le rotationnel est identiquement nul sur \(U\). 
+  Soit \(U\) un ouvert étoilé de \(\R^3\), \(\vect{F} \in \classe{1}(U, \R^3)\)
+  un champ de vecteurs dont le rotationnel est identiquement nul sur \(U\).
   Alors \(\vect{F}\) dérive d'un potentiel scalaire.
 \end{theo}
 
 \subsection{Laplacien}
 
 \begin{defdef}
-  Soit un champ de scalaires \(f \in \classe{1}(U, \R)\), on appelle laplacien 
+  Soit un champ de scalaires \(f \in \classe{1}(U, \R)\), on appelle laplacien
   de \(f\) au point \(M\), le réel noté \(\Delta f(M)\), défini par~:
   \begin{equation}
     \Delta f(M) = \divgc(\grad f)(M) = \sum_{i=1}^n \deriveps{f}{x_i}(M).
   \end{equation} \end{defdef}
   \begin{defdef}
-    Avec les mêmes hypothèse, on dit que \(f\) est harmonique si son laplacien 
+    Avec les mêmes hypothèse, on dit que \(f\) est harmonique si son laplacien
     est nul sur \(U\).
   \end{defdef}
 
@@ -498,38 +496,38 @@ En particulier les convexes sont étoilés.
 
   \section{Intégrale curviligne}
 
-  Supposons que la notion de courbe paramétrée s'étend à l'espace (\(n \in \{2, 
-  3\}\)). Soient \(U\) un ouvert de \(\R^n\), \(\Gamma=([a,b], f)\) un arc 
-  paramétré de \(\R^n\), supposé de classe \(\classe{1}\), régulier et orienté, 
-  dont le support est inclus dans l'ouvert \(U\). Soit \(\vect{F}\) un champ de 
+  Supposons que la notion de courbe paramétrée s'étend à l'espace (\(n \in \{2,
+  3\}\)). Soient \(U\) un ouvert de \(\R^n\), \(\Gamma=([a,b], f)\) un arc
+  paramétré de \(\R^n\), supposé de classe \(\classe{1}\), régulier et orienté,
+  dont le support est inclus dans l'ouvert \(U\). Soit \(\vect{F}\) un champ de
   vecteurs continu sur \(U\).
 
   \begin{prop}
-    L'intégrale \(\int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t\) ne 
+    L'intégrale \(\int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t\) ne
     dépend pas du paramétrage choisi de l'arc \(\Gamma\).
   \end{prop}
   \begin{defdef}
-    Cette intégrale est appelée intégrale curviligne (ou circulation) de 
-    \(\vect{F}\) sur \(\Gamma\), elle est notée \(\oint_\Gamma 
+    Cette intégrale est appelée intégrale curviligne (ou circulation) de
+    \(\vect{F}\) sur \(\Gamma\), elle est notée \(\oint_\Gamma
     \vect{F}(M)\vect{\diff M}\).
   \end{defdef}
   \begin{proof}
-    Soit \(([\alpha, \beta], g)\) un paramétrage admissible de \(\Gamma\). Il 
-    existe un \(\classe{1}\)-difféomorphisme \(\varphi : [a, b] \rightarrow 
-    [\alpha, \beta]\) strictement croissant tel que \(f=g \circ \varphi\).  
+    Soit \(([\alpha, \beta], g)\) un paramétrage admissible de \(\Gamma\). Il
+    existe un \(\classe{1}\)-difféomorphisme \(\varphi : [a, b] \rightarrow
+    [\alpha, \beta]\) strictement croissant tel que \(f=g \circ \varphi\).
     Alors
     \begin{align}
-      \int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t &= \int_a^b 
-      \prodscal{\vect{F}(g \circ \varphi(t))}{\varphi'(t)\vect{g'(\varphi(t))}} 
+      \int_a^b \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t &= \int_a^b
+      \prodscal{\vect{F}(g \circ \varphi(t))}{\varphi'(t)\vect{g'(\varphi(t))}}
       \diff t \\
-      &=\int_a^b \prodscal{\vect{F}(g \circ \varphi(t))}{\vect{g'(\varphi(t))}} 
+      &=\int_a^b \prodscal{\vect{F}(g \circ \varphi(t))}{\vect{g'(\varphi(t))}}
       \varphi'(t)\diff t \\
       &=\int_\alpha^\beta \prodscal{\vect{F}(g(u))}{\vect{g'(u)}} \diff u.
     \end{align}
   \end{proof}
 
   \begin{prop}
-    Sous les mêmes hypothèses, on suppose de plus que le champ de vecteurs 
+    Sous les mêmes hypothèses, on suppose de plus que le champ de vecteurs
     \(\vect{F}\) dérive d'un potentiel scalaire \(h\). Alors
     \begin{equation}
       \oint_\Gamma \vect{F}(M)\vect{\diff M} = h(B)-h(A),
@@ -537,15 +535,15 @@ En particulier les convexes sont étoilés.
     où \(A=f(a)\) et \(B=f(B)\) sont les extrémités de la courbes.
   \end{prop}
 
-  Particulièrement la circulation d'un champ de vecteurs qui dérive d'un 
+  Particulièrement la circulation d'un champ de vecteurs qui dérive d'un
   potentiel sur une courbe fermée est nulle.
 
   \begin{proof}[Dans le cas où \(n=2\)]
     \begin{align}
-      \oint_\Gamma \vect{F}(M)\vect{\diff M}  &= \int_a^b 
+      \oint_\Gamma \vect{F}(M)\vect{\diff M}  &= \int_a^b
       \prodscal{\vect{F}(f(t))}{\vect{f'(t)}} \diff t \\
       &= \int_a^b \prodscal{\grad h(x(t), y(t))}{(x'(t), y'(t))} \diff t  \\
-      &= \int_a^b \derivep{h}{x}(x(t), y(t))x'(t) + \derivep{h}{y}(x(t), 
+      &= \int_a^b \derivep{h}{x}(x(t), y(t))x'(t) + \derivep{h}{y}(x(t),
       y(t))y'(t) \diff t \\
       &=\int_a^b (h \circ f)'(t)\diff t \\
       &=h\circ f(b)-h\circ f(a) \\
@@ -556,14 +554,14 @@ En particulier les convexes sont étoilés.
   \section{Formule de Green-Riemann}
 
   \begin{theo}[Admis]
-    Soit \(\Ddomaine\) un domaine simple de \(\R^2\) dont la frontière 
-    \(\Gamma\) est supposée de classe \(\classe{1}\) par morceaux et orientée 
+    Soit \(\Ddomaine\) un domaine simple de \(\R^2\) dont la frontière
+    \(\Gamma\) est supposée de classe \(\classe{1}\) par morceaux et orientée
     positivement.
 
-    Soient \(P\) et \(Q\) deux fonctions de classe \(\classe{1}\) sur un ouvert 
+    Soient \(P\) et \(Q\) deux fonctions de classe \(\classe{1}\) sur un ouvert
     \(U\) qui contient \(\Ddomaine\). Alors
     \begin{equation}
-      \oint_\Gamma P(x,y) \diff x +Q(x,y)\diff y = \iint_\Ddomaine 
+      \oint_\Gamma P(x,y) \diff x +Q(x,y)\diff y = \iint_\Ddomaine
       \left(\derivep{Q}{x}(x,y) - \derivep{Q}{y}(x,y)\right)\diff x \diff y.
     \end{equation}
   \end{theo}

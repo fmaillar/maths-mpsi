@@ -3,29 +3,29 @@
 \minilof%
 \minilot%
 
-Dans tout le chapitre, \((\K,+,\cdot)\) désigne un corps et \((E,+,\perp)\) un 
-\(\K\)-espace vectoriel et \(I\) un ensemble quelconque lorsque ce n'est pas 
+Dans tout le chapitre, \((\K,+,\cdot)\) désigne un corps et \((E,+,\perp)\) un
+\(\K\)-espace vectoriel et \(I\) un ensemble quelconque lorsque ce n'est pas
 précisé.
 \section{Familles de vecteurs}
 
 \subsection{Familles génératrices}
 
 \begin{defdef}
-  On appelle combinaison linéaire de la famille \({(x_i)}_{i \in I} \in E^I\) 
-  (\(I\) fini) tout vecteur de \(E\) de la forme \(\sum_{i \in I}\alpha_i x_i\) 
+  On appelle combinaison linéaire de la famille \({(x_i)}_{i \in I} \in E^I\)
+  (\(I\) fini) tout vecteur de \(E\) de la forme \(\sum_{i \in I}\alpha_i x_i\)
   avec \({(\alpha_i)}_{i\in I} \in \K^I\).
 
-  Soit \(\X={(x_i)}_{i \in I} \in E^I\) (\(I\) fini) et \(E_1 = \{\sum_{i \in 
+  Soit \(\X={(x_i)}_{i \in I} \in E^I\) (\(I\) fini) et \(E_1 = \{\sum_{i \in
   I}\alpha_i x_i, {(\alpha_i)}_{i\in I} \in \K^I\}= \VectEngendre(\X)\).
 
   \(E_1\) est le sous-espace vectoriel engendré par la famille \(\X\).
 \end{defdef}
 
 \begin{defdef}
-  Soient \(E_1\) un sous-espace vectoriel de \(E\), \(\X = {(x_i)}_{i \in I}\in 
-  E^I\) une famille finie de vecteurs de \(E\). 
+  Soient \(E_1\) un sous-espace vectoriel de \(E\), \(\X = {(x_i)}_{i \in I}\in
+  E^I\) une famille finie de vecteurs de \(E\).
 
-  Si \(E_1=\VectEngendre(\X)\), on dit que \(\X\) est une famille génératrice de 
+  Si \(E_1=\VectEngendre(\X)\), on dit que \(\X\) est une famille génératrice de
   \(E_1\).
 \end{defdef}
 On a les hypothèses suivantes~:
@@ -36,21 +36,21 @@ On a les hypothèses suivantes~:
 \end{itemize}
 Alors finalement
 \begin{equation}
-  \X \text{~est génératrice de } E_1 \iff \begin{cases} \forall i \in I \quad 
-  x_i \in E_1 \\ \forall x \in E_1 \ \exists (\alpha_i)_{i \in I} \in \K^I \quad 
+  \X \text{~est génératrice de } E_1 \iff \begin{cases} \forall i \in I \quad
+  x_i \in E_1 \\ \forall x \in E_1 \ \exists (\alpha_i)_{i \in I} \in \K^I \quad
   x=\sum_{i \in I} \alpha_i x_i \end{cases}.
 \end{equation}
 
-\emph{Exemples}~: La famille \((1,\ii)\) est génératrice du \(\R\)-espace 
-vectoriel \(\C\). Soit \((x_i)_{i \in I} \in E^I\). On appelle sous-famille de 
-\((x_i)_{i \in I}\) toute famille \((x_i)_{i \in J}\) avec \(J \subset I\). On 
-appelle sur-famille de \((x_i)_{i \in I}\) toute famille \((x_i)_{i \in L}\) 
+\emph{Exemples}~: La famille \((1,\ii)\) est génératrice du \(\R\)-espace
+vectoriel \(\C\). Soit \((x_i)_{i \in I} \in E^I\). On appelle sous-famille de
+\((x_i)_{i \in I}\) toute famille \((x_i)_{i \in J}\) avec \(J \subset I\). On
+appelle sur-famille de \((x_i)_{i \in I}\) toute famille \((x_i)_{i \in L}\)
 avec \(I \subset L\).
 
 \begin{prop}
-  Toute sur-famille d'une famille génératrice est aussi génératrice. Plus 
-  précisément~: soit \(E_1\) un sous-espace vectoriel de \(E\), \(I\) et \(L\) 
-  deux ensembles finis tels que \(I \subset L\) et \(\X=(x_i)_{i \in I} \in 
+  Toute sur-famille d'une famille génératrice est aussi génératrice. Plus
+  précisément~: soit \(E_1\) un sous-espace vectoriel de \(E\), \(I\) et \(L\)
+  deux ensembles finis tels que \(I \subset L\) et \(\X=(x_i)_{i \in I} \in
   E^I\), \(\Y=(x_i)_{i \in L} \in E^L\). Si~:
   \begin{itemize}
     \item \(\X\) est génératrice de \(E_1\);
@@ -59,172 +59,172 @@ avec \(I \subset L\).
   alors \(\Y\) est génératrice de \(E_1\).
 \end{prop}
 \begin{proof}
-  Soit \(i \in L\) tel que \(x_i \in E_1\) alors soit \(i \in L\setminus I\) et 
-  c'est l'hypothèse, soit \(i \in I\) et c'est la conséquence de \(\X\) est 
-  génératrice de \(E_1\). 
+  Soit \(i \in L\) tel que \(x_i \in E_1\) alors soit \(i \in L\setminus I\) et
+  c'est l'hypothèse, soit \(i \in I\) et c'est la conséquence de \(\X\) est
+  génératrice de \(E_1\).
 
-  Soit \(x \in E_1\) alors il existe une famille de scalaire \((\alpha_i)_{i \in 
+  Soit \(x \in E_1\) alors il existe une famille de scalaire \((\alpha_i)_{i \in
   I}\) telle que
   \begin{equation}
-    x= \sum_{i \in I} \alpha_i x_i = \sum_{i \in L} \alpha_i x_i + \sum_{i \in 
+    x= \sum_{i \in I} \alpha_i x_i = \sum_{i \in L} \alpha_i x_i + \sum_{i \in
     L\setminus I} 0 x_i = \sum_{i \in L} \lambda_i x_i.
   \end{equation}
-  Avec \(\lambda_i = \alpha_i\) si \(i \in I\) et \(\lambda_i=0\) sinon. Ainsi 
-  \(x\) est une combinaison linéaire de \((x_i)_{i \in L}\). Donc \(\Y\) est une 
+  Avec \(\lambda_i = \alpha_i\) si \(i \in I\) et \(\lambda_i=0\) sinon. Ainsi
+  \(x\) est une combinaison linéaire de \((x_i)_{i \in L}\). Donc \(\Y\) est une
   famille génératrice de \(E_1\).
 \end{proof}
 %
 \begin{prop}
-  Soit \(\X=(x_i)_{i \in I}\) (\(I\) fini) une famille génératrice d'un 
-  sous-espace vectoriel \(E_1\). Soit \(i_0 \in I\). Alors la famille \((x_i)_{i 
-  \in I\setminus\{i_0\}}\) est génératrice si et seulement si \(x_{i_0}\) est 
+  Soit \(\X=(x_i)_{i \in I}\) (\(I\) fini) une famille génératrice d'un
+  sous-espace vectoriel \(E_1\). Soit \(i_0 \in I\). Alors la famille \((x_i)_{i
+  \in I\setminus\{i_0\}}\) est génératrice si et seulement si \(x_{i_0}\) est
   une combinaison linéaire de  \((x_i)_{i \in I\setminus\{i_0\}}\).
 \end{prop}
 \begin{proof}
-  Supposons que \((x_i)_{i \in I\setminus\{i_0\}}\) est génératrice de \(E_1\). 
-  Puisque \(x_{i_0}\) est un vecteur de \(E_1\), il s'écrit comme une 
+  Supposons que \((x_i)_{i \in I\setminus\{i_0\}}\) est génératrice de \(E_1\).
+  Puisque \(x_{i_0}\) est un vecteur de \(E_1\), il s'écrit comme une
   combinaison linéaire de \((x_i)_{i \in I\setminus\{i_0\}}\).
 
-  Supposons maintenant que \(x_{i_0}\) est une combinaison linéaire de  
-  \((x_i)_{i \in I\setminus\{i_0\}}\). Alors pour tout \(i \in 
-  I\setminus\{i_0\}\) \(x_i \in E_1\) (puisque \(\X\) est génératrice de \(E_1\) 
-  et donc tous les \(x_i\) sont dans \(E_1\)). De plus pour tout \(x \in E_1\), 
+  Supposons maintenant que \(x_{i_0}\) est une combinaison linéaire de
+  \((x_i)_{i \in I\setminus\{i_0\}}\). Alors pour tout \(i \in
+  I\setminus\{i_0\}\) \(x_i \in E_1\) (puisque \(\X\) est génératrice de \(E_1\)
+  et donc tous les \(x_i\) sont dans \(E_1\)). De plus pour tout \(x \in E_1\),
   il existe une famille de scalaires \((\alpha_i)_{i \in I} \in \K^I\) telle que
   \begin{equation}
-    x = \sum_{i \in I} \alpha_i x_i = \alpha_{i_0} x_{i_0} + \sum_{i \in 
+    x = \sum_{i \in I} \alpha_i x_i = \alpha_{i_0} x_{i_0} + \sum_{i \in
     I\setminus\{i_0\}} \alpha_i x_i.
   \end{equation}
-  Par hypothèse, il existe une famille de scalaires \((\lambda_i)_{i \in I} \in 
-  K^I\) telle que \(x_{i_0} = \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i\). 
+  Par hypothèse, il existe une famille de scalaires \((\lambda_i)_{i \in I} \in
+  K^I\) telle que \(x_{i_0} = \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i\).
   Alors finalement
   \begin{equation}
-    x = \alpha_{i_0}\sum_{i \in I\setminus\{i_0\}} \lambda_i x_i + \sum_{i \in 
-    I\setminus\{i_0\}} \alpha_i x_i = \sum_{i \in I\setminus\{i_0\}} 
+    x = \alpha_{i_0}\sum_{i \in I\setminus\{i_0\}} \lambda_i x_i + \sum_{i \in
+    I\setminus\{i_0\}} \alpha_i x_i = \sum_{i \in I\setminus\{i_0\}}
     (\alpha_{i_0} \lambda_i +\alpha_i) x_i,
   \end{equation}
-  alors \((x_i)_{i \in I\setminus\{i_0\}}\) est une famille génératrice de 
+  alors \((x_i)_{i \in I\setminus\{i_0\}}\) est une famille génératrice de
   \(E_1\).
 \end{proof}
 
 \subsection{Familles libres, familles liées}
 
 \begin{defdef}
-  Soit \(\X=(x_i)_{i \in I} \in E^I\) (\(I\) fini). On appelle relation de 
-  dépendance linéaire (RDL) toute famille de scalaires \((\alpha_i)_{i \in I} 
+  Soit \(\X=(x_i)_{i \in I} \in E^I\) (\(I\) fini). On appelle relation de
+  dépendance linéaire (RDL) toute famille de scalaires \((\alpha_i)_{i \in I}
   \in \K^I\) telle que \(\sum_{i \in I} \alpha_i x_i =0\).
 \end{defdef}
 \begin{defdef}
-  Soit \(\X=(x_i)_{i \in I} \in E^I\) (\(I\) fini). La famille \(\X\) est libre 
-  si et seulement si toute relation de dépendance linéaire est nulle (les 
-  vecteurs sont linéairement indépendants). La famille \(\X\) est liée si et 
-  seulement s'il existe une relation de dépendance linéaire non nulle de \(\X\). 
+  Soit \(\X=(x_i)_{i \in I} \in E^I\) (\(I\) fini). La famille \(\X\) est libre
+  si et seulement si toute relation de dépendance linéaire est nulle (les
+  vecteurs sont linéairement indépendants). La famille \(\X\) est liée si et
+  seulement s'il existe une relation de dépendance linéaire non nulle de \(\X\).
   Mathématiquement on écrit~:
   \begin{itemize}
-    \item La famille \(\X\) est libre si pour toute famille de scalaires 
-      \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i x_i 
+    \item La famille \(\X\) est libre si pour toute famille de scalaires
+      \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i x_i
       =0\) alors pour tout \(i \in I\), \(\alpha_i =0\);
-    \item la famille \(\X\) est liée s'il existe une famille de scalaires 
-      \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i x_i 
+    \item la famille \(\X\) est liée s'il existe une famille de scalaires
+      \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i x_i
       =0\) et s'il existe \(i_0 \in I \alpha_{i_0} \neq 0\).
   \end{itemize}
 \end{defdef}
 
 \begin{prop}
-  Si \(I = \emptyset\) alors toute famille indexée sur \(I\) est libre. Si \(I\) 
-  est un singleton alors on a un vecteur \(a \in E\) tel que \((x_i)_{i \in 
-  I}=(a)\), alors \((a)\) est libre si et seulement si \(a \neq 0\) et \((a)\) 
+  Si \(I = \emptyset\) alors toute famille indexée sur \(I\) est libre. Si \(I\)
+  est un singleton alors on a un vecteur \(a \in E\) tel que \((x_i)_{i \in
+  I}=(a)\), alors \((a)\) est libre si et seulement si \(a \neq 0\) et \((a)\)
   est liée si et seulement si \(a=0\).
 \end{prop}
 
 \begin{proof}
-  Si \(a = 0\) alors \(1 \times a = 0\) or \(1 \neq 0\) \((1)\) est une relation 
-  de dépendance linéaire non nulle de \((a)\), donc elle est liée. Si \(a\) est 
-  non nul alors pour tout scalaire \(\alpha\) si on a\(\alpha a=0\) alors 
+  Si \(a = 0\) alors \(1 \times a = 0\) or \(1 \neq 0\) \((1)\) est une relation
+  de dépendance linéaire non nulle de \((a)\), donc elle est liée. Si \(a\) est
+  non nul alors pour tout scalaire \(\alpha\) si on a\(\alpha a=0\) alors
   \(\alpha=0\) donc \((a)\) est libre.
 \end{proof}
 
 \begin{prop}
-  Soit \(\X= (x_i)_{i \in I} \in E^I\) (\(I\) fini). La famille \(\X\) est liée 
-  si et seulement s'il existe \(i_0 \in I\) tel que \(x_{i_0}\) est combinaison 
+  Soit \(\X= (x_i)_{i \in I} \in E^I\) (\(I\) fini). La famille \(\X\) est liée
+  si et seulement s'il existe \(i_0 \in I\) tel que \(x_{i_0}\) est combinaison
   linéaire de \((x_i)_{i \in I \setminus \{i_0\}}\).
 \end{prop}
 \begin{proof}
-  S'il existe \(i_0 \in I\) tel que \(x_{i_0}\) est combinaison linéaire de 
-  \((x_i)_{i \in I \setminus \{i_0\}}\) alors il existe une famille de scalaires 
-  \((\lambda_i)_{i \in I\setminus\{i_0\}} \in \K^{I\setminus\{i_0\}}\) tel que 
-  \(x_{i_0}= \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i\) alors en posant 
-  \(\lambda_{i_0}=1\) on a\(\sum_{i \in I} \lambda_i x_i=0\) comme la famille de 
+  S'il existe \(i_0 \in I\) tel que \(x_{i_0}\) est combinaison linéaire de
+  \((x_i)_{i \in I \setminus \{i_0\}}\) alors il existe une famille de scalaires
+  \((\lambda_i)_{i \in I\setminus\{i_0\}} \in \K^{I\setminus\{i_0\}}\) tel que
+  \(x_{i_0}= \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i\) alors en posant
+  \(\lambda_{i_0}=1\) on a\(\sum_{i \in I} \lambda_i x_i=0\) comme la famille de
   scalaire n'est pas la famille alors \(\X\) est liée.
 
-  Si \(\X\) est liée, alors par définition il existe une famille de scalaires 
-  non tous nul \((\alpha_i)_{i \in I} \in \K^I\) et un élément \(i_0\), 
+  Si \(\X\) est liée, alors par définition il existe une famille de scalaires
+  non tous nul \((\alpha_i)_{i \in I} \in \K^I\) et un élément \(i_0\),
   \(\alpha_{i_0} \neq 0\) tels que
   \begin{align}
-    0&= \sum_{i \in I} \alpha_i x_i = \sum_{i \in I\setminus\{i_0\}} \alpha_i 
+    0&= \sum_{i \in I} \alpha_i x_i = \sum_{i \in I\setminus\{i_0\}} \alpha_i
     x_i +\alpha_{i_0} x_{i_0} \\
-    x_{i_0} &= -\frac{1}{\alpha_{i_0}} \sum_{i \in I\setminus\{i_0\}} \alpha_i 
+    x_{i_0} &= -\frac{1}{\alpha_{i_0}} \sum_{i \in I\setminus\{i_0\}} \alpha_i
     x_i && (\alpha_{i_0} \neq 0) \\
-    x_{i_0} &= \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i && \left(\lambda_i = 
+    x_{i_0} &= \sum_{i \in I\setminus\{i_0\}} \lambda_i x_i && \left(\lambda_i =
     -\frac{\alpha_i}{\alpha_{i_0}}\right)
   \end{align}
 \end{proof}
 
 \begin{prop}
-  Toute sous famille d'une famille libre est libre. Toute sur famille d'une 
+  Toute sous famille d'une famille libre est libre. Toute sur famille d'une
   famille liée est liée.
 \end{prop}
 \begin{proof}
-  Soit \(\X=(x_i)_{i \in I} \in E^I\) une famille libre (\(I\) fini). Soit \(J 
-  \subset I\) et \(\Y=(x_i)_{i \in J} \in E^J\), \((\alpha_i)_{i \in J} \in 
-  \K^J\) telles que \(\sum_{i \in J} \alpha_i x_i =0\). On définit la famille de 
-  scalaires \(\lambda\) comme étant nulle sur \(I\setminus J\) et égale à 
+  Soit \(\X=(x_i)_{i \in I} \in E^I\) une famille libre (\(I\) fini). Soit \(J
+  \subset I\) et \(\Y=(x_i)_{i \in J} \in E^J\), \((\alpha_i)_{i \in J} \in
+  \K^J\) telles que \(\sum_{i \in J} \alpha_i x_i =0\). On définit la famille de
+  scalaires \(\lambda\) comme étant nulle sur \(I\setminus J\) et égale à
   \(\alpha\) sur \(J\). Ainsi
   \begin{equation}
     \sum_{i \in I} \lambda_i x_i = \sum_{i \in J} \alpha_i x_i +0 =0
   \end{equation}
-  Comme la famille \(\X\) est libre on en déduit que la famille de scalaires 
-  \(\lambda\) est nulle. En particulier \(\forall i \in J \quad \alpha_i = 0\) 
+  Comme la famille \(\X\) est libre on en déduit que la famille de scalaires
+  \(\lambda\) est nulle. En particulier \(\forall i \in J \quad \alpha_i = 0\)
   donc \(\Y\) est libre.
 
-Soit \(\X\) une famille liée et \(\mathcal{Z}\) une sur famille de \(\X\). Si 
-\(\mathcal{Z}\) était libre, alors \(\X\) serait libre (en tant que sous famille 
-de \(\mathcal{Z}\)). Ce qui contredit l'hypothèse. Donc la famille 
+Soit \(\X\) une famille liée et \(\mathcal{Z}\) une sur famille de \(\X\). Si
+\(\mathcal{Z}\) était libre, alors \(\X\) serait libre (en tant que sous famille
+de \(\mathcal{Z}\)). Ce qui contredit l'hypothèse. Donc la famille
 \(\mathcal{Z}\) est liée. \end{proof}
 
 \begin{prop}
-  Soit \(\X=(x_i)_{i \in I}\) une famille libre de vecteurs de \(E\) (\(I\) 
-  fini) et \(i_0 \notin I\). Alors la famille \((x_i)_{i \in I \cup \{i_0\}}\) 
-  est libre si et seulement si \(x_{i_0}\) n'est pas combinaison linéaire de la 
+  Soit \(\X=(x_i)_{i \in I}\) une famille libre de vecteurs de \(E\) (\(I\)
+  fini) et \(i_0 \notin I\). Alors la famille \((x_i)_{i \in I \cup \{i_0\}}\)
+  est libre si et seulement si \(x_{i_0}\) n'est pas combinaison linéaire de la
   famille \(\X\).
 \end{prop}
 \begin{proof}
-  Montrons la première implication~: si \(x_{i_0}\) est une combinaison linéaire 
-  de \(\X\) alors \((x_i)_{i \in I \cup \{i_0\}}\) est liée. Alors par 
-  contraposée si \((x_i)_{i \in I \cup \{i_0\}}\) est libre alors \(x_{i_0}\) 
+  Montrons la première implication~: si \(x_{i_0}\) est une combinaison linéaire
+  de \(\X\) alors \((x_i)_{i \in I \cup \{i_0\}}\) est liée. Alors par
+  contraposée si \((x_i)_{i \in I \cup \{i_0\}}\) est libre alors \(x_{i_0}\)
   n'est pas une combinaison linéaire de \(\X\).
 
-  Montrons la deuxième implication~: Soit une famille de scalaire \(\alpha\) 
-  indexée sur \(I \cup\{i_0\}\) telle que \(\sum_{i \in I \cup\{i_0\}} \alpha_i 
+  Montrons la deuxième implication~: Soit une famille de scalaire \(\alpha\)
+  indexée sur \(I \cup\{i_0\}\) telle que \(\sum_{i \in I \cup\{i_0\}} \alpha_i
   x_i =0\). Alors
   \begin{equation}
     \alpha_{i_0} x_{i_0} + \sum_{i \in I} \alpha_i x_i =0
   \end{equation}
-  Si \(\alpha_{i_0} \neq 0\) alors \(x_{i_0}\) est une combinaison linéaire de 
-  \((x_i)_{i \in I}\), ce qui est impossible par hypothèse. Ainsi \(\alpha_{i_0} 
+  Si \(\alpha_{i_0} \neq 0\) alors \(x_{i_0}\) est une combinaison linéaire de
+  \((x_i)_{i \in I}\), ce qui est impossible par hypothèse. Ainsi \(\alpha_{i_0}
   = 0\) et \begin{equation}
     \sum_{i \in I} \alpha_i x_i =0
   \end{equation}
-  et comme \(\X\) est libre alors \(\forall i \in I \quad \alpha_i=0\). Ainsi 
-  \(\forall i \in I\cup\{i_0\} \quad \alpha_i=0\). Alors \((x_i)_{i \in I \cup 
+  et comme \(\X\) est libre alors \(\forall i \in I \quad \alpha_i=0\). Ainsi
+  \(\forall i \in I\cup\{i_0\} \quad \alpha_i=0\). Alors \((x_i)_{i \in I \cup
   \{i_0\}}\) est libre.
 \end{proof}
 
-\emph{Cas particulier important}~: On dit que deux vecteur \(x,y\) sont 
-colinéaires s'il existe un scalaire \(\lambda\) tel que \(x=ky\) ou s'il existe 
+\emph{Cas particulier important}~: On dit que deux vecteur \(x,y\) sont
+colinéaires s'il existe un scalaire \(\lambda\) tel que \(x=ky\) ou s'il existe
 un scalaire \(\mu\) tel que \(x=\mu y\).
 
 \begin{prop}
-  Soit deux vecteurs de \(E\) \(x,y\), alors ils sont colinéaires si et 
+  Soit deux vecteurs de \(E\) \(x,y\), alors ils sont colinéaires si et
   seulement si la famille \((x,y)\) est liée.
 \end{prop}
 \begin{proof}
@@ -238,47 +238,47 @@ un scalaire \(\mu\) tel que \(x=\mu y\).
 \end{itemize}
 
 \begin{prop}
-  Soit \(\X=(x_i)_{i \in I}\) une famille libre de vecteurs de \(E\) (\(I\) 
-  fini). Soient deux familles \(\alpha\) et \(\beta\) de scalaires indexées par 
+  Soit \(\X=(x_i)_{i \in I}\) une famille libre de vecteurs de \(E\) (\(I\)
+  fini). Soient deux familles \(\alpha\) et \(\beta\) de scalaires indexées par
   \(I\). Alors
   \begin{equation}
-    \sum_{i \in I} \alpha_i x_i = \sum_{i \in I} \beta_i \implies \forall i \in 
+    \sum_{i \in I} \alpha_i x_i = \sum_{i \in I} \beta_i \implies \forall i \in
     I \quad \alpha_i = \beta_i
   \end{equation}
 \end{prop}
 \begin{proof}
-  Par hypothèse \(\sum_{i \in I} (\alpha_i-\beta_i) x_i=0\). Comme la famille 
+  Par hypothèse \(\sum_{i \in I} (\alpha_i-\beta_i) x_i=0\). Comme la famille
   \(\X\) est libre on a bien \(\forall i \in I \ \alpha_i = \beta_i\).
 \end{proof}
 
 \subsection{Bases d'un \(\K\)-espace vectoriel}
 
 \begin{defdef}
-  On appelle base d'un \(\K\)-espace vectoriel \(E\) toute famille \(\X \in 
+  On appelle base d'un \(\K\)-espace vectoriel \(E\) toute famille \(\X \in
   E^I\) libre et génératrice de \(E\).
 \end{defdef}
 
 \begin{theo}
-  Soit \(\E = (e_i)_{i \in I} \in E^I\) une famille finie de vecteurs de \(E\). 
-  Alors c'est une base de \(E\) si et seulement si pour tout \(x \in E\) il 
-  existe une unique famille de scalaires \((x_i)_{i \in I}\) telle que 
+  Soit \(\E = (e_i)_{i \in I} \in E^I\) une famille finie de vecteurs de \(E\).
+  Alors c'est une base de \(E\) si et seulement si pour tout \(x \in E\) il
+  existe une unique famille de scalaires \((x_i)_{i \in I}\) telle que
   \(x=\sum_{i \in I}x_i e_i\).
 \end{theo}
 \begin{proof}
   Si \(\E\) est une base de \(E\), soit un vecteur \(x \in E\) alors
   \begin{itemize}
-    \item elle est génératrice donc il existe une famille de scalaires 
+    \item elle est génératrice donc il existe une famille de scalaires
       \((x_i)_{i \in I}\) telle que \(x=\sum_{i \in I} x_i e_i\)
-    \item elle est libre donc si \((x_i)_{i \in I}\) et \((y_i)_{i \in I}\) sont 
-      deux familles de scalaires telles que \(x=\sum_{i \in I} x_i e_i=\sum_{i 
+    \item elle est libre donc si \((x_i)_{i \in I}\) et \((y_i)_{i \in I}\) sont
+      deux familles de scalaires telles que \(x=\sum_{i \in I} x_i e_i=\sum_{i
       \in I} y_i e_i\) alors pour tout \(i \in I\) \(x_i =y_i\).
   \end{itemize}
 
-  Supposons que pour tout \(x \in E\) il existe un unique famille de scalaires 
-  \((x_i)_{i \in I}\) telle que \(x=\sum_{i \in I}x_i e_i\). Alors \(\E\) est 
-  génératrice (puisqu'il existe \ldots). Montrons qu'elle est libre. Soit une 
-  famille de scalaires \((\alpha_i)_{i \in I}\) telle que \(\sum_{i \in I} 
-  \alpha_i e_i=0\), or \(0=\sum_{i \in I} 0 e_i\) et par unicité d'une telle 
+  Supposons que pour tout \(x \in E\) il existe un unique famille de scalaires
+  \((x_i)_{i \in I}\) telle que \(x=\sum_{i \in I}x_i e_i\). Alors \(\E\) est
+  génératrice (puisqu'il existe \ldots). Montrons qu'elle est libre. Soit une
+  famille de scalaires \((\alpha_i)_{i \in I}\) telle que \(\sum_{i \in I}
+  \alpha_i e_i=0\), or \(0=\sum_{i \in I} 0 e_i\) et par unicité d'une telle
   écriture, \(\forall i \in I \ \alpha_i=0\). Donc \(\E\) est libre.
 \end{proof}
 
@@ -287,29 +287,29 @@ un scalaire \(\mu\) tel que \(x=\mu y\).
   \item \((1,\ii)\) est une base du \(\R\)-espace vectoriel \(\C\);
   \item deux vecteurs non colinéaires forment une base du plan;
   \item trois vecteurs non coplanaires forment une base de l'espace;
-  \item dans \(E=\K^n\) (\(n \in \N^*\)), pour tout \(i \in 
-    \intervalleentier{1}{n}\) on a \(e_i = (\delta_{ij})_{j \in 
-    \intervalleentier{1}{n}}\) avec \(\delta\) le symbole de Kronecker défini 
-    par \(\delta_{ij}=1\) si \(i=j\) et zéro sinon. La famille \(\E=(e_i)_{i \in 
-    \intervalleentier{1}{n}}\) définie ainsi est une base appelée la base 
+  \item dans \(E=\K^n\) (\(n \in \N^*\)), pour tout \(i \in
+    \intervalleentier{1}{n}\) on a \(e_i = (\delta_{ij})_{j \in
+    \intervalleentier{1}{n}}\) avec \(\delta\) le symbole de Kronecker défini
+    par \(\delta_{ij}=1\) si \(i=j\) et zéro sinon. La famille \(\E=(e_i)_{i \in
+    \intervalleentier{1}{n}}\) définie ainsi est une base appelée la base
     canonique.
 \end{enumerate}
 
 \subsection{Applications linéaires et familles de vecteurs}
 
-Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels et \(u \in \Lin{E}{F}\). 
-Pour toute famille \(\X=(x_i)_{i \in I} \in E^I\) on dispose de la famille 
-\(u(\X)= (u(x_i))_{i \in I} \in F^I\) appelée famille image de la famille 
+Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels et \(u \in \Lin{E}{F}\).
+Pour toute famille \(\X=(x_i)_{i \in I} \in E^I\) on dispose de la famille
+\(u(\X)= (u(x_i))_{i \in I} \in F^I\) appelée famille image de la famille
 \(\X\).
 
-\subsubsection{Propriétés de la famille \(u(\X)\) déduites de celle de \(u\) et 
+\subsubsection{Propriétés de la famille \(u(\X)\) déduites de celle de \(u\) et
 de \(\X\)}
 
 \begin{prop}\label{prop:propdeduitesu(x)}
   Soit \(u \in \Lin{E}{F}\) et \(\X=(x_i)_{i \in I} \in E^I\). Alors
   \begin{center}
     \begin{tabular}{|l|l|l|}\hline
-      si \(\X\) est \ldots & si \(u\) est \ldots & alors \(u(\X)\) est \ldots 
+      si \(\X\) est \ldots & si \(u\) est \ldots & alors \(u(\X)\) est \ldots
       \\\hline
       liée & & liée\\
       génératrice de \(E\) & & génératrice de \(\Image(u)\) \\
@@ -321,9 +321,9 @@ de \(\X\)}
 
 \end{prop}
 \begin{proof}
-  Si \(\X\) est liée, alors par définition il existe une famille de scalaires 
-  \(\alpha\) indexée par \(I\) telle que \(\sum_{i \in I} \alpha_i x_i =0\) et 
-  il existe \(i_0 \in I\) tel que \(\alpha_{i_0} \neq 0\). L'application \(u\) 
+  Si \(\X\) est liée, alors par définition il existe une famille de scalaires
+  \(\alpha\) indexée par \(I\) telle que \(\sum_{i \in I} \alpha_i x_i =0\) et
+  il existe \(i_0 \in I\) tel que \(\alpha_{i_0} \neq 0\). L'application \(u\)
   est linéaire donc
   \begin{align}
     u\left(\sum_{i \in I} \alpha_i x_i \right) &= u(0) \\
@@ -331,40 +331,40 @@ de \(\X\)}
   \end{align}
   Donc \(u(\X)\) est liée.
 
-  Soit \(y \in \Image(u)\), il existe donc un vecteur \(x \in E\) tel que 
-  \(y=u(x)\). Comme \(\X\) est génératrice de \(E\) alors il existe une famille 
-  de scalaires \(\alpha\) indexée par \(I\) telle que \(x = \sum_{i \in I} 
-  \alpha_i x_i\). L'application \(u\) est linéaire donc \(y = u\left(\sum_{i \in 
-  I} \alpha_i x_i \right)=\sum_{i \in I} \alpha_i u(x_i)\). Alors \(u(\X)\) est 
+  Soit \(y \in \Image(u)\), il existe donc un vecteur \(x \in E\) tel que
+  \(y=u(x)\). Comme \(\X\) est génératrice de \(E\) alors il existe une famille
+  de scalaires \(\alpha\) indexée par \(I\) telle que \(x = \sum_{i \in I}
+  \alpha_i x_i\). L'application \(u\) est linéaire donc \(y = u\left(\sum_{i \in
+  I} \alpha_i x_i \right)=\sum_{i \in I} \alpha_i u(x_i)\). Alors \(u(\X)\) est
   génératrice de \(\Image(u)\).
 
-  Si \(u\) est surjective et que \(\X\) est génératrice de \(E\) alors \(u(\X)\) 
+  Si \(u\) est surjective et que \(\X\) est génératrice de \(E\) alors \(u(\X)\)
   est génératrice de \(\Image(u)=F\).
 
-  Si \(\X\) est libre et \(u\) injective. Soit une famille de scalaires 
-  \(\alpha\) indexée par \(I\) telle que \(x = \sum_{i \in I} \alpha_i 
-  u(x_i)=0\). Comme \(u\) est linéaire on a \(u\left(\sum_{i \in I} \alpha_i x_i 
-  \right) =0\). Ainsi \(\sum_{i \in I} \alpha_i x_i \in \Ker(u)=\{0\}\) (puisque 
-  \(u\) est injective). Alors \(\sum_{i \in I} \alpha_i x_i = 0\) et comme 
+  Si \(\X\) est libre et \(u\) injective. Soit une famille de scalaires
+  \(\alpha\) indexée par \(I\) telle que \(x = \sum_{i \in I} \alpha_i
+  u(x_i)=0\). Comme \(u\) est linéaire on a \(u\left(\sum_{i \in I} \alpha_i x_i
+  \right) =0\). Ainsi \(\sum_{i \in I} \alpha_i x_i \in \Ker(u)=\{0\}\) (puisque
+  \(u\) est injective). Alors \(\sum_{i \in I} \alpha_i x_i = 0\) et comme
   \(\X\) est libre \(\alpha\) est la famille nulle. Donc \(u(\X)\) est libre.
 
   Si \(\X\) est une base de \(E\) et si \(u\) est bijective, alors~:
   \begin{itemize}
     \item \(\X\) est libre et \(u\) est injective donc \(u(\X)\) est libre;
-    \item \(\X\) est génératrice de \(E\) donc \(u(\X)\) est génératrice de 
+    \item \(\X\) est génératrice de \(E\) donc \(u(\X)\) est génératrice de
       \(u(\X)\).
   \end{itemize}
   alors \(u(\X)\) est une base de \(F\).
 \end{proof}
 
-\subsubsection{Propriétés de \(u\) déduites de son effet sur une famille de 
+\subsubsection{Propriétés de \(u\) déduites de son effet sur une famille de
 vecteurs de \(E\)}
 
 \begin{prop}\label{prop:propdeduitesu}
   Soit \(u \in \Lin{E}{F}\) et \(\X=(x_i)_{i \in I} \in E^I\). Alors
   \begin{center}
     \begin{tabular}{|l|l|l|}\hline
-      si \(\X\) est \ldots & si \(u(\X)\) est \ldots & alors \(u\) est \ldots 
+      si \(\X\) est \ldots & si \(u(\X)\) est \ldots & alors \(u\) est \ldots
       \\\hline
       & génératrice de \(F\) & surjective \\
       génératrice de \(E\) & libre & injective \\
@@ -374,70 +374,70 @@ vecteurs de \(E\)}
 
 \end{prop}
 \begin{proof}
-  Soit \(y \in F\). La famille \(u(\X)\) est génératrice de \(F\) donc il existe 
+  Soit \(y \in F\). La famille \(u(\X)\) est génératrice de \(F\) donc il existe
   une famille de scalaire \(\alpha\) indexée par \(I\) telle que
   \begin{equation}
-    y = \sum_{i \in I} \alpha_i u(x_i)=u \left( \sum_{i \in I} \alpha_i x_i 
+    y = \sum_{i \in I} \alpha_i u(x_i)=u \left( \sum_{i \in I} \alpha_i x_i
     \right),
   \end{equation}
-  car \(u\) est linéaire. Alors \(y \in \Image(u)\) et donc on a \(F \subset 
-  \Image(u)\). On a aussi \(u \in \Lin{E}{F}\) donc \(\Image(u) \subset F\). Par 
+  car \(u\) est linéaire. Alors \(y \in \Image(u)\) et donc on a \(F \subset
+  \Image(u)\). On a aussi \(u \in \Lin{E}{F}\) donc \(\Image(u) \subset F\). Par
   double inclusion \(\Image(u)=F\). L'application \(u\) est donc surjective.
 
-  Soit \(x \in \Ker(u) \subset E\). La famille \(\X\) est génératrice de \(E\) 
-  alors il existe une famille de scalaires \(\alpha\) indexée sur \(I\) telle 
-  que \(x = \sum_{i \in I} \alpha_i x_i\). Comme \(u\) est linéaire et comme 
-  \(x\) est dans le noyau de \(u\), on a \(0=u(x) = \sum_{i \in I} \alpha_i 
-  u(x_i)\). Par hypothèse la famille \(u(\X)\) est libre donc \(\alpha\) est la 
-  famille nulle et donc \(x=0\). On a montré que \(\Ker(u) \subset \{0\}\) et 
-  comme l'autre inclusion est triviale on a \(\Ker(u)=\{0\}\) et ainsi 
+  Soit \(x \in \Ker(u) \subset E\). La famille \(\X\) est génératrice de \(E\)
+  alors il existe une famille de scalaires \(\alpha\) indexée sur \(I\) telle
+  que \(x = \sum_{i \in I} \alpha_i x_i\). Comme \(u\) est linéaire et comme
+  \(x\) est dans le noyau de \(u\), on a \(0=u(x) = \sum_{i \in I} \alpha_i
+  u(x_i)\). Par hypothèse la famille \(u(\X)\) est libre donc \(\alpha\) est la
+  famille nulle et donc \(x=0\). On a montré que \(\Ker(u) \subset \{0\}\) et
+  comme l'autre inclusion est triviale on a \(\Ker(u)=\{0\}\) et ainsi
   l'application \(u\) est injective.
 
-  Si \(\X\) est génératrice et si \(u(\X)\) est une base alors \(u\) est 
+  Si \(\X\) est génératrice et si \(u(\X)\) est une base alors \(u\) est
   bijective (conséquence des points précédents).
 \end{proof}
 
 \begin{theo}[Caractérisation des isomorphismes par l'image d'une base]
-  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels. On suppose que \(E\) 
-  admet une base finie. Soit \(u \in \Lin{E}{F}\). Il y a équivalence entre les 
+  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels. On suppose que \(E\)
+  admet une base finie. Soit \(u \in \Lin{E}{F}\). Il y a équivalence entre les
   assertions suivantes~:
   \begin{enumerate}
     \item \(u\) est un isomorphisme de \(E\) dans \(F\);
     \item pour toute base \(\E\) de \(E\), \(u(\E)\) est une base de \(F\);
-    \item il existe une base \(\E_0\) de \(E\) telle que \(u(\E_0)\) soit une 
+    \item il existe une base \(\E_0\) de \(E\) telle que \(u(\E_0)\) soit une
       base de \(F\).
   \end{enumerate}
 \end{theo}
 \begin{proof}
   \(1 \implies 2\), c'est une conséquence de la proposition~\ref{prop:propdeduitesu(x)} cinquième ligne.
 
-  \(2 \implies 3\), par hypothèse il existe une base \(\E_0\) de \(E\) à 
+  \(2 \implies 3\), par hypothèse il existe une base \(\E_0\) de \(E\) à
   laquelle on applique \(2\).
 
   \(3 \implies 1\), c'est une conséquence de la proposition~\ref{prop:propdeduitesu} troisième ligne.
 \end{proof}
 
-\subsubsection{Caractérisation d'une application linéaire par la donnée de 
+\subsubsection{Caractérisation d'une application linéaire par la donnée de
 l'image d'une base}
 
 \begin{lemme}
-  Soient \(E\) un \(\K\)-espace vectoriel, \(p \in \N\), \(p>1\) et 
-  \(\E=(e_i)_{i=1, \ldots, p}\) une base de \(E\). Pour tout vecteur \(x \in 
-  E\), il existe un unique \(p\)-uplet \((x_1, \ldots, x_p)\) tel que \(x = 
-  \sum_{i=1}^p x_ie_i\). On définit pour tout entier \(i \in 
-  \intervalleentier{1}{p}\) l'application ``coordonnée'' 
-  \(\fonction{C_i}{E}{\K}{x}{x_i}\). Alors pour tout \(i \in 
+  Soient \(E\) un \(\K\)-espace vectoriel, \(p \in \N\), \(p>1\) et
+  \(\E=(e_i)_{i=1, \ldots, p}\) une base de \(E\). Pour tout vecteur \(x \in
+  E\), il existe un unique \(p\)-uplet \((x_1, \ldots, x_p)\) tel que \(x =
+  \sum_{i=1}^p x_ie_i\). On définit pour tout entier \(i \in
+  \intervalleentier{1}{p}\) l'application ``coordonnée''
+  \(\fonction{C_i}{E}{\K}{x}{x_i}\). Alors pour tout \(i \in
   \intervalleentier{1}{p}\) l'application \(C_i\) est linéaire.
 \end{lemme}
 \begin{proof}
-  Soient deux vecteurs \(x,z\) de \(E\) et un scalaire \(\lambda\). Comme \(\E\) 
-  est une base de \(E\), il existe deux uniques \(p\)-uplets \((x_1, \ldots, 
-  x_p)\) et \((z_1, \ldots, z_p)\) tels que \(x = \sum_{i=1}^p x_ie_i\) et \(z = 
+  Soient deux vecteurs \(x,z\) de \(E\) et un scalaire \(\lambda\). Comme \(\E\)
+  est une base de \(E\), il existe deux uniques \(p\)-uplets \((x_1, \ldots,
+  x_p)\) et \((z_1, \ldots, z_p)\) tels que \(x = \sum_{i=1}^p x_ie_i\) et \(z =
   \sum_{i=1}^p z_ie_i\). Alors
   \begin{equation}
     x+\lambda z = \sum_{i=1}^p (x_i + \lambda z_i)e_i
   \end{equation}
-  Par unicité des coordonnées on a bien la linéarité quelque soit \(i \in 
+  Par unicité des coordonnées on a bien la linéarité quelque soit \(i \in
   \intervalleentier{1}{p}\) de l'application \(C_i\)~:
   \begin{equation}
     C_i(x+\lambda z)=C_i(x)+\lambda C_i(z)
@@ -445,15 +445,15 @@ l'image d'une base}
 \end{proof}
 
 \begin{theo}\label{theo:caracapplinimagebase}
-  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels et \(p\) un naturel plus 
-  grand que \(1\). Soit \(\E=(e_i)_{i=1, \ldots, p}\) une base de \(E\). Soit 
-  \(\Y=(y_i)_{i=1, \ldots, p}\) une famille quelconque de \(p\) vecteurs de 
-  \(F\). Alors il existe une unique application \(u \in \Lin{E}{F}\) telle que 
+  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels et \(p\) un naturel plus
+  grand que \(1\). Soit \(\E=(e_i)_{i=1, \ldots, p}\) une base de \(E\). Soit
+  \(\Y=(y_i)_{i=1, \ldots, p}\) une famille quelconque de \(p\) vecteurs de
+  \(F\). Alors il existe une unique application \(u \in \Lin{E}{F}\) telle que
   \(u(\E)=\Y\).
 \end{theo}
 \begin{proof}[Unicité]
-  Supposons qu'il existe \(u \in \Lin{E}{F}\) telle que \(u(\E)=\Y\). Comme 
-  \(\E\) est une base de \(E\), pour tout vecteur \(x \in E\) il existe un 
+  Supposons qu'il existe \(u \in \Lin{E}{F}\) telle que \(u(\E)=\Y\). Comme
+  \(\E\) est une base de \(E\), pour tout vecteur \(x \in E\) il existe un
   unique \(p\)-uplet \((x_1, \ldots, x_p)\) de scalaires tel que
   \begin{equation}
     x = \sum_{i=1}^p x_ie_i
@@ -465,11 +465,11 @@ l'image d'une base}
   donc \(u\) est unique (puisque les \(x_i\) et les \(y_i\) sont uniques).
 \end{proof}
 \begin{proof}[Existence]
-  Si on prend les définitions du lemme, on prend l'application 
+  Si on prend les définitions du lemme, on prend l'application
   \(\fonction{u}{E}{F}{x}{\sum_{i=1}^pC_i(x)y_i}\), alors
   \begin{itemize}
-    \item \(u\) est linéaire puisque pour tout \(i\) l'application \(C_i\) est 
-      linéaire (d'après le lemme)~: Soient deux vecteurs \(x,z\) de \(E\) et un 
+    \item \(u\) est linéaire puisque pour tout \(i\) l'application \(C_i\) est
+      linéaire (d'après le lemme)~: Soient deux vecteurs \(x,z\) de \(E\) et un
       scalaire \(\lambda\).
       \begin{align}
         u(x+\lambda z)&=\sum_{i=1}^p C_i(x+\lambda z)y_i \\
@@ -477,15 +477,15 @@ l'image d'une base}
         &=\sum_{i=1}^p C_i(x) y_i +\lambda \sum_{i=1}^p C_i(z)y_i\\
         &=u(x)+\lambda u(z)
       \end{align}
-    \item Pour tout \(i_0 \in \intervalleentier{1}{p}\) 
-      \(u(e_{i_O})=\sum_{i=1}^p C_i(e_{i_0}) y_i\) et 
-      \(e_{i_0}=\sum_{i=1}^pc_i(e_{i_0}) e_i\) puisque \(c_i(e_{i_0})=1\) si 
-      \(i=i_0\) et zéro sinon. Donc 
+    \item Pour tout \(i_0 \in \intervalleentier{1}{p}\)
+      \(u(e_{i_O})=\sum_{i=1}^p C_i(e_{i_0}) y_i\) et
+      \(e_{i_0}=\sum_{i=1}^pc_i(e_{i_0}) e_i\) puisque \(c_i(e_{i_0})=1\) si
+      \(i=i_0\) et zéro sinon. Donc
       \(u(e_{i_0})=c_{i_0}(e_{i_0})y_{i_0}=y_{i_0}\). Alors \(u(\E)=\Y\).
   \end{itemize}
 \end{proof}
 
-\emph{Remarque}~: La famille \(\E\) est une base de \(E\) donc elle est 
+\emph{Remarque}~: La famille \(\E\) est une base de \(E\) donc elle est
 génératrice de \(E\), \(\Y=u(\E)\)
 \begin{itemize}
   \item Si \(\Y\) est libre alors \(u\) est injective;
@@ -493,11 +493,11 @@ génératrice de \(E\), \(\Y=u(\E)\)
   \item Si \(\Y\) est une base de \(F\) alors \(u\) est bijective.
 \end{itemize}
 
-\emph{Cas particulier}~: Soit un \(\K\)-espace vectoriel \(E\), \(p \in \N\) 
-\(p>1\) et une famille \(\X=(x_1, \ldots, x_p)\) de \(p\) vecteurs de \(E\). On 
-considère l'espace \(\K^p\) et on dispose de la base canonique \(\E=(e_1, 
-\ldots, e_p)\) où pour tout \(i \in \intervalleentier{1}{p}\), \(e_i = 
-(\delta_{i,j})_{j \in \intervalleentier{1}{p}}\). Il existe une unique 
+\emph{Cas particulier}~: Soit un \(\K\)-espace vectoriel \(E\), \(p \in \N\)
+\(p>1\) et une famille \(\X=(x_1, \ldots, x_p)\) de \(p\) vecteurs de \(E\). On
+considère l'espace \(\K^p\) et on dispose de la base canonique \(\E=(e_1,
+\ldots, e_p)\) où pour tout \(i \in \intervalleentier{1}{p}\), \(e_i =
+(\delta_{i,j})_{j \in \intervalleentier{1}{p}}\). Il existe une unique
 application linéaire \(u : \K^p \rightarrow E\) telle que \(u(\E)=\X\).
 
 \emph{Que peut on dire de \(u\)?}
@@ -514,12 +514,12 @@ Alors \(u\) est injective si et seulement si \(\X\) est libre.
 Image~: Pour tout vecteur \(x \in E\) on a
 \begin{align}
   y \in \Image(u) &\iff \exists \alpha \in \K^p \quad y=u(\alpha)\\
-  &\iff \exists \alpha \in \K^p \quad y=u\left(\sum_{i=1}^p \alpha_i e_i 
+  &\iff \exists \alpha \in \K^p \quad y=u\left(\sum_{i=1}^p \alpha_i e_i
   \right)= \sum_{i=1}^p \alpha_i u(e_i) \\
   &\iff \exists \alpha \in \K^p \quad y=\sum_{i=1}^p \alpha_i x_i\\
   &\iff y \in \VectEngendre(\X).
 \end{align}
-Alors \(u\) est surjective si et seulement si \(E=\VectEngendre(\X)\), 
+Alors \(u\) est surjective si et seulement si \(E=\VectEngendre(\X)\),
 c'est-à-dire si et seulement si \(\X\) est génératrice de \(E\).
 
 Finalement \(u\) est bijective si et seulement si \(\X\) est une base de \(E\).
@@ -529,29 +529,29 @@ Finalement \(u\) est bijective si et seulement si \(\X\) est une base de \(E\).
 \subsection{Base d'un espace vectoriel de dimension finie}
 
 \begin{defdef}
-  On appelle \(\K\)-espace vectoriel de dimension finie tout \(\K\)-espace 
-  vectoriel qui admet au moins une famille génératrice finie. Sinon il est dit 
+  On appelle \(\K\)-espace vectoriel de dimension finie tout \(\K\)-espace
+  vectoriel qui admet au moins une famille génératrice finie. Sinon il est dit
   de dimension infinie.
 \end{defdef}
 
 \begin{theo}[Extraction d'une base]
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(\G\) une famille 
-  génératrice finie de \(E\), \(\Lb\) une famille libre de \(E\) telle que \(\Lb 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(\G\) une famille
+  génératrice finie de \(E\), \(\Lb\) une famille libre de \(E\) telle que \(\Lb
   \subset \G\). Alors il existe une base \(\B\) de \(E\) telle que
   \begin{equation}
     \Lb \subset \B \subset \G
   \end{equation}
 \end{theo}
 \begin{proof}
-  Premièrement, comme \(E\) est de dimension finie, il existe bien une telle 
-  famille \(\G\). Soit alors \(\G=(x_i)_{i \in I}\) avec \(I\) fini. Il existe 
-  une famille \(\Lb=(x_i)_{i \in \emptyset}\). La famille \(\Lb\) est libre et 
+  Premièrement, comme \(E\) est de dimension finie, il existe bien une telle
+  famille \(\G\). Soit alors \(\G=(x_i)_{i \in I}\) avec \(I\) fini. Il existe
+  une famille \(\Lb=(x_i)_{i \in \emptyset}\). La famille \(\Lb\) est libre et
   incluse dans \(\G\). Donc elles existent bien.
 
-  Soit \(I\) et \(J\) finis tels que \(J \subset I\), \(\G=(x_i)_{i \in I}\) et 
+  Soit \(I\) et \(J\) finis tels que \(J \subset I\), \(\G=(x_i)_{i \in I}\) et
   \(\Lb=(x_i)_{i \in J}\). Soit
   \begin{equation}
-    S = \enstq{\Card(J')}{J \subset J' \subset I \text{~et } (x_i)_{i \in J'} 
+    S = \enstq{\Card(J')}{J \subset J' \subset I \text{~et } (x_i)_{i \in J'}
     \text{~est libre}},
   \end{equation}
   alors~:
@@ -560,150 +560,150 @@ Finalement \(u\) est bijective si et seulement si \(\X\) est une base de \(E\).
     \item \(S \neq \emptyset\) puisque \(\Card J \in S\) (\(\Lb\) est libre);
     \item \(S\) est majorée par \(\Card(I)\).
   \end{itemize}
-  La partie \(S\) est une partie de \(\N\) non vide et majorée, elle admet donc 
-  un plus grand élément noté \(n_0\). Soit \(J_0\) l'ensemble tel que 
-  \(n_0=\Card(J_0)\). Soit \(\B=(x_i)_{i \in J_0}\). Montrons que \(\B\) est une 
-  base de \(E\). On sait déjà qu'elle est libre, il faut montrer qu'elle est 
-  génératrice de \(E\). Prouvons que tous les vecteurs de \(\G\) sont des 
-  combinaisons linéaires de vecteurs de \(\B\). 
+  La partie \(S\) est une partie de \(\N\) non vide et majorée, elle admet donc
+  un plus grand élément noté \(n_0\). Soit \(J_0\) l'ensemble tel que
+  \(n_0=\Card(J_0)\). Soit \(\B=(x_i)_{i \in J_0}\). Montrons que \(\B\) est une
+  base de \(E\). On sait déjà qu'elle est libre, il faut montrer qu'elle est
+  génératrice de \(E\). Prouvons que tous les vecteurs de \(\G\) sont des
+  combinaisons linéaires de vecteurs de \(\B\).
 
   Soit \(i \in I\) et \(x_i \in \G\), alors~:
   \begin{itemize}
     \item si \(i \in J_0\) alors \(x_i \in \B\)
-    \item si \(i \in I\setminus J_0\) alors si \(x_i\) n'est pas une combinaison 
-      linéaire de \(\B\) alors \(\B \cup \{x_i\}\) est une famille libre de 
-      cardinal \(n_0+1 >n_0\), ce qui est contradictoire puisque \(n_0\) est le 
-      plus grand cardinal d'une famille libre de \(E\). Alors \(x_i\) est une 
+    \item si \(i \in I\setminus J_0\) alors si \(x_i\) n'est pas une combinaison
+      linéaire de \(\B\) alors \(\B \cup \{x_i\}\) est une famille libre de
+      cardinal \(n_0+1 >n_0\), ce qui est contradictoire puisque \(n_0\) est le
+      plus grand cardinal d'une famille libre de \(E\). Alors \(x_i\) est une
       combinaison linéaire de vecteur de \(\B\) : \(x_i \in \VectEngendre(\B)\).
   \end{itemize}
   On a montré que \(\G \subset \VectEngendre(\B)\).
 
-  Soit \(x \in E\). Comme la famille \(\G\) est génératrice, il existe une 
-  famille de scalaires \(\alpha\) indexée sur \(I\) telle que \(x = \sum_{i \in 
-  I} \alpha_i x_i\). Or \(\G \subset \VectEngendre(\B)\) donc pour tout \(i \in 
-  I\setminus J_0\) il existe une famille de scalaires \(\beta_i\) indexée sur 
+  Soit \(x \in E\). Comme la famille \(\G\) est génératrice, il existe une
+  famille de scalaires \(\alpha\) indexée sur \(I\) telle que \(x = \sum_{i \in
+  I} \alpha_i x_i\). Or \(\G \subset \VectEngendre(\B)\) donc pour tout \(i \in
+  I\setminus J_0\) il existe une famille de scalaires \(\beta_i\) indexée sur
   \(J_0\) telle que \(x_i = \sum_{j \in J_0} \beta_{ij}x_j\). Alors
   \begin{equation}
-    x= \sum_{i \in J_0} \alpha_i x_i + \sum_{i \in I\setminus J_0} \alpha_i 
+    x= \sum_{i \in J_0} \alpha_i x_i + \sum_{i \in I\setminus J_0} \alpha_i
     \left(\sum_{j \in J_0} \beta_{ij}x_j \right) \in \VectEngendre(\B)
   \end{equation}
-  Alors \(\B\) est une famille génératrice de \(E\). Finalement c'est une base 
+  Alors \(\B\) est une famille génératrice de \(E\). Finalement c'est une base
   de \(E\).
 \end{proof}
 
 \begin{theo}[Existence de base en dimension finie]
-  Tout \(\K\)-espace vectoriel de dimension finie admet au moins une base 
+  Tout \(\K\)-espace vectoriel de dimension finie admet au moins une base
   (finie).
 \end{theo}
 \begin{proof}
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Alors par définition 
-  \(E\) admet au moins une famille génératrice finie \(\G=(x_i)_{i \in I}\) avec 
-  \(I\) fini. On prend une famille libre \(\Lb=(x_i)_{i \in \emptyset}\) et 
-  c'est une sous famille de \(G\). D'après le théorème d'extraction de base, il 
-  existe une base \(\B\) de E telle que \(\Lb \subset \B \subset \G\). Donc 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Alors par définition
+  \(E\) admet au moins une famille génératrice finie \(\G=(x_i)_{i \in I}\) avec
+  \(I\) fini. On prend une famille libre \(\Lb=(x_i)_{i \in \emptyset}\) et
+  c'est une sous famille de \(G\). D'après le théorème d'extraction de base, il
+  existe une base \(\B\) de E telle que \(\Lb \subset \B \subset \G\). Donc
   \(E\) admet au moins une base.
 \end{proof}
 
 \begin{theo}[Théorème de la base incomplète]
   \label{theo:baseincomplete}
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie et \(\Lb\) une 
-  famille libre de \(E\). Alors il existe une base \(\B\) de \(E\) telle que 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie et \(\Lb\) une
+  famille libre de \(E\). Alors il existe une base \(\B\) de \(E\) telle que
   \(\Lb\) soit une sous famille de \(\B\).
 \end{theo}
 \begin{proof}
-  Par définition, \(E\) admet une famille génératrice finie \(\G\). Soit 
-  \(\mathcal{H}=\G \cup \Lb\). Alors \(\mathcal{H}\) est une famille finie de 
-  vecteurs de \(E\) et de plus génératrice telle que \(\Lb \subset 
+  Par définition, \(E\) admet une famille génératrice finie \(\G\). Soit
+  \(\mathcal{H}=\G \cup \Lb\). Alors \(\mathcal{H}\) est une famille finie de
+  vecteurs de \(E\) et de plus génératrice telle que \(\Lb \subset
   \mathcal{H}\).
 
-  Par théorème d'extraction de base, il existe une base \(\B\) de \(E\) telle 
+  Par théorème d'extraction de base, il existe une base \(\B\) de \(E\) telle
   que
   \begin{align}
     \Lb \subset \B \subset \mathcal{H} \\
     \Lb \subset \B \subset \G \cup \Lb
   \end{align}
-  \(\B\) est obtenue en complétant la famille libre \(\Lb\) par des vecteurs de 
+  \(\B\) est obtenue en complétant la famille libre \(\Lb\) par des vecteurs de
   la famille génératrice \(\G\)
 \end{proof}
 
 \subsection{Dimension d'un espace vectoriel de dimension finie}
 
 \begin{lemme}
-  Soit \(n \in N\) on pose \(\P(n)\) ``Soient \(E\) un \(\K\)-espace vectoriel, 
-  \(\G\) une famille de \(n\) vecteurs de \(E\), \(\X\) une famille de \(n+1\) 
-  vecteurs de \(E\). On suppose que \(\X \subset \VectEngendre(\G)\). Alors la 
+  Soit \(n \in N\) on pose \(\P(n)\) ``Soient \(E\) un \(\K\)-espace vectoriel,
+  \(\G\) une famille de \(n\) vecteurs de \(E\), \(\X\) une famille de \(n+1\)
+  vecteurs de \(E\). On suppose que \(\X \subset \VectEngendre(\G)\). Alors la
   famille \(\X\) est liée''
 \end{lemme}
 \begin{proof}[Démonstration par récurrence]
-  \emph{Initialisation}~: pour \(n=0\) \(\G=\emptyset\), \(\X=\{x_1\}\) \(\X 
-  \subset \VectEngendre(\emptyset)=\{0\}\) donc \(x_1=0\) et \(\X\) est liée. 
+  \emph{Initialisation}~: pour \(n=0\) \(\G=\emptyset\), \(\X=\{x_1\}\) \(\X
+  \subset \VectEngendre(\emptyset)=\{0\}\) donc \(x_1=0\) et \(\X\) est liée.
   \(\P(0)\) est vraie.
 
-  \emph{Hérédité}~: Soit \(n \in \N\) on suppose \(\P(n)\). Démontrons 
-  \(\P(n+1)\). Soit \(\G=(g_1, \ldots, g_{n+1})\) et \(\X=(x_1, \ldots, 
-  x_{n+2})\). \(\X \subset \VectEngendre(\G)\) c'est-à-dire que pour tout \(j 
-  \in \intervalleentier{1}{n+2} \quad x_j \in \VectEngendre(\G)\) donc il existe 
+  \emph{Hérédité}~: Soit \(n \in \N\) on suppose \(\P(n)\). Démontrons
+  \(\P(n+1)\). Soit \(\G=(g_1, \ldots, g_{n+1})\) et \(\X=(x_1, \ldots,
+  x_{n+2})\). \(\X \subset \VectEngendre(\G)\) c'est-à-dire que pour tout \(j
+  \in \intervalleentier{1}{n+2} \quad x_j \in \VectEngendre(\G)\) donc il existe
   \(y_j \in E\) et \(\lambda_j \in \K\) tel que
   \begin{equation}
-    \begin{cases} x_j = y_j + \lambda_j g_{n+1} \\ y_j \in \VectEngendre(g_1, 
+    \begin{cases} x_j = y_j + \lambda_j g_{n+1} \\ y_j \in \VectEngendre(g_1,
     \ldots, g_n) \end{cases}
   \end{equation}
   Deux cas de figure se présentent~:
   \begin{enumerate}
-    \item Soit pour tout \(j \in \intervalleentier{1}{n+1}\) \(\lambda_j=0\) et 
-      donc pour tout \(j \in \intervalleentier{1}{n+1}\) \(x_j=y_j \in 
-      \VectEngendre(g_1, \ldots, g_n)\), donc par hypothèse de récurrence la 
-      famille \((x_1, \ldots, x_{n+1})\) est liée. Par conséquent \(\X\) est 
+    \item Soit pour tout \(j \in \intervalleentier{1}{n+1}\) \(\lambda_j=0\) et
+      donc pour tout \(j \in \intervalleentier{1}{n+1}\) \(x_j=y_j \in
+      \VectEngendre(g_1, \ldots, g_n)\), donc par hypothèse de récurrence la
+      famille \((x_1, \ldots, x_{n+1})\) est liée. Par conséquent \(\X\) est
       liée aussi.
-    \item Soit il existe \(j_0 \in \intervalleentier{1}{n+2}\) \(\lambda_j \neq 
+    \item Soit il existe \(j_0 \in \intervalleentier{1}{n+2}\) \(\lambda_j \neq
       0\) et quitte à ré-indexer, supposons que c'est \(\lambda_1\). Ainsi
       \begin{align}
         x_1 &= y_1 + \lambda_1 g_{n+1} \\
         g_{n+1} &= \lambda_1^{-1}(x_1-y_1) \\
-        \forall j \in \intervalleentier{2}{n+2} \quad x_j = y_j + \lambda_j 
+        \forall j \in \intervalleentier{2}{n+2} \quad x_j = y_j + \lambda_j
         g_{n+1} &= y_j + \lambda_j \lambda_1^{-1}(x_1-y_1)\\
-        \forall j \in \intervalleentier{2}{n+2} \quad x_j - 
+        \forall j \in \intervalleentier{2}{n+2} \quad x_j -
         \lambda_j\lambda_1^{-1}x_1 &= y_j - \lambda_j \lambda_1^{-1} y_1
       \end{align}
       Alors pour tout \(j \in \intervalleentier{2}{n+2}\)
       \begin{equation}
-        x_j - \lambda_j\lambda_1^{-1}x_1 \in \VectEngendre(y_1, \ldots, y_{n+2}) 
+        x_j - \lambda_j\lambda_1^{-1}x_1 \in \VectEngendre(y_1, \ldots, y_{n+2})
         \subset \VectEngendre(g_1, \ldots, g_n)
       \end{equation}
-      Alors par hypothèse de récurrence la famille 
-      \((x_j-\lambda_j\lambda_1^{-1}x_1)_{j \in \intervalleentier{2}{n+2}}\) est 
-      liée. Il existe donc une famille de scalaires \(\alpha\) indexée sur 
+      Alors par hypothèse de récurrence la famille
+      \((x_j-\lambda_j\lambda_1^{-1}x_1)_{j \in \intervalleentier{2}{n+2}}\) est
+      liée. Il existe donc une famille de scalaires \(\alpha\) indexée sur
       \(\intervalleentier{2}{n+2}\) telle que
       \begin{equation}
-        \sum_{j=2}^{n+2} \alpha_j (x_j-\lambda_j\lambda_1^{-1}x_1) = 0 \quad 
+        \sum_{j=2}^{n+2} \alpha_j (x_j-\lambda_j\lambda_1^{-1}x_1) = 0 \quad
         \exists j_0 \in \intervalleentier{2}{n+2} \ \alpha_{j_0} \neq 0
       \end{equation}
-      si on pose \(\alpha_1=-\sum_{j=2}^{n+2} \alpha_j \lambda_j 
+      si on pose \(\alpha_1=-\sum_{j=2}^{n+2} \alpha_j \lambda_j
       \lambda_1^{-1}\) on a alors
       \begin{equation}
-        \sum_{j=1}^{n+2} \alpha_j x_j =0 \quad \exists j_0 \in 
+        \sum_{j=1}^{n+2} \alpha_j x_j =0 \quad \exists j_0 \in
         \intervalleentier{2}{n+2} \ \alpha_{j_0} \neq 0
       \end{equation}
       Donc \(\X\) est liée. \(\P(n+1)\) est vraie.
   \end{enumerate}
 
-  \emph{Conclusion}~: Comme \(\P(0)\) est vraie et que \(\P(n) \implies 
-  \P(n+1)\) est aussi vraie, alors par théorème de récurrence, l'assertion 
+  \emph{Conclusion}~: Comme \(\P(0)\) est vraie et que \(\P(n) \implies
+  \P(n+1)\) est aussi vraie, alors par théorème de récurrence, l'assertion
   \(\P(n)\) est vraie pour tout naturel \(n\).
 \end{proof}
 
 \begin{cor}
-  Soit \(E\) un \(\K\)-espace vectoriel de dimension finie. Soit \(\Lb\) une 
+  Soit \(E\) un \(\K\)-espace vectoriel de dimension finie. Soit \(\Lb\) une
   famille libre de \(E\), \(\G\) une famille génératrice de \(E\). Alors
   \begin{equation}
     \Card(\Lb) \leqslant \Card(\G)
   \end{equation}
 \end{cor}
 \begin{proof}[Démonstration par l'absurde]
-  Soit \(n = \Card(\G)\). Supposons que \(\Card(\Lb) \geqslant n+1\), alors il 
-  existe une sous famille \(\Lb'\) de \(\Lb\) telle que \(\Card(\Lb')=n+1\) et 
-  \(\Lb' \subset \VectEngendre(\G)=E\). D'après le lemme \(\Lb'\) serait liée, 
-  ce qui est impossible puisque c'est une sous famille d'une famille libre, donc 
+  Soit \(n = \Card(\G)\). Supposons que \(\Card(\Lb) \geqslant n+1\), alors il
+  existe une sous famille \(\Lb'\) de \(\Lb\) telle que \(\Card(\Lb')=n+1\) et
+  \(\Lb' \subset \VectEngendre(\G)=E\). D'après le lemme \(\Lb'\) serait liée,
+  ce qui est impossible puisque c'est une sous famille d'une famille libre, donc
   \(\Lb'\) est libre. Absurde.  Ainsi \begin{equation}
     \Card(\Lb) \leqslant \Card(\G)
   \end{equation}
@@ -711,23 +711,23 @@ Finalement \(u\) est bijective si et seulement si \(\X\) est une base de \(E\).
 
 \begin{theo}[Théorème de la dimension]
   \label{theo:dim}
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Toutes les bases de 
-  \(E\) sont finies de même cardinal. Ce cardinal est appelé la dimension de 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Toutes les bases de
+  \(E\) sont finies de même cardinal. Ce cardinal est appelé la dimension de
   \(E\) sur \(\K\) noté \(\Dim_\K E\).
 \end{theo}
 \begin{proof}
-  Soient deux bases de \(E\) \(\B_1\) et \(\B_2\). Comme \(\B_1\) et libre et 
-  \(\B_2\) est génératrice d'après le corollaire \(\Card(\B_1) \leqslant 
-  \Card(\B_2)\) et en inversant les rôles on obtient l'inégalité réciproque. 
+  Soient deux bases de \(E\) \(\B_1\) et \(\B_2\). Comme \(\B_1\) et libre et
+  \(\B_2\) est génératrice d'après le corollaire \(\Card(\B_1) \leqslant
+  \Card(\B_2)\) et en inversant les rôles on obtient l'inégalité réciproque.
   Finalement \(\Card(\B_1)=\Card(\B_2)\).
 \end{proof}
 
-\emph{Remarque}~: Ne pas oublier de préciser le corps de l'espace vectoriel, 
-puisque \(\Dim_\C \C=1\) et \(\Dim_\R \C=2\). La dimension de l'espace nul est 
+\emph{Remarque}~: Ne pas oublier de préciser le corps de l'espace vectoriel,
+puisque \(\Dim_\C \C=1\) et \(\Dim_\R \C=2\). La dimension de l'espace nul est
 nulle car il est engendré par l'ensemble vide.
 
 \begin{theo}[Caractérisation des bases parmi les familles génératrices]
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Soit \(\G\) une 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Soit \(\G\) une
   famille génératrice de \(E\). Alors
   \begin{equation}
     \Card(\G) \geqslant \Dim_\K E
@@ -738,23 +738,23 @@ nulle car il est engendré par l'ensemble vide.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit \(\B\) une base de \(E\). Alors \(\Card(\B)=\Dim_\K E\) et \(\B\) est 
-  libre donc d'après le corollaire \(\Card(\B) = \Dim_\K E \leqslant 
+  Soit \(\B\) une base de \(E\). Alors \(\Card(\B)=\Dim_\K E\) et \(\B\) est
+  libre donc d'après le corollaire \(\Card(\B) = \Dim_\K E \leqslant
   \Card(\G)\).
 
   \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~\ref{theo:dim}.
-  \(\implies\)~: La famille \(\G\) est génératrice de \(E\) donc il existe une 
-  base \(\B\) de \(E\) telle que \(\B \subset \G\) or \(\Card(\B) = \Dim_\K E\) 
+  \(\implies\)~: La famille \(\G\) est génératrice de \(E\) donc il existe une
+  base \(\B\) de \(E\) telle que \(\B \subset \G\) or \(\Card(\B) = \Dim_\K E\)
   (puisque c'est une base) et par hypothèse \(\Card(\G) = \Dim_\K E\) alors
   \begin{equation}
-    \begin{cases} \B \subset \G \\ \Card(\B) = \Card(\G) \end{cases} \implies 
+    \begin{cases} \B \subset \G \\ \Card(\B) = \Card(\G) \end{cases} \implies
       \B=\G
   \end{equation}
   alors \(\G\) est une base.
 \end{proof}
 
 \begin{theo}[Caractérisation des bases parmi les familles libres]
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Soit \(\Lb\) une 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Soit \(\Lb\) une
   famille libre de \(E\). Alors
   \begin{equation}
     \Card(\Lb) \leqslant \Dim_\K E,
@@ -765,73 +765,73 @@ nulle car il est engendré par l'ensemble vide.
   \end{equation}
 \end{theo}
 \begin{proof}
-  Soit \(\B\) une base de \(E\), alors elle est génératrice donc \(\Card(\Lb) 
+  Soit \(\B\) une base de \(E\), alors elle est génératrice donc \(\Card(\Lb)
   \leqslant \Card(\B)=\Dim_\K E\).
 
-  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~\ref{theo:dim}.  \(\implies\)~: Si \(\Lb\) est une famille libre, on peut la 
-  compléter en une base \(\B\) de \(E\) (\(\Lb \subset \B\)) par théorème de la 
-  base incomplète, théorème~\ref{theo:baseincomplete}. Alors \(\Card(\B)=\Dim_\K E = \Card(\Lb)\). Ainsi 
+  \(\impliedby\)~: Démontrable grâce au théorème de la dimension, théorème~\ref{theo:dim}.  \(\implies\)~: Si \(\Lb\) est une famille libre, on peut la
+  compléter en une base \(\B\) de \(E\) (\(\Lb \subset \B\)) par théorème de la
+  base incomplète, théorème~\ref{theo:baseincomplete}. Alors \(\Card(\B)=\Dim_\K E = \Card(\Lb)\). Ainsi
   \(\Lb=\B\) et c'est une base de \(E\).
 \end{proof}
 
 \subsection{Théorème d'isomorphisme}
 
 \begin{prop}
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie et \(F\) un autre 
-  \(\K\)-espace vectoriel. On suppose qu'il existe un isomorphisme de \(E\) dans 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie et \(F\) un autre
+  \(\K\)-espace vectoriel. On suppose qu'il existe un isomorphisme de \(E\) dans
   \(F\). Alors \(F\) est de dimension finie et \(\Dim_\K F = \Dim_\K E\).
 \end{prop}
 \begin{proof}
-  Soit \(n = \Dim_\K E\), \(\B\) une base de \(E\) (\(\Dim_\K E = \Card(\B)\)) 
-  et \(u\) un isomorphisme de \(E\) dans \(F\). Alors la famille \(u(\B)\) est 
-  une base de \(F\) (puisque \(u\) est bijective et \(\B\) est une base). La 
-  famille \(u(\B)\) est de cardinal fini le même que \(\B\). Ainsi \(\Dim_\K F = 
+  Soit \(n = \Dim_\K E\), \(\B\) une base de \(E\) (\(\Dim_\K E = \Card(\B)\))
+  et \(u\) un isomorphisme de \(E\) dans \(F\). Alors la famille \(u(\B)\) est
+  une base de \(F\) (puisque \(u\) est bijective et \(\B\) est une base). La
+  famille \(u(\B)\) est de cardinal fini le même que \(\B\). Ainsi \(\Dim_\K F =
   \Dim_\K E\).
 \end{proof}
 
 \begin{theo}[Théorème d'isomorphisme]
-  Soient deux \(\K\)-espaces vectoriels de dimension finie \(E\) et \(F\). Ces 
-  deux espaces vectoriels sont isomorphes si et seulement s'ils ont la même 
+  Soient deux \(\K\)-espaces vectoriels de dimension finie \(E\) et \(F\). Ces
+  deux espaces vectoriels sont isomorphes si et seulement s'ils ont la même
   dimension.
 \end{theo}
 \begin{proof}
-  S'ils sont isomorphes, la proposition précédente nous dit qu'ils ont la même 
+  S'ils sont isomorphes, la proposition précédente nous dit qu'ils ont la même
   dimension.
 
-  Supposons qu'ils ont la même dimension \(n\). Soient \(\B=(b_1, \ldots, b_n)\) 
-  une base de \(E\) et \(\E=(e_1, \ldots, e_n)\) une base de \(F\). D'après le 
-  théorème~\ref{theo:caracapplinimagebase} il existe une unique application \(u \in 
+  Supposons qu'ils ont la même dimension \(n\). Soient \(\B=(b_1, \ldots, b_n)\)
+  une base de \(E\) et \(\E=(e_1, \ldots, e_n)\) une base de \(F\). D'après le
+  théorème~\ref{theo:caracapplinimagebase} il existe une unique application \(u \in
   \Lin{E}{F}\) telle que \(u(\B)=\E\).
 
-  Comme \(\B\) est une base de \(E\) (donc génératrice), alors \(\E\) une base 
+  Comme \(\B\) est une base de \(E\) (donc génératrice), alors \(\E\) une base
   de \(F\) et \(u(\B)=\E\). Donc \(u\) est bijective (proposition~\ref{prop:propdeduitesu}). Ainsi \(E\) et \(F\) sont isomorphes.
 \end{proof}
 
 \begin{corth}
-  Soient \(E\) un \(\K\)-espace vectoriel et \(n \in \N\). Alors \(E\) et 
-  \(\K^n\) sont isomorphes si et seulement si \(E\) est de dimension finie égale 
+  Soient \(E\) un \(\K\)-espace vectoriel et \(n \in \N\). Alors \(E\) et
+  \(\K^n\) sont isomorphes si et seulement si \(E\) est de dimension finie égale
   à \(n\).
 \end{corth}
 \begin{proof}
-  Si \(E\) est de dimension finie, on applique le théorème précédent avec 
-  \(F=\K^n\). Si \(E\) n'est pas de dimension finie alors il n'est pas isomorphe 
+  Si \(E\) est de dimension finie, on applique le théorème précédent avec
+  \(F=\K^n\). Si \(E\) n'est pas de dimension finie alors il n'est pas isomorphe
   à \(\K^n\) et il n'est pas de dimension finie égale à \(n\).
 \end{proof}
 
 \subsection{Dimension du produit cartésien \(E \times F\)}
 
 \begin{theo}
-  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels de dimension finie. Alors 
+  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels de dimension finie. Alors
   le produit cartésien \(E \times F\) est de dimension fine et
   \begin{equation}
     \Dim_\K E \times F = \Dim_\K E + \Dim_\K F.
   \end{equation}
 \end{theo}
 \begin{proof}
-  On note \(p=\Dim_\K E\) et \(n=\Dim_\K F\). Soient \(\B=(b_1,\ldots, b_p)\) 
-  une base de \(E\) et \(\E=(e_1, \ldots, e_n)\) une base de \(F\). pour tout 
-  vecteurs \(x \in E\) et \(y \in F\) il existe deux uniques familles de 
-  scalaires \((x_i)_{i \in \intervalleentier{1}{p}}\) et \((y_i)_{i \in 
+  On note \(p=\Dim_\K E\) et \(n=\Dim_\K F\). Soient \(\B=(b_1,\ldots, b_p)\)
+  une base de \(E\) et \(\E=(e_1, \ldots, e_n)\) une base de \(F\). Pour tout
+  vecteurs \(x \in E\) et \(y \in F\) il existe deux uniques familles de
+  scalaires \((x_i)_{i \in \intervalleentier{1}{p}}\) et \((y_i)_{i \in
   \intervalleentier{1}{n}}\) telles que
   \begin{equation}
     x = \sum_{i=1}^p x_i b_i \quad y = \sum_{i=1}^n y_i e_i.
@@ -840,7 +840,7 @@ nulle car il est engendré par l'ensemble vide.
   \begin{equation}
     (x,y) = \sum_{i=1}^p x_i (b_i,0) + \sum_{i=1}^n y_i (0,e_i).
   \end{equation}
-  Soit la famille \(\mathcal{F}=(f_k)_{k \in \intervalleentier{1}{n+p}}\) 
+  Soit la famille \(\mathcal{F}=(f_k)_{k \in \intervalleentier{1}{n+p}}\)
   définie par~:
   \begin{itemize}
     \item si \(1 \leqslant k \leqslant p\) alors \(f_k=(b_k,0)\);
@@ -850,59 +850,59 @@ nulle car il est engendré par l'ensemble vide.
   \begin{equation}
     (x,y)=\sum_{i=1}^p x_i f_i + \sum_{j=p+1}^{n+p} y_{j-p} f_j.
   \end{equation}
-  On vient de montrer que la famille \(\mathcal{F}\) est génératrice de \(E 
-  \times F\) de cardinal \(n+p\). On a montré que \(E \times F\) est de 
-  dimension finie et que \(\Dim_\K E\times F \leqslant n+p\). 
+  On vient de montrer que la famille \(\mathcal{F}\) est génératrice de \(E
+  \times F\) de cardinal \(n+p\). On a montré que \(E \times F\) est de
+  dimension finie et que \(\Dim_\K E\times F \leqslant n+p\).
 
-  Montrons qu'elle est libre. Soit \((\lambda_k)_{k \in 
-  \intervalleentier{1}{n+1}} \in \K^{n+p}\) telle que \(\sum_{i=1}^{n+p} 
+  Montrons qu'elle est libre. Soit \((\lambda_k)_{k \in
+  \intervalleentier{1}{n+1}} \in \K^{n+p}\) telle que \(\sum_{i=1}^{n+p}
   \lambda_i f_i =(0,0)\). Alors
   \begin{align}
-    &\iff \sum_{k=1}^n \lambda_k (b_k,0) + \sum_{k=p+1}^{n+p} \lambda_k 
+    &\iff \sum_{k=1}^n \lambda_k (b_k,0) + \sum_{k=p+1}^{n+p} \lambda_k
     (0,e_{k-p}) =(0,0)\\
-    &\iff \left(\sum_{k=1}^n \lambda_k b_k,0 \right) + 
+    &\iff \left(\sum_{k=1}^n \lambda_k b_k,0 \right) +
     \left(0,\sum_{k=p+1}^{n+p} \lambda_k e_{k-p}\right) =(0,0)\\
-    &\iff \left(\sum_{k=1}^n \lambda_k b_k,\sum_{k=p+1}^{n+p} \lambda_k 
+    &\iff \left(\sum_{k=1}^n \lambda_k b_k,\sum_{k=p+1}^{n+p} \lambda_k
     e_{k-p}\right) = (0,0) \\
-    &\iff \begin{cases} \sum_{k=1}^n \lambda_k b_k = 0 \\ \sum_{k=p+1}^{n+p} 
+    &\iff \begin{cases} \sum_{k=1}^n \lambda_k b_k = 0 \\ \sum_{k=p+1}^{n+p}
     \lambda_k e_{k-p} =0 \end{cases}
   \end{align}
-  Or \(\B=(b_1,\ldots, b_p)\) est une base de \(\E\) donc a fortiori \(\B\) est 
-  libre, ainsi pour tout \(i \in \intervalleentier{1}{p} \ \lambda_k=0\). De 
-  même \(\E\) est une base de de \(F\) donc elle est libre, ainsi pour tout \(i 
-  \in \intervalleentier{1}{n} \ \lambda_{j+p}=0\). Alors \(\mathcal{F}\) est une 
+  Or \(\B=(b_1,\ldots, b_p)\) est une base de \(\E\) donc a fortiori \(\B\) est
+  libre, ainsi pour tout \(i \in \intervalleentier{1}{p} \ \lambda_k=0\). De
+  même \(\E\) est une base de de \(F\) donc elle est libre, ainsi pour tout \(i
+  \in \intervalleentier{1}{n} \ \lambda_{j+p}=0\). Alors \(\mathcal{F}\) est une
   famille libre.
 
-  Finalement c'est une base de \(E \times F\) et elle est de cardinal \(n+p\) 
+  Finalement c'est une base de \(E \times F\) et elle est de cardinal \(n+p\)
   donc \(E \times F\) est de dimension \(n+p\).
 \end{proof}
 
 \subsection{Dimension de \(\Lin{E}{F}\)}
 
 \begin{theo}
-  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels de dimension finie. Alors 
-  l'ensemble \(\Lin{E}{F}\) des applications linéaires de \(E\) vers \(F\) est 
+  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels de dimension finie. Alors
+  l'ensemble \(\Lin{E}{F}\) des applications linéaires de \(E\) vers \(F\) est
   de dimension fine et
   \begin{equation}
     \Dim_\K \Lin{E}{F} = \Dim_\K E \times \Dim_\K F.
   \end{equation}
 \end{theo}
 \begin{proof}
-  On note \(p=\Dim_\K E\) et \(n=\Dim_\K F\). Soit \(\B=(b_1, \ldots, b_p)\) une 
-  base de \(E\) et \(\B'=(f_1, \ldots, f_n)\) une base de \(F\). On définit une 
-  famille \(\Phi\) d'applications linéaires de \(E\) dans \(F\)~: \(\Phi = 
-  (\varphi_{i,j})_{(i,j) \in \intervalleentier{1}{n} \times 
-  \intervalleentier{1}{p}}\) telle que pour tout couple \((i,j)\), 
+  On note \(p=\Dim_\K E\) et \(n=\Dim_\K F\). Soit \(\B=(b_1, \ldots, b_p)\) une
+  base de \(E\) et \(\B'=(f_1, \ldots, f_n)\) une base de \(F\). On définit une
+  famille \(\Phi\) d'applications linéaires de \(E\) dans \(F\)~: \(\Phi =
+  (\varphi_{i,j})_{(i,j) \in \intervalleentier{1}{n} \times
+  \intervalleentier{1}{p}}\) telle que pour tout couple \((i,j)\),
   \(\varphi_{i,j}\) soit définie par son action sur la base \(\B\)~:
   \begin{equation}
-    \forall k \in \llbracket 1,p \rrbracket \quad \varphi_{i,j}(e_k)= 
+    \forall k \in \llbracket 1,p \rrbracket \quad \varphi_{i,j}(e_k)=
     \delta_{jk} f_i
   \end{equation}
-  avec \(\delta\) le symbole de Kronecker. Montrons que la famille \(\Phi\) est 
+  avec \(\delta\) le symbole de Kronecker. Montrons que la famille \(\Phi\) est
   une base de \(\Lin{E}{F}\). On le montre en deux temps~:
   \begin{enumerate}
-    \item Montrons que \(\Phi\) est libre. Soit \((\lambda_{ij})_{(i,j) \in 
-      \intervalleentier{1}{n} \times \intervalleentier{1}{p}} \in \K^{np}\) 
+    \item Montrons que \(\Phi\) est libre. Soit \((\lambda_{ij})_{(i,j) \in
+      \intervalleentier{1}{n} \times \intervalleentier{1}{p}} \in \K^{np}\)
       telle que
       \begin{equation}
         \sum_{i=1}^n \sum_{j=1}^p \lambda_{ij} \varphi_{ij} =0_{\Lin{E}{F}}.
@@ -913,76 +913,76 @@ nulle car il est engendré par l'ensemble vide.
         \sum_{i=1}^n \sum_{j=1}^p \lambda_{ij} \delta_{jk} f_i &=0_F\\
         \sum_{i=1}^n \lambda_{ik} f_i &=0_F.
       \end{align}
-      Or \(\B'=(f_1, \ldots, f_n)\) est une base de \(F\) donc a fortiori libre. 
-      Ainsi pour tout \(k \in \intervalleentier{1}{p}\) et pour tout \(i \in 
+      Or \(\B'=(f_1, \ldots, f_n)\) est une base de \(F\) donc a fortiori libre.
+      Ainsi pour tout \(k \in \intervalleentier{1}{p}\) et pour tout \(i \in
       \intervalleentier{1}{n}\), \(\lambda_{ik}=0\). Alors \(\Phi\) est libre.
-    \item  Montrons que \(\Phi\) est génératrice de \(\Lin{E}{F}\). Soit \(f \in 
-      \Lin{E}{F}\). Pour tout \(k \in \intervalleentier{1}{p}\), on a \(f(e_k) 
-      \in F\). \(\B'\) est une base de \(F\) donc il existe une famille de 
-      scalaires \((\lambda_{ik})_{i \in  \intervalleentier{1}{n}} \in \K^n\) 
+    \item  Montrons que \(\Phi\) est génératrice de \(\Lin{E}{F}\). Soit \(f \in
+      \Lin{E}{F}\). Pour tout \(k \in \intervalleentier{1}{p}\), on a \(f(e_k)
+      \in F\). \(\B'\) est une base de \(F\) donc il existe une famille de
+      scalaires \((\lambda_{ik})_{i \in  \intervalleentier{1}{n}} \in \K^n\)
       telle que
       \begin{equation}
         f(e_k)= \sum_{i=1}^n \lambda_{ik} f_i.
       \end{equation}
       Comme \(\sum_{j=1}^p \delta_{jk}=1\) on peut l'introduire
       \begin{align}
-        f(e_k) = \sum_{i=1}^n \lambda_{ik} \left(\sum_{j=1}^p \delta_{jk}\right) 
+        f(e_k) = \sum_{i=1}^n \lambda_{ik} \left(\sum_{j=1}^p \delta_{jk}\right)
         f_i &= \sum_{i=1}^n \sum_{j=1}^p \lambda_{ik} \delta_{jk} f_i \\
         &=\sum_{i=1}^n \sum_{j=1}^p \lambda_{ij} \delta_{jk} f_i\\
         &=\sum_{i=1}^n \sum_{j=1}^p \lambda_{ij} \varphi_{ij}(e_k)\\
         &=\left(\sum_{i=1}^n \sum_{j=1}^p \lambda_{ij} \varphi_{ij}\right)(e_k)
       \end{align}
-      Donc \(f \in \VectEngendre(\Phi)\). Alors \(\Phi\) est génératrice de 
+      Donc \(f \in \VectEngendre(\Phi)\). Alors \(\Phi\) est génératrice de
       \(\Lin{E}{F}\).
   \end{enumerate}
-  Donc \(\Phi\) est une base de \(E\) de cardinal \(np\) donc \(\Lin{E}{F}\) est 
+  Donc \(\Phi\) est une base de \(E\) de cardinal \(np\) donc \(\Lin{E}{F}\) est
   de dimension finie égale à \(\Dim_\K E \times \Dim_\K F\).
 \end{proof}
 
 \emph{Remarque}~: il existe une démonstration avec les matrices.
 
 \begin{corth}
-  Si \(E\) est un \(\K\)-espace vectoriel de dimension finie alors \(\Endo{E}\) 
-  est de dimension finie égale à \((\Dim_\K E)^2\). Le dual \(E^*\) est de 
+  Si \(E\) est un \(\K\)-espace vectoriel de dimension finie alors \(\Endo{E}\)
+  est de dimension finie égale à \((\Dim_\K E)^2\). Le dual \(E^*\) est de
   dimension finie égale à celle de \(E\).
 \end{corth}
 
-\emph{Remarque, notion de la base duale} Si \(E\) est un \(\K\)-espace vectoriel 
-de dimension finie \(p\) et soit \(\B=(e_1, \ldots, e_p)\) une base de \(E\). 
-Pour tout \(j \in  \intervalleentier{1}{p}\) soit \(e_j^*\) l'unique forme 
-linéaire telle que pour tout \(i \in  \intervalleentier{1}{p}\), on ait 
+\emph{Remarque, notion de la base duale} Si \(E\) est un \(\K\)-espace vectoriel
+de dimension finie \(p\) et soit \(\B=(e_1, \ldots, e_p)\) une base de \(E\).
+Pour tout \(j \in  \intervalleentier{1}{p}\) soit \(e_j^*\) l'unique forme
+linéaire telle que pour tout \(i \in  \intervalleentier{1}{p}\), on ait
 \(e_j^*(e_i)=\delta_{ij}\).
 
 \begin{prop}
-  Si \(E\) est un \(\K\)-espace vectoriel de dimension finie \(p\) et soit 
-  \(\B=(e_1, \ldots, e_p)\) une base de \(E\). Pour tout \(j \in  
-  \intervalleentier{1}{p}\), soit \(e_j^*\) l'unique forme linéaire telle que 
-  pour tout \(i \in  \intervalleentier{1}{p}\), on ait 
-  \(e_j*(e_i)=\delta_{ij}\). Alors la famille \(\B^* = (e_1^*, \ldots, e_p^*)\) 
+  Si \(E\) est un \(\K\)-espace vectoriel de dimension finie \(p\) et soit
+  \(\B=(e_1, \ldots, e_p)\) une base de \(E\). Pour tout \(j \in
+  \intervalleentier{1}{p}\), soit \(e_j^*\) l'unique forme linéaire telle que
+  pour tout \(i \in  \intervalleentier{1}{p}\), on ait
+  \(e_j*(e_i)=\delta_{ij}\). Alors la famille \(\B^* = (e_1^*, \ldots, e_p^*)\)
   est une base de \(E^*\) appelée base duale de la base \(\B\).
 \end{prop}
 \begin{proof}
-  On sait déjà que \(E^*\) est de dimension finie égale à \(p\). Il suffit de 
-  montrer que \(\B^*\) est génératrice ou qu'elle est libre. Soit \(\varphi \in 
+  On sait déjà que \(E^*\) est de dimension finie égale à \(p\). Il suffit de
+  montrer que \(\B^*\) est génératrice ou qu'elle est libre. Soit \(\varphi \in
   E^*\). Pour tout \(k \in \llbracket 1,p \rrbracket\) on a~:
   \begin{align}
     \varphi(e_k)&= \varphi(e_k) \sum_{i=1}^p \delta_{ik} \\
-    &= \sum_{i=1}^p \varphi(e_i) \delta_{ik} \\ &=\sum_{i=1}^p \varphi(e_i) 
+    &= \sum_{i=1}^p \varphi(e_i) \delta_{ik} \\ &=\sum_{i=1}^p \varphi(e_i)
     e_i^*(e_k)  \\
     &=\left(\sum_{i=1}^p \varphi(e_i) e_i^* \right)(e_k)
   \end{align}
-  donc \(\varphi = \sum_{i=1}^p \varphi(e_i) e_i^*\) et alors \(\B^*\) est 
+  donc \(\varphi = \sum_{i=1}^p \varphi(e_i) e_i^*\) et alors \(\B^*\) est
   génératrice. Alors c'est une base.
 \end{proof}
 
-\emph{Coordonnées d'un vecteur de \(\B\)}~: Si \(x \in E\) il existe un unique 
-\(p\)-uplet \((x_1, \ldots, x_p) \in \K^p\) tel que \(x = \sum_{i=1}^p x_i e_i\) 
-(coordonnées de \(x\) dans \(\B\)). Pour tout \(j \in  
+\emph{Coordonnées d'un vecteur de \(\B\)}~: Si \(x \in E\) il existe un unique
+\(p\)-uplet \((x_1, \ldots, x_p) \in \K^p\) tel que \(x = \sum_{i=1}^p x_i e_i\)
+(coordonnées de \(x\) dans \(\B\)). Pour tout \(j \in
 \intervalleentier{1}{p}\), l'application \(e_j^*\) est telle que
 \begin{equation}
   e_j^*(x)=\sum_{i=1}^p x_i e_j^*(e_i) = \sum_{i=1}^p x_i \delta_{ij} = x_j.
 \end{equation}
-La famille \(\B^*\) est la famille des applications coordonnées de la base 
+La famille \(\B^*\) est la famille des applications coordonnées de la base
 \(\B\).
 
 \section{Sous-espaces vectoriels en dimension finie}
@@ -990,7 +990,7 @@ La famille \(\B^*\) est la famille des applications coordonnées de la base
 \subsection{Sous-espace vectoriel d'un espace vectoriel de dimension finie}
 
 \begin{theo}
-  Tout sous-espace vectoriel \(E_1\) d'un \(\K\)-espace vectoriel \(E\) de 
+  Tout sous-espace vectoriel \(E_1\) d'un \(\K\)-espace vectoriel \(E\) de
   dimension finie est de dimension finie et
   \begin{equation}
     \Dim_\K E_1 \leqslant \Dim_\K E
@@ -999,54 +999,54 @@ La famille \(\B^*\) est la famille des applications coordonnées de la base
 \end{theo}
 \begin{proof}
   Soit \(\B\) une base de \(E\). On définit \begin{equation}
-  \courbe=\enstq{\Card \Lb}{\Lb \text{~est une famille libre de } E_1}. 
+  \courbe=\enstq{\Card \Lb}{\Lb \text{~est une famille libre de } E_1}.
   \end{equation}
-  Déjà \(\courbe\) est une partie non vide (\(0 \in \courbe\), 
-  \(\Lb=\emptyset\)) de \(\N\) et elle est majorée par \(\Dim_\K E\). Alors elle 
-  admet un plus grand élément noté \(p\). Soit \(\L\) une famille libre de 
-  \(E_1\) de cardinal \(p\). 
+  Déjà \(\courbe\) est une partie non vide (\(0 \in \courbe\),
+  \(\Lb=\emptyset\)) de \(\N\) et elle est majorée par \(\Dim_\K E\). Alors elle
+  admet un plus grand élément noté \(p\). Soit \(\L\) une famille libre de
+  \(E_1\) de cardinal \(p\).
 
-  Montrons qu'elle est génératrice. Soit \(x \in E_1\), si \(x \in \Lb\) alors 
-  on a directement \(x \in \VectEngendre(\Lb)\). Sinon on pose \(\Lb' = \Lb \cup 
-  \{x\}\). La famille \(\Lb'\) est dans \(E_1\) et admet \(p+1\) vecteurs. Comme 
-  \(p+1 > \max \courbe\), elle ne peut pas être libre. Alors comme \(\Lb' 
-  =\Lb\cup\{x\}\) est liée et que \(\Lb\) est libre, on sait que \(x \in 
+  Montrons qu'elle est génératrice. Soit \(x \in E_1\), si \(x \in \Lb\) alors
+  on a directement \(x \in \VectEngendre(\Lb)\). Sinon on pose \(\Lb' = \Lb \cup
+  \{x\}\). La famille \(\Lb'\) est dans \(E_1\) et admet \(p+1\) vecteurs. Comme
+  \(p+1 > \max \courbe\), elle ne peut pas être libre. Alors comme \(\Lb'
+  =\Lb\cup\{x\}\) est liée et que \(\Lb\) est libre, on sait que \(x \in
   \VectEngendre(\Lb)\). Alors \(\Lb\) est génératrice de \(E_1\).
 
-  Finalement \(\Lb\) est une base de \(E_1\). Alors \(E_1\) est est de dimension 
+  Finalement \(\Lb\) est une base de \(E_1\). Alors \(E_1\) est est de dimension
   finie égale à \(p\).
 \end{proof}
 \begin{proof}[Démonstration de l'équivalence]
-  S'ils sont égaux alors ils ont la même dimension (trivial). Supposons qu'ils 
-  aient la même dimension et soit \(\B\) une base de \(E_1\). Elle est libre 
-  dans \(E_1\) donc dans \(E\) et \(\Card(\B)=\Dim_\K E_1=\Dim_\K E\) alors 
-  \(\B\) est une base de \(E\). Alors a fortiori \(\B\) est génératrice de 
+  S'ils sont égaux alors ils ont la même dimension (trivial). Supposons qu'ils
+  aient la même dimension et soit \(\B\) une base de \(E_1\). Elle est libre
+  dans \(E_1\) donc dans \(E\) et \(\Card(\B)=\Dim_\K E_1=\Dim_\K E\) alors
+  \(\B\) est une base de \(E\). Alors a fortiori \(\B\) est génératrice de
   \(E\). \(E=\VectEngendre(\B)=E_1\).
 \end{proof}
 
-\emph{Vocabulaire}~: Soit \(E_1\) un sous-espace vectoriel d'un \(\K\)-espace 
-vectoriel \(E\). Si \(\Dim_\K E_1=1\) alors \(E_1\) est une droite vectorielle, 
-si \(\Dim_\K E_1=2\) alors \(E_1\) est un plan vectoriel et si \(\Dim_\K E_1 = 
+\emph{Vocabulaire}~: Soit \(E_1\) un sous-espace vectoriel d'un \(\K\)-espace
+vectoriel \(E\). Si \(\Dim_\K E_1=1\) alors \(E_1\) est une droite vectorielle,
+si \(\Dim_\K E_1=2\) alors \(E_1\) est un plan vectoriel et si \(\Dim_\K E_1 =
 \Dim_\K E -1\) alors \(E_1\) est un hyperplan de \(E\).
 
 \begin{defdef}
-  Soit \(W_1\) un sous-espace affine d'un espace vectoriel réel \(E\) de 
-  dimension finie. On appelle dimension de \(W_1\) la dimension de sa direction 
-  \(E_1\). Si \(\Dim_\R E_1=1\) alors \(W_1\) est une droite affine, si 
-  \(\Dim_\R E_1=2\) alors \(W_1\) est un plan affine et si \(\Dim_\R E_1=\Dim_\R 
+  Soit \(W_1\) un sous-espace affine d'un espace vectoriel réel \(E\) de
+  dimension finie. On appelle dimension de \(W_1\) la dimension de sa direction
+  \(E_1\). Si \(\Dim_\R E_1=1\) alors \(W_1\) est une droite affine, si
+  \(\Dim_\R E_1=2\) alors \(W_1\) est un plan affine et si \(\Dim_\R E_1=\Dim_\R
   E -1 \) alors \(W_1\) est un hyperplan affine.
 \end{defdef}
 
-\emph{Remarque}~: Le corps \(\K\) est un espace vectoriel sur lui-même de 
-dimension \(1\). Les sous-espaces vectoriels de \(\K\) sont de dimension \(0\) 
+\emph{Remarque}~: Le corps \(\K\) est un espace vectoriel sur lui-même de
+dimension \(1\). Les sous-espaces vectoriels de \(\K\) sont de dimension \(0\)
 ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 
 \subsection{Rang d'une famille de vecteurs}
 
 \begin{defdef}
-  Soit un \(\K\)-espace vectoriel \(E\) et soit \(\X\) une famille de vecteurs 
-  de \(E\). On dit que \(\X\) est de rang fini si le sous-espace vectoriel 
-  \(\VectEngendre(\X)\) est de dimension finie, auquel cas on définit le rang de 
+  Soit un \(\K\)-espace vectoriel \(E\) et soit \(\X\) une famille de vecteurs
+  de \(E\). On dit que \(\X\) est de rang fini si le sous-espace vectoriel
+  \(\VectEngendre(\X)\) est de dimension finie, auquel cas on définit le rang de
   la famille de vecteurs \(\X\) par
   \begin{equation}
     \rg(\X)=\Dim_\K \VectEngendre(\X).
@@ -1055,16 +1055,16 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 \end{defdef}
 
 \begin{prop}
-  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Alors toute famille 
+  Soit un \(\K\)-espace vectoriel \(E\) de dimension finie. Alors toute famille
   \(\X\) de vecteurs de \(E\) est de rang fini et vérifie
   \begin{equation}
     \rg(\X) \leqslant \Dim_\K E.
   \end{equation}
-  De plus \(\rg(\X) = \Dim_\K E\) si et seulement si \(\X\) est génératrice de 
+  De plus \(\rg(\X) = \Dim_\K E\) si et seulement si \(\X\) est génératrice de
   \(E\).
 \end{prop}
 \begin{proof}
-  Soit \(E_1=\VectEngendre(\X)\). \(E_1\) est un sous-espace vectoriel de \(E\), 
+  Soit \(E_1=\VectEngendre(\X)\). \(E_1\) est un sous-espace vectoriel de \(E\),
   donc il est de dimension finie et \(\Dim_\K E_1 \leqslant \Dim_\K E\). De plus
   \begin{align}
     \rg(\X) = \Dim_\K E &\iff \Dim_\K E_1 = \Dim_\K E\\
@@ -1074,14 +1074,14 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 \end{proof}
 
 \begin{prop}\label{prop:caracrangbase}
-  Soit un \(\K\)-espace vectoriel \(E\). Soit \(\X\) une famille génératrice 
-  finie de vecteurs de \(E\). Alors \(\X\) est de rang fini et \(\rg(\X) 
-  \leqslant \Card(\X)\). De plus \(\rg(\X)=\Card(\X)\) si et seulement si \(\X\) 
+  Soit un \(\K\)-espace vectoriel \(E\). Soit \(\X\) une famille génératrice
+  finie de vecteurs de \(E\). Alors \(\X\) est de rang fini et \(\rg(\X)
+  \leqslant \Card(\X)\). De plus \(\rg(\X)=\Card(\X)\) si et seulement si \(\X\)
   est libre.
 \end{prop}
 \begin{proof}
-  Soit \(E_1=\VectEngendre(\X)\). Comme \(\X\) est une famille génératrice finie 
-  de \(E_1\), \(E_1\) est de dimension finie et \(\Dim_\K E_1 \leqslant 
+  Soit \(E_1=\VectEngendre(\X)\). Comme \(\X\) est une famille génératrice finie
+  de \(E_1\), \(E_1\) est de dimension finie et \(\Dim_\K E_1 \leqslant
   \Card(\X)\) et donc \(\rg(\X) \leqslant \Card(\X)\). De plus \begin{align}
     \rg(\X) = \Card(\X) &\iff \Dim_\K E_1 = \Card(\X)\\
     &\iff \X \text{~est une base de } E_1\\
@@ -1091,9 +1091,9 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 \end{proof}
 
 \begin{theo}[Caractérisation du rang]
-  Soient \(E\) un \(\K\)-espace vectoriel, \(\X\) une famille de vecteurs de 
-  \(E\) de rang fini. Alors le rang de \(\X\) est égal au plus grand nombre de 
-  vecteurs linéairement indépendant que l'on peut extraire de \(\X\), ou encore 
+  Soient \(E\) un \(\K\)-espace vectoriel, \(\X\) une famille de vecteurs de
+  \(E\) de rang fini. Alors le rang de \(\X\) est égal au plus grand nombre de
+  vecteurs linéairement indépendant que l'on peut extraire de \(\X\), ou encore
   au cardinal de la plus grande famille libre que l'on peut extraire de \(\X\).
 \end{theo}
 \begin{proof}
@@ -1101,19 +1101,19 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
   \begin{equation}
     \courbe = \enstq{\Card \Lb}{\Lb \text{~famille libre }, \Lb \subset \X},
   \end{equation}
-  si \(\Lb\) est une famille libre telle que \(\Lb \subset \X\), alors \(\L\) 
-  est une famille libre de \(\VectEngendre(\X)\). Par hypothèse, 
-  \(\VectEngendre(\X)\) est de dimension finie donc \(\Card \Lb \leqslant 
-  \Dim_\K \VectEngendre(\X)=\rg(\X)\). Alors \(\courbe\) est une partie de 
-  \(\N\) non vide (puisque \(0 \in \courbe\)) et majorée. Alors elle admet un 
+  si \(\Lb\) est une famille libre telle que \(\Lb \subset \X\), alors \(\L\)
+  est une famille libre de \(\VectEngendre(\X)\). Par hypothèse,
+  \(\VectEngendre(\X)\) est de dimension finie donc \(\Card \Lb \leqslant
+  \Dim_\K \VectEngendre(\X)=\rg(\X)\). Alors \(\courbe\) est une partie de
+  \(\N\) non vide (puisque \(0 \in \courbe\)) et majorée. Alors elle admet un
   plus grand élément noté \(p\).
 
-  On a \(p \leqslant \rg(\X)\), puisque c'est un majorant, et il existe une 
-  famille \(\Lb \subset \X\) telle que \(\Card \Lb =p\). Comme \(\X\) est 
-  génératrice de \(\VectEngendre(\X)\) et que \(\Lb\) est libre incluse dans 
-  \(\X\) il existe une base \(\B\) de \(\VectEngendre(\X)\) telle que \(\Lb 
-  \subset \B \subset \X\). Comme la base \(\B\) est une famille libre on a 
-  \(\Card \B \in \courbe\). Comme c'est aussi une base \(\Card \B = \Dim_\K 
+  On a \(p \leqslant \rg(\X)\), puisque c'est un majorant, et il existe une
+  famille \(\Lb \subset \X\) telle que \(\Card \Lb =p\). Comme \(\X\) est
+  génératrice de \(\VectEngendre(\X)\) et que \(\Lb\) est libre incluse dans
+  \(\X\) il existe une base \(\B\) de \(\VectEngendre(\X)\) telle que \(\Lb
+  \subset \B \subset \X\). Comme la base \(\B\) est une famille libre on a
+  \(\Card \B \in \courbe\). Comme c'est aussi une base \(\Card \B = \Dim_\K
   \VectEngendre (\X) = \rg(\X)\). D'où \(\rg(\X) \leqslant p = \max \courbe\).
 
   On a alors les deux inégalité
@@ -1128,84 +1128,84 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 \subsection{Bases et sous-espaces vectoriels supplémentaires}
 
 \begin{theo}\label{theo:theosuppdimfinie}
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie. Soit \(\E=(e_i)_{i 
-  \in I}\) (\(I\) fini) une base de \(E\). Soit \((I_1, I_2)\) une partition de 
-  \(I\), c'est à dire que \(I_1 \subset I\), \(I_2 \subset I\), \(I_1 \cup I_2 
-  =I\) et \(I_1 \cap I_2 = \emptyset\). On note \(E_1 = \VectEngendre((e_i)_{i 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie. Soit \(\E=(e_i)_{i
+  \in I}\) (\(I\) fini) une base de \(E\). Soit \((I_1, I_2)\) une partition de
+  \(I\), c'est à dire que \(I_1 \subset I\), \(I_2 \subset I\), \(I_1 \cup I_2
+  =I\) et \(I_1 \cap I_2 = \emptyset\). On note \(E_1 = \VectEngendre((e_i)_{i
   \in I_1})\) et \(E_2 = \VectEngendre((e_i)_{i \in I_2})\). Alors
   \begin{equation}
     E = E_1 \oplus E_2.
   \end{equation}
 \end{theo}
 \begin{proof}
-  \(E_1\) et \(E_2\) sont des sous-espace vectoriel de \(E\) donc \(E_1+E_2\) 
-  est un sous-espace vectoriel de \(E\). Soit \(x \in E\). Comme \(\E\) est une 
-  base de \(E\) il existe \((x_i)_{i \in I} \in \K^I\) telle que \(x= \sum_{i 
-  \in I} x_i e_i\). 
+  \(E_1\) et \(E_2\) sont des sous-espace vectoriel de \(E\) donc \(E_1+E_2\)
+  est un sous-espace vectoriel de \(E\). Soit \(x \in E\). Comme \(\E\) est une
+  base de \(E\) il existe \((x_i)_{i \in I} \in \K^I\) telle que \(x= \sum_{i
+  \in I} x_i e_i\).
 
-  Comme \((I_1,I_2)\) est une partition de \(I\), on a aussi \(x = \sum_{i \in 
-  I_1} x_i e_i + \sum_{i \in I_2} x_i e_i\) donc \(x \in E_1+E_2\). 
+  Comme \((I_1,I_2)\) est une partition de \(I\), on a aussi \(x = \sum_{i \in
+  I_1} x_i e_i + \sum_{i \in I_2} x_i e_i\) donc \(x \in E_1+E_2\).
 
-  On a montré \(E \subset E_1+E_2\). Comme l'autre inclusion est établie, on a 
+  On a montré \(E \subset E_1+E_2\). Comme l'autre inclusion est établie, on a
   l'égalité \(E=E_1+E_2\).
 
   \medskip
-  Il reste à démontrer que la somme est directe. Montrons que le vecteur nul 
-  s'écrit de manière unique sous la forme \(0=x_1+x_2\) avec \((x_1,x_2) \in E_1 
-  \times E_2\). 
+  Il reste à démontrer que la somme est directe. Montrons que le vecteur nul
+  s'écrit de manière unique sous la forme \(0=x_1+x_2\) avec \((x_1,x_2) \in E_1
+  \times E_2\).
 
-  Soit \((x_1,x_2) \in E_1 \times E_2\) tel que \(0=x_1+x_2\). Il existe alors 
-  deux familles \((\alpha_i)_{i \in I_1} \in \K^{I_1}\) et \((\alpha_i)_{i \in 
-  I_1} \in \K^{I_2}\) telles que \(x_1 = \sum_{i \in I_1} \alpha_i e_i\) et  
-  \(x_2 = \sum_{i \in I_2} \alpha_i e_i\). Comme \((I_1,I_2)\) est une partition 
-  de \(I\), leur somme vaut \(0 = \sum_{i \in I} \alpha_i e_i\). Comme \(\E\) 
-  est une base de \(E\), elle est libre et donc la famille \((\alpha_i)_{i \in 
+  Soit \((x_1,x_2) \in E_1 \times E_2\) tel que \(0=x_1+x_2\). Il existe alors
+  deux familles \((\alpha_i)_{i \in I_1} \in \K^{I_1}\) et \((\alpha_i)_{i \in
+  I_1} \in \K^{I_2}\) telles que \(x_1 = \sum_{i \in I_1} \alpha_i e_i\) et
+  \(x_2 = \sum_{i \in I_2} \alpha_i e_i\). Comme \((I_1,I_2)\) est une partition
+  de \(I\), leur somme vaut \(0 = \sum_{i \in I} \alpha_i e_i\). Comme \(\E\)
+  est une base de \(E\), elle est libre et donc la famille \((\alpha_i)_{i \in
   I}\) est nulle. Donc \(x_1\) et \(x_2\) sont tous les deux nuls.
 
   La somme est donc directe \(E = E_1 \oplus E_2\).
 \end{proof}
 
 \begin{theo}
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(E_1\) et \(E_2\) 
-  deux sous-espaces vectoriels supplémentaires dans \(E\). Soient \(\E_1\) une 
-  base de \(E_1\) et \(\E_2\) une base de \(E_2\) alors la famille \(\E=\E_1 
-  \cup \E_2\) est une base de \(E\), dite adaptée à la somme directe \(E=E_1 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(E_1\) et \(E_2\)
+  deux sous-espaces vectoriels supplémentaires dans \(E\). Soient \(\E_1\) une
+  base de \(E_1\) et \(\E_2\) une base de \(E_2\) alors la famille \(\E=\E_1
+  \cup \E_2\) est une base de \(E\), dite adaptée à la somme directe \(E=E_1
   \oplus E_2\).
 \end{theo}
 \begin{proof}
-  Notons \(\E_1=(e_i)_{i \in I_1}\), \(\E_2=(e_i)_{i \in I_2}\) avec \(I_1 \cap 
+  Notons \(\E_1=(e_i)_{i \in I_1}\), \(\E_2=(e_i)_{i \in I_2}\) avec \(I_1 \cap
   I_2 = \emptyset\) et \(\E=(e_i)_{i \in I}\) avec \(I = I_1 \cup I_2\).
 
-  \(\E\) est une famille de vecteurs de \(E\). Soit \(x \in E\). Comme \(E=E_1 
-  \oplus E_2\), il existe un unique couplet \((x_1,x_2) \in E_1 \times E_2\) tel 
-  que \(x=x_1+x_2\). \(\E_1\) est une base de \(E_1\) donc il existe une famille 
-  de scalaires \((\alpha_i)_{i \in I_1}\) telle que \(x_1 = \sum_{i \in I_1} 
-  \alpha_i e_i\). De la même manière il existe une famille de scalaires 
-  \((\alpha_i)_{i \in I_2}\) telle que \(x_1 = \sum_{i \in I_2} \alpha_i e_i\) 
-  (puisque \(I_1 \cap I_2 = \emptyset\)). Comme \((I_1,I_2)\) est une partition 
-  de \(I\), on a \(x=x_1+x_2=\sum_{i \in I_1} \alpha_i e_i+\sum_{i \in I_2} 
-  \alpha_i e_i = \sum_{i \in I} \alpha_i e_i\). Ainsi \(x \in 
+  \(\E\) est une famille de vecteurs de \(E\). Soit \(x \in E\). Comme \(E=E_1
+  \oplus E_2\), il existe un unique couplet \((x_1,x_2) \in E_1 \times E_2\) tel
+  que \(x=x_1+x_2\). \(\E_1\) est une base de \(E_1\) donc il existe une famille
+  de scalaires \((\alpha_i)_{i \in I_1}\) telle que \(x_1 = \sum_{i \in I_1}
+  \alpha_i e_i\). De la même manière il existe une famille de scalaires
+  \((\alpha_i)_{i \in I_2}\) telle que \(x_1 = \sum_{i \in I_2} \alpha_i e_i\)
+  (puisque \(I_1 \cap I_2 = \emptyset\)). Comme \((I_1,I_2)\) est une partition
+  de \(I\), on a \(x=x_1+x_2=\sum_{i \in I_1} \alpha_i e_i+\sum_{i \in I_2}
+  \alpha_i e_i = \sum_{i \in I} \alpha_i e_i\). Ainsi \(x \in
   \VectEngendre(\E)\). La famille \(\E\) est génératrice.
 
-  Soit \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i e_i 
-  =0\). Alors \(\sum_{i \in I_1} \alpha_i e_i = -\sum_{i \in I_2} \alpha_i e_i 
-  \in E_1 \cap E_2 = \{0\}\). Alors \(\sum_{i \in I_1} \alpha_i e_i=0\) et 
-  \(\sum_{i \in I_2} \alpha_i e_i\). Les familles \(\E_1\) et \(\E_2\) sont des 
-  bases donc elles sont libres alors \(\forall i \in I=I_1 \cup I_2 \ 
+  Soit \((\alpha_i)_{i \in I} \in \K^I\) telle que \(\sum_{i \in I} \alpha_i e_i
+  =0\). Alors \(\sum_{i \in I_1} \alpha_i e_i = -\sum_{i \in I_2} \alpha_i e_i
+  \in E_1 \cap E_2 = \{0\}\). Alors \(\sum_{i \in I_1} \alpha_i e_i=0\) et
+  \(\sum_{i \in I_2} \alpha_i e_i\). Les familles \(\E_1\) et \(\E_2\) sont des
+  bases donc elles sont libres alors \(\forall i \in I=I_1 \cup I_2 \
   \alpha_i=0\). La famille \(\E\) est donc libre.
 
   \(\E\) est libre et génératrice donc c'est une base de \(E\).
 \end{proof}
 
 \begin{corth}
-  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(E_1\) et \(E_2\) 
+  Soient \(E\) un \(\K\)-espace vectoriel de dimension finie, \(E_1\) et \(E_2\)
   deux sous-espaces vectoriels supplémentaires dans \(E\). Alors
   \begin{equation}
     \Dim_\K E = \Dim_\K E_1 + \Dim_\K E_2.
   \end{equation}
 \end{corth}
 \begin{proof}
-  Soient \(\E\), \(\E_1\) et \(\E_2\) des bases respectives de \(E\), \(E_1\) et 
+  Soient \(\E\), \(\E_1\) et \(\E_2\) des bases respectives de \(E\), \(E_1\) et
   \(E_2\) alors comme on peut établir une partition \(I=(I_1,I_2)\) on a
   \begin{equation}
     \Dim_\K E = \Card \E = \Card \E_1 + \Card \E_2 = \Dim_\K E_1 + \Dim_\K E_2.
@@ -1215,61 +1215,61 @@ ou \(1\). \(\K\) admet deux sous-espaces vectoriels~: \(\K\) et \(\{0\}\).
 \subsection{Existence de supplémentaire}
 
 \begin{theo}
-  Soit \(E\) un \(\K\)-espace vectoriel de dimension finie. Tout sous-espace 
+  Soit \(E\) un \(\K\)-espace vectoriel de dimension finie. Tout sous-espace
   vectoriel de \(E\) admet au moins un supplémentaire dans \(E\).
 \end{theo}
 \begin{proof}
-  Soit \(E_1\) un sous-espace vectoriel de \(E\). Il est de dimension finie 
-  puisque \(E\) est de dimension finie. Soit \(\E_1\) une base de \(E_1\). La 
-  famille \(\E_1\) est une famille libre de \(E\). Le théorème de la base 
-  incomplète permet de la compléter en une base de \(E\). Alors il existe une 
+  Soit \(E_1\) un sous-espace vectoriel de \(E\). Il est de dimension finie
+  puisque \(E\) est de dimension finie. Soit \(\E_1\) une base de \(E_1\). La
+  famille \(\E_1\) est une famille libre de \(E\). Le théorème de la base
+  incomplète permet de la compléter en une base de \(E\). Alors il existe une
   famille de vecteur \(\E_2\) de \(E\) telle que
   \begin{equation}
     \E=\E_1 \cup \E_2 \quad \E_1 \cap \E_2 = \emptyset.
   \end{equation}
-  Soit \(S= \VectEngendre(\E_2)\). D'après le théorème~\ref{theo:theosuppdimfinie}, \(E_1\) et \(S\) sont supplémentaires dans 
+  Soit \(S= \VectEngendre(\E_2)\). D'après le théorème~\ref{theo:theosuppdimfinie}, \(E_1\) et \(S\) sont supplémentaires dans
   \(E\)~:
   \begin{equation}
     E = E_1 \oplus S.
   \end{equation}
 \end{proof}
 
-\emph{Remarque}~: Il n'y a pas unicité du supplémentaire. On retrouve 
-facilement, dans le cas de la dimension finie, le résultat ``Les supplémentaires 
-d'un même espace vectoriel sont isomorphes'' vu au chapitre précédent. Si \(E\) 
-est un \(\K\)-espace vectoriel de dimension finie et soient trois sous-espaces 
-vectoriels tels que \(E=E_1 \oplus S_1\) et \(E=E_1 \oplus S_2\) alors \(\Dim_\K 
-E = \Dim_\K E_1 + \Dim_\K S_1=\Dim_\K E_1 + \Dim_\K S_2\). Alors \(\Dim_\K 
+\emph{Remarque}~: Il n'y a pas unicité du supplémentaire. On retrouve
+facilement, dans le cas de la dimension finie, le résultat ``Les supplémentaires
+d'un même espace vectoriel sont isomorphes'' vu au chapitre précédent. Si \(E\)
+est un \(\K\)-espace vectoriel de dimension finie et soient trois sous-espaces
+vectoriels tels que \(E=E_1 \oplus S_1\) et \(E=E_1 \oplus S_2\) alors \(\Dim_\K
+E = \Dim_\K E_1 + \Dim_\K S_1=\Dim_\K E_1 + \Dim_\K S_2\). Alors \(\Dim_\K
 S_1=\Dim_\K S_2\). \(S_1\) et \(S_2\) sont isomorphes.
 
 \subsection{Formule de Grassmann}
 
 \begin{theo}
-  Soient \(E\) un \(\K\)-espace vectoriel, \(E_1\) et \(E_2\) deux sous-espaces 
-  vectoriels de dimensions finies. Alors le sous-espace vectoriel \(E_1+E_2\) 
+  Soient \(E\) un \(\K\)-espace vectoriel, \(E_1\) et \(E_2\) deux sous-espaces
+  vectoriels de dimensions finies. Alors le sous-espace vectoriel \(E_1+E_2\)
   est de dimension finie et
   \begin{equation}
     \Dim_\K(E_1+E_2) = \Dim_\K E_1 + \Dim_\K E_2 - \Dim_\K(E_1 \cap E_2).
   \end{equation}
 \end{theo}
 \begin{proof}
-  \(E_1 \cap E_2\) est un sous-espace vectoriel de \(E_1\) et \(E_1\) est de 
-  dimension finie. Alors d'après la sous section précédente, il existe un 
-  sous-espace vectoriel \(S_1\) de \(E_1\) tel que \(E_1 = (E_1 \cap E_2) \oplus 
+  \(E_1 \cap E_2\) est un sous-espace vectoriel de \(E_1\) et \(E_1\) est de
+  dimension finie. Alors d'après la sous section précédente, il existe un
+  sous-espace vectoriel \(S_1\) de \(E_1\) tel que \(E_1 = (E_1 \cap E_2) \oplus
   S_1\).
 
   Montrons que \(E_1+E_2 = S_1 \oplus E_2\).
 
-  Déjà \(S_1 \subset E_1 \subset E_1+E_2\). Puis \(E_2 \subset E_1+E_2\). Alors 
-  \(S_1+E_2\) est un sous-espace vectoriel de \(E_1+E_2\) : \(S_1 +E_2 \subset 
+  Déjà \(S_1 \subset E_1 \subset E_1+E_2\). Puis \(E_2 \subset E_1+E_2\). Alors
+  \(S_1+E_2\) est un sous-espace vectoriel de \(E_1+E_2\) : \(S_1 +E_2 \subset
   E_1+E_2\).
 
-  Soit \(x \in E_1+E_2\), il existe un couple \((x_1,x_2) \in E_1 \times E_2\) 
-  tel que \(x = x_1+x_2\). Comme \(E_1 = (E_1 \cap E_2) \oplus S_1\) il existe 
-  un couple \((a_1,b_1) \in (E_1 \cap E_2) \times S_1\) tel que \(x_1=a_1+b_1\). 
-  Alors finalement \(x=a_1+b_1+x_2\) avec \(b_1 \in S_1\), \(a_1 \in E_1 \cap 
-  E_2 \subset E_2\) et \(x_2 \in E_2\). Comme \(E_2\) est un sous-espace 
-  vectoriel on a \(a_1 + x_2 \in E_2\) et donc \(x \in S_1+E_2\). Alors \(E_1 
+  Soit \(x \in E_1+E_2\), il existe un couple \((x_1,x_2) \in E_1 \times E_2\)
+  tel que \(x = x_1+x_2\). Comme \(E_1 = (E_1 \cap E_2) \oplus S_1\) il existe
+  un couple \((a_1,b_1) \in (E_1 \cap E_2) \times S_1\) tel que \(x_1=a_1+b_1\).
+  Alors finalement \(x=a_1+b_1+x_2\) avec \(b_1 \in S_1\), \(a_1 \in E_1 \cap
+  E_2 \subset E_2\) et \(x_2 \in E_2\). Comme \(E_2\) est un sous-espace
+  vectoriel on a \(a_1 + x_2 \in E_2\) et donc \(x \in S_1+E_2\). Alors \(E_1
   +E_2 \subset S_1 + E_2\).
 
   Comme on a les deux inclusions, on a l'égalité \(E_1+E_2 = S_1+E_2\).
@@ -1282,12 +1282,12 @@ S_1=\Dim_\K S_2\). \(S_1\) et \(S_2\) sont isomorphes.
   \end{align}
   car \(S_1\) est un supplémentaire de \((E_1 \cap E_2)\) dans \(E_1\).
 
-  Les sous-espaces vectoriels \(E_2\) et \(S_1\) sont de dimension finies donc 
+  Les sous-espaces vectoriels \(E_2\) et \(S_1\) sont de dimension finies donc
   \(S_1 \oplus E_2\) est de dimension finie égale à
   \begin{equation}
     \Dim_\K (E_1+E_2)=\Dim_\K (S_1 \oplus E_2) = \Dim_\K S_1 + \Dim_\K E_2
   \end{equation}
-  On a aussi \(E_1 = (E_1 \cap E_2) \oplus S_1\) et comme \(E_1\) est aussi de 
+  On a aussi \(E_1 = (E_1 \cap E_2) \oplus S_1\) et comme \(E_1\) est aussi de
   dimension finie on a
   \begin{equation}
     \Dim_\K E_1 = \Dim_\K (E_1 \cap E_2) + \Dim_\K S_1
@@ -1304,27 +1304,27 @@ S_1=\Dim_\K S_2\). \(S_1\) et \(S_2\) sont isomorphes.
 
 \begin{theo}
   \label{theo:rang}
-  Soient \(E\) un \(\K\)-espaces vectoriel de dimension finie, \(F\) un 
-  \(\K\)-espace vectoriel de dimension quelconque et \(u \in \Lin{E}{F}\). Alors 
+  Soient \(E\) un \(\K\)-espaces vectoriel de dimension finie, \(F\) un
+  \(\K\)-espace vectoriel de dimension quelconque et \(u \in \Lin{E}{F}\). Alors
   le sous-espace vectoriel \(\Image(u)\) de \(F\) est de dimension finie et on a
   \begin{equation}
     \Dim_\K E = \Dim_\K \Ker(u) + \Dim_\K \Image(u).
   \end{equation}
 \end{theo}
 
-\emph{Le théorème du rang fait intervenir la dimension de l'espace vectoriel de 
-départ, l'espace d'arrivée n'est pas supposé de dimension finie. Le théorème du 
-rang ne signifie pas que l'image et le noyau de \(u\) sont supplémentaires. Ce 
-qui n'aurait aucun sens puisqu'ils ne sont pas dans le même espace vectoriel. 
+\emph{Le théorème du rang fait intervenir la dimension de l'espace vectoriel de
+départ, l'espace d'arrivée n'est pas supposé de dimension finie. Le théorème du
+rang ne signifie pas que l'image et le noyau de \(u\) sont supplémentaires. Ce
+qui n'aurait aucun sens puisqu'ils ne sont pas dans le même espace vectoriel.
 C'est faux même si \(E=F\).}
 \begin{proof}
-  \(E\) est de dimension finie, le noyau \(\Ker(u)\) est un sous-espace 
-  vectoriel de \(E\) donc il existe un supplémentaire \(S\) du noyau dans \(E\) 
+  \(E\) est de dimension finie, le noyau \(\Ker(u)\) est un sous-espace
+  vectoriel de \(E\) donc il existe un supplémentaire \(S\) du noyau dans \(E\)
   : \(E= S \oplus \Ker(u)\).
 
-  D'après le théorème de préparation au théorème du rang (Théorème~\ref{theo:preptheorang})~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\) 
-  est de dimension finie, \(S\) est aussi de dimension finie comme étant un 
-  sous-espace vectoriel de \(E\). Alors \(\Image(u)\) est aussi de dimension 
+  D'après le théorème de préparation au théorème du rang (Théorème~\ref{theo:preptheorang})~: \(S\) est isomorphe à \(\Image(u)\). Comme \(E\)
+  est de dimension finie, \(S\) est aussi de dimension finie comme étant un
+  sous-espace vectoriel de \(E\). Alors \(\Image(u)\) est aussi de dimension
   finie et \begin{equation}
     \Dim_\K \Image(u) = \Dim_\K S = \Dim_\K E - \Dim_\K \Ker(u).
   \end{equation}
@@ -1333,18 +1333,18 @@ C'est faux même si \(E=F\).}
 \subsection{Rang d'une application linéaire}
 
 \begin{defdef}
-  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\). 
-  On dit que \(u\) est de rang fini lorsque \(\Image(u)\) est un sous-espace 
+  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\).
+  On dit que \(u\) est de rang fini lorsque \(\Image(u)\) est un sous-espace
   vectoriel de dimension finie, auquel cas le rang est défini par
   \begin{equation}
     \rg(u) = \Dim_\K \Image(u).
   \end{equation}
-  Si \(\Image(u)\) est de dimension infinie, on dit que le rang de \(u\) est 
+  Si \(\Image(u)\) est de dimension infinie, on dit que le rang de \(u\) est
   infini.
 \end{defdef}
 
 \begin{theo}
-  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\). 
+  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\).
   On suppose que \(E\) est de dimension finie. Alors \(u\) est de rang fini et
   \begin{equation}
     \rg(u) \leqslant \Dim_\K E.
@@ -1352,7 +1352,7 @@ C'est faux même si \(E=F\).}
   De plus \(\rg(u) = \Dim_\K E\) si et seulement si \(u\) est injective.
 \end{theo}
 \begin{proof}
-  Les hypothèses du théorème du rang sont satisfaites donc \(\rg(u)\) est fini 
+  Les hypothèses du théorème du rang sont satisfaites donc \(\rg(u)\) est fini
   et
   \begin{equation}
     \Dim_\K E = \Dim_\K \Ker(u) + \rg(u),
@@ -1366,7 +1366,7 @@ C'est faux même si \(E=F\).}
 \end{proof}
 
 \begin{theo}
-  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\). 
+  Soient \(E\) et \(F\) deux \(\K\)-espace vectoriels et \(u \in \Lin{E}{F}\).
   On suppose que \(F\) est de dimension finie. Alors \(u\) est de rang fini et
   \begin{equation}
     \rg(u) \leqslant \Dim_\K F.
@@ -1374,18 +1374,18 @@ C'est faux même si \(E=F\).}
   De plus \(\rg(u) = \Dim_\K F\) si et seulement si \(u\) est surjective.
 \end{theo}
 \begin{proof}
-  \(\Image(u)\) est un sous-espace vectoriel de \(F\), or \(F\) est de dimension 
+  \(\Image(u)\) est un sous-espace vectoriel de \(F\), or \(F\) est de dimension
   finie donc \(\Image(u)\) aussi. Alors
   \begin{equation}
     \rg(u) = \Dim_\K \Image(u) \leqslant \Dim_\K F.
   \end{equation}
-  De plus \(\rg(u) = \Dim_\K F\) si et seulement si \(\Image(u)=F\) c'est à dire 
+  De plus \(\rg(u) = \Dim_\K F\) si et seulement si \(\Image(u)=F\) c'est à dire
   si et seulement \(u\) est surjective.
 \end{proof}
 
 \begin{prop}
-  Soient deux \(\K\)-espaces vectoriels \(E\) et \(F\) et \(u \in \Lin{E}{F}\). 
-  On suppose qu'il existe une famille génératrice finie \(\G\) de \(E\) (donc 
+  Soient deux \(\K\)-espaces vectoriels \(E\) et \(F\) et \(u \in \Lin{E}{F}\).
+  On suppose qu'il existe une famille génératrice finie \(\G\) de \(E\) (donc
   \(E\) est de dimension finie). Alors
   \begin{align}
     \Image(u) &= \VectEngendre(u(\G)) \\
@@ -1393,28 +1393,28 @@ C'est faux même si \(E=F\).}
   \end{align}
 \end{prop}
 \begin{proof}
-  \(E\) est un espace vectoriel de dimension finie donc \(\rg(u)\) est fini. La 
-  première égalité est une conséquence de la proposition~\ref{prop:propdeduitesu(x)}. La deuxième égalité découle de la définition du 
+  \(E\) est un espace vectoriel de dimension finie donc \(\rg(u)\) est fini. La
+  première égalité est une conséquence de la proposition~\ref{prop:propdeduitesu(x)}. La deuxième égalité découle de la définition du
   rang d'une application linéaire et du rang d'une famille de vecteurs~:
   \begin{equation}
     \rg(u) = \Dim_\K \Image(u) \qquad \rg(u(\G))=\Dim_\K \VectEngendre(u(\G)),
   \end{equation}
-  et comme les deux espaces vectoriels sont égaux, on a l'égalité \(\rg(u) = 
+  et comme les deux espaces vectoriels sont égaux, on a l'égalité \(\rg(u) =
   \rg(u(\G))\).
 \end{proof}
 
 \begin{prop}
-  Soient deux \(\K\)-espaces vectoriels \(E\) et \(F\) et \(u \in \Lin{E}{F}\). 
-  Soit \(\X\) une famille de vecteurs de \(E\) supposée de rang fini. Alors la 
+  Soient deux \(\K\)-espaces vectoriels \(E\) et \(F\) et \(u \in \Lin{E}{F}\).
+  Soit \(\X\) une famille de vecteurs de \(E\) supposée de rang fini. Alors la
   famille \(u(\X)\) est de rang fini et
   \begin{equation}
     \rg(\X) = \rg(u(\X)) + \Dim_\K (\Ker(u) \cap \VectEngendre(\X)).
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soit \(E_1=\VectEngendre(\X)\). C'est un \(\K\)-espace vectoriel de dimension 
-  finie et \(\Dim_\K E_1 = \rg(\X)\). Soit \(u_1=u_{|E_1} \in \Lin{E_1}{F}\). 
-  Comme \(E_1\) est de dimension finie, on peut appliquer le théorème du rang à 
+  Soit \(E_1=\VectEngendre(\X)\). C'est un \(\K\)-espace vectoriel de dimension
+  finie et \(\Dim_\K E_1 = \rg(\X)\). Soit \(u_1=u_{|E_1} \in \Lin{E_1}{F}\).
+  Comme \(E_1\) est de dimension finie, on peut appliquer le théorème du rang à
   \(u_1\) et
   \begin{equation}
     \Dim_\K E_1 = \Dim_\K \Ker(u) + \rg(u_1),
@@ -1424,7 +1424,7 @@ C'est faux même si \(E=F\).}
     \item  \(\Dim_\K E_1 = \rg(\X)\);
     \item Comme \(u_1 = u_{|E_1}\) on a \(\Ker(u_1)=\Ker(u) \cap E_1\) et alors
       \begin{equation}
-        \Dim_\K \Ker(u_1) =  \Dim_\K(E_1 \cap \Ker(u)) = \Dim_\K(\Ker(u) \cap 
+        \Dim_\K \Ker(u_1) =  \Dim_\K(E_1 \cap \Ker(u)) = \Dim_\K(\Ker(u) \cap
         \VectEngendre(\X))
       \end{equation}
     \item Par définition du rang on a
@@ -1436,7 +1436,7 @@ C'est faux même si \(E=F\).}
         &=\rg u(\X)
       \end{align}
   \end{itemize}
-  Alors finalement en remplaçant tous les membres dans la formule du théorème du 
+  Alors finalement en remplaçant tous les membres dans la formule du théorème du
   rang
   \begin{equation}
     \rg(\X) = \rg(u(\X)) + \Dim_\K (\Ker(u) \cap \VectEngendre(\X)).
@@ -1444,8 +1444,8 @@ C'est faux même si \(E=F\).}
 \end{proof}
 
 \begin{theo}
-  La composition par un isomorphisme ne change pas le rang. Soient \(E\), \(F\) 
-  et \(G\) trois \(\K\)-espaces vectoriel et \(u \in \Lin{E}{F}\) et \(v\in 
+  La composition par un isomorphisme ne change pas le rang. Soient \(E\), \(F\)
+  et \(G\) trois \(\K\)-espaces vectoriel et \(u \in \Lin{E}{F}\) et \(v\in
   \Lin{F}{G}\). On suppose que \(u\) et \(v\) sont de rang finis. Alors
   \begin{align}
     u \in \Isom{E}{F} &\implies \rg(v \circ u)=\rg(v) \\
@@ -1453,7 +1453,7 @@ C'est faux même si \(E=F\).}
   \end{align}
 \end{theo}
 \begin{proof}
-  \(\Image(v \circ u) \subset \Image(v)\) et \(\Image(v \circ u)\) est de 
+  \(\Image(v \circ u) \subset \Image(v)\) et \(\Image(v \circ u)\) est de
   dimension finie (car \(v\) est de rang fini).
   \begin{align}
     \Image(v \circ u) &= \{y \in \G, \exists x \in E \ y=v \circ u(x) \}\\
@@ -1461,9 +1461,9 @@ C'est faux même si \(E=F\).}
     &=v(\Image(u))
   \end{align}
 
-  Supposons que \(u \in \Isom{E}{F}\), alors \(\Image(u) = F\) (puisque \(u\) 
-  est bijective). L'application \(u\) est aussi de rang fini, donc \(F\) est de 
-  dimension finie et donc \(E\) est aussi de dimension finie (puisque \(\Dim_\K 
+  Supposons que \(u \in \Isom{E}{F}\), alors \(\Image(u) = F\) (puisque \(u\)
+  est bijective). L'application \(u\) est aussi de rang fini, donc \(F\) est de
+  dimension finie et donc \(E\) est aussi de dimension finie (puisque \(\Dim_\K
   E = \Dim_\K F\)). Alors
   \begin{align}
     \Image(v \circ u) &= v(\Image(u)) \\
@@ -1472,22 +1472,22 @@ C'est faux même si \(E=F\).}
   \end{align}
   Alors en passant aux dimensions dans l'égalité \(\rg(v \circ u) = \rg(v)\).
 
-  Supposons maintenant que ce soit \(v \in \Isom{F}{G}\), alors \(\Image(u) = 
-  G\) (puisque \(v\) est bijective).  L'application \(v\) est aussi de rang 
-  fini, donc \(G\) est de dimension finie et donc \(F\) est aussi de dimension 
-  finie (puisque \(\Dim_\K F = \Dim_\K G\)). L'application \(v\) est bijective, 
-  donc sa restriction \(v_{|\Image(u)}^{|v(\Image(u))}\) est aussi bijective. 
-  Alors \(\Image(u)\) et \(v(\Image(u))\) ont la même dimension alors \(\rg(v 
+  Supposons maintenant que ce soit \(v \in \Isom{F}{G}\), alors \(\Image(u) =
+  G\) (puisque \(v\) est bijective).  L'application \(v\) est aussi de rang
+  fini, donc \(G\) est de dimension finie et donc \(F\) est aussi de dimension
+  finie (puisque \(\Dim_\K F = \Dim_\K G\)). L'application \(v\) est bijective,
+  donc sa restriction \(v_{|\Image(u)}^{|v(\Image(u))}\) est aussi bijective.
+  Alors \(\Image(u)\) et \(v(\Image(u))\) ont la même dimension alors \(\rg(v
   \circ u) =\Dim_\K v(\Image(u))= \Dim_\K \Image(u) = \rg(u)\)
 \end{proof}
 
-\subsection[Caractérisation des applications linéaires 
-bijectives]{Caractérisation des applications linéaires bijectives entre deux 
+\subsection[Caractérisation des applications linéaires
+bijectives]{Caractérisation des applications linéaires bijectives entre deux
 espaces vectoriels de même dimension finie}
 
 \begin{theo}
-  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels \emph{de même dimension 
-  finie} et \(u \in \Lin{E}{F}\). Alors les assertions suivantes sont 
+  Soient \(E\) et \(F\) deux \(\K\)-espaces vectoriels \emph{de même dimension
+  finie} et \(u \in \Lin{E}{F}\). Alors les assertions suivantes sont
   équivalentes~:
   \begin{enumerate}
     \item \(u\) est bijective;
@@ -1501,37 +1501,37 @@ espaces vectoriels de même dimension finie}
 \begin{proof}
   \(1 \implies 2\) : C'est évident
 
-  \(2 \implies 3\) : \(E\) est de dimension finie et en appliquant le théorème 
+  \(2 \implies 3\) : \(E\) est de dimension finie et en appliquant le théorème
   du rang à \(u\) on obtient
   \begin{equation}
     \rg(u) + \Dim \Ker(u) = \Dim E
   \end{equation}
-  Or \(u\) est injective donc \(\Ker(u)=\{0\}\) et sa dimension est nulle donc 
-  \(\rg(u) = \Dim F\). Ce qui est équivalent (par théorème) à \(u\) est 
+  Or \(u\) est injective donc \(\Ker(u)=\{0\}\) et sa dimension est nulle donc
+  \(\rg(u) = \Dim F\). Ce qui est équivalent (par théorème) à \(u\) est
   surjective.
 
-  \(3 \implies 4\) : Comme \(\Dim E = \Dim F\) alors si \(u\) est surjective 
+  \(3 \implies 4\) : Comme \(\Dim E = \Dim F\) alors si \(u\) est surjective
   alors \(\rg(u) = \Dim E\).
 
-  \(4 \implies 1\) : Déjà \(\rg(u) = \Dim E = \Dim F\) alors \(u\) est 
-  surjective. De plus par théorème du rang \(\Dim E = \Dim \Ker(u) + \rg(u)\). 
-  Donc \(\Dim \Ker(u)=0\) ce qui implique que \(u\) est injective. Au final 
+  \(4 \implies 1\) : Déjà \(\rg(u) = \Dim E = \Dim F\) alors \(u\) est
+  surjective. De plus par théorème du rang \(\Dim E = \Dim \Ker(u) + \rg(u)\).
+  Donc \(\Dim \Ker(u)=0\) ce qui implique que \(u\) est injective. Au final
   \(u\) est bijective.
 
-  On a montré que les quatre premières assertions sont équivalentes. 
+  On a montré que les quatre premières assertions sont équivalentes.
 
-  Ensuite La première implique la cinquième et la sixième par caractérisation 
-  des bijections. 
+  Ensuite La première implique la cinquième et la sixième par caractérisation
+  des bijections.
 
-  \(5 \implies 2\) puisque \(v \circ u = \Id \) implique que \(v \circ u\) est 
-  injective ce qui implique que \(u\) est injective. 
+  \(5 \implies 2\) puisque \(v \circ u = \Id \) implique que \(v \circ u\) est
+  injective ce qui implique que \(u\) est injective.
 
-  Enfin \(6 \implies 3\) puisque \(u \circ v=\Id\) implique que \(u\circ v\) est 
+  Enfin \(6 \implies 3\) puisque \(u \circ v=\Id\) implique que \(u\circ v\) est
   surjective ce qui implique que \(u\) est surjective.
 \end{proof}
 
 \begin{corth}
-  Soient un \(\K\)-espace vectoriel \(E\) de dimension finie et \(u \in 
+  Soient un \(\K\)-espace vectoriel \(E\) de dimension finie et \(u \in
   \Endo{E}\). Alors
   \begin{equation}
     u \text{~bijective} \iff u \text{~injective} \iff u \text{~surjective}.
@@ -1541,7 +1541,7 @@ espaces vectoriels de même dimension finie}
 
 \subsection{Formes linéaires et hyperplans}
 
-Soit un \(\K\)-espace vectoriel \(E\) quelconque. On ne suppose pas pour 
+Soit un \(\K\)-espace vectoriel \(E\) quelconque. On ne suppose pas pour
 l'instant qu'il est de dimension finie.
 
 \subsubsection{Rang d'une forme linéaire}
@@ -1554,9 +1554,9 @@ l'instant qu'il est de dimension finie.
   \end{itemize}
 \end{prop}
 \begin{proof}
-  On avait déjà vu qu'une forme linéaire non nulle est surjective. On peut aussi 
-  utiliser la dimension : \(\Image(f)\) est un sous-espace vectoriel de \(\K\) 
-  donc \(\Image(f) = \{0\}\) ou \(\Image(f) = \K\) alors en passant à la 
+  On avait déjà vu qu'une forme linéaire non nulle est surjective. On peut aussi
+  utiliser la dimension : \(\Image(f)\) est un sous-espace vectoriel de \(\K\)
+  donc \(\Image(f) = \{0\}\) ou \(\Image(f) = \K\) alors en passant à la
   dimension on a le résultat voulu.
 \end{proof}
 
@@ -1566,22 +1566,22 @@ l'instant qu'il est de dimension finie.
   Soit \(H\) un sous-espace vectoriel de \(E\). Il y a équivalence entre~:
   \begin{enumerate}
     \item \(H\) est le noyau d'une forme linéaire non nulle;
-    \item Il existe une droite vectorielle qui est le supplémentaire de \(H\) 
+    \item Il existe une droite vectorielle qui est le supplémentaire de \(H\)
       dans \(E\)
       \begin{equation}
         \exists a \in E\setminus\{0\} \quad H \oplus \VectEngendre(a) = E
       \end{equation}
   \end{enumerate}
-  Si l'une des deux assertions est vérifiée, on dit que \(H\) est un hyperplan 
+  Si l'une des deux assertions est vérifiée, on dit que \(H\) est un hyperplan
   vectoriel de \(E\).
 \end{prop}
 \begin{proof}
-  \(1 \implies 2\) : il existe une forme linéaire \(f\) non nulle telle que \(H 
-  = \Ker(f)\). Comme \(f\) est non nulle il existe un vecteur \(a\) de \(E\) tel 
-  que \(f(a) \neq 0\) et comme \(f\) est linéaire \(a \neq 0\). Montrons que 
+  \(1 \implies 2\) : il existe une forme linéaire \(f\) non nulle telle que \(H
+  = \Ker(f)\). Comme \(f\) est non nulle il existe un vecteur \(a\) de \(E\) tel
+  que \(f(a) \neq 0\) et comme \(f\) est linéaire \(a \neq 0\). Montrons que
   \(E= H \oplus \VectEngendre(a)\).
 
-  \(H\) et \(\VectEngendre(a)\) sont tous les deux des sous-espaces vectoriels 
+  \(H\) et \(\VectEngendre(a)\) sont tous les deux des sous-espaces vectoriels
   de \(E\) donc \(H + \VectEngendre(a) \subset E\).
 
   Soit \(x \in H \cap \VectEngendre(a)\) alors
@@ -1592,47 +1592,47 @@ l'instant qu'il est de dimension finie.
   \begin{align}
     x \in \VectEngendre(a) &\iff \exists \lambda \in \K \ x=\lambda a
   \end{align}
-  Donc \(0=f(x)=f(\lambda a)=\lambda f(a)\). Comme \(f(a) \neq 0\) et que \(\K\) 
+  Donc \(0=f(x)=f(\lambda a)=\lambda f(a)\). Comme \(f(a) \neq 0\) et que \(\K\)
   est intègre on a \(\lambda=0\), et donc \(x=0\).
 
-  On a montré \(H \cap \VectEngendre(a) \subset \{0\}\). Comme ce sont des 
-  sous-espaces vectoriel, leur intersection est un sous-espace vectoriel et on a 
-  l'autre inclusion donc au final l'égalité : \(H \cap \VectEngendre(a) = 
+  On a montré \(H \cap \VectEngendre(a) \subset \{0\}\). Comme ce sont des
+  sous-espaces vectoriel, leur intersection est un sous-espace vectoriel et on a
+  l'autre inclusion donc au final l'égalité : \(H \cap \VectEngendre(a) =
   \{0\}\).
 
-  \emph{Analyse}~: Soit \(x \in E\). Supposons qu'il existe \(x_H \in H\) et 
+  \emph{Analyse}~: Soit \(x \in E\). Supposons qu'il existe \(x_H \in H\) et
   \(\lambda \in \K\) tels que \(x = x_H + \lambda a\). Alors
   \begin{align}
     f(x) &= f(x_H) +\lambda f(a) \\
     &=\lambda f(a)
   \end{align}
-  comme \(f(a) \neq 0\), son inverse existe et donc \(\lambda = f(x) f(a)^{-1}\) 
+  comme \(f(a) \neq 0\), son inverse existe et donc \(\lambda = f(x) f(a)^{-1}\)
   (unique) et donc \(x_h = x-f(x) f(a)^{-1}\) (unique).
 
-  \emph{Synthèse}~: Soit \(x \in E\), \(x = (x- f(x) f(a)^{-1} a) + f(x) 
+  \emph{Synthèse}~: Soit \(x \in E\), \(x = (x- f(x) f(a)^{-1} a) + f(x)
   f(a)^{-1} a\). De plus
   \begin{align}
     f(x- f(x) f(a)^{-1} a)  &= f(x) -f(x)f(a)f(a)^{-1} = 0
   \end{align}
-  donc \(x- f(x) f(a)^{-1} a \in \Ker(f) = H\). Ainsi \(E \subset H + 
+  donc \(x- f(x) f(a)^{-1} a \in \Ker(f) = H\). Ainsi \(E \subset H +
   \VectEngendre(a)\).
 
-  Finalement la somme est directe et ils sont supplémentaires : \(E = H \oplus 
+  Finalement la somme est directe et ils sont supplémentaires : \(E = H \oplus
   \VectEngendre(a)\).
 
-  \(2 \implies 1\) : Soit \(a \in E \setminus\{0\}\) tel que \(E = H \oplus 
-  \VectEngendre(a)\). Soit \(f \in E^*\) définie par ses restrictions sur \(H\) 
+  \(2 \implies 1\) : Soit \(a \in E \setminus\{0\}\) tel que \(E = H \oplus
+  \VectEngendre(a)\). Soit \(f \in E^*\) définie par ses restrictions sur \(H\)
   et sur \(\VectEngendre(a)\) :
   \begin{itemize}
     \item \(\forall x \in H  \quad f(x)=0\);
-    \item \(\forall x \in \VectEngendre(a) \ \exists! \lambda \in \K \quad 
+    \item \(\forall x \in \VectEngendre(a) \ \exists! \lambda \in \K \quad
       x=\lambda a \ f(x)=\lambda\).
   \end{itemize}
-  Sur \(\VectEngendre(a)\), on associe à \(x\) sa coordonnée dans la base 
+  Sur \(\VectEngendre(a)\), on associe à \(x\) sa coordonnée dans la base
   \((a)\) et c'est bien linéaire.
 
-  De plus \(f\) est non nulle (\(f(a)=1\)) et pour tout pour tout \(x \in E\) il 
-  existe un unique couple \((x_H, \lambda) \in H \times K\) tel que 
+  De plus \(f\) est non nulle (\(f(a)=1\)) et pour tout pour tout \(x \in E\) il
+  existe un unique couple \((x_H, \lambda) \in H \times K\) tel que
   \(x=x_H+\lambda a\). Alors
   \begin{align}
     x \in \Ker(f) & \iff f(x) = f(x_H) +\lambda f(a) =0\\
@@ -1644,28 +1644,28 @@ l'instant qu'il est de dimension finie.
   donc \(\Ker(f) =H\).
 \end{proof}
 
-Soient \(H\) un hyperplan vectoriel de \(E\), \(f \in E^*\setminus\{0\}\) telle 
-que \(H = \Ker(f)\) et \(a \in E\setminus H\) tel que \(E = H \oplus 
+Soient \(H\) un hyperplan vectoriel de \(E\), \(f \in E^*\setminus\{0\}\) telle
+que \(H = \Ker(f)\) et \(a \in E\setminus H\) tel que \(E = H \oplus
 \VectEngendre(a)\).
 
 \begin{prop}
-  Pour tout \(D'\) sous-espace vectoriel de \(E\), \(D'\) est un supplémentaire 
-  de \(H\) dans \(E\) si et seulement s'il existe \(a' \in E \setminus H\) tel 
+  Pour tout \(D'\) sous-espace vectoriel de \(E\), \(D'\) est un supplémentaire
+  de \(H\) dans \(E\) si et seulement s'il existe \(a' \in E \setminus H\) tel
   que \(D'=\VectEngendre(a')\).
 \end{prop}
 \begin{proof}
-  S'il existe \(a' \in E \setminus H\) tel que \(D'=\VectEngendre(a')\), on a 
-  déjà montrer qu'alors \(D'\) est un supplémentaire de \(H\) dans \(E\) 
-  (démontré au \(1 \implies 2\) de la proposition précédente et on avait choisi 
+  S'il existe \(a' \in E \setminus H\) tel que \(D'=\VectEngendre(a')\), on a
+  déjà montrer qu'alors \(D'\) est un supplémentaire de \(H\) dans \(E\)
+  (démontré au \(1 \implies 2\) de la proposition précédente et on avait choisi
   \(a\) quelconque dans \(E \setminus H\)).
 
   Si \(D'\) est un supplémentaire de \(H\) dans \(E\) alors on a
   \begin{equation}
     E=D' \oplus H = \VectEngendre(a) \oplus H
   \end{equation}
-  alors \(D'\) et \(\VectEngendre(a)\) sont isomorphes et donc \(D'\) est de 
-  dimension finie égale à \(1\). Il existe alors un vecteur non nul \(a'\) de 
-  \(E\) tel que \(D'=\VectEngendre(a')\). De plus \(a' \notin H\) car sinon \(D' 
+  alors \(D'\) et \(\VectEngendre(a)\) sont isomorphes et donc \(D'\) est de
+  dimension finie égale à \(1\). Il existe alors un vecteur non nul \(a'\) de
+  \(E\) tel que \(D'=\VectEngendre(a')\). De plus \(a' \notin H\) car sinon \(D'
   \cap H \supset \{a'\} \neq \{0\}\) ce qui est impossible.
 \end{proof}
 
@@ -1685,50 +1685,50 @@ que \(H = \Ker(f)\) et \(a \in E\setminus H\) tel que \(E = H \oplus
   \end{align}
   Alors \(\Ker(f)=H=\Ker(g)\).
 
-  \(\implies\) : Si \(H=\Ker(g)\) comme \(a \notin H\) on pose \(\lambda = g(a) 
-  f(a)^{-1}\). Pour tout \(x \in E\) il existe un unique couple \((x_H, \lambda) 
+  \(\implies\) : Si \(H=\Ker(g)\) comme \(a \notin H\) on pose \(\lambda = g(a)
+  f(a)^{-1}\). Pour tout \(x \in E\) il existe un unique couple \((x_H, \lambda)
   \in H \times \K\) tel que \(x=x_H +\mu a\). On calcule \(f(x)\) et \(g(x)\)
 
   \begin{align}
     f(x) &= f(x_H)+\mu f(a) = \mu f(a) \\
-    g(x) &= g(x_H) +\mu g(a) = \mu (\lambda f(a)) = \lambda (\mu f(a))=\lambda 
+    g(x) &= g(x_H) +\mu g(a) = \mu (\lambda f(a)) = \lambda (\mu f(a))=\lambda
     f(x)
   \end{align}
-  Alors comme c'est vrai pour tout \(x \in E\), on a \(g=\lambda f\). Le 
-  scalaire \(\lambda\) est non nul sinon on aurait \(g\) constante nulle et on 
+  Alors comme c'est vrai pour tout \(x \in E\), on a \(g=\lambda f\). Le
+  scalaire \(\lambda\) est non nul sinon on aurait \(g\) constante nulle et on
   aurait aussi \(H = \Ker(g)=E\). Ainsi \(H \neq E\) car \(H\) est un hyperplan.
 \end{proof}
 
 \emph{Équations linéaires d'un hyperplan}
 
-Soit \(H\) un hyperplan. Soit \(f \in E^* \setminus\{0\}\) et \(H=\Ker(f)\). 
-Pour tout \(x \in E\), \(x \in H\) si et seulement si \(f(x)=0\). L'écriture 
-``\(f(x)=0\)'' est une équation linéaire de l'hyperplan \(H\). Les autres 
+Soit \(H\) un hyperplan. Soit \(f \in E^* \setminus\{0\}\) et \(H=\Ker(f)\).
+Pour tout \(x \in E\), \(x \in H\) si et seulement si \(f(x)=0\). L'écriture
+``\(f(x)=0\)'' est une équation linéaire de l'hyperplan \(H\). Les autres
 équations de \(H\) sont \(\lambda f(x)=0\) avec \(\lambda\) un scalaire non nul.
 
 \emph{Hyperplan affine}
 
-Soit un scalaire \(b\) et \(\mathcal{H}=\{x \in E, f(x)=b\}\). La forme linéaire 
-\(f\) est non nulle, alors elle est surjective, donc il existe \(x_0 \in E\) tel 
-que \(f(x_0)=b\). On sait que \(\mathcal{H}=x_0 + H\). \(\mathcal{H}\) est un 
+Soit un scalaire \(b\) et \(\mathcal{H}=\{x \in E, f(x)=b\}\). La forme linéaire
+\(f\) est non nulle, alors elle est surjective, donc il existe \(x_0 \in E\) tel
+que \(f(x_0)=b\). On sait que \(\mathcal{H}=x_0 + H\). \(\mathcal{H}\) est un
 hyperplan affine passant par \(x_0\) et dirigé par l'hyperplan vectoriel \(H\).
 
 \subsubsection{Hyperplans en dimension finie}
 
-Soit \(E\) un \(\K\)-espace vectoriel de dimension finie \(n \in \N^*\). Dans ce 
+Soit \(E\) un \(\K\)-espace vectoriel de dimension finie \(n \in \N^*\). Dans ce
 cadre on avait définit les hyperplans vectoriels par~:
 \begin{enumerate}
-  \item \(H\) est un hyperplan de \(E\) si et seulement si c'est le noyau d'une 
+  \item \(H\) est un hyperplan de \(E\) si et seulement si c'est le noyau d'une
     forme linéaire non nulle;
-  \item \(H\) est un hyperplan si et seulement si c'est le supplémentaire d'une 
+  \item \(H\) est un hyperplan si et seulement si c'est le supplémentaire d'une
     droite vectorielle dans \(E\);
   \item \(H\) est un hyperplan si et seulement si sa dimension vaut \(n-1\).
 \end{enumerate}
 
 Vérifions que ces définitions sont équivalentes.
 
-\(1 \implies 3\) : \(H=\Ker(f)\) avec \(f \in E^* \setminus\{0\}\). \(f\) est 
-non nulle donc son rang vaut \(1\) et \(E\) est de dimension finie alors en 
+\(1 \implies 3\) : \(H=\Ker(f)\) avec \(f \in E^* \setminus\{0\}\). \(f\) est
+non nulle donc son rang vaut \(1\) et \(E\) est de dimension finie alors en
 appliquant le théorème du rang on a
 \begin{align}
   \Dim E &= \Dim \Ker(f) +\rg(f) \\
@@ -1736,8 +1736,8 @@ appliquant le théorème du rang on a
 \end{align}
 alors \(\Dim H = n-1\).
 
-\(3 \implies 1\) : Il existe \((e_1, \ldots, e_{n-1})\) une base de \(H\). On 
-complète cette famille libre de \(E\) en posant une base \((e_1, \ldots, 
+\(3 \implies 1\) : Il existe \((e_1, \ldots, e_{n-1})\) une base de \(H\). On
+complète cette famille libre de \(E\) en posant une base \((e_1, \ldots,
 e_{n})\) de \(E\). On définit \(f\in E^*\) par son action sur cette base~:
 \begin{equation}
   \begin{cases}
@@ -1745,14 +1745,14 @@ e_{n})\) de \(E\). On définit \(f\in E^*\) par son action sur cette base~:
     i=n & f(e_n)=1
   \end{cases}
 \end{equation}
-alors \(f\) est non nulle et \(\Ker(f)=H\) (\(\forall x \in E\) \(\exists! (x_1, 
-\ldots, x_n) \in \K^n\) \(x = \sum_{i=1}^n x_i e_i\), alors \(f(x)=0\) \(\iff\) 
+alors \(f\) est non nulle et \(\Ker(f)=H\) (\(\forall x \in E\) \(\exists! (x_1,
+\ldots, x_n) \in \K^n\) \(x = \sum_{i=1}^n x_i e_i\), alors \(f(x)=0\) \(\iff\)
 \(\sum_{i=1}^n x_i f(e_i)=0\) \(\iff\) \(x_n=0\) \(\iff\) \(x \in H\)).
 
-On peut également montrer que \(2 \iff 3\), mais on n'y est pas forcé (\(1 \iff 
+On peut également montrer que \(2 \iff 3\), mais on n'y est pas forcé (\(1 \iff
 2\) et \(1 \iff 3\)).
 
-\(2 \implies 3\) : Il existe un vecteur \(a\) de \(E\) non nul tel que \(E=H 
+\(2 \implies 3\) : Il existe un vecteur \(a\) de \(E\) non nul tel que \(E=H
 \oplus \VectEngendre(a)\). Comme \(E\) est de dimension finie on a
 \begin{align}
   \Dim E &= \Dim H +\Dim \VectEngendre(a)\\
@@ -1760,44 +1760,44 @@ On peut également montrer que \(2 \iff 3\), mais on n'y est pas forcé (\(1 \if
 \end{align}
 soit alors \(\Dim H = n-1\).
 
-\(3 \implies 2\) : On travaille en dimension finie donc \(H\) admet un 
-supplémentaire \(S\) et \(\Dim H = \Dim E -1\) donc \(\Dim S=1\) et alors \(S\) 
+\(3 \implies 2\) : On travaille en dimension finie donc \(H\) admet un
+supplémentaire \(S\) et \(\Dim H = \Dim E -1\) donc \(\Dim S=1\) et alors \(S\)
 est une droite.
 
 \emph{Équations d'un hyperplan dans une base}
 
-Soit \(\E=(e_1, \ldots, e_n)\) une base de \(E\). Soit \(H\) un hyperplan 
-vectoriel de \(E\) et \(f \in E^*\setminus\{0\}\) telle que \(H=\Ker(f)\). Pour 
-tout vecteur \(x \in E\) il existe un unique \(n\)-uplet de scalaires 
+Soit \(\E=(e_1, \ldots, e_n)\) une base de \(E\). Soit \(H\) un hyperplan
+vectoriel de \(E\) et \(f \in E^*\setminus\{0\}\) telle que \(H=\Ker(f)\). Pour
+tout vecteur \(x \in E\) il existe un unique \(n\)-uplet de scalaires
 \((x_1,\ldots, x_n)\) tel que \(x = \sum_{i=1}^n x_i e_i\). Alors
 
 \begin{align}
   x \in H &\iff f(x)=0\\
   &\iff \sum_{i=1}^n x_i f(e_i)=0
 \end{align}
-Si on note pour tout \(i \in \llbracket 1,n \rrbracket\) \(a_i=f(e_i) \in K\). 
-Comme \(f\) est non nulle il existe un naturel \(i_0 \in \llbracket 1,n 
+Si on note pour tout \(i \in \llbracket 1,n \rrbracket\) \(a_i=f(e_i) \in K\).
+Comme \(f\) est non nulle il existe un naturel \(i_0 \in \llbracket 1,n
 \rrbracket\) tel que \(a_{i_0} \neq 0\) et donc
 \begin{equation}
   x \in H \iff
   \begin{cases}
-    \sum_{i=1}^n a_i x_i=0 \\ \exists i_0 \in \intervalleentier{1}{n} \quad 
+    \sum_{i=1}^n a_i x_i=0 \\ \exists i_0 \in \intervalleentier{1}{n} \quad
     a_{i_0} \neq 0
   \end{cases}
 \end{equation}
-Alors \(\sum_{i=1}^n a_i x_i=0\) est une équation de l'hyperplan \(H\) dans la 
-base \(\E\). Les autres équations de \(H\) dans cette base sont \(\lambda 
+Alors \(\sum_{i=1}^n a_i x_i=0\) est une équation de l'hyperplan \(H\) dans la
+base \(\E\). Les autres équations de \(H\) dans cette base sont \(\lambda
 \left(\sum_{i=1}^n a_i x_i\right)=0\) avec \(\lambda\) un scalaire non nul.
 
-Réciproquement, soit \((b_1, \ldots, b_n) \in \K^n\) tel qu'il existe \(i_0 \in 
+Réciproquement, soit \((b_1, \ldots, b_n) \in \K^n\) tel qu'il existe \(i_0 \in
 \intervalleentier{1}{n}\) tel que \(b_{i_0} \neq 0\). Soit
 \begin{equation}
   K = \enstq{x = \sum_{i=1}^n x_i e_i}{\sum_{i=1}^n b_i x_i =0},
 \end{equation}
 alors \(K\) est un hyperplan vectoriel.
 \begin{proof}
-  Soit \(f \in E^*\) définie par : \(\forall i \in \intervalleentier{1}{n} \quad 
-  f(e_i)=b_i\). La forme linéaire \(f\) est non nulle puisqu'il existe \(i_0 \in 
+  Soit \(f \in E^*\) définie par : \(\forall i \in \intervalleentier{1}{n} \quad
+  f(e_i)=b_i\). La forme linéaire \(f\) est non nulle puisqu'il existe \(i_0 \in
   \intervalleentier{1}{n}\) tel que \(b_{i_0} \neq 0\). Soit \(x \in E\), alors
   \begin{align}
     x \in K &\iff \sum_{i=1}^n x_i f(e_i)=0 \\
@@ -1810,13 +1810,13 @@ alors \(K\) est un hyperplan vectoriel.
 
 \section{Suites récurrentes linéaires d'ordre 2}
 
-Soient \(\K=\R\) ou \(\C\), \((a,b,c) \in \K^3\) tel que \(ac \neq 0\) et \(d 
-\in \K^\N\). On se propose de résoudre dans \(\K^\N\) l'équation linéaire de 
+Soient \(\K=\R\) ou \(\C\), \((a,b,c) \in \K^3\) tel que \(ac \neq 0\) et \(d
+\in \K^\N\). On se propose de résoudre dans \(\K^\N\) l'équation linéaire de
 récurrence d'ordre 2 à coefficients constants :
 \begin{equation}
   au_{n+2}+bu_{n+1}+cu_n = d_n \label{eq:S} \tag{\(\Lb\)},
 \end{equation}
-c'est-à-dire de déterminer l'ensemble \(\S_\K(\Lb)\) des suites \((u_n)_{n \in 
+c'est-à-dire de déterminer l'ensemble \(\S_\K(\Lb)\) des suites \((u_n)_{n \in
 \N} \in \K^N\) telles que
 \begin{equation}
   \forall n \in \N \quad au_{n+2}+bu_{n+1}+cu_n = d_n.
@@ -1829,39 +1829,39 @@ Dans le cas où \(d=0\), l'équation sera dite homogène et noté \eqref{eq:H}~:
 \subsection{Résolution de l'équation homogène}
 
 \begin{prop}
-  L'ensemble \(\S_\K(\H)\) des solutions de l'équation homogène est un 
+  L'ensemble \(\S_\K(\H)\) des solutions de l'équation homogène est un
   sous-espace vectoriel du \(\K\)-espace vectoriel \(\K^\N\).
 \end{prop}
 \begin{proof}
-  \(\S_\K(\H)\) est une partie de \(\K^\N\) non vide, puisqu'elle contient la 
+  \(\S_\K(\H)\) est une partie de \(\K^\N\) non vide, puisqu'elle contient la
   suite nulle et stable par combinaison linéaire~:
-  soient \((u,v) \in \S_\K(\H)^2\) et \(\lambda \in \K\) alors \(\lambda u +v 
+  soient \((u,v) \in \S_\K(\H)^2\) et \(\lambda \in \K\) alors \(\lambda u +v
   \in \K^\N\) et pour tout entier \(n\)
   \begin{equation}
-    a(\lambda u+v)_{n+2} +b(\lambda u+v)_{n+1} +c(\lambda u+v)_n = \lambda 
+    a(\lambda u+v)_{n+2} +b(\lambda u+v)_{n+1} +c(\lambda u+v)_n = \lambda
     (au_{n+2}+bu_{n+1}+cu_n) + (au_{n+2}+bu_{n+1}+cu_n)=0
   \end{equation}
-  La suite \(\lambda u+v\) est bien dans \(\S_\K(\H)\). Par théorème de 
-  caractérisation des sous-espaces vectoriel, \(\S_\K(\H)\) est un sous-espace 
+  La suite \(\lambda u+v\) est bien dans \(\S_\K(\H)\). Par théorème de
+  caractérisation des sous-espaces vectoriel, \(\S_\K(\H)\) est un sous-espace
   vectoriel de \(\K^\N\).
 \end{proof}
 
 \begin{prop}
-  Le sous-espace vectoriel \(\S_\K(\H)\) est en fait un plan vectoriel, 
+  Le sous-espace vectoriel \(\S_\K(\H)\) est en fait un plan vectoriel,
   c'est-à-dire qu'il est de dimension 2.
 \end{prop}
 \begin{proof}
-  Soit l'application \(f\) de \(\S_\K(\H)\) sur \(\K^2\) définie par 
-  \(f(u)=(u_0,u_1)\). Prouvons que \(f\) est un isomorphisme de \(\K\)-espaces 
+  Soit l'application \(f\) de \(\S_\K(\H)\) sur \(\K^2\) définie par
+  \(f(u)=(u_0,u_1)\). Prouvons que \(f\) est un isomorphisme de \(\K\)-espaces
   vectoriels de \(\S_\K(\H)\) sur \(\K^2\).
   \begin{itemize}
-    \item La fonction \(f\) est bijective puisque pour tout couple \((\alpha, 
-      \beta) \in \K^2\), il existe une seule suite \(u \in \S_\K(\H)\) telle que 
-      \(f(u)=(u_0,u_1)=(\alpha,\beta)\). En effet, on prouve par récurrence sur 
-      \(n\) que le terme \(u_n\) est défini sans ambiguïté par la donnée de 
-      \(u_0\), \(u_1\) et de la relation de récurrence 
+    \item La fonction \(f\) est bijective puisque pour tout couple \((\alpha,
+      \beta) \in \K^2\), il existe une seule suite \(u \in \S_\K(\H)\) telle que
+      \(f(u)=(u_0,u_1)=(\alpha,\beta)\). En effet, on prouve par récurrence sur
+      \(n\) que le terme \(u_n\) est défini sans ambiguïté par la donnée de
+      \(u_0\), \(u_1\) et de la relation de récurrence
       \(au_{n+2}+bu_{n+1}+cu_n=0\) avec \(\alpha \neq 0\).
-    \item La fonction \(f\) est linéaire car, pour tout \((u,v) \in 
+    \item La fonction \(f\) est linéaire car, pour tout \((u,v) \in
       \S_\K(\H)^2\) et tout \(\lambda \in \K\),
       \begin{align}
         f(\lambda u+v) &=(\lambda u_0 +v_0, \lambda u_1+v_1) \\
@@ -1869,20 +1869,20 @@ Dans le cas où \(d=0\), l'équation sera dite homogène et noté \eqref{eq:H}~:
         &=\lambda f(u)+f(v)
       \end{align}
   \end{itemize}
-  On a démontré que \(f \in \Isom{\S_\K(\H)}{\K^2}\). Le \(\K\)-espace vectoriel 
-  \(\S_\K(\H)\) est donc, comme le \(\K\)-espace vectoriel \(\K^2\), de 
+  On a démontré que \(f \in \Isom{\S_\K(\H)}{\K^2}\). Le \(\K\)-espace vectoriel
+  \(\S_\K(\H)\) est donc, comme le \(\K\)-espace vectoriel \(\K^2\), de
   dimension 2.
 \end{proof}
 
-On cherche alors une base de \(\S_\K(\H)\). Par analogie avec les équations de 
-récurrences d'ordre 1 (de la forme \(au_{n+1}+bu_n =0\) avec \(ab \neq 0\) qui 
-peuvent se mettre sous la forme \(u_{n+1}=qu_n\)), on cherche les suites 
+On cherche alors une base de \(\S_\K(\H)\). Par analogie avec les équations de
+récurrences d'ordre 1 (de la forme \(au_{n+1}+bu_n =0\) avec \(ab \neq 0\) qui
+peuvent se mettre sous la forme \(u_{n+1}=qu_n\)), on cherche les suites
 géométriques, de premier terme égal à 1, qui sont des éléments de \(\S_\K(\H)\).
 
 \begin{prop}
-  Pour tout élément \(r\) pris dans \(\K\), la suite géométrique \((r^n)_{n \in 
-  \N}\) est une solution de \eqref{eq:H} si, et seulement si, \(r\) est racine 
-  de l'équation de degré 2 suivante, dite équation caractéristique de 
+  Pour tout élément \(r\) pris dans \(\K\), la suite géométrique \((r^n)_{n \in
+  \N}\) est une solution de \eqref{eq:H} si, et seulement si, \(r\) est racine
+  de l'équation de degré 2 suivante, dite équation caractéristique de
   \eqref{eq:H}.
   \begin{equation}
     ar^2+br+c=0 \label{eq:EC} \tag{E.C.}
@@ -1890,7 +1890,7 @@ géométriques, de premier terme égal à 1, qui sont des éléments de \(\S_\K(
 \end{prop}
 \begin{proof}
   \begin{align}
-    (r^n)_{n \in  \N} \in \S_\K(\H) &\iff \forall n \in \N \ ar^{n+2} 
+    (r^n)_{n \in  \N} \in \S_\K(\H) &\iff \forall n \in \N \ ar^{n+2}
     +br^{n+1}+cr^n = 0 \\
     &\iff \forall n \in \N \ r^n(ar^2+br+c)=0\\
     &\iff ar^2+br+c=0 \text{~car } r^0=1 \neq 0
@@ -1899,172 +1899,172 @@ géométriques, de premier terme égal à 1, qui sont des éléments de \(\S_\K(
 
 On note \(\Delta=b^2-4ac\) le discriminant de l'équation caractéristique
 
-\subsubsection{Premier cas : l'équation caractéristique admet deux racines 
+\subsubsection{Premier cas : l'équation caractéristique admet deux racines
 distinctes sur le corps \(\K\)}
 
 Soit \(\K=\C\) et \(\Delta \neq 0\), soit \(\K=\R\) avec \(\Delta >0\).
 
-Notons \(r_1\) et \(r_2\) avec \(r_1 \neq r_2\), les deux racines distinctes de 
-\eqref{eq:EC} sur \(\K\). Alors \((r_1^n)_{n \in \N}\) et \((r_2^n)_{n \in \N}\) 
-sont deux éléments de \(\S_\K(\H)\). Démontrons qu'ils forment une famille libre 
+Notons \(r_1\) et \(r_2\) avec \(r_1 \neq r_2\), les deux racines distinctes de
+\eqref{eq:EC} sur \(\K\). Alors \((r_1^n)_{n \in \N}\) et \((r_2^n)_{n \in \N}\)
+sont deux éléments de \(\S_\K(\H)\). Démontrons qu'ils forment une famille libre
 de \(\S_\K(\H)\). Pour tout \((\lambda, \mu) \in \K^2\),
 \begin{align}
-  \lambda (r_1^n)_{n \in \N} + \mu (r_2^n)_{n \in \N} = 0_{\K^\N} &\implies 
+  \lambda (r_1^n)_{n \in \N} + \mu (r_2^n)_{n \in \N} = 0_{\K^\N} &\implies
   \forall n \in \N \ \lambda r_1^n + \mu r_2^n=0\\
-  &\implies \begin{cases} \lambda + \mu =0 & (n=0) \\ \lambda r_1 +\mu r_2 = 0 & 
+  &\implies \begin{cases} \lambda + \mu =0 & (n=0) \\ \lambda r_1 +\mu r_2 = 0 &
   (n=1) \end{cases}\\
   &\implies \begin{cases} \lambda = -\mu \\ \lambda(r_1-r_2)=0 \end{cases}\\
     &\implies \lambda=\mu=0 \text{~car } r_1-r_2 \neq 0
 \end{align}
-Comme la dimension de \(\S_\K(\H)\) est de deux, on en déduit que \(((r_1^n)_{n 
+Comme la dimension de \(\S_\K(\H)\) est de deux, on en déduit que \(((r_1^n)_{n
 \in \N},(r_2^n)_{n \in \N})\) est une base de \(\S_\K(\H)\).
 
 \begin{theo}
-  Si l'équation caractéristique de \eqref{eq:H} admet deux racines distinctes 
-  sur \(\K\), \(r_1\) et \(r_2\), alors le plan vectoriel \(\S_\K(\H)\) admet 
-  \(((r_1^n)_{n \in \N},(r_2^n)_{n \in \N})\) comme base. Autrement dit, pour 
+  Si l'équation caractéristique de \eqref{eq:H} admet deux racines distinctes
+  sur \(\K\), \(r_1\) et \(r_2\), alors le plan vectoriel \(\S_\K(\H)\) admet
+  \(((r_1^n)_{n \in \N},(r_2^n)_{n \in \N})\) comme base. Autrement dit, pour
   toute suite \(u \in \K^\N\),
   \begin{equation}
-    u \in \S_\K(\H) \iff \exists! (\lambda,\mu) \in \K^2 \ \forall n \in \N 
+    u \in \S_\K(\H) \iff \exists! (\lambda,\mu) \in \K^2 \ \forall n \in \N
     \quad u_n = \lambda r_1^n +\mu r_2^n
   \end{equation}
 \end{theo}
 
-La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de 
-trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces conditions. 
-Le couple \((\lambda, \mu)\) est l'unique solution du système de Cramer 
-\(\begin{cases} \lambda + \mu =\alpha \\ \lambda r_1+\mu r_2 =\beta 
+La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de
+trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces conditions.
+Le couple \((\lambda, \mu)\) est l'unique solution du système de Cramer
+\(\begin{cases} \lambda + \mu =\alpha \\ \lambda r_1+\mu r_2 =\beta
 \end{cases}\).
 
-\subsubsection{Deuxième cas : l'équation caractéristique admet une racine double 
+\subsubsection{Deuxième cas : l'équation caractéristique admet une racine double
 dans \(\K\)}
 
-C'est le cas \(\K=\R\) ou \(\C\) avec \(\Delta=0\). Notons \(r_0\) la racine 
-double de \eqref{eq:EC} dans \(\K\) : \(r_0 = -b/2a\). Alors \((r_0^n)_{n \in 
-\N}\) est un élément de \(\S_\K(\H)\). Il faut en trouver un second non 
+C'est le cas \(\K=\R\) ou \(\C\) avec \(\Delta=0\). Notons \(r_0\) la racine
+double de \eqref{eq:EC} dans \(\K\) : \(r_0 = -b/2a\). Alors \((r_0^n)_{n \in
+\N}\) est un élément de \(\S_\K(\H)\). Il faut en trouver un second non
 colinéaire au premier pour obtenir une base de \(\S_\K(\H)\).
 
 Vérifions que c'est le cas de la suite \((nr_0^n)_{n \in \N}\).
 
 Pour tout naturel \(n\),
 \begin{align}
-  a(n+2)r_0^{n+2} +b(n+1)r_0^{n+1} +cnr_0^n &= nr_0^n(ar_0^2+br_0+c) 
+  a(n+2)r_0^{n+2} +b(n+1)r_0^{n+1} +cnr_0^n &= nr_0^n(ar_0^2+br_0+c)
   +r_0^{n+1}(2ar_0+b)\\
   &= nr_0^n \times 0 + r_0^{n+1} \times 0 =0.
 \end{align}
 La suite \((nr_0^n)_{n \in \N}\) est bien un élément de \(\S_\K(\H)\).
 
-La famille \(((r_0^n)_{n \in \N},(nr_0^n)_{n \in \N})\) est une famille libre de 
+La famille \(((r_0^n)_{n \in \N},(nr_0^n)_{n \in \N})\) est une famille libre de
 \(\S_\K(\H)\). En effet, pour tout couple de scalaires \((\lambda,\mu)\),
 \begin{align}
-  \lambda (r_0^n)_{n \in \N} + \mu (nr_0^n)_{n \in \N}) = 0_{\K^\N} &\implies 
+  \lambda (r_0^n)_{n \in \N} + \mu (nr_0^n)_{n \in \N}) = 0_{\K^\N} &\implies
   \forall n \in \N \ \lambda r_0^n +\mu n r_0^n = 0\\
-  &\implies \begin{cases} \lambda =0 & (n=0) \\ \lambda r_0 +\mu r_0 =0 & (n=1) 
+  &\implies \begin{cases} \lambda =0 & (n=0) \\ \lambda r_0 +\mu r_0 =0 & (n=1)
   \end{cases}\\
   &\implies \lambda=\mu=0 \ \text{~car } r_0 \neq 0.
 \end{align}
-En effet, puisque \(\Delta = b^2-4ac=0\) alors \(b^2 = 4ac \neq 0\). Comme 
-\(\dim_\K(\S_\K(\H))=2\), alors \(((r_0^n)_{n \in \N},(nr_0^n)_{n \in \N})\) est 
+En effet, puisque \(\Delta = b^2-4ac=0\) alors \(b^2 = 4ac \neq 0\). Comme
+\(\dim_\K(\S_\K(\H))=2\), alors \(((r_0^n)_{n \in \N},(nr_0^n)_{n \in \N})\) est
 une base de \(\S_\K(\H)\).
 
 \begin{theo}
-  Si l'équation caractéristique de \eqref{eq:H} admet une racine double \(r_0\) 
-  dans \(K\) alors le plan vectoriel \(\S_\K(\H)\) admet \(((r_0^n)_{n \in 
-  \N},(nr_0^n)_{n \in \N})\) pour base. Autrement dit pour toute suite \(u \in 
+  Si l'équation caractéristique de \eqref{eq:H} admet une racine double \(r_0\)
+  dans \(K\) alors le plan vectoriel \(\S_\K(\H)\) admet \(((r_0^n)_{n \in
+  \N},(nr_0^n)_{n \in \N})\) pour base. Autrement dit pour toute suite \(u \in
   \K^\N\),
   \begin{equation}
-    u \in \S_\K(\H) \iff \exists! (\lambda,\mu) \in \K^2 \ \forall n \in \N 
+    u \in \S_\K(\H) \iff \exists! (\lambda,\mu) \in \K^2 \ \forall n \in \N
     \quad u_n = \lambda r_0^n +\mu nr_0^n.
   \end{equation}
 \end{theo}
-La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de 
-trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces conditions. 
-Le couple \((\lambda, \mu)\) est l'unique solution du système de Cramer 
+La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de
+trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces conditions.
+Le couple \((\lambda, \mu)\) est l'unique solution du système de Cramer
 \(
 \begin{cases}
-  \lambda =\alpha \\ 
-  (\lambda +\mu) r_2 =\beta 
+  \lambda =\alpha \\
+  (\lambda +\mu) r_2 =\beta
 \end{cases}
 \).
 
-\subsubsection{Troisième cas : l'équation caractéristique n'admet pas de 
+\subsubsection{Troisième cas : l'équation caractéristique n'admet pas de
 racine dans \(\K\)}
 
-Il s'agit du cas \(\K=\R\) et \(\Delta <0\). Il n'y a donc pas ici de suite 
-géométrique \((r^n)_{n \in \N}\) avec \(r\) réel qui soit solution de 
-\eqref{eq:H}. Il faut trouver un autre moyen de déterminer une base de 
-\(\S_\R(\H)\). Par contre, la résolution de \eqref{eq:H} avec \(\K=\C\), c'est 
-à dire dans l'ensemble \(\C^\N\) des suites complexes, conduirait à l'ensemble 
+Il s'agit du cas \(\K=\R\) et \(\Delta <0\). Il n'y a donc pas ici de suite
+géométrique \((r^n)_{n \in \N}\) avec \(r\) réel qui soit solution de
+\eqref{eq:H}. Il faut trouver un autre moyen de déterminer une base de
+\(\S_\R(\H)\). Par contre, la résolution de \eqref{eq:H} avec \(\K=\C\), c'est
+à dire dans l'ensemble \(\C^\N\) des suites complexes, conduirait à l'ensemble
 \(\S_\C(\H)\) qui relève du premier cas.
 
-Notons \(r_1\) et \(r_2\) avec \(r_1 \neq r_2\), les racines complexes 
-distinctes de \eqref{eq:EC}. Comme \(a\), \(b\) et \(c\) sont des réels et 
-\(\Delta <0\), on sait que \(r_1\) et \(r_2\) sont des complexes non réels et 
-conjugués. Notons \(\rho\) le module de \(r_1\) et \(\theta\) un argument de 
-\(r_1\), alors \(r_1 = \rho\e^{\ii \theta}\) et \(r_2 = \rho\e^{-\ii 
+Notons \(r_1\) et \(r_2\) avec \(r_1 \neq r_2\), les racines complexes
+distinctes de \eqref{eq:EC}. Comme \(a\), \(b\) et \(c\) sont des réels et
+\(\Delta <0\), on sait que \(r_1\) et \(r_2\) sont des complexes non réels et
+conjugués. Notons \(\rho\) le module de \(r_1\) et \(\theta\) un argument de
+\(r_1\), alors \(r_1 = \rho\e^{\ii \theta}\) et \(r_2 = \rho\e^{-\ii
 \theta}\). Comme ils ne sont pas réels \(\sin \theta \neq 0\).
 
-On a vu que les suites \((r_1^n)_{n \in \N}\) et \((r_2^n)_{n \in \N}\) sont 
-dans \(\S_\C(\H)\). Comme \(\S_\C(\H)\) est un espace vectoriel, la suite 
-\(\frac{1}{2}((r_1^n)_{n \in \N} + (r_2^n)_{n \in \N})\) est également dans 
+On a vu que les suites \((r_1^n)_{n \in \N}\) et \((r_2^n)_{n \in \N}\) sont
+dans \(\S_\C(\H)\). Comme \(\S_\C(\H)\) est un espace vectoriel, la suite
+\(\frac{1}{2}((r_1^n)_{n \in \N} + (r_2^n)_{n \in \N})\) est également dans
 \(\S_\C(\H)\). Or, pour tout naturel \(n\),
 \begin{align}
-  \frac{1}{2} r_1^n + \frac{1}{2} r_2^n & =\frac{1}{2} \rho^n \e^{\ii n 
+  \frac{1}{2} r_1^n + \frac{1}{2} r_2^n & =\frac{1}{2} \rho^n \e^{\ii n
   \theta}+ \frac{1}{2} \rho^n \e^{-\ii n \theta}\\
   &=\rho^n \cos(n \theta).
 \end{align}
-Cette suite est donc à valeurs réelles et par conséquent c'est un élément de 
-\(\S_\R(\H)\). De même, la suite \(\frac{1}{2\ii}((r_1^n)_{n \in \N} - 
-(r_2^n)_{n \in \N})\) est également dans \(\S_\C(\H)\). Or, pour tout naturel 
+Cette suite est donc à valeurs réelles et par conséquent c'est un élément de
+\(\S_\R(\H)\). De même, la suite \(\frac{1}{2\ii}((r_1^n)_{n \in \N} -
+(r_2^n)_{n \in \N})\) est également dans \(\S_\C(\H)\). Or, pour tout naturel
 \(n\),
 \begin{align}
-  \frac{1}{2\ii} r_1^n - \frac{1}{2\ii} r_2^n & =\frac{1}{2\ii} \rho^n \e^{\ii 
+  \frac{1}{2\ii} r_1^n - \frac{1}{2\ii} r_2^n & =\frac{1}{2\ii} \rho^n \e^{\ii
   n \theta}- \frac{1}{2\ii} \rho^n \e^{-\ii n \theta}\\
   &=\rho^n \sin(n \theta).
 \end{align}
-Cette suite est donc à valeurs réelles et par conséquent c'est un élément de 
+Cette suite est donc à valeurs réelles et par conséquent c'est un élément de
 \(\S_\R(\H)\).
 
-On a trouvé deux éléments de \(\S_\R(\H)\), les suites réelles \((\rho^n 
-\sin(n \theta))_{n \in \N}\) et \((\rho^n \cos(n \theta))_{n \in \N}\). 
-Montrons qu'elles constituent une famille libre du \(\R\)-espace vectoriel 
-\(\S_\R(\H)\) et on aura trouvé une base de \(\S_\R(\H)\) (car sa dimension 
+On a trouvé deux éléments de \(\S_\R(\H)\), les suites réelles \((\rho^n
+\sin(n \theta))_{n \in \N}\) et \((\rho^n \cos(n \theta))_{n \in \N}\).
+Montrons qu'elles constituent une famille libre du \(\R\)-espace vectoriel
+\(\S_\R(\H)\) et on aura trouvé une base de \(\S_\R(\H)\) (car sa dimension
 est de deux). Pour tout couple de scalaires \((\lambda,\mu)\),
 \begin{align}
-  &\lambda (\rho^n \cos(n \theta))_{n \in \N} + \mu (\rho^n \sin(n \theta))_{n 
+  &\lambda (\rho^n \cos(n \theta))_{n \in \N} + \mu (\rho^n \sin(n \theta))_{n
   \in \N} = 0_{\K^\N} \\
-  &\implies \forall n \in \N \ \lambda \rho^n \cos(n \theta) +\mu \rho^n 
+  &\implies \forall n \in \N \ \lambda \rho^n \cos(n \theta) +\mu \rho^n
   \sin(n \theta) = 0\\
-  &\implies \begin{cases} \lambda =0 & (n=0) \\ \lambda \rho \cos \theta +\mu 
+  &\implies \begin{cases} \lambda =0 & (n=0) \\ \lambda \rho \cos \theta +\mu
   \rho \sin \theta =0 & (n=1) \end{cases}\\
   &\implies \lambda=\mu=0 \text{~car } \rho\sin \theta \neq 0 (r_1 \notin \R).
 \end{align}
 
 \begin{theo}
-  Si \((a,b,c) \in \R^3\) avec \(ac \neq 0\) et \(b^2-4ac <0\), l'équation 
-  caractéristique de \eqref{eq:H} a deux racines complexes non réelles et 
-  conjuguées \(\rho \e^{\ii \theta}\) et \(\rho \e^{-\ii \theta}\) avec 
+  Si \((a,b,c) \in \R^3\) avec \(ac \neq 0\) et \(b^2-4ac <0\), l'équation
+  caractéristique de \eqref{eq:H} a deux racines complexes non réelles et
+  conjuguées \(\rho \e^{\ii \theta}\) et \(\rho \e^{-\ii \theta}\) avec
   \(\rho>0\) et \(\sin \theta \neq 0\).
 
-  Alors \(S_\R(\H)\) admet pour base \(((\rho^n \sin(n \theta))_{n \in 
-  \N},(\rho^n \cos(n \theta))_{n \in \N})\). Autrement dit pour toute suite 
+  Alors \(S_\R(\H)\) admet pour base \(((\rho^n \sin(n \theta))_{n \in
+  \N},(\rho^n \cos(n \theta))_{n \in \N})\). Autrement dit pour toute suite
   \(u \in \K^\N\),
   \begin{equation}
-    u \in \S_\K(\H) \iff \exists! (A,B) \in \R^2 \ \forall n \in \N \quad u_n 
+    u \in \S_\K(\H) \iff \exists! (A,B) \in \R^2 \ \forall n \in \N \quad u_n
     = \rho^n(A \cos(n\theta) +B\sin(n\theta)).
   \end{equation}
 \end{theo}
-La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de 
-trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces 
-conditions. Le couple \((A,B)\) est l'unique solution du système de Cramer 
-\(\begin{cases} A =\alpha \\ \rho(A\cos \theta +B \sin\theta) =\beta 
+La donnée des conditions initiales \(u_0=\alpha\) et \(u_1=\beta\) permet de
+trouver l'unique suite \(u\) solution de \eqref{eq:H} vérifiant ces
+conditions. Le couple \((A,B)\) est l'unique solution du système de Cramer
+\(\begin{cases} A =\alpha \\ \rho(A\cos \theta +B \sin\theta) =\beta
 \end{cases}\).
 
 
 \subsection{Résolution de l'équation complète}
 
-Soit \(f\) l'application de \(\K^\N\) dans lui-même qui à toute suite \(u\) 
-lui associe la suite \((au_{n+2}+bu_{n+1}+cu_n)_{n \in \N}\). On vérifie 
+Soit \(f\) l'application de \(\K^\N\) dans lui-même qui à toute suite \(u\)
+lui associe la suite \((au_{n+2}+bu_{n+1}+cu_n)_{n \in \N}\). On vérifie
 facilement que \(f\) est linéaire, d'où \(f \in \Endo{\K^\N}\).
 
 Pour toute suite \(u \in \K^\N\),
@@ -2073,13 +2073,13 @@ Pour toute suite \(u \in \K^\N\),
 \end{equation}
 On sait alors que~:
 \begin{prop}
-  Si \((d_n)_{n \in \N} \notin \Image(f)\) alors \(\S_\K(\L) = \emptyset\). Si 
-  \((d_n)_{n \in \N} \in \Image(f)\) alors \(\S_\K(\L)\) est le sous-espace 
-  affine de \(\K^\N\) de direction \(\S_\K(\H)\) passant par n'importe 
+  Si \((d_n)_{n \in \N} \notin \Image(f)\) alors \(\S_\K(\L) = \emptyset\). Si
+  \((d_n)_{n \in \N} \in \Image(f)\) alors \(\S_\K(\L)\) est le sous-espace
+  affine de \(\K^\N\) de direction \(\S_\K(\H)\) passant par n'importe
   laquelle des solutions de \eqref{eq:S}.
 \end{prop}
 
-\subsubsection{Recherche d'une solution particulière pour \((d_n)_{n \in \N}\) 
+\subsubsection{Recherche d'une solution particulière pour \((d_n)_{n \in \N}\)
 suite constante de valeur \(d\)}
 
 Soit un scalaire \(d\). Il reste donc à trouver une solution particulière de
@@ -2087,60 +2087,60 @@ Soit un scalaire \(d\). Il reste donc à trouver une solution particulière de
   au_{n+2}+bu_{n+1}+cu_n = d \label{eq:S1} \tag{\(\Lb\)}.
 \end{equation}
 
-On commence par chercher s'il existe des suites constantes dans 
-\(\S_\K(\Lb)\). Soit un scalaire \(\alpha\). La suite constante de valeur 
-\(\alpha\) est solution de \eqref{eq:S} si, et seulement si, 
+On commence par chercher s'il existe des suites constantes dans
+\(\S_\K(\Lb)\). Soit un scalaire \(\alpha\). La suite constante de valeur
+\(\alpha\) est solution de \eqref{eq:S} si, et seulement si,
 \((a+b+c)\alpha=d\).
 \begin{itemize}
-  \item[Cas 1] : si \(a+b+c \neq 0\), alors une solution de \eqref{eq:S1} est 
+  \item[Cas 1] : si \(a+b+c \neq 0\), alors une solution de \eqref{eq:S1} est
     la suite constante de valeur \(\frac{d}{a+b+c}\) et
     \begin{equation}
       \S_\K(\Lb) = \S_\K(\H) +\frac{d}{a+b+c}
     \end{equation}
-  \item[Cas 2] : si \(a+b+c=0\), cherchons s'il existe des suites du type 
-    \((\alpha+\beta n)_{n \in \N}\) solutions de \eqref{eq:S1}. Pour tout 
-    \((\alpha,\beta) \in \K^2\), \((\alpha + \beta n)_{n \in \N}\) est dans 
+  \item[Cas 2] : si \(a+b+c=0\), cherchons s'il existe des suites du type
+    \((\alpha+\beta n)_{n \in \N}\) solutions de \eqref{eq:S1}. Pour tout
+    \((\alpha,\beta) \in \K^2\), \((\alpha + \beta n)_{n \in \N}\) est dans
     \(\S_\K(\L)\) si, et seulement si,
     \begin{align}
-      \forall n \in \N \ a(\alpha +(n+2)\beta)+b(\alpha+(n+1)\beta)+c(\alpha 
+      \forall n \in \N \ a(\alpha +(n+2)\beta)+b(\alpha+(n+1)\beta)+c(\alpha
       +n\beta) &=d \\
       \forall n \in \N \ (a+b+c)\alpha +(a+b+c)n\beta +(2a+b)\beta &=d\\
       (2a+b)\beta &=d
     \end{align}
-    On observe que \(\alpha\) est quelconque. En effet, lorsque \(a+b+c=0\), 
-    toutes les suites constantes \(u\) sont solutions de l'équation homogène 
-    donc vérifient \(f(u)=0\). On ne change donc pas la valeur de \(f(v)\) en 
-    ajoutant une suite constante \(u\) à la suite \(v\). Il suffit ainsi de 
-    chercher des solutions de \eqref{eq:S1} sous la forme \((\beta_n)_{n \in 
+    On observe que \(\alpha\) est quelconque. En effet, lorsque \(a+b+c=0\),
+    toutes les suites constantes \(u\) sont solutions de l'équation homogène
+    donc vérifient \(f(u)=0\). On ne change donc pas la valeur de \(f(v)\) en
+    ajoutant une suite constante \(u\) à la suite \(v\). Il suffit ainsi de
+    chercher des solutions de \eqref{eq:S1} sous la forme \((\beta_n)_{n \in
     \N}\).
     \begin{itemize}
-      \item[Cas 2-1]~: si \(a+b+c=0\) et \(2a+b \neq 0\), une solution de 
-        \eqref{eq:S1} est la suite \(\left(\frac{d}{2a+b}n\right)_{n \in 
+      \item[Cas 2-1]~: si \(a+b+c=0\) et \(2a+b \neq 0\), une solution de
+        \eqref{eq:S1} est la suite \(\left(\frac{d}{2a+b}n\right)_{n \in
         \N}\). Donc~:
         \begin{equation}
           \S_\K(\Lb) = \S_\K(\H) + \left(\frac{d}{2a+b}n\right)_{n \in \N}
         \end{equation}
-      \item[Cas 2-2]~: si \(a+b+c=0\) et \(2a+b = 0\). On a alors \(b=-2a\) et 
-        \(c=-a-b=a\), d'où \(\Delta=0\) et \(r_0=-b/2a=1\). L'ensemble des 
+      \item[Cas 2-2]~: si \(a+b+c=0\) et \(2a+b = 0\). On a alors \(b=-2a\) et
+        \(c=-a-b=a\), d'où \(\Delta=0\) et \(r_0=-b/2a=1\). L'ensemble des
         solutions de l'équation homogène est alors~:
         \begin{equation}
-          \S_\K(\H) = \enstq{u \in \K^\N}{\exists (\lambda_1, \lambda_2) \in 
+          \S_\K(\H) = \enstq{u \in \K^\N}{\exists (\lambda_1, \lambda_2) \in
           \K^2 \ \forall n \in \N \quad u_n = \lambda_1+\lambda_2 n}.
         \end{equation}
-        Cherchons une solution de \eqref{eq:S1} du type \((\alpha+\beta n + 
-        \gamma n^2)_{n \in \N}\). On peut choisir \(\alpha\) et \(\beta\) 
-        quelconques puisque les suites \((\alpha+\beta n)_{n \in \N}\) sont 
-        solutions de l'équation homogène. Pour tout scalaire \(\gamma\), la 
-        suite \((\gamma n^2)_{n \in \N}\) est dans \(\S_\K(\Lb)\) si et 
+        Cherchons une solution de \eqref{eq:S1} du type \((\alpha+\beta n +
+        \gamma n^2)_{n \in \N}\). On peut choisir \(\alpha\) et \(\beta\)
+        quelconques puisque les suites \((\alpha+\beta n)_{n \in \N}\) sont
+        solutions de l'équation homogène. Pour tout scalaire \(\gamma\), la
+        suite \((\gamma n^2)_{n \in \N}\) est dans \(\S_\K(\Lb)\) si et
         seulement si~:
         \begin{align}
           \forall n \in \N a\gamma(n+2)^2 +b\gamma(n+1)^2 +c\gamma n^2 &=d\\
-          \forall n \in \N (a+b+c)\gamma n^2 +2(2a+b)\gamma n +(4a+b)\gamma 
+          \forall n \in \N (a+b+c)\gamma n^2 +2(2a+b)\gamma n +(4a+b)\gamma
           &=d \\
           (4a+b)\gamma &=d.
         \end{align}
-        Or \(4a+b=4a-2a=2a \neq 0\) par hypothèse, donc la suite 
-        \(\left(\frac{d}{2a} n^2\right)_{n \in \N}\) est solution de 
+        Or \(4a+b=4a-2a=2a \neq 0\) par hypothèse, donc la suite
+        \(\left(\frac{d}{2a} n^2\right)_{n \in \N}\) est solution de
         \eqref{eq:S1}. D'où
         \begin{equation}
           \S_\K(\Lb) = \S_\K(\H) + \left(\frac{d}{2a} n^2\right)_{n \in \N}.

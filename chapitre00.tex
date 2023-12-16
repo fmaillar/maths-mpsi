@@ -13,17 +13,17 @@ qu'est une assertion et un théorème.
 Nous allons préciser à un premier niveau quelques notions mathématiques qui sont
 relativement intuitives mais nécessitent quand même des définitions rigoureuses.
 L'idée étant de préciser schématiquement comment se présente une théorie
-mathématique ainsi que la notion essentielle de démonstration. 
+mathématique ainsi que la notion essentielle de démonstration.
 
-La première notion est celle d’assertion. Une assertion est un énoncé 
-mathématiques \(P\) aussi rigoureux que possible qui ne prend qu'une valeur de 
-vérité qui est soit vraie (V) soit fausse (F). On consigne ces valeurs dans une 
+La première notion est celle d’assertion. Une assertion est un énoncé
+mathématiques \(P\) aussi rigoureux que possible qui ne prend qu'une valeur de
+vérité qui est soit vraie (V) soit fausse (F). On consigne ces valeurs dans une
 table de vérité.
 
-En mathématique, on appelle \emph{tautologie} une assertion qui est toujours 
-vraie. Par exemple, l'assertion \(1+1=2\) est une tautologie. Par contre 
-l'assertion \(1+1=3\) est une assertion dont la valeur de vérité est F. \(3=2 
-\times\) n'est pas une assertion. \(3=1+x\) est une assertion dont la valeur de 
+En mathématique, on appelle \emph{tautologie} une assertion qui est toujours
+vraie. Par exemple, l'assertion \(1+1=2\) est une tautologie. Par contre
+l'assertion \(1+1=3\) est une assertion dont la valeur de vérité est F. \(3=2
+\times\) n'est pas une assertion. \(3=1+x\) est une assertion dont la valeur de
 vérité dépend de la valeur de \(x\).
 
 Un théorème est une assertion vraie déduite grâce à d'autres assertions, en
@@ -75,16 +75,17 @@ table~\ref{tab:tabverconn}.
   \caption{Table de vérité des connecteurs logiques}\label{tab:tabverconn}
 \end{table}
 
-Dans l'assertion \(P \implies Q\) l'assertion \(P\) est l'hypothèse et 
+Dans l'assertion \(P \implies Q\) l'assertion \(P\) est l'hypothèse et
 l'assertion \(Q\) est la conclusion. On a l'équivalence logique
-\begin{empheq}[box=\shadowbox*]{equation}%
-  (P \implies{} Q) \iff{} (\neg{P} \text{~ou~} Q).
-\end{empheq}
+\begin{equation}
+  \boxed{(P \implies{} Q) \iff{} (\neg{P} \lor Q).}
+\end{equation}
 
-L'assertion \(Q \implies P\) est l'assertion réciproque de \(P \implies 
+L'assertion \(Q \implies P\) est l'assertion réciproque de \(P \implies
 Q\).Attention à ne pas confondre les deux.
 
-\section{Assertions logiquement équivalentes}\label{chap0sec:assertionslogiquementequiv}
+\section{Assertions logiquement
+équivalentes}\label{chap0sec:assertionslogiquementequiv}
 
 Deux assertions sont dites logiquement équivalentes lorsqu'elles ont la même
 table de vérité. On écrit par exemple les équivalences suivantes~:
@@ -96,17 +97,17 @@ table de vérité. On écrit par exemple les équivalences suivantes~:
 \end{align}
 
 Le raisonnement par \emph{contraposée} repose sur l'équivalence logique
-\begin{empheq}[box=\shadowbox*]{equation}
-  (P \implies{} Q) \iff{} (\neg{Q} \implies{} \neg{P}).
-\end{empheq}
+\begin{equation}
+  \boxed{(P \implies{} Q) \iff{} (\neg{Q} \implies{} \neg{P}).}
+\end{equation}
 
 Le raisonnement par l'absurde est le suivant~: pour montrer que \(P \implies
 Q\), on suppose que \(P\) est vraie et que \(Q\) est fausse puis on montre que
 cela aboutit à une contradiction. Ainsi, le \emph{raisonnement par l'absurde}
 repose sur l'équivalence logique
-\begin{empheq}[box=\shadowbox*]{equation}
-  (P \implies{} Q) \iff{} \neg(P \text{~et~} \neg{}Q).
-\end{empheq}
+\begin{equation}
+  \boxed{(P\implies{Q})\iff\neg(P\land\neg{Q}).}
+\end{equation}
 
 \section{Quantificateurs et leurs négations}
 
@@ -120,12 +121,12 @@ la propriété \(P\) est vraie.
 \(E\) pour lequel \(P\) est vérifiée.
 
 Les négations des quantificateurs sont les suivantes~:
-\begin{empheq}[box=\shadowbox*]{align}
-  \neg(\forall{} x \in{} E \quad{} P[x]) &\iff{}\exists{} x \in{} E 
+\begin{align}
+  \neg(\forall{} x \in{} E \quad{} P[x]) &\iff{}\exists{} x \in{} E
   \quad{}\neg{}P_x;\\
-  \neg(\exists{} x \in{} E \quad{} P[x]) &\iff{}\forall{} x \in{} E 
+  \neg(\exists{} x \in{} E \quad{} P[x]) &\iff{}\forall{} x \in{} E
   \quad{}\neg{}P_x.
-\end{empheq}
+\end{align}
 
 La variable \(x\) est dite muette.
 
@@ -142,7 +143,7 @@ La variable \(x\) est dite muette.
 \end{exercice}
 
 \begin{exercice}
-  Soit \(x\) un réel quelconque. Que signifient les propositions suivantes et 
+  Soit \(x\) un réel quelconque. Que signifient les propositions suivantes et
   que peut on en conclure?
   \begin{enumerate}
     \item \(\forall \epsilon>0 \quad x<\epsilon\);
@@ -155,28 +156,28 @@ La variable \(x\) est dite muette.
   \begin{enumerate}
     \item Rappeler la définition d'une fonction croissante, d'une fonction
       strictement croissante.
-    \item Soit \(f\) une fonction définie sur un intervalle \(I\) contenant au 
-      moins deux points. Écrire avec des quantificateurs que \(f\) n'est pas 
-      croissante, puis que \(f\) n'est pas strictement croissante, que \(f\) 
+    \item Soit \(f\) une fonction définie sur un intervalle \(I\) contenant au
+      moins deux points. Écrire avec des quantificateurs que \(f\) n'est pas
+      croissante, puis que \(f\) n'est pas strictement croissante, que \(f\)
       n'est pas monotone et enfin que \(f\) n'est pas strictement monotone.
     \item Une fonction peut-elle être à la fois croissante et décroissante?
       Strictement croissante et strictement décroissante?
     \item Soient \(a\) et \(b\) des éléments de \(I\). On suppose que \(f\) est
       croissante sur \(I\).
       \begin{enumerate}
-        \item On suppose que \(f(a) \leqslant f(b)\). Que peut on dire de \(a\) 
+        \item On suppose que \(f(a) \leqslant f(b)\). Que peut on dire de \(a\)
           et \(b\)?
-        \item On suppose que \(f(a) < f(b)\). Que peut on dire de \(a\) et 
+        \item On suppose que \(f(a) < f(b)\). Que peut on dire de \(a\) et
           \(b\)?
       \end{enumerate}
-    \item Reprendre la question précédente avec \(f\) strictement croissante sur 
+    \item Reprendre la question précédente avec \(f\) strictement croissante sur
       \(I\).
   \end{enumerate}
 \end{exercice}
 
 \begin{exercice}[Fonction nulle, fonction qui s'annule]
-  Soient \(I\) un intervalle contenant au moins deux points et \(f\) une 
-  fonction de \(I\) vers \(\R\). Exprimer les propositions suivantes ainsi que 
+  Soient \(I\) un intervalle contenant au moins deux points et \(f\) une
+  fonction de \(I\) vers \(\R\). Exprimer les propositions suivantes ainsi que
   leurs négations à l'aide des quantificateurs~:
   \begin{enumerate}
     \item \(f\) est l'application nulle;
@@ -187,7 +188,7 @@ La variable \(x\) est dite muette.
 \end{exercice}
 
 \begin{exercice}
-  Soit \(E\) un ensemble de nombres. Écrire en langage courant la signification 
+  Soit \(E\) un ensemble de nombres. Écrire en langage courant la signification
   des propositions suivantes~:
   \begin{enumerate}
     \item \(\forall x \in E \ \exists y \in E \quad x \neq y\);
