@@ -9,48 +9,48 @@ Dans tout le chapitre, \(\K\) est un corps, sous-corps de \(\C\).
 
 \subsection{Opérations élémentaires sur les lignes}
 
-Soient deux naturels non nuls \(n\) et \(p\), et \(A \in \Mnp{n}{p}{\K}\). On
-note \(a_{ij}\) les coefficients de \(A\). Pour tout \(i \in
-\intervalleentier{1}{n}\), \(\L_i\) est la \(i\)\ieme{} ligne de \(A\), \(\L_i
-=(a_{i1}, \ldots, a_{ip}) \in \K^p\). On va décrire trois types d'opérations
-élémentaires sur leslignes et on va voir que chacune d'elle est équivalente à la
+Soient deux naturels non nuls \(n\) et \(p\), et \(A \in \Mnp{n}{p}{\K}\). On 
+note \(a_{ij}\) les coefficients de \(A\). Pour tout \(i \in 
+\intervalleentier{1}{n}\), \(\L_i\) est la \(i\)\ieme{} ligne de \(A\), \(\L_i 
+=(a_{i1}, \ldots, a_{ip}) \in \K^p\). On va décrire trois types d'opérations 
+élémentaires sur leslignes et on va voir que chacune d'elle est équivalente à la 
 multiplication à gauche de \(A\) par une matrice inversible.
 %
-\subsubsection{Préliminaire : multiplication de \(A\) par les matrices de la
+\subsubsection{Préliminaire : multiplication de \(A\) par les matrices de la 
 base canonique}
-Soit \((j_0,h_0) \in \intervalleentier{1}{n}^2\). Notons \(E_{i_0h_0} \in
-\Mn{n}{\K}\) la matrice dont tous les coefficients sont nuls sauf celui de la
+Soit \((j_0,h_0) \in \intervalleentier{1}{n}^2\). Notons \(E_{i_0h_0} \in 
+\Mn{n}{\K}\) la matrice dont tous les coefficients sont nuls sauf celui de la 
 ligne \(i_0\) et la colonne \(h_0\) qui vaut \(1\).
 
-Notons \((E'_{ij})_{1\leqslant i \leqslant n, 1\leqslant j \leqslant p}\) la
+Notons \((E'_{ij})_{1\leqslant i \leqslant n, 1\leqslant j \leqslant p}\) la 
 base canonique de \(\Mnp{n}{p}{\K}\). Alors
 \begin{align*}
   E_{i_0h_0} A &= E_{i_0h_0} \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} E'_{ij} \\
                &= \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} (E_{i_0h_0}E'_{ij})\\
-               &= \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} \delta_{h_0 i} E'_{i_0j}
+               &= \sum_{i = 1}^n \sum_{j = 1}^p a_{ij} \delta_{h_0 i} E'_{i_0j} 
                \\
                &= \sum_{i = 1}^na_{h_0j} E'_{i_0j}.
 \end{align*}
-\( E_{i_0h_0} A\) est la matrice à \(n\) lignes et \(p\) colonnes dans laquelle
-la ligne \(i_0\) est égale à la ligne \(h_0\) de \(A\). Toutes les autres lignes
+\( E_{i_0h_0} A\) est la matrice à \(n\) lignes et \(p\) colonnes dans laquelle 
+la ligne \(i_0\) est égale à la ligne \(h_0\) de \(A\). Toutes les autres lignes 
 sont nulle.
 \begin{equation}
   E_{i_0h_0} A =
   \begin{pmatrix}
-    0 & \cdots & 0 \\
-    a_{h_0 1}& \cdots & a_{h_0 p} \\
-    0 & \cdots & 0
+    0 & \ldots & 0 \\
+    a_{h_0 1}& \ldots & a_{h_0 p} \\
+    0 & \ldots & 0
   \end{pmatrix}.
 \end{equation}
 %
 \subsubsection{Addition d'un multiple d'une ligne à une autre}
-Soient \(i\) et \(h\) deux entiers différents de \(\intervalleentier{1}{n}\) et
-un scalaire \(\lambda\). Il s'agit de remplacer la ligne \(L_i\) par la ligne
-\(L_i+\lambda L_h\). Cette opération élémentaire est notée \(L_i \leftarrow
+Soient \(i\) et \(h\) deux entiers différents de \(\intervalleentier{1}{n}\) et 
+un scalaire \(\lambda\). Il s'agit de remplacer la ligne \(L_i\) par la ligne 
+\(L_i+\lambda L_h\). Cette opération élémentaire est notée \(L_i \leftarrow 
 L_i+\lambda L_h\).
 \begin{defdef}
-  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de
-  \(\intervalleentier{1}{n}\), on définit la matrice de transvection
+  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de 
+  \(\intervalleentier{1}{n}\), on définit la matrice de transvection 
   \(T_{i,h}(\lambda)\) par
   \begin{align*}
     T_{i,h}(\lambda) &= I_n +\lambda E_{ih}\\
@@ -65,23 +65,23 @@ L_i+\lambda L_h\).
 \end{defdef}
 %
 \begin{prop}
-  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de
-  \(\intervalleentier{1}{n}\), la matrice \(T_{i,h}(\lambda)\) est inversible et
+  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de 
+  \(\intervalleentier{1}{n}\), la matrice \(T_{i,h}(\lambda)\) est inversible et 
   \(T_{i,h}(\lambda)^{-1} = T_{i,h}(-\lambda)\).
 \end{prop}
 \begin{proof}
   \begin{align*}
-    T_{i,h}(-\lambda) \cdot T_{i,h}(\lambda) &= (I_n + \lambda E_{ih}) (I_n -
+    T_{i,h}(-\lambda) \cdot T_{i,h}(\lambda) &= (I_n + \lambda E_{ih}) (I_n - 
     \lambda E_{ih})\\
-                                             &= I_n -\lambda E_{ih} + \lambda
+                                             &= I_n -\lambda E_{ih} + \lambda 
                                              E_{ih} - \lambda^2 E_{ih}E_{ih}.
   \end{align*}
-  Comme \(i \neq h\) alors \(E_{ih}E_{ih} = 0\). Finalement \(T_{i,h}(-\lambda)
+  Comme \(i \neq h\) alors \(E_{ih}E_{ih} = 0\). Finalement \(T_{i,h}(-\lambda) 
   \cdot T_{i,h}(\lambda) = I_n\).
 \end{proof}
 %
 \begin{prop}
-  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de
+  Pour tout scalaire \(\lambda\) et tous entiers \(i\) et \(h\) différents de 
   \(\intervalleentier{1}{n}\),
   \begin{equation}
     L_i \leftarrow L_i+\lambda L_h \iff A \leftarrow T_{i,h}(\lambda) A.
@@ -92,21 +92,21 @@ L_i+\lambda L_h\).
   \begin{equation}
     T_{i,h}(\lambda) A = (I_n + \lambda E_{ih})A= A + \lambda E_{ih}A.
   \end{equation}
-  La matrice \(\lambda E_{ih}A \in \Mnp{n}{p}{\K}\) est la matrice dont toutes
-  les lignes sont nulles sauf éventuellement la ligne qui contient \(\lambda\)
-  fois la ligne \(h\) de \(A\). Ajouter cette matrice à \(A\) revient à ajouter
+  La matrice \(\lambda E_{ih}A \in \Mnp{n}{p}{\K}\) est la matrice dont toutes 
+  les lignes sont nulles sauf éventuellement la ligne qui contient \(\lambda\) 
+  fois la ligne \(h\) de \(A\). Ajouter cette matrice à \(A\) revient à ajouter 
   \(\lambda L_h\) à la ligne \(L_i\) de \(A\).
 \end{proof}
 %
 \subsubsection{Multiplication d'une ligne par un scalaire non nul}
-Soient un réel \(\mu\) non nul et un entier \(i\) de
-\(\intervalleentier{1}{n}\). Il s'agit de remplacer la ligne \(L_i\) par la
-ligne \(\mu L_i\). Cette opération élémentaire est notée \(L_i \leftarrow \mu
+Soient un réel \(\mu\) non nul et un entier \(i\) de 
+\(\intervalleentier{1}{n}\). Il s'agit de remplacer la ligne \(L_i\) par la 
+ligne \(\mu L_i\). Cette opération élémentaire est notée \(L_i \leftarrow \mu 
 L_i\).
 %
 \begin{defdef}
-  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de
-  \(\intervalleentier{1}{n}\), on définit la matrice de dilatation \(D_i(\mu)\)
+  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de 
+  \(\intervalleentier{1}{n}\), on définit la matrice de dilatation \(D_i(\mu)\) 
   par
   \begin{align*}
     D_i(\mu) &= I_n +(\mu-1)E_{ii} \\
@@ -124,21 +124,21 @@ L_i\).
 \end{defdef}
 %
 \begin{prop}
-  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de
-  \(\intervalleentier{1}{n}\), la matrice de dilatation \(D_i(\mu)\) est
+  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de 
+  \(\intervalleentier{1}{n}\), la matrice de dilatation \(D_i(\mu)\) est 
   inversible et
   \begin{equation}
     D_i(\mu)^{-1} =  D_i(\mu^{-1}).
   \end{equation}
 \end{prop}
 \begin{proof}
-  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de
-  \(\intervalleentier{1}{n}\), la matrice de dilatation \(D_i(\mu)\) est
+  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de 
+  \(\intervalleentier{1}{n}\), la matrice de dilatation \(D_i(\mu)\) est 
   diagonale à coefficients tous non nuls. Alors elle s'inverse facilement.
 \end{proof}
 %
 \begin{prop}
-  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de
+  Pour tout réel non nul \(\mu\) et tout naturel \(i\) de 
   \(\intervalleentier{1}{n}\), on a
   \begin{equation}
     L_i \leftarrow \mu L_i \iff A \leftarrow D_i(\mu)A.
@@ -149,32 +149,31 @@ L_i\).
   \begin{equation}
     D_i(\mu) A = (I_n + (\mu-1) E_{ii})A= A + (\mu-1)E_{ii}A.
   \end{equation}
-  La matrice \((\mu-1)E_{ii}A \in \Mnp{n}{p}{\K}\) est la matrice dont toutes
-  les lignes sont nulles sauf éventuellement la \(i\)\ieme{} ligne qui contient
-  \((\mu-1)L_i\) (où \(L_i\) est la \(i\)\ieme{} ligne de \(A\)). Quand on
-  l'ajoute à \(A\), on remplace la ligne \(L_i\) de \(A\) par \(L_i +(\mu-1) L_i
+  La matrice \((\mu-1)E_{ii}A \in \Mnp{n}{p}{\K}\) est la matrice dont toutes 
+  les lignes sont nulles sauf éventuellement la \(i\)\ieme{} ligne qui contient 
+  \((\mu-1)L_i\) (où \(L_i\) est la \(i\)\ieme{} ligne de \(A\)). Quand on 
+  l'ajoute à \(A\), on remplace la ligne \(L_i\) de \(A\) par \(L_i +(\mu-1) L_i 
   = \mu L_i\).
 \end{proof}
 %
 \subsubsection{Échange de deux lignes}
-Soient deux entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\).
-On veut échanger, dans la matrice \(A\), les lignes \(L_i\) et \(L_h\). Cette
+Soient deux entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\). 
+On veut échanger, dans la matrice \(A\), les lignes \(L_i\) et \(L_h\). Cette 
 opération est notée \(L_i \leftrightarrow L_h\).
 \begin{defdef}
-  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\),
+  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\), 
   on définit la matrice de permutation \(P_{ih}\) telle que
   \begin{align*}
     P_{ih} &= I_n - E_{ii}-E_{hh} +E_{ih}+E_{hi}\\
-           & = 
-           \begin{pmatrix}
+           & = \begin{pmatrix}
              1&        &  &        &   &        &        &   &   &        & \\
               & \ddots &  &        &   &        &        &   &   &        & \\
               &        &1 &        &   &        &        &   &   &        & \\
-              &        &  & 0      &   & \cdots &        & 1 &   &        & \\
+              &        &  & 0      &   & \ldots &        & 1 &   &        & \\
               &        &  &        & 1 &        &        &   &   &        & \\
               &        &  & \vdots &   & \ddots & \vdots &   &   &        & \\
               &        &  &        &   &        & 1      &   &   &        & \\
-              &        &  & 1      &   & \cdots &        & 0 &   &        & \\
+              &        &  & 1      &   & \ldots &        & 0 &   &        & \\
               &        &  &        &   &        &        &   & 1 &        & \\
               &        &  &        &   &        &        &   &   & \ddots & \\
               &        &  &        &   &        &        &   &   &        & 1
@@ -183,7 +182,7 @@ opération est notée \(L_i \leftrightarrow L_h\).
 \end{defdef}
 %
 \begin{prop}
-  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\),
+  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\), 
   la matrice \(P_{ih}\) est inversible et
   \begin{equation}
     (P_{ih})^{-1} = P_{ih}.
@@ -191,14 +190,14 @@ opération est notée \(L_i \leftrightarrow L_h\).
 \end{prop}
 \begin{proof}
   \begin{align*}
-    P_{ih} \cdot P_{ih} &= (I_n - E_{ii}-E_{hh} +E_{ih}+E_{hi})\cdot (I_n -
+    P_{ih} \cdot P_{ih} &= (I_n - E_{ii}-E_{hh} +E_{ih}+E_{hi})\cdot (I_n - 
     E_{ii}-E_{hh} +E_{ih}+E_{hi})\\
                         & = I_n.
   \end{align*}
 \end{proof}
 %
 \begin{prop}
-  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\),
+  Pour tout entiers \(i\) et \(h\) différents dans \(\intervalleentier{1}{n}\), 
   on a
   \begin{equation}
     L_i \leftrightarrow L_h \iff A \leftarrow P_{ih}A.
@@ -209,28 +208,28 @@ opération est notée \(L_i \leftrightarrow L_h\).
   \begin{equation}
     P_{ih}A = A - E_{ii}A-E_{hh}A+E_{ih}A+E_{hi}A.
   \end{equation}
-  Les matrices \(E_{ii}A\) et \(E_{hh}A\) de \(\Mnp{n}{p}{\K}\) contiennent
-  respectivement la ligne \(L_i\) en \(i\)\ieme{} ligne et la ligne \(L_h\) en
-  \(h\)\ieme{} ligne et des zéros partout ailleurs. La matrice \(A -
-  E_{ii}A-E_{hh}A\) est la matrice obtenue à partir de \(A\) en remplaçant
-  \(L_i\) et \(L_h\) par des lignes nulles. On lui ajoute ensuite
-  \(E_{ih}A+E_{hi}A\), c'est-à-dire les matrices qui contiennent \(L_h\) et
-  \(L_i\) en position \(i\) et \(h\). On  a donc mis \(L_i\) à la place de
+  Les matrices \(E_{ii}A\) et \(E_{hh}A\) de \(\Mnp{n}{p}{\K}\) contiennent 
+  respectivement la ligne \(L_i\) en \(i\)\ieme{} ligne et la ligne \(L_h\) en 
+  \(h\)\ieme{} ligne et des zéros partout ailleurs. La matrice \(A - 
+  E_{ii}A-E_{hh}A\) est la matrice obtenue à partir de \(A\) en remplaçant 
+  \(L_i\) et \(L_h\) par des lignes nulles. On lui ajoute ensuite 
+  \(E_{ih}A+E_{hi}A\), c'est-à-dire les matrices qui contiennent \(L_h\) et 
+  \(L_i\) en position \(i\) et \(h\). On  a donc mis \(L_i\) à la place de 
   \(L_h\) et vice-versa.
 \end{proof}
 %
 \subsection{Manipulations élémentaires sur les colonnes}
-Voir la fiche complémentaire. Les propositions et définitions sont équivalentes
+Voir la fiche complémentaire. Les propositions et définitions sont équivalentes 
 à celles de la première sous-section.
 %
 \section{Système d'équations linéaires}
 \subsection{Vocabualires et interprétations}
 \subsubsection{Définition}
 \begin{defdef}
-  Soient deux naturels non nuls \(n\) et \(p\). Le nombre \(n\) est le nombre
-  d'équations du système (L) et le nombre \(p\) est le nombre d'inconnues de
-  (L). Soit \((a_{ij})\) une famille d'éléments de \(\K\), appelée famille de
-  coefficients du système (L). Soit \((b_i) \in \K^n\) la famille des seconds
+  Soient deux naturels non nuls \(n\) et \(p\). Le nombre \(n\) est le nombre 
+  d'équations du système (L) et le nombre \(p\) est le nombre d'inconnues de 
+  (L). Soit \((a_{ij})\) une famille d'éléments de \(\K\), appelée famille de 
+  coefficients du système (L). Soit \((b_i) \in \K^n\) la famille des seconds 
   membres de (L). On appelle solution du système
   \begin{equation}
     (L)
@@ -240,17 +239,17 @@ Voir la fiche complémentaire. Les propositions et définitions sont équivalent
       a_{n1}x_1 + \dotsb +a_{np}x_p = b_n
     \end{cases},
   \end{equation}
-  tout \(p\)-uplet \((x_i)_{1\leqslant i\leqslant p} \in \K^p\) qui vérifi les
-  \(n\) équations de (L). On note \(E(L)\) l'ensemble des solutions de \((L)\).
+  tout \(p\)-uplet \((x_i)_{1\leqslant i\leqslant p} \in \K^p\) qui vérifi les 
+  \(n\) équations de (L). On note \(E(L)\) l'ensemble des solutions de \((L)\). 
   C'est un sous-ensemble éventuellement vide de \(\K^p\).
 \end{defdef}
 %
 \begin{defdef}
-  Si la famille des seconds membres est la famille nulle, on dit que le système
+  Si la famille des seconds membres est la famille nulle, on dit que le système 
   linéaire est homogéne.
 \end{defdef}
 %
-À tout système linéaire \((L)\), on associe le système homogène \((H)\) appelé
+À tout système linéaire \((L)\), on associe le système homogène \((H)\) appelé 
 système homogène associé à \((L)\).
 \begin{equation}
   (H)
@@ -262,8 +261,8 @@ système homogène associé à \((L)\).
 \end{equation}
 %
 \subsubsection{Traduction matricielle}
-Soient une matrice \(A = (a_{ij}) \in \Mnp{n}{p}{\K}\) et un vecteur \(B =
-(b_{i}) \in \Mnp{n}{1}{\K}\). Pour tout vecteur \(X = (x_i)_{1\leqslant i
+Soient une matrice \(A = (a_{ij}) \in \Mnp{n}{p}{\K}\) et un vecteur \(B = 
+(b_{i}) \in \Mnp{n}{1}{\K}\). Pour tout vecteur \(X = (x_i)_{1\leqslant i 
 \leqslant p} \in \K^p\), on a
 \begin{align*}
   X \in E(L) &\iff AX = B, \\
@@ -271,9 +270,9 @@ Soient une matrice \(A = (a_{ij}) \in \Mnp{n}{p}{\K}\) et un vecteur \(B =
 \end{align*}
 %
 \subsubsection{Traduction fonctionelle}
-Soit \(u\) l'application linéaire canoniquement associée à \(A\), \(u \in
-\Lin{\K^p}{\K^n}\). On note \(b \in \K^p\) le vecteur de coordonnées \((b_1,
-\ldots, b_n)\) dans la base canonique. Pour tout vecteur \(x = (x_i)_{1\leqslant
+Soit \(u\) l'application linéaire canoniquement associée à \(A\), \(u \in 
+\Lin{\K^p}{\K^n}\). On note \(b \in \K^p\) le vecteur de coordonnées \((b_1, 
+\ldots, b_n)\) dans la base canonique. Pour tout vecteur \(x = (x_i)_{1\leqslant 
 i \leqslant p} \in \K^p\), on a
 \begin{align*}
   x \in E(L) &\iff u(x) = B, \\
@@ -282,24 +281,24 @@ i \leqslant p} \in \K^p\), on a
 
 \subsubsection{Traduction vectorielle}
 
-Soit pour tout \(j \in \intervalleentier{1}{p}\) \(C_j\) la \(j\)\ieme{} colonne
+Soit pour tout \(j \in \intervalleentier{1}{p}\) \(C_j\) la \(j\)\ieme{} colonne 
 de \(A\). Pour tout vecteur \((x_1,\ldots,x_p) \in \K^p\), on a
 \begin{align*}
   (x_1,\ldots,x_p) \in E(L) &\iff x_1C_1+\dotsb+x_pC_p = B, \\
   (x_1,\ldots,x_p) \in E(H) &\iff x_1C_1+\dotsb+x_pC_p = 0.
 \end{align*}
-Cela signifie que \((x_1,\ldots,x_p)\) est une relation de dépendance linéaire
+Cela signifie que \((x_1,\ldots,x_p)\) est une relation de dépendance linéaire 
 de la famille des colonnes.
 
 \subsubsection{Traduction duale}
 
-Pour tout entier \(i\) de \(\intervalleentier{1}{n}\), on définit la forme
+Pour tout entier \(i\) de \(\intervalleentier{1}{n}\), on définit la forme 
 linéaire \begin{equation}
-  \fonction{\varphi_i}{\K^p}{\K}{(x_1,\ldots,x_p)}{a_{i1}x_1+ \dotsb
+  \fonction{\varphi_i}{\K^p}{\K}{(x_1,\ldots,x_p)}{a_{i1}x_1+ \dotsb 
   +a_{ip}x_p}.
 \end{equation} Pour tout vecteur \(x \in \K^p\), on a
 \begin{align*}
-  x \in E(L) &\iff \forall i \in \intervalleentier{1}{n} \quad \varphi_i(x) =
+  x \in E(L) &\iff \forall i \in \intervalleentier{1}{n} \quad \varphi_i(x) = 
   b_i, \\
   x \in E(H) &\iff x\in\bigcap_{i = 1}^n\ker \varphi_i.
 \end{align*}
@@ -307,7 +306,7 @@ linéaire \begin{equation}
 \subsection{Rang d'un système linéaire}
 
 \begin{defdef}
-  On appelle rang du système linéaire \((L)\) le rang de la matrice \(A\)
+  On appelle rang du système linéaire \((L)\) le rang de la matrice \(A\) 
   associée au système linéaire \((L)\).
 \end{defdef}
 %
@@ -316,13 +315,13 @@ linéaire \begin{equation}
   \begin{equation}
     \rg(L)=\rg(A)=\rg(u)=\rg(C_1,\ldots,C_p) = \rg(H).
   \end{equation}
-  Le rang d'un système linéaire \((L)\) est à la fois inférieur ou égal au
+  Le rang d'un système linéaire \((L)\) est à la fois inférieur ou égal au 
   nombre d'inconnues \(p\) et au nombre d'équations \(n\).
 \end{prop}
 
 \subsection{Description de l'ensemble des solutions}
 
-Soit \((L)\) un système linéaire à \(n\) équations, \(p\) inconnues et de rang
+Soit \((L)\) un système linéaire à \(n\) équations, \(p\) inconnues et de rang 
 \(r\).
 
 \subsubsection{Description de \(E(H)\)}
@@ -331,9 +330,9 @@ Soit \((L)\) un système linéaire à \(n\) équations, \(p\) inconnues et de ra
   \(E(H)\) est un sous-espace vectoriel de dimension \(p-r\).
 \end{theo}
 \begin{proof}
-  Avec les notations ci-avant et par définition, \(E(H) = \Ker u\), alors c'est
-  un sous-espace vectoriel. L'application \(u\) est linéaire et \(\rg u = r\)
-  alors le théorème du rang donne \(\rg u +\dim \ker u = \dim \K^p\).
+  Avec les notations ci-avant et par définition, \(E(H) = \Ker u\), alors c'est 
+  un sous-espace vectoriel. L'application \(u\) est linéaire et \(\rg u = r\) 
+  alors le théorème du rang donne \(\rg u +\dim \ker u = \dim \K^p\). 
   C'est-à-dire \(\dim \ker u = p-r\).
 \end{proof}
 \begin{corth}
@@ -343,7 +342,7 @@ Soit \((L)\) un système linéaire à \(n\) équations, \(p\) inconnues et de ra
 \subsubsection{Description de \(E(L)\)}
 
 \begin{theo}
-  Soit \(E(L)\) est vide, soit il est non vide et dans ce cas c'est un
+  Soit \(E(L)\) est vide, soit il est non vide et dans ce cas c'est un 
   sous-espace affine de direction \(E(H) = \ker u\), de dimension \(p-r\).
 
   Si \(a \in E(L)\) alors \(E(L) = a+E(H)\).
@@ -366,16 +365,16 @@ Un système homogène est toujours compatible.
 \end{defdef}
 Il en résulte
 \begin{theo}
-  \((L)\) est un système de Cramer si et seulement si la matrice associée à
+  \((L)\) est un système de Cramer si et seulement si la matrice associée à 
   \((L)\) est inversible.
 \end{theo}
 %
 \begin{theo}
-  Tout système de Cramer admet une et une seule solution. En pratique, pour un
+  Tout système de Cramer admet une et une seule solution. En pratique, pour un 
   système de Cramer homogéne, la solution unique est nulle.
 \end{theo}
 \begin{proof}
-  La matrice \(A\) associée à \((L)\) est inversible, donc l'application \(u\)
+  La matrice \(A\) associée à \((L)\) est inversible, donc l'application \(u\) 
   associée est bijective alors
   \begin{align*}
     u(x) = b &\iff x = u^{-1}(b) \\
@@ -389,21 +388,21 @@ Il en résulte
 \subsection{Recherche du rang}
 %
 \begin{lemme}
-  Soit une matrice \(A \in \Mnp{n}{p}{\K}\). On suppose que \(B\in
-  \Mnp{n}{p}{\K}\) est obtenue à partir de \(A\) par une suite finie
-  d'opérations élémentaires sur les lignes et les colonnes de \(A\). Alors
+  Soit une matrice \(A \in \Mnp{n}{p}{\K}\). On suppose que \(B\in 
+  \Mnp{n}{p}{\K}\) est obtenue à partir de \(A\) par une suite finie 
+  d'opérations élémentaires sur les lignes et les colonnes de \(A\). Alors 
   \(\rg(A) = \rg(B)\).
 \end{lemme}
 \begin{proof}
-  %Il existe des matrices inversibles \(P \in \GLn{p}{\K}\) et \(Q \in
-  %\GLn{n}{\K}\) telles que \(B = QAP\).
-  Les matrices \(A\) et \(B\) représentent la même application linéaire \(u \in
-  \Lin{\K^p}{\K^n}\) mais dans deux bases différentes. Alors \(\rg(A)=\rg(u) =
+  %Il existe des matrices inversibles \(P \in \GLn{p}{\K}\) et \(Q \in 
+  %\GLn{n}{\K}\) telles que \(B = QAP\). 
+  Les matrices \(A\) et \(B\) représentent la même application linéaire \(u \in 
+  \Lin{\K^p}{\K^n}\) mais dans deux bases différentes. Alors \(\rg(A)=\rg(u) = 
   \rg(B)\).
 \end{proof}
-\emph{Application}~: Lorsqu'on veut déterminer le rang d'une matrice \(A\), on
-peut effectuer des opérations élémentaires sur cette matrice jusqu'à obtenir une
-matrice dont le rang est facilement calculable (comme par exemple la matrice
+\emph{Application}~: Lorsqu'on veut déterminer le rang d'une matrice \(A\), on 
+peut effectuer des opérations élémentaires sur cette matrice jusqu'à obtenir une 
+matrice dont le rang est facilement calculable (comme par exemple la matrice 
 \(J_{n,p,r}\)).
 %
 \subsection{Pivot de Gauss}
@@ -413,16 +412,16 @@ matrice dont le rang est facilement calculable (comme par exemple la matrice
   \begin{equation}
     A =
     \begin{pmatrix}
-      \alpha & * & \cdots & * \\
+      \alpha & * & \ldots & * \\
       0 & & & \\
       \vdots & & A' & \\
     0 & & & \end{pmatrix}
   \end{equation}
-  où \(\alpha \neq 0\) et \(A'\in \Mnp{n-1}{p-1}{\K}\). Alors \(\rg(A) =
+  où \(\alpha \neq 0\) et \(A'\in \Mnp{n-1}{p-1}{\K}\). Alors \(\rg(A) = 
   \rg(A')+1\).
 \end{lemme}
 \begin{proof}
-  Soit \((L'_2, \ldots, L'_n)\) les lignes de \(A'\). Alors les lignes de \(A\)
+  Soit \((L'_2, \ldots, L'_n)\) les lignes de \(A'\). Alors les lignes de \(A\) 
   sont~:
   \begin{itemize}
     \item \(L_1 = (\alpha, *, \ldots, *)\)
@@ -434,193 +433,193 @@ matrice dont le rang est facilement calculable (comme par exemple la matrice
   \end{equation}
   d'où
   \begin{equation}
-    \dim \VectEngendre(L_2, \ldots, L_n) = \dim \VectEngendre(L_1) + \dim
+    \dim \VectEngendre(L_2, \ldots, L_n) = \dim \VectEngendre(L_1) + \dim 
     \VectEngendre(L_2, \ldots, L_n).
   \end{equation}
-  La ligne \(L_1\) est non nulle donc \(\dim \VectEngendre(L_1) = 1\). De plus
-  \(\dim \VectEngendre(L_2, \ldots, L_n) = \rg(A')\). Alors finalement \(\rg(A)
+  La ligne \(L_1\) est non nulle donc \(\dim \VectEngendre(L_1) = 1\). De plus 
+  \(\dim \VectEngendre(L_2, \ldots, L_n) = \rg(A')\). Alors finalement \(\rg(A) 
   = \rg(A')+1\).
 \end{proof}
 %
 \begin{prop}[Méthode du pivot de Gauss]
-  Soit une matrice \(A \in \GLn{n}{\K}\). Il existe une suite d'opérations
-  élémentaires sur les lignes qui permet de transformer \(A\) en une matrice
+  Soit une matrice \(A \in \GLn{n}{\K}\). Il existe une suite d'opérations 
+  élémentaires sur les lignes qui permet de transformer \(A\) en une matrice 
   triangualire supérieure \(T\) à coefficients diagonaux tous non nuls.
 \end{prop}
 \begin{proof}
-  On démontre par réccurence sur \(n \in \N^*\) l'assertion \(\P(n)\) ``Pour
-  toute matrice \(A \in \GLn{n}{\K}\), il existe une matrice \(T\) triangualire
-  supérieure obtenue à partir de \(A\) à l'aide d'une suite d'opérations
+  On démontre par réccurence sur \(n \in \N^*\) l'assertion \(\P(n)\) ``Pour 
+  toute matrice \(A \in \GLn{n}{\K}\), il existe une matrice \(T\) triangualire 
+  supérieure obtenue à partir de \(A\) à l'aide d'une suite d'opérations 
   élémentaires sur les lignes de \(A\).''
 
-  \emph{Initialisation}~: \(n = 1\) \(A\) est un scalaire alors elle est
+  \emph{Initialisation}~: \(n = 1\) \(A\) est un scalaire alors elle est 
   triangulaire supérieure.
 
-  \emph{Hérédité}~: Soit un naturel non nul \(n\). On suppose \(\P(n)\). Soit
-  une matrice \(A \in \GLn{n+1}{\K}\). La première colonne de \(A\) est donc non
-  nulle. Quitte à échanger deux lignes, on suppose que \(a_{11}\neq 0\). En
-  effectuant, pour tout \(i \in \intervalleentier{2}{n}\), l'opération \(L_i
+  \emph{Hérédité}~: Soit un naturel non nul \(n\). On suppose \(\P(n)\). Soit 
+  une matrice \(A \in \GLn{n+1}{\K}\). La première colonne de \(A\) est donc non 
+  nulle. Quitte à échanger deux lignes, on suppose que \(a_{11}\neq 0\). En 
+  effectuant, pour tout \(i \in \intervalleentier{2}{n}\), l'opération \(L_i 
   \leftarrow L_i -\frac{a_{i1}}{a_{11}}L_1\) on obtient
   \begin{equation}
     B = \begin{pmatrix}
-      a_{11} & * & \cdots & * \\
+      a_{11} & * & \ldots & * \\
       0 & & & \\
       \vdots & & B' & \\
     0 & & & \end{pmatrix},
   \end{equation}
-  avec \(a_{11}\neq 0\). D'après le lemme, \(\rg(B')=\rg(B)-1 = n\). Alors
-  \(B'\) est inversible et en lui appliquant \(\P(n)\) on écrit qu'il existe une
-  suite finie d'opérations élémentaires sur les lignes de \(B'\) (par consquent
-  su les lignes de \(B\)) qui permet de passer de \(B'\) à une matrice
-  triangulaire \(T'\). Autrement dit de \(B\) à \(T\). Alors \(\P(n+1)\) est
+  avec \(a_{11}\neq 0\). D'après le lemme, \(\rg(B')=\rg(B)-1 = n\). Alors 
+  \(B'\) est inversible et en lui appliquant \(\P(n)\) on écrit qu'il existe une 
+  suite finie d'opérations élémentaires sur les lignes de \(B'\) (par consquent 
+  su les lignes de \(B\)) qui permet de passer de \(B'\) à une matrice 
+  triangulaire \(T'\). Autrement dit de \(B\) à \(T\). Alors \(\P(n+1)\) est 
   vraie.
 
-  \emph{Conclusion}~: On a montré que \(\P(1)\) est vraie et que pour tout
-  naturel \(n\) non nul \(\P(n) \implies \P(n+1)\). Alors par théorème de
+  \emph{Conclusion}~: On a montré que \(\P(1)\) est vraie et que pour tout 
+  naturel \(n\) non nul \(\P(n) \implies \P(n+1)\). Alors par théorème de 
   récurrence, \(\P(n)\) est vraie pour tout naturel \(n\) non nul.
 \end{proof}
 
-\emph{Remarque}~: Dans l'hérédité, on utilise \(a_{11}\neq 0\) comme ``pivot''
-pour annuler tous les autres coefficients de la première colonne. On peut
-appliquer cette méthode que la matrice soit inversible ou non. Dans tous les
-cas, on arrive à  une matrice triangulaire supérieure \(T\) de même rang que la
-matrice de départ. Si \(A\) est non invesible, il y aura des coefficients nuls
+\emph{Remarque}~: Dans l'hérédité, on utilise \(a_{11}\neq 0\) comme ``pivot'' 
+pour annuler tous les autres coefficients de la première colonne. On peut 
+appliquer cette méthode que la matrice soit inversible ou non. Dans tous les 
+cas, on arrive à  une matrice triangulaire supérieure \(T\) de même rang que la 
+matrice de départ. Si \(A\) est non invesible, il y aura des coefficients nuls 
 dans la diagonale de \(T\).
 
 \subsection{Inverser une matrice}
-Soit \(A \in \GLn{n}{\K}\). D'après la sous-section précédente, il existe une
-matrice \(P \in \GLn{n}{\K}\) et une matrice \(T \in \Mn{n}{\K}\) triangulaire
+Soit \(A \in \GLn{n}{\K}\). D'après la sous-section précédente, il existe une 
+matrice \(P \in \GLn{n}{\K}\) et une matrice \(T \in \Mn{n}{\K}\) triangulaire 
 supérieure à coefficients diagonaux tous non nuls telles que \(T = PA\).
 
-Comme \(t_{nn}\) est non nul, on peut l'uiliser comme pivot pour annuler tous
+Comme \(t_{nn}\) est non nul, on peut l'uiliser comme pivot pour annuler tous 
 les autres coefficients de la dernière colonne~:
 \begin{equation}
-  \forall i \in \intervalleentier{1}{n-1} \quad L_i \leftarrow L_i -
+  \forall i \in \intervalleentier{1}{n-1} \quad L_i \leftarrow L_i - 
   \frac{t_{in}}{t_{nn}}L_n.
 \end{equation}
-On prend comme pivots successifs \(t_{n-1 n-1}\), \ldots, \(t_{22}\) pour
-arriver à la matrice diagonale des coefficients \(t_{ii}\). Il suffit ensuite de
-faire l'opération \(L_i \leftarrow L_i \frac{1}{t_{ii}}\) pour tout \(i \in
+On prend comme pivots successifs \(t_{n-1 n-1}\), \ldots, \(t_{22}\) pour 
+arriver à la matrice diagonale des coefficients \(t_{ii}\). Il suffit ensuite de 
+faire l'opération \(L_i \leftarrow L_i \frac{1}{t_{ii}}\) pour tout \(i \in 
 \intervalleentier{1}{n}\) pour arriver à \(I_n\).
 
-On a donc montré l'existence de \(P \in \GLn{n}{\K}\) telle que \(I_n = PA\). Ce
-n'est pas surprenant puisque \(A\) es inversible. Mais \(P\) est le produit des
+On a donc montré l'existence de \(P \in \GLn{n}{\K}\) telle que \(I_n = PA\). Ce 
+n'est pas surprenant puisque \(A\) es inversible. Mais \(P\) est le produit des 
 matrices correspondants à chacune des opérations élémentaires effectuées.
 
-En pratique, on écrit côte à côte la matrice \(A\) (à inverser) et la matrice
-identité \(I_n\). On effectue en parallèle les opérations élémentaires sur les
+En pratique, on écrit côte à côte la matrice \(A\) (à inverser) et la matrice 
+identité \(I_n\). On effectue en parallèle les opérations élémentaires sur les 
 lignes qui permettent de passer de \(A\) à \(I_n\).
 
-\emph{Exemple}~: Il s'agit d'inverser \(A =\begin{pmatrix}  1 & 0 & -1 \\ 0 & -1
+\emph{Exemple}~: Il s'agit d'inverser \(A =\begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 
 & 1\\ -1 & 2 & 0\end{pmatrix}\).
 \begin{align*}
-  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ -1 & 2 & 0\end{pmatrix} &
+  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ -1 & 2 & 0\end{pmatrix} & 
   \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} \\
-  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 2 & -1\end{pmatrix} &
-  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 1 & 0 & 1\end{pmatrix} && L_3
+  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 2 & -1\end{pmatrix} & 
+  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 1 & 0 & 1\end{pmatrix} && L_3 
   \leftarrow L_3+L_1\\
-  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 0 & 1\end{pmatrix} &
-  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 1 & 2 & 1\end{pmatrix} && L_3
+  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 0 & 1\end{pmatrix} & 
+  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 1 & 2 & 1\end{pmatrix} && L_3 
   \leftarrow L_3+2L_2 \\
-  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 0 & 1\end{pmatrix} &
-  \begin{pmatrix}  1 & 0 & 0 \\ -1 & -1 & -1\\ 1 & 2 & 1\end{pmatrix} && L_2
+  \begin{pmatrix}  1 & 0 & -1 \\ 0 & -1 & 1\\ 0 & 0 & 1\end{pmatrix} & 
+  \begin{pmatrix}  1 & 0 & 0 \\ -1 & -1 & -1\\ 1 & 2 & 1\end{pmatrix} && L_2 
   \leftarrow L_2-L_3\\
   %\end{align*}
   %\begin{align*}
-  \begin{pmatrix}  1 & 0 & 0 \\ 0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix} &
-  \begin{pmatrix}2 & 2 & 1 \\ -1 & -1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_1
+  \begin{pmatrix}  1 & 0 & 0 \\ 0 & -1 & 0\\ 0 & 0 & 1\end{pmatrix} & 
+  \begin{pmatrix}2 & 2 & 1 \\ -1 & -1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_1 
   \leftarrow L_1+L_3\\
-  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} &
-  \begin{pmatrix} 2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_2
+  \begin{pmatrix}  1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} & 
+  \begin{pmatrix} 2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix} && L_2 
   \leftarrow -L_2
 \end{align*}
 
-On vient de montrer que \(A\) est inversible et que \(A^{-1} = \begin{pmatrix}
-2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix}\).
+  On vient de montrer que \(A\) est inversible et que \(A^{-1} = \begin{pmatrix} 
+  2 & 2 & 1 \\ 1 & 1 & 1\\ 1 & 2 & 1 \end{pmatrix}\).
 
-\subsection{Résoudre un système d'équations linéaire}
+  \subsection{Résoudre un système d'équations linéaire}
 
-La méthode du pivot de Gauss permet de résoudre un système de Cramer
-d'écriture matricielle \(AX = B\). C'est un système de Cramer donc \(A\) est
-inversible. Par des opérations élémentaires sur les lignes, on peut se ramener
-à un système équivalent dont la matrice est triangulaire supérieure à
-coefficients diagonaux tous non nuls que l'on sait résoudre de proche en
-proche~:
-\begin{equation}
-  \exists P \in \GLn{n}{\K} \ \exists T \in T_n^s(\K) \cap \GLn{n}{\K} \ T =
-  PA \quad AX = B \iff TX = PB.
-\end{equation}
+  La méthode du pivot de Gauss permet de résoudre un système de Cramer 
+  d'écriture matricielle \(AX = B\). C'est un système de Cramer donc \(A\) est 
+  inversible. Par des opérations élémentaires sur les lignes, on peut se ramener 
+  à un système équivalent dont la matrice est triangulaire supérieure à 
+  coefficients diagonaux tous non nuls que l'on sait résoudre de proche en 
+  proche~:
+  \begin{equation}
+    \exists P \in \GLn{n}{\K} \ \exists T \in T_n^s(\K) \cap \GLn{n}{\K} \ T = 
+    PA \quad AX = B \iff TX = PB.
+  \end{equation}
 
-Si le système n'est pas de Cramer, deux cas se présentent~:
+  Si le système n'est pas de Cramer, deux cas se présentent~:
 
-\emph{Premier cas}~: Si \(r = n < p\). En appliquant la méthode du pivot de
-Gauss, on arrive au système de la forme~:
-\begin{equation}
-  \begin{cases}
-    \alpha_{11}x_{i_1} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_1 \\
-    \alpha_{22}x_{i_2} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_2 \\
-    \vdots & \vdots \\
-    \alpha_{rr}x_{i_r} + \dotsb  & = \beta_r
-  \end{cases}.
-\end{equation}
-Ce système admet des solutions (il n'est pas compatible). On peut choir
-librement les \(p-r\) inconnues \(x_{i_{r+1}}, \ldots, x_{i_p}\) et exprimer
-toutes les autres en fonction de celles-ci en remontant le système.
+  \emph{Premier cas}~: Si \(r = n < p\). En appliquant la méthode du pivot de 
+  Gauss, on arrive au système de la forme~:
+  \begin{equation}
+    \begin{cases}
+      \alpha_{11}x_{i_1} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_1 \\
+      \alpha_{22}x_{i_2} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_2 \\
+      \vdots & \vdots \\
+      \alpha_{rr}x_{i_r} + \dotsb  & = \beta_r
+    \end{cases}.
+  \end{equation}
+  Ce système admet des solutions (il n'est pas compatible). On peut choir 
+  librement les \(p-r\) inconnues \(x_{i_{r+1}}, \ldots, x_{i_p}\) et exprimer 
+  toutes les autres en fonction de celles-ci en remontant le système.
 
-\emph{Deuxième cas}~: Si \(r<n\), la méthode du pivot de Gauss conduit à un
-système équivalent de la forme~:
-\begin{equation}
-  \begin{cases}
-    \alpha_{11}x_{i_1} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_1 \\
-    \vdots & \vdots \\    \alpha_{rr}x_{i_r} + \dotsb  & = \beta_r\\
-    0 & = \beta_{r+1} \\
-    \vdots & \vdots \\
-    0 & = \beta_{n}
-  \end{cases}.
-\end{equation}
-Soit \(\beta_{r+1}=\cdots=\beta_{n} = 0\) est vraie et on est ramené au cas
-précédent, soit ce n'est pas vérifié et le système est incompatible.
+  \emph{Deuxième cas}~: Si \(r<n\), la méthode du pivot de Gauss conduit à un 
+  système équivalent de la forme~:
+  \begin{equation}
+    \begin{cases}
+      \alpha_{11}x_{i_1} + \dotsb + \alpha_{1p}x_{i_p} & = \beta_1 \\
+      \vdots & \vdots \\    \alpha_{rr}x_{i_r} + \dotsb  & = \beta_r\\
+      0 & = \beta_{r+1} \\
+      \vdots & \vdots \\
+      0 & = \beta_{n}
+    \end{cases}.
+  \end{equation}
+  Soit \(\beta_{r+1}=\ldots=\beta_{n} = 0\) est vraie et on est ramené au cas 
+  précédent, soit ce n'est pas vérifié et le système est incompatible.
 
-\emph{Exemple}~: On veut résoudre le système linéaire suivant
-\begin{equation}
-  \begin{cases}
-    2x-y+3z-t& = 1\\
-    x+y+z+t& = 0\\
-    x-4y-z-4t& = 3
-  \end{cases},
-\end{equation}
-en inversant \(L_1\) et \(L_2\) on a
-\begin{equation}
-  \begin{cases} x+y+z+t& = 0\\
-    2x-y+3z-t& = 1\\
-    x-4y-z-4t& = 3
-  \end{cases},
-\end{equation}
-ensuite en effectuant \(L_2 \leftarrow L_2-2L_1\) et \(L_3 \leftarrow
-L_3-L_1\) on obtient
-\begin{equation}
-  \begin{cases} x+y+z+t& = 0\\
-    -3y+z-3t& = 1\\
-    -5y-2z-5t& = 3
-  \end{cases},
-\end{equation}
-en effectuant \(L_3 \leftarrow L_3+2L_2\) on obtient
-\begin{equation}
-  \begin{cases} x+y+z+t& = 0\\
-    -3y+z-3t& = 1\\
-    -11y-11t& = 5
-  \end{cases}.
-\end{equation}
-En ``remontant'' le système on arrive à
-\begin{equation}
-  \begin{cases}
-    x &= \frac{9}{11} \\
-    z &= -\frac{4}{11}\\
-    y &= -t -\frac{5}{11}
-  \end{cases},
-\end{equation}
-et l'ensemble des solutions de ce système est
-\begin{equation}
-  S = \left(\frac{9}{11}, -\frac{5}{11}, -\frac{4}{11}, 0\right) +
-  \VectEngendre(0,-1,0,1).
-\end{equation}
+  \emph{Exemple}~: On veut résoudre le système linéaire suivant
+  \begin{equation}
+    \begin{cases}
+      2x-y+3z-t& = 1\\
+      x+y+z+t& = 0\\
+      x-4y-z-4t& = 3
+    \end{cases},
+  \end{equation}
+  en inversant \(L_1\) et \(L_2\) on a
+  \begin{equation}
+    \begin{cases} x+y+z+t& = 0\\
+      2x-y+3z-t& = 1\\
+      x-4y-z-4t& = 3
+    \end{cases},
+    \end{equation}
+    ensuite en effectuant \(L_2 \leftarrow L_2-2L_1\) et \(L_3 \leftarrow 
+    L_3-L_1\) on obtient
+    \begin{equation}
+      \begin{cases} x+y+z+t& = 0\\
+        -3y+z-3t& = 1\\
+        -5y-2z-5t& = 3
+      \end{cases},
+      \end{equation}
+      en effectuant \(L_3 \leftarrow L_3+2L_2\) on obtient
+      \begin{equation}
+        \begin{cases} x+y+z+t& = 0\\
+          -3y+z-3t& = 1\\
+          -11y-11t& = 5
+        \end{cases}.
+        \end{equation}
+        En ``remontant'' le système on arrive à
+        \begin{equation}
+          \begin{cases}
+            x &= \frac{9}{11} \\
+            z &= -\frac{4}{11}\\
+            y &= -t -\frac{5}{11}
+          \end{cases},
+        \end{equation}
+        et l'ensemble des solutions de ce système est
+        \begin{equation}
+          S = \left(\frac{9}{11}, -\frac{5}{11}, -\frac{4}{11}, 0\right) + 
+          \VectEngendre(0,-1,0,1).
+        \end{equation}

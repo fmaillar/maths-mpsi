@@ -3,27 +3,27 @@
 \minilof%
 \minilot%
 
-Ce chapitre présente les équations différentielles linéaires du premier et du
-deuxième ordre. Les équations différentielles apparaissent dans toutes les
-branches de la physique. Elles sont en général la description d'un phénomène
-variant dans l'espace ou dans le temps. Les équations différentielles que nous
-étudieront là ne sont qu'une petite partie de celle qui existent et qui sont
+Ce chapitre présente les équations différentielles linéaires du premier et du 
+deuxième ordre. Les équations différentielles apparaissent dans toutes les 
+branches de la physique. Elles sont en général la description d'un phénomène 
+variant dans l'espace ou dans le temps. Les équations différentielles que nous 
+étudieront là ne sont qu'une petite partie de celle qui existent et qui sont 
 pour la plupart non linéaires, comme par exemple les équations de Navier Stokes.
 
-On considère des fonctions à valeurs dans un corps \(\K\). Soit un entier
-naturel non nul \(n\), \(I\) un intervalle réel et \(a_0, \ldots a_n\) et \(b\)
-des fonctions de \(I\) dans \(\K\) au moins continues. On considère l'équation
+On considère des fonctions à valeurs dans un corps \(\K\). Soit un entier 
+naturel non nul \(n\), \(I\) un intervalle réel et \(a_0, \ldots a_n\) et \(b\) 
+des fonctions de \(I\) dans \(\K\) au moins continues. On considère l'équation 
 différentielle
 
 \begin{equation}
   \sum_{i = 0}^n a_i(x) y^{(i)} = b(x) \label{eq:eqdiff}.
 \end{equation}
 
-On peut alors définir ce qu'on appelle des \emph{solutions} de cette équation
+On peut alors définir ce qu'on appelle des \emph{solutions} de cette équation 
 différentielle.
 
 \begin{defdef}
-  Soit \(\fonctionR{f}{I}{\K}\). On dira que \(f\) est une solution de
+  Soit \(\fonctionR{f}{I}{\K}\). On dira que \(f\) est une solution de 
   l'équation différentielle~\eqref{eq:eqdiff} si et seulement si~:
   \begin{enumerate}
     \item \(f\) est au moins \(n\) fois dérivable,
@@ -31,8 +31,8 @@ différentielle.
   \end{enumerate}
 \end{defdef}
 
-En pratique on traitera dans ce cours du cas où \(n = 1\) de façon complète et du
-cas \(n = 2\) dans le cas où \(a_0\), \(a_1\) et \(a_2\) sont des constantes. On
+En pratique on traitera dans ce cours du cas où \(n = 1\) de façon complète et du 
+cas \(n = 2\) dans le cas où \(a_0\), \(a_1\) et \(a_2\) sont des constantes. On 
 recherchera des solutions qui vérifient des conditions initiales de la forme~:
 
 \begin{equation}
@@ -43,126 +43,126 @@ où \(t_0 \in I\)  et les \(y_i\) sont des scalaires fixes dans \(\K\).
 \section{Équation différentielle linéaire homogène du premier ordre}
 \label{sec:equadifflinhomog1}
 
-\subsection[Solution équation homogène coefficients constants]{Solution d'une
-  équation différentielle linéaire homogène du premier ordre à coefficients
+\subsection[Solution équation homogène coefficients constants]{Solution d'une 
+  équation différentielle linéaire homogène du premier ordre à coefficients 
 constants}
 \label{subsec:solutioneqdifflinhomog1coefconstants}
 
-Soit un scalaire \(a \in \K\). On s'intéresse à l'équation
-\begin{equation}
+Soit un scalaire \(a \in \K\). On s'intéresse à l'équation 
+\begin{empheq}[box = \shadowbox*]{equation}
   \label{eq:Hdiff0}
   y' + ay = 0.
-\end{equation}
+\end{empheq}
 
 \begin{theo}
   \label{theo:1}
-  Soit une application \(f \in \K^{\R}\). \(f\) est solution de l'équation
-  \eqref{eq:Hdiff0} si et seulement s'il existe un scalaire \(\lambda \in \K\)
-  tel que pour tout réel \(t\), \(f(t) = \lambda \e^{-at}\). C'est-à-dire que
+  Soit une application \(f \in \K^{\R}\). \(f\) est solution de l'équation 
+  \eqref{eq:Hdiff0} si et seulement s'il existe un scalaire \(\lambda \in \K\) 
+  tel que pour tout réel \(t\), \(f(t) = \lambda \e^{-at}\). C'est-à-dire que 
   l'ensemble des solutions de l'équation \eqref{eq:Hdiff0} est~:
-  \begin{equation}
-    \S_{\H} = \enstq{\fonctionL{f}{\R}{\K}{t}{\lambda \e^{-at}}}{\lambda \in
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \S_{\H} = \enstq{\fonctionL{f}{\R}{\K}{t}{\lambda \e^{-at}}}{\lambda \in 
     \K}
-  \end{equation}
+  \end{empheq}
 \end{theo}
 
-On illustre ce théorème dans le cas où \(\K = \R\) par la
-figure~\ref{fig:eqdiff1} en représentant quatre solutions et le champ de
-vecteurs de l'équation différentielle (se référer à la
+On illustre ce théorème dans le cas où \(\K = \R\) par la 
+figure~\ref{fig:eqdiff1} en représentant quatre solutions et le champ de 
+vecteurs de l'équation différentielle (se référer à la 
 section~\ref{sec:champvec}).
 
 \begin{proof}
-  Soit \(\lambda \in \K\) tel que ,
-  \(\fonctionL{f}{\R}{\K}{t}{\lambda\e^{-at}}\). \(f\) est dérivable et pour
+  Soit \(\lambda \in \K\) tel que , 
+  \(\fonctionL{f}{\R}{\K}{t}{\lambda\e^{-at}}\). \(f\) est dérivable et pour 
   tout réel \(t\)
   \begin{equation}
     f'(t) + af(t) = -a \lambda \e^{-at} + a \lambda \e^{-at} = 0,
   \end{equation}
-  donc la fonction \(f\) est solution de l'équation \eqref{eq:Hdiff0} sur
-  \(\R\).
+  donc la fonction \(f\) est solution de l'équation \eqref{eq:Hdiff0} sur 
+  \(\R\). 
 
-  Soit maintenant une fonction \(f\) solution de l'équation \eqref{eq:Hdiff0}
-  sur \(\R\). Posons la fonction \(\fonctionL{g}{\R}{\K}{t}{f(t)\e^{at}}\). La
+  Soit maintenant une fonction \(f\) solution de l'équation \eqref{eq:Hdiff0} 
+  sur \(\R\). Posons la fonction \(\fonctionL{g}{\R}{\K}{t}{f(t)\e^{at}}\). La 
   fonction \(g\) est dérivable par produit de fonctions qui le sont et
   \begin{equation}
-    \forall t \in \R \quad g'(t) = f'(t)\e^{at} + af(t)\e^{at} =
+    \forall t \in \R \quad g'(t) = f'(t)\e^{at} + af(t)\e^{at} = 
     \e^{at}(f'(t) + af(t)) = 0,
   \end{equation}
-  la fonction \(g\) est donc constante sur \(\R\). Il existe donc un réel
-  \(\lambda\) tel que \(\forall t \in \R \quad g(t) = \lambda\). Par conséquent
+  la fonction \(g\) est donc constante sur \(\R\). Il existe donc un réel 
+  \(\lambda\) tel que \(\forall t \in \R \quad g(t) = \lambda\). Par conséquent 
   \(f(t) = g(t)\e^{-at} = \lambda \e^{-at}\).
 \end{proof}
 
 \begin{figure}
   \centering
   \includegraphics[scale = 0.7]{Equa-diff-0.25.png}
-  \caption{Exemple de représentation graphique de solution de l'équation
+  \caption{Exemple de représentation graphique de solution de l'équation 
   différentielle \(y' = -y/4\)}
   \label{fig:eqdiff1}
 \end{figure}
 
-\subsection[Solution équation homogène coefficients non constants]{Solution
-  d'une équation différentielle linéaire homogène du premier ordre à
+\subsection[Solution équation homogène coefficients non constants]{Solution 
+  d'une équation différentielle linéaire homogène du premier ordre à 
 coefficients non constants}
 
-Soient maintenant \(I\) un intervalle réel, \(a\) une fonction de \(I\) vers
+Soient maintenant \(I\) un intervalle réel, \(a\) une fonction de \(I\) vers 
 \(\K\) au moins continue sur \(I\). On considère l'équation
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   \label{eq:Hdiff}
   y' + a(t)y = 0 \tag{\(\H\)}.
-\end{equation}
-Pour le cas où \(\K = \R\), on suppose qu'il existe une solution
-\(\fonctionR{f}{I}{\R}\) de l'équation \eqref{eq:Hdiff} \emph{qui ne s'annule pas
+\end{empheq}
+Pour le cas où \(\K = \R\), on suppose qu'il existe une solution 
+\(\fonctionR{f}{I}{\R}\) de l'équation \eqref{eq:Hdiff} \emph{qui ne s'annule pas 
 sur \(I\)} telle que
 \begin{equation}
   \forall t \in I \quad \frac{f'(t)}{f(t)} = -a(t).
 \end{equation}
 
-La fonction \(a\) est continue sur \(I\), donc elle admet une primitive \(A\)
-sur \(I\). Par intégration il existe une constante \(K \in \R\) telle que pour
+La fonction \(a\) est continue sur \(I\), donc elle admet une primitive \(A\) 
+sur \(I\). Par intégration il existe une constante \(K \in \R\) telle que pour 
 tout \(t \in I\)~:
 \begin{equation}
   \ln\abs{f(t)} = -A(t)  + K \iff \abs{f(t)} = \e^K \e^{-A(t)}.
 \end{equation}
-La fonction \(f\) est continue, car dérivable, et ne s'annule pas sur
-l'intervalle \(I\) donc elle est de signe constant sur \(I\). Dans les deux cas
+La fonction \(f\) est continue, car dérivable, et ne s'annule pas sur 
+l'intervalle \(I\) donc elle est de signe constant sur \(I\). Dans les deux cas 
 on pose \(\lambda = \pm \e^K\) et on a \(f(t) = \lambda e^{-A(t)}\).
 
 Revenons maintenant au cas général où \(\K \in \{\R, \C\}\).
 
 \begin{theo}
   \label{theo:2}
-  Soit \(A\) une primitive de la fonction \(a\) continue sur \(I\). Soit
-  \(\fonctionR{f}{I}{\K}\), \(f\) est solution de l'équation \eqref{eq:Hdiff}
-  si est seulement s'il existe un scalaire \(\lambda\) tel que pour tout réel
-  \(t \in I\) on a \(f(t) = \lambda \e^{-A(t)}\). C'est-à-dire que l'ensemble
+  Soit \(A\) une primitive de la fonction \(a\) continue sur \(I\). Soit 
+  \(\fonctionR{f}{I}{\K}\), \(f\) est solution de l'équation \eqref{eq:Hdiff} 
+  si est seulement s'il existe un scalaire \(\lambda\) tel que pour tout réel 
+  \(t \in I\) on a \(f(t) = \lambda \e^{-A(t)}\). C'est-à-dire que l'ensemble 
   des solution de l'équation différentielle \eqref{eq:Hdiff} est~:
-  \begin{equation}
-    \S_{\H} = \enstq{\fonctionL{f}{\R}{\K}{t}{\lambda \e^{-A(t)}}}{\lambda
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \S_{\H} = \enstq{\fonctionL{f}{\R}{\K}{t}{\lambda \e^{-A(t)}}}{\lambda 
     \in \K}
-  \end{equation}
+  \end{empheq}
 \end{theo}
 \begin{proof}
-  Soit \(\lambda \in \K\) et \(\fonctionL{f}{I}{\R}{t}{\lambda \e^{-A(t)}}\).
-  \(A\) est dérivable sur \(I\) (puisque c'est une primitive de \(a\)) et
+  Soit \(\lambda \in \K\) et \(\fonctionL{f}{I}{\R}{t}{\lambda \e^{-A(t)}}\). 
+  \(A\) est dérivable sur \(I\) (puisque c'est une primitive de \(a\)) et 
   l'exponentielle l'est aussi donc \(f\) est dérivable par composition.
   \begin{equation}
-    \forall t \in I \quad f'(t) + a(t)f(t) = \lambda(-A'(t)\e^{-A(t)}) +
+    \forall t \in I \quad f'(t) + a(t)f(t) = \lambda(-A'(t)\e^{-A(t)}) + 
     \lambda a(t)\e^{-A(t)} = 0,
   \end{equation}
   \(f\) est donc solution de l'équation \eqref{eq:Hdiff}.
 
-  Soit maintenant une fonction \(f\) solution de l'équation \eqref{eq:Hdiff}
-  sur \(I\). On définit alors la fonction
-  \(\fonctionL{g}{I}{\K}{t}{f(t)\e^{A(t)}}\). La fonction \(f\) est dérivable
-  puisque c'est une solution de l'équation différentielle~\eqref{eq:Hdiff}. La
-  fonction  \(A\) est aussi dérivable, l'exponentielle est dérivable donc
+  Soit maintenant une fonction \(f\) solution de l'équation \eqref{eq:Hdiff} 
+  sur \(I\). On définit alors la fonction 
+  \(\fonctionL{g}{I}{\K}{t}{f(t)\e^{A(t)}}\). La fonction \(f\) est dérivable 
+  puisque c'est une solution de l'équation différentielle~\eqref{eq:Hdiff}. La 
+  fonction  \(A\) est aussi dérivable, l'exponentielle est dérivable donc 
   \(g\) est dérivable par composition et produit. Alors
   \begin{equation}
-    \forall t \in I \quad g'(t) = f'(t) \e^{A(t)} +
+    \forall t \in I \quad g'(t) = f'(t) \e^{A(t)} + 
     f(t)A'(t)\e^{A(t)} = \e^{A(t)}(f'(t) + a(t)f(t))  = 0.
   \end{equation}
-  Il existe donc un scalaire \(\lambda\) tel que \(\forall t \in I \quad
+  Il existe donc un scalaire \(\lambda\) tel que \(\forall t \in I \quad 
   g(t) = \lambda\). D'où
   \begin{equation}
     \forall t \in I \quad f(t) = g(t) \e^{-A(t)} = \lambda \e^{-A(t)}.
@@ -171,70 +171,70 @@ Revenons maintenant au cas général où \(\K \in \{\R, \C\}\).
 
 \emph{Remarques}~:
 \begin{enumerate}
-  \item si on prend comme fonction \(a\) une fonction constante, une primitive
-    de \(a\) est \(A\) une fonction linéaire et on retrouve le résultat du
-    premier théorème;
-  \item on constate à posteriori que les solutions de l'équation
-    \eqref{eq:Hdiff} distinctes de l'application nulle ne s'annulent pas sur
-    \(I\);
-  \item une combinaison linéaire de solutions de l'équation~\eqref{eq:Hdiff}
-    est une solution de l'équation~\eqref{eq:Hdiff}, si on note \(S_{\H{}}\)
-    l'ensemble des solutions de l'équation~\eqref{eq:Hdiff}, alors puisque
-    \(S_\mathcal{H} \) est soit non vide ou soit stable par combinaison
-    linéaire alors c'est un \(\K\)-espace vectoriel (c'est même une droite
+  \item si on prend comme fonction \(a\) une fonction constante, une primitive 
+    de \(a\) est \(A\) une fonction linéaire et on retrouve le résultat du 
+    premier théorème ;
+  \item on constate à posteriori que les solutions de l'équation 
+    \eqref{eq:Hdiff} distinctes de l'application nulle ne s'annulent pas sur 
+    \(I\) ;
+  \item une combinaison linéaire de solutions de l'équation \eqref{eq:Hdiff} 
+    est une solution de l'équation \eqref{eq:Hdiff}, si on note \(S_{\H} \) 
+    l'ensemble des solutions de l'équation \eqref{eq:Hdiff}, alors puisque 
+    \(S_\mathcal{H} \) est soit non vide ou soit stable par combinaison 
+    linéaire alors c'est un \(\K\)-espace vectoriel (c'est même une droite 
     vectorielle).
 \end{enumerate}
 
-\section{Équation différentielle linéaire du premier ordre avec
-second membre}\label{sec:equadifflinpremierordresecondmembre}
+\section{Équation différentielle linéaire du premier ordre avec second membre}
+\label{sec:equadifflinpremierordresecondmembre}
 
 On considère l'équation différentielle
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   \label{eq:Ediff}
   y' + a(t)y = b(t) \tag{\(\E\)}
-\end{equation}
-avec \(a\) et \(b\) des fonctions au moins continues sur l'intervalle réel \(I\)
+\end{empheq}
+avec \(a\) et \(b\) des fonctions au moins continues sur l'intervalle réel \(I\) 
 à valeurs dans \(\K\).
 
-On considère aussi l'équation homogène à l'équation \eqref{eq:Ediff}, c'est
+On considère aussi l'équation homogène à l'équation \eqref{eq:Ediff}, c'est 
 l'équation \eqref{eq:Hdiff}.
 
 \subsection{Solution générale et solution particulière}
 \label{subsec:solutiongeneraleetpart}
 
 \begin{theo}\label{theo:3}
-  Supposons connaître une solution \(\fonctionR{f_0}{I}{\K}{}{}\) de
-  l'équation \eqref{eq:Ediff}, qu'on appellera \emph{solution particulière},
-  alors une fonction \(\fonctionR{f}{I}{\K}{}{}\) est solution de l'équation
-  \eqref{eq:Ediff} si et seulement si la fonction \(f-f_0\) est solution de
-  l'équation \eqref{eq:Hdiff}. L'ensemble des solutions de l'équation
-  différentiel~\eqref{eq:Ediff} est donc~:
-  \begin{equation}
-    {\S{}}_{\E{}} = f_0 + {\S{}}_{\H{}}
-  \end{equation}
+  Supposons connaître une solution \(\fonctionR{f_0}{I}{\K}{}{}\) de 
+  l'équation \eqref{eq:Ediff}, qu'on appellera \emph{solution particulière}, 
+  alors une fonction \(\fonctionR{f}{I}{\K}{}{}\) est solution de l'équation 
+  \eqref{eq:Ediff} si et seulement si la fonction \(f-f_0\) est solution de 
+  l'équation \eqref{eq:Hdiff}. L'ensemble des solutions de l'équation 
+  différentiel \eqref{eq:Ediff} est donc~:
+  \begin{empheq}[box = \shadowbox*]{equation}
+    \S_{\E} = f_0 + \S_{\H}
+  \end{empheq}
 \end{theo}
 \begin{proof}
-  Soit \(f:I \rightarrow \K\) solution de l'équation \eqref{eq:Ediff}. Soit
-  \(g = f-f_0\), alors \(f\) et \(f_0\) sont solutions de l'équation
+  Soit \(f:I \rightarrow \K\) solution de l'équation \eqref{eq:Ediff}. Soit 
+  \(g = f-f_0\), alors \(f\) et \(f_0\) sont solutions de l'équation 
   \eqref{eq:Ediff}, donc elles sont dérivables et donc \(g\) est dérivable.
   \begin{equation}
-    \forall t \in I \quad g'(t) + a(t)g(t) =
+    \forall t \in I \quad g'(t) + a(t)g(t) = 
     (f'(t) + a(t)f(t))-(f'_0(t) + a(t)f_0(t)) = b(t)-b(t) = 0
   \end{equation}
   La fonction \(g\) est donc solution de l'équation~\eqref{eq:Ediff}.
 
-  Supposons ensuite que \(g = f-f_0\) est solution de l'équation
+  Supposons ensuite que \(g = f-f_0\) est solution de l'équation 
   \eqref{eq:Hdiff}, alors \(f = f_0 + g\) est dérivable et pour tout \(t \in I\)
   \begin{align}
     f'(t) + a(t)f(t)& = (g'(t) + f_0'(t)) + a(t)(g(t) + f_0(t)) \\
-                    & = \underbrace{g'(t) + a(t)g(t)}_{b(t)} +
+                    & = \underbrace{g'(t) + a(t)g(t)}_{b(t)} + 
                     \underbrace{f_0'(t) + a(t)f_0(t)}_{0}
   \end{align}
   donc \(f\) est solution de l'équation \eqref{eq:Ediff}.
 \end{proof}
 
-\emph{Remarque}~: Toute la difficulté est bien sûr de trouver une solution
-particulière de l'équation \eqref{eq:Ediff} dont l'existence n'est pas assurée
+\emph{Remarque}~: Toute la difficulté est bien sûr de trouver une solution 
+particulière de l'équation \eqref{eq:Ediff} dont l'existence n'est pas assurée 
 par le théorème~\ref{theo:3}.
 
 \subsection{Recherche de solutions particulière}
@@ -243,52 +243,52 @@ par le théorème~\ref{theo:3}.
 \subsubsection{Lorsque l'équation homogène est à coefficient constants}
 \label{subsubsec:recherchesolutionpart-coefconstants}
 
-On suppose que le second membre \(b\) est de la forme ``exponentielle
-polynôme'', c'est-à-dire que pour tout réel \(t \in I\), \(b(t) = P(t) \e^{mt}\)
-où \(P\) est une fonction polynomiale et \(m\) est un scalaire. Dans ce cas on
-cherche une solution particulière sous la forme
-\(\fonctionL{f}{I}{\K}{t}{Q(t)\e^{mt}}\) où \(Q\) est une fonction polynômiale
+On suppose que le second membre \(b\) est de la forme ``exponentielle 
+polynôme'', c'est-à-dire que pour tout réel \(t \in I\), \(b(t) = P(t) \e^{mt}\) 
+où \(P\) est une fonction polynomiale et \(m\) est un scalaire. Dans ce cas on 
+cherche une solution particulière sous la forme 
+\(\fonctionL{f}{I}{\K}{t}{Q(t)\e^{mt}}\) où \(Q\) est une fonction polynômiale 
 de même degré que \(P\).
 
 \emph{Remarques}:
 \begin{itemize}
   \item c'est une méthode assez lourde quand le degré est élevé;
-  \item on peut l'appliquer avec un second membre polynomial ou avec un second
+  \item on peut l'appliquer avec un second membre polynomial ou avec un second 
     membre \(t \longmapsto \e^{mt}\);
-  \item on peut aussi l'appliquer avec un second membre en sinus ou en
-    cosinus, cosinus hyperbolique ou sinus hyperbolique car ces fonctions
+  \item on peut aussi l'appliquer avec un second membre en sinus ou en 
+    cosinus, cosinus hyperbolique ou sinus hyperbolique car ces fonctions 
     s'écrivent comme somme d'exponentielle.
 \end{itemize}
 
 \subsubsection{Lorsque l'équation homogène est à coefficients non constants}
 \label{subsubsec:recherchesolutionpart-coefnnconstants}
 
-Il n'y a pas de méthode générale. Si on ne voit pas de solution ``évidente'' on
+Il n'y a pas de méthode générale. Si on ne voit pas de solution ``évidente'' on 
 utilise la méthode de la variation de la constante.
 
 \subsection{Principe de superposition}
 \label{subsec:principesuperposition}
 
 \begin{prop}
-  Soient trois applications \(a\), \(b_1\) et \(b_2\) de \(I\) vers \(\K\) au
-  moins continues. Si \(f_1\) et \(f_2\) sont des solutions respectives des
-  équations
+  Soient trois applications \(a\), \(b_1\) et \(b_2\) de \(I\) vers \(\K\) au 
+  moins continues. Si \(f_1\) et \(f_2\) sont des solutions respectives des 
+  équations    
   \begin{align}
-    y' + a(t)y& = b_1(t)\\
+    y' + a(t)y& = b_1(t)\\ 
     y' + a(t)y& = b_2(t)
   \end{align}
 
-  Alors la fonction \(f = f_1 + f_2\) est une solution de l'équation différentielle
+  Alors la fonction \(f = f_1 + f_2\) est une solution de l'équation différentielle 
   \begin{equation}
     y'(t) + a(t) = b_1(t) + b_2(t)
   \end{equation}
 \end{prop}
 \begin{proof}
-  Soient \(f_1\) et \(f_2\) des solutions respectives des équations
-  précédentes, alors elles sont dérivables sur \(I\) et donc \(f\) est
+  Soient \(f_1\) et \(f_2\) des solutions respectives des équations 
+  précédentes, alors elles sont dérivables sur \(I\) et donc \(f\) est 
   dérivable sur \(I\)
   \begin{equation}
-    f' + a \cdot f = (f_1' + f_2') + a(f_1 + f_2) = (f_1' + af_1) + (f_2' +
+    f' + a \cdot f = (f_1' + f_2') + a(f_1 + f_2) = (f_1' + af_1) + (f_2' + 
     af_2) = b_1 + b_2
   \end{equation}
   Donc \(f\) est solution de \(\E\).
@@ -297,88 +297,88 @@ utilise la méthode de la variation de la constante.
 \subsection{Variation de la constante}
 \label{subsec:variationdelaconstante}
 
-Lorsqu'on reprend l'équation \eqref{eq:Ediff} avec \(a\) et \(b\) des
-fonctions au moins continues sur l'intervalle réel \(I\). Soit \(A\) une
-primitive de la fonction \emph{continue} \(a\) sur \(I\). On a vu que
+Lorsqu'on reprend l'équation \eqref{eq:Ediff} avec \(a\) et \(b\) des 
+fonctions au moins continues sur l'intervalle réel \(I\). Soit \(A\) une 
+primitive de la fonction \emph{continue} \(a\) sur \(I\). On a vu que 
 l'ensemble des solutions de l'équation homogène associée est
 \begin{equation}
-  S_{\H} = \enstq{\fonctionL{f}{I}{\K}{t}{\lambda \e^{-A(t)}}}{\lambda \in
+  S_{\H} = \enstq{\fonctionL{f}{I}{\K}{t}{\lambda \e^{-A(t)}}}{\lambda \in 
   \K}.
 \end{equation}
-On cherche des fonctions solutions de l'équation \eqref{eq:Ediff} de la
-forme \(\fonctionR{f}{t}{\lambda(t)\e^{-A(t)}}\) avec \(\lambda\) une
-fonction. D'où le nom de variation de la constante. Procédons par un
+On cherche des fonctions solutions de l'équation \eqref{eq:Ediff} de la 
+forme \(\fonctionR{f}{t}{\lambda(t)\e^{-A(t)}}\) avec \(\lambda\) une 
+fonction. D'où le nom de variation de la constante. Procédons par un 
 raisonnement d'analyse/synthèse.
 
 \begin{proof}[Analyse]
-  Supposons qu'il existe une solution \(f\) de \eqref{eq:Ediff} sur \(I\), on
-  définit alors la fonction \(\fonctionL{g}{I}{\K}{t}{f(t)\e^{A(t)}}\). La
-  fonction \(f\) est dérivable puisque c'est une solution de \(\E\) et comme
-  \(A\) est dérivable aussi on déduit que \(g\) est dérivable sur \(I\), et
+  Supposons qu'il existe une solution \(f\) de \eqref{eq:Ediff} sur \(I\), on 
+  définit alors la fonction \(\fonctionL{g}{I}{\K}{t}{f(t)\e^{A(t)}}\). La 
+  fonction \(f\) est dérivable puisque c'est une solution de \(\E\) et comme 
+  \(A\) est dérivable aussi on déduit que \(g\) est dérivable sur \(I\), et 
   pour tout \(t \in I\)~:
   \begin{equation}
     g'(t) = f'(t)\e^{A(t)} + f(t)A(t)\e^{A(t)} = b(t)\e^{A(t)},
   \end{equation}
-  puisque \(f\) est solution de \eqref{eq:Ediff}. Les fonctions \(b\) et \(A\)
-  sont continues donc \(t \longmapsto b(t)\e^{A(t)}\) est continue par
-  théorème généraux, elle admet donc des primitives sur l'intervalle \(I\).
-  Soit \(C\) l'une de ses primitives alors, pour tout \(t \in I\),
+  puisque \(f\) est solution de \eqref{eq:Ediff}. Les fonctions \(b\) et \(A\) 
+  sont continues donc \(t \longmapsto b(t)\e^{A(t)}\) est continue par 
+  théorème généraux, elle admet donc des primitives sur l'intervalle \(I\). 
+  Soit \(C\) l'une de ses primitives alors, pour tout \(t \in I\), 
   \begin{equation}
     g(t) = C(t) + \mu \iff f(t) = C(t)\e^{-A(t)} + \mu \e^{-A(t)}.
   \end{equation}
   Alors on a montré que si \(f\) est solution, alors \(f\) est de cette forme.
 \end{proof}
 
-\begin{proof}[Synthèse]
-  Soit une fonction \(C\), primitive de la fonction continue \(t \longmapsto
-  b(t)\e^{-A(t)}\) et soit un scalaire \(\mu \in \K\). On définit
-  \(\fonctionL{f}{I}{\K}{t}{C(t)\e^{-A(t)} + \mu \e^{-A(t)}}\), alors \(f\) est
-  dérivable puisque les fonctions \(A\), \(C\) et l'exponentielle sont
+\begin{proof}[Synthèse] 
+  Soit une fonction \(C\), primitive de la fonction continue \(t \longmapsto 
+  b(t)\e^{-A(t)}\) et soit un scalaire \(\mu \in \K\). On définit 
+  \(\fonctionL{f}{I}{\K}{t}{C(t)\e^{-A(t)} + \mu \e^{-A(t)}}\), alors \(f\) est 
+  dérivable puisque les fonctions \(A\), \(C\) et l'exponentielle sont 
   dérivable et, pour tout \(t \in I\),
   \begin{align}
-    f'(t) + a(t)f(t)& = C'(t) \e^{-A(t)} -a(t)C(t)\e^{-A(t)}-\mu a(t) \e^{-A(t)}
-    \notag \\
+    f'(t) + a(t)f(t)& = C'(t) \e^{-A(t)} -a(t)C(t)\e^{-A(t)}-\mu a(t) \e^{-A(t)} 
+    \notag \\ 
                     &+ a(t)C(t)\e^{-A(t)} + \mu a(t) \e^{-A(t)}\\
                     &= b(t) \e^{A(t)} \e^{-A(t)} = b(t).
   \end{align}
-  Ceci démontre l'existence d'une solution pour l'équation avec second membre
+  Ceci démontre l'existence d'une solution pour l'équation avec second membre 
   et fournit une méthode pour la trouver.
 \end{proof}
 
 \begin{theo}
   \label{theo:4}
-  Soient \(I\) un intervalle réel, \(a\) et \(b\) deux fonctions au moins
-  dérivables sur \(I\). Soit \(t_0\) un réel de \(I\) et \(y_0\) un scalaire
-  de \(\K\). Il existe alors une unique fonction \(\fonctionR{f}{I}{\K}\)
-  solution de l'équation \eqref{eq:Ediff} qui satisfait la condition initiale
+  Soient \(I\) un intervalle réel, \(a\) et \(b\) deux fonctions au moins 
+  dérivables sur \(I\). Soit \(t_0\) un réel de \(I\) et \(y_0\) un scalaire 
+  de \(\K\). Il existe alors une unique fonction \(\fonctionR{f}{I}{\K}\) 
+  solution de l'équation \eqref{eq:Ediff} qui satisfait la condition initiale 
   \(y(t_0) = y_0\)
 \end{theo}
 
 \begin{proof}
-  Soit \(f_0\) une solution particulière ---~dont on connaît l'existence grâce à
-  la variation de la constante. Soit \(A\) une primitive de \(a\). D'après les
-  théorèmes~\ref{theo:2} et~\ref{theo:3}, on sait qu'une application
-  \(\fonctionR{f}{I}{\R}\) est solution de l'équation \eqref{eq:Ediff} si et
+  Soit \(f_0\) une solution particulière ---~dont on connaît l'existence grâce à 
+  la variation de la constante. Soit \(A\) une primitive de \(a\). D'après les 
+  théorèmes~\ref{theo:2} et~\ref{theo:3}, on sait qu'une application 
+  \(\fonctionR{f}{I}{\R}\) est solution de l'équation \eqref{eq:Ediff} si et 
   seulement si il existe \(\mu \in \K\) tel que pour tout \(t \in I\)
   \begin{equation}
     f(t) = f_0(t) + \mu \e^{-A(t)}
   \end{equation}
-  Donc
+  Donc 
   \begin{align}
-    f \text{~satisfait les conditions initiales} & \iff f(t_0) = y_0 \\
-                                                 & \iff f_0(t_0) +
+    f \text{~satisfait les conditions initiales} & \iff f(t_0) = y_0 \\ 
+                                                 & \iff f_0(t_0) + 
                                                  \mu\e^{-A(t_0)} = y_0 \\
-                                                 & \iff \mu =
+                                                 & \iff \mu = 
                                                  \e^{A(t_0)}(y_0-f_0(t_0))
   \end{align}
-  Il existe donc une et une seule valeur de \(\mu\) telle que \(f\) soit solution
+  Il existe donc une et une seule valeur de \(\mu\) telle que \(f\) soit solution 
   de \eqref{eq:Ediff} et satisfait les conditions initiales.
 \end{proof}
 
 \subsection{Problème de raccordement des solutions}
 \label{subsec:pbmraccordement}
 
-Soient à présent \(a\), \(b\) et \(c\) trois applications au moins continues de
+Soient à présent \(a\), \(b\) et \(c\) trois applications au moins continues de 
 \(I\) vers \(\K\). On considère l'équation différentielle suivante
 \begin{equation}
   \label{eq:raccord}
@@ -386,69 +386,69 @@ Soient à présent \(a\), \(b\) et \(c\) trois applications au moins continues d
 \end{equation}
 On distingue deux cas :
 \begin{itemize}
-  \item si \(a\) ne s'annule pas sur \(I\), alors l'équation
+  \item si \(a\) ne s'annule pas sur \(I\), alors l'équation 
     \eqref{eq:raccord} est équivalent à
     \begin{equation}
       y' + \frac{b(t)}{a(t)} y = \frac{c(t)}{a(t)},
     \end{equation}
-    et on sait alors résoudre ce genre d'équations comme on vient de le
+    et on sait alors résoudre ce genre d'équations comme on vient de le 
     faire auparavant;
-  \item si \(a\) s'annule, c'est en général en un nombre fini de points. On
-    commence par résoudre l'équation sur les sous intervalles de \(I\) où
-    \(a\) ne s'annule pas, ensuite on envisage l'existence de solutions
-    globales sur \(I\) qui devront être dérivables ---~donc continues~--- en
+  \item si \(a\) s'annule, c'est en général en un nombre fini de points. On 
+    commence par résoudre l'équation sur les sous intervalles de \(I\) où 
+    \(a\) ne s'annule pas, ensuite on envisage l'existence de solutions 
+    globales sur \(I\) qui devront être dérivables ---~donc continues~--- en 
     tout point.
 \end{itemize}
 
 \section{Équations différentielles homogènes du second ordre à coefficients constants}
 \label{sec:eqdiffsecondordrecoefconstants}
 
-Soient \(a\),\(b\) et \(c\) trois scalaires avec \(a \neq 0\). Considérons
+Soient \(a\),\(b\) et \(c\) trois scalaires avec \(a \neq 0\). Considérons 
 l'équation différentielle
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   \label{eq:Hdiff2}
   ay'' + by' + cy = 0.\tag{\(\H_2\)}
-\end{equation}
+\end{empheq}
 
 \emph{Remarque}~: L'ensemble des solutions de cette équation noté \(\S_{\H_2}\) est un \(\K\)-espace vectoriel.
 
 \subsection{Résolution dans \(\C\)}
 \label{subsec:resdansC}
 
-Maintenant \(a\), \(b\) et \(c\) sont des complexes avec \(a \neq 0\). On
-considère l'équation différentielle \eqref{eq:Hdiff2} et on cherche des
-solutions de la forme \(\fonction{g}{\R}{\C}{t}{\e^{rt}}\) avec \(r \in \C\).
+Maintenant \(a\), \(b\) et \(c\) sont des complexes avec \(a \neq 0\). On 
+considère l'équation différentielle \eqref{eq:Hdiff2} et on cherche des 
+solutions de la forme \(\fonction{g}{\R}{\C}{t}{\e^{rt}}\) avec \(r \in \C\). 
 Alors
 \begin{align}
-  g\text{~est solution de } \eqref{eq:Hdiff2} & \iff ag'' + bg' + cg = 0  \\
+  g\text{~est solution de } \eqref{eq:Hdiff2} & \iff ag'' + bg' + cg = 0  \\ 
                                               & \iff ar^2 + br + c = 0
 \end{align}
 
-On appelle cette dernière équation \emph{l'équation caractéristique} de
-l'équation \eqref{eq:Hdiff2}, et on note \(\Delta\) son discriminant. Soient \(r
-\in \C\) une racine de cette équation, un complexe \(\lambda\) et une fonction
-\(f:t \longmapsto \lambda \e^{rt}\). La fonction \(f\) est donc une solution de
+On appelle cette dernière équation \emph{l'équation caractéristique} de 
+l'équation \eqref{eq:Hdiff2}, et on note \(\Delta\) son discriminant. Soient \(r 
+\in \C\) une racine de cette équation, un complexe \(\lambda\) et une fonction 
+\(f:t \longmapsto \lambda \e^{rt}\). La fonction \(f\) est donc une solution de 
 l'équation \eqref{eq:Hdiff2}.
 
 \begin{theo}
   \label{theo:5}
   Les solutions à valeurs complexes de l'équation \eqref{eq:Hdiff2} sont de la forme~:
   \begin{itemize}
-    \item Si le discriminant de l'équation caractéristique est nul~:
-      \(\fonctionL{f}{\R}{\C}{t}{(\lambda t + \mu)\e^{rt}}\), avec \(r\)
+    \item Si le discriminant de l'équation caractéristique est nul~: 
+      \(\fonctionL{f}{\R}{\C}{t}{(\lambda t + \mu)\e^{rt}}\), avec \(r\) 
       la racine double et \(\lambda\) et \(\mu\) des complexes;
-    \item Si le discriminant de l'équation caractéristique est non nul~:
-      \(\fonctionL{f}{\R}{\C}{t}{\lambda \e^{r_1 t} + \mu \e^{r_2 t}}\)
-      avec \(r_1\) et \(r_2\) les racines et \(\lambda\) et \(\mu\) des
+    \item Si le discriminant de l'équation caractéristique est non nul~: 
+      \(\fonctionL{f}{\R}{\C}{t}{\lambda \e^{r_1 t} + \mu \e^{r_2 t}}\) 
+      avec \(r_1\) et \(r_2\) les racines et \(\lambda\) et \(\mu\) des 
       complexes.
   \end{itemize}
 \end{theo}
 
 \begin{proof}[Analyse]
-  Soit \(f\) une solution de l'équation \eqref{eq:Hdiff2}. On définit
-  \(\fonctionL{g}{\R}{\C}{t}{f(t)\e^{-rt}}\). Comme \(f\) est solution de
-  l'équation \eqref{eq:Hdiff2}, elle est dérivable deux fois. Donc pour tout
-  réel \(t\) \(f(t) = g(t) \e^{rt}\), et en injectant cette forme dans
+  Soit \(f\) une solution de l'équation \eqref{eq:Hdiff2}. On définit 
+  \(\fonctionL{g}{\R}{\C}{t}{f(t)\e^{-rt}}\). Comme \(f\) est solution de 
+  l'équation \eqref{eq:Hdiff2}, elle est dérivable deux fois. Donc pour tout 
+  réel \(t\) \(f(t) = g(t) \e^{rt}\), et en injectant cette forme dans 
   l'équation différentielle, on obtient pour tout \(t \in I\)~:
   \begin{equation}
     ag''(t) + (2ar + b)g'(t) = 0.
@@ -456,53 +456,53 @@ l'équation \eqref{eq:Hdiff2}.
 
   C'est une équation du premier ordre en \(g'\) que l'on sait résoudre. On distingue deux cas~:
   \begin{itemize}
-    \item \(2ar + b = 0 \iff r = -\frac{b}{2a}\) dans le cas où le
-      discriminant \(\Delta = 0\). On obtient une racine double donc \(g''
-      = 0\) soit \(g\) est une fonction affine et donc il existe des
+    \item \(2ar + b = 0 \iff r = -\frac{b}{2a}\) dans le cas où le 
+      discriminant \(\Delta = 0\). On obtient une racine double donc \(g'' 
+      = 0\) soit \(g\) est une fonction affine et donc il existe des 
       complexes \(\lambda\) et \(\mu\) tels que pour tout réel \(t \in I\)
       \begin{equation}
         f(t) = (\lambda t + \mu)\e^{rt};
       \end{equation}
-    \item Le discriminant est non nul et on note \(\delta\) la racine carrée
-      complexe de \(\Delta\), ainsi \(2ar + b = \delta\) donc \(g'' +
-      \frac{a}{\delta} g' = 0\). D'après le théorème~\ref{theo:1}, il
+    \item Le discriminant est non nul et on note \(\delta\) la racine carrée 
+      complexe de \(\Delta\), ainsi \(2ar + b = \delta\) donc \(g'' + 
+      \frac{a}{\delta} g' = 0\). D'après le théorème~\ref{theo:1}, il 
       existe un complexe \(\lambda\) tel que pour tout réel \(t \in I\) on a
-      \(g'(t) = \lambda \e^{-\frac{\delta}{a}}\). Ainsi il existe un autre
-      complexe, la constante d'intégration, \(\mu\) tel que \(g(t) =
-      -\lambda \frac{a}{\delta} \e^{-\frac{\delta}{a} t} + \mu\). En
-      revenant à la fonction \(f\), on a \(f(t) = \lambda' \e^{r_2 t} +
-      \mu \e^{r_1 t}\), où \(r_1\) et \(r_2\) sont les racines de
+      \(g'(t) = \lambda \e^{-\frac{\delta}{a}}\). Ainsi il existe un autre 
+      complexe, la constante d'intégration, \(\mu\) tel que \(g(t) = 
+      -\lambda \frac{a}{\delta} \e^{-\frac{\delta}{a} t} + \mu\). En 
+      revenant à la fonction \(f\), on a \(f(t) = \lambda' \e^{r_2 t} + 
+      \mu \e^{r_1 t}\), où \(r_1\) et \(r_2\) sont les racines de 
       l'équation caractéristique.
   \end{itemize}
-  Dans chacun des deux cas, on a trouvé la solution \(f\) de l'équation
+  Dans chacun des deux cas, on a trouvé la solution \(f\) de l'équation 
   différentielle \eqref{eq:Hdiff2}.
 \end{proof}
 
 \begin{proof}[Synthèse]
   Ici aussi, on distingue deux cas
   \begin{itemize}
-    \item Dans le cas où le discriminant est nul, l'équation caractéristique
-      admet alors une racine double \(r = -\frac{b}{2a}\). On considère
-      alors la fonction \(\fonctionL{f_1}{\R}{\C}{t}{t\e^{rt}}\). Montrons
-      que \(f_1\) est solution de l'équation \eqref{eq:Hdiff2}. La
-      fonction \(f_1\) est deux fois dérivable et on a pour tout réel \(t
+    \item Dans le cas où le discriminant est nul, l'équation caractéristique 
+      admet alors une racine double \(r = -\frac{b}{2a}\). On considère 
+      alors la fonction \(\fonctionL{f_1}{\R}{\C}{t}{t\e^{rt}}\). Montrons 
+      que \(f_1\) est solution de l'équation \eqref{eq:Hdiff2}. La 
+      fonction \(f_1\) est deux fois dérivable et on a pour tout réel \(t 
       \in I\)
       \begin{equation}
-        af_1''(t) + bf_1'(t) + cf_1(t) = \e^{rt} \left( (ar^2 + br + c)t
+        af_1''(t) + bf_1'(t) + cf_1(t) = \e^{rt} \left( (ar^2 + br + c)t 
         + 2ar + b \right).
       \end{equation}
 
-      Le complexe \(r\) est une racine double donc \(ar^2 + br + c = 2ar +
-      b = 0\) donc \(f_1\) est solution de l'équation \eqref{eq:Hdiff2}.
-      Soit la fonction \(\fonctionL{f_2}{\R}{\C}{t}{\e^{rt}}\). Elle est
-      solution de l'équation \eqref{eq:Hdiff2} puisque \(r\) est une
+      Le complexe \(r\) est une racine double donc \(ar^2 + br + c = 2ar + 
+      b = 0\) donc \(f_1\) est solution de l'équation \eqref{eq:Hdiff2}. 
+      Soit la fonction \(\fonctionL{f_2}{\R}{\C}{t}{\e^{rt}}\). Elle est 
+      solution de l'équation \eqref{eq:Hdiff2} puisque \(r\) est une 
       racine de l'équation caractéristique.
-    \item Dans le cas où le discriminant n'est pas nul, l'équation
-      caractéristique admet alors deux solutions distinctes \(r_1\) et
-      \(r_2\). Si on pose les fonctions associées \(f_1\) et \(f_2\),
-      elles sont solutions de l'équation \eqref{eq:Hdiff2}. Puisque
-      l'ensemble des solutions de l'équation \eqref{eq:Hdiff2} est un
-      espace vectoriel alors toute combinaison linéaire de \(f_1\) et
+    \item Dans le cas où le discriminant n'est pas nul, l'équation 
+      caractéristique admet alors deux solutions distinctes \(r_1\) et 
+      \(r_2\). Si on pose les fonctions associées \(f_1\) et \(f_2\), 
+      elles sont solutions de l'équation \eqref{eq:Hdiff2}. Puisque 
+      l'ensemble des solutions de l'équation \eqref{eq:Hdiff2} est un 
+      espace vectoriel alors toute combinaison linéaire de \(f_1\) et 
       \(f_2\) est une solution de l'équation \eqref{eq:Hdiff2}.
   \end{itemize}
 \end{proof}
@@ -510,161 +510,161 @@ l'équation \eqref{eq:Hdiff2}.
 \subsection{Résolution sur \(\R\)}
 \label{subsec:resR}
 
-Dans ce paragraphe, on considère que les scalaires \(a\), \(b\) et \(c\) sont
-des réels avec \(a \neq 0\). On note \(\Delta = b^2-4ac\) le discriminant de
+Dans ce paragraphe, on considère que les scalaires \(a\), \(b\) et \(c\) sont 
+des réels avec \(a \neq 0\). On note \(\Delta = b^2-4ac\) le discriminant de 
 l'équation caractéristique.
 \begin{theo}
   \label{theo:6}
-  Les solutions à valeurs complexes de l'équation \eqref{eq:Hdiff2} sont de la
+  Les solutions à valeurs complexes de l'équation \eqref{eq:Hdiff2} sont de la 
   forme suivante~:
   \begin{itemize}
-    \item si le discriminant est nul, \(t \longmapsto (\lambda t +
-      \mu)\e^{rt}\), avec \(r\) la racine double et \(\lambda \ \mu\) des
+    \item si le discriminant est nul, \(t \longmapsto (\lambda t + 
+      \mu)\e^{rt}\), avec \(r\) la racine double et \(\lambda \ \mu\) des 
       réels;
-    \item si le discriminant est positif, \(t \longmapsto \lambda \e^{r_1 t}
-      + \mu \e^{r_2 t}\), avec \(r_1 \ r_2\) les racines et \(\lambda \
+    \item si le discriminant est positif, \(t \longmapsto \lambda \e^{r_1 t} 
+      + \mu \e^{r_2 t}\), avec \(r_1 \ r_2\) les racines et \(\lambda \ 
       \mu\) des réels;
-    \item si le discriminant est négatif, \(t \longmapsto \e^{\alpha t} (A
-      \cos \omega t + B \sin \omega t)\) avec \(A\) et \(B\) des réels et
+    \item si le discriminant est négatif, \(t \longmapsto \e^{\alpha t} (A 
+      \cos \omega t + B \sin \omega t)\) avec \(A\) et \(B\) des réels et 
       \(\alpha = -\frac{b}{2a} \ \omega = \frac{\sqrt{-\Delta}}{2a}\).
   \end{itemize}
-  On dit alors que \(\S_{\H{}}\) est de dimension 2, c'est-à-dire que c'est un plan vectoriel.
+  On dit alors que \(\S_{\H}\) est de dimension 2, c'est-à-dire que c'est un plan vectoriel.
 \end{theo}
 
 \begin{proof}
   On cherche des solutions de la première sous-section qui sont à valeurs réelles~:
   \begin{enumerate}
-    \item[Cas 1]Si le discriminant est nul alors si \(f\) est à valeurs
-      réelles alors \(f(0) = \mu \in \R\) et \(f(1) = (\lambda + \mu)\e^r
-      \iff \lambda = f(1)\e^{-r}-f(0) \in \R\). Réciproquement si
-      \(\lambda\) et \(\mu\) sont des réels alors \(f\) est à valeurs
+    \item[Cas 1]Si le discriminant est nul alors si \(f\) est à valeurs 
+      réelles alors \(f(0) = \mu \in \R\) et \(f(1) = (\lambda + \mu)\e^r 
+      \iff \lambda = f(1)\e^{-r}-f(0) \in \R\). Réciproquement si 
+      \(\lambda\) et \(\mu\) sont des réels alors \(f\) est à valeurs 
       réelles;
-    \item[Cas 2]Si le discriminant est positif alors si \(f\) est à valeurs
-      réelles alors on a \(f(0) = \lambda + \mu\) et \(f(1) = \lambda
-      \e^{r_1} + \mu \e^{r_2}\) donc \(\mu =
-      \frac{f(1)-f(0)\e^{r_1}}{\e^{r_2}-\e^{r_1}}\) et \(\lambda = f(0) -
-      \mu\) et comme \(r_2 \neq r_1\) et que \(\exp\) est injective alors
-      \(\e^{r_1} \neq \e^{r_2}\) ainsi \(\lambda, \mu \in \R\),
-      réciproquement si \(\lambda, \mu \in \R\) alors \(f\) est à valeur
+    \item[Cas 2]Si le discriminant est positif alors si \(f\) est à valeurs 
+      réelles alors on a \(f(0) = \lambda + \mu\) et \(f(1) = \lambda 
+      \e^{r_1} + \mu \e^{r_2}\) donc \(\mu = 
+      \frac{f(1)-f(0)\e^{r_1}}{\e^{r_2}-\e^{r_1}}\) et \(\lambda = f(0) - 
+      \mu\) et comme \(r_2 \neq r_1\) et que \(\exp\) est injective alors 
+      \(\e^{r_1} \neq \e^{r_2}\) ainsi \(\lambda, \mu \in \R\), 
+      réciproquement si \(\lambda, \mu \in \R\) alors \(f\) est à valeur 
       réelles;
-    \item[Cas 3]Si le discriminant est négatif alors l'équation
-      caractéristique admet deux racines complexes conjuguées \(r_1 =
-      \alpha + \ii \omega\) et \(r_2 = \alpha-\ii \omega\) avec \(\alpha =
-      -\frac{b}{2a}\) et \(\omega = \frac{\sqrt{-\Delta}}{2a}\), il existe
-      un doublet de complexe \((\lambda, \mu)\) tel que pour tout réel
-      \(t\) on ait \(f(t) = \lambda \e^{r_1 t} + \mu \e^{r_2 t} = \lambda
-      \e^{\alpha t} \e^{\ii \omega t} + \mu \e^{\alpha t} \e^{\ii \omega
+    \item[Cas 3]Si le discriminant est négatif alors l'équation 
+      caractéristique admet deux racines complexes conjuguées \(r_1 = 
+      \alpha + \ii \omega\) et \(r_2 = \alpha-\ii \omega\) avec \(\alpha = 
+      -\frac{b}{2a}\) et \(\omega = \frac{\sqrt{-\Delta}}{2a}\), il existe 
+      un doublet de complexe \((\lambda, \mu)\) tel que pour tout réel 
+      \(t\) on ait \(f(t) = \lambda \e^{r_1 t} + \mu \e^{r_2 t} = \lambda 
+      \e^{\alpha t} \e^{\ii \omega t} + \mu \e^{\alpha t} \e^{\ii \omega 
       t}\). Alors
       \begin{align}
-        f(t)& = (\lambda_1 + \ii \lambda_2) \e^{\alpha t} \e^{\ii \omega
+        f(t)& = (\lambda_1 + \ii \lambda_2) \e^{\alpha t} \e^{\ii \omega 
         t}  + (\mu_1 + \ii \mu_2) \e^{\alpha t} \e^{-\ii \omega t} \\
-            &= \lambda_1\e^{\alpha t} \cos(\omega t) + \ii \lambda_1
-            \e^{\alpha t} \sin(\omega t) + \ii \lambda_2 \e^{\alpha t}
-            \cos(\omega t) - \lambda_2 \e^{\alpha t} \sin(\omega t)
+            &= \lambda_1\e^{\alpha t} \cos(\omega t) + \ii \lambda_1 
+            \e^{\alpha t} \sin(\omega t) + \ii \lambda_2 \e^{\alpha t} 
+            \cos(\omega t) - \lambda_2 \e^{\alpha t} \sin(\omega t) 
             \notag \\
-            &+ \mu_1\e^{\alpha t}\cos(\omega t) -\ii \mu_1 \e^{\alpha t}
-            \sin(\omega t) + \ii\mu_2 \e^{\alpha t} \cos(\omega t) +
+            &+ \mu_1\e^{\alpha t}\cos(\omega t) -\ii \mu_1 \e^{\alpha t} 
+            \sin(\omega t) + \ii\mu_2 \e^{\alpha t} \cos(\omega t) + 
             \mu_2 \e^{\alpha t} \sin(\omega t) \\
-            &= \e^{\alpha t} \left[ \cos(\omega t) (\lambda_1 + \mu_1)+
-            \sin(\omega t)(\mu_2-\lambda_2)\right] + \ii\e^{\alpha t}
+            &= \e^{\alpha t} \left[ \cos(\omega t) (\lambda_1 + \mu_1)+ 
+            \sin(\omega t)(\mu_2-\lambda_2)\right] + \ii\e^{\alpha t} 
             \cos(\omega t) (\lambda_2 + \mu_2) \notag \\
             &+ \ii\e^{\alpha t} \sin(\omega t)(\lambda_1-\mu_1).
       \end{align}
-      Si \(f\) est à valeurs réelles alors \(\Im(f) = \tilde{0}\), ce qui
+      Si \(f\) est à valeurs réelles alors \(\Im(f) = \tilde{0}\), ce qui 
       implique que pour tout réel \(t\) on ait
       \begin{equation}
-        \e^{\alpha t} \left[ \cos(\omega t) (\lambda_2 + \mu_2)+
+        \e^{\alpha t} \left[ \cos(\omega t) (\lambda_2 + \mu_2)+ 
         \sin(\omega t)(\lambda_1-\mu_1)\right] = 0,
       \end{equation}
       puisque pour tout les réels \(t\) \(\e^{\alpha t} \neq 0\) on a
       \begin{equation}
         \cos(\omega t) (\lambda_2 + \mu_2)+ \sin(\omega t)(\lambda_1-\mu_1) = 0,
       \end{equation}
-      et en posant \(t = 0\) et \(t = \frac{\pi}{2 \omega}\), on obtient
+      et en posant \(t = 0\) et \(t = \frac{\pi}{2 \omega}\), on obtient 
       un système d'équation qui nous donne \(\mu = \bar{\lambda}\).
       Réciproquement si \(\mu = \bar{\lambda}\) alors pour tout réel \(t\), on a
-      \begin{equation}
-        f(t) = \lambda \e^{\alpha t} \e^{\ii \omega t} + \bar{\lambda}
+      \begin{equation} 
+        f(t) = \lambda \e^{\alpha t} \e^{\ii \omega t} + \bar{\lambda} 
         \e^{\alpha t} \e^{-\ii\omega t},
       \end{equation}
       alors
       \begin{equation}
-        f(t) = (\lambda + \bar{\lambda}) \e^{\alpha t} \cos \omega t +
+        f(t) = (\lambda + \bar{\lambda}) \e^{\alpha t} \cos \omega t + 
         \ii(\lambda - \bar{\lambda}) \e^{\alpha t}\sin \omega t.
       \end{equation}
       On pose \(A = 2 \Re(\lambda)\) et  \(B = 2\Im(\lambda)\), ainsi
       \begin{equation}
-        \forall t \in \R \quad f(t) = \e^{\alpha t} (A \cos \omega t -B
+        \forall t \in \R \quad f(t) = \e^{\alpha t} (A \cos \omega t -B 
         \sin \omega t).
       \end{equation}
-      Si \((A,B) = (0,0)\) alors \(f(t) = 0\). Sinon, on a \(A^2 + B^2>0\) et
+      Si \((A,B) = (0,0)\) alors \(f(t) = 0\). Sinon, on a \(A^2 + B^2>0\) et 
       \begin{equation}
-        \left(\dfrac{A}{\sqrt{A^2 + B^2}} \right)^2 +
+        \left(\dfrac{A}{\sqrt{A^2 + B^2}} \right)^2 + 
         \left(\dfrac{B}{\sqrt{A^2 + B^2}} \right)^2 = 1,
       \end{equation}
-      donc il existe un réel \(\varphi\) tel que \(\cos \varphi =
-      \frac{A}{C}\) et \(\sin \varphi = \frac{B}{C}\) avec \(C = \sqrt{A^2
+      donc il existe un réel \(\varphi\) tel que \(\cos \varphi = 
+      \frac{A}{C}\) et \(\sin \varphi = \frac{B}{C}\) avec \(C = \sqrt{A^2 
       + B^2}\). On a donc pour tout réel \(t\)
       \begin{equation}
-        f(t) = \e^{\alpha t} (C \cos \varphi \cos \omega t - C \sin
-        \varphi \sin \omega t) = C \e^{\alpha t} \cos(\omega t +
+        f(t) = \e^{\alpha t} (C \cos \varphi \cos \omega t - C \sin 
+        \varphi \sin \omega t) = C \e^{\alpha t} \cos(\omega t + 
         \varphi)
       \end{equation}
-      Dans les deux cas, \((A, B)\) nul ou non nul, les solutions obtenues
+      Dans les deux cas, \((A, B)\) nul ou non nul, les solutions obtenues 
       sont à valeurs réelles.
   \end{enumerate}
-  Dans chacun de ces trois cas, on a trouvé une solution réelle de l'équation
+  Dans chacun de ces trois cas, on a trouvé une solution réelle de l'équation 
   différentielle \eqref{eq:Hdiff2}.
 \end{proof}
 
-\section{Équation différentielles linéaires du second ordre à coefficients
+\section{Équation différentielles linéaires du second ordre à coefficients 
 constants avec second membre}
 \label{sec:eqdifflinsecondordrecoefconstantsecondmembre}
 
-Soient \((a,b,c) \in \K^{*}\), \(\fonctionR{d}{I}{\K}\) une fonction au moins
+Soient \((a,b,c) \in \K^{*}\), \(\fonctionR{d}{I}{\K}\) une fonction au moins 
 continue. On considère l'équation différentielle
-\begin{equation}
+\begin{empheq}[box = \shadowbox*]{equation}
   \label{eq:Ediff2}
   ay'' + by' + cy = d(t) \tag{\(\E_2\)}
-\end{equation}
-On note \(\S_{\E_2}\) l'ensemble des solutions de l'équation \eqref{eq:Ediff2}.
-L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on note
+\end{empheq}
+On note \(\S_{\E_2}\) l'ensemble des solutions de l'équation \eqref{eq:Ediff2}. 
+L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on note 
 \(\mathcal{S}_{\H_2}\) l'ensemble des solutions de l'équation \eqref{eq:Hdiff2}.
 
 \subsection{Solution générale et solution particulière}
 \label{subsec:solutiongeneraleetsolutionpart}
 
 \begin{theo}
-  Supposons connaître une solution \(f_0\) de l'équation \eqref{eq:Ediff2}
-  ---~dite \emph{solution particulière}~--- alors une application
-  \(\fonctionR{f}{I}{\K}\) est une solution de \(\E\) si et seulement si la
-  fonction \(f-f_0\) est une solution de l'équation \eqref{eq:Hdiff2}.
+  Supposons connaître une solution \(f_0\) de l'équation \eqref{eq:Ediff2} 
+  ---~dite \emph{solution particulière}~--- alors une application 
+  \(\fonctionR{f}{I}{\K}\) est une solution de \(\E\) si et seulement si la 
+  fonction \(f-f_0\) est une solution de l'équation \eqref{eq:Hdiff2}. 
 
-  On a donc \(\S_{\E_2} = \S_{\H_2} + f_0\). On dit que la solution générale
-  de \eqref{eq:Ediff2} est la somme d'une solution particulière et de la
+  On a donc \(\S_{\E_2} = \S_{\H_2} + f_0\). On dit que la solution générale 
+  de \eqref{eq:Ediff2} est la somme d'une solution particulière et de la 
   solution générale de l'équation \eqref{eq:Hdiff2}.
 \end{theo}
 
 \begin{proof}
-  Supposons que \(f\) est une solution de \(\E\) et posons \(g = f - f_0\)
-  puisque \(f\) et \(f_0\) sont des solutions de \(\E\), elles sont dérivables
-  deux fois et par conséquent \(g\) est aussi dérivable deux fois, et on a
+  Supposons que \(f\) est une solution de \(\E\) et posons \(g = f - f_0\) 
+  puisque \(f\) et \(f_0\) sont des solutions de \(\E\), elles sont dérivables 
+  deux fois et par conséquent \(g\) est aussi dérivable deux fois, et on a 
   pour tout réel \(t \in I\)
   \begin{align}
     ag''(t) + bg'(t) + cg(t) &= af''(t) + bf'(t) + cf(t) \notag\\
-                             &- (af_0''(t) + bf_0'(t) + cf_0(t))\\
+                             &- (af_0''(t) + bf_0'(t) + cf_0(t))\\ 
                              &= d(t)-d(t) = 0
   \end{align}
   La fonction \(g\) est donc solution de l'équation \eqref{eq:Hdiff2}.
 
-  Supposons que \(g = f-f_0\) soit solution de l'équation \eqref{eq:Hdiff2}.
-  Puisque \(g\) est solution de l'équation \eqref{eq:Hdiff2} elle est deux
-  fois dérivable et puisque \(f_0\) est solution de l'équation
-  \eqref{eq:Ediff2} alors elle est deux fois dérivable. Ainsi donc \(f = g +
+  Supposons que \(g = f-f_0\) soit solution de l'équation \eqref{eq:Hdiff2}. 
+  Puisque \(g\) est solution de l'équation \eqref{eq:Hdiff2} elle est deux 
+  fois dérivable et puisque \(f_0\) est solution de l'équation 
+  \eqref{eq:Ediff2} alors elle est deux fois dérivable. Ainsi donc \(f = g + 
   f_0\) est deux fois dérivable et on a pour tout \(t \in I\)~:
   \begin{align}
-    af''(t) + bf'(t) + cf(t)& = (ag''(t) + bg'(t) + cg(t))\notag\\
-                            & + (af_0''(t) + bf_0'(t) + cf_0(t))\\
+    af''(t) + bf'(t) + cf(t)& = (ag''(t) + bg'(t) + cg(t))\notag\\ 
+                            & + (af_0''(t) + bf_0'(t) + cf_0(t))\\ 
                             & = 0 + d(t)
   \end{align}
   donc \(f\) est solution de l'équation \eqref{eq:Ediff2}.
@@ -675,10 +675,10 @@ L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on 
 \begin{prop}
   Soient \(f_1\) et \(f_2\) des solutions particulières respectives des équations
   \begin{align}
-    ay'' + by' + cy = &d_1(t) \label{eq:EdiffE1}\\
+    ay'' + by' + cy = &d_1(t) \label{eq:EdiffE1}\\ 
     ay'' + by' + cy = &d_2(t) \label{eq:EdiffE2},
   \end{align}
-  où \(d_1\) et \(d_2\) sont des fonctions au moins continues de \(I\) vers
+  où \(d_1\) et \(d_2\) sont des fonctions au moins continues de \(I\) vers 
   \(\K\). Alors \(f = f_1 + f_2\) est une solution de l'équation
   \begin{equation}
     \label{eq:EdiffE0}
@@ -687,27 +687,27 @@ L'équation homogène associée et \eqref{eq:Hdiff2} et de la même manière on 
 \end{prop}
 
 \begin{proof}
-  Soient \(f_1\) et \(f_2\) des solutions respectives de l'équation
-  \eqref{eq:EdiffE1} et de l'équation \eqref{eq:EdiffE2}, alors \(f_1\) et
+  Soient \(f_1\) et \(f_2\) des solutions respectives de l'équation 
+  \eqref{eq:EdiffE1} et de l'équation \eqref{eq:EdiffE2}, alors \(f_1\) et 
   \(f_2\) sont dérivables sur \(I\) donc \(f_1 + f_2\) aussi~:
   \begin{align}
-    \forall t \in I \quad af''(t) + bf'(t) + cf(t)& = af_1''(t) + bf_1'(t) +
+    \forall t \in I \quad af''(t) + bf'(t) + cf(t)& = af_1''(t) + bf_1'(t) + 
     cf_1(t) \notag \\
-                                                  &+ af_2''(t) + bf_2'(t) +
+                                                  &+ af_2''(t) + bf_2'(t) + 
     cf_2(t)\\ & = d_1(t) + d_2(t)
   \end{align}
-  Car \(f_1\) et \(f_2\) sont solutions de l'équation \eqref{eq:EdiffE1} et de
-  l'équation \eqref{eq:EdiffE2} respectivement. La fonction \(f\) est donc une
+  Car \(f_1\) et \(f_2\) sont solutions de l'équation \eqref{eq:EdiffE1} et de 
+  l'équation \eqref{eq:EdiffE2} respectivement. La fonction \(f\) est donc une 
   solution de l'équation \eqref{eq:EdiffE0}.
 \end{proof}
 
-\emph{Application} : Si le second membre est de la forme \(d_1(t)+ \dotsb  +
-d_n(t)\) on cherche indépendamment des solutions particulières \(f_i\) des
-équations différentielles correspondantes avec le second membre \(d_i\) et
-ensuite on somme toutes les solutions pour trouver la solution particulière de
+\emph{Application} : Si le second membre est de la forme \(d_1(t)+ \dotsb  + 
+d_n(t)\) on cherche indépendamment des solutions particulières \(f_i\) des 
+équations différentielles correspondantes avec le second membre \(d_i\) et 
+ensuite on somme toutes les solutions pour trouver la solution particulière de 
 l'équation de départ.
 
-\subsection{Recherche d'une solution particulière dans le cas où le second
+\subsection{Recherche d'une solution particulière dans le cas où le second 
 membre est une ``exponentielle polynôme''}
 \label{subsec:recherchesolutionpartexppol}
 
@@ -718,18 +718,18 @@ Dans ce cours on s'intéresse uniquement à des seconds membre de cette forme.
   \begin{equation}
     d(t) = \sum_{k = 1}^{n} \e^{m_k t} P_k (t),
   \end{equation}
-  où \(n \in \N^*\), \(m_1, \ldots, m_n \in \K\) et \( P_1, \ldots, P_n\) sont
+  où \(n \in \N^*\), \(m_1, \ldots, m_n \in \K\) et \( P_1, \ldots, P_n\) sont 
   des fonctions polynomiales.
 \end{defdef}
-On considère l'équation différentielle  suivante avec \((a,b,c) \in
+On considère l'équation différentielle  suivante avec \((a,b,c) \in 
 \K^{*}\times\K\times\K\).
 \begin{equation}
   \label{eq:Ediff4}
   ay'' + by' + cy = \sum_{k = 1}^{n} \e^{kt} P_k(t)
 \end{equation}
 
-On cherche une solution particulière de l'équation \eqref{eq:Ediff4}. Grâce au
-principe de superposition, il suffit de trouver une solution particulière pour
+On cherche une solution particulière de l'équation \eqref{eq:Ediff4}. Grâce au 
+principe de superposition, il suffit de trouver une solution particulière pour 
 chacune des équation \(\E_k\)~:
 \begin{equation}
   \label{eq:Ediffk}
@@ -739,127 +739,127 @@ chacune des équation \(\E_k\)~:
 On admet l'indice \(k\) dans une partie de la suite pour alléger la notation.
 
 \begin{theo}
-  Pour tout entier \(k \in \intervalleentier{1}{n}\) il existe une solution
+  Pour tout entier \(k \in \intervalleentier{1}{n}\) il existe une solution 
   particulière \(f_k\) de l'équation \eqref{eq:Ediffk} de la forme suivante
   \begin{itemize}
-    \item si \(m_k\) n'est pas racine de l'équation caractéristique alors
-      pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où
+    \item si \(m_k\) n'est pas racine de l'équation caractéristique alors 
+      pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où 
       \(\deg(Q_k) = \deg(P_k)\);
-    \item si \(m_k\) est une racine simple de l'équation caractéristique
-      alors pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où
+    \item si \(m_k\) est une racine simple de l'équation caractéristique 
+      alors pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où 
       \(\deg(Q_k) = \deg(P_k) + 1\);
-    \item si \(m_k\) est une racine double de l'équation caractéristique
-      alors pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où
+    \item si \(m_k\) est une racine double de l'équation caractéristique 
+      alors pour tout réel \(t \in I\) \(f_k(t) = e^{m_k t} Q_k(t)\) où 
       \(\deg(Q_k) = \deg(P_k) + 2\).
   \end{itemize}
-  La fonction \(f = \sum_{k = 1}^{n} f_k\) est alors une solution particulière
-  de l'équation \eqref{eq:Ediff4}. Dans le deuxième cas, on pourra supposer le
-  terme constant de \(Q_k\) nul et dans le troisième cas, on pourra supposer
+  La fonction \(f = \sum_{k = 1}^{n} f_k\) est alors une solution particulière 
+  de l'équation \eqref{eq:Ediff4}. Dans le deuxième cas, on pourra supposer le 
+  terme constant de \(Q_k\) nul et dans le troisième cas, on pourra supposer 
   que le terme de degré \(0\) et \(1\) de \(Q_k\) sont nuls.
 \end{theo}
 
 \begin{proof}[Analyse]
-  Soit  \(f\) une solution de l'équation \eqref{eq:Ediffk}. On définit
-  \(\fonctionL{g}{I}{\K}{t}{\e^{-mt}f(t)}\) alors puisque \(f\) est solution,
-  elle est deux fois dérivable et donc \(g\) est dérivable deux fois. Alors
+  Soit  \(f\) une solution de l'équation \eqref{eq:Ediffk}. On définit 
+  \(\fonctionL{g}{I}{\K}{t}{\e^{-mt}f(t)}\) alors puisque \(f\) est solution, 
+  elle est deux fois dérivable et donc \(g\) est dérivable deux fois. Alors 
   pour tout réel \(t \in I\)
   \begin{align}
-    f(t)& = g(t)\e^{mt}, \\
+    f(t)& = g(t)\e^{mt}, \\ 
     f'(t)& = (mg(t) + g'(t))\e^{mt}, \\
     f''(t)& = (m^2g(t) + 2mg'(t) + g''(t))\e^{mt}.
   \end{align}
-  La fonction \(f\) est solution de l'équation \eqref{eq:Ediffk} donc, pour
+  La fonction \(f\) est solution de l'équation \eqref{eq:Ediffk} donc, pour 
   tout réel \(t \in I\),
   \begin{align}
     af''(t) + bf'(t) + cf(t)& = \e^{mt} P(t), \\
-    \e^{mt}(am^2g(t) + 2amg'(t) + ag''(t)) + &  \notag \\
+    \e^{mt}(am^2g(t) + 2amg'(t) + ag''(t)) + &  \notag \\ 
     \e^{mt}(bmg(t) + bg'(t)) + c\e^{mt}g(t)& = \e^{mt}P(t), \\
-    ag''(t) + (2am + b)g'(t)  + (am^2 + bm + c)g(t)& = P(t) \quad (\e^{mt}
+    ag''(t) + (2am + b)g'(t)  + (am^2 + bm + c)g(t)& = P(t) \quad (\e^{mt} 
     \neq 0). \label{eq:F}
   \end{align}
-  On a montré que \(g\) est solution d'une équation différentielle linéaire du
-  2\up{nd} ordre à coefficients constants dont le 2\up{nd} membre est un
+  On a montré que \(g\) est solution d'une équation différentielle linéaire du 
+  2\up{nd} ordre à coefficients constants dont le 2\up{nd} membre est un 
   polynôme. On distingue trois cas~:
   \begin{enumerate}
-    \item si \(am^2 + bm + c \neq 0\) alors il existe une solution
-      particulière de l'équation \eqref{eq:F} sous la forme \(g = Q\) où
-      \(Q\) est un polynôme de même degré que \(P\). Il en existe une
+    \item si \(am^2 + bm + c \neq 0\) alors il existe une solution 
+      particulière de l'équation \eqref{eq:F} sous la forme \(g = Q\) où 
+      \(Q\) est un polynôme de même degré que \(P\). Il en existe une 
       seule de cette forme.
-    \item si \(am^2 + bm + c = 0\) et \(2am + b \neq 0\) alors il existe une
-      solution particulière de l'équation \eqref{eq:F} sous la forme \(g =
+    \item si \(am^2 + bm + c = 0\) et \(2am + b \neq 0\) alors il existe une 
+      solution particulière de l'équation \eqref{eq:F} sous la forme \(g = 
       Q\) où \(Q\) est un polynôme de degré \(deg(P) + 1\).
-    \item si  \(am^2 + bm + c = 0\) et \(2am + b = 0\) alors il existe une
-      solution particulière de l'équation \eqref{eq:F} sous la forme \(g =
+    \item si  \(am^2 + bm + c = 0\) et \(2am + b = 0\) alors il existe une 
+      solution particulière de l'équation \eqref{eq:F} sous la forme \(g = 
       Q\) où \(Q\) est un polynôme de degré \(deg(P) + 2\).
   \end{enumerate}
   On propose de démontrer ces trois cas un par un.
 
-  Si \(am^2 + bm + c \neq 0\) on pose \(P(t) = \sum_{j = 0}^{n} \alpha_j t^j\)
-  et on cherche \(g\) sous la forme \(g(t) = \sum_{j = 0}^{n} \beta_j t^j\).
+  Si \(am^2 + bm + c \neq 0\) on pose \(P(t) = \sum_{j = 0}^{n} \alpha_j t^j\) 
+  et on cherche \(g\) sous la forme \(g(t) = \sum_{j = 0}^{n} \beta_j t^j\). 
   La fonction \(g\) est deux fois dérivable et pour tout \(t \in I\)
   \begin{align}
-    g'(t) &= \sum_{j = 1}^n \beta_j j t^{j-1} = \sum_{j = 0}^{n-1} \beta_{j
+    g'(t) &= \sum_{j = 1}^n \beta_j j t^{j-1} = \sum_{j = 0}^{n-1} \beta_{j 
     + 1} t^j; \\
       g''(t) &= \sum_{k = 0}^{n-2} \beta_{k + 2} (k + 2)(k + 1) t^k.
   \end{align}
   Ainsi \(g\) est solution de l'équation \eqref{eq:F} si et seulement si
   \begin{gather}
-    a \sum_{j = 0}^{n-2} \beta_{j + 2} (j + 2)(j + 1)t^j+ (2am + b) \sum_{j
+    a \sum_{j = 0}^{n-2} \beta_{j + 2} (j + 2)(j + 1)t^j+ (2am + b) \sum_{j 
     = 0}^{n-1} \beta_{j-1}(j + 1)t^j \notag \\
-    + (am^2 + bm + c)\sum_{j = 0}^{n} \beta_j t^j  =  \sum_{j = 0}^{n}
+    + (am^2 + bm + c)\sum_{j = 0}^{n} \beta_j t^j  =  \sum_{j = 0}^{n} 
     \alpha_j t^j,
   \end{gather}
   c'est-à-dire en changeant les variables si et seulement si
   \begin{gather}
-    \sum_{j = 0}^{n-2} a\beta_{j + 2} (j + 2)(j + 1)t^j +  \sum_{j =
+    \sum_{j = 0}^{n-2} a\beta_{j + 2} (j + 2)(j + 1)t^j +  \sum_{j = 
     0}^{n-2}(2am + b)\beta_{j + 1}(j + 1)t^j  \notag \\
-    + (2am + b)\beta_n nt^{n-1}+ \sum_{j = 0}^{n-2} (am^2 + bm + c) \beta_j
+    + (2am + b)\beta_n nt^{n-1}+ \sum_{j = 0}^{n-2} (am^2 + bm + c) \beta_j 
     t^j  + (am^2 + bm + c)\beta_{n-1} t^{n-1} \notag \\
     + (am^2 + bm + c) \beta_nt^n = \sum_{j = 0}^{n} \alpha_j t^j.
   \end{gather}
-  Deux polynômes sont égaux si et seulement s'ils ont les mêmes coefficients,
-  donc si et seulement si pour tout naturel \(j\) de
+  Deux polynômes sont égaux si et seulement s'ils ont les mêmes coefficients, 
+  donc si et seulement si pour tout naturel \(j\) de 
   \(\intervalleentier{0}{n-2}\)
   \begin{equation}
     \begin{cases}
-      \alpha_j = a \beta_{j + 2}(j + 2)(j + 1) + (2am + b)\beta_{j + 1}(j
+      \alpha_j = a \beta_{j + 2}(j + 2)(j + 1) + (2am + b)\beta_{j + 1}(j 
       + 1) + (am^2 + bm + c)\beta_j\\
       \alpha_{n-1}= (2am + b)\beta_n n  + (am^2 + bm + c)\beta_{n-1} \\
       \alpha_n = (am^2 + bm + c) \beta_n
     \end{cases}.
   \end{equation}
-  Comme \(am^2 + bm + c \neq 0\), on peut calculer \(\beta_n\) en fonction de
-  \(\alpha_n\). Ensuite on peut exprimer \(\beta_{n-1}\) en fonction de
-  \(\beta_{n}\) et \(\alpha_{n-1}\) et donc tous les coefficients de proche en
-  proche. Ce système se résout de proche en proche et admet une unique
+  Comme \(am^2 + bm + c \neq 0\), on peut calculer \(\beta_n\) en fonction de 
+  \(\alpha_n\). Ensuite on peut exprimer \(\beta_{n-1}\) en fonction de 
+  \(\beta_{n}\) et \(\alpha_{n-1}\) et donc tous les coefficients de proche en 
+  proche. Ce système se résout de proche en proche et admet une unique 
   solution.
 
-  Si \(am^2 + bm + c = 0\) et \(2am + b \neq 0\), \(g\) est solution de \(ay''
-  + (2am + b)y' = P\) et donc \(g'\) est solution de \(0z'' + az' + (2am + b)z
-  = P\) avec \(2am + b \neq 0\). D'après le premier cas, la dernière équation
-  admet une solution polynomiale de degré \(\deg(P)\), et si on prend une
-  primitive de cette solution, on obtient une fonction polynomiale \(g\) de
-  degré \(\deg(P) + 1\) qui est solution de l'équation initiale. On peut
-  choisir la constante d'intégration comme on veut, mais d'habitude on prend
+  Si \(am^2 + bm + c = 0\) et \(2am + b \neq 0\), \(g\) est solution de \(ay'' 
+  + (2am + b)y' = P\) et donc \(g'\) est solution de \(0z'' + az' + (2am + b)z 
+  = P\) avec \(2am + b \neq 0\). D'après le premier cas, la dernière équation 
+  admet une solution polynomiale de degré \(\deg(P)\), et si on prend une 
+  primitive de cette solution, on obtient une fonction polynomiale \(g\) de 
+  degré \(\deg(P) + 1\) qui est solution de l'équation initiale. On peut 
+  choisir la constante d'intégration comme on veut, mais d'habitude on prend 
   la constante nulle.
 
-  Si \(am^2 + bm + c = 0\) et \(2am + b = 0\) alors \(ay'' = P\) et puisque
-  \(a \neq 0\), on peut trouver une solution en intégrant deux fois
-  \(\dfrac{P}{a}\) et on obtient une solution polynomiale de degré \(\deg(P) +
-  2\) et les constantes d'intégration peuvent être choisies de façon
+  Si \(am^2 + bm + c = 0\) et \(2am + b = 0\) alors \(ay'' = P\) et puisque 
+  \(a \neq 0\), on peut trouver une solution en intégrant deux fois 
+  \(\dfrac{P}{a}\) et on obtient une solution polynomiale de degré \(\deg(P) + 
+  2\) et les constantes d'intégration peuvent être choisies de façon 
   arbitraire.
 \end{proof}
 
 \begin{proof}[Synthèse]
-  Soit \(g_k\) une solution polynomiale de \((F_k)\), on définit alors
-  l'application \(\fonctionL{f_k}{I}{\K}{t}{g_k(t)e^{m_k t}}\). Comme \(g_k\)
-  est solution alors elle est deux fois dérivable et donc \(f_k\) est deux
-  fois dérivable. D'après le même calcul que dans l'analyse on a pour tout
+  Soit \(g_k\) une solution polynomiale de \((F_k)\), on définit alors 
+  l'application \(\fonctionL{f_k}{I}{\K}{t}{g_k(t)e^{m_k t}}\). Comme \(g_k\) 
+  est solution alors elle est deux fois dérivable et donc \(f_k\) est deux 
+  fois dérivable. D'après le même calcul que dans l'analyse on a pour tout 
   réel \(t \in I\)
   \begin{equation}
     af_k''(t) + bf_k'(t) + cf_k(t) = \e^{m_k t} P_k(t).
   \end{equation}
-  La somme \(f = \sum_{k = 1}^n f_k\) est une solution particulière de
+  La somme \(f = \sum_{k = 1}^n f_k\) est une solution particulière de 
   l'équation \eqref{eq:Ediff4} d'après le principe de superposition.
 \end{proof}
 
@@ -870,65 +870,65 @@ Cette méthode permet également de trouver des solutions particulières pour le
 grâce au passage aux exponentielles complexes.
 
 \begin{theo}
-  Soient \((t_0,y_0,y'_0) \in I \times \K^2\), \((a,b,c) \in \K^{*} \times
-  \K^2\) et \(d: I \longmapsto \K\) une fonction exponentielle polynôme. Alors
-  l'équation différentielle \(ay'' + by' + cy = d(t)\) admet une unique
-  solution qui satisfait les conditions initiales \( \left\{~\begin{array}{l}
+  Soient \((t_0,y_0,y'_0) \in I \times \K^2\), \((a,b,c) \in \K^{*} \times 
+  \K^2\) et \(d: I \longmapsto \K\) une fonction exponentielle polynôme. Alors 
+  l'équation différentielle \(ay'' + by' + cy = d(t)\) admet une unique 
+  solution qui satisfait les conditions initiales \( \left\{~\begin{array}{l} 
   y(t_0) = y_0 \\ y'(t_0) = y'_0 \end{array}\right.\).
 \end{theo}
 \begin{proof}
-  On considère \(\K = \C\) pour simplifier les notations. Soit \(f_0\) une
-  solution particulière de l'équation \eqref{eq:Ediff4}~\footnote{on peut le
-  faire car le théorème précédent montre qu'il en existe} et on divise le
+  On considère \(\K = \C\) pour simplifier les notations. Soit \(f_0\) une 
+  solution particulière de l'équation \eqref{eq:Ediff4}~\footnote{on peut le 
+  faire car le théorème précédent montre qu'il en existe} et on divise le 
   problème en deux cas.
 
-  Le discriminant de l'équation caractéristique est non nul et soient \(r_1\)
-  et \(r_2\) les racines de l'équation caractéristique. Alors une fonction
-  \(f\) est solution de l'équation différentielle si et seulement s'il existe
-  des complexes \(\mu\) et \(\lambda\) tels que \(\forall t \in I \ f(t) =
-  \lambda \e^{r_1 t}+ \mu \e^{r_2 t} + f_0(t)\). Alors la suite d'équivalence
+  Le discriminant de l'équation caractéristique est non nul et soient \(r_1\) 
+  et \(r_2\) les racines de l'équation caractéristique. Alors une fonction 
+  \(f\) est solution de l'équation différentielle si et seulement s'il existe 
+  des complexes \(\mu\) et \(\lambda\) tels que \(\forall t \in I \ f(t) = 
+  \lambda \e^{r_1 t}+ \mu \e^{r_2 t} + f_0(t)\). Alors la suite d'équivalence 
   est vraie~:
   \begin{align}
-    f \text{~satisfait les CI} &\iff  \begin{cases}f(t_0) = y_0 \\ f'(t_0) =
+    f \text{~satisfait les CI} &\iff  \begin{cases}f(t_0) = y_0 \\ f'(t_0) = 
     y'_0 \end{cases}\\
-                               &\iff  \begin{cases}\lambda \e^{r_1 t_0}+ \mu
-                                 \e^{r_2 t_0} + f_0(t_0) = y_0 \\ \lambda r_1
-                                 \e^{r_1 t_0}+ \mu r_2 \e^{r_2 t_0} + f_0'(t_0) =
+                               &\iff  \begin{cases}\lambda \e^{r_1 t_0}+ \mu 
+                                 \e^{r_2 t_0} + f_0(t_0) = y_0 \\ \lambda r_1 
+                                 \e^{r_1 t_0}+ \mu r_2 \e^{r_2 t_0} + f_0'(t_0) = 
                                y'_0 \end{cases}\\
-                               &\iff  \begin{cases}\mu\e^{r_2t_0} =
-                                 y_0-f_0(t_0)-\lambda \e^{r_1t_0} \\ \lambda
-                                 r_1 \e^{r_1t_0} +
-                                 r_2(y_0-f_0(t_0)-\lambda\e^{r_1t_0}) + f'_0(t_0) =
+                               &\iff  \begin{cases}\mu\e^{r_2t_0} = 
+                                 y_0-f_0(t_0)-\lambda \e^{r_1t_0} \\ \lambda 
+                                 r_1 \e^{r_1t_0} + 
+                                 r_2(y_0-f_0(t_0)-\lambda\e^{r_1t_0}) + f'_0(t_0) = 
                                y'_0 \end{cases}\\
-                               &\iff \begin{cases} \mu =
-                                 \e^{-r_2t_0}(y_0-f_0(t_0)-\lambda
-                                 \e^{r_1t_0}) \\ \lambda(r_1-r_2) =
-                                 \e^{-r_1t_0}(y'_0-f'_0(t_0) +
+                               &\iff \begin{cases} \mu = 
+                                 \e^{-r_2t_0}(y_0-f_0(t_0)-\lambda 
+                                 \e^{r_1t_0}) \\ \lambda(r_1-r_2) = 
+                                 \e^{-r_1t_0}(y'_0-f'_0(t_0) + 
                                r_2f_0(t_0)-r_2y_0)\end{cases}.
   \end{align}
-  Puisque \(r_2 \neq r_1\) il existe un unique couple de complexe \((\lambda,
+  Puisque \(r_2 \neq r_1\) il existe un unique couple de complexe \((\lambda, 
   \mu)\) tel que \(f\) satisfait les conditions initiales.
 
-  Dans le cas du discriminant nul, on pose \(r\) sa racine double. Si la
-  fonction \(f\) est solution de l'équation différentielle alors il existe un
-  couple de complexes \((\lambda, \mu)\) tel que \(\forall t \in I \ f(t) =
-  (\lambda t + \mu)\e^{rt} + f_0(t)\). Alors la suite d'équivalence est
+  Dans le cas du discriminant nul, on pose \(r\) sa racine double. Si la 
+  fonction \(f\) est solution de l'équation différentielle alors il existe un 
+  couple de complexes \((\lambda, \mu)\) tel que \(\forall t \in I \ f(t) = 
+  (\lambda t + \mu)\e^{rt} + f_0(t)\). Alors la suite d'équivalence est 
   vraie~:
   \begin{align}
-    f \text{~satisfait les CI} &\iff \begin{cases} f(t_0) = y_0 \\ f'(t_0) =
+    f \text{~satisfait les CI} &\iff \begin{cases} f(t_0) = y_0 \\ f'(t_0) = 
     y'_0 \end{cases}\\
-                               &\iff \begin{cases}(\lambda t_0 +
-                                 \mu)\e^{rt_0} + f_0(t_0) = y_0 \\ (\lambda +
-                                 r(\lambda t_0  + \mu)\e^{rt_0} + f_0'(t_0) =
+                               &\iff \begin{cases}(\lambda t_0 + 
+                                 \mu)\e^{rt_0} + f_0(t_0) = y_0 \\ (\lambda + 
+                                 r(\lambda t_0  + \mu)\e^{rt_0} + f_0'(t_0) = 
                                y'_0\end{cases}\\
-                               &\iff \begin{cases}\mu =
-                                 \e^{-rt_0}(y_0-f_0(t_0))-\lambda t_0 \\
-                                 (\lambda + \lambda r t_0)\e^{rt_0} +
-                                 r(y_0-f_0(t_0))-\lambda t_0 r \e^{rt_0} + f'(t_0) =
+                               &\iff \begin{cases}\mu = 
+                                 \e^{-rt_0}(y_0-f_0(t_0))-\lambda t_0 \\ 
+                                 (\lambda + \lambda r t_0)\e^{rt_0} + 
+                                 r(y_0-f_0(t_0))-\lambda t_0 r \e^{rt_0} + f'(t_0) = 
                                y'_0\end{cases}\\
-                               &\iff \begin{cases}\mu =
-                                 \e^{-rt_0}(y_0-f_0(t_0))-\lambda t_0\\
-                                 \lambda = \e^{-rt_0}(y'_0
+                               &\iff \begin{cases}\mu = 
+                                 \e^{-rt_0}(y_0-f_0(t_0))-\lambda t_0\\ 
+                                 \lambda = \e^{-rt_0}(y'_0 
                                -f'_0(t_0)-r(y_0-f_0(t_0))) \end{cases}.
   \end{align}
 \end{proof}
@@ -940,7 +940,7 @@ grâce au passage aux exponentielles complexes.
   \begin{equation}
     y'-xy = x\sin(x^2).
   \end{equation}
-  On pourra rechercher une solution particulière de la forme \(x \longmapsto
+  On pourra rechercher une solution particulière de la forme \(x \longmapsto 
   \alpha\cos(x^2) + \beta\sin(x^2)\)
 \end{exercice}
 
@@ -952,7 +952,7 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Déterminer toutes les fonctions dérivables de \(\R\) dans \(\R\), \(x\) et
+  Déterminer toutes les fonctions dérivables de \(\R\) dans \(\R\), \(x\) et 
   \(y\) tels que \(x(0) = y(0) = 0\) et pour tout réel \(t\)~:
   \begin{align}
     x'(t) & = x(t) + y(t) + \sin t \\
@@ -961,7 +961,7 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Résoudre sur \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\) l'équation
+  Résoudre sur \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\) l'équation 
   différentielle~:
   \begin{equation}
     y'-y\tan x = -\cos^2 x
@@ -969,13 +969,13 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Déterminer les fonctions dérivables sur \(\intervalleoo{0}{ + \infty}\) qui
+  Déterminer les fonctions dérivables sur \(\intervalleoo{0}{ + \infty}\) qui 
   vérifie pour tout réel \(x\) strictement positif~:
   \begin{equation}
     f'(x) = f\left(\frac{1}{4x}\right)
   \end{equation}
-  Si \(f\) est une solution, on pourra montrer que la fonction
-  \(\fonction{g}{\R}{\R}{t}{f(\e^t)}\) est une solution d'une équation
+  Si \(f\) est une solution, on pourra montrer que la fonction 
+  \(\fonction{g}{\R}{\R}{t}{f(\e^t)}\) est une solution d'une équation 
   différentielle linéaire à coefficients constants que l'on résoudra.
 \end{exercice}
 
@@ -987,12 +987,12 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Montrer que, pour tout \(m \in \intervalleoo{0}{2}\), l'équation
+  Montrer que, pour tout \(m \in \intervalleoo{0}{2}\), l'équation 
   différentielle~:
   \begin{equation}
     y'' + (1-2m)y' - 2my = \e^{2x}
   \end{equation}
-  admet une et une seule solution \(f_m\) telle que \(f_m(0) = f_m'(0) = 0\).
+  admet une et une seule solution \(f_m\) telle que \(f_m(0) = f_m'(0) = 0\). 
   Montrer que pour tout réel \(x\) \(\lim\limits_{m \to 1} f_m(x) = f_1(x)\)G
 \end{exercice}
 
@@ -1004,7 +1004,7 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) dérivables
+  Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) dérivables 
   telles que~h
   \begin{equation}
     \forall x \in \R \quad f'(x) = f(-x)
@@ -1012,7 +1012,7 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) deux fois
+  Déterminer l'ensemble des fonctions \(f\) de \(\R\) dans \(\R\) deux fois 
   dérivables telles que~h
   \begin{equation}
     \forall x \in \R \quad f''(x) + f(-x) = x\e^{-x}
@@ -1020,59 +1020,59 @@ grâce au passage aux exponentielles complexes.
 \end{exercice}
 
 \begin{exercice}
-  On considère l'équation différentielle non linéaire
+  On considère l'équation différentielle non linéaire 
   \begin{equation}
     \label{eq:nonlin}
     y' = 1 + y^2.
   \end{equation}
   \begin{enumerate}
-    \item Trouver une solution particulière de cette équation sur
+    \item Trouver une solution particulière de cette équation sur 
       l'intervalle \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\)G
-    \item Soient \(a<b\) deux réels, \(I = \intervalleoo{a}{b}\) et
-      \(\fonctionR{f}{I}{\R}\) une fonction solution de
-      l'équation~\eqref{eq:nonlin}. On définit une fonction \(g\) de \(I\)
-      dans \(\R\) définit pour tout réel \(x\) de \(I\) par~: \(g(x) =
-      \arctan f(x) \). Montrer que \(g\) est dérivable et que c'est une
-      solution d'une équation différentielle linéaire du premier ordre
+    \item Soient \(a<b\) deux réels, \(I = \intervalleoo{a}{b}\) et 
+      \(\fonctionR{f}{I}{\R}\) une fonction solution de 
+      l'équation~\eqref{eq:nonlin}. On définit une fonction \(g\) de \(I\) 
+      dans \(\R\) définit pour tout réel \(x\) de \(I\) par~: \(g(x) = 
+      \arctan f(x) \). Montrer que \(g\) est dérivable et que c'est une 
+      solution d'une équation différentielle linéaire du premier ordre 
       notée \(\mathcal{H}\).
     \item Résoudre \(\mathcal{H}\).
-    \item En déduire que l'équation~\eqref{eq:nonlin} possède une unique
-      solution sur l'intervalle
+    \item En déduire que l'équation~\eqref{eq:nonlin} possède une unique 
+      solution sur l'intervalle 
       \(\intervalleoo{-\frac{\pi}{2}}{\frac{\pi}{2}}\).
   \end{enumerate}
 \end{exercice}
 
-\begin{exercice}
+\begin{exercice}    
   On cherche des solutions sur \(\intervalleoo{0}{ + \infty}\) de l'équation~:
   \begin{equation}
     \label{eq:eqH}
     x^2y'' + 2xy' + y = \frac{1}{x}
   \end{equation}
   \begin{enumerate}
-    \item Soit \(y\) une solution de \eqref{eq:eqH}. On définit la fonction
-      \(Y \in \R^{\R}\) en posant pour tout réel \(t\), \(Y(t) =
-      y(\e^t)\). Montrer que la fonction \(Y\) vérifie une équation
-      différentielle linéaire à coefficients constants que l'on notera
+    \item Soit \(y\) une solution de \eqref{eq:eqH}. On définit la fonction 
+      \(Y \in \R^{\R}\) en posant pour tout réel \(t\), \(Y(t) = 
+      y(\e^t)\). Montrer que la fonction \(Y\) vérifie une équation 
+      différentielle linéaire à coefficients constants que l'on notera 
       \(\mathcal{E}'\).
-    \item Résoudre \(\mathcal{E}'\).
+    \item Résoudre \(\mathcal{E}'\). 
     \item En déduire l'ensemble des solutions de l'équation~\eqref{eq:eqH}.
-    \item Montrer qu'il existe une unique solution \(y\) de \eqref{eq:eqH}
+    \item Montrer qu'il existe une unique solution \(y\) de \eqref{eq:eqH} 
       telle que \(y(1) = y'(1) = 0\).
   \end{enumerate}
 \end{exercice}
 
 \begin{exercice}
   \begin{enumerate}
-    \item Soient un intervalle réel \(I\), \(a \in \R^I\) et \(b \in \C^I\)
-      deux fonctions continues. On suppose que la fonction \(f \in \C^I\)
-      est une solution de l'équation différentielle \(y' + a(x)y = b(x)\).
-      Notons \(c = \Re(b)\) et \(d = \Im(b)\). Montrer que la fonction \(g
-      = \Re(f)\) est une solution de l'équation différentielle \(y' +
-      a(x)y = c(x)\) et que la fonction \(h = \Im(f)\) est une solution de
+    \item Soient un intervalle réel \(I\), \(a \in \R^I\) et \(b \in \C^I\) 
+      deux fonctions continues. On suppose que la fonction \(f \in \C^I\) 
+      est une solution de l'équation différentielle \(y' + a(x)y = b(x)\). 
+      Notons \(c = \Re(b)\) et \(d = \Im(b)\). Montrer que la fonction \(g 
+      = \Re(f)\) est une solution de l'équation différentielle \(y' + 
+      a(x)y = c(x)\) et que la fonction \(h = \Im(f)\) est une solution de 
       l'équation différentielle \(y' + a(x)y = d(x)\).
-    \item Déterminer les fonctions de \(\R\) dans \(\C\) solutions de
+    \item Déterminer les fonctions de \(\R\) dans \(\C\) solutions de 
       l'équation différentielle \(2y'-y = x\e^{(3\ii-1)x}\).
-    \item En déduire les fonctions de \(\R\) dans \(\R\) solutions de
+    \item En déduire les fonctions de \(\R\) dans \(\R\) solutions de 
       l'équation différentielle \(2y'-y = x\e^{-x}\sin(3x)\).
   \end{enumerate}
 \end{exercice}
