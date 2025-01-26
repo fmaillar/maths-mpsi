@@ -1073,3 +1073,91 @@ Le complexe \(c\) est unique, \(\lambda=\abs{\frac{a'-b'}{a-b}}\) est unique et
 \(\theta=\arg\left(\frac{a'-b'}{a-b}\right)\) est unique. Donc la similitude est 
 unique.
 \end{proof}
+\section{Exercices}
+\begin{exercice}
+Soit \( f : \mathbb{R}^n \to \mathbb{R}^n \) une transformation affine de la forme :
+\[
+f(\mathbf{x}) = A \mathbf{x} + \mathbf{b}
+\]
+où \( A \in \mathbb{M}_n(\mathbb{R}) \) est une matrice et \( \mathbf{b} \in \mathbb{R}^n \) est un vecteur.
+\begin{enumerate}
+    \item Montrer que \( f \) est une application affine et expliquer en quoi cela signifie que \( f \) est composée d'une application linéaire et d'une translation.
+    \item Calculer l'image de \( \mathbf{x} = (1, 2) \) sous la transformation affine \( f(\mathbf{x}) = \begin{pmatrix} 2 & 1 \\ 0 & 1 \end{pmatrix} \mathbf{x} + \begin{pmatrix} 3 \\ 4 \end{pmatrix} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R}^2 \) une transformation affine définie par :
+\[
+f(\mathbf{x}) = A \mathbf{x} + \mathbf{b}
+\]
+où \( A = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix} \) et \( \mathbf{b} = \begin{pmatrix} 1 \\ 1 \end{pmatrix} \).
+\begin{enumerate}
+    \item Vérifier que \( f \) est une transformation affine et décrire géométriquement son effet sur le plan.
+    \item Calculer l'image des points \( \mathbf{x}_1 = (1, 1) \) et \( \mathbf{x}_2 = (2, 3) \).
+    \item Montrer que \( f \) conserve les parallèles mais modifie les distances entre certains points.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une transformation affine dans \( \mathbb{R}^3 \) représentée par la matrice \( A = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{pmatrix} \) et \( \mathbf{b} = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \). 
+\begin{enumerate}
+    \item Décrire l'effet de \( f \) sur un cube centré à l'origine. 
+    \item Calculer l'image des points \( \mathbf{x}_1 = (1, 1, 1) \) et \( \mathbf{x}_2 = (2, 2, 2) \) sous \( f \).
+    \item Montrer que cette transformation affine conserve les plans parallèles mais déforme les distances.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une transformation affine dans \( \mathbb{R}^2 \), définie par :
+\[
+f(\mathbf{x}) = A \mathbf{x} + \mathbf{b}, \quad A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}, \quad \mathbf{b} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}.
+\]
+\begin{enumerate}
+    \item Montrer que \( f \) est une application affine, puis calculer l'image du vecteur \( \mathbf{x} = (1, 0) \).
+    \item Vérifier que cette transformation affine effectue une translation après une déformation linéaire.
+    \item Décrire géométriquement l'effet de cette transformation sur un carré.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R}^2 \) une transformation affine. On suppose que \( f \) est une isométrie, c'est-à-dire que \( f \) conserve les distances entre les points. Montrer que dans ce cas, \( f \) peut être exprimée comme une combinaison d'une transformation linéaire orthogonale (rotation ou réflexion) et d'une translation. 
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une transformation affine qui est une symétrie par rapport à la droite \( y = x \) dans \( \mathbb{R}^2 \). Montrer que la matrice associée à cette transformation est de la forme :
+\[
+A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\]
+et que l'élément de translation \( \mathbf{b} \) peut être quelconque. Calculer l'image des points \( \mathbf{x}_1 = (1, 2) \) et \( \mathbf{x}_2 = (3, 4) \) sous cette transformation.
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une similitude affine dans le plan \( \mathbb{R}^2 \) définie par :
+\[
+f(\mathbf{x}) = \lambda \mathbf{x} + \mathbf{b}
+\]
+où \( \lambda \) est un facteur d'homothétie et \( \mathbf{b} \) est un vecteur de translation.
+\begin{enumerate}
+    \item Montrer que \( f \) est une similitude affine et déterminer la condition sur \( \lambda \) pour que \( f \) soit une isométrie.
+    \item Montrer que si \( \lambda = 1 \), la transformation devient une translation.
+    \item Décrire géométriquement l'effet de \( f \) si \( \lambda = 2 \) et \( \mathbf{b} = (1, 0) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une transformation affine dans \( \mathbb{R}^3 \) qui est une similitude. Montrer que \( f \) est une combinaison d'une homothétie et d'une translation. Calculer l'image du point \( \mathbf{x} = (1, 2, 3) \) sous \( f(\mathbf{x}) = 2 \mathbf{x} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \).
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R}^2 \) une transformation affine représentant une réflexion par rapport à la droite \( y = x \). Montrer que la matrice associée à cette transformation est \( A = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \), puis calculer l'image de \( \mathbf{x}_1 = (1, 2) \) et \( \mathbf{x}_2 = (3, 4) \).
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) une similitude affine dans \( \mathbb{R}^2 \) qui conserve l'angle entre deux vecteurs. Montrer que \( f \) est une transformation de la forme :
+\[
+f(\mathbf{x}) = R \mathbf{x} + \mathbf{b}
+\]
+où \( R \) est une matrice de rotation et \( \mathbf{b} \) est une translation. Expliquer pourquoi une telle transformation est aussi une isométrie.
+\end{exercice}
+

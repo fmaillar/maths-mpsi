@@ -2324,3 +2324,86 @@ irréductibles}
 \begin{proof}
   Voir celles des entiers, chapitre~\ref{chap:naturels}.
 \end{proof}
+\section{Exercices}
+\begin{exercice}[Degré et composition de polynômes]
+Soient \( P(x) = 2x^3 - 3x^2 + x - 5 \) et \( Q(x) = x^2 + 1 \), deux polynômes à coefficients dans \( \mathbb{R} \).
+\begin{enumerate}
+    \item Déterminer le degré des polynômes \( P(x) \) et \( Q(x) \).
+    \item Calculer \( P(Q(x)) \), c'est-à-dire la composition de \( P \) et \( Q \).
+    \item Trouver le degré de \( P(Q(x)) \) et expliquer comment il est lié aux degrés de \( P(x) \) et \( Q(x) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Division euclidienne]
+Soit \( P(x) = x^3 + 2x^2 - x - 3 \) et \( D(x) = x + 1 \), deux polynômes dans \( \mathbb{R}[X] \).
+\begin{enumerate}
+    \item Effectuer la division euclidienne de \( P(x) \) par \( D(x) \) et donner le quotient et le reste.
+    \item Vérifier que la relation \( P(x) = D(x) \cdot Q(x) + R(x) \) est bien satisfaite.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Racines d’un polynôme]
+Soit \( P(x) = x^3 - 6x^2 + 11x - 6 \) un polynôme à coefficients dans \( \mathbb{R} \).
+\begin{enumerate}
+    \item Trouver les racines de \( P(x) \) en utilisant la méthode de la division euclidienne et en vérifiant les candidats évidents.
+    \item Montrer que les racines trouvées sont réelles et expliquer leur multiplicité.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Multiplicité d’une racine]
+Soit \( P(x) = x^3 - 3x^2 + 3x - 1 \).
+\begin{enumerate}
+    \item Trouver la racine de \( P(x) \).
+    \item Déterminer l’ordre de multiplicité de cette racine en utilisant la dérivée du polynôme.
+    \item Vérifier votre résultat avec la formule de Taylor appliquée à la racine trouvée.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Isomorphisme entre polynômes et fonctions polynomiales]
+Soit \( P(x) = x^2 + 2x + 1 \) un polynôme à coefficients dans \( \mathbb{R} \).
+\begin{enumerate}
+    \item Montrer que l’application \( \varphi : P(x) \mapsto f_P(x) \), où \( f_P(x) \) est la fonction polynomiale associée à \( P(x) \), est un isomorphisme entre l’espace des polynômes et l’espace des fonctions polynomiales.
+    \item Vérifier que pour tout \( x \in \mathbb{R} \), la valeur de \( f_P(x) \) correspond à \( P(x) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Factorisation]
+Soit \( P(x) = x^2 - 5x + 6 \) un polynôme dans \( \mathbb{R}[X] \).
+\begin{enumerate}
+    \item Factoriser \( P(x) \) sur \( \mathbb{R}[X] \).
+    \item Vérifier que la factorisation obtenue est correcte en développant.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Formule de Leibniz]
+Soit \( P(x) = (x^2 + 1)^3 \).
+\begin{enumerate}
+    \item Calculer la dérivée de \( P(x) \) en utilisant la formule de Leibniz pour les dérivées successives d’un produit de fonctions.
+    \item Vérifier votre résultat par la règle du produit classique pour les dérivées.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Arithmétique] 
+Soient \( P(x) = x^3 - 4x + 4 \) et \( Q(x) = x^2 - 2x + 1 \), deux polynômes dans \( \mathbb{R}[X] \).
+\begin{enumerate}
+    \item Calculer le plus grand commun diviseur (PGCD) de \( P(x) \) et \( Q(x) \) à l’aide de l’algorithme d’Euclide.
+    \item Vérifier que \( P(x) \) et \( Q(x) \) sont premiers entre eux si leur PGCD est un polynôme constant.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[PGCD et Théorème de Bezout]
+Soient \( P(x) = x^2 + 1 \) et \( Q(x) = x^2 - 2x + 2 \), deux polynômes dans \( \mathbb{R}[X] \).
+\begin{enumerate}
+    \item Calculer le PGCD de \( P(x) \) et \( Q(x) \) à l’aide de l’algorithme d’Euclide.
+    \item Trouver deux polynômes \( A(x) \) et \( B(x) \) tels que \( A(x) \cdot P(x) + B(x) \cdot Q(x) = \text{PGCD}(P(x), Q(x)) \) en appliquant le théorème de Bézout.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Polynômes irréductibles]
+Soit \( P(x) = x^3 - 2x^2 + x - 2 \) un polynôme dans \( \mathbb{R}[X] \).
+\begin{enumerate}
+    \item Montrer que \( P(x) \) est irréductible sur \( \mathbb{R} \) en vérifiant s’il admet des racines réelles.
+    \item Si \( P(x) \) est irréductible, expliquer pourquoi il ne peut pas être factorisé en produits de polynômes de degré inférieur.
+\end{enumerate}
+\end{exercice}
+

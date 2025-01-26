@@ -1,4 +1,4 @@
-\chapter{Limites et continuité des fonctions réelles de la variable réelle} 
+\chapter{Limites et continuité des fonctions réelles de la variable réelle}
 
 \minitoc%
 \minilof%
@@ -2392,3 +2392,89 @@ fonctions continues de \(I\) vers \(\C\). \end{defdef}
   bornes.
 \end{proof}
 
+\section{Exercices}
+\begin{exercice}[calcul de limites]
+  Justifier pourquoi une limite existe ou non, et le cas échéant calculer les 
+  limites de la liste suivante~:
+  \begin{align}
+    \lim\limits_{x \to 0} & \frac{\sin x}{x};\\
+    \lim\limits_{x \to +\infty} & \frac{x^2+1}{2x^2+x+3};\\
+    \lim\limits_{x \to 1} & \frac{\sqrt{x+3}}{x-1};\\
+    \lim\limits_{x\to 0^{+}} & x^x;\\
+    \lim\limits_{x \to +\infty} & \sqrt{x^2+x} - \sqrt{x^2-x};\\
+    \lim\limits_{x \to +\infty} & x\ln(1+1/x) - \ln x;\\
+    \lim\limits_{x \to 0^{+}} & \frac{1}{x^2} \int_0^x \ln(1+t^2)\D t.
+  \end{align}
+\end{exercice}
+% Exercice 2
+\begin{exercice}[Théorème de la continuité sur un ensemble dense]
+  Soit \(f : \mathbb{R} \to \mathbb{R}\) une fonction vérifiant \(f(x+y) = f(x) 
+  + f(y)\) pour tout \(x, y \in \mathbb{R}\). On suppose que \(f\) est continue 
+  en \(0\). Montrer que \(f\) est continue sur \(\mathbb{R}\).
+\end{exercice}
+
+% Exercice 3
+\begin{exercice}[Comparaison fine de croissances]
+Étudier les limites suivantes en \(+\infty\), et justifier chaque étape rigoureusement :
+\begin{enumerate}
+    \item \(\lim\limits_{x \to +\infty} \frac{\ln(x^2+1)}{\ln(x) + \ln(2x+1)}\),
+    \item \(\lim\limits_{x \to +\infty} \frac{\arctan(x)}{\ln(x)}\),
+    \item \(\lim\limits_{x \to +\infty} \frac{x^a (\ln(x))^b}{e^x}\), où \(a, b \in \mathbb{R}\).
+\end{enumerate}
+\end{exercice}
+
+% Exercice 4
+\begin{exercice}[Continuité uniforme et théorème de Heine]
+Soit \(f(x) = \frac{\sin(x)}{1+x^2}\).
+\begin{enumerate}
+    \item Montrer que \(f\) est uniformément continue sur \(\mathbb{R}\) en utilisant le théorème de Heine.
+    \item Donner une majoration rigoureuse de \(|f(x) - f(y)|\) en fonction de \(|x-y|\).
+\end{enumerate}
+\end{exercice}
+
+% Exercice 5
+\begin{exercice}[Étude asymptotique]
+Étudier le comportement asymptotique de \(f(x) = x^x\) lorsque \(x \to 0^+\) et \(x \to +\infty\). Plus précisément :
+\begin{enumerate}
+    \item Montrer que \(\ln(f(x))\) permet d’obtenir une approximation fine de \(f(x)\).
+    \item Déterminer un équivalent de \(x^x\) en \(0^+\).
+\end{enumerate}
+\end{exercice}
+
+% Exercice 6
+\begin{exercice}[Propriétés des fonctions continues]
+Soit \(f : \mathbb{R} \to \mathbb{R}\) une fonction continue strictement croissante, et on suppose que \(f\) est bornée. Montrer que \(f\) converge vers une limite finie en \(+\infty\) et en \(-\infty\). Appliquer ce résultat à \(g(x) = \arctan(x)\).
+\end{exercice}
+
+% Exercice 7
+\begin{exercice}[Limites et équivalents asymptotiques]
+Étudier les limites suivantes avec des développements asymptotiques précis (ou équivalents) :
+\begin{enumerate}
+    \item \(\lim_{x \to 0} \frac{\tan(x) - x}{x^3}\),
+    \item \(\lim_{x \to +\infty} \frac{x^2 + 3x - \sqrt{x}}{x^2+1}\),
+    \item \(\lim_{x \to 0^+} \left(\frac{1}{x} - \frac{1}{\tan(x)}\right)\).
+\end{enumerate}
+\end{exercice}
+
+% Exercice 8
+\begin{exercice}[Suite définie par récurrence et continuité]
+Soit \((u_n)\) définie par \(u_0 > 0\) et \(u_{n+1} = \sqrt{u_n + 1}\).
+\begin{enumerate}
+    \item Montrer que \((u_n)\) est bien définie et converge.
+    \item Déterminer la limite de la suite à l’aide de la continuité de la fonction racine carrée.
+\end{enumerate}
+\end{exercice}
+
+% Exercice 9
+\begin{exercice}[Limite d’une fonction définie par une intégrale]
+Soit \(f(x) = \int_0^{+\infty} \frac{\sin(t)}{t+x} \, dt\), où \(x > 0\).
+\begin{enumerate}
+    \item Montrer que \(f\) est bien définie pour tout \(x > 0\).
+    \item Étudier la limite de \(f(x)\) lorsque \(x \to 0^+\) et \(x \to +\infty\).
+\end{enumerate}
+\end{exercice}
+
+% Exercice 10
+\begin{exercice}[Théorème de Darboux et continuité]
+Soit \(f : \mathbb{R} \to \mathbb{R}\) une fonction dérivable telle que \(f'(x) > 0\) pour tout \(x \in \mathbb{R}\), mais \(f\) n’est pas continue. Montrer que cette situation est impossible en utilisant une contradiction avec le théorème des valeurs intermédiaires appliqué à \(f'\).
+\end{exercice}

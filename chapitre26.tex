@@ -1854,3 +1854,101 @@ D'où la proposition suivante
 \begin{equation}
   x \wedge (y \wedge z) = \prodscal{x}{z}y-\prodscal{x}{y}z.
 \end{equation}
+\section{Exercices}
+\begin{exercice}
+Soit \( E = \mathbb{R}^3 \) l'espace vectoriel euclidien muni du produit scalaire usuel \( \langle \mathbf{u}, \mathbf{v} \rangle = u_1 v_1 + u_2 v_2 + u_3 v_3 \), où \( \mathbf{u} = (u_1, u_2, u_3) \) et \( \mathbf{v} = (v_1, v_2, v_3) \) sont deux vecteurs de \( \mathbb{R}^3 \).
+
+\begin{enumerate}
+    \item Montrer que la norme euclidienne associée à ce produit scalaire est donnée par \( \| \mathbf{u} \| = \sqrt{u_1^2 + u_2^2 + u_3^2} \).
+    \item Soit \( \mathbf{u} = (1, 2, 3) \) et \( \mathbf{v} = (4, -1, 2) \). Calculer \( \langle \mathbf{u}, \mathbf{v} \rangle \) ainsi que les normes \( \| \mathbf{u} \| \) et \( \| \mathbf{v} \| \).
+    \item Montrer que \( \mathbf{u} \) et \( \mathbf{v} \) sont orthogonaux en vérifiant que \( \langle \mathbf{u}, \mathbf{v} \rangle = 0 \).
+    \item Soit \( \mathbf{w} = (2, -1, 1) \). Trouver le projeté orthogonal de \( \mathbf{w} \) sur \( \mathbf{u} \) et \( \mathbf{v} \).
+    \item Expliquer la signification géométrique de ce projeté dans \( \mathbb{R}^3 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( E \) un espace vectoriel euclidien de dimension finie, et soit \( \mathcal{B} = \{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \} \) une base orthonormale de \( E \).
+
+\begin{enumerate}
+    \item Soit \( \mathbf{v} = 2\mathbf{e}_1 + 3\mathbf{e}_2 - \mathbf{e}_3 \). Trouver les coordonnées de \( \mathbf{v} \) dans la base \( \mathcal{B} \).
+    \item Soit \( \mathbf{w} = 4\mathbf{e}_1 - \mathbf{e}_2 + 2\mathbf{e}_3 \). Vérifier que \( \mathbf{v} \) et \( \mathbf{w} \) sont orthogonaux.
+    \item Trouver la norme de \( \mathbf{v} \) et \( \mathbf{w} \).
+    \item Montrer que \( \mathcal{B} \) est une base orthonormale de \( E \) en vérifiant que les vecteurs de \( \mathcal{B} \) sont orthogonaux entre eux et de norme 1.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+On considère l’espace vectoriel euclidien \( E = \mathbb{R}^3 \), muni du produit scalaire usuel.
+
+\begin{enumerate}
+    \item Montrer que l'orthogonal de l'espace vectoriel \( \{ (1, 0, 0), (0, 1, 0) \} \) est l'axe \( \mathbb{R} (0, 0, 1) \).
+    \item Soit \( \mathbf{u} = (1, 1, 1) \), \( \mathbf{v} = (1, -1, 0) \). Calculer l'orthogonal de \( \mathbf{u} \) et \( \mathbf{v} \).
+    \item Démontrer que les sous-espaces vectoriels \( \mathbb{R} (1, 0, 0) \) et \( \mathbb{R} (0, 1, 0) \) sont orthogonaux.
+    \item Soit \( \mathbf{u} = (2, 3, 4) \) et \( \mathbf{v} = (1, -2, 1) \). Déterminer si \( \mathbf{u} \) et \( \mathbf{v} \) sont orthogonaux.
+\end{enumerate}
+\end{exercice}
+\begin{exercice}
+Soit \( E = \mathbb{R}^n \) un espace vectoriel euclidien muni du produit scalaire usuel. Soit \( \mathbf{u} = (u_1, u_2, \ldots, u_n) \) et \( \mathbf{v} = (v_1, v_2, \ldots, v_n) \).
+
+\begin{enumerate}
+    \item Montrer que la norme euclidienne \( \| \mathbf{u} \| \) est donnée par \( \| \mathbf{u} \| = \sqrt{\sum_{i=1}^n u_i^2} \).
+    \item Montrer l’inégalité de Cauchy-Schwarz \( | \langle \mathbf{u}, \mathbf{v} \rangle | \leq \| \mathbf{u} \| \| \mathbf{v} \| \), et en déduire que \( \mathbf{u} \) et \( \mathbf{v} \) sont orthogonaux si et seulement si \( \langle \mathbf{u}, \mathbf{v} \rangle = 0 \).
+    \item Montrer que l’inégalité de Minkowski \( \| \mathbf{u} + \mathbf{v} \| \leq \| \mathbf{u} \| + \| \mathbf{v} \| \) découle directement de l’inégalité de Cauchy-Schwarz.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( \mathcal{B} = \{ \mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3 \} \) une base orthonormale de \( \mathbb{R}^3 \).
+
+\begin{enumerate}
+    \item Soit \( \mathbf{v} = (1, 2, 3) \). Exprimer \( \mathbf{v} \) dans la base \( \mathcal{B} \) en donnant ses coordonnées.
+    \item Montrer que le produit scalaire entre \( \mathbf{v} = (1, 2, 3) \) et \( \mathbf{w} = (4, -1, 2) \) est donné par \( \langle \mathbf{v}, \mathbf{w} \rangle = 4 - 2 + 6 = 8 \).
+    \item Calculer la norme de \( \mathbf{v} \) et \( \mathbf{w} \).
+    \item Calculer la projection orthogonale de \( \mathbf{v} \) sur \( \mathbf{w} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( E \) un espace vectoriel euclidien de dimension \( n \), et \( \mathcal{B} = \{ \mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n \} \) une base orthonormale de \( E \).
+
+\begin{enumerate}
+    \item Soit \( \mathbf{v} = (v_1, v_2, \dots, v_n) \in E \). Montrer que les coordonnées de \( \mathbf{v} \) dans la base \( \mathcal{B} \) sont \( (v_1, v_2, \dots, v_n) \), c'est-à-dire que les coordonnées de \( \mathbf{v} \) dans une base orthonormale sont simplement les composantes du vecteur.
+    \item Soit \( \mathbf{u} = (1, 2, 3) \) et \( \mathbf{v} = (4, -1, 2) \). Montrer que le produit scalaire \( \langle \mathbf{u}, \mathbf{v} \rangle = 4 - 2 + 6 = 8 \) et que les normes de \( \mathbf{u} \) et \( \mathbf{v} \) sont respectivement \( \| \mathbf{u} \| = \sqrt{14} \) et \( \| \mathbf{v} \| = \sqrt{21} \).
+    \item Montrer que la projection de \( \mathbf{v} \) sur \( \mathbf{u} \) est donnée par \( \text{proj}_{\mathbf{u}} \mathbf{v} = \frac{\langle \mathbf{v}, \mathbf{u} \rangle}{\| \mathbf{u} \|^2} \mathbf{u} \).
+    \item Calculer la projection de \( \mathbf{v} \) sur \( \mathbf{u} \) dans ce cas particulier.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( E = \mathbb{R}^3 \) l'espace vectoriel euclidien muni du produit scalaire usuel. On considère les vecteurs \( \mathbf{u} = (1, 1, 0) \), \( \mathbf{v} = (1, -1, 0) \), et \( \mathbf{w} = (0, 0, 1) \).
+
+\begin{enumerate}
+    \item Montrer que les vecteurs \( \mathbf{u} \) et \( \mathbf{v} \) sont orthogonaux.
+    \item Montrer que \( \mathbf{w} \) est orthogonal à tout vecteur de \( \text{span}(\mathbf{u}, \mathbf{v}) \).
+    \item Calculer la distance entre le point \( \mathbf{p} = (2, 3, 4) \) et le plan \( P \) défini par les vecteurs \( \mathbf{u} \) et \( \mathbf{v} \).
+    \item Montrer que \( P \) est un sous-espace vectoriel et déterminer son orthogonal.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( \mathbf{u} = (1, 1, 1) \), \( \mathbf{v} = (2, 3, 4) \), et \( \mathbf{w} = (0, -1, 2) \) trois vecteurs de \( \mathbb{R}^3 \).
+
+\begin{enumerate}
+    \item Calculer le produit mixte \( \mathbf{u} \cdot (\mathbf{v} \times \mathbf{w}) \) en utilisant la définition du produit vectoriel et du produit mixte.
+    \item Montrer que le produit mixte \( \mathbf{u} \cdot (\mathbf{v} \times \mathbf{w}) \) donne le volume du parallélépipède formé par les trois vecteurs \( \mathbf{u} \), \( \mathbf{v} \), et \( \mathbf{w} \).
+    \item Démontrer que \( \mathbf{u} \) et \( \mathbf{v} \) sont linéairement indépendants, mais que \( \mathbf{w} \) peut être écrit comme combinaison linéaire de \( \mathbf{u} \) et \( \mathbf{v} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( E \) un espace vectoriel euclidien de dimension finie. Soit \( S \subset E \) un sous-espace vectoriel de dimension \( k \). Montrer que l'orthogonal de \( S \), noté \( S^\perp \), est un sous-espace vectoriel de dimension \( n - k \), où \( n \) est la dimension de \( E \).
+
+\begin{enumerate}
+    \item Montrer que \( S^\perp \) est stable par addition et par multiplication par un scalaire.
+    \item Calculer l'orthogonal d'un sous-espace \( S \) de \( \mathbb{R}^3 \) de dimension 1, par exemple, \( S = \mathbb{R} \cdot (1, 2, 3) \).
+    \item Montrer que l'orthogonal de \( S \) est également l'ensemble des vecteurs orthogonaux à tous les vecteurs de \( S \).
+\end{enumerate}
+\end{exercice}
+
+

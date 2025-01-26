@@ -2489,3 +2489,101 @@ avec \(\sum_{i=1}^n \alpha_i = 1\) en prenant pour tout \(i \in \llbracket 1,n
   \item Par contre l'union de deux paries convexes n'est pas convexe en général. 
     Les parties convexes de \(\R\) sont les intervalles cf.\ chapitre~\ref{chap:reels}.
 \end{enumerate}
+\section{Exercices}
+\begin{exercice}[Sous-espaces vectoriels et dimension]
+Soit \( V \) un espace vectoriel de dimension \( n \), et \( E_1, E_2, \dots, E_k \) des sous-espaces vectoriels de \( V \). Montrer les résultats suivants :
+\begin{enumerate}
+    \item La dimension de l'intersection \( \dim(E_1 \cap E_2) \) est liée aux dimensions de \( E_1 \) et \( E_2 \) par la formule de dimension : 
+    \[
+    \dim(E_1 \cap E_2) = \dim(E_1) + \dim(E_2) - \dim(E_1 + E_2)
+    \]
+    \item Montrer que si \( E_1, E_2, \dots, E_k \) sont des sous-espaces vectoriels de \( V \), alors la dimension de leur somme est donnée par :
+    \[
+    \dim(E_1 + E_2 + \dots + E_k) = \sum_{i=1}^k \dim(E_i) - \sum_{1 \leq i < j \leq k} \dim(E_i \cap E_j) + \dots
+    \]
+\end{enumerate}
+\end{exercice}
+\begin{exercice}[Sous-espace vectoriel associé à une équation]
+Soit \( V = \mathbb{R}^3 \) et considérons l'ensemble \( S \subset \mathbb{R}^3 \) défini par :
+\[
+S = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_3 = x_1 + x_2\}.
+\]
+\begin{enumerate}
+    \item Montrer que \( S \) est un sous-espace vectoriel de \( \mathbb{R}^3 \).
+    \item Déterminer une base de \( S \), en expliquant clairement la nature de cet espace vectoriel.
+    \item Montrer que \( S \) est un plan vectoriel dans \( \mathbb{R}^3 \).
+    \item Donner l'équation de \( S \) sous forme vectorielle.
+\end{enumerate}
+\end{exercice}
+\begin{exercice}[Critère d'indépendance linéaire]
+Soit \( E = \mathbb{R}^4 \) et les vecteurs \( v_1 = (1, 2, 3, 4) \), \( v_2 = (2, 4, 6, 8) \), \( v_3 = (3, 6, 9, 12) \), et \( v_4 = (4, 8, 12, 16) \).
+\begin{enumerate}
+    \item Montrer que ces quatre vecteurs sont linéairement dépendants.
+    \item Déterminer un sous-ensemble minimal de vecteurs formant une base de l'espace engendré par \( v_1, v_2, v_3, v_4 \).
+    \item Quelle est la dimension de cet espace vectoriel ?
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Théorème de la dimension : Application à l’espace affine]
+Soit \( V = \mathbb{R}^n \) un espace affine de dimension \( n \), et \( E \) un sous-espace vectoriel de \( V \). Montrer que la dimension de l'espace affine engendré par un sous-ensemble \( A \) d'un sous-espace affine \( V \) est égale à la dimension de \( E \) plus la dimension du sous-espace affine engendré par les vecteurs associés.
+\end{exercice}
+
+\begin{exercice}[Formes linéaires]
+Soit \( f : \mathbb{R}^3 \to \mathbb{R} \) une forme linéaire définie par \( f(x, y, z) = 2x - y + 3z \). 
+\begin{enumerate}
+    \item Montrer que \( f \) est bien une forme linéaire.
+    \item Trouver le noyau de \( f \).
+    \item Vérifier que \( f \) est surjective.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Application linéaire et son noyau]
+Soit \( T : \mathbb{R}^4 \to \mathbb{R}^3 \) une application linéaire définie par :
+\[
+T(x_1, x_2, x_3, x_4) = (x_1 + 2x_2, 3x_1 - x_3, x_4)
+\]
+\begin{enumerate}
+    \item Montrer que \( T \) est une application linéaire.
+    \item Calculer le noyau de \( T \) et montrer que c'est un sous-espace vectoriel de \( \mathbb{R}^4 \).
+    \item Calculer l'image de \( T \) et déterminer sa dimension.
+    \item En déduire la dimension du noyau de \( T \) à partir du théorème du rang.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Espace vectoriel euclidien]
+Soit \( E = \mathbb{R}^3 \) équipé du produit scalaire canonique. Soit \( A = \{(1, 2, 3), (4, 5, 6)\} \).
+\begin{enumerate}
+    \item Montrer que les vecteurs \( (1, 2, 3) \) et \( (4, 5, 6) \) sont linéairement indépendants.
+    \item Calculer la distance entre les vecteurs \( (1, 2, 3) \) et \( (4, 5, 6) \).
+    \item Déterminer une base orthonormée de l'espace vectoriel engendré par ces deux vecteurs.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Produit scalaire et applications]
+Soit \( V = \mathbb{R}^2 \) équipé du produit scalaire \( \langle x, y \rangle = x_1 y_1 + x_2 y_2 \).
+\begin{enumerate}
+    \item Montrer que le produit scalaire définit une structure d’espace vectoriel euclidien sur \( \mathbb{R}^2 \).
+    \item Trouver l'orthogonal de \( \{(1, 1)\} \) dans \( \mathbb{R}^2 \).
+    \item Montrer que \( (2, -1) \) appartient à l'orthogonal de \( \{(1, 1)\} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Intersection et somme de sous-espaces]
+Soient \( E = \mathbb{R}^3 \) et les sous-espaces vectoriels \( U = \text{Vect}(e_1, e_2) \), \( V = \text{Vect}(e_2, e_3) \) de \( \mathbb{R}^3 \) où \( e_1 = (1, 0, 0) \), \( e_2 = (0, 1, 0) \), et \( e_3 = (0, 0, 1) \).
+\begin{enumerate}
+    \item Calculer l'intersection de \( U \) et \( V \).
+    \item Trouver la somme \( U + V \) et sa dimension.
+    \item En déduire une base de \( U + V \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Propriétés des endomorphismes]
+Soit \( T : \mathbb{R}^3 \to \mathbb{R}^3 \) un endomorphisme défini par \( T(x, y, z) = (x + y, y + z, z + x) \).
+\begin{enumerate}
+    \item Vérifier que \( T \) est une application linéaire.
+    \item Trouver le noyau et l'image de \( T \).
+    \item Déterminer la dimension de l'image de \( T \).
+    \item Montrer que \( T \) n'est pas injective.
+\end{enumerate}
+\end{exercice}
+

@@ -1852,3 +1852,96 @@ quadratique. On construit par récurrence une suite \(u\) telle que pour tout
 naturel \(n\), \(u_{n+1}=g(u_n)\). Si \(k<1\) alors \(\lim u =c\). On dispose 
 d'une majoration de \(\abs{u_n-c}\) par récurrence donc si on approche \(c\) par 
 \(u_n\) avec \(n\) assez grand, on a une majoration de l'erreur commise.
+\section{Exercices}
+\begin{exercice}[Dérivée en un point - Calcul et application]
+Soit la fonction \( f(x) = \frac{x^2 - 2x}{x^2 + 1} \).
+\begin{enumerate}
+    \item Calculer la dérivée de \( f \) en \( x = 1 \).
+    \item Déterminer les variations de \( f \) sur l'intervalle \( \left[ 0, 2 \right] \), en précisant les points où \( f'(x) = 0 \).
+    \item Étudier le comportement de \( f \) lorsque \( x \to \infty \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Dérivées à droite et à gauche]
+Soit la fonction définie par \( f(x) = \begin{cases}
+  \frac{x^2}{x+1} & \text{si } x \geq 0, \\
+  \frac{x^3}{x^2+1} & \text{si } x < 0.
+\end{cases} \)
+\begin{enumerate}
+    \item Montrer que \( f \) est dérivable en \( x = 0 \).
+    \item Calculer \( f'(0^+) \) et \( f'(0^-) \). 
+    \item Justifier que \( f \) est dérivable en \( 0 \) et calculer \( f'(0) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Extremums locaux et analyse des dérivées]
+Soit \( f(x) = x^5 - 5x^3 + 4x \).
+\begin{enumerate}
+    \item Trouver les points où \( f'(x) = 0 \).
+    \item Déterminer la nature de ces points (maximum, minimum ou point d'inflexion).
+    \item Étudier les variations de \( f \) sur \( \mathbb{R} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Dérivabilité et développement limité]
+Soit \( f(x) = \frac{e^x - 1}{x} \).
+\begin{enumerate}
+    \item Montrer que \( f \) est dérivable en \( 0 \) et déterminer \( f'(0) \).
+    \item Déterminer le développement limité de \( f(x) \) à l'ordre 2 en \( 0 \).
+    \item En déduire l'expression de \( f(x) \) pour \( x \) proche de \( 0 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Opérations algébriques sur les dérivées]
+Soient \( f(x) = \ln(x^2 + 1) \) et \( g(x) = x \sin(x) \).
+\begin{enumerate}
+    \item Montrer que \( (f \cdot g)' = f' g + f g' \).
+    \item Calculer la dérivée de \( h(x) = f(x) \cdot g(x) \).
+    \item Étudier le comportement de \( h(x) \) pour \( x \to 0 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Composition de fonctions dérivables]
+Soit \( f(x) = \tan(x) \) et \( g(x) = \frac{1}{x} \).
+\begin{enumerate}
+    \item Calculer la dérivée de la fonction composée \( h(x) = f(g(x)) \).
+    \item Montrer que \( h'(x) = \frac{\sec^2\left(\frac{1}{x}\right)}{x^2} \).
+    \item Étudier le comportement de \( h'(x) \) quand \( x \to 0^+ \) et \( x \to +\infty \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Dérivée d'une fonction réciproque]
+Soit \( f(x) = x^3 + 3x + 1 \) et \( g \) sa fonction réciproque.
+\begin{enumerate}
+    \item Montrer que \( f'(x) \) est toujours positif, ce qui permet à \( f \) d’être bijective.
+    \item Déduire que la fonction \( g \) est dérivable et calculer \( g'(x) \) en fonction de \( f'(g(x)) \).
+    \item Étudier le comportement de \( g'(x) \) pour \( x \to \infty \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Dérivées successives]
+Soit \( f(x) = \frac{e^{2x} + 1}{x^2 + 1} \).
+\begin{enumerate}
+    \item Calculer \( f'(x) \).
+    \item Calculer \( f''(x) \), \( f'''(x) \), et en déduire une formule générale pour la \( n \)-ième dérivée de \( f(x) \).
+    \item Étudier le comportement asymptotique de \( f(x) \) et de ses dérivées pour \( x \to \infty \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Théorème de Rolle et applications]
+Soit \( f(x) = x^3 - 3x + 1 \) et \( I = [-2, 2] \).
+\begin{enumerate}
+    \item Vérifier que \( f \) vérifie les hypothèses du théorème de Rolle sur \( I \).
+    \item Trouver un point \( c \in ]-2, 2[ \) tel que \( f'(c) = 0 \).
+    \item Interpréter géométriquement ce résultat.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Monotonie et fonctions dérivables]
+Soit \( f(x) = x^4 - 4x^2 \) sur \( \mathbb{R} \).
+\begin{enumerate}
+    \item Étudier la dérivabilité de \( f \) et déterminer les intervalles où \( f \) est croissante, décroissante ou constante.
+    \item Déduire les points où \( f \) atteint ses extremums locaux.
+    \item Étudier la convexité de \( f \) en \( 0 \) et sur \( \mathbb{R} \).
+\end{enumerate}
+\end{exercice}

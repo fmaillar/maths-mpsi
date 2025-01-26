@@ -1643,3 +1643,119 @@ est une forme linéaire sur le \(\C\)-espace vectoriel
 
 \danger \emph{La positivité et la croissance n'ont pas de sens pour \(f \in 
 \C^{\intervalleff{a}{b}}\)}.
+\section{Exercices}
+\begin{exercice}[Subdivision d’un segment]
+Soit \( [a, b] \) un segment et \( n \) un entier positif. On découpe le segment \( [a, b] \) en \( n \) sous-intervalles de même longueur.
+\begin{enumerate}
+    \item Donner l'expression des bornes des sous-intervalles.
+    \item Montrer que la longueur de chaque sous-intervalle est \( \frac{b-a}{n} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Fonctions en escalier]
+Soit \( f(x) \) définie par \( f(x) = \begin{cases}
+2 & \text{si } 0 \leq x < 1, \\
+3 & \text{si } 1 \leq x < 3, \\
+1 & \text{si } 3 \leq x \leq 4.
+\end{cases} \)
+\begin{enumerate}
+    \item Dessiner la courbe de \( f(x) \) sur l'intervalle \( [0, 4] \).
+    \item Montrer que \( f(x) \) est une fonction en escalier et expliquer pourquoi.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Fonctions continues par morceaux]
+Soit \( f(x) \) définie par \( f(x) = \begin{cases}
+x^2 & \text{si } 0 \leq x \leq 1, \\
+3 - x & \text{si } 1 < x \leq 3.
+\end{cases} \)
+\begin{enumerate}
+    \item Montrer que \( f(x) \) est continue par morceaux sur l'intervalle \( [0, 3] \).
+    \item Vérifier la continuité de \( f(x) \) en \( x = 1 \) et \( x = 3 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Approximation d’une fonction continue par morceaux par une fonction en escalier]
+Soit \( f(x) = \begin{cases}
+x^2 & \text{si } 0 \leq x \leq 1, \\
+2 & \text{si } 1 < x \leq 2, \\
+4 - x & \text{si } 2 < x \leq 3.
+\end{cases} \)
+\begin{enumerate}
+    \item Approximer la fonction \( f(x) \) par une fonction en escalier avec une subdivision en trois intervalles.
+    \item Comparer l'approximation avec la fonction originale sur l'intervalle \( [0, 3] \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Définition de l’intégrale d’une fonction en escalier]
+Soit \( f(x) \) une fonction en escalier définie par \( f(x) = \begin{cases}
+3 & \text{si } 0 \leq x < 1, \\
+5 & \text{si } 1 \leq x \leq 3.
+\end{cases} \)
+\begin{enumerate}
+    \item Calculer l'intégrale de \( f(x) \) sur \( [0, 3] \) en utilisant la définition de l'intégrale d'une fonction en escalier.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Propriétés de l’intégrale d’une fonction en escalier]
+Soit \( f(x) = \begin{cases}
+4 & \text{si } 0 \leq x < 2, \\
+6 & \text{si } 2 \leq x \leq 4.
+\end{cases} \)
+\begin{enumerate}
+    \item Vérifier que l'intégrale de \( f(x) \) sur \( [0, 4] \) est la somme des intégrales sur \( [0, 2] \) et \( [2, 4] \).
+    \item Calculer l'intégrale de \( f(x) \) sur \( [0, 4] \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Linéarité de l’intégrale]
+Soient \( f(x) = \begin{cases} 
+1 & \text{si } 0 \leq x \leq 2, \\
+2 & \text{si } 2 < x \leq 4, 
+\end{cases} \)
+et \( g(x) = \begin{cases} 
+3 & \text{si } 0 \leq x \leq 2, \\
+1 & \text{si } 2 < x \leq 4.
+\end{cases} \)
+\begin{enumerate}
+    \item Calculer l'intégrale de \( 3f(x) + 2g(x) \) sur \( [0, 4] \).
+    \item Vérifier que l'intégrale respecte la linéarité de l'intégrale.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Positivité et croissance de l’intégrale]
+Soit \( f(x) = \begin{cases}
+x & \text{si } 0 \leq x \leq 1, \\
+3-x & \text{si } 1 < x \leq 3.
+\end{cases} \)
+\begin{enumerate}
+    \item Montrer que \( f(x) \) est une fonction croissante sur \( [0, 1] \) et décroissante sur \( [1, 3] \).
+    \item Calculer l'intégrale de \( f(x) \) sur \( [0, 3] \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Additivité de l’intégrale]
+Soit \( f(x) \) une fonction continue par morceaux, définie sur \( [0, 6] \) par :
+\[
+f(x) = \begin{cases}
+2x & \text{si } 0 \leq x \leq 2, \\
+4 - x & \text{si } 2 < x \leq 6.
+\end{cases}
+\]
+\begin{enumerate}
+    \item Calculer l'intégrale de \( f(x) \) sur \( [0, 6] \) en utilisant l'additivité de l'intégrale par rapport au segment d'intégration.
+    \item Vérifier que l'intégrale sur \( [0, 6] \) est la somme des intégrales sur \( [0, 2] \) et \( [2, 6] \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Invariance par translation]
+Soit \( f(x) = \begin{cases}
+x^2 & \text{si } 0 \leq x \leq 2, \\
+6 - x & \text{si } 2 < x \leq 4.
+\end{cases} \)
+\begin{enumerate}
+    \item Calculer l'intégrale de \( f(x) \) sur \( [0, 4] \).
+    \item Vérifier l'invariance de l'intégrale par translation, en calculant l'intégrale de \( f(x - 1) \) sur \( [1, 5] \).
+\end{enumerate}
+\end{exercice}
+

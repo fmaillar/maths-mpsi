@@ -1386,3 +1386,71 @@ Ceci est généralisable à \(f(t) = \alpha_0 + \alpha_1 t +
 \frac{\alpha_p}{t^{p-1}} + \petitof{+\infty}{\frac{1}{t^{p-1}}}\) avec 
 \(\alpha_p \neq 0\). La position de la courbe par rapport à l'asymptote sera 
 donnée par le signe de \(\alpha_p\).
+\section{Exercices}
+\begin{exercice}[Développement limité d'ordre 2]
+Soit \( f(x) = \sin(x) \) et \( g(x) = x - \frac{x^3}{6} \).
+\begin{enumerate}
+    \item Montrer que \( f(x) \sim g(x) \) en \( 0 \).
+    \item Déterminer le développement limité d'ordre 3 de \( f(x) - g(x) \) au voisinage de \( 0 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Fonction exponentielle]
+Soit \( h(x) = e^x - (1 + x + \frac{x^2}{2}) \).
+\begin{enumerate}
+    \item Montrer que \( h(x) \sim \frac{x^3}{6} \) en \( 0 \).
+    \item En déduire le développement limité d'ordre 4 de \( e^x \) au voisinage de \( 0 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Équivalence et logarithme]
+Étudier la comparaison locale en \( +\infty \) entre \( f(x) = \ln(x+1) \) et \( g(x) = \ln(x) \).
+\end{exercice}
+
+\begin{exercice}[Comparaison locale avec des puissances]
+Soit \( f(x) = x^2 + x \sqrt{x} \) et \( g(x) = x^2 \).
+\begin{enumerate}
+    \item Montrer que \( f(x) \sim g(x) \) en \( +\infty \).
+    \item Justifier pourquoi \( x \sqrt{x} \) est négligeable devant \( x^2 \) en \( +\infty \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Développement limité et racine carrée]
+Soit \( f(x) = \sqrt{1 + x} \).
+\begin{enumerate}
+    \item Développer \( f(x) \) jusqu'à l'ordre 2 en \( 0 \).
+    \item En déduire que \( \sqrt{1+x} \sim 1 + \frac{x}{2} \) en \( 0 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Asymptotique en \( +\infty \)]
+Comparer en \( +\infty \) les fonctions \( f(x) = e^x \) et \( g(x) = x^n \) avec \( n \in \mathbb{N}^* \).
+\end{exercice}
+
+\begin{exercice}[Comparaison locale et série harmonique]
+Soit \( f(x) = \ln(x+1) - \ln(x) \).
+\begin{enumerate}
+    \item Montrer que \( f(x) \sim \frac{1}{x} \) en \( +\infty \).
+    \item Interpréter ce résultat dans le cadre de la convergence de la série harmonique.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Étude asymptotique]
+Étudier la comparaison locale entre \( f(x) = \ln(1+x) \) et \( g(x) = x \) en \( 0 \). Quelle est la nature de la fonction \( h(x) = \frac{\ln(1+x)}{x} \) lorsque \( x \to 0 \) ?
+\end{exercice}
+
+\begin{exercice}[Développement asymptotique]
+Soit \( f(x) = x^3 e^{-x} \) et \( g(x) = x^3 \).
+\begin{enumerate}
+    \item Étudier la comparaison locale de \( f(x) \) et \( g(x) \) en \( +\infty \).
+    \item Calculer \( \lim_{x \to +\infty} \frac{f(x)}{g(x)} \) et en déduire un équivalent simple.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Fonction Gamma]
+Soit la fonction \( \Gamma(x) = \int_0^{+\infty} t^{x-1} e^{-t} \, dt \). 
+\begin{enumerate}
+    \item Montrer que \( \Gamma(x+1) = x \Gamma(x) \).
+    \item En déduire un équivalent de \( \Gamma(x) \) en \( +\infty \) à partir de la formule de Stirling : \( \Gamma(x) \sim \sqrt{2\pi x} \left(\frac{x}{e}\right)^x \).
+\end{enumerate}
+\end{exercice}

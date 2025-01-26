@@ -1079,3 +1079,106 @@ pour tout \((x, y) \in \R^2\) on a \(f(x, y) = g(y)x+h(y)\) alors \(f
 \begin{equation}
   \derivep{f}{x}(x,y)=y \quad   \deriveps{f}{x}(x,y)=0.
 \end{equation}
+\section{Exercices}
+\begin{exercice}
+Soit \( (x, y) \in \mathbb{R}^2 \) et \( \| \cdot \|_p \) une norme sur \( \mathbb{R}^2 \) définie par :
+\[
+\| (x, y) \|_p = (|x|^p + |y|^p)^{1/p}, \quad p \geq 1.
+\]
+\begin{enumerate}
+    \item Montrer que \( \| \cdot \|_p \) est une norme sur \( \mathbb{R}^2 \).
+    \item Donner la norme usuelle (norme \( p = 2 \)) et montrer que c'est une norme équivalente à celle de la norme \( \| \cdot \|_\infty \) sur \( \mathbb{R}^2 \).
+    \item Montrer que la norme \( \| \cdot \|_1 \) est équivalente à la norme usuelle sur \( \mathbb{R}^2 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) une fonction définie par :
+\[
+f(x, y) = x^2 + y^2.
+\]
+\begin{enumerate}
+    \item Montrer que \( f \) est continue en tout point de \( \mathbb{R}^2 \).
+    \item Calculer la limite de \( f \) en \( (0, 0) \) et vérifier qu'elle existe.
+    \item Démontrer que \( f \) est continue par rapport à chaque variable séparément, c'est-à-dire que \( \lim_{x \to a} f(x, y_0) = f(a, y_0) \) et \( \lim_{y \to b} f(x_0, y) = f(x_0, b) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = \sin(x^2 + y^2) \). 
+\begin{enumerate}
+    \item Montrer que \( f \) est continue en \( (0, 0) \).
+    \item Étudier la continuité de \( f \) en \( (x_0, y_0) \) avec \( (x_0, y_0) \neq (0, 0) \).
+    \item Calculer \( \nabla f(0, 0) \), où \( \nabla f \) désigne le gradient de \( f \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) une fonction continue définie par :
+\[
+f(x, y) = e^{x + y}.
+\]
+\begin{enumerate}
+    \item Montrer que \( f \) est de classe \( C^1 \) et calculer ses dérivées partielles.
+    \item Vérifier que \( f \) est différentiable et calculer sa différentielle en \( (x_0, y_0) \).
+    \item Démontrer que la fonction composée \( g(x, y) = f(x^2 + y^2) \) est aussi de classe \( C^1 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = x^2 + y^2 \).
+\begin{enumerate}
+    \item Calculer les dérivées partielles de \( f \) par rapport à \( x \) et \( y \).
+    \item Montrer que \( f \) est de classe \( C^1 \) sur \( \mathbb{R}^2 \).
+    \item Montrer que \( \nabla f(x, y) = (2x, 2y) \) est un champ de vecteurs continu sur \( \mathbb{R}^2 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = x^3 + 2xy + y^3 \). Calculer :
+\begin{enumerate}
+    \item Le gradient \( \nabla f \) de \( f \).
+    \item La matrice Hessienne de \( f \) en un point quelconque \( (x_0, y_0) \).
+    \item Examiner la nature de la fonction en \( (0, 0) \) en utilisant la matrice Hessienne.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = \ln(x^2 + y^2) \).
+\begin{enumerate}
+    \item Calculer les dérivées partielles \( \frac{\partial f}{\partial x} \) et \( \frac{\partial f}{\partial y} \).
+    \item Montrer que \( f \) n'est pas continue en \( (0, 0) \), mais est continue pour \( (x, y) \neq (0, 0) \).
+    \item Déterminer si \( f \) est différentiable en \( (0, 0) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = x^2y + y^3 \). Calculer :
+\begin{enumerate}
+    \item La dérivée partielle de \( f \) par rapport à \( x \) et \( y \).
+    \item Vérifier que \( f \) est de classe \( C^1 \) sur \( \mathbb{R}^2 \).
+    \item Montrer que \( \nabla f(x, y) = (2xy, x^2 + 3y^2) \) est un champ de vecteurs continu.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f : \mathbb{R}^2 \to \mathbb{R} \) une fonction définie par :
+\[
+f(x, y) = x^2 + y^2 + 3xy.
+\]
+\begin{enumerate}
+    \item Calculer la matrice Hessienne de \( f \).
+    \item Examiner la nature des points critiques de \( f \) en utilisant la matrice Hessienne.
+    \item Déterminer les points où \( f \) atteint un maximum, un minimum ou un point selle.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f(x, y) = x^3 + y^3 - 3xy \). Montrer que :
+\begin{enumerate}
+    \item Le gradient \( \nabla f \) de \( f \) est \( (3x^2 - 3y, 3y^2 - 3x) \).
+    \item Les points où le gradient est nul sont les solutions de \( x^2 = y^2 \). Trouver tous les points critiques de \( f \).
+    \item Déterminer la nature de ces points à l'aide de la matrice Hessienne.
+\end{enumerate}
+\end{exercice}
+

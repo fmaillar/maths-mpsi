@@ -1262,3 +1262,110 @@ On note pour tout toute matrice \(A \in \Mnp{n}{p}{\K}\) et pour tout \(i
     \rg(A)=\rg(A^\top)=\rg(\courbe_{A^\top})=\rg(\L_A).
   \end{equation}
 \end{proof}
+\section{Exercices}
+\begin{exercice}[Addition et multiplication de matrices]
+Soit les matrices \( A \) et \( B \) suivantes :
+\[
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}.
+\]
+\begin{enumerate}
+    \item Calculer la somme \( A + B \).
+    \item Calculer le produit \( A \times B \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Matrice transposée]
+Soit la matrice \( A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix} \).
+\begin{enumerate}
+    \item Calculer la transposée de la matrice \( A \), notée \( A^T \).
+    \item Vérifier que \( (A^T)^T = A \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Matrice symétrique et antisymétrique]
+Soit la matrice \( A = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix} \).
+\begin{enumerate}
+    \item Vérifier si la matrice \( A \) est symétrique.
+    \item Soit \( B = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \). Vérifier si la matrice \( B \) est antisymétrique.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Inversibilité d'une matrice]
+Soit la matrice \( A = \begin{pmatrix} 4 & 7 \\ 2 & 6 \end{pmatrix} \).
+\begin{enumerate}
+    \item Calculer le déterminant de \( A \).
+    \item Vérifier si la matrice \( A \) est inversible.
+    \item Si \( A \) est inversible, calculer l'inverse de \( A \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Produit d'une matrice par un vecteur]
+Soit la matrice \( A = \begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix} \) et le vecteur \( v = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \).
+\begin{enumerate}
+    \item Calculer le produit \( A \times v \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Calcul du rang d'une matrice]
+Soit la matrice \( A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 0 & 0 \\ 4 & 5 & 6 \end{pmatrix} \).
+\begin{enumerate}
+    \item Déterminer le rang de la matrice \( A \).
+    \item Vérifier que le rang de la matrice est égal au nombre de vecteurs lignes ou colonnes indépendants.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Matrice d'une application linéaire]
+Soit une application linéaire \( f : \mathbb{R}^2 \to \mathbb{R}^2 \) définie par \( f\left( \begin{pmatrix} x \\ y \end{pmatrix} \right) = \begin{pmatrix} x + 2y \\ 3x - y \end{pmatrix} \).
+\begin{enumerate}
+    \item Trouver la matrice associée à \( f \) dans la base canonique de \( \mathbb{R}^2 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Matrice de passage]
+Soient les bases \( B = \left\{ \begin{pmatrix} 1 \\ 0 \end{pmatrix}, 
+\begin{pmatrix} 0 \\ 1 \end{pmatrix} \right.\) et \( C = \left\{ 
+  \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 3 \end{pmatrix} 
+\right. \) de \( \mathbb{R}^2 \).
+\begin{enumerate}
+    \item Trouver la matrice de passage de la base \( B \) à la base \( C \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Formule du changement de base]
+Soient \( E = \left\{ \mathbf{e}_1, \mathbf{e}_2 \right\} \) et \( F = \left\{ \mathbf{f}_1, \mathbf{f}_2 \right\} \) deux bases de \( \mathbb{R}^2 \), où :
+\[
+\mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix},
+\]
+et
+\[
+\mathbf{f}_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \quad \mathbf{f}_2 = \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
+\]
+
+Soit \( \mathbf{v} = \begin{pmatrix} 4 \\ 5 \end{pmatrix} \) un vecteur de \( \mathbb{R}^2 \) exprimé dans la base \( E \).
+
+\begin{enumerate}
+    \item Exprimer le vecteur \( \mathbf{v} \) dans la base \( F \).
+    \item Utiliser la formule du changement de base pour trouver les coordonnées de \( \mathbf{v} \) dans la base \( F \). Rappel : Si \( [\mathbf{v}]_E \) est le vecteur des coordonnées de \( \mathbf{v} \) dans la base \( E \), et \( P_{F \to E} \) est la matrice de passage de la base \( F \) à la base \( E \), alors les coordonnées de \( \mathbf{v} \) dans la base \( F \) sont données par :
+    \[
+    [\mathbf{v}]_F = P_{F \to E}^{-1} \cdot [\mathbf{v}]_E.
+    \]
+    \item Calculer explicitement la matrice de passage \( P_{F \to E} \), puis en déduire \( [\mathbf{v}]_F \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Rang de la matrice transposée]
+Soit la matrice \( A = \begin{pmatrix} 1 & 0 & 2 \\ 3 & 4 & 0 \end{pmatrix} \).
+\begin{enumerate}
+    \item Calculer le rang de \( A \).
+    \item Vérifier que le rang de la matrice transposée \( A^T \) est égal au rang de \( A \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}[Sous-anneau des matrices diagonales]
+Soit la matrice \( A = \begin{pmatrix} 3 & 0 \\ 0 & 5 \end{pmatrix} \).
+\begin{enumerate}
+    \item Vérifier que \( A \) appartient au sous-anneau des matrices diagonales.
+    \item Calculer \( A^2 \) et \( A^{-1} \) si \( A \) est inversible.
+\end{enumerate}
+\end{exercice}
+

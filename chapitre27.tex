@@ -1321,3 +1321,82 @@ Alors \(M \in \Orthmin{3}\). Trouvons \(\Inv(M)\)~:
 \begin{equation}
   \Inv(u) = \VectEngendre((1, \sqrt{3}, 0), (0, -2, 1)).
 \end{equation}
+\section{Exercices}
+\begin{exercice}
+Soit \( E = \mathbb{R}^n \) un espace vectoriel euclidien. Un automorphisme \( f : E \to E \) est dit orthogonal si, pour tous \( \mathbf{u}, \mathbf{v} \in E \), on a :
+\[
+\langle f(\mathbf{u}), f(\mathbf{v}) \rangle = \langle \mathbf{u}, \mathbf{v} \rangle.
+\]
+\begin{enumerate}
+    \item Montrer que si \( f \) est un automorphisme orthogonal, alors \( f \) conserve la norme euclidienne, c'est-à-dire que \( \| f(\mathbf{u}) \| = \| \mathbf{u} \| \) pour tout \( \mathbf{u} \in E \).
+    \item Montrer que si \( f \) est un automorphisme orthogonal, alors \( f \) est une isométrie, c'est-à-dire que \( \| f(\mathbf{u}) - f(\mathbf{v}) \| = \| \mathbf{u} - \mathbf{v} \| \) pour tous \( \mathbf{u}, \mathbf{v} \in E \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) un automorphisme orthogonal de \( \mathbb{R}^2 \). On sait que \( f \) peut être représenté par une matrice orthogonale \( A \in O(2) \), où \( O(2) \) désigne le groupe des matrices orthogonales de taille \( 2 \times 2 \).
+\begin{enumerate}
+    \item Montrer que si \( A \in O(2) \), alors \( A^T A = I \), où \( I \) est la matrice identité de dimension 2.
+    \item Soit \( A = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} \). Montrer que cette matrice représente une rotation de l'espace \( \mathbb{R}^2 \) d'angle \( \theta \).
+    \item Calculer la matrice de \( f \) si \( f \) est une réflexion par rapport à la droite \( y = x \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( E = \mathbb{R}^3 \) l'espace euclidien de dimension 3 et soit \( f \) un automorphisme orthogonal. On dit que \( f \) appartient au groupe spécial orthogonal \( SO(3) \) si \( \det(f) = 1 \).
+\begin{enumerate}
+    \item Montrer que si \( f \in O(3) \), alors \( \det(f) = \pm 1 \).
+    \item Montrer que si \( f \in SO(3) \), alors \( f \) est une rotation, c'est-à-dire qu'il conserve l'orientation de l'espace.
+    \item Déterminer les matrices qui représentent les rotations dans \( SO(3) \) autour des axes \( x \), \( y \), et \( z \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) un automorphisme orthogonal dans \( \mathbb{R}^3 \) représentant une réflexion par rapport à un plan. Montrer que :
+\begin{enumerate}
+    \item La matrice associée à \( f \) est une matrice orthogonale avec \( \det(f) = -1 \).
+    \item Donner la matrice de la réflexion par rapport au plan \( x + y + z = 0 \).
+    \item Montrer que cette réflexion peut être décomposée en produit de réflexions par rapport à des plans orthogonaux.
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( \mathbf{v} = (2, 1, 0) \) et \( \mathbf{w} = (0, 1, 2) \) deux vecteurs dans \( \mathbb{R}^3 \). Considérons la matrice de rotation \( R(\theta) \) autour de l'axe \( \mathbf{v} \) d'angle \( \theta \).
+\begin{enumerate}
+    \item Montrer que la matrice de rotation \( R(\theta) \) peut être exprimée à l'aide de la formule de Rodrigues :
+    \[
+    R(\theta) = I + (\sin \theta) [\mathbf{v}]_\times + (1 - \cos \theta) [\mathbf{v}]_\times^2
+    \]
+    où \( [\mathbf{v}]_\times \) est la matrice antisymétrique associée à \( \mathbf{v} \).
+    \item Calculer la matrice de rotation autour de l'axe \( \mathbf{v} = (2, 1, 0) \) d'angle \( \theta = \frac{\pi}{2} \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) un automorphisme orthogonal de \( \mathbb{R}^3 \). On dit que \( f \) est une rotation si \( \det(f) = 1 \) et une réflexion si \( \det(f) = -1 \).
+\begin{enumerate}
+    \item Montrer que toute matrice \( f \in O(3) \) peut être décomposée en produit de réflexions, et donner un exemple explicite de décomposition de rotation en produit de réflexions.
+    \item Montrer que la matrice associée à une réflexion par rapport à la droite \( y = x \) et la droite \( z = 0 \) est une matrice orthogonale de déterminant \( -1 \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \in O(2) \) un automorphisme orthogonal dans le plan euclidien \( \mathbb{R}^2 \). Soit \( \theta \) l'angle de rotation associé à \( f \).
+\begin{enumerate}
+    \item Montrer que la matrice associée à \( f \) est de la forme :
+    \[
+    A = \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}
+    \]
+    et décrire l'action géométrique de \( f \).
+    \item Calculer l'angle de la rotation qui transforme \( (1, 0) \) en \( (0, 1) \).
+\end{enumerate}
+\end{exercice}
+
+\begin{exercice}
+Soit \( f \) un automorphisme orthogonal de \( \mathbb{R}^2 \) qui est une réflexion par rapport à une droite \( D \). Montrer que \( f \) peut être représenté par une matrice de la forme :
+\[
+A = \begin{pmatrix} \cos 2\alpha & \sin 2\alpha \\ \sin 2\alpha & -\cos 2\alpha \end{pmatrix}
+\]
+où \( \alpha \) est l'angle formé par la droite \( D \) et l'axe \( x \).
+\end{exercice}
+
